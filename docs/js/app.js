@@ -38,6 +38,8 @@
     elements.searchInput = document.getElementById('database-search');
     elements.resultsGrid = document.getElementById('database-results');
     elements.resultsCount = document.getElementById('results-count');
+    elements.resultsShowing = document.getElementById('results-showing'); // Added this
+    elements.resultsTotal = document.getElementById('results-total');     // Added this
     elements.emptyResults = document.getElementById('empty-results');
     elements.activeFilters = document.getElementById('active-filters');
     elements.activeFiltersList = document.getElementById('active-filters-list');
@@ -105,25 +107,26 @@
 
   function updateStats(metadata) {
     const statPublications = document.getElementById('stat-publications');
-    const statYears = document.getElementById('stat-years');
     const statCities = document.getElementById('stat-cities');
     const statActive = document.getElementById('stat-active');
 
     if (statPublications) animateCounter(statPublications, metadata.totalCount || state.publications.length);
-    if (statYears) animateCounter(statYears, 145); // 1880-2025
     if (statCities) animateCounter(statCities, metadata.cities?.length || 27);
     if (statActive) animateCounter(statActive, metadata.activeCount || 52);
   }
 
   function animateCounter(element, target) {
-    const duration = 2000;
+    const duration = 1500;
     const start = 0;
     const startTime = performance.now();
 
     function update(currentTime) {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      const easeOut = 1 - Math.pow(1 - progress, 3);
+      
+      // Quartic ease out for a mechanical feel
+      const easeOut = 1 - Math.pow(1 - progress, 4); 
+      
       const current = Math.floor(start + (target - start) * easeOut);
 
       element.textContent = current;
@@ -151,8 +154,11 @@
 
     // Toggle active state
     const siblings = document.querySelectorAll(`.filter-btn[data-filter="${filterType}"]`);
-    siblings.forEach(sib => sib.classList.remove('active'));
-    btn.classList.add('active');
+    siblings.forEach(sib => sib.classList.remove('active', 'bg-white', 'text-ink-950', 'border-white'));
+    siblings.forEach(sib => sib.classList.add('text-paper-300', 'border-white/20'));
+    
+    btn.classList.add('active', 'bg-white', 'text-ink-950', 'border-white');
+    btn.classList.remove('text-paper-300', 'border-white/20');
 
     // Update state
     state.filters[filterType] = filterValue;
@@ -264,40 +270,46 @@
   }
 
   function createPublicationCard(pub) {
-    const statusClass = pub.isActive ? 'bg-emerald-500/20 text-emerald-300' : 'bg-stone-500/20 text-stone-400';
-    const statusText = pub.isActive ? 'Active' : 'Ceased';
-    const years = pub.yearFounded ? `${pub.yearFounded}${pub.yearCeased ? '-' + pub.yearCeased : '-Present'}` : 'Unknown';
-    const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="text-amber-400 hover:text-amber-300 text-sm">Visit Website &rarr;</a>` : '';
-    const archiveLink = pub.archiveUrl ? `<a href="${pub.archiveUrl}" target="_blank" rel="noopener" class="text-stone-400 hover:text-stone-300 text-sm">View Archive &rarr;</a>` : '';
+    const statusClass = pub.isActive ? 'text-accent border-accent' : 'text-paper-300 border-paper-300';
+    const statusText = pub.isActive ? 'ACTIVE' : 'ARCHIVED';
+    const years = pub.yearFounded ? `${pub.yearFounded}${pub.yearCeased ? ' — ' + pub.yearCeased : ' — Present'}` : 'Unknown';
+    const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors border-b border-transparent hover:border-accent pb-1">Visit Site</a>` : '';
+    const archiveLink = pub.archiveUrl ? `<a href="${pub.archiveUrl}" target="_blank" rel="noopener" class="text-xs font-mono uppercase tracking-wider text-paper-300 hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">Archives</a>` : '';
+
+    // Truncate description more aggressively for grid
+    const desc = pub.missionStatement || pub.description || '';
+    const truncatedDesc = truncate(desc, 100);
 
     return `
-      <article class="publication-card bg-stone-800/50 rounded-lg p-5 border border-stone-700/50 hover:border-amber-500/30 transition-all duration-300 hover:-translate-y-1">
-        <div class="flex items-start justify-between gap-3 mb-3">
-          <h3 class="font-serif text-lg text-stone-100 leading-tight">${escapeHtml(pub.name)}</h3>
-          <span class="px-2 py-0.5 rounded text-xs font-medium whitespace-nowrap ${statusClass}">${statusText}</span>
+      <article class="bg-ink-900 border border-white/10 hover:border-accent transition-colors p-6 flex flex-col h-full group">
+        <header class="flex justify-between items-start mb-4">
+            <span class="font-mono text-[10px] uppercase tracking-widest px-2 py-1 border ${statusClass}">${statusText}</span>
+            <span class="font-mono text-xs text-paper-300">${pub.city || 'N/J'}</span>
+        </header>
+        
+        <h3 class="font-serif text-2xl font-bold text-paper-100 mb-2 leading-tight group-hover:text-accent transition-colors">
+            ${escapeHtml(pub.name)}
+        </h3>
+        
+        <p class="font-mono text-xs text-paper-300 mb-6 border-b border-white/10 pb-4">
+            ${years}
+        </p>
+
+        <div class="text-sm text-paper-200 leading-relaxed mb-6 flex-grow">
+            ${escapeHtml(truncatedDesc)}
         </div>
 
-        <div class="space-y-2 text-sm text-stone-400 mb-4">
-          <p><span class="text-stone-500">Location:</span> ${escapeHtml(pub.city || 'Unknown')}</p>
-          <p><span class="text-stone-500">Years:</span> ${years}</p>
-          <p><span class="text-stone-500">Frequency:</span> ${escapeHtml(pub.frequency || 'Unknown')}</p>
-          ${pub.primaryFocus ? `<p><span class="text-stone-500">Focus:</span> ${escapeHtml(truncate(pub.primaryFocus, 60))}</p>` : ''}
-        </div>
-
-        ${pub.missionStatement ? `<p class="text-sm text-stone-300 italic mb-4 line-clamp-2">"${escapeHtml(truncate(pub.missionStatement, 120))}"</p>` : ''}
-
-        <div class="flex gap-4 mt-auto pt-3 border-t border-stone-700/50">
-          ${websiteLink}
-          ${archiveLink}
-        </div>
+        <footer class="flex gap-4 mt-auto pt-4 border-t border-white/5">
+            ${websiteLink}
+            ${archiveLink}
+        </footer>
       </article>
     `;
   }
 
   function updateResultsCount() {
-    if (elements.resultsCount) {
-      elements.resultsCount.textContent = state.filteredPublications.length;
-    }
+    if (elements.resultsShowing) elements.resultsShowing.textContent = Math.min(state.currentPage * state.perPage, state.filteredPublications.length);
+    if (elements.resultsTotal) elements.resultsTotal.textContent = state.filteredPublications.length;
   }
 
   function updateActiveFiltersDisplay() {
@@ -308,7 +320,7 @@
     if (state.filters.search) activeFilters.push({ type: 'search', label: `"${state.filters.search}"` });
     if (state.filters.city !== 'all') activeFilters.push({ type: 'city', label: state.filters.city });
     if (state.filters.decade !== 'all') activeFilters.push({ type: 'decade', label: state.filters.decade });
-    if (state.filters.status !== 'all') activeFilters.push({ type: 'status', label: state.filters.status === 'active' ? 'Active' : 'Ceased' });
+    if (state.filters.status !== 'all') activeFilters.push({ type: 'status', label: state.filters.status === 'active' ? 'Active' : 'Archived' });
     if (state.filters.format !== 'all') activeFilters.push({ type: 'format', label: state.filters.format === 'print' ? 'Print' : 'Digital' });
 
     if (activeFilters.length === 0) {
@@ -318,9 +330,9 @@
 
     elements.activeFilters.classList.remove('hidden');
     elements.activeFiltersList.innerHTML = activeFilters.map(f => `
-      <span class="inline-flex items-center gap-1 px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-sm">
+      <span class="font-mono text-[10px] uppercase bg-white/10 text-paper-100 px-2 py-1 flex items-center gap-2 hover:bg-white/20 transition-colors cursor-pointer" onclick="window.njbp.removeFilter('${f.type}')">
         ${escapeHtml(f.label)}
-        <button onclick="window.njbp.removeFilter('${f.type}')" class="hover:text-amber-100">&times;</button>
+        <span class="text-accent">&times;</span>
       </span>
     `).join('');
   }
@@ -334,7 +346,13 @@
       // Reset button state
       const buttons = document.querySelectorAll(`.filter-btn[data-filter="${type}"]`);
       buttons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.value === 'all');
+        if(btn.dataset.value === 'all') {
+             btn.classList.add('active', 'bg-white', 'text-ink-950', 'border-white');
+             btn.classList.remove('text-paper-300', 'border-white/20');
+        } else {
+             btn.classList.remove('active', 'bg-white', 'text-ink-950', 'border-white');
+             btn.classList.add('text-paper-300', 'border-white/20');
+        }
       });
     }
     state.currentPage = 1;
@@ -355,7 +373,13 @@
 
     // Reset all filter buttons
     elements.filterButtons.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.value === 'all');
+       if(btn.dataset.value === 'all') {
+             btn.classList.add('active', 'bg-white', 'text-ink-950', 'border-white');
+             btn.classList.remove('text-paper-300', 'border-white/20');
+        } else {
+             btn.classList.remove('active', 'bg-white', 'text-ink-950', 'border-white');
+             btn.classList.add('text-paper-300', 'border-white/20');
+        }
     });
 
     applyFilters();
@@ -364,6 +388,7 @@
   function loadMore() {
     state.currentPage++;
     renderPublications();
+    updateResultsCount(); // Ensure stats update
   }
 
   function hideLoadingOverlay() {
@@ -378,10 +403,11 @@
   function showError(message) {
     if (elements.resultsGrid) {
       elements.resultsGrid.innerHTML = `
-        <div class="col-span-full text-center py-12">
-          <p class="text-red-400">${escapeHtml(message)}</p>
-          <button onclick="location.reload()" class="mt-4 px-4 py-2 bg-amber-500 text-stone-900 rounded hover:bg-amber-400">
-            Retry
+        <div class="col-span-full text-center py-12 border border-accent/50 bg-accent/5">
+          <p class="text-accent font-mono uppercase tracking-widest mb-4">System Error</p>
+          <p class="text-paper-300 mb-6 font-serif text-xl">${escapeHtml(message)}</p>
+          <button onclick="location.reload()" class="px-6 py-3 bg-white text-ink-950 font-bold hover:bg-accent hover:text-white transition-colors">
+            Reload System
           </button>
         </div>
       `;

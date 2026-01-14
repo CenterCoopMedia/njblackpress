@@ -74,35 +74,32 @@
     const maxCount = Math.max(...decadeData.map(d => d.activeCount), 1);
 
     const html = `
-      <div class="timeline-chart">
+      <div class="flex items-end justify-between h-[300px] w-full gap-1">
         ${decadeData.map((decade, index) => {
           const height = (decade.activeCount / maxCount) * 100;
-          const barColor = decade.foundedCount > 0 ? 'bg-amber-500' : 'bg-stone-600';
+          const barColor = decade.foundedCount > 0 ? 'bg-paper-100' : 'bg-paper-300';
+          // Add accent if heavily active
+          const activeClass = decade.activeCount > 5 ? 'group-hover:bg-accent' : 'group-hover:bg-accent/70';
 
           return `
-            <div class="timeline-bar-wrapper group" data-decade="${decade.label}">
-              <div class="timeline-bar-container">
-                <div class="timeline-bar ${barColor}" style="height: ${Math.max(height, 5)}%">
-                  <span class="timeline-count">${decade.activeCount}</span>
-                </div>
+            <div class="relative flex flex-col justify-end items-center h-full flex-1 group cursor-pointer" data-decade="${decade.label}">
+              <!-- Bar -->
+              <div class="w-full mx-[2px] ${barColor} ${activeClass} transition-all duration-300 ease-out origin-bottom hover:scale-y-105" 
+                   style="height: ${Math.max(height, 5)}%">
               </div>
-              <span class="timeline-label">${decade.label.replace('s', '')}</span>
+              
+              <!-- Label -->
+              <span class="absolute -bottom-8 font-mono text-[10px] text-paper-300 -rotate-45 group-hover:text-white transition-colors origin-top-left translate-x-2">
+                ${decade.label.replace('s', '')}
+              </span>
 
               <!-- Tooltip -->
-              <div class="timeline-tooltip">
-                <div class="font-semibold text-amber-400 mb-1">${decade.label}</div>
-                <div class="text-sm text-stone-300">
-                  <p>${decade.activeCount} active publication${decade.activeCount !== 1 ? 's' : ''}</p>
-                  <p>${decade.foundedCount} founded this decade</p>
+              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-ink-900 border border-white/10 p-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-2xl">
+                <div class="font-serif text-lg text-accent mb-1 font-bold">${decade.label}</div>
+                <div class="text-xs font-mono text-paper-300 space-y-1 border-t border-white/10 pt-2">
+                  <p><span class="text-white">${decade.activeCount}</span> Active</p>
+                  <p><span class="text-white">${decade.foundedCount}</span> Founded</p>
                 </div>
-                ${decade.publications.length > 0 ? `
-                  <div class="mt-2 pt-2 border-t border-stone-600">
-                    <p class="text-xs text-stone-400 mb-1">Notable:</p>
-                    <ul class="text-xs text-stone-300">
-                      ${decade.publications.slice(0, 3).map(p => `<li>• ${escapeHtml(p.name)}</li>`).join('')}
-                    </ul>
-                  </div>
-                ` : ''}
               </div>
             </div>
           `;
@@ -114,8 +111,8 @@
   }
 
   function setupEventListeners() {
-    // Decade bar clicks
-    document.querySelectorAll('.timeline-bar-wrapper').forEach(wrapper => {
+    // Decade bar clicks (via delegation if needed, but direct binding here works)
+    document.querySelectorAll('.group[data-decade]').forEach(wrapper => {
       wrapper.addEventListener('click', () => {
         const decade = wrapper.dataset.decade;
         if (window.njbp && window.njbp.filterByDecade) {
@@ -131,8 +128,12 @@
         showDecadeDetails(decade);
 
         // Update active state
-        document.querySelectorAll('.timeline-decade-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+        document.querySelectorAll('.timeline-decade-btn').forEach(b => {
+             b.classList.remove('border-accent', 'text-accent');
+             b.classList.add('border-white/20', 'text-paper-300');
+        });
+        btn.classList.remove('border-white/20', 'text-paper-300');
+        btn.classList.add('border-accent', 'text-accent');
       });
     });
   }
@@ -150,37 +151,39 @@
       return founded <= decade.end && ceased >= decade.start;
     });
 
+    // Show the details panel
+    details.classList.remove('hidden');
+
     details.innerHTML = `
-      <div class="bg-stone-800/50 rounded-lg p-6 border border-stone-700/50">
-        <h4 class="font-serif text-xl text-amber-400 mb-4">${decade.label}</h4>
-        <div class="grid grid-cols-2 gap-4 mb-4">
-          <div>
-            <p class="text-3xl font-bold text-stone-100">${decade.activeCount}</p>
-            <p class="text-sm text-stone-400">Active publications</p>
-          </div>
-          <div>
-            <p class="text-3xl font-bold text-stone-100">${decade.foundedCount}</p>
-            <p class="text-sm text-stone-400">Founded this decade</p>
-          </div>
-        </div>
+        <header class="flex justify-between items-start mb-6 border-b border-white/10 pb-4">
+            <div>
+                <h4 class="font-serif text-3xl text-white font-bold mb-1">${decade.label}</h4>
+                <p class="font-mono text-xs text-accent uppercase tracking-widest">Historical Snapshot</p>
+            </div>
+            <div class="text-right font-mono text-xs text-paper-300">
+                <p><span class="text-white text-lg">${decade.activeCount}</span> Active</p>
+                <p><span class="text-white text-lg">${decade.foundedCount}</span> Founded</p>
+            </div>
+        </header>
 
         ${pubs.length > 0 ? `
-          <div class="space-y-2">
-            <p class="text-sm text-stone-400 mb-2">Publications active during this period:</p>
+          <div>
+            <p class="font-mono text-xs text-paper-300 uppercase tracking-widest mb-3">Publications of Record</p>
             <div class="flex flex-wrap gap-2">
-              ${pubs.slice(0, 10).map(p => `
-                <span class="px-2 py-1 bg-stone-700/50 text-stone-300 rounded text-sm">${escapeHtml(p.name)}</span>
+              ${pubs.slice(0, 15).map(p => `
+                <span class="px-3 py-1 bg-white/5 border border-white/10 hover:border-accent hover:text-white text-paper-300 text-sm transition-colors cursor-default">${escapeHtml(p.name)}</span>
               `).join('')}
-              ${pubs.length > 10 ? `<span class="px-2 py-1 text-stone-500 text-sm">+${pubs.length - 10} more</span>` : ''}
+              ${pubs.length > 15 ? `<span class="px-3 py-1 text-paper-300 text-sm italic">+${pubs.length - 15} more...</span>` : ''}
             </div>
           </div>
-        ` : '<p class="text-stone-500">No publications recorded for this decade.</p>'}
+        ` : '<p class="text-paper-300 italic font-serif">No publications recorded for this decade.</p>'}
 
-        <button onclick="window.njbp.filterByDecade('${decade.label}')"
-                class="mt-4 px-4 py-2 bg-amber-500 text-stone-900 rounded hover:bg-amber-400 transition-colors text-sm font-medium">
-          View all ${decade.label} publications
-        </button>
-      </div>
+        <div class="mt-8 pt-4 border-t border-white/10 text-center md:text-left">
+            <button onclick="window.njbp.filterByDecade('${decade.label}')"
+                    class="inline-block px-6 py-3 bg-paper-100 text-ink-950 hover:bg-accent hover:text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors">
+            View Full Decade Archive
+            </button>
+        </div>
     `;
   }
 
