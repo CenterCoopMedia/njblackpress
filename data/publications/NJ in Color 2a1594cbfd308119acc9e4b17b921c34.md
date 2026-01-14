@@ -1,6 +1,7 @@
 # NJ in Color
 
-Owners/Publishers: Tevra Francis, Publisher
+Year founded: 2019
+Owners/Publishers: Tevra L. Francis, Publisher; tevMedia, LLC
 Location (City): Leonia
 Website/Archive: https://njincolor.com/
 Format: Multimedia news platform
