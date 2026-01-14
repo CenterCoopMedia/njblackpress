@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Publication details from the New Jersey Black Press Archive.">
+
+    <title id="page-title">Publication | NJ Black Press</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23ff4d00'/><text x='50' y='70' font-size='60' text-anchor='middle' fill='white' font-family='serif'>NJ</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        ink: {
+                            950: '#050505',
+                            900: '#0a0a0a',
+                            800: '#121212',
+                            700: '#1a1a1a',
+                            600: '#262626',
+                        },
+                        paper: {
+                            50: '#faf9f6',
+                            100: '#f4f1ea',
+                            200: '#e5e2db',
+                            300: '#d1cdc5',
+                        },
+                        accent: {
+                            DEFAULT: '#ff4d00',
+                            hover: '#cc3d00',
+                            light: '#ff7a40',
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Fraunces', 'serif'],
+                        'sans': ['DM Sans', 'sans-serif'],
+                        'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'noise': "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\" opacity=\"0.05\"/%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Publication page specific styles */
+        .drop-cap::first-letter {
+            float: left;
+            font-family: 'Fraunces', serif;
+            font-size: 4.5rem;
+            line-height: 0.8;
+            padding-right: 0.75rem;
+            padding-top: 0.25rem;
+            color: #ff4d00;
+            font-weight: 900;
+        }
+
+        .ornament {
+            position: relative;
+        }
+        .ornament::before,
+        .ornament::after {
+            content: '~';
+            color: #ff4d00;
+            padding: 0 0.5rem;
+        }
+
+        .column-rule {
+            column-rule: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Staggered animations */
+        .animate-in {
+            animation: slideUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+
+        /* Pull quote styling */
+        .pull-quote {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .pull-quote::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -0.5rem;
+            font-family: 'Fraunces', serif;
+            font-size: 4rem;
+            color: #ff4d00;
+            line-height: 1;
+            opacity: 0.5;
+        }
+
+        /* Masthead styling */
+        .masthead-entry {
+            position: relative;
+        }
+        .masthead-entry::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2rem;
+            height: 1px;
+            background: rgba(255,255,255,0.2);
+        }
+        .masthead-entry:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-ink-900 text-paper-100 font-sans selection:bg-accent selection:text-white antialiased">
+
+    <!-- Grain Overlay -->
+    <div class="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="fixed inset-0 bg-ink-950 z-[100] flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="text-accent text-6xl font-serif font-black tracking-tighter animate-pulse">NJBP</div>
+        <div class="mt-4 font-mono text-xs uppercase tracking-widest text-paper-300">Loading Record...</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-40 bg-ink-900/90 backdrop-blur-sm border-b border-white/10">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 bg-accent flex items-center justify-center text-white font-serif font-bold text-sm transition-transform group-hover:rotate-12">N</div>
+                <span class="font-serif font-bold text-lg tracking-tight group-hover:text-accent transition-colors">NJ Black Press</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
+                <li><a href="archive.html" class="hover:text-accent transition-colors">Archive</a></li>
+                <li><a href="index.html#timeline" class="hover:text-accent transition-colors">Timeline</a></li>
+                <li><a href="index.html#database" class="hover:text-accent transition-colors">Database</a></li>
+                <li><a href="index.html#about" class="hover:text-accent transition-colors">About</a></li>
+            </ul>
+
+            <!-- Mobile Menu Btn -->
+            <button id="mobile-menu-btn" class="md:hidden text-paper-100 hover:text-accent">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-ink-950 z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
+        <button id="mobile-menu-close" class="absolute top-6 right-6 text-paper-300 hover:text-accent">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <ul class="space-y-8 text-center font-serif text-3xl font-light">
+            <li><a href="archive.html" class="hover:text-accent hover:italic transition-all">Archive</a></li>
+            <li><a href="index.html#timeline" class="hover:text-accent hover:italic transition-all">Timeline</a></li>
+            <li><a href="index.html#database" class="hover:text-accent hover:italic transition-all">Database</a></li>
+            <li><a href="index.html#about" class="hover:text-accent hover:italic transition-all">About</a></li>
+        </ul>
+    </div>
+
+    <main class="pt-20">
+
+        <!-- Back Navigation -->
+        <div class="bg-ink-950 border-b border-white/10 py-4 px-4 md:px-8">
+            <div class="max-w-[1400px] mx-auto">
+                <a href="archive.html" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-paper-300 hover:text-accent transition-colors group">
+                    <span class="transition-transform group-hover:-translate-x-1">&larr;</span>
+                    <span>Back to Archive</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Publication Content Container -->
+        <div id="publication-content">
+            <!-- Content injected by JavaScript -->
+        </div>
+
+        <!-- Error State -->
+        <div id="error-state" class="hidden py-32 px-4 text-center">
+            <div class="max-w-xl mx-auto">
+                <div class="text-8xl font-serif font-black text-accent mb-6">404</div>
+                <h1 class="font-serif text-3xl mb-4">Publication Not Found</h1>
+                <p class="text-paper-300 mb-8">The requested publication record could not be located in our archive.</p>
+                <a href="archive.html" class="inline-block px-8 py-4 bg-white text-ink-950 font-bold hover:bg-accent hover:text-white transition-colors">
+                    Browse Full Archive
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-ink-950 border-t border-white/10 py-10 px-4 md:px-8 mt-20">
+        <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-paper-300 uppercase tracking-wider">
+            <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
+            <div class="flex gap-6">
+                <a href="index.html" class="hover:text-accent">Home</a>
+                <a href="archive.html" class="hover:text-accent">Archive</a>
+                <a href="index.html#about" class="hover:text-accent">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/publication.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const menu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            menu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        menuClose.addEventListener('click', toggleMenu);
+        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Copyright
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

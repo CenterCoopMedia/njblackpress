@@ -82,7 +82,7 @@
             <ul class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
                 <li><a href="#featured" class="hover:text-accent transition-colors">Featured</a></li>
                 <li><a href="#timeline" class="hover:text-accent transition-colors">Timeline</a></li>
-                <li><a href="#database" class="hover:text-accent transition-colors">Database</a></li>
+                <li><a href="archive.html" class="hover:text-accent transition-colors">Archive</a></li>
                 <li><a href="#about" class="hover:text-accent transition-colors">About</a></li>
             </ul>
 
@@ -101,7 +101,7 @@
         <ul class="space-y-8 text-center font-serif text-3xl font-light">
             <li><a href="#featured" class="hover:text-accent hover:italic transition-all">Featured</a></li>
             <li><a href="#timeline" class="hover:text-accent hover:italic transition-all">Timeline</a></li>
-            <li><a href="#database" class="hover:text-accent hover:italic transition-all">Database</a></li>
+            <li><a href="archive.html" class="hover:text-accent hover:italic transition-all">Archive</a></li>
             <li><a href="#about" class="hover:text-accent hover:italic transition-all">About</a></li>
         </ul>
     </div>
@@ -138,8 +138,8 @@
                         <span class="text-3xl font-serif text-paper-100" id="stat-active" data-target="12">0</span>
                     </div>
                     
-                    <a href="#database" class="mt-4 group flex items-center gap-4 text-accent hover:text-white transition-colors">
-                        <span class="uppercase tracking-widest text-xs">Explore Full Database</span>
+                    <a href="archive.html" class="mt-4 group flex items-center gap-4 text-accent hover:text-white transition-colors">
+                        <span class="uppercase tracking-widest text-xs">Explore Full Archive</span>
                         <span class="text-2xl transition-transform group-hover:translate-x-2">&rarr;</span>
                     </a>
                 </div>
@@ -371,17 +371,17 @@
         <footer id="about" class="bg-ink-900 border-t border-white/10 pt-20 pb-10 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
                 <div>
-                    <h3 class="font-serif text-3xl font-bold mb-6">About the Project</h3>
+                    <h3 class="font-serif text-3xl font-bold mb-6">About the project</h3>
                     <div class="font-serif text-lg text-paper-300 space-y-6 leading-relaxed max-w-xl">
-                        <p>The New Jersey Black Press Database is a digital preservation initiative by the Center for Cooperative Media, dedicated to documenting the history and ongoing contributions of Black-owned news publications throughout the Garden State.</p>
-                        
+                        <p>The New Jersey Black Press Database is a digital preservation initiative by the <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener" class="text-accent hover:text-white transition-colors underline underline-offset-2">Center for Cooperative Media</a>, dedicated to documenting the history and ongoing contributions of Black-owned news publications throughout the Garden State.</p>
+
                         <div>
-                            <h4 class="font-sans text-sm font-bold text-white mb-2 uppercase tracking-wide">Key Initiatives</h4>
+                            <h4 class="font-sans text-sm font-bold text-white mb-2 uppercase tracking-wide">Key initiatives</h4>
                             <p class="text-base mb-4">
-                                Beyond archiving, this project supports the <strong>Black Publishers Collective (BPC)</strong>, a network fostering collaboration and sustainability among Black media creators.
+                                Beyond archiving, this project supports the <a href="https://centerforcooperativemedia.org/programs/black-publishers-collective/" target="_blank" rel="noopener" class="text-accent hover:text-white transition-colors underline underline-offset-2">Black Publishers Collective (BPC)</a>, a network fostering collaboration and sustainability among Black media creators.
                             </p>
                             <p class="text-base">
-                                It also aligns with the <strong>South Jersey Information Equity Project (SJIEP)</strong>, which trains aspiring community reporters to enhance local news coverage and civic resilience in underserved areas.
+                                It also aligns with the <a href="https://centerforcooperativemedia.org/programs/south-jersey-information-equity-project/" target="_blank" rel="noopener" class="text-accent hover:text-white transition-colors underline underline-offset-2">South Jersey Information Equity Project (SJIEP)</a>, which trains aspiring community reporters to enhance local news coverage and civic resilience in underserved areas.
                             </p>
                         </div>
                     </div>
@@ -390,27 +390,37 @@
                 <div class="flex flex-col gap-8">
                     <div class="border border-white/10 p-8 bg-ink-950 relative overflow-hidden group">
                         <div class="relative z-10">
-                            <h4 class="font-mono text-xs text-accent uppercase tracking-widest mb-2">Curated By</h4>
-                            <p class="font-serif text-xl font-bold mb-1">Center for Cooperative Media</p>
+                            <h4 class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Curated by</h4>
+                            <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener" class="block mb-4">
+                                <img src="https://centerforcooperativemedia.org/wp-content/uploads/2025/07/ccm-banner-iso-2025.png"
+                                     alt="Center for Cooperative Media"
+                                     class="h-12 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity">
+                            </a>
                             <p class="text-sm text-paper-300">Montclair State University</p>
-                            <a href="https://centerforcooperativemedia.org" target="_blank" class="inline-block mt-4 text-xs font-mono uppercase border-b border-white/30 pb-1 hover:text-accent hover:border-accent transition-colors">Visit Center &rarr;</a>
+                            <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener" class="inline-block mt-4 text-xs font-mono uppercase border-b border-white/30 pb-1 hover:text-accent hover:border-accent transition-colors">Visit Center &rarr;</a>
                         </div>
-                        <div class="absolute -right-4 -bottom-4 text-[10rem] font-serif font-black text-white/5 leading-none select-none pointer-events-none group-hover:text-white/10 transition-colors">CCM</div>
                     </div>
 
                     <div class="border border-white/10 p-8 bg-ink-950">
                         <h4 class="font-mono text-xs text-accent uppercase tracking-widest mb-2">Contribute</h4>
                         <p class="text-paper-300 text-sm mb-4">Have archives, corrections, or a publication we missed?</p>
-                        <a href="mailto:cooperativemedia@montclair.edu" class="inline-block px-6 py-3 bg-white text-ink-950 font-bold hover:bg-accent hover:text-white transition-colors">Contact Us</a>
+                        <a href="mailto:info@centerforcooperativemedia.org" class="inline-block px-6 py-3 bg-white text-ink-950 font-bold hover:bg-accent hover:text-white transition-colors">Contact Us</a>
                     </div>
                 </div>
             </div>
 
             <div class="max-w-[1400px] mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-paper-300 uppercase tracking-wider">
-                <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
+                <div class="flex items-center gap-4">
+                    <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener">
+                        <img src="https://centerforcooperativemedia.org/wp-content/uploads/2025/07/ccm-logo-iso-2025.png"
+                             alt="CCM"
+                             class="h-8 w-auto brightness-0 invert opacity-70 hover:opacity-100 transition-opacity">
+                    </a>
+                    <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
+                </div>
                 <div class="flex gap-6">
-                    <a href="#" class="hover:text-accent">Privacy</a>
-                    <a href="#" class="hover:text-accent">GitHub</a>
+                    <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener" class="hover:text-accent">CCM</a>
+                    <a href="https://github.com/centerforcooperativemedia" target="_blank" rel="noopener" class="hover:text-accent">GitHub</a>
                 </div>
             </div>
         </footer>

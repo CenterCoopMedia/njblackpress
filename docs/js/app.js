@@ -274,37 +274,69 @@
     const statusText = pub.isActive ? 'ACTIVE' : 'ARCHIVED';
     const years = pub.yearFounded ? `${pub.yearFounded}${pub.yearCeased ? ' — ' + pub.yearCeased : ' — Present'}` : 'Unknown';
     const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors border-b border-transparent hover:border-accent pb-1">Visit Site</a>` : '';
-    const archiveLink = pub.archiveUrl ? `<a href="${pub.archiveUrl}" target="_blank" rel="noopener" class="text-xs font-mono uppercase tracking-wider text-paper-300 hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">Archives</a>` : '';
+    // Only show archive link if it's an actual URL (starts with http)
+    const hasValidArchiveUrl = pub.archiveUrl && pub.archiveUrl.startsWith('http');
+    const archiveLink = hasValidArchiveUrl ? `<a href="${pub.archiveUrl}" target="_blank" rel="noopener" class="text-xs font-mono uppercase tracking-wider text-paper-300 hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">Archives</a>` : '';
 
-    // Truncate description more aggressively for grid
-    const desc = pub.missionStatement || pub.description || '';
-    const truncatedDesc = truncate(desc, 100);
+    // Build one-line description from available fields
+    const oneLiner = getOneLiner(pub);
 
     return `
       <article class="bg-ink-900 border border-white/10 hover:border-accent transition-colors p-6 flex flex-col h-full group">
         <header class="flex justify-between items-start mb-4">
             <span class="font-mono text-[10px] uppercase tracking-widest px-2 py-1 border ${statusClass}">${statusText}</span>
-            <span class="font-mono text-xs text-paper-300">${pub.city || 'N/J'}</span>
+            <span class="font-mono text-xs text-paper-300">${pub.city || 'NJ'}</span>
         </header>
-        
-        <h3 class="font-serif text-2xl font-bold text-paper-100 mb-2 leading-tight group-hover:text-accent transition-colors">
-            ${escapeHtml(pub.name)}
-        </h3>
-        
-        <p class="font-mono text-xs text-paper-300 mb-6 border-b border-white/10 pb-4">
+
+        <a href="publication.html?id=${pub.id}" class="block">
+            <h3 class="font-serif text-2xl font-bold text-paper-100 mb-2 leading-tight group-hover:text-accent transition-colors">
+                ${escapeHtml(pub.name)}
+            </h3>
+        </a>
+
+        <p class="font-mono text-xs text-paper-300 border-b border-white/10 pb-4">
             ${years}
         </p>
 
-        <div class="text-sm text-paper-200 leading-relaxed mb-6 flex-grow">
-            ${escapeHtml(truncatedDesc)}
-        </div>
+        <p class="text-sm text-paper-200 leading-relaxed py-4 border-b border-white/10 italic flex-grow">
+            ${escapeHtml(oneLiner)}
+        </p>
 
-        <footer class="flex gap-4 mt-auto pt-4 border-t border-white/5">
+        <footer class="flex gap-4 mt-auto pt-4">
+            <a href="publication.html?id=${pub.id}" class="text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors border-b border-transparent hover:border-accent pb-1">View Details</a>
             ${websiteLink}
             ${archiveLink}
         </footer>
       </article>
     `;
+  }
+
+  function getOneLiner(pub) {
+    // Priority 1: Mission statement (cleaned up)
+    if (pub.missionStatement) {
+      let mission = pub.missionStatement.replace(/^["']|["']$/g, '').trim();
+      return truncate(mission, 80);
+    }
+
+    // Priority 2: Primary focus / content areas
+    if (pub.primaryFocus && pub.primaryFocus.toLowerCase() !== 'newspaper') {
+      return truncate(pub.primaryFocus, 80);
+    }
+
+    // Priority 3: Construct from format + frequency
+    const format = pub.format || 'Publication';
+    const frequency = pub.frequency ? pub.frequency.toLowerCase() : '';
+    const medium = pub.medium ? pub.medium.toLowerCase() : '';
+
+    if (frequency && medium) {
+      return `${frequency.charAt(0).toUpperCase() + frequency.slice(1)} ${medium} ${format.toLowerCase()}`;
+    } else if (frequency) {
+      return `${frequency.charAt(0).toUpperCase() + frequency.slice(1)} ${format.toLowerCase()}`;
+    } else if (format) {
+      return format;
+    }
+
+    return 'Publication record';
   }
 
   function updateResultsCount() {
