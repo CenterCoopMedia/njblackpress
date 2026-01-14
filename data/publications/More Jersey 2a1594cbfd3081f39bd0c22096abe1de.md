@@ -1,5 +1,8 @@
 # More Jersey
 
+Year founded: 2022
+Owners/Publishers: Joe Campbell, Founder
+Location (City): Statewide (New Jersey)
 Website/Archive: MoreJersey.com
 Format: Community media organization
 Medium/Distribution method (e.g. Print, Digital): Online
