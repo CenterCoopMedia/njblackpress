@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive database of New Jersey Black press publications spanning from 1880 to present, documenting over 140 historic and contemporary outlets.">
+    <meta name="keywords" content="New Jersey, Black press, African American newspapers, Black media, journalism history, NJ publications">
+    <meta name="author" content="Center for Cooperative Media">
+
+    <title>New Jersey Black Press Database | 140+ Publications 1880-Present</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: {
+                            950: '#0d0b09',
+                            900: '#1a1613',
+                            800: '#2a2420',
+                            700: '#3d352e',
+                            600: '#52483f',
+                        },
+                        warm: {
+                            900: '#1c1410',
+                            800: '#2d221b',
+                            700: '#3e3026',
+                        },
+                        gold: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        },
+                        amber: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Crimson Pro', 'Georgia', 'serif'],
+                        'sans': ['Source Sans 3', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'counter': 'counter 2s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background-color: #0d0b09;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Crimson Pro', serif;
+        }
+
+        /* Loading overlay */
+        .loading-overlay {
+            position: fixed;
+            inset: 0;
+            background: #0d0b09;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid #3d352e;
+            border-top-color: #f59e0b;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Counter animation */
+        .stat-number {
+            display: inline-block;
+        }
+
+        /* Card hover effects */
+        .publication-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(245, 158, 11, 0.15);
+        }
+
+        /* Timeline placeholder styling */
+        .timeline-decade {
+            position: relative;
+        }
+
+        .timeline-decade::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, #f59e0b, transparent);
+        }
+
+        /* Filter button active state */
+        .filter-btn.active {
+            background-color: #f59e0b;
+            color: #0d0b09;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Search input focus */
+        .search-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #f59e0b;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Decorative elements */
+        .decorative-line {
+            background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+            height: 1px;
+        }
+
+        /* Results grid */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Empty state */
+        .empty-results {
+            display: none;
+        }
+
+        .empty-results.visible {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-charcoal-950 text-gray-100 min-h-screen">
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay" role="status" aria-label="Loading content">
+        <div class="text-center">
+            <div class="loading-spinner mx-auto mb-4"></div>
+            <p class="text-gold-400 font-sans text-sm tracking-wide">Loading database...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-charcoal-950/95 backdrop-blur-md border-b border-charcoal-700/50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="navigation" aria-label="Main navigation">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo/Title -->
+                <a href="#" class="flex items-center gap-3 group" aria-label="NJ Black Press Database home">
+                    <span class="text-2xl" aria-hidden="true">📰</span>
+                    <span class="font-serif font-semibold text-lg md:text-xl text-gold-400 group-hover:text-gold-300 transition-colors">
+                        NJ Black Press
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex items-center gap-8">
+                    <li>
+                        <a href="#featured-historical" class="font-sans text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
+                            Historical
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#featured-contemporary" class="font-sans text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
+                            Contemporary
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#timeline" class="font-sans text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
+                            Timeline
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#database" class="font-sans text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
+                            Database
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="font-sans text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
+                            About
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button
+                    id="mobile-menu-btn"
+                    class="md:hidden p-2 text-gray-300 hover:text-gold-400 transition-colors"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div
+            id="mobile-menu"
+            class="mobile-menu fixed top-0 right-0 h-full w-72 bg-charcoal-900 shadow-2xl md:hidden z-50"
+            role="dialog"
+            aria-label="Mobile navigation"
+            aria-hidden="true"
+        >
+            <div class="p-6">
+                <button
+                    id="mobile-menu-close"
+                    class="absolute top-4 right-4 p-2 text-gray-400 hover:text-gold-400 transition-colors"
+                    aria-label="Close menu"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+                <nav class="mt-12">
+                    <ul class="space-y-6">
+                        <li>
+                            <a href="#featured-historical" class="block font-sans text-lg font-medium text-gray-200 hover:text-gold-400 transition-colors">
+                                Historical Publications
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#featured-contemporary" class="block font-sans text-lg font-medium text-gray-200 hover:text-gold-400 transition-colors">
+                                Contemporary Outlets
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#timeline" class="block font-sans text-lg font-medium text-gray-200 hover:text-gold-400 transition-colors">
+                                Timeline
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#database" class="block font-sans text-lg font-medium text-gray-200 hover:text-gold-400 transition-colors">
+                                Full Database
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="block font-sans text-lg font-medium text-gray-200 hover:text-gold-400 transition-colors">
+                                About
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Backdrop -->
+        <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/60 hidden md:hidden z-40" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative overflow-hidden py-20 md:py-32 lg:py-40">
+            <!-- Background decorations -->
+            <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+                <div class="absolute top-0 left-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="text-center max-w-4xl mx-auto">
+                    <!-- Eyebrow -->
+                    <p class="font-sans text-sm md:text-base font-medium text-gold-500 tracking-widest uppercase mb-6 animate-fade-in">
+                        A comprehensive archive
+                    </p>
+
+                    <!-- Main Title -->
+                    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-slide-up">
+                        New Jersey<br>
+                        <span class="gradient-text">Black Press Database</span>
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="font-sans text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 animate-slide-up" style="animation-delay: 0.1s;">
+                        Documenting the voices, stories, and legacy of Black journalism in New Jersey from 1880 to the present day.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl mx-auto animate-slide-up" style="animation-delay: 0.2s;">
+                        <div class="text-center p-4">
+                            <div class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-gold-400 mb-2">
+                                <span id="stat-publications" class="stat-number" data-target="140">0</span>+
+                            </div>
+                            <p class="font-sans text-sm text-gray-500 uppercase tracking-wide">Publications</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-gold-400 mb-2">
+                                <span id="stat-years" class="stat-number" data-target="145">0</span>
+                            </div>
+                            <p class="font-sans text-sm text-gray-500 uppercase tracking-wide">Years of history</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-gold-400 mb-2">
+                                <span id="stat-cities" class="stat-number" data-target="25">0</span>+
+                            </div>
+                            <p class="font-sans text-sm text-gray-500 uppercase tracking-wide">Cities</p>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-gold-400 mb-2">
+                                <span id="stat-active" class="stat-number" data-target="12">0</span>
+                            </div>
+                            <p class="font-sans text-sm text-gray-500 uppercase tracking-wide">Active today</p>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 animate-slide-up" style="animation-delay: 0.3s;">
+                        <a
+                            href="#database"
+                            class="inline-flex items-center gap-2 px-8 py-4 bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-sans font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/25"
+                        >
+                            Explore the database
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                        <a
+                            href="#timeline"
+                            class="inline-flex items-center gap-2 px-8 py-4 border border-charcoal-600 hover:border-gold-500/50 text-gray-300 hover:text-gold-400 font-sans font-medium rounded-lg transition-all duration-300"
+                        >
+                            View timeline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative line -->
+            <div class="absolute bottom-0 left-0 right-0 decorative-line" aria-hidden="true"></div>
+        </section>
+
+        <!-- Featured Historical Publications -->
+        <section id="featured-historical" class="py-20 md:py-28 bg-charcoal-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <header class="text-center mb-16">
+                    <p class="font-sans text-sm font-medium text-gold-500 tracking-widest uppercase mb-4">
+                        Historic voices
+                    </p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Foundational publications
+                    </h2>
+                    <p class="font-sans text-lg text-gray-400 max-w-2xl mx-auto">
+                        Pioneering newspapers and periodicals that shaped Black communities across New Jersey.
+                    </p>
+                </header>
+
+                <!-- Featured Cards Grid -->
+                <div id="featured-historical-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Card 1: The Weekly Advocate -->
+                    <article class="publication-card bg-charcoal-800 rounded-xl p-6 border border-charcoal-700/50">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="inline-block px-3 py-1 bg-gold-500/10 text-gold-400 text-xs font-sans font-medium rounded-full">
+                                1880s
+                            </span>
+                            <span class="text-2xl" aria-hidden="true">📜</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-white mb-2">The Weekly Advocate</h3>
+                        <p class="font-sans text-sm text-gold-500 mb-3">Newark, NJ | 1885-1892</p>
+                        <p class="font-sans text-sm text-gray-400 leading-relaxed">
+                            One of the earliest Black newspapers in New Jersey, serving as a voice for civil rights and community organizing in Newark.
+                        </p>
+                    </article>
+
+                    <!-- Card 2: The New Jersey Afro-American -->
+                    <article class="publication-card bg-charcoal-800 rounded-xl p-6 border border-charcoal-700/50">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="inline-block px-3 py-1 bg-gold-500/10 text-gold-400 text-xs font-sans font-medium rounded-full">
+                                1900s
+                            </span>
+                            <span class="text-2xl" aria-hidden="true">📰</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-white mb-2">NJ Afro-American</h3>
+                        <p class="font-sans text-sm text-gold-500 mb-3">Newark, NJ | 1908-1945</p>
+                        <p class="font-sans text-sm text-gray-400 leading-relaxed">
+                            A major regional publication covering politics, society, and culture for Black New Jerseyans during the Great Migration era.
+                        </p>
+                    </article>
+
+                    <!-- Card 3: The Herald News -->
+                    <article class="publication-card bg-charcoal-800 rounded-xl p-6 border border-charcoal-700/50">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="inline-block px-3 py-1 bg-gold-500/10 text-gold-400 text-xs font-sans font-medium rounded-full">
+                                1920s
+                            </span>
+                            <span class="text-2xl" aria-hidden="true">📄</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-white mb-2">The Herald News</h3>
+                        <p class="font-sans text-sm text-gold-500 mb-3">Trenton, NJ | 1922-1967</p>
+                        <p class="font-sans text-sm text-gray-400 leading-relaxed">
+                            Trenton's leading Black newspaper, documenting the civil rights movement and local political organizing for over four decades.
+                        </p>
+                    </article>
+
+                    <!-- Card 4: The Informer -->
+                    <article class="publication-card bg-charcoal-800 rounded-xl p-6 border border-charcoal-700/50">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="inline-block px-3 py-1 bg-gold-500/10 text-gold-400 text-xs font-sans font-medium rounded-full">
+                                1930s
+                            </span>
+                            <span class="text-2xl" aria-hidden="true">📋</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-white mb-2">The Informer</h3>
+                        <p class="font-sans text-sm text-gold-500 mb-3">Jersey City, NJ | 1932-1958</p>
+                        <p class="font-sans text-sm text-gray-400 leading-relaxed">
+                            A weekly newspaper serving Hudson County's Black community, known for investigative reporting on housing discrimination.
+                        </p>
+                    </article>
+
+                    <!-- Card 5: The Camden Courier -->
+                    <article class="publication-card bg-charcoal-800 rounded-xl p-6 border border-charcoal-700/50">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="inline-block px-3 py-1 bg-gold-500/10 text-gold-400 text-xs font-sans font-medium rounded-full">
+                                1940s
+                            </span>
+                            <span class="text-2xl" aria-hidden="true">📰</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-white mb-2">Camden Courier</h3>
+                        <p class="font-sans text-sm text-gold-500 mb-3">Camden, NJ | 1943-1972</p>
+                        <p class="font-sans text-sm text-gray-400 leading-relaxed">
+                            South Jersey's premier Black newspaper, covering the post-war economic boom and civil rights activism in Camden County.
+                        </p>
+                    </article>
+
+                    <!-- Card 6: City News -->
+                    <article class="publication-card bg-charcoal-800 rounded-xl p-6 border border-charcoal-700/50">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="inline-block px-3 py-1 bg-gold-500/10 text-gold-400 text-xs font-sans font-medium rounded-full">
+                                1950s
+                            </span>
+                            <span class="text-2xl" aria-hidden="true">📝</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-white mb-2">City News</h3>
+                        <p class="font-sans text-sm text-gold-500 mb-3">Newark, NJ | 1951-1989</p>
+                        <p class="font-sans text-sm text-gray-400 leading-relaxed">
+                            A major voice during the Civil Rights era, extensively covering the 1967 Newark uprising and its aftermath.
+                        </p>
+                    </article>
+
+                    <!-- Card 7: Atlantic City Voice -->
+                    <article class="publication-card bg-charcoal-800 rounded-xl p-6 border border-charcoal-700/50">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="inline-block px-3 py-1 bg-gold-500/10 text-gold-400 text-xs font-sans font-medium rounded-full">
+                                1960s
+                            </span>
+                            <span class="text-2xl" aria-hidden="true">🗞️</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-white mb-2">Atlantic City Voice</h3>
+                        <p class="font-sans text-sm text-gold-500 mb-3">Atlantic City, NJ | 1962-1985</p>
+                        <p class="font-sans text-sm text-gray-400 leading-relaxed">
+                            Documented the struggles of Black casino workers and the fight for economic equality in Atlantic City's gaming industry.
+                        </p>
+                    </article>
+
+                    <!-- Card 8: The New Citizen -->
+                    <article class="publication-card bg-charcoal-800 rounded-xl p-6 border border-charcoal-700/50">
+                        <div class="flex items-start justify-between mb-4">
+                            <span class="inline-block px-3 py-1 bg-gold-500/10 text-gold-400 text-xs font-sans font-medium rounded-full">
+                                1970s
+                            </span>
+                            <span class="text-2xl" aria-hidden="true">📰</span>
+                        </div>
+                        <h3 class="font-serif text-xl font-semibold text-white mb-2">The New Citizen</h3>
+                        <p class="font-sans text-sm text-gold-500 mb-3">Paterson, NJ | 1971-1998</p>
+                        <p class="font-sans text-sm text-gray-400 leading-relaxed">
+                            Passaic County's leading Black publication, covering the rise of Black political power in northern New Jersey cities.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- View All Link -->
+                <div class="text-center mt-12">
+                    <a
+                        href="#database"
+                        class="inline-flex items-center gap-2 font-sans text-gold-400 hover:text-gold-300 font-medium transition-colors"
+                    >
+                        View all historical publications
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Contemporary Publications -->
+        <section id="featured-contemporary" class="py-20 md:py-28 bg-charcoal-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <header class="text-center mb-16">
+                    <p class="font-sans text-sm font-medium text-gold-500 tracking-widest uppercase mb-4">
+                        Active today
+                    </p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Contemporary voices
+                    </h2>
+                    <p class="font-sans text-lg text-gray-400 max-w-2xl mx-auto">
+                        Digital-first and print publications continuing the tradition of Black journalism in New Jersey.
+                    </p>
+                </header>
+
+                <!-- Contemporary Cards Grid -->
+                <div id="featured-contemporary-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Contemporary 1 -->
+                    <article class="publication-card bg-gradient-to-br from-charcoal-800 to-charcoal-900 rounded-xl p-8 border border-gold-500/20 hover:border-gold-500/40 transition-colors">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-gold-500/10 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl" aria-hidden="true">🌐</span>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-white">NJ.com Black NJ</h3>
+                                <p class="font-sans text-sm text-gold-500">Newark, NJ | Est. 2020</p>
+                            </div>
+                        </div>
+                        <p class="font-sans text-gray-400 mb-6 leading-relaxed">
+                            A dedicated section of NJ.com covering news, culture, and issues affecting Black communities statewide.
+                        </p>
+                        <a
+                            href="https://www.nj.com/black-nj/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 font-sans text-sm text-gold-400 hover:text-gold-300 font-medium transition-colors"
+                            aria-label="Visit NJ.com Black NJ website (opens in new tab)"
+                        >
+                            Visit website
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <!-- Contemporary 2 -->
+                    <article class="publication-card bg-gradient-to-br from-charcoal-800 to-charcoal-900 rounded-xl p-8 border border-gold-500/20 hover:border-gold-500/40 transition-colors">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-gold-500/10 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl" aria-hidden="true">📱</span>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-white">The Local Reporter</h3>
+                                <p class="font-sans text-sm text-gold-500">Irvington, NJ | Est. 2018</p>
+                            </div>
+                        </div>
+                        <p class="font-sans text-gray-400 mb-6 leading-relaxed">
+                            Hyperlocal digital news covering Irvington and surrounding Essex County communities with a focus on civic engagement.
+                        </p>
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 font-sans text-sm text-gold-400 hover:text-gold-300 font-medium transition-colors"
+                            aria-label="Visit The Local Reporter website (opens in new tab)"
+                        >
+                            Visit website
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <!-- Contemporary 3 -->
+                    <article class="publication-card bg-gradient-to-br from-charcoal-800 to-charcoal-900 rounded-xl p-8 border border-gold-500/20 hover:border-gold-500/40 transition-colors">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-gold-500/10 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl" aria-hidden="true">🎙️</span>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-white">Newark News & Story</h3>
+                                <p class="font-sans text-sm text-gold-500">Newark, NJ | Est. 2019</p>
+                            </div>
+                        </div>
+                        <p class="font-sans text-gray-400 mb-6 leading-relaxed">
+                            Multimedia storytelling platform amplifying Newark residents' voices through articles, podcasts, and video content.
+                        </p>
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 font-sans text-sm text-gold-400 hover:text-gold-300 font-medium transition-colors"
+                            aria-label="Visit Newark News & Story website (opens in new tab)"
+                        >
+                            Visit website
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <!-- Contemporary 4 -->
+                    <article class="publication-card bg-gradient-to-br from-charcoal-800 to-charcoal-900 rounded-xl p-8 border border-gold-500/20 hover:border-gold-500/40 transition-colors">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-gold-500/10 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl" aria-hidden="true">📰</span>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-white">The Community News</h3>
+                                <p class="font-sans text-sm text-gold-500">Trenton, NJ | Est. 1989</p>
+                            </div>
+                        </div>
+                        <p class="font-sans text-gray-400 mb-6 leading-relaxed">
+                            The longest-running active Black newspaper in New Jersey, covering Trenton and Mercer County for over 35 years.
+                        </p>
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 font-sans text-sm text-gold-400 hover:text-gold-300 font-medium transition-colors"
+                            aria-label="Visit The Community News website (opens in new tab)"
+                        >
+                            Visit website
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <!-- Contemporary 5 -->
+                    <article class="publication-card bg-gradient-to-br from-charcoal-800 to-charcoal-900 rounded-xl p-8 border border-gold-500/20 hover:border-gold-500/40 transition-colors">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-gold-500/10 rounded-lg flex items-center justify-center">
+                                <span class="text-2xl" aria-hidden="true">✊</span>
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-xl font-semibold text-white">Black Owned NJ</h3>
+                                <p class="font-sans text-sm text-gold-500">Statewide | Est. 2020</p>
+                            </div>
+                        </div>
+                        <p class="font-sans text-gray-400 mb-6 leading-relaxed">
+                            Digital platform spotlighting Black-owned businesses, entrepreneurs, and economic development across New Jersey.
+                        </p>
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 font-sans text-sm text-gold-400 hover:text-gold-300 font-medium transition-colors"
+                            aria-label="Visit Black Owned NJ website (opens in new tab)"
+                        >
+                            Visit website
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Timeline -->
+        <section id="timeline" class="py-20 md:py-28 bg-charcoal-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <header class="text-center mb-16">
+                    <p class="font-sans text-sm font-medium text-gold-500 tracking-widest uppercase mb-4">
+                        145 years of history
+                    </p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Timeline of the Black press
+                    </h2>
+                    <p class="font-sans text-lg text-gray-400 max-w-2xl mx-auto">
+                        Explore the evolution of Black journalism in New Jersey decade by decade.
+                    </p>
+                </header>
+
+                <!-- Timeline Container -->
+                <div id="timeline-container" class="relative" role="region" aria-label="Interactive timeline of New Jersey Black press history">
+                    <!-- Decade Navigation -->
+                    <nav id="timeline-nav" class="flex flex-wrap justify-center gap-2 mb-12" aria-label="Timeline decade navigation">
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1880">1880s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1890">1890s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1900">1900s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1910">1910s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1920">1920s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1930">1930s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1940">1940s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1950">1950s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1960">1960s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1970">1970s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1980">1980s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="1990">1990s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="2000">2000s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="2010">2010s</button>
+                        <button class="timeline-decade-btn px-4 py-2 font-sans text-sm font-medium text-gray-400 hover:text-gold-400 border border-charcoal-700 hover:border-gold-500/50 rounded-lg transition-all" data-decade="2020">2020s</button>
+                    </nav>
+
+                    <!-- Timeline Visualization Placeholder -->
+                    <div id="timeline-visualization" class="min-h-[400px] bg-charcoal-800/50 rounded-xl border border-charcoal-700/50 p-8">
+                        <!-- Timeline content will be rendered by timeline.js -->
+                        <div class="flex items-center justify-center h-full">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-gold-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <svg class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <p class="font-sans text-gray-400">Select a decade to explore publications from that era</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Details Panel -->
+                    <div id="timeline-details" class="mt-8 hidden">
+                        <div class="bg-charcoal-800 rounded-xl p-6 border border-charcoal-700/50">
+                            <h3 id="timeline-details-title" class="font-serif text-2xl font-bold text-white mb-4"></h3>
+                            <div id="timeline-details-content" class="font-sans text-gray-400"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Database Section -->
+        <section id="database" class="py-20 md:py-28 bg-charcoal-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <header class="text-center mb-12">
+                    <p class="font-sans text-sm font-medium text-gold-500 tracking-widest uppercase mb-4">
+                        Full collection
+                    </p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Search the database
+                    </h2>
+                    <p class="font-sans text-lg text-gray-400 max-w-2xl mx-auto">
+                        Browse and filter through 140+ publications in our collection.
+                    </p>
+                </header>
+
+                <!-- Search and Filters -->
+                <div class="bg-charcoal-900 rounded-xl p-6 md:p-8 border border-charcoal-700/50 mb-8">
+                    <!-- Search Bar -->
+                    <div class="relative mb-6">
+                        <label for="database-search" class="sr-only">Search publications</label>
+                        <input
+                            type="search"
+                            id="database-search"
+                            class="search-input w-full bg-charcoal-800 border border-charcoal-700 rounded-lg px-4 py-3 pl-12 font-sans text-gray-100 placeholder-gray-500 transition-all"
+                            placeholder="Search by name, city, or keyword..."
+                            aria-label="Search publications"
+                        >
+                        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Filter Groups -->
+                    <div class="space-y-4">
+                        <!-- City Filters -->
+                        <div>
+                            <h3 class="font-sans text-sm font-medium text-gray-400 mb-3">Filter by city</h3>
+                            <div id="city-filters" class="flex flex-wrap gap-2" role="group" aria-label="City filters">
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="city" data-value="all">All cities</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="city" data-value="Newark">Newark</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="city" data-value="Trenton">Trenton</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="city" data-value="Camden">Camden</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="city" data-value="Jersey City">Jersey City</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="city" data-value="Atlantic City">Atlantic City</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="city" data-value="Paterson">Paterson</button>
+                            </div>
+                        </div>
+
+                        <!-- Decade Filters -->
+                        <div>
+                            <h3 class="font-sans text-sm font-medium text-gray-400 mb-3">Filter by founding decade</h3>
+                            <div id="decade-filters" class="flex flex-wrap gap-2" role="group" aria-label="Decade filters">
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="decade" data-value="all">All decades</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="decade" data-value="1880">1880s</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="decade" data-value="1900">1900s</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="decade" data-value="1920">1920s</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="decade" data-value="1940">1940s</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="decade" data-value="1960">1960s</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="decade" data-value="1980">1980s</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="decade" data-value="2000">2000s</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="decade" data-value="2020">2020s</button>
+                            </div>
+                        </div>
+
+                        <!-- Status Filters -->
+                        <div>
+                            <h3 class="font-sans text-sm font-medium text-gray-400 mb-3">Filter by status</h3>
+                            <div id="status-filters" class="flex flex-wrap gap-2" role="group" aria-label="Status filters">
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="status" data-value="all">All</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="status" data-value="active">Active</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="status" data-value="defunct">Historical</button>
+                            </div>
+                        </div>
+
+                        <!-- Format Filters -->
+                        <div>
+                            <h3 class="font-sans text-sm font-medium text-gray-400 mb-3">Filter by format</h3>
+                            <div id="format-filters" class="flex flex-wrap gap-2" role="group" aria-label="Format filters">
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="format" data-value="all">All formats</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="format" data-value="newspaper">Newspaper</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="format" data-value="magazine">Magazine</button>
+                                <button class="filter-btn px-3 py-1.5 font-sans text-sm text-gray-400 bg-charcoal-800 hover:bg-charcoal-700 border border-charcoal-700 hover:border-gold-500/50 rounded-full transition-all" data-filter="format" data-value="digital">Digital-only</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Filters Display -->
+                    <div id="active-filters" class="mt-6 hidden">
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <span class="font-sans text-sm text-gray-500">Active filters:</span>
+                            <div id="active-filters-list" class="flex flex-wrap gap-2">
+                                <!-- Active filter tags will be inserted here by JS -->
+                            </div>
+                            <button id="clear-filters" class="font-sans text-sm text-gold-400 hover:text-gold-300 transition-colors">
+                                Clear all
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Count -->
+                <div class="flex items-center justify-between mb-6">
+                    <p id="results-count" class="font-sans text-sm text-gray-400">
+                        Showing <span id="results-showing">0</span> of <span id="results-total">140</span> publications
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <label for="sort-select" class="font-sans text-sm text-gray-500">Sort by:</label>
+                        <select
+                            id="sort-select"
+                            class="bg-charcoal-800 border border-charcoal-700 rounded-lg px-3 py-2 font-sans text-sm text-gray-300 focus:outline-none focus:ring-2 focus:ring-gold-500"
+                            aria-label="Sort results"
+                        >
+                            <option value="name-asc">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                            <option value="year-asc">Year (oldest)</option>
+                            <option value="year-desc">Year (newest)</option>
+                            <option value="city">City</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Results Grid -->
+                <div id="database-results" class="results-grid" role="list" aria-label="Publication search results">
+                    <!-- Results will be populated by app.js -->
+                </div>
+
+                <!-- Empty Results Message -->
+                <div id="empty-results" class="empty-results flex-col items-center justify-center py-16 text-center" role="status" aria-live="polite">
+                    <div class="w-20 h-20 bg-charcoal-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold text-white mb-2">No publications found</h3>
+                    <p class="font-sans text-gray-400 max-w-md mx-auto mb-6">
+                        We couldn't find any publications matching your search criteria. Try adjusting your filters or search terms.
+                    </p>
+                    <button id="reset-search" class="inline-flex items-center gap-2 px-6 py-3 bg-charcoal-800 hover:bg-charcoal-700 text-gold-400 font-sans font-medium rounded-lg border border-charcoal-700 hover:border-gold-500/50 transition-all">
+                        Reset search
+                    </button>
+                </div>
+
+                <!-- Load More Button -->
+                <div id="load-more-container" class="text-center mt-12 hidden">
+                    <button id="load-more-btn" class="inline-flex items-center gap-2 px-8 py-4 bg-charcoal-800 hover:bg-charcoal-700 text-gold-400 font-sans font-medium rounded-lg border border-charcoal-700 hover:border-gold-500/50 transition-all">
+                        Load more publications
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-28 bg-charcoal-900/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <header class="text-center mb-16">
+                    <p class="font-sans text-sm font-medium text-gold-500 tracking-widest uppercase mb-4">
+                        About this project
+                    </p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Preserving history
+                    </h2>
+                    <p class="font-sans text-lg text-gray-400 max-w-2xl mx-auto">
+                        A collaborative effort to document and celebrate the legacy of Black journalism in New Jersey.
+                    </p>
+                </header>
+
+                <!-- About Content -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <!-- Mission -->
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-4">Our mission</h3>
+                        <div class="font-sans text-gray-400 space-y-4 leading-relaxed">
+                            <p>
+                                The New Jersey Black Press Database is a research project dedicated to documenting the history and ongoing contributions of Black-owned and Black-focused news publications throughout New Jersey.
+                            </p>
+                            <p>
+                                From the earliest newspapers of the 1880s to today's digital-first outlets, Black journalists in New Jersey have played a vital role in informing communities, advocating for civil rights, and preserving the stories that mainstream media often overlooked.
+                            </p>
+                            <p>
+                                This database serves as both an archive and a living resource, connecting researchers, journalists, and community members with the publications that have shaped Black life in the Garden State.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Team -->
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-white mb-6">Project team</h3>
+
+                        <!-- Team Members -->
+                        <div class="space-y-6">
+                            <!-- Cassandra Etienne -->
+                            <div class="flex items-start gap-4 p-4 bg-charcoal-800/50 rounded-xl border border-charcoal-700/50">
+                                <div class="w-14 h-14 bg-gold-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="font-serif text-xl font-bold text-gold-400">CE</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-lg font-semibold text-white">Cassandra Etienne</h4>
+                                    <p class="font-sans text-sm text-gold-500 mb-2">Project lead</p>
+                                    <p class="font-sans text-sm text-gray-400">
+                                        Leading the research initiative and coordinating partnerships with archives and community organizations.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Amanda Alicea -->
+                            <div class="flex items-start gap-4 p-4 bg-charcoal-800/50 rounded-xl border border-charcoal-700/50">
+                                <div class="w-14 h-14 bg-gold-500/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="font-serif text-xl font-bold text-gold-400">AA</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif text-lg font-semibold text-white">Amanda Alicea</h4>
+                                    <p class="font-sans text-sm text-gold-500 mb-2">Data curator</p>
+                                    <p class="font-sans text-sm text-gray-400">
+                                        Compiling publication records, verifying historical data, and maintaining database accuracy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Partner Organization -->
+                        <div class="mt-8 p-6 bg-gradient-to-br from-charcoal-800 to-charcoal-900 rounded-xl border border-gold-500/20">
+                            <p class="font-sans text-sm text-gray-500 uppercase tracking-wide mb-2">A project of</p>
+                            <h4 class="font-serif text-xl font-semibold text-white mb-2">Center for Cooperative Media</h4>
+                            <p class="font-sans text-sm text-gray-400 mb-4">
+                                At Montclair State University's School of Communication and Media
+                            </p>
+                            <a
+                                href="https://centerforcooperativemedia.org"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 font-sans text-sm text-gold-400 hover:text-gold-300 font-medium transition-colors"
+                                aria-label="Visit Center for Cooperative Media website (opens in new tab)"
+                            >
+                                Learn more about our work
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact CTA -->
+                <div class="mt-16 text-center p-8 bg-charcoal-800 rounded-xl border border-charcoal-700/50">
+                    <h3 class="font-serif text-xl font-semibold text-white mb-3">Have information to contribute?</h3>
+                    <p class="font-sans text-gray-400 max-w-xl mx-auto mb-6">
+                        We're always looking to expand our database. If you have information about a publication not yet included, or corrections to existing entries, we'd love to hear from you.
+                    </p>
+                    <a
+                        href="mailto:cooperativemedia@montclair.edu"
+                        class="inline-flex items-center gap-2 px-6 py-3 bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-sans font-semibold rounded-lg transition-all duration-300"
+                    >
+                        Contact us
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal-950 border-t border-charcoal-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl" aria-hidden="true">📰</span>
+                        <span class="font-serif font-semibold text-lg text-gold-400">NJ Black Press Database</span>
+                    </div>
+                    <p class="font-sans text-sm text-gray-500 leading-relaxed">
+                        Documenting 145 years of Black journalism history in New Jersey.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-sans text-sm font-semibold text-white uppercase tracking-wide mb-4">Quick links</h4>
+                    <nav aria-label="Footer navigation">
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#featured-historical" class="font-sans text-sm text-gray-400 hover:text-gold-400 transition-colors">
+                                    Historical publications
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#featured-contemporary" class="font-sans text-sm text-gray-400 hover:text-gold-400 transition-colors">
+                                    Contemporary outlets
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#timeline" class="font-sans text-sm text-gray-400 hover:text-gold-400 transition-colors">
+                                    Timeline
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#database" class="font-sans text-sm text-gray-400 hover:text-gold-400 transition-colors">
+                                    Full database
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#about" class="font-sans text-sm text-gray-400 hover:text-gold-400 transition-colors">
+                                    About
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-sans text-sm font-semibold text-white uppercase tracking-wide mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a
+                                href="https://centerforcooperativemedia.org"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="font-sans text-sm text-gray-400 hover:text-gold-400 transition-colors"
+                            >
+                                Center for Cooperative Media
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="mailto:cooperativemedia@montclair.edu"
+                                class="font-sans text-sm text-gray-400 hover:text-gold-400 transition-colors"
+                            >
+                                cooperativemedia@montclair.edu
+                            </a>
+                        </li>
+                        <li class="pt-2">
+                            <a
+                                href="https://twitter.com/centercoopmed"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2 font-sans text-sm text-gray-400 hover:text-gold-400 transition-colors"
+                                aria-label="Follow us on Twitter (opens in new tab)"
+                            >
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                                @centercoopmed
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="mt-12 pt-8 border-t border-charcoal-800">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="font-sans text-xs text-gray-600">
+                        &copy; <span id="copyright-year">2025</span> Center for Cooperative Media at Montclair State University. All rights reserved.
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <a href="#" class="font-sans text-xs text-gray-600 hover:text-gold-400 transition-colors">
+                            Privacy policy
+                        </a>
+                        <a href="#" class="font-sans text-xs text-gray-600 hover:text-gold-400 transition-colors">
+                            Terms of use
+                        </a>
+                        <a
+                            href="https://github.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="font-sans text-xs text-gray-600 hover:text-gold-400 transition-colors"
+                        >
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+
+            function openMenu() {
+                mobileMenu.classList.add('open');
+                mobileMenu.setAttribute('aria-hidden', 'false');
+                mobileMenuBackdrop.classList.remove('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                mobileMenu.classList.remove('open');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+                mobileMenuBackdrop.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+
+            mobileMenuBtn.addEventListener('click', openMenu);
+            mobileMenuClose.addEventListener('click', closeMenu);
+            mobileMenuBackdrop.addEventListener('click', closeMenu);
+
+            // Close menu when clicking nav links
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // Loading overlay
+            const loadingOverlay = document.getElementById('loading-overlay');
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    loadingOverlay.classList.add('hidden');
+                }, 500);
+            });
+
+            // Animated counters
+            function animateCounter(element) {
+                const target = parseInt(element.dataset.target);
+                const duration = 2000;
+                const start = 0;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeOut = 1 - Math.pow(1 - progress, 3);
+                    const current = Math.floor(easeOut * (target - start) + start);
+                    element.textContent = current;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        element.textContent = target;
+                    }
+                }
+
+                requestAnimationFrame(update);
+            }
+
+            // Intersection Observer for counter animation
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.stat-number').forEach(counter => {
+                counterObserver.observe(counter);
+            });
+
+            // Update copyright year
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        });
+    </script>
+
+    <!-- External JavaScript files -->
+    <script src="js/featured.js" defer></script>
+    <script src="js/timeline.js" defer></script>
+    <script src="js/app.js" defer></script>
+</body>
+</html>
