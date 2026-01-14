@@ -1,0 +1,433 @@
+{
+  "featuredHistoric": [
+    {
+      "id": 10,
+      "name": "The Sentinel",
+      "alternateName": "The Trenton Herald (merged 1883)",
+      "city": "Trenton",
+      "founders": ["R. Henri Herbert"],
+      "publishers": ["R. Henri Herbert"],
+      "keyStaff": [
+        {
+          "name": "R. Henri Herbert",
+          "role": "Editor"
+        }
+      ],
+      "yearFounded": 1880,
+      "yearCeased": 1882,
+      "frequency": "Weekly",
+      "medium": "Print",
+      "format": "Newspaper",
+      "languages": ["English"],
+      "primaryFocus": "Local news, political advocacy, education, church notices, social commentary",
+      "missionStatement": "The Sentinel has a larger weekly circulation than any weekly paper published in this city (with one exception.) This statement we are prepared to verify at any time. Advertisers will do well to remember this fact, as our advertising rates are lower than those of any other newspaper with equal circulation.",
+      "historicalNotes": "Trenton's first Black newspaper and one of the earliest in New Jersey, founded during the post-Reconstruction era. Published every Saturday at 4 North Broad Street for 3 cents per issue or $1.25 annually. Known for its staunchly Republican editorial stance and popular 'Chit-Chat' column of community gossip and announcements. Merged with the Trenton Herald in 1883 due to financial pressures.",
+      "archiveUrl": "https://chroniclingamerica.loc.gov/lccn/2014254331/",
+      "physicalArchive": "Trenton Free Public Library (microfilm)",
+      "tags": ["Trenton", "19th century", "Reconstruction", "post-Reconstruction", "R. Henri Herbert", "pioneering press"]
+    },
+    {
+      "id": 38,
+      "name": "New Jersey Trumpet",
+      "alternateName": null,
+      "city": "Jersey City (created), Newark (published)",
+      "founders": ["William Murrell"],
+      "publishers": ["William Murrell"],
+      "keyStaff": [],
+      "yearFounded": 1887,
+      "yearCeased": 1897,
+      "frequency": "Weekly",
+      "medium": "Print",
+      "format": "Newspaper",
+      "languages": ["English"],
+      "primaryFocus": "Civil rights, economic advancement, political participation",
+      "missionStatement": null,
+      "historicalNotes": "A weekly voice for Black communities in Jersey City and Newark during a period of rapid urban growth and discrimination. Like many 19th-century minority-owned newspapers, it faced persistent financial pressures including limited advertising, a small subscriber base, and high printing costs. Closed around 1897 due to competition from larger regional papers.",
+      "archiveUrl": "https://www.loc.gov/item/sn87068175/",
+      "physicalArchive": "New Jersey Historical Society Library, Newark, NJ (original, dated 1888:9:1)",
+      "tags": ["Newark", "Jersey City", "19th century", "1880s", "historical press", "William Murrell"]
+    },
+    {
+      "id": 31,
+      "name": "The Echo",
+      "alternateName": null,
+      "city": "Long Branch/Red Bank",
+      "founders": ["William E. Rock", "Reuben J. Howard"],
+      "publishers": ["Rock & Howard"],
+      "keyStaff": [],
+      "yearFounded": 1904,
+      "yearCeased": 1943,
+      "frequency": "Weekly",
+      "medium": "Print",
+      "format": "Newspaper",
+      "languages": ["English"],
+      "primaryFocus": "Local news, African American community affairs",
+      "missionStatement": "Published weekly in interest of Negro race.",
+      "historicalNotes": "Proudly proclaimed as 'the oldest colored paper in New Jersey,' The Echo served the Jersey Shore's Black communities for nearly four decades. Founded by Rock & Howard in 1904, the newspaper documented the lives, struggles, and achievements of African Americans in Long Branch and Red Bank during the Jim Crow era. Its remarkable 39-year run demonstrates the vital role of community journalism in sustaining Black communities during challenging times.",
+      "archiveUrl": "https://www.loc.gov/item/sn88071050/",
+      "physicalArchive": "Library of Congress (microfilm)",
+      "tags": ["Jersey Shore", "Long Branch", "Red Bank", "Jim Crow era", "1900s", "longest-running"]
+    },
+    {
+      "id": 9,
+      "name": "Newark Herald",
+      "alternateName": "New Jersey Herald News (successor, 1938-1966)",
+      "city": "Newark",
+      "founders": [],
+      "publishers": ["Newark Herald Publishing Company"],
+      "keyStaff": [],
+      "yearFounded": 1928,
+      "yearCeased": 1939,
+      "frequency": "Weekly",
+      "medium": "Print",
+      "format": "Newspaper",
+      "languages": ["English"],
+      "primaryFocus": "News, African American community",
+      "missionStatement": "Serving Newark's Black community through the Great Depression.",
+      "historicalNotes": "A weekly African American newspaper published in Newark during the late 1920s and 1930s. Part of Newark and Essex County's Black press landscape during the Great Migration. Succeeded by the New Jersey Herald News (1938-1966), indicating a continuation under a new name rather than a complete shutdown.",
+      "archiveUrl": "https://www.loc.gov/item/sn88071222/",
+      "physicalArchive": "Free Public Library of Newark, NJ (microfilm, dated 1938, holdings incomplete)",
+      "tags": ["Newark", "Essex County", "20th century", "Great Depression", "Great Migration", "African American press"]
+    },
+    {
+      "id": 37,
+      "name": "New Jersey Guardian",
+      "alternateName": null,
+      "city": "Newark",
+      "founders": [],
+      "publishers": ["N.J. Guardian Publishing Company"],
+      "keyStaff": [
+        {
+          "name": "F. R. Clark",
+          "role": "Editor"
+        }
+      ],
+      "yearFounded": 1934,
+      "yearCeased": 1942,
+      "frequency": "Weekly",
+      "medium": "Print",
+      "format": "Newspaper",
+      "languages": ["English"],
+      "primaryFocus": "Local news, civic issues, African American achievements",
+      "missionStatement": "Voice of the Colored People.",
+      "historicalNotes": "A weekly African-American newspaper representing and empowering Newark's Black community during the Great Depression and early World War II. The paper highlighted local news, civic issues, and achievements within African-American life, offering a platform for voices excluded from mainstream media. Economic hardship, limited advertising revenue, and wartime pressures likely led to its closure.",
+      "archiveUrl": "https://www.loc.gov/item/sn89069097/",
+      "physicalArchive": "Rutgers University Newspaper Project, New Brunswick, NJ (original, dated 1939:10:28)",
+      "tags": ["Newark", "Essex County", "Great Depression", "World War II", "20th century", "1930s"]
+    },
+    {
+      "id": 35,
+      "name": "New Jersey Afro-American",
+      "alternateName": null,
+      "city": "Newark",
+      "founders": ["John Oliver Jr"],
+      "publishers": ["John Oliver Jr"],
+      "keyStaff": [
+        {
+          "name": "Cliff MacKay",
+          "role": "Editor"
+        },
+        {
+          "name": "Moses J. Newson",
+          "role": "Editor"
+        },
+        {
+          "name": "Raymond H. Boone",
+          "role": "Editor"
+        },
+        {
+          "name": "Robert C. Queen",
+          "role": "Editor"
+        },
+        {
+          "name": "Robert W. Matthews",
+          "role": "Editor"
+        }
+      ],
+      "yearFounded": 1941,
+      "yearCeased": null,
+      "frequency": "Weekly",
+      "medium": "Print",
+      "format": "Newspaper",
+      "languages": ["English"],
+      "primaryFocus": "News, civic welfare, civil rights",
+      "missionStatement": "Champion of Civic Welfare and the Square Deal. The longest running and most widely read black newspaper in New Jersey.",
+      "historicalNotes": "The longest-running Black newspaper in New Jersey, operating continuously for over 80 years. Founded in 1941 by John Oliver Jr, with a circulation of 14,609 in 1951, making it a major voice during the Civil Rights era. Adopted Afro-American numeration in 1979, connecting it to the broader Afro-American newspaper family.",
+      "archiveUrl": "https://www.loc.gov/item/sn84025926/",
+      "physicalArchive": "Library of Congress (extensive microfilm collection)",
+      "tags": ["Newark", "longest-running", "Civil Rights", "1940s", "still active"]
+    },
+    {
+      "id": 28,
+      "name": "Black Newark",
+      "alternateName": "Black News (1969), Black New Ark (1972-1974)",
+      "city": "Newark",
+      "founders": [],
+      "publishers": ["Committee for Unified Newark"],
+      "keyStaff": [
+        {
+          "name": "Abu Ansar",
+          "role": "Editor (April-November 1968)"
+        },
+        {
+          "name": "Yusef Iman",
+          "role": "Editor (January 1970)"
+        },
+        {
+          "name": "Daoud Abdullah",
+          "role": "Editor (January 1970)"
+        },
+        {
+          "name": "Simba Risasi",
+          "role": "Editor (April-May 1972)"
+        }
+      ],
+      "yearFounded": 1968,
+      "yearCeased": 1974,
+      "frequency": "Monthly",
+      "medium": "Print",
+      "format": "Newspaper",
+      "languages": ["English"],
+      "primaryFocus": "Politics, news, protest literature, Black self-determination",
+      "missionStatement": "The Voice of New Ark's Inner City.",
+      "historicalNotes": "Emerged during intense political organizing following the 1967 Newark uprising. Served Newark's Black communities with reporting on local politics, grassroots activism, and cultural development. Editors were associated with activist and nationalist circles. Like many movement-based newspapers, it faced chronic financial challenges relying on donations, volunteer labor, and limited advertising. Publication gaps, title changes, and organizational strain led to eventual discontinuation.",
+      "archiveUrl": "https://www.loc.gov/item/sn2001062056/",
+      "physicalArchive": "New York University (original, dated 1968:4)",
+      "tags": ["Newark", "1960s", "1970s", "Black Liberation movement", "1967 Newark uprising", "protest literature", "social justice", "CFUN"]
+    },
+    {
+      "id": 107,
+      "name": "The Black Voice",
+      "alternateName": null,
+      "city": "Newark",
+      "founders": ["United Black Workers"],
+      "publishers": ["United Black Workers"],
+      "keyStaff": [],
+      "yearFounded": 1970,
+      "yearCeased": null,
+      "frequency": "Monthly",
+      "medium": "Print",
+      "format": "Periodical/Newspaper",
+      "languages": ["English", "Spanish (some articles)"],
+      "primaryFocus": "Labor, trade unions, workplace rights, United Black Workers",
+      "missionStatement": "To help educate, expose, inform, and even agitate our fellow workers out of a feeling of complacency and frustration. Its further purpose is to assist in dealing realistically with the many problems facing workers on the job, in the community and around the world.",
+      "historicalNotes": "Published by United Black Workers, serving African American industrial workers, especially those at the Ford Mahwah Assembly Plant, during growing labor activism and racial discrimination in New Jersey manufacturing. Functioned as an internal communication and mobilization tool for Black workers seeking fair treatment and workplace rights. Relied on low-cost, self-published distribution rather than commercial advertising.",
+      "archiveUrl": "https://libcom.org/article/black-voice",
+      "physicalArchive": null,
+      "tags": ["Newark", "New Jersey", "1970s", "labor movement", "United Black Workers", "Ford", "United Auto Workers", "Black power", "workplace organizing"]
+    },
+    {
+      "id": 84,
+      "name": "Unity and Struggle",
+      "alternateName": "Black NewArk",
+      "city": "Newark",
+      "founders": ["Committee for Unified Newark"],
+      "publishers": ["Committee for Unified Newark"],
+      "keyStaff": [],
+      "yearFounded": 1974,
+      "yearCeased": 1978,
+      "frequency": "Monthly",
+      "medium": "Print",
+      "format": "Newspaper/Periodical",
+      "languages": ["English"],
+      "primaryFocus": "Socialism, Black Liberation movement, politics, education, employment, housing, health",
+      "missionStatement": "The Struggle Continues.",
+      "historicalNotes": "A political periodical published by the Committee for Unified Newark, which later became the Congress of African Peoples and then the Revolutionary Communist League (Marxist-Leninist-Mao Tse-tung Thought). Addressed community self-determination, Black political education, anti-racist organizing, and socialist theory. Reflected CFUN's ideological evolution from Black nationalism toward Marxist-Leninist frameworks. An important record of how local Newark movements engaged with national debates around liberation and socialism.",
+      "archiveUrl": "https://www.marxists.org/history/erol/periodicals/unity-struggle/index.htm",
+      "physicalArchive": null,
+      "tags": ["Newark", "1970s", "Black Liberation", "socialism", "Marxism-Leninism", "Black nationalism", "CFUN", "Revolutionary Communist League", "political education", "anti-imperialism"]
+    },
+    {
+      "id": 60,
+      "name": "Black Women's United Front Newsletter",
+      "alternateName": null,
+      "city": "Newark",
+      "founders": ["Black Women's United Front"],
+      "publishers": ["Black Women's United Front"],
+      "keyStaff": [],
+      "yearFounded": 1976,
+      "yearCeased": null,
+      "frequency": null,
+      "medium": "Print",
+      "format": "Periodical/Newsletter",
+      "languages": ["English"],
+      "primaryFocus": "Women, education, prison reform, economics, book reviews",
+      "missionStatement": "Abolition of every possibility of oppression and exploitation - that's our slogan!",
+      "historicalNotes": "A grassroots communication organ for Black women engaged in political education, anti-oppression organizing, and community self-determination. Connected to Black feminist, socialist, and prison-abolition movements. Served working-class Black women, students, incarcerated women, and families navigating state violence and economic inequality. Operated with minimal resources through volunteer labor, community donations, and low-cost distribution.",
+      "archiveUrl": "https://search.worldcat.org/en/title/30791066",
+      "physicalArchive": null,
+      "tags": ["Newark", "1970s", "Black feminism", "prison reform", "women's education", "economic justice", "grassroots organizing", "radical press", "Black Liberation movement"]
+    },
+    {
+      "id": 108,
+      "name": "Deliverance Voice",
+      "alternateName": null,
+      "city": "Newark",
+      "founders": [],
+      "publishers": ["Deliverance Publishing House"],
+      "keyStaff": [
+        {
+          "name": "Ralph Michel",
+          "role": "Editor"
+        }
+      ],
+      "yearFounded": 1967,
+      "yearCeased": null,
+      "frequency": null,
+      "medium": "Print",
+      "format": "Newspaper",
+      "languages": ["English"],
+      "primaryFocus": "Religion",
+      "missionStatement": null,
+      "historicalNotes": "A religious newspaper published in Newark by Deliverance Publishing House. Exact start and end dates are uncertain, with archival records suggesting publication began around 1967. Surviving issues include an eight-page edition with photographs, measuring approximately 28 cm in height. Documented in the Vivian Harsh Collection (IC-CW v.12, n.4, July/August 1978).",
+      "archiveUrl": null,
+      "physicalArchive": "Vivian Harsh Collection",
+      "tags": ["Newark", "1960s", "religion", "periodicals", "religious press"]
+    }
+  ],
+  "featuredContemporary": [
+    {
+      "id": 22,
+      "name": "Ark Republic",
+      "alternateName": null,
+      "city": "Newark",
+      "founders": ["Dr. Kaia Niambi Shivers"],
+      "publishers": ["Dr. Kaia Niambi Shivers"],
+      "keyStaff": [
+        {
+          "name": "Yolanda Aguilera",
+          "role": "Newsroom Editor"
+        },
+        {
+          "name": "Tashanta Snyder",
+          "role": "Journalist"
+        }
+      ],
+      "yearFounded": 2017,
+      "yearCeased": null,
+      "frequency": null,
+      "medium": "Digital",
+      "format": "Multimedia news organization",
+      "languages": ["English"],
+      "primaryFocus": "Social awareness, community empowerment, race, justice, culture, urban farming",
+      "missionStatement": "Independent multimedia news organization dedicated to amplifying underrepresented voices.",
+      "historicalNotes": "An independent multimedia news organization dedicated to amplifying underrepresented voices through traditional journalism, podcasts, photo essays, and creative storytelling. Serves African-American and diasporic communities in Newark and beyond. Notable projects include the 'Being Beloved' podcast centering narratives of formerly incarcerated women. Operates on a hybrid revenue model of memberships, grants, and sponsorships.",
+      "archiveUrl": "https://www.arkrepublic.com/",
+      "physicalArchive": null,
+      "tags": ["Newark", "21st century", "multimedia journalism", "podcasts", "social justice", "Dr. Kaia Niambi Shivers", "active", "diaspora"]
+    },
+    {
+      "id": 20,
+      "name": "NJ Urban News",
+      "alternateName": null,
+      "city": "Newark",
+      "founders": ["Penda Howell"],
+      "publishers": ["Penda Howell"],
+      "keyStaff": [
+        {
+          "name": "Taylor Jung",
+          "role": "Staff"
+        },
+        {
+          "name": "Amina Ali",
+          "role": "Staff"
+        },
+        {
+          "name": "Fabian Robinson",
+          "role": "Staff"
+        }
+      ],
+      "yearFounded": 2018,
+      "yearCeased": null,
+      "frequency": "Daily",
+      "medium": "Digital",
+      "format": "Multimedia website",
+      "languages": ["English"],
+      "primaryFocus": "Local news, civic reporting, culture, business, health, education, community life",
+      "missionStatement": "A Voice for the Voiceless.",
+      "historicalNotes": "Bills itself as 'your Black news source in the Garden State,' covering New Jersey's African American communities with stories often overlooked by mainstream media. In 2024, received a grant from the New Jersey Civic Information Consortium (NJCIC) to expand reporting capacity by funding a full-time editor and reporter. Faces typical challenges of independent local news: generating revenue, competing with larger media, and serving a niche audience.",
+      "archiveUrl": "https://njurbannews.com/",
+      "physicalArchive": null,
+      "tags": ["Newark", "New Jersey", "21st century", "digital media", "NJCIC grantee", "Penda Howell", "active"]
+    },
+    {
+      "id": 4,
+      "name": "Black In Jersey",
+      "alternateName": null,
+      "city": "Trenton",
+      "founders": ["Tennyson Coleman"],
+      "publishers": ["Tennyson Coleman"],
+      "keyStaff": [],
+      "yearFounded": 2021,
+      "yearCeased": null,
+      "frequency": null,
+      "medium": "Digital",
+      "format": "Website",
+      "languages": ["English"],
+      "primaryFocus": "News, culture, Black community",
+      "missionStatement": "Our Voices, Our Perspectives.",
+      "historicalNotes": "A statewide digital publication focused on Black community news and culture across New Jersey.",
+      "archiveUrl": "https://www.blackinjersey.com/",
+      "physicalArchive": null,
+      "tags": ["Trenton", "statewide", "21st century", "culture", "news", "active"]
+    },
+    {
+      "id": 17,
+      "name": "Trenton Journal",
+      "alternateName": null,
+      "city": "Trenton",
+      "founders": ["Kenneth Miles"],
+      "publishers": ["Kenneth Miles"],
+      "keyStaff": [
+        {
+          "name": "Kenneth Miles",
+          "role": "Founder/Publisher"
+        }
+      ],
+      "yearFounded": 2021,
+      "yearCeased": null,
+      "frequency": "Weekly",
+      "medium": "Digital, Print",
+      "format": "Website, Newsletter, Magazine (special editions)",
+      "languages": ["English"],
+      "primaryFocus": "Solutions-based journalism, local news, heritage preservation, civic engagement",
+      "missionStatement": "At The Trenton Journal, our mission is to provide the people of Trenton with accurate, independent, and meaningful journalism that informs, empowers, and uplifts our community. As a trusted source of local news, we hold ourselves to the highest ethical standards. All editorial decisions are made in the interest of our readers.",
+      "historicalNotes": "Founded by Kenneth Miles after community listening sessions with the Listening Post Collective revealed deep information inequities in New Jersey's capital city. A Black-owned multimedia outlet serving a majority Black and Latino city, focusing on community knowledge and positive storytelling rather than crime-heavy narratives. Notable for preserving Black history and heritage in Trenton through coverage of topics like African American Revolutionary War soldiers and local museums.",
+      "archiveUrl": "https://trentonjournal.com/",
+      "physicalArchive": null,
+      "tags": ["Trenton", "21st century", "solutions journalism", "civic news", "Kenneth Miles", "digital media", "active"]
+    },
+    {
+      "id": 40,
+      "name": "The Nubian News",
+      "alternateName": null,
+      "city": "Trenton",
+      "founders": ["Kamau Kujichagulia"],
+      "publishers": ["Kamau Kujichagulia"],
+      "keyStaff": [],
+      "yearFounded": 1989,
+      "yearCeased": null,
+      "frequency": null,
+      "medium": "Print",
+      "format": "Newspaper",
+      "languages": ["English"],
+      "primaryFocus": "News, African-American community, Hispanic community",
+      "missionStatement": "New Jersey's only African-American-Hispanic news source.",
+      "historicalNotes": "A long-running publication serving both African-American and Hispanic communities in the Trenton area, notable for its bilingual and multicultural focus.",
+      "archiveUrl": null,
+      "physicalArchive": null,
+      "tags": ["Trenton", "bilingual", "multicultural", "print legacy", "active"]
+    }
+  ],
+  "metadata": {
+    "generatedDate": "2026-01-14",
+    "lastUpdated": "2026-01-14",
+    "totalHistoric": 11,
+    "totalContemporary": 5,
+    "totalPublications": 16,
+    "dateRange": "1880-present",
+    "primaryLocations": ["Trenton", "Newark", "Jersey City", "Long Branch", "Red Bank"],
+    "source": "Black Press featured entries DRAFT.md",
+    "notes": "Data cleaned and enhanced from draft research document. Includes publications from batches 1-4 of the research project."
+  }
+}
