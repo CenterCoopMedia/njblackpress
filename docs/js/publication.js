@@ -223,9 +223,19 @@
     function buildPeopleSection(pub) {
         const founders = pub.founders || [];
         const publishers = pub.publishers ? (Array.isArray(pub.publishers) ? pub.publishers : [pub.publishers]) : [];
-        const staff = pub.keyStaff || [];
 
-        if (founders.length === 0 && publishers.length === 0 && staff.length === 0) {
+        // Handle keyStaff as either an array of objects or a string
+        let staff = [];
+        let staffString = null;
+        if (pub.keyStaff) {
+            if (Array.isArray(pub.keyStaff)) {
+                staff = pub.keyStaff;
+            } else if (typeof pub.keyStaff === 'string') {
+                staffString = pub.keyStaff;
+            }
+        }
+
+        if (founders.length === 0 && publishers.length === 0 && staff.length === 0 && !staffString) {
             return '';
         }
 
@@ -259,6 +269,13 @@
                                     <p class="font-mono text-xs text-paper-300">${escapeHtml(s.role)}</p>
                                 </div>
                             `).join('')}
+                        </div>
+                    ` : ''}
+
+                    ${staffString ? `
+                        <div class="masthead-entry pb-4">
+                            <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Key Staff</p>
+                            <p class="font-serif text-lg text-center text-paper-100">${escapeHtml(staffString)}</p>
                         </div>
                     ` : ''}
                 </div>
