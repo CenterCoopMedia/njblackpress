@@ -356,11 +356,11 @@
     if (state.filters.format !== 'all') activeFilters.push({ type: 'format', label: state.filters.format === 'print' ? 'Print' : 'Digital' });
 
     if (activeFilters.length === 0) {
-      elements.activeFilters.classList.add('hidden');
+      elements.activeFilters.style.display = 'none';
       return;
     }
 
-    elements.activeFilters.classList.remove('hidden');
+    elements.activeFilters.style.display = 'flex';
     elements.activeFiltersList.innerHTML = activeFilters.map(f => `
       <span class="font-mono text-[10px] bg-white/10 text-paper-100 px-2 py-1 flex items-center gap-2 hover:bg-white/20 transition-colors cursor-pointer" onclick="window.njbp.removeFilter('${f.type}')">
         ${escapeHtml(f.label)}

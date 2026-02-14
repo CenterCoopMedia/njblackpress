@@ -73,8 +73,12 @@
 
     const maxCount = Math.max(...decadeData.map(d => d.activeCount), 1);
 
+    const isMobile = window.innerWidth < 768;
+    const barGap = isMobile ? 'gap-[2px]' : 'gap-1';
+    const chartHeight = isMobile ? 'h-[200px]' : 'h-[300px]';
+
     const html = `
-      <div class="flex items-end justify-between h-[300px] w-full gap-1">
+      <div class="flex items-end justify-between ${chartHeight} w-full ${barGap}">
         ${decadeData.map((decade, index) => {
           const height = (decade.activeCount / maxCount) * 100;
           const barColor = decade.foundedCount > 0 ? 'bg-paper-100' : 'bg-paper-300';
@@ -82,20 +86,20 @@
           const activeClass = decade.activeCount > 5 ? 'group-hover:bg-accent' : 'group-hover:bg-accent/70';
 
           return `
-            <div class="relative flex flex-col justify-end items-center h-full flex-1 group cursor-pointer" data-decade="${decade.label}">
+            <div class="relative flex flex-col justify-end items-center h-full flex-1 group cursor-pointer timeline-bar-wrapper" data-decade="${decade.label}">
               <!-- Bar -->
-              <div class="w-full mx-[2px] ${barColor} ${activeClass} transition-all duration-300 ease-out origin-bottom hover:scale-y-105" 
+              <div class="w-full mx-[2px] ${barColor} ${activeClass} transition-all duration-300 ease-out origin-bottom hover:scale-y-105"
                    style="height: ${Math.max(height, 5)}%">
               </div>
-              
+
               <!-- Label -->
-              <span class="absolute -bottom-8 font-mono text-[10px] text-paper-300 -rotate-45 group-hover:text-white transition-colors origin-top-left translate-x-2">
+              <span class="absolute -bottom-8 font-mono text-[8px] md:text-[10px] text-paper-300 -rotate-45 group-hover:text-white transition-colors origin-top-left translate-x-1 md:translate-x-2">
                 ${decade.label.replace('s', '')}
               </span>
 
               <!-- Tooltip -->
-              <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-48 bg-ink-900 border border-white/10 p-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-2xl">
-                <div class="font-serif text-lg text-accent mb-1 font-bold">${decade.label}</div>
+              <div class="timeline-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-36 md:w-48 bg-ink-900 border border-white/10 p-3 md:p-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-2xl">
+                <div class="font-serif text-base md:text-lg text-accent mb-1 font-bold">${decade.label}</div>
                 <div class="text-xs font-mono text-paper-300 space-y-1 border-t border-white/10 pt-2">
                   <p><span class="text-white">${decade.activeCount}</span> Active</p>
                   <p><span class="text-white">${decade.foundedCount}</span> Founded</p>
@@ -111,12 +115,35 @@
   }
 
   function setupEventListeners() {
-    // Decade bar clicks (via delegation if needed, but direct binding here works)
-    document.querySelectorAll('.group[data-decade]').forEach(wrapper => {
-      wrapper.addEventListener('click', () => {
+    // Decade bar clicks - tap to show tooltip on mobile, double-tap or click to filter
+    let lastTapped = null;
+    document.querySelectorAll('.timeline-bar-wrapper[data-decade]').forEach(wrapper => {
+      wrapper.addEventListener('click', (e) => {
+        const isTouchDevice = 'ontouchstart' in window;
         const decade = wrapper.dataset.decade;
-        if (window.njbp && window.njbp.filterByDecade) {
-          window.njbp.filterByDecade(decade);
+
+        if (isTouchDevice) {
+          // On touch: first tap shows tooltip, second tap navigates
+          if (lastTapped === wrapper) {
+            // Second tap - navigate
+            lastTapped = null;
+            if (window.njbp && window.njbp.filterByDecade) {
+              window.njbp.filterByDecade(decade);
+            }
+          } else {
+            // First tap - show tooltip
+            e.preventDefault();
+            // Hide all other tooltips
+            document.querySelectorAll('.timeline-tooltip').forEach(t => t.classList.remove('!opacity-100'));
+            // Show this tooltip
+            const tooltip = wrapper.querySelector('.timeline-tooltip');
+            if (tooltip) tooltip.classList.add('!opacity-100');
+            lastTapped = wrapper;
+          }
+        } else {
+          if (window.njbp && window.njbp.filterByDecade) {
+            window.njbp.filterByDecade(decade);
+          }
         }
       });
     });

@@ -68,6 +68,12 @@
             color: #ff4d00;
             font-weight: 900;
         }
+        @media (max-width: 640px) {
+            .drop-cap::first-letter {
+                font-size: 3rem;
+                padding-right: 0.5rem;
+            }
+        }
 
         .ornament {
             position: relative;
@@ -122,6 +128,14 @@
             color: #ff4d00;
             line-height: 1;
             opacity: 0.5;
+        }
+        @media (max-width: 640px) {
+            .pull-quote {
+                padding-left: 1.5rem;
+            }
+            .pull-quote::before {
+                font-size: 3rem;
+            }
         }
 
         /* Masthead styling */
@@ -178,7 +192,7 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-ink-950 z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
+    <div id="mobile-menu" class="fixed inset-0 bg-ink-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
         <button id="mobile-menu-close" class="absolute top-6 right-6 text-paper-300 hover:text-accent">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>

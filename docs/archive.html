@@ -106,6 +106,7 @@
             z-index: 30;
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
         }
 
         /* Card index number */
@@ -167,7 +168,7 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-ink-950 z-40 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
+    <div id="mobile-menu" class="fixed inset-0 bg-ink-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
         <button id="mobile-menu-close" class="absolute top-6 right-6 text-paper-300 hover:text-accent">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
@@ -187,7 +188,7 @@
                 <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
                     <div>
                         <p class="font-mono text-accent text-xs uppercase tracking-widest mb-3 pl-1 border-l-2 border-accent">Complete Directory</p>
-                        <h1 class="font-serif text-5xl md:text-7xl font-black tracking-tight text-paper-100">The Archive</h1>
+                        <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-paper-100">The Archive</h1>
                         <p class="text-paper-300 mt-4 max-w-xl font-serif text-lg">
                             A searchable catalog of <span id="hero-total" class="text-accent font-bold">138</span> publications documenting the Black press in New Jersey from <span class="text-white">1880</span> to the present day.
                         </p>
@@ -216,26 +217,26 @@
         <section class="sticky-filters border-b border-white/10 py-4 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
 
-                <!-- Main Filter Row -->
-                <div class="flex flex-wrap items-center gap-4">
+                <!-- Search Row (always full width) -->
+                <div class="w-full relative mb-3 md:mb-0">
+                    <input type="search" id="search-input"
+                        class="w-full md:w-80 bg-ink-800 border border-white/20 focus:border-accent px-4 py-3 md:py-2.5 text-paper-100 font-sans text-base md:text-sm focus:outline-none transition-colors placeholder-paper-300/50"
+                        placeholder="Search publications...">
+                    <svg class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-paper-300 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
 
-                    <!-- Search -->
-                    <div class="flex-grow md:flex-grow-0 md:w-80 relative">
-                        <input type="search" id="search-input"
-                            class="w-full bg-ink-800 border border-white/20 focus:border-accent px-4 py-2.5 text-paper-100 font-sans text-sm focus:outline-none transition-colors placeholder-paper-300/50"
-                            placeholder="Search publications...">
-                        <svg class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-paper-300 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                        </svg>
-                    </div>
+                <!-- Filter Controls Row -->
+                <div class="flex flex-wrap items-center gap-3 md:gap-4">
 
                     <!-- City Dropdown -->
-                    <select id="city-filter" class="bg-ink-800 border border-white/20 focus:border-accent px-3 py-2.5 text-paper-100 font-mono text-xs uppercase focus:outline-none appearance-none cursor-pointer">
+                    <select id="city-filter" class="flex-1 min-w-[120px] md:flex-none bg-ink-800 border border-white/20 focus:border-accent px-3 py-3 md:py-2.5 text-paper-100 font-mono text-xs uppercase focus:outline-none appearance-none cursor-pointer">
                         <option value="all">All Cities</option>
                     </select>
 
                     <!-- Decade Dropdown -->
-                    <select id="decade-filter" class="bg-ink-800 border border-white/20 focus:border-accent px-3 py-2.5 text-paper-100 font-mono text-xs focus:outline-none appearance-none cursor-pointer">
+                    <select id="decade-filter" class="flex-1 min-w-[120px] md:flex-none bg-ink-800 border border-white/20 focus:border-accent px-3 py-3 md:py-2.5 text-paper-100 font-mono text-xs focus:outline-none appearance-none cursor-pointer">
                         <option value="all">All Decades</option>
                         <option value="1880s">1880s</option>
                         <option value="1890s">1890s</option>
@@ -255,14 +256,14 @@
                     </select>
 
                     <!-- Status Toggle -->
-                    <div class="flex border border-white/20">
-                        <button class="status-btn px-3 py-2 font-mono text-xs uppercase text-paper-300 hover:text-white transition-colors active" data-status="all">All</button>
-                        <button class="status-btn px-3 py-2 font-mono text-xs uppercase text-paper-300 hover:text-white transition-colors border-l border-white/20" data-status="active">Active</button>
-                        <button class="status-btn px-3 py-2 font-mono text-xs uppercase text-paper-300 hover:text-white transition-colors border-l border-white/20" data-status="archived">Archived</button>
+                    <div class="flex border border-white/20 w-full md:w-auto">
+                        <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-paper-300 hover:text-white transition-colors active" data-status="all">All</button>
+                        <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-paper-300 hover:text-white transition-colors border-l border-white/20" data-status="active">Active</button>
+                        <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-paper-300 hover:text-white transition-colors border-l border-white/20" data-status="archived">Archived</button>
                     </div>
 
                     <!-- Sort -->
-                    <select id="sort-select" class="bg-ink-800 border border-white/20 focus:border-accent px-3 py-2.5 text-paper-100 font-mono text-xs uppercase focus:outline-none appearance-none cursor-pointer ml-auto">
+                    <select id="sort-select" class="flex-1 min-w-[120px] md:flex-none bg-ink-800 border border-white/20 focus:border-accent px-3 py-3 md:py-2.5 text-paper-100 font-mono text-xs uppercase focus:outline-none appearance-none cursor-pointer md:ml-auto">
                         <option value="name">A-Z</option>
                         <option value="year-asc">Oldest First</option>
                         <option value="year-desc">Newest First</option>
@@ -285,11 +286,11 @@
                 </div>
 
                 <!-- Active Filters & Count -->
-                <div class="flex flex-wrap items-center justify-between mt-4 pt-4 border-t border-white/10">
+                <div class="flex flex-wrap items-center justify-between mt-4 pt-4 border-t border-white/10 gap-2">
                     <div id="active-filters" class="flex flex-wrap items-center gap-2">
                         <!-- Active filter chips inserted here -->
                     </div>
-                    <p class="font-mono text-xs text-paper-300">
+                    <p class="font-mono text-xs text-paper-300 ml-auto">
                         Showing <span id="results-showing" class="text-white">0</span> of <span id="results-total" class="text-white">0</span> publications
                     </p>
                 </div>
