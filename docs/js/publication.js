@@ -199,21 +199,26 @@
     }
 
     function buildHistoricalSection(notes) {
-        // Split into paragraphs if long
-        const paragraphs = notes.split(/\n\n|\. (?=[A-Z])/g).filter(p => p.trim());
+        // Split only on actual paragraph breaks (double newlines), not sentence boundaries
+        const paragraphs = notes.split(/\n\n+/).filter(p => p.trim());
+
+        // Use multi-column layout for longer text
+        const useColumns = notes.length > 500;
 
         return `
             <div class="animate-in delay-5">
                 <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-white/10">Historical Notes</h2>
                 <div class="prose prose-invert max-w-none">
-                    ${paragraphs.length > 1 ? `
+                    ${useColumns ? `
                         <div class="columns-1 md:columns-2 gap-8 column-rule space-y-4">
                             ${paragraphs.map((p, i) => `
-                                <p class="${i === 0 ? 'drop-cap' : ''} font-serif text-lg text-paper-200 leading-relaxed">${escapeHtml(p.trim())}${!p.trim().endsWith('.') ? '.' : ''}</p>
+                                <p class="${i === 0 ? 'drop-cap' : ''} font-serif text-lg text-paper-200 leading-relaxed">${escapeHtml(p.trim())}</p>
                             `).join('')}
                         </div>
                     ` : `
-                        <p class="drop-cap font-serif text-lg text-paper-200 leading-relaxed">${escapeHtml(notes)}</p>
+                        ${paragraphs.map((p, i) => `
+                            <p class="${i === 0 ? 'drop-cap' : ''} font-serif text-lg text-paper-200 leading-relaxed">${escapeHtml(p.trim())}</p>
+                        `).join('')}
                     `}
                 </div>
             </div>
