@@ -111,7 +111,7 @@
                         </div>
                     </div>
 
-                    <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-paper-100 mb-6 animate-in delay-2">
+                    <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-paper-100 mb-6 animate-in delay-2">
                         ${escapeHtml(pub.name)}
                     </h1>
 
@@ -161,7 +161,7 @@
             <section class="bg-ink-800 border-y border-white/10 py-12 md:py-16 px-4 md:px-8 animate-in delay-4">
                 <div class="max-w-[1000px] mx-auto">
                     <p class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Mission Statement</p>
-                    <blockquote class="pull-quote font-serif text-2xl md:text-3xl lg:text-4xl text-paper-100 leading-relaxed font-light italic">
+                    <blockquote class="pull-quote font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl text-paper-100 leading-relaxed font-light italic">
                         ${escapeHtml(mission)}
                     </blockquote>
                 </div>
@@ -186,7 +186,7 @@
         return `
             <div class="animate-in delay-4">
                 <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-white/10">Publication Details</h2>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     ${items.map(item => `
                         <div class="border-l-2 border-white/10 pl-4">
                             <p class="font-mono text-[10px] uppercase tracking-widest text-paper-300 mb-1">${item.label}</p>
@@ -207,7 +207,7 @@
                 <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-white/10">Historical Notes</h2>
                 <div class="prose prose-invert max-w-none">
                     ${paragraphs.length > 1 ? `
-                        <div class="md:columns-2 gap-8 column-rule space-y-4">
+                        <div class="columns-1 md:columns-2 gap-8 column-rule space-y-4">
                             ${paragraphs.map((p, i) => `
                                 <p class="${i === 0 ? 'drop-cap' : ''} font-serif text-lg text-paper-200 leading-relaxed">${escapeHtml(p.trim())}${!p.trim().endsWith('.') ? '.' : ''}</p>
                             `).join('')}
@@ -382,7 +382,7 @@
             <section class="bg-ink-950 border-t border-white/10 py-16 px-4 md:px-8">
                 <div class="max-w-[1400px] mx-auto">
                     <h2 class="font-serif text-2xl font-bold mb-8">Related Publications</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         ${related.map(r => `
                             <a href="publication.html?id=${r.id}"
                                class="block bg-ink-900 border border-white/10 hover:border-accent p-6 transition-colors group">
