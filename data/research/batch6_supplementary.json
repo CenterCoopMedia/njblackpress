@@ -1,0 +1,215 @@
+{
+  "batch": "supplementary",
+  "researchDate": "2026-02-14",
+  "findings": [
+    {
+      "id": 14,
+      "name": "New Jersey Record",
+      "city": "Newark",
+      "archiveUrl": null,
+      "yearFounded": null,
+      "historicalNotes": "No verifiable record found for an African American newspaper specifically titled 'New Jersey Record' published in Newark. Extensive searches of the Library of Congress newspaper directory, Chronicling America, Newark Public Library digital collections, Rutgers University Libraries, and the Wikipedia list of African-American newspapers in New Jersey returned no matches for this title. It is possible this title has been conflated with the 'New Jersey Afro American' (1941-1991, Newark edition of the Afro-American chain) or another Newark publication. The name may also refer to a short-lived or hyper-local publication not indexed in major catalogs. Recommended: contact the Newark Public Library's Charles F. Cummings NJ Information Center at njreference@npl.org or (973) 733-7775, or the James Brown African American Room, for verification."
+    },
+    {
+      "id": 50,
+      "name": "New Jersey Deadline",
+      "city": "Newark",
+      "historicalNotes": "No verifiable record found for an African American newspaper titled 'New Jersey Deadline' published in Newark. Searches of the Library of Congress newspaper directory, Chronicling America, Newark Public Library inventories, Rutgers University Newark Archives Project, the New Jersey Historical Society newspaper listings, and the Wikipedia list of African-American newspapers in New Jersey returned no matches. The title does not appear in any known NJ newspaper catalog or microfilm inventory. This may be a very short-lived publication, an alternative name for another title, or possibly a misattribution. Recommended: contact the Newark Public Library NJ Information Center or the New Jersey Historical Society for further verification."
+    },
+    {
+      "id": 128,
+      "name": "Newark Black Newspapers Collection",
+      "city": "Newark",
+      "historicalNotes": "This is NOT a newspaper. It is a digital library collection hosted by Rutgers University Libraries at collections.libraries.rutgers.edu/newark-black-newspapers. The collection contains four newspapers published under the leadership of Amiri Baraka (Leroi Jones) between 1968 and 1979 during Newark's post-rebellion period: (1) Black Newark, Vol. 1 No. 1-3, April-November 1968; (2) Black News, published by Black People of Newark, Vol. 1 No. 4, 1969; (3) Black New Ark, published by Committee for Unified Newark, Vol. 1 No. 5 (April 1972) - Vol. 2 No. 14 (Dec. 1973), incomplete; (4) Unity and Struggle, published by Committee for Unified Newark, Vol. 3 No. 1 (Jan/Feb 1974) - Vol. 8 No. 1/2 (Feb. 1979), incomplete. The collection is digitized from holdings at the Rutgers Dana Library and is fully searchable. These newspapers served as tools for activism, organizing, and advocating for Black liberation and political and economic agency. This entry should be reclassified as a 'collection' rather than a standalone newspaper.",
+      "clarification": "This is a Rutgers University digital library collection, not a single newspaper. It aggregates four distinct Baraka-era Newark newspapers (1968-1979).",
+      "archiveUrl": "https://collections.libraries.rutgers.edu/newark-black-newspapers",
+      "recommendedAction": "Reclassify as type 'collection' in the database. The four individual newspapers within it (Black Newark, Black News, Black New Ark, Unity and Struggle) should each have their own entries if not already present."
+    }
+  ],
+  "supplementaryResearch": {
+    "chroniclingAmericaFindings": {
+      "summary": "Only one NJ African American newspaper is fully digitized on Chronicling America: The Sentinel (Trenton, N.J.), 1880-1882, with 118 issues available. The New Jersey Afro American (Newark, 1941-1991) and The New Jersey Guardian (Newark, 1934-1942) are cataloged in the Library of Congress newspaper directory but are not digitized on Chronicling America. Across all states, 299 African American newspaper titles are available on Chronicling America.",
+      "digitizedNJTitles": [
+        {
+          "title": "The Sentinel",
+          "city": "Trenton",
+          "dateRange": "1880-1882",
+          "issuesAvailable": 118,
+          "url": "https://chroniclingamerica.loc.gov/lccn/sn84026873/"
+        }
+      ],
+      "catalogedButNotDigitized": [
+        {
+          "title": "New Jersey Afro American",
+          "city": "Newark",
+          "dateRange": "1941-1991",
+          "lccn": "sn84025926",
+          "url": "https://chroniclingamerica.loc.gov/lccn/sn84025926/"
+        },
+        {
+          "title": "The New Jersey Guardian",
+          "city": "Newark",
+          "dateRange": "1934-1942",
+          "lccn": "sn89069097",
+          "url": "https://chroniclingamerica.loc.gov/lccn/sn89069097/"
+        },
+        {
+          "title": "Black Newark",
+          "city": "Newark",
+          "dateRange": "1968",
+          "lccn": "sn2001062056"
+        },
+        {
+          "title": "Black New Ark",
+          "city": "Newark",
+          "dateRange": "1972-1974"
+        },
+        {
+          "title": "Black News",
+          "city": "Newark",
+          "dateRange": "1969"
+        }
+      ],
+      "njDigitalNewspaperProject": "The New Jersey Digital Newspaper Project (NJDNP), a collaboration of Rutgers University Libraries, NJ State Archives, and NJ State Library, digitized NJ historical newspapers from microfilm from 2016 to 2023. These are viewable on Chronicling America, but the project primarily digitized mainstream NJ newspapers rather than African American titles.",
+      "sourceUrl": "https://chroniclingamerica.loc.gov/newspapers/?ethnicity=African+American"
+    },
+    "rutgersFindings": {
+      "summary": "Rutgers University Libraries hold significant African American newspaper resources across multiple platforms and collections. Key holdings include the Newark Black Newspapers Collection (digitized, 1968-1979), access to Readex African American Newspapers Series 1 (280 digitized newspapers from 35+ states), the History Commons database with African American Newspapers Parts I-XII, and the Special Collections which hold the New Jersey Freeman (1840s abolitionist newspaper). Rutgers-Newark also hosts the Newark Archives Project (nap.rutgers.edu) documenting primary source materials for Newark history.",
+      "keyCollections": [
+        {
+          "name": "Newark Black Newspapers Collection",
+          "description": "Digitized collection of four Baraka-era newspapers (Black Newark, Black News, Black New Ark, Unity and Struggle), 1968-1979",
+          "url": "https://collections.libraries.rutgers.edu/newark-black-newspapers",
+          "status": "Digitized and searchable"
+        },
+        {
+          "name": "New Jersey Digital Newspaper Project",
+          "description": "Collaboration with NJ State Archives and NJ State Library to digitize NJ historical newspapers, 2016-2023",
+          "url": "https://collections.libraries.rutgers.edu/new-jersey-digital-newspaper-project",
+          "status": "Completed"
+        },
+        {
+          "name": "African American Newspapers, Series 1 (Readex)",
+          "description": "280 digitized African American newspapers from 35+ US states, fully searchable",
+          "url": "https://www.libraries.rutgers.edu/databases/african-american-newspapers-readex",
+          "accessNote": "Rutgers authentication required"
+        },
+        {
+          "name": "History Commons",
+          "description": "Includes African American Newspapers Parts I-XII and supplement, 19th century newspapers published by and for African Americans",
+          "url": "https://www.libraries.rutgers.edu/databases/history-commons"
+        },
+        {
+          "name": "Special Collections - New Jersey Freeman",
+          "description": "1840s abolitionist newspaper, among the rarest titles in the collection",
+          "location": "SCUA New Brunswick"
+        },
+        {
+          "name": "Newark Archives Project",
+          "description": "Comprehensive online source of primary materials for all periods of Newark history, co-sponsored by Newark History Society and Rutgers-Newark",
+          "url": "https://nap.rutgers.edu/"
+        }
+      ]
+    },
+    "newarkLibraryFindings": {
+      "summary": "The Newark Public Library holds extensive African American collections across multiple departments. The Digital Archive contains 50+ collections and 35,000+ items related to African American, Latino, and Newark history. Key departments include the James Brown African American Room (opened 1989) and the Charles F. Cummings NJ Information Center. Digitized African American newspaper holdings include the African American Newark Newspapers collection (1930s-1960s titles: Newark Herald, Advance, Herald Advance, NJ Herald News) and City News (1990-2002). The NJ Afro-American (1941-1991) is available on microfilm but not digitized. The majority of their collections remain un-digitized.",
+      "keyResources": [
+        {
+          "name": "James Brown African American Room",
+          "description": "Dedicated department for African American history and culture, opened 1989",
+          "focus": "African American history and culture collections"
+        },
+        {
+          "name": "Digital Archive",
+          "description": "50+ collections, 35,000+ items digitized with Carnegie Foundation grant funding",
+          "url": "https://www.npl.org/digital-collections/",
+          "includes": "Photographs, city directories, documents, newspapers, maps"
+        },
+        {
+          "name": "African American Newark Newspapers (digitized)",
+          "description": "Individual issues of African-American newspapers from 1930s-1960s including Newark Herald, Advance, Herald Advance, and NJ Herald News",
+          "note": "Full runs not preserved; individual issues only"
+        },
+        {
+          "name": "City News",
+          "description": "African American newspaper, 1990-2002, available in digital repository"
+        },
+        {
+          "name": "New Jersey Afro-American (microfilm only)",
+          "description": "1941-1991, available on microfilm at Newark Public Library and Rutgers Alexander Library"
+        },
+        {
+          "name": "CFCNJIC Microfilm Newspaper Collection",
+          "description": "Extensive microfilm holdings of NJ newspapers",
+          "url": "https://newarkpubliclibrary.libraryhost.com/repositories/3/resources/83"
+        }
+      ],
+      "digitalExhibits": [
+        "Black Power! 19th Century: Newark's First African American Rebellion"
+      ],
+      "contactForResearch": {
+        "department": "Charles F. Cummings New Jersey Information Center",
+        "phone": "(973) 733-7775",
+        "email": "njreference@npl.org"
+      }
+    },
+    "njcicGrantees": {
+      "summary": "The New Jersey Civic Information Consortium (NJCIC) has invested over $10 million in grants to 65 organizations since 2021. 48% of funded projects are BIPOC-led. Grantees have produced 3,856 stories for ethnic/BIPOC and Spanish-language communities. The Consortium has 46 active grantees. The NJ Legislative Black Caucus played a key role in restoring the NJCIC's $2.5 million state funding when it was threatened with elimination.",
+      "blackMediaGrantees": [
+        {
+          "name": "NJ Urban News",
+          "grantAmount": "$120,000",
+          "description": "State's leading Black-owned news outlet producing stories that uplift and inform Black communities across NJ. Grant supports editorial staff expansion and investigative reporting on public institutions.",
+          "url": "https://njurbannews.com/"
+        },
+        {
+          "name": "Black in Jersey",
+          "grantAmount": "Not specified (third grant from Consortium)",
+          "description": "Specializes in restorative narratives about communities of color, news reporting, and citizen journalist training."
+        },
+        {
+          "name": "Public Square Amplified (PSA)",
+          "grantAmount": "$295,000 (cumulative)",
+          "description": "Nonprofit newsroom in Newark led by Black women focusing on democracy, social justice, and racial equality. Has trained 43 community reporters since 2021.",
+          "location": "Newark"
+        },
+        {
+          "name": "The Trenton Journal",
+          "grantAmount": "Not specified",
+          "description": "Focuses on disparities faced by Black and Brown communities in Trenton using solutions-based journalism through newsletters, videos, and audio."
+        },
+        {
+          "name": "Camden Parent & Student Union (CPSU)",
+          "grantAmount": "$100,000 (renewal)",
+          "description": "Supports civic education workshops, staff expansion, and podcast development for media literacy and community journalism."
+        }
+      ],
+      "otherRelevantGrantees": [
+        "Atlantic City Focus",
+        "The Jersey Vindicator",
+        "Slice of Culture",
+        "The RidgeView Echo"
+      ],
+      "sourceUrls": [
+        "https://njcivicinfo.org/september-grants-2025/",
+        "https://thenewarktimes.com/new-jersey-civic-information-consortium-bolsters-local-news-with-over-10-million-in-funding/"
+      ]
+    }
+  },
+  "researchNotes": {
+    "unverifiedEntries": "IDs 14 (New Jersey Record) and 50 (New Jersey Deadline) could not be verified through any major newspaper catalog, digital archive, or historical index. These may be very short-lived publications, alternative titles, or data entry errors in the source dataset.",
+    "reclassificationNeeded": "ID 128 (Newark Black Newspapers Collection) is a Rutgers digital library collection, not a newspaper. Should be reclassified.",
+    "digitizationGap": "Only one NJ African American newspaper (The Sentinel, 1880-1882) is digitized on Chronicling America. Major titles like the NJ Afro American (1941-1991) and NJ Guardian (1934-1942) remain un-digitized on that platform, though some are available through other repositories.",
+    "sourcesConsulted": [
+      "Library of Congress Newspaper Directory",
+      "Chronicling America (loc.gov)",
+      "Newark Public Library Digital Collections (npl.org)",
+      "Rutgers University Libraries Digital Collections",
+      "Rutgers Newark Archives Project (nap.rutgers.edu)",
+      "New Jersey Historical Society",
+      "Wikipedia - List of African-American newspapers in New Jersey",
+      "New Jersey Civic Information Consortium (njcivicinfo.org)",
+      "GenealogyBank Newark newspaper archives"
+    ]
+  }
+}
