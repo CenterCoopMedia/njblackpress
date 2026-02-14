@@ -362,7 +362,7 @@
 
     elements.activeFilters.classList.remove('hidden');
     elements.activeFiltersList.innerHTML = activeFilters.map(f => `
-      <span class="font-mono text-[10px] uppercase bg-white/10 text-paper-100 px-2 py-1 flex items-center gap-2 hover:bg-white/20 transition-colors cursor-pointer" onclick="window.njbp.removeFilter('${f.type}')">
+      <span class="font-mono text-[10px] bg-white/10 text-paper-100 px-2 py-1 flex items-center gap-2 hover:bg-white/20 transition-colors cursor-pointer" onclick="window.njbp.removeFilter('${f.type}')">
         ${escapeHtml(f.label)}
         <span class="text-accent">&times;</span>
       </span>

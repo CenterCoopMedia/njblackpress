@@ -1,0 +1,114 @@
+{
+  "batch": "contemporary",
+  "researchDate": "2026-02-14",
+  "findings": [
+    {
+      "id": 4,
+      "name": "Black In Jersey",
+      "historicalNotes": "Black In Jersey is a digital storytelling and media production company founded in 2021 and based in Trenton, New Jersey. Founded by a local news veteran, the publication centers the African diaspora experience, spotlighting culture and the unique tapestry of Black experiences across the state. They coach citizen journalists to amplify voices that shape New Jersey, building connections through news content and documentary-style storytelling.",
+      "missionStatement": "Black in Jersey puts our stories front and center, where they belong.",
+      "targetAudience": "Black communities across New Jersey",
+      "primaryFocus": "Digital storytelling, media production, citizen journalism, and cultural documentation of Black life in New Jersey"
+    },
+    {
+      "id": 6,
+      "name": "Front Runner New Jersey",
+      "historicalNotes": "Front Runner New Jersey is a property of AC JosepH Media, LLC, founded by award-winning journalist Clyde Hughes who serves as president, CEO, and editor-in-chief. Based in Atlantic City, the publication covers African American and Latino communities in South Jersey, spanning Atlantic, Burlington, Camden, Cape May, Cumberland, Gloucester, and Salem counties. The outlet also launched a sister publication, Front Runner La Prensa, to cover the Latino community.",
+      "missionStatement": "Front Runner New Jersey brings a new perspective on the people, events and issues making an impact on African-Americans in South Jersey and the nation.",
+      "targetAudience": "African Americans and diverse communities in South Jersey",
+      "primaryFocus": "News coverage of Black and Latino leadership, culture, politics, and community events across seven South Jersey counties"
+    },
+    {
+      "id": 8,
+      "name": "South Jersey Journal",
+      "historicalNotes": "The South Jersey Journal published its first edition in September 2011 and was a monthly publication covering news and information relevant to the African American community in South Jersey. Owned by South Jersey Communications, LLC, with President & Publisher Al Thomas and Editor-in-Chief Clyde Hughes, the journal was distributed at retail locations including ShopRite, Kmart, Superfresh, and Wawa. The publication eventually folded, becoming part of the broader decline of Black print media outlets nationally.",
+      "targetAudience": "African American community in southern New Jersey",
+      "primaryFocus": "Business, politics, minority issues, and events related to people and communities in southern New Jersey"
+    },
+    {
+      "id": 12,
+      "name": "Five Wards Media",
+      "historicalNotes": "Five Wards Media grew out of the Newark News & Story Collaborative, co-founded by Brit Harley, a Newark native and former WBGO 88.3fm community engagement reporter. The initiative launched during a 2021 JSK Community Impact Fellowship, with backing from the Geraldine R. Dodge Foundation and the Victoria Foundation. The outlet was part of the first cohort of Tiny News Collective members in 2021 and has trained over 20 Newark residents as reporting fellows through its community media incubator.",
+      "missionStatement": "Five Wards Media's mission is to honor and amplify the community of Newark's vibrant stories, culture, and information needs.",
+      "targetAudience": "Residents of Newark, New Jersey, especially youth and those impacted by systemic injustices",
+      "primaryFocus": "Community-focused service journalism across Newark's five wards, youth media empowerment, and amplifying local voices"
+    },
+    {
+      "id": 17,
+      "name": "Trenton Journal",
+      "historicalNotes": "The Trenton Journal is an independently owned and operated multimedia platform founded around 2020 by Kenneth M., who serves as Founder and Publisher. It was welcomed into the URL Media network, which recognized its commitment to bridging information gaps and providing community news for Trenton's nearly 90,000 residents. The publication focuses on solutions-based journalism to address information inequities in New Jersey's capital city.",
+      "missionStatement": "The Trenton Journal aims to address the information gaps and amplify voices in New Jersey's capital city through solutions-based journalism.",
+      "targetAudience": "Residents of Trenton, New Jersey, particularly underserved communities",
+      "primaryFocus": "Solutions journalism, hyper-local coverage, bridging information gaps, and connecting communities in Trenton"
+    },
+    {
+      "id": 19,
+      "name": "NJ in Color",
+      "historicalNotes": "NJ in Color is a digital publication based in Leonia, New Jersey, focused on connecting to the diversity of North Jersey. The outlet covers lifestyle, events, philanthropy, and news across Northern NJ communities including Bergen County, Englewood, Teaneck, Hackensack, Newark, Montclair, Paterson, Jersey City, and surrounding areas. The publication also maintains a New Jersey Black & POC Business Directory.",
+      "missionStatement": "Connecting to the Diversity of North Jersey!",
+      "targetAudience": "African American, Black, Latino, Asian, and BIPOC communities in Northern New Jersey",
+      "primaryFocus": "Diversity-focused lifestyle content, events, business directory, and community news for North Jersey's BIPOC communities"
+    },
+    {
+      "id": 20,
+      "name": "New Jersey Urban News",
+      "historicalNotes": "NJ Urban News is a BIPOC-led digital newsroom co-founded by CEO Penda Howell, headquartered at 625 Broad Street in Newark, New Jersey. The publication is committed to covering stories often overlooked by mainstream media that impact the 1.1 million people making up New Jersey's Black community. It is recognized as a Black-owned media outlet by the African American Chamber of Commerce of New Jersey.",
+      "missionStatement": "A Voice for the Voiceless.",
+      "targetAudience": "Black and Brown communities across New Jersey, with focus on Newark and Paterson",
+      "primaryFocus": "Community news, politics, health, business, education, arts, health equity, housing, civic participation, and local policy"
+    },
+    {
+      "id": 22,
+      "name": "Ark Republic",
+      "historicalNotes": "Ark Republic is a member-funded media outlet founded in 2017 and based at 142 Lafayette St, Newark, NJ. Described as a revolutionary, member-fueled media company, it is a collective of journalists, scholars, artists, and activists committed to telling rich and robust narratives about the Black experience globally. Notable recognitions include being named a Company to Watch by NYU Entrepreneurial Institute (2018), Comcast RISE recipient (2020), Newark Creative Catalyst (2021), and joining CUNY's Black Media Project inaugural cohort (2022).",
+      "missionStatement": "Telling stories, changing the conversation.",
+      "targetAudience": "Readers interested in the Black experience across the globe",
+      "primaryFocus": "Social issues, culture, music, politics, and investigative reporting on the Black experience, delivered through an ad-free platform"
+    },
+    {
+      "id": 23,
+      "name": "The Newark Times",
+      "historicalNotes": "The Newark Times is a digital publication dedicated to sharing the perspectives and narratives of Newark's history, emergence, and triumphs with dignity, honesty, and candor. The outlet covers Newark community news including economic development, arts events, and nonprofit investments in the city. It operates via thenewarktimes.com as part of the broader ecosystem of Newark-focused community media.",
+      "targetAudience": "Residents and stakeholders of Newark, New Jersey",
+      "primaryFocus": "Community news, economic development, arts and culture, and narratives of Newark's history and growth"
+    },
+    {
+      "id": 25,
+      "name": "Atlantic City Focus",
+      "historicalNotes": "Atlantic City Focus is a hyper-local news platform founded by Mark Tyler, who holds a BA in Journalism from Columbia Union College (now Washington Adventist University) and previously interned at The Press of Atlantic City. The publication covers Atlantic City's arts, culture, and entertainment through an African American lens. It has participated in collaborative journalism efforts overseen by the Center for Cooperative Media at Montclair State University.",
+      "missionStatement": "Atlantic City Focus encourages the African American community to share its voice with the world while also providing news and information that the community can use to combat social ills that plague the City of Atlantic City.",
+      "targetAudience": "African American community in Atlantic City and surrounding BIPOC communities",
+      "primaryFocus": "Hyper-local news, civic engagement, African American culture, history, and traditions in Atlantic City"
+    },
+    {
+      "id": 29,
+      "name": "Faithfully Magazine",
+      "historicalNotes": "Faithfully Magazine was founded in 2016 by religion writer Nicola A. Menzie and is published by Faithfully Media, LLC, based at 397 Hillside Avenue, Hillside, NJ. The publication is a fresh, bold news and culture outlet centering on Christian communities of color, and has been featured in The Washington Post, Christianity Today, Fortune Magazine, WNYC, and other major outlets. It publishes exclusive Q&As, features, and commentaries reflecting influential voices in U.S. Christianity.",
+      "missionStatement": "Faithfully Magazine amplifies conversations, issues, and events affecting diverse communities.",
+      "targetAudience": "Diverse Christian communities, predominantly mid-20s to mid-40s, politically active churchgoers across racial demographics including White, Black, Hispanic, and Asian Christians",
+      "primaryFocus": "News, culture, and commentary centering Christian communities of color, with exclusive interviews and features on influential voices in U.S. Christianity"
+    },
+    {
+      "id": 32,
+      "name": "Trenton365",
+      "historicalNotes": "Trenton365 was founded by Jacque Howard as a community-building program and media outlet encouraging private citizens, nonprofit groups, and businesses in the greater Trenton area to become more civically minded. Howard, who previously served as executive director of Urban Mission Cabinet Inc., started the radio program about getting things moving in a positive direction in Trenton. The name references the year-round commitment required to address challenges in New Jersey's capital city, and its content is translated into several languages including Spanish, Filipino, and Igbo to serve Trenton's diverse population.",
+      "targetAudience": "Diverse residents of the greater Trenton area, including immigrant families from Central and South America, Southeast and Central Asia, Eastern Europe, and Africa",
+      "primaryFocus": "Community building organized around R.E.A.C.H. — Recreation, Environment, Art, Civics, and Health"
+    },
+    {
+      "id": 36,
+      "name": "More Jersey",
+      "historicalNotes": "More Jersey is a community media startup founded by Joe Campbell, committed to producing content, merchandise, and events to inform, connect, and inspire New Jersey residents. The outlet serves as a statewide one-stop resource covering government, community, arts and culture, finance, and events spanning the entire state. Campbell has noted the company's focus on the up-trend in audio and video-based content, including developing short-form video series to celebrate the New Jersey experience.",
+      "targetAudience": "New Jersey residents statewide, particularly Black communities",
+      "primaryFocus": "Statewide events coverage, community news, arts and culture, government, finance, and multimedia content production celebrating the New Jersey experience"
+    },
+    {
+      "id": 43,
+      "name": "Public Square Amplified",
+      "historicalNotes": "Public Square Amplified (PSA) is a grassroots local nonprofit newsroom founded in 2021 by a team of Black women with over 40 years of combined experience in nonprofit, journalism, and community organizing sectors. Headquartered in Newark, PSA operates as a cooperative newsroom that positions journalism as a civic tool to amplify local voices. The organization receives provisional membership and fiscal sponsorship under the Institute for Nonprofit News and subscribes to its standards of editorial independence.",
+      "missionStatement": "Public Square Amplified positions journalism as a civic tool to amplify local voices in global spaces.",
+      "targetAudience": "Newark residents across all five wards, with particular focus on Black, immigrant, and indigenous communities",
+      "primaryFocus": "Economic justice, racial and social equity, solutions-driven multimedia journalism, multilingual storytelling centering the African-Caribbean diaspora and local immigrant experience"
+    }
+  ]
+}
