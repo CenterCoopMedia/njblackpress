@@ -1,0 +1,44 @@
+# NJ Black Press Archive
+
+> A historical database of Black publications in New Jersey from 1880 to the present. Maintained by the Center for Cooperative Media at Montclair State University.
+
+## About
+
+The NJ Black Press Archive catalogs 138 Black-owned publications spanning 145 years of New Jersey journalism history. It covers newspapers, magazines, newsletters, and digital outlets across 45+ cities from the post-Reconstruction era through today.
+
+Data was curated by Amanda Alicea and led by Cassandra Etienne at the Center for Cooperative Media.
+
+## Access
+
+- Home: https://centercoopmedia.github.io/njblackpress/
+- Full archive: https://centercoopmedia.github.io/njblackpress/archive.html
+- GitHub repository: https://github.com/CenterCoopMedia/njblackpress
+
+## Data
+
+The complete dataset is available as JSON at:
+- https://centercoopmedia.github.io/njblackpress/data/publications.json
+- https://centercoopmedia.github.io/njblackpress/data/featured-publications.json
+
+Each publication record includes: name, city, years of operation, format, frequency, mission statement, key staff, historical notes, archive URLs, and active/ceased status.
+
+## Historical context
+
+This archive documents:
+- Black press history spanning post-Reconstruction (1880s) through the digital era
+- Publications across Newark, Trenton, Camden, Jersey City, and 40+ other NJ cities
+- Key periods: Reconstruction era, Great Migration, Jim Crow era, Civil Rights movement, Black Power era (1968 Newark uprising and aftermath), and contemporary digital journalism
+- Publication types: weekly newspapers, monthly magazines, academic journals, community newsletters, digital-native outlets
+
+## Related initiatives
+
+- Black Publishers Collective (BPC): https://centerforcooperativemedia.org/programs/black-publishers-collective/
+- South Jersey Information Equity Project (SJIEP): https://sjiep.org
+- Center for Cooperative Media: https://centerforcooperativemedia.org
+
+## Attribution
+
+Data curator: Amanda Alicea
+Project lead: Cassandra Etienne
+Institution: Center for Cooperative Media, Montclair State University
+License: Public domain / open access

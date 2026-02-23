@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A comprehensive database of New Jersey Black press publications spanning from 1880 to present.">
-    <meta name="keywords" content="New Jersey, Black press, African American newspapers, journalism history">
+    <meta name="description" content="A 145-year archive of Black journalism in New Jersey. 138 publications — newspapers, magazines, and digital outlets — spanning 1880 to present.">
+    <meta name="keywords" content="New Jersey, Black press, African American newspapers, journalism history, NJ Black media">
     <meta name="author" content="Center for Cooperative Media">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="NJ Black Press | The Archive">
+    <meta property="og:description" content="A 145-year archive of Black journalism in New Jersey. 138 publications — newspapers, magazines, and digital outlets — spanning 1880 to present.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://centercoopmedia.github.io/njblackpress/">
+    <meta property="og:image" content="https://centercoopmedia.github.io/njblackpress/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="NJ Black Press Archive">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NJ Black Press | The Archive">
+    <meta name="twitter:description" content="A 145-year archive of Black journalism in New Jersey. 138 publications — newspapers, magazines, and digital outlets — spanning 1880 to present.">
+    <meta name="twitter:image" content="https://centercoopmedia.github.io/njblackpress/og-image.png">
 
     <title>NJ Black Press | The Archive</title>
 
+    <!-- Canonical -->
+    <link rel="canonical" href="https://centercoopmedia.github.io/njblackpress/">
+
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" href="favicon.png">
 
     <!-- Google Fonts -->
@@ -58,6 +78,38 @@
     </script>
 
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "NJ Black Press Archive",
+      "url": "https://centercoopmedia.github.io/njblackpress/",
+      "description": "A 145-year archive of Black journalism in New Jersey. 138 publications — newspapers, magazines, and digital outlets — spanning 1880 to present.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Center for Cooperative Media",
+        "url": "https://centerforcooperativemedia.org",
+        "parentOrganization": {
+          "@type": "EducationalOrganization",
+          "name": "Montclair State University"
+        }
+      },
+      "about": {
+        "@type": "Dataset",
+        "name": "NJ Black Press Database",
+        "description": "Historical catalog of 138 Black-owned publications in New Jersey from 1880 to present, including newspapers, magazines, newsletters, and digital outlets.",
+        "url": "https://centercoopmedia.github.io/njblackpress/data/publications.json",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "creator": {
+          "@type": "Organization",
+          "name": "Center for Cooperative Media"
+        },
+        "temporalCoverage": "1880/.."
+      }
+    }
+    </script>
 </head>
 <body class="bg-ink-900 text-paper-100 font-sans selection:bg-accent selection:text-white antialiased">
     

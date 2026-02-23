@@ -82,6 +82,26 @@
         document.getElementById('page-title').textContent = `${pub.name} | NJ Black Press Archive`;
         document.title = `${pub.name} | NJ Black Press Archive`;
 
+        // Update meta tags for per-publication SEO
+        const years = pub.yearFounded ? (pub.yearCeased ? `${pub.yearFounded}–${pub.yearCeased}` : `Est. ${pub.yearFounded}`) : '';
+        const location = pub.city ? `${pub.city}, NJ` : 'New Jersey';
+        const ogDesc = pub.historicalNotes
+            ? pub.historicalNotes.slice(0, 155).replace(/\s\S*$/, '') + '...'
+            : pub.missionStatement
+                ? pub.missionStatement.slice(0, 155).replace(/\s\S*$/, '') + '...'
+                : `${pub.name} — ${location}${years ? ' • ' + years : ''}. From the NJ Black Press Archive.`;
+        const canonicalUrl = `https://centercoopmedia.github.io/njblackpress/publication.html?id=${pub.id}`;
+
+        const setMeta = (id, val) => { const el = document.getElementById(id); if (el) el.setAttribute('content', val); };
+        setMeta('meta-description', ogDesc);
+        setMeta('og-title', `${pub.name} | NJ Black Press Archive`);
+        setMeta('og-description', ogDesc);
+        setMeta('og-url', canonicalUrl);
+        setMeta('twitter-title', `${pub.name} | NJ Black Press Archive`);
+        setMeta('twitter-description', ogDesc);
+        const canonical = document.getElementById('canonical');
+        if (canonical) canonical.setAttribute('href', canonicalUrl);
+
         const statusClass = pub.isActive !== false && !pub.yearCeased ? 'text-accent border-accent' : 'text-paper-300 border-paper-300';
         const statusText = pub.isActive !== false && !pub.yearCeased ? 'ACTIVE' : 'ARCHIVED';
         const years = formatYears(pub);

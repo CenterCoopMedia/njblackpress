@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# AI crawlers — this archive welcomes indexing for research and discovery
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://centercoopmedia.github.io/njblackpress/sitemap.xml
