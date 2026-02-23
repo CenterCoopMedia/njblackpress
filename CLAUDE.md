@@ -176,6 +176,39 @@ The JSON file also includes a `metadata` object with: `totalCount`, `cities`, `d
 
 - The `data/` directory contains the _source of truth_ for data. The `docs/data/` copies are what the website reads. They can drift apart if you forget to copy after regeneration.
 - Year parsing is lenient — `convert_csv.py` extracts the first 4-digit number from any string. Values like "1880?" or "c. 1920" work fine.
-- `isActive` is determined by absence of a `yearCeased` value, not an explicit flag in the CSV.
+- `isActive` is determined by absence of a `yearCeased` value, not an explicit flag in the CSV. **Caveat:** `?` in yearCeased is treated the same as empty, so publications with an unknown cease date are marked Active. This inflates the active count — 56 pre-1990 publications are currently marked Active despite likely being defunct. A data curation decision, not a bug.
 - The Tailwind config (colors, fonts, etc.) is duplicated in each HTML file's inline `<script>` tag. Changes must be applied to all three HTML files.
 - Publication detail page (`publication.html`) loads from two data sources (`publications.json` + `featured-publications.json`) and merges them for display.
+- ID 128 ("Newark Black Newspapers Collection") is a Rutgers digital library collection, not a standalone publication. Its own `historicalNotes` flag this. It's kept for reference but `isActive: false` and `format: "Digital archive collection"`.
+- The CSV uses UTF-8 BOM (`\ufeff`) on the first column. Read with `encoding='utf-8-sig'` in Python.
+
+## Changes log
+
+### 2026-02-23 — SEO, repo hygiene, data audit
+
+**SEO / LLMEO**
+- Added `docs/favicon.svg` (dark background, orange "NJ" text)
+- Copied `og-image.png` to `docs/` (was only in repo root, not served by GitHub Pages)
+- Created `docs/robots.txt` with explicit AI crawler allowances
+- Created `docs/llms.txt` (llmstxt.org standard)
+- Generated `docs/sitemap.xml` (137 publication URLs + 2 main pages)
+- Added full OG + Twitter Card meta tags + `<link rel="canonical">` to all 3 HTML pages
+- Added JSON-LD structured data (WebSite + Dataset) to `index.html`
+- Updated `docs/js/publication.js` to dynamically rewrite OG/canonical tags per publication
+
+**Repo hygiene**
+- Merged PRs #8 (CLAUDE.md) and #9 (CODEBASE_OVERVIEW.md)
+- Rewrote `README.md` with accurate schema docs, data pipeline, and prominent live site link
+- Set GitHub repo description, homepage URL, and 8 topic tags
+
+**Data fixes**
+- The Sentinel (ID 10): `isActive: false`, `yearCeased: 1882` (was showing Active)
+- Unity and Struggle (ID 84): `isActive: false`, `yearCeased: 1978` (was showing Active)
+- The Black Voice (ID 107): added `yearCeased: 1975`, `isActive: false`
+- Deliverance Voice featured card: corrected ID `108 → 70` (108 is Educational Perspectives)
+- Removed duplicate ID 60 (Black Women's United Front Newsletter) — ID 126 is the complete record; featured card updated to point at 126
+- ID 128: `isActive: false`, `format: "Digital archive collection"` (it's a Rutgers library collection)
+- Updated counts throughout: totalCount `138 → 137`, activeCount `97 → 95`
+
+**Pending (curator decision)**
+- 56 pre-1990 publications with `?` yearCeased are marked Active — the Notion source data uses `?` to mean "unknown," not "still running." Fixing requires either updating the CSV or changing the `isActive` logic in `convert_csv.py`.
