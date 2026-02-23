@@ -6,7 +6,7 @@ A historical database documenting Black publications in New Jersey from 1880 to 
 
 ## Overview
 
-The database catalogs 138 Black-owned and Black-focused publications that have operated in New Jersey — newspapers, magazines, newsletters, and digital outlets. The data spans 145 years of Black press history across 45+ cities statewide.
+The database catalogs 137 Black-owned and Black-focused publications that have operated in New Jersey — newspapers, magazines, newsletters, and digital outlets. The data spans 145 years of Black press history across 45+ cities statewide.
 
 **Project lead:** Cassandra Etienne, Associate Director of Programming and Membership
 **Data curator:** Amanda Alicea
