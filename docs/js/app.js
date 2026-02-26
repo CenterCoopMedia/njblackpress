@@ -285,7 +285,7 @@
       <article class="bg-ink-900 border border-white/10 hover:border-accent transition-colors p-6 flex flex-col h-full group">
         <header class="flex justify-between items-start mb-4">
             <span class="font-mono text-[10px] uppercase tracking-widest px-2 py-1 border ${statusClass}">${statusText}</span>
-            <span class="font-mono text-xs text-paper-300">${pub.city || 'NJ'}</span>
+            <span class="font-mono text-xs text-accent">${pub.city || 'NJ'}</span>
         </header>
 
         <a href="publication.html?id=${pub.id}" class="block">

@@ -1,214 +1,68 @@
 # CLAUDE.md
 
-## Project Overview
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-NJ Black Press Database — a historical archive documenting Black publications in New Jersey from 1880 to present day. Built as a static website with a JSON/CSV data layer, owned by the [Center for Cooperative Media](https://centerforcooperativemedia.org/).
+## Project overview
 
-The dataset catalogs ~138 publications (newspapers, magazines, newsletters, digital outlets) spanning 45+ cities and 15 decades.
+NJ Black Press Database — a static site documenting ~140 Black-owned and Black-focused publications in New Jersey from 1880 to present. Built for the Center for Cooperative Media at Montclair State University. Hosted on GitHub Pages from the `docs/` folder.
+
+## Development
+
+**No build step.** The site is vanilla HTML/JS/CSS with Tailwind via CDN. To develop locally, serve the `docs/` folder with any static server:
+
+```bash
+cd docs && python -m http.server 8000
+```
+
+**Data pipeline:** Notion → CSV export → Python conversion → JSON
+
+```bash
+cd data && python convert_csv.py
+```
+
+This reads `data/publications.csv` and outputs `data/publications.json`. The generated JSON must then be copied to `docs/data/publications.json` for the frontend. `docs/data/featured-publications.json` is hand-curated and edited directly.
 
 ## Architecture
 
-**Static site** — no build step, no backend, no package manager. Vanilla JavaScript, Tailwind CSS via CDN, deployed from `/docs/` (GitHub Pages).
+Static site with three HTML pages, no framework, no bundler:
 
-```
-njblackpress/
-├── data/                    # Source data + processing scripts
-│   ├── publications.csv     # Primary dataset (exported from Notion)
-│   ├── publications.json    # Generated JSON (used by the site)
-│   ├── featured-publications.json  # Curated detailed records
-│   ├── convert_csv.py       # CSV → JSON converter
-│   ├── merge_research.py    # Merges research findings into JSON
-│   ├── publications/        # 138 individual .md files (Notion exports)
-│   └── research/            # 6 batch JSON files of research findings
-├── docs/                    # Static website (GitHub Pages root)
-│   ├── index.html           # Landing page (hero, timeline, search)
-│   ├── archive.html         # Full directory with advanced filtering
-│   ├── publication.html     # Individual publication detail page
-│   ├── css/styles.css       # Custom styles (extends Tailwind)
-│   ├── js/
-│   │   ├── app.js           # Landing page logic
-│   │   ├── archive.js       # Archive page filtering/search/views
-│   │   ├── publication.js   # Publication detail rendering
-│   │   ├── timeline.js      # SVG timeline visualization
-│   │   └── featured.js      # Featured publications showcase
-│   └── data/                # Deployed data files (copies of above)
-│       ├── publications.json
-│       └── featured-publications.json
-├── featured/                # Featured content markdown
-├── images/                  # Image assets
-├── README.md                # Project documentation
-└── CLAUDE.md                # This file
-```
+- **`docs/index.html`** — Landing page (hero, featured sections, timeline, searchable database, about)
+- **`docs/archive.html`** — Full archive with list/grid toggle, filters, sorting, pagination
+- **`docs/publication.html`** — Individual publication detail (loaded via `?id=X` query param)
 
-## Data Pipeline
+### JavaScript modules (IIFE pattern, no imports)
 
-The data flows from Notion exports through Python scripts to the website:
+- **`docs/js/app.js`** — Core state management, filtering, search, pagination, card rendering. Exposes `window.njbp` for cross-module communication (`removeFilter`, `resetFilters`, `getState`, `filterByDecade`).
+- **`docs/js/timeline.js`** — Interactive decade timeline with bar chart visualization. Calls `window.njbp.filterByDecade()`.
+- **`docs/js/featured.js`** — Loads and merges `featured-publications.json` with main data for rich featured sections.
+- **`docs/js/archive.js`** — Archive page filtering and display logic.
+- **`docs/js/publication.js`** — Detail page rendering from query param ID.
 
-```
-Notion → data/publications.csv
-              ↓
-         convert_csv.py  →  data/publications.json
-              ↓
-         merge_research.py (enriches from data/research/*.json)
-              ↓
-         Copy to docs/data/publications.json (manual)
-```
+### State management
 
-### Running data scripts
+`app.js` uses a single `state` object with `publications`, `filteredPublications`, `filters` (search, city, decade, status, format), `sortBy`, `currentPage`, and `perPage` (24). Filters are applied sequentially; search is debounced at 300ms.
 
-Scripts must be run from the `data/` directory:
+## Data model
 
-```bash
-cd data/
-python3 convert_csv.py          # Regenerate publications.json from CSV
-python3 merge_research.py       # Merge research findings into publications.json
-```
+**`publications.json`** contains an array of publication objects and a `metadata` block (totalCount, cities, decades, formats, activeCount, ceasedCount). Each publication has: `id`, `name`, `alternateName`, `city`, `publishers`, `yearFounded`, `yearCeased`, `frequency`, `format`, `medium` (computed: Print/Digital/Print+Digital), `languages`, `primaryFocus`, `missionStatement`, `historicalNotes`, `archiveUrl`, `websiteUrl`, `targetAudience`, `keyStaff`, `isActive` (computed: true if yearCeased is null), `decade` (computed from yearFounded).
 
-After running scripts, copy updated files to `docs/data/`:
-```bash
-cp data/publications.json docs/data/publications.json
-```
+**`featured-publications.json`** has `featuredHistoric` (11 entries) and `featuredContemporary` (5 entries) with expanded fields: `founders`, `keyStaff` as objects (`{name, role}`), `tags`, `physicalArchive`.
 
-The `featured-publications.json` file is curated separately and lives in both `data/` and `docs/data/`.
+## Styling
 
-## Data Schema
+Tailwind CSS via CDN with inline config extending colors and fonts:
 
-Each publication record in `publications.json`:
+- **Colors:** ink-950 through ink-700 (dark backgrounds), paper-50 through paper-300 (light text), accent #ff4d00 (orange)
+- **Fonts:** Fraunces (serif headings), DM Sans (body), system monospace (labels/filters)
+- **Custom CSS** in `docs/css/styles.css`: scrollbar styling, noise grain overlay, timeline bars
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `id` | int | Unique identifier |
-| `name` | string | Publication name |
-| `alternateName` | string\|null | Other names used |
-| `city` | string\|null | Primary city of operation |
-| `publishers` | string\|null | Publishing entity or individuals |
-| `yearFounded` | int\|null | Start year |
-| `yearCeased` | int\|null | End year (null if still active) |
-| `frequency` | string\|null | Weekly, monthly, daily, etc. |
-| `format` | string\|null | Newspaper, periodical, digital |
-| `languages` | string | Primary language(s), defaults to "English" |
-| `archiveUrl` | string\|null | Library of Congress/WorldCat/Internet Archive links |
-| `websiteUrl` | string\|null | Current website URL |
-| `targetAudience` | string\|null | Intended readership |
-| `primaryFocus` | string\|null | Subject matter coverage |
-| `medium` | string | "Print", "Digital", or "Print/Digital" |
-| `missionStatement` | string\|null | Editorial philosophy |
-| `keyStaff` | string\|null | Notable editors/publishers |
-| `historicalNotes` | string\|null | Context and significance |
-| `isActive` | bool | Whether the publication is still operating |
-| `decade` | string | Decade of founding (e.g. "1880s") |
-| `isFeaturedHistoric` | bool | Highlighted in historic section |
-| `isFeaturedContemporary` | bool | Highlighted in contemporary section |
+## Deployment
 
-The JSON file also includes a `metadata` object with: `totalCount`, `cities`, `decades`, `formats`, `activeCount`, `ceasedCount`.
+Push to `master` → GitHub Pages auto-deploys from `docs/`. No CI/CD pipeline, no environment variables needed.
 
-## Frontend Conventions
+## Conventions
 
-### JavaScript
-
-- All modules use **IIFE pattern**: `(function() { ... })()`
-- Data loading via **Fetch API** with error handling
-- State managed as plain objects; UI re-renders on state changes
-- Search input **debounced** at 300ms
-- Archive page persists filter state in **URL query parameters** for shareability
-- Pagination uses "Load More" pattern (not page numbers)
-- No framework, no module bundler, no transpilation
-
-### CSS / Styling
-
-- **Tailwind CSS** loaded from CDN — no local build
-- Custom Tailwind config injected via inline `<script>` in HTML files
-- Color palette: `ink` (dark background), `paper` (light text), `accent` (orange highlights)
-- Fonts: Fraunces (serif headings), DM Sans (sans-serif body) via Google Fonts CDN
-- Mobile-first responsive design
-- Dark "Newspaper Noir" aesthetic throughout
-
-### HTML
-
-- Three pages: `index.html`, `archive.html`, `publication.html`
-- Semantic HTML with ARIA attributes for accessibility
-- Publication detail page loads from URL parameter: `publication.html?id=123`
-
-## Python Requirements
-
-- Python 3.x (tested with 3.11)
-- Standard library only — no pip dependencies (`csv`, `json`, `re`, `os`, `glob`)
-
-## Key Conventions
-
-- **No build step** — all files served as-is. Changes to HTML/CSS/JS are immediately effective.
-- **Two copies of data** — source data lives in `data/`, deployed copies in `docs/data/`. Keep them in sync manually after regeneration.
-- **Featured publications** are hardcoded in `convert_csv.py` (`featured_historic` and `featured_contemporary` lists). Update these lists when adding new featured publications.
-- **merge_research.py fills gaps only** — it never overwrites existing non-null values.
-- **No tests** — there is no test suite. Verify changes manually by opening the HTML files.
-- **No CI/CD** — deployment is via GitHub Pages from the `docs/` directory.
-
-## Common Tasks
-
-### Adding a new publication
-1. Add a row to `data/publications.csv`
-2. Run `cd data && python3 convert_csv.py`
-3. Copy `data/publications.json` to `docs/data/publications.json`
-
-### Featuring a publication
-1. Edit the `featured_historic` or `featured_contemporary` lists in `data/convert_csv.py`
-2. Add detailed content to `data/featured-publications.json`
-3. Regenerate and copy as above
-
-### Modifying the website
-- Edit HTML files directly in `docs/`
-- Edit JS files in `docs/js/`
-- Edit styles in `docs/css/styles.css` (or use Tailwind utility classes inline)
-- No build, reload the browser to see changes
-
-### Adding research findings
-1. Add a JSON file to `data/research/` matching the expected schema (array of objects with `id` and field values)
-2. Run `cd data && python3 merge_research.py`
-3. Copy `data/publications.json` to `docs/data/publications.json`
-
-## External Dependencies (CDN)
-
-- Tailwind CSS (via CDN)
-- Google Fonts: Fraunces, DM Sans
-- No npm packages, no local dependencies
-
-## Gotchas
-
-- The `data/` directory contains the _source of truth_ for data. The `docs/data/` copies are what the website reads. They can drift apart if you forget to copy after regeneration.
-- Year parsing is lenient — `convert_csv.py` extracts the first 4-digit number from any string. Values like "1880?" or "c. 1920" work fine.
-- `isActive` is determined by absence of a `yearCeased` value, not an explicit flag in the CSV. **Caveat:** `?` in yearCeased is treated the same as empty, so publications with an unknown cease date are marked Active. This inflates the active count — 56 pre-1990 publications are currently marked Active despite likely being defunct. A data curation decision, not a bug.
-- The Tailwind config (colors, fonts, etc.) is duplicated in each HTML file's inline `<script>` tag. Changes must be applied to all three HTML files.
-- Publication detail page (`publication.html`) loads from two data sources (`publications.json` + `featured-publications.json`) and merges them for display.
-- ID 128 ("Newark Black Newspapers Collection") is a Rutgers digital library collection, not a standalone publication. Its own `historicalNotes` flag this. It's kept for reference but `isActive: false` and `format: "Digital archive collection"`.
-- The CSV uses UTF-8 BOM (`\ufeff`) on the first column. Read with `encoding='utf-8-sig'` in Python.
-
-## Changes log
-
-### 2026-02-23 — SEO, repo hygiene, data audit
-
-**SEO / LLMEO**
-- Added `docs/favicon.svg` (dark background, orange "NJ" text)
-- Copied `og-image.png` to `docs/` (was only in repo root, not served by GitHub Pages)
-- Created `docs/robots.txt` with explicit AI crawler allowances
-- Created `docs/llms.txt` (llmstxt.org standard)
-- Generated `docs/sitemap.xml` (137 publication URLs + 2 main pages)
-- Added full OG + Twitter Card meta tags + `<link rel="canonical">` to all 3 HTML pages
-- Added JSON-LD structured data (WebSite + Dataset) to `index.html`
-- Updated `docs/js/publication.js` to dynamically rewrite OG/canonical tags per publication
-
-**Repo hygiene**
-- Merged PRs #8 (CLAUDE.md) and #9 (CODEBASE_OVERVIEW.md)
-- Rewrote `README.md` with accurate schema docs, data pipeline, and prominent live site link
-- Set GitHub repo description, homepage URL, and 8 topic tags
-
-**Data fixes**
-- The Sentinel (ID 10): `isActive: false`, `yearCeased: 1882` (was showing Active)
-- Unity and Struggle (ID 84): `isActive: false`, `yearCeased: 1978` (was showing Active)
-- The Black Voice (ID 107): added `yearCeased: 1975`, `isActive: false`
-- Deliverance Voice featured card: corrected ID `108 → 70` (108 is Educational Perspectives)
-- Removed duplicate ID 60 (Black Women's United Front Newsletter) — ID 126 is the complete record; featured card updated to point at 126
-- ID 128: `isActive: false`, `format: "Digital archive collection"` (it's a Rutgers library collection)
-- Updated counts throughout: totalCount `138 → 137`, activeCount `97 → 95`
-
-**Pending (curator decision)**
-- 56 pre-1990 publications with `?` yearCeased are marked Active — the Notion source data uses `?` to mean "unknown," not "still running." Fixing requires either updating the CSV or changing the `isActive` logic in `convert_csv.py`.
+- Sentence case for all headings and UI text (never Title Case)
+- CCM brand colors: #000000 (black) and #CA3553 (red) for organizational branding; site uses its own palette (ink/paper/accent)
+- External links open in new tabs with `target="_blank" rel="noopener noreferrer"`
+- Publication detail pages use client-side routing via query params, not separate HTML files per publication
