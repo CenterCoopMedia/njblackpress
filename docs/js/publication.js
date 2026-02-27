@@ -83,13 +83,13 @@
         document.title = `${pub.name} | NJ Black Press Archive`;
 
         // Update meta tags for per-publication SEO
-        const years = pub.yearFounded ? (pub.yearCeased ? `${pub.yearFounded}–${pub.yearCeased}` : `Est. ${pub.yearFounded}`) : '';
+        const metaYears = pub.yearFounded ? (pub.yearCeased ? `${pub.yearFounded}–${pub.yearCeased}` : `Est. ${pub.yearFounded}`) : '';
         const location = pub.city ? `${pub.city}, NJ` : 'New Jersey';
         const ogDesc = pub.historicalNotes
             ? pub.historicalNotes.slice(0, 155).replace(/\s\S*$/, '') + '...'
             : pub.missionStatement
                 ? pub.missionStatement.slice(0, 155).replace(/\s\S*$/, '') + '...'
-                : `${pub.name} — ${location}${years ? ' • ' + years : ''}. From the NJ Black Press Archive.`;
+                : `${pub.name} — ${location}${metaYears ? ' • ' + metaYears : ''}. From the NJ Black Press Archive.`;
         const canonicalUrl = `https://centercoopmedia.github.io/njblackpress/publication.html?id=${pub.id}`;
 
         const setMeta = (id, val) => { const el = document.getElementById(id); if (el) el.setAttribute('content', val); };
