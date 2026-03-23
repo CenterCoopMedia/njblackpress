@@ -85,8 +85,9 @@
         // Update meta tags for per-publication SEO
         const metaYears = pub.yearFounded ? (pub.yearCeased ? `${pub.yearFounded}–${pub.yearCeased}` : `Est. ${pub.yearFounded}`) : '';
         const location = pub.city ? `${pub.city}, NJ` : 'New Jersey';
-        const ogDesc = pub.historicalNotes
-            ? pub.historicalNotes.slice(0, 155).replace(/\s\S*$/, '') + '...'
+        const cleanNotes = pub.historicalNotes ? stripResearchAnnotations(pub.historicalNotes) : '';
+        const ogDesc = cleanNotes
+            ? cleanNotes.slice(0, 155).replace(/\s\S*$/, '') + '...'
             : pub.missionStatement
                 ? pub.missionStatement.slice(0, 155).replace(/\s\S*$/, '') + '...'
                 : `${pub.name} — ${location}${metaYears ? ' • ' + metaYears : ''}. From the NJ Black Press Archive.`;
@@ -218,7 +219,16 @@
         `;
     }
 
+    function stripResearchAnnotations(text) {
+        // Remove [March 2026 research: ...] and [March 2026 research (estimated): ...] annotations
+        // These are for the raw data, not for display
+        return text.replace(/\s*\[March 2026 research(?:\s*\(estimated\))?\s*:\s*[^\]]*\]/g, '').trim();
+    }
+
     function buildHistoricalSection(notes) {
+        notes = stripResearchAnnotations(notes);
+        if (!notes) return '';
+
         // Split only on actual paragraph breaks (double newlines), not sentence boundaries
         const paragraphs = notes.split(/\n\n+/).filter(p => p.trim());
 

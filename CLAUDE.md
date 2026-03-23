@@ -58,7 +58,30 @@ Tailwind CSS via CDN with inline config extending colors and fonts:
 
 ## Deployment
 
-Push to `master` → GitHub Pages auto-deploys from `docs/`. No CI/CD pipeline, no environment variables needed.
+GitHub Actions is disabled for the CenterCoopMedia org, so GitHub Pages builds are stuck. Deploy via SFTP to the CCM WordPress server instead.
+
+**SFTP deploy (from officejawn or houseofjawn):**
+```bash
+# Credentials in pass store
+HOST=37.27.121.163
+PORT=4377
+USER=$(~/.claude/pass-get claude/services/ccm-ftp-user)
+PASS=$(~/.claude/pass-get claude/services/ccm-ftp-pass)
+
+# Upload all static files
+sshpass -p "$PASS" scp -P $PORT -o StrictHostKeyChecking=no docs/*.html docs/*.xml docs/*.txt docs/*.png docs/*.svg $USER@$HOST:public_html/njblackpress/
+sshpass -p "$PASS" scp -P $PORT -o StrictHostKeyChecking=no docs/css/* $USER@$HOST:public_html/njblackpress/css/
+sshpass -p "$PASS" scp -P $PORT -o StrictHostKeyChecking=no docs/js/* $USER@$HOST:public_html/njblackpress/js/
+sshpass -p "$PASS" scp -P $PORT -o StrictHostKeyChecking=no docs/data/* $USER@$HOST:public_html/njblackpress/data/
+```
+
+**Live URLs:**
+- Production: `https://centerforcooperativemedia.org/njblackpress/` (WordPress serves the page, static files load from `public_html/njblackpress/`)
+- GitHub Pages (stale): `https://centercoopmedia.github.io/njblackpress/`
+
+**Note:** The WordPress page at `/njblackpress/` renders our `index.html` content within the Brooklyn theme wrapper. JS/CSS/data load via relative paths from the static directory. The bare URL path is handled by WordPress; direct file paths (e.g., `/njblackpress/archive.html`) serve our static files.
+
+**Data pipeline caveat:** The JSON has been enriched with fields (`historicalNotes`, `missionStatement`, etc.) that don't exist in the CSV. Do NOT re-run `convert_csv.py` to regenerate the JSON — it will wipe those fields. Edit the JSON directly for metadata changes.
 
 ## Conventions
 

@@ -85,7 +85,8 @@
 
     // Use extended data if available, fallback to base publication data
     const founders = extended?.founders || [];
-    const historicalNotes = extended?.historicalNotes || pub.historicalNotes || '';
+    const rawNotes = extended?.historicalNotes || pub.historicalNotes || '';
+    const historicalNotes = rawNotes.replace(/\s*\[March 2026 research(?:\s*\(estimated\))?\s*:\s*[^\]]*\]/g, '').trim();
     const physicalArchive = extended?.physicalArchive || null;
     const tags = extended?.tags || [];
     const missionStatement = extended?.missionStatement || pub.missionStatement || '';
