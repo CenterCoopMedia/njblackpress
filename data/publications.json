@@ -103,8 +103,8 @@
       "Uncataloged serials",
       "Volumes"
     ],
-    "activeCount": 15,
-    "ceasedCount": 122
+    "activeCount": 17,
+    "ceasedCount": 120
   },
   "publications": [
     {
@@ -438,7 +438,7 @@
       "missionStatement": null,
       "keyStaff": null,
       "historicalNotes": "No verifiable record found for an African American newspaper specifically titled 'New Jersey Record' published in Newark. Extensive searches of the Library of Congress newspaper directory, Chronicling America, Newark Public Library digital collections, Rutgers University Libraries, and the Wikipedia list of African-American newspapers in New Jersey returned no matches for this title. It is possible this title has been conflated with the 'New Jersey Afro American' (1941-1991, Newark edition of the Afro-American chain) or another Newark publication. The name may also refer to a short-lived or hyper-local publication not indexed in major catalogs. Recommended: contact the Newark Public Library's Charles F. Cummings NJ Information Center at njreference@npl.org or (973) 733-7775, or the James Brown African American Room, for verification. [March 2026 research (estimated): Unknown founding year and no records found. Cannot estimate cessation.] [March 2026 research: No web presence as a Black publication. May be a variant name or misattribution. Founding year unknown.]",
-      "isActive": false,
+      "isActive": true,
       "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false
@@ -1302,7 +1302,7 @@
       "missionStatement": null,
       "keyStaff": "Previous editor(s): Harry B. Webber",
       "historicalNotes": "No verifiable record found for an African American newspaper titled 'New Jersey Deadline' published in Newark. Searches of the Library of Congress newspaper directory, Chronicling America, Newark Public Library inventories, Rutgers University Newark Archives Project, the New Jersey Historical Society newspaper listings, and the Wikipedia list of African-American newspapers in New Jersey returned no matches. The title does not appear in any known NJ newspaper catalog or microfilm inventory. This may be a very short-lived publication, an alternative name for another title, or possibly a misattribution. Recommended: contact the Newark Public Library NJ Information Center or the New Jersey Historical Society for further verification. [March 2026 research (estimated): Unknown founding year and no records found. Cannot estimate cessation.] [March 2026 research: No web presence, no library catalog records. Does not appear on any known NJ African American newspaper list. Founding year unknown.]",
-      "isActive": false,
+      "isActive": true,
       "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false
