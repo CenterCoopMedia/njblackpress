@@ -1,5 +1,7 @@
 # NJ Black Press Archive
 
+<img width="1549" height="680" alt="image" src="https://github.com/user-attachments/assets/6a8dcb8d-192f-44f6-9043-cddd5f8219c0" />
+
 **[→ View the live archive](https://centercoopmedia.github.io/njblackpress/)**
 
 A historical database documenting Black publications in New Jersey from 1880 to present day. Built and maintained by the [Center for Cooperative Media](https://centerforcooperativemedia.org/) at Montclair State University.
