@@ -42,7 +42,7 @@ Kim Robinson, Editor.
 
 ## Historical notes
 
-[March 2026 research (estimated): Now Black Voice/Carta Latina at Rutgers. Last confirmed issues on Issuu Spring 2015. Student organization may still exist.].
+[March 2026 research (estimated): Now Black Voice/Carta Latina at Rutgers. Last confirmed issues on Issuu Spring 2015. Student organization may still exist.]
 
 ## External links
 

@@ -29,9 +29,7 @@ status: "inactive-or-historical"
 | Frequency | Unknown |
 | Medium | Print |
 | Languages | English |
-| Primary focus | Hairdressing,
-
-Beauty, Fashion |
+| Primary focus | Hairdressing,<br>Beauty, Fashion |
 | Target audience | Unknown |
 
 ## Key staff
@@ -40,7 +38,7 @@ Previous editor(s): Natasha A. Brooks-Everett.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. River Edge location ties it to Word Up!/Enoble Media cluster.].
+[March 2026 research (estimated): No records found. River Edge location ties it to Word Up!/Enoble Media cluster.]
 
 ## External links
 

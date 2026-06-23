@@ -38,7 +38,7 @@ Owned by Shirley Johnson.
 
 ## Historical notes
 
-The South Jersey Journal published its first edition in September 2011 and was a monthly publication covering news and information relevant to the African American community in South Jersey. Owned by South Jersey Communications, LLC, with President & Publisher Al Thomas and Editor-in-Chief Clyde Hughes, the journal was distributed at retail locations including ShopRite, Kmart, Superfresh, and Wawa. The publication eventually folded, becoming part of the broader decline of Black print media outlets nationally. [March 2026 research: Founder Irv Randolph announced dissolution effective June 30, 2018. Published monthly by South Jersey Communications Inc.].
+The South Jersey Journal published its first edition in September 2011 and was a monthly publication covering news and information relevant to the African American community in South Jersey. Owned by South Jersey Communications, LLC, with President & Publisher Al Thomas and Editor-in-Chief Clyde Hughes, the journal was distributed at retail locations including ShopRite, Kmart, Superfresh, and Wawa. The publication eventually folded, becoming part of the broader decline of Black print media outlets nationally. [March 2026 research: Founder Irv Randolph announced dissolution effective June 30, 2018. Published monthly by South Jersey Communications Inc.]
 
 ## Related wiki pages
 

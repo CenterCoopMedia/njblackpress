@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Unknown"
-description: "Citie page for Unknown in the NJ Black Press Archive."
+description: "citie page for Unknown in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

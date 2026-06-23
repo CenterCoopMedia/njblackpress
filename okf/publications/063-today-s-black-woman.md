@@ -38,7 +38,7 @@ Print.
 
 ## Historical notes
 
-[March 2026 research: Last confirmed physical issues on Amazon date to 2011-2012. Subscription sites may have stale listings.].
+[March 2026 research: Last confirmed physical issues on Amazon date to 2011-2012. Subscription sites may have stale listings.]
 
 ## Related wiki pages
 

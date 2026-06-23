@@ -1,7 +1,7 @@
 ---
 type: "decade"
 title: "Unknown"
-description: "Decade page for Unknown in the NJ Black Press Archive."
+description: "decade page for Unknown in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "decade"

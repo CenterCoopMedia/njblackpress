@@ -34,7 +34,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Searches for civil rights publications in Newark 1966 returned no matches.].
+[March 2026 research (estimated): No records found. Searches for civil rights publications in Newark 1966 returned no matches.]
 
 ## External links
 

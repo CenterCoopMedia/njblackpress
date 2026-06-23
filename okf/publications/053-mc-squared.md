@@ -34,7 +34,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Same Piscataway location and year as Inner City Products (ID 117); may be related.].
+[March 2026 research (estimated): No records found. Same Piscataway location and year as Inner City Products (ID 117); may be related.]
 
 ## Related wiki pages
 

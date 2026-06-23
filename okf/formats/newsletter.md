@@ -1,7 +1,7 @@
 ---
 type: "format"
 title: "Newsletter"
-description: "Format page for Newsletter in the NJ Black Press Archive."
+description: "format page for Newsletter in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"

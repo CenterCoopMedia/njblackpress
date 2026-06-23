@@ -38,7 +38,7 @@ Editor: Paula McCoy-Pinderhughes.
 
 ## Historical notes
 
-[March 2026 research (estimated): WorldCat OCLC 36814737 exists. Likely associated with Franklin Township, Somerset County.].
+[March 2026 research (estimated): WorldCat OCLC 36814737 exists. Likely associated with Franklin Township, Somerset County.]
 
 ## External links
 

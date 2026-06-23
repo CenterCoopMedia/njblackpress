@@ -38,7 +38,7 @@ Editor: Kate Ferguson.
 
 ## Historical notes
 
-[March 2026 research: Published by Enoble Media Group / John Blassingame, Paramus, NJ. Last reference in 2009 press release.].
+[March 2026 research: Published by Enoble Media Group / John Blassingame, Paramus, NJ. Last reference in 2009 press release.]
 
 ## External links
 

@@ -38,7 +38,7 @@ Editor: Matthew Holden Jr.
 
 ## Historical notes
 
-[March 2026 research: Published 1989-2019 by NCOBPS. Succeeded in 2020 by National Review of Black Politics (UC Press).].
+[March 2026 research: Published 1989-2019 by NCOBPS. Succeeded in 2020 by National Review of Black Politics (UC Press).]
 
 ## External links
 

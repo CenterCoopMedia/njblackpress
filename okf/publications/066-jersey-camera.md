@@ -38,7 +38,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found in any searched database.].
+[March 2026 research (estimated): No records found in any searched database.]
 
 ## External links
 

@@ -38,7 +38,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): No active website or social media found. Listed on Wikipedia NJ African American newspapers page.].
+[March 2026 research (estimated): No active website or social media found. Listed on Wikipedia NJ African American newspapers page.]
 
 ## External links
 

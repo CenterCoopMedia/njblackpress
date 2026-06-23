@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Cresskill"
-description: "Citie page for Cresskill in the NJ Black Press Archive."
+description: "citie page for Cresskill in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

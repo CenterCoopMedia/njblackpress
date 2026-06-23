@@ -1,7 +1,7 @@
 ---
 type: "format"
 title: "Magazine/Periodical"
-description: "Format page for Magazine/Periodical in the NJ Black Press Archive."
+description: "format page for Magazine/Periodical in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"

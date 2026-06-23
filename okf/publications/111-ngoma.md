@@ -34,7 +34,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Likely connected to Amiri Baraka's CFUN/Congress of African People (1970-1976).].
+[March 2026 research (estimated): No records found. Likely connected to Amiri Baraka's CFUN/Congress of African People (1970-1976).]
 
 ## External links
 

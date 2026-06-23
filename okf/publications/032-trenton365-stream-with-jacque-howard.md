@@ -42,7 +42,7 @@ Founder: Jacque Howard.
 
 ## Historical notes
 
-Trenton365 was founded by Jacque Howard as a community-building program and media outlet encouraging private citizens, nonprofit groups, and businesses in the greater Trenton area to become more civically minded. Howard, who previously served as executive director of Urban Mission Cabinet Inc., started the radio program about getting things moving in a positive direction in Trenton. The name references the year-round commitment required to address challenges in New Jersey's capital city, and its content is translated into several languages including Spanish, Filipino, and Igbo to serve Trenton's diverse population. [March 2026 research: Website last updated November 2024. Linked radio station (WIMG 1300) shows only default WordPress post.].
+Trenton365 was founded by Jacque Howard as a community-building program and media outlet encouraging private citizens, nonprofit groups, and businesses in the greater Trenton area to become more civically minded. Howard, who previously served as executive director of Urban Mission Cabinet Inc., started the radio program about getting things moving in a positive direction in Trenton. The name references the year-round commitment required to address challenges in New Jersey's capital city, and its content is translated into several languages including Spanish, Filipino, and Igbo to serve Trenton's diverse population. [March 2026 research: Website last updated November 2024. Linked radio station (WIMG 1300) shows only default WordPress post.]
 
 ## External links
 

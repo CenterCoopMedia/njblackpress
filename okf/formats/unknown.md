@@ -1,7 +1,7 @@
 ---
 type: "format"
 title: "Unknown"
-description: "Format page for Unknown in the NJ Black Press Archive."
+description: "format page for Unknown in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"

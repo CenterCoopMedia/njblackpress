@@ -34,7 +34,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-Right On! Presents Class was a special edition or spin-off publication of Right On! magazine, published in 1983 from Cresskill, NJ. Right On! was first published in 1971 by the Laufer Company as a Black teen entertainment magazine modeled as an African-American counterpart to Tiger Beat. By the early 1980s, under editor-in-chief Cynthia Horner (who took the helm in 1976 at age 21), Right On! was expanding with spin-off titles. 'Class' appears to have been one such spin-off, likely targeting a slightly older or more sophisticated demographic. The Laufer Company and its successors (later Sterling/MacFadden) operated from various NJ locations including Cresskill in Bergen County. No digitized copies were found online. [March 2026 research (estimated): No records found. Likely one-off special issue of Right On! magazine.].
+Right On! Presents Class was a special edition or spin-off publication of Right On! magazine, published in 1983 from Cresskill, NJ. Right On! was first published in 1971 by the Laufer Company as a Black teen entertainment magazine modeled as an African-American counterpart to Tiger Beat. By the early 1980s, under editor-in-chief Cynthia Horner (who took the helm in 1976 at age 21), Right On! was expanding with spin-off titles. 'Class' appears to have been one such spin-off, likely targeting a slightly older or more sophisticated demographic. The Laufer Company and its successors (later Sterling/MacFadden) operated from various NJ locations including Cresskill in Bergen County. No digitized copies were found online. [March 2026 research (estimated): No records found. Likely one-off special issue of Right On! magazine.]
 
 ## Related wiki pages
 

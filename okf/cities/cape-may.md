@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Cape May"
-description: "Citie page for Cape May in the NJ Black Press Archive."
+description: "citie page for Cape May in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

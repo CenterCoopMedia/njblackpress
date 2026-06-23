@@ -38,7 +38,7 @@ Jacqueline Mitchell Robinson (Current Editor).
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Likely church-affiliated with limited distribution.].
+[March 2026 research (estimated): No records found. Likely church-affiliated with limited distribution.]
 
 ## External links
 

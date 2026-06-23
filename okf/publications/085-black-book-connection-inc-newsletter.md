@@ -38,7 +38,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. West Orange-based organizational newsletter.].
+[March 2026 research (estimated): No records found. West Orange-based organizational newsletter.]
 
 ## External links
 

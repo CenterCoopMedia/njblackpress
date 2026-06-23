@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Teaneck"
-description: "Citie page for Teaneck in the NJ Black Press Archive."
+description: "citie page for Teaneck in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

@@ -38,7 +38,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): LOC lists 1972-???? (sn88071370). Published by Multi-Linear Publications, East Orange, NJ.].
+[March 2026 research (estimated): LOC lists 1972-???? (sn88071370). Published by Multi-Linear Publications, East Orange, NJ.]
 
 ## External links
 

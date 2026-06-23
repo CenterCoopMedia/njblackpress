@@ -42,7 +42,7 @@ Previous editor(s): Tiny Prince.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Possibly alternate title for NJ After Hours (ID 101), published by Trend Publishing Co.].
+[March 2026 research (estimated): No records found. Possibly alternate title for NJ After Hours (ID 101), published by Trend Publishing Co.]
 
 ## External links
 

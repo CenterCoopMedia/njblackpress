@@ -38,7 +38,7 @@ Editor:  Jan Edgenton Johnson.
 
 ## Historical notes
 
-City News was a Black publication from Plainfield, NJ, circa 1983. Limited information is available online. Plainfield had an active Black press during this period; the Library of Congress catalogs 'Plainfield Today' (1983-1988), published by Henry Johnson, as another Black newspaper from the same city and era. The Plainfield Public Library's Local History Department holds the largest newspaper archive in Union County and may have copies. City News appears on the Wikipedia list of African American newspapers in New Jersey. [March 2026 research: Newark Public Library holds digitized issues 1990-2003. Published by Henry C. Johnson, PhD, in Plainfield.].
+City News was a Black publication from Plainfield, NJ, circa 1983. Limited information is available online. Plainfield had an active Black press during this period; the Library of Congress catalogs 'Plainfield Today' (1983-1988), published by Henry Johnson, as another Black newspaper from the same city and era. The Plainfield Public Library's Local History Department holds the largest newspaper archive in Union County and may have copies. City News appears on the Wikipedia list of African American newspapers in New Jersey. [March 2026 research: Newark Public Library holds digitized issues 1990-2003. Published by Henry C. Johnson, PhD, in Plainfield.]
 
 ## Related wiki pages
 

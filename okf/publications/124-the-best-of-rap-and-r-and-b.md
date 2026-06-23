@@ -38,7 +38,7 @@ Nathasha Brooks-Everett, Editor.
 
 ## Historical notes
 
-The Best of Rap & R&B was a music publication from Paramus, NJ, published in 1988. It was likely produced by one of the teen entertainment publishing companies based in the Paramus area (Sterling's Magazines or MacFadden, which formally merged in 1991-1992). These companies published multiple fan and music magazines including Right On!, Teen Beat, 16 Magazine, Tiger Beat, and Metal Edge. The Best of Rap & R&B appears to have been a special edition or compilation publication capitalizing on the late-1980s explosion of hip-hop and R&B. No digitized copies or detailed publication records were found online. [March 2026 research: Part of Rap Masters line by Faces Magazines, Paramus, NJ. Sotheby's 2022 auction included issues 1989-2001.].
+The Best of Rap & R&B was a music publication from Paramus, NJ, published in 1988. It was likely produced by one of the teen entertainment publishing companies based in the Paramus area (Sterling's Magazines or MacFadden, which formally merged in 1991-1992). These companies published multiple fan and music magazines including Right On!, Teen Beat, 16 Magazine, Tiger Beat, and Metal Edge. The Best of Rap & R&B appears to have been a special edition or compilation publication capitalizing on the late-1980s explosion of hip-hop and R&B. No digitized copies or detailed publication records were found online. [March 2026 research: Part of Rap Masters line by Faces Magazines, Paramus, NJ. Sotheby's 2022 auction included issues 1989-2001.]
 
 ## Related wiki pages
 

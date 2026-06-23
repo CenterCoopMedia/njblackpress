@@ -38,7 +38,7 @@ Editor: Natasha Munson.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found at all.].
+[March 2026 research (estimated): No records found at all.]
 
 ## Related wiki pages
 

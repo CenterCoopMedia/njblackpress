@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Glen Ridge"
-description: "Citie page for Glen Ridge in the NJ Black Press Archive."
+description: "citie page for Glen Ridge in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

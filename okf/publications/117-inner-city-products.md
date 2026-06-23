@@ -42,7 +42,7 @@ Editor: Donnette Bishop Johnson.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found at all.].
+[March 2026 research (estimated): No records found at all.]
 
 ## External links
 

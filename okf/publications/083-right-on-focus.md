@@ -38,7 +38,7 @@ Previous editor(s): Cynthia M. Horner.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Likely short-lived special edition of Right On! magazine (NYC-based Laufer Company).].
+[March 2026 research (estimated): No records found. Likely short-lived special edition of Right On! magazine (NYC-based Laufer Company).]
 
 ## External links
 

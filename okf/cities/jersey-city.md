@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Jersey City"
-description: "Citie page for Jersey City in the NJ Black Press Archive."
+description: "citie page for Jersey City in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

@@ -29,9 +29,7 @@ status: "inactive-or-historical"
 | Frequency | Weekly |
 | Medium | Print |
 | Languages | English |
-| Primary focus | • African Americans--New Jersey--Newspapers.
-• African Americans.--fast--(OCoLC)fst00799558
-• New Jersey.--fast--(OCoLC)fst01208379 |
+| Primary focus | • African Americans--New Jersey--Newspapers.<br>• African Americans.--fast--(OCoLC)fst00799558<br>• New Jersey.--fast--(OCoLC)fst01208379 |
 | Target audience | Unknown |
 
 ## Mission statement

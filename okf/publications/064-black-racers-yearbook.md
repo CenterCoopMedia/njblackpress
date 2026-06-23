@@ -34,7 +34,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research: One-time yearbook published by Black American Racers Association (BARA). Copy held by Smithsonian NMAH.].
+[March 2026 research: One-time yearbook published by Black American Racers Association (BARA). Copy held by Smithsonian NMAH.]
 
 ## External links
 

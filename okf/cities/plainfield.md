@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Plainfield"
-description: "Citie page for Plainfield in the NJ Black Press Archive."
+description: "citie page for Plainfield in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

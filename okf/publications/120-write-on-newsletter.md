@@ -38,7 +38,7 @@ Previous editor(s): Veona Thomis.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. May have been a literary/writers' newsletter.].
+[March 2026 research (estimated): No records found. May have been a literary/writers' newsletter.]
 
 ## External links
 

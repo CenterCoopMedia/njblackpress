@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "New Lisbon"
-description: "Citie page for New Lisbon in the NJ Black Press Archive."
+description: "citie page for New Lisbon in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

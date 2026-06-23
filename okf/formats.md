@@ -33,7 +33,7 @@ timestamp: "2026-06-23"
 - [News and media website](formats/news-and-media-website.md)
 - [Newsletter](formats/newsletter.md)
 - [Newsletter/Periodicals](formats/newsletter-periodicals.md)
-- [Newsletter/periodicals](formats/newsletter-periodicals.md)
+- [Newsletter/periodicals](formats/newsletter-periodicals-2.md)
 - [Newsletters](formats/newsletters.md)
 - [Newspaper](formats/newspaper.md)
 - [Newspaper/Periodicals](formats/newspaper-periodicals.md)

@@ -38,7 +38,7 @@ Editor: Zain A. Abdullah.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. The Africa-America Institute is NYC-based; no NJ newsletter connection confirmed.].
+[March 2026 research (estimated): No records found. The Africa-America Institute is NYC-based; no NJ newsletter connection confirmed.]
 
 ## External links
 

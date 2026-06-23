@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Trenton"
-description: "Citie page for Trenton in the NJ Black Press Archive."
+description: "citie page for Trenton in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

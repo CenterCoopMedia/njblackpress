@@ -42,7 +42,7 @@ Previous editor(s): Henry J. Auston.
 
 ## Historical notes
 
-[March 2026 research (estimated): No LOC entry, no microfilm, no records found beyond founding (1909, Princeton). Status unknown per Wikipedia NJ list.].
+[March 2026 research (estimated): No LOC entry, no microfilm, no records found beyond founding (1909, Princeton). Status unknown per Wikipedia NJ list.]
 
 ## External links
 

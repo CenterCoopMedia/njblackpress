@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Paramus"
-description: "Citie page for Paramus in the NJ Black Press Archive."
+description: "citie page for Paramus in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

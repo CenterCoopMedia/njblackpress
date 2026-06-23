@@ -1,7 +1,7 @@
 ---
 type: "format"
 title: "Uncataloged serials"
-description: "Format page for Uncataloged serials in the NJ Black Press Archive."
+description: "format page for Uncataloged serials in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"

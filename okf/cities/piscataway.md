@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Piscataway"
-description: "Citie page for Piscataway in the NJ Black Press Archive."
+description: "citie page for Piscataway in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

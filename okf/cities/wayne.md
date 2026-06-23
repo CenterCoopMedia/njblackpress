@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Wayne"
-description: "Citie page for Wayne in the NJ Black Press Archive."
+description: "citie page for Wayne in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"
@@ -10,7 +10,7 @@ timestamp: "2026-06-23"
 
 # Wayne
 
-This page links 1 publication records in this citie grouping.
+This page links 1 publication record in this citie grouping.
 
 ## Publications
 

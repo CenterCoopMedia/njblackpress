@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Atlantic City"
-description: "Citie page for Atlantic City in the NJ Black Press Archive."
+description: "citie page for Atlantic City in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

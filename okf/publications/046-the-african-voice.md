@@ -34,7 +34,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. LOC has 'Black New Ark' (1972-1974) from same era/city.].
+[March 2026 research (estimated): No records found. LOC has 'Black New Ark' (1972-1974) from same era/city.]
 
 ## External links
 

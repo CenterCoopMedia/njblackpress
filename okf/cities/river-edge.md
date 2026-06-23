@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "River Edge"
-description: "Citie page for River Edge in the NJ Black Press Archive."
+description: "citie page for River Edge in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

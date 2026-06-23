@@ -1,7 +1,7 @@
 ---
 type: "overview"
 title: "Archive overview"
-description: "Summary of the NJ Black Press Archive scope and wiki structure."
+description: "Summary of the NJ Black Press archive scope and wiki structure."
 tags:
   - "nj-black-press"
   - "archive"

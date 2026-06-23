@@ -38,7 +38,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): WorldCat entry exists but no date range retrievable. No evidence of sustained activity.].
+[March 2026 research (estimated): WorldCat entry exists but no date range retrievable. No evidence of sustained activity.]
 
 ## External links
 

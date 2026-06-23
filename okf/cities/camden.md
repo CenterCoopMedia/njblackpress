@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Camden"
-description: "Citie page for Camden in the NJ Black Press Archive."
+description: "citie page for Camden in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

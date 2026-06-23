@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Montclair"
-description: "Citie page for Montclair in the NJ Black Press Archive."
+description: "citie page for Montclair in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

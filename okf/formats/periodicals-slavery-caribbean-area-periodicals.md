@@ -1,7 +1,7 @@
 ---
 type: "format"
 title: "Periodicals, Slavery Caribbean Area Periodicals"
-description: "Format page for Periodicals, Slavery Caribbean Area Periodicals in the NJ Black Press Archive."
+description: "format page for Periodicals, Slavery Caribbean Area Periodicals in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
@@ -10,7 +10,7 @@ timestamp: "2026-06-23"
 
 # Periodicals, Slavery Caribbean Area Periodicals
 
-This page links 1 publication records in this format grouping.
+This page links 1 publication record in this format grouping.
 
 ## Publications
 

@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Newark"
-description: "Citie page for Newark in the NJ Black Press Archive."
+description: "citie page for Newark in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

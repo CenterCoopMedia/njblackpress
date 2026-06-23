@@ -1,7 +1,7 @@
 ---
 type: "format"
 title: "Publications"
-description: "Format page for Publications in the NJ Black Press Archive."
+description: "format page for Publications in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"

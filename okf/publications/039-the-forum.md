@@ -38,7 +38,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): LOC sn88071371 confirmed but end date unknown. May have merged into Essex Forum (ID 42).].
+[March 2026 research (estimated): LOC sn88071371 confirmed but end date unknown. May have merged into Essex Forum (ID 42).]
 
 ## External links
 

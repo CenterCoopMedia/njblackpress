@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "East Orange"
-description: "Citie page for East Orange in the NJ Black Press Archive."
+description: "citie page for East Orange in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

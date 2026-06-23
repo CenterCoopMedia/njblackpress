@@ -38,7 +38,7 @@ Previous editor(s): Melvin B. Johnson.
 
 ## Historical notes
 
-[March 2026 research (estimated): No LOC entry, no microfilm, no records found beyond founding (ca. 1932, Montclair). Status unknown per Wikipedia NJ list.].
+[March 2026 research (estimated): No LOC entry, no microfilm, no records found beyond founding (ca. 1932, Montclair). Status unknown per Wikipedia NJ list.]
 
 ## Related wiki pages
 

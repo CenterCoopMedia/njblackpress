@@ -34,7 +34,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-Fotorama was a photography magazine with its premiere issue (#1) published in 1993, featuring covergirl Charmaine on the cover. Published out of River Edge, NJ, it was part of the cluster of Black entertainment magazines produced in Bergen County during the early 1990s alongside Word Up!, Hype, and related titles. The magazine appears to have been a celebrity photography publication. Copies of the premiere issue are available through Amazon and vintage magazine dealers, but no digitized archive exists online. [March 2026 research (estimated): Premiere issue 1993 found on Amazon. Published from River Edge (Word Up!/Enoble Media cluster). Likely 1-2 issues.].
+Fotorama was a photography magazine with its premiere issue (#1) published in 1993, featuring covergirl Charmaine on the cover. Published out of River Edge, NJ, it was part of the cluster of Black entertainment magazines produced in Bergen County during the early 1990s alongside Word Up!, Hype, and related titles. The magazine appears to have been a celebrity photography publication. Copies of the premiere issue are available through Amazon and vintage magazine dealers, but no digitized archive exists online. [March 2026 research (estimated): Premiere issue 1993 found on Amazon. Published from River Edge (Word Up!/Enoble Media cluster). Likely 1-2 issues.]
 
 ## Related wiki pages
 

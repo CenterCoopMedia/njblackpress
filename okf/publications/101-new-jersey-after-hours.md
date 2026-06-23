@@ -38,7 +38,7 @@ Previous editor(s): Harry B. Webber.
 
 ## Historical notes
 
-[March 2026 research: Last known issue November 1980, found on Internet Archive (Tiny Prince Collection). Published by Trend Publishing Co.].
+[March 2026 research: Last known issue November 1980, found on Internet Archive (Tiny Prince Collection). Published by Trend Publishing Co.]
 
 ## External links
 

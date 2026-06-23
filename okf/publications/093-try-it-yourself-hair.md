@@ -39,7 +39,7 @@ Previous editor(s): Marcia Cole.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Likely another title from the Word Up!/Enoble Media group.].
+[March 2026 research (estimated): No records found. Likely another title from the Word Up!/Enoble Media group.]
 
 ## External links
 

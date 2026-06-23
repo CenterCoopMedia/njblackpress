@@ -140,8 +140,18 @@ The wiki includes:
 - `okf/publications/` — one markdown page per publication record
 - `okf/cities/`, `okf/decades/`, and `okf/formats/` — browse pages grouped from the archive data
 
+The generated bundle currently contains 244 markdown files: 137 publication pages, grouped browse pages, indexes, the data model, and the change log.
+
 Regenerate the wiki after updating `data/publications.json`:
 
 ```bash
 python3 scripts/generate_okf_wiki.py
 ```
+
+Validate the generated wiki:
+
+```bash
+python3 scripts/generate_okf_wiki.py --check
+```
+
+Use `--generated-at YYYY-MM-DD` when a reproducible timestamp is needed.

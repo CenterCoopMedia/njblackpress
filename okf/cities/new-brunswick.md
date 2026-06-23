@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "New Brunswick"
-description: "Citie page for New Brunswick in the NJ Black Press Archive."
+description: "citie page for New Brunswick in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

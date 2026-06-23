@@ -9,4 +9,4 @@
 
 ## Review notes
 
-Validated that all 243 markdown pages include YAML frontmatter with a `type` field, regenerated the wiki from source data, ran `git diff --check`, and attempted external review with `claude -p`; the command is not installed in this environment.
+Validated that all 244 markdown pages include YAML frontmatter with a `type` field, regenerated the wiki from source data, ran `git diff --check`, and attempted external review with `claude -p`; the command is not installed in this environment. Follow-up review fixed slug collisions, safer YAML quoting, markdown table escaping, and deterministic timestamps.

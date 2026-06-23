@@ -38,7 +38,7 @@ Previous editor(s): Barbara Johnson.
 
 ## Historical notes
 
-[March 2026 research: Continued from Black Atlantic City Magazine (ID 119). Published as Black New Jersey Magazine 1987-1990. ACFPL bibliography.].
+[March 2026 research: Continued from Black Atlantic City Magazine (ID 119). Published as Black New Jersey Magazine 1987-1990. ACFPL bibliography.]
 
 ## External links
 

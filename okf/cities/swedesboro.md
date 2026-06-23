@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Swedesboro"
-description: "Citie page for Swedesboro in the NJ Black Press Archive."
+description: "citie page for Swedesboro in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"
@@ -10,7 +10,7 @@ timestamp: "2026-06-23"
 
 # Swedesboro
 
-This page links 1 publication records in this citie grouping.
+This page links 1 publication record in this citie grouping.
 
 ## Publications
 

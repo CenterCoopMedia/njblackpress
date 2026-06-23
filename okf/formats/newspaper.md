@@ -1,7 +1,7 @@
 ---
 type: "format"
 title: "Newspaper"
-description: "Format page for Newspaper in the NJ Black Press Archive."
+description: "format page for Newspaper in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"

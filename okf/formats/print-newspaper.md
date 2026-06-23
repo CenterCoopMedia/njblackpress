@@ -1,7 +1,7 @@
 ---
 type: "format"
 title: "Print Newspaper"
-description: "Format page for Print Newspaper in the NJ Black Press Archive."
+description: "format page for Print Newspaper in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
@@ -10,7 +10,7 @@ timestamp: "2026-06-23"
 
 # Print Newspaper
 
-This page links 1 publication records in this format grouping.
+This page links 1 publication record in this format grouping.
 
 ## Publications
 

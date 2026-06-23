@@ -25,7 +25,7 @@ status: "inactive-or-historical"
 | Founded | 1983 |
 | Ceased | 1988 |
 | Decade | [1980s](../decades/1980s.md) |
-| Format | [Newsletter/periodicals](../formats/newsletter-periodicals.md) |
+| Format | [Newsletter/periodicals](../formats/newsletter-periodicals-2.md) |
 | Frequency | Quarterly |
 | Medium | Print |
 | Languages | English |
@@ -38,7 +38,7 @@ Previous editor (s): Pamela Miller.
 
 ## Historical notes
 
-Communique was a newsletter published by the New Jersey chapter of the National Coalition of 100 Black Women, based in East Orange, NJ, circa 1983. The National Coalition of 100 Black Women, Inc. was founded in 1981 to advocate on behalf of Black women and girls, promoting leadership development and gender equity in health, education, and economic empowerment. Multiple NJ chapters exist today, including Bergen/Passaic (founded 1986) and Southern NJ chapters. The East Orange chapter's newsletter would have documented early organizing activities of this nationally significant organization. No digitized copies were found; the Schomburg Center for Research in Black Culture or local East Orange archives may hold physical copies. [March 2026 research (estimated): No records found. Likely newsletter of a NJ chapter of a national Black organization.].
+Communique was a newsletter published by the New Jersey chapter of the National Coalition of 100 Black Women, based in East Orange, NJ, circa 1983. The National Coalition of 100 Black Women, Inc. was founded in 1981 to advocate on behalf of Black women and girls, promoting leadership development and gender equity in health, education, and economic empowerment. Multiple NJ chapters exist today, including Bergen/Passaic (founded 1986) and Southern NJ chapters. The East Orange chapter's newsletter would have documented early organizing activities of this nationally significant organization. No digitized copies were found; the Schomburg Center for Research in Black Culture or local East Orange archives may hold physical copies. [March 2026 research (estimated): No records found. Likely newsletter of a NJ chapter of a national Black organization.]
 
 ## Related wiki pages
 

@@ -38,7 +38,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Generic title 'Update' makes identification impossible without publisher info.].
+[March 2026 research (estimated): No records found. Generic title 'Update' makes identification impossible without publisher info.]
 
 ## Related wiki pages
 

@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Hillside"
-description: "Citie page for Hillside in the NJ Black Press Archive."
+description: "citie page for Hillside in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

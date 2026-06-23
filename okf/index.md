@@ -1,6 +1,6 @@
 ---
 type: "index"
-title: "NJ Black Press Archive wiki"
+title: "NJ Black Press archive wiki"
 description: "Open knowledge format entry point for the archive wiki."
 tags:
   - "nj-black-press"
@@ -9,9 +9,9 @@ tags:
 timestamp: "2026-06-23"
 ---
 
-# NJ Black Press Archive wiki
+# NJ Black Press archive wiki
 
-This open knowledge format wiki gives humans and agents a file-based map of the NJ Black Press Archive. Each page is markdown with YAML frontmatter and standard markdown links.
+This open knowledge format wiki gives humans and agents a file-based map of the NJ Black Press archive. Each page is markdown with YAML frontmatter and standard markdown links.
 
 ## Start here
 

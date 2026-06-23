@@ -38,7 +38,7 @@ status: "inactive-or-historical"
 
 ## Historical notes
 
-[March 2026 research: Organization (Black Women's United Front) founded by Amina Baraka 1974, dissipated by 1976. Archival materials span 1975-1976 only.].
+[March 2026 research: Organization (Black Women's United Front) founded by Amina Baraka 1974, dissipated by 1976. Archival materials span 1975-1976 only.]
 
 ## External links
 

@@ -1,7 +1,7 @@
 ---
 type: "citie"
 title: "Chatsworth"
-description: "Citie page for Chatsworth in the NJ Black Press Archive."
+description: "citie page for Chatsworth in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "citie"

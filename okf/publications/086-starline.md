@@ -38,7 +38,7 @@ Editor: Mary Anne Cassata.
 
 ## Historical notes
 
-[March 2026 research (estimated): Starline Publications, Inc. (Paramus, NJ) published celebrity/music magazines. Trademarks filed 1981-late 1990s.].
+[March 2026 research (estimated): Starline Publications, Inc. (Paramus, NJ) published celebrity/music magazines. Trademarks filed 1981-late 1990s.]
 
 ## External links
 
