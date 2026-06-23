@@ -126,3 +126,22 @@ If you have information about NJ Black publications not in the database, or corr
 ## License
 
 This dataset is made available for research and educational purposes. Please cite the Center for Cooperative Media when using this data.
+
+## Open knowledge format wiki
+
+The repository includes an open knowledge format wiki in `okf/`. Google Cloud introduced open knowledge format as a portable directory of markdown files with YAML frontmatter; this repo uses that pattern so people and agents can browse the archive without calling the website JavaScript.
+
+The wiki includes:
+
+- `okf/index.md` — entry point for the wiki bundle
+- `okf/archive-overview.md` — scope and generation notes
+- `okf/data-model.md` — field guide for generated publication pages
+- `okf/publications.md` — alphabetical publication index
+- `okf/publications/` — one markdown page per publication record
+- `okf/cities/`, `okf/decades/`, and `okf/formats/` — browse pages grouped from the archive data
+
+Regenerate the wiki after updating `data/publications.json`:
+
+```bash
+python3 scripts/generate_okf_wiki.py
+```
