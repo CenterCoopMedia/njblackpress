@@ -12,8 +12,8 @@ Data was curated by Amanda Alicea and led by Cassandra Etienne at the Center for
 
 - Home: https://centercoopmedia.github.io/njblackpress/
 - Full archive: https://centercoopmedia.github.io/njblackpress/archive.html
-- Wiki (one page per publication, cross-linked by city/decade/format): https://centercoopmedia.github.io/njblackpress/wiki/
-- Wiki statistics: https://centercoopmedia.github.io/njblackpress/wiki/statistics.html
+- Wiki (one page per publication, cross-linked by city/decade/format): https://centerforcooperativemedia.org/njblackpress/wiki/
+- Wiki statistics: https://centerforcooperativemedia.org/njblackpress/wiki/statistics.html
 - GitHub repository: https://github.com/CenterCoopMedia/njblackpress
 
 A portable, agent-readable markdown version of the wiki (open knowledge format — one markdown file per record with YAML frontmatter) lives in the repo at `okf/`.

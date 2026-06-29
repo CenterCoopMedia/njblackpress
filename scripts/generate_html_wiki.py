@@ -39,7 +39,12 @@ from generate_okf_wiki import (  # noqa: E402  (local sibling module)
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "docs" / "wiki"
-SITE_BASE = "https://centercoopmedia.github.io/njblackpress/"
+# Canonical/Open Graph base. Defaults to the production domain the static files
+# are actually served from (see CLAUDE.md → Deployment). All in-page navigation
+# and asset references are relative, so the wiki works under any path prefix;
+# only the absolute canonical/OG/sitemap URLs use this base. Override with
+# --base-url for a different host (e.g. the GitHub Pages mirror).
+SITE_BASE = "https://centerforcooperativemedia.org/njblackpress/"
 
 GROUP_LABEL = {"cities": "City", "decades": "Decade", "formats": "Format", "mediums": "Medium"}
 
@@ -58,7 +63,7 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
     """
     a = "../" * (depth + 1)  # reach docs/ root for shared assets
     w = "../" * depth        # reach docs/wiki/ root for wiki links
-    canonical = SITE_BASE + "wiki/" + canonical_rel
+    canonical = SITE_BASE + "wiki/" + ("" if canonical_rel == "index.html" else canonical_rel)
     return f"""<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -604,9 +609,13 @@ def build(generated_at: str | None = None) -> None:
 
 
 def main() -> None:
+    global SITE_BASE
     parser = argparse.ArgumentParser(description="Generate the public HTML wiki.")
     parser.add_argument("--generated-at", help="date string for reproducible output")
+    parser.add_argument("--base-url", help="canonical/OG base URL (default: production domain)")
     args = parser.parse_args()
+    if args.base_url:
+        SITE_BASE = args.base_url if args.base_url.endswith("/") else args.base_url + "/"
     build(args.generated_at)
 
 

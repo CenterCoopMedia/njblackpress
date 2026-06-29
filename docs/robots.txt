@@ -18,4 +18,4 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://centercoopmedia.github.io/njblackpress/sitemap.xml
-Sitemap: https://centercoopmedia.github.io/njblackpress/wiki/sitemap.xml
+Sitemap: https://centerforcooperativemedia.org/njblackpress/wiki/sitemap.xml
