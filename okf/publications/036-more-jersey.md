@@ -9,9 +9,10 @@ tags:
   - "statewide-new-jersey"
   - "2020s"
   - "community-media-organization"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 36
 status: "active"
+featured: false
 ---
 
 # More Jersey
@@ -22,12 +23,12 @@ status: "active"
 | Alternate name | Unknown |
 | City | [Statewide (New Jersey)](../cities/statewide-new-jersey.md) |
 | Publishers or owners | Joe Campbell, Founder |
-| Founded | 2022 |
-| Ceased | Active |
+| Active years | 2022–present |
+| Status | Active |
 | Decade | [2020s](../decades/2020s.md) |
 | Format | [Community media organization](../formats/community-media-organization.md) |
+| Medium | [Digital](../mediums/digital.md) |
 | Frequency | Monthly |
-| Medium | Digital |
 | Languages | English |
 | Primary focus | Local businesses and organizations, community events |
 | Target audience | New Jersey residents statewide, particularly Black communities |
@@ -42,9 +43,22 @@ More Jersey is a community media startup founded by Joe Campbell, committed to p
 
 ## External links
 
-- [Website](MoreJersey.com)
+- [Website](https://MoreJersey.com)
 
-## Related wiki pages
+## Related publications
 
+### Also from the 2020s
+
+- [Black In Jersey](004-black-in-jersey.md) — 2021–present
+- [Five Wards Media](012-five-wards-media.md) — 2021–present
+- [Public Square Amplified](043-public-square-amplified.md) — 2021–present
+- [Trenton Journal](017-trenton-journal.md) — 2021–present
+- [Atlantic City Focus](025-atlantic-city-focus.md) — 2022–present
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Statewide (New Jersey) publications](../cities/statewide-new-jersey.md)
+- [All 2020s publications](../decades/2020s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

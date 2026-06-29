@@ -1,20 +1,29 @@
 ---
-type: "citie"
+type: "city"
 title: "Camden"
-description: "citie page for Camden in the NJ Black Press archive."
+description: "City page for Camden in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "camden"
+timestamp: "2026-06-29"
+count: 4
 ---
 
 # Camden
 
-This page links 4 publication records in this citie grouping.
+**4** publications in this city grouping · **0** active · founding years **1915–1979**.
 
 ## Publications
 
-- [The African Voice](../publications/046-the-african-voice.md) — 1972
-- [The Black Observer](../publications/033-the-black-observer.md) — 1968
-- [The Camden News](../publications/003-the-camden-news.md) — 1915
-- [The Union Messenger](../publications/056-the-union-messenger.md) — 1979
+| Publication | Years | Status |
+|---|---|---|
+| [The Camden News](../publications/003-the-camden-news.md) | 1915–1918 | Ceased 1918 |
+| [The Black Observer](../publications/033-the-black-observer.md) | 1968–1970 | Ceased 1970 |
+| [The African Voice](../publications/046-the-african-voice.md) | 1972–1975 | Ceased 1975 |
+| [The Union Messenger](../publications/056-the-union-messenger.md) | 1979–1985 | Ceased 1985 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

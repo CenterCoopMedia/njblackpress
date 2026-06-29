@@ -9,9 +9,10 @@ tags:
   - "princeton"
   - "1900s"
   - "periodicals"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 7
 status: "inactive-or-historical"
+featured: false
 ---
 
 # The Citizen
@@ -22,12 +23,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Princeton](../cities/princeton.md) |
 | Publishers or owners | W.H. Du Paur |
-| Founded | 1909 |
-| Ceased | 1915 |
+| Active years | 1909–1915 |
+| Status | Ceased 1915 |
 | Decade | [1900s](../decades/1900s.md) |
 | Format | [Periodicals](../formats/periodicals.md) |
+| Medium | [Print](../mediums/print.md) |
 | Frequency | Weekly |
-| Medium | Print |
 | Languages | English |
 | Primary focus | Newspaper |
 | Target audience | Unknown |
@@ -44,11 +45,20 @@ Previous editor(s): Henry J. Auston.
 
 [March 2026 research (estimated): No LOC entry, no microfilm, no records found beyond founding (1909, Princeton). Status unknown per Wikipedia NJ list.]
 
-## External links
+## Archive reference
 
-- [Archive record](OCLC no. 38227497)
+OCLC no. 38227497.
 
-## Related wiki pages
+## Related publications
 
+### Also from the 1900s
+
+- [The Echo](031-the-echo.md) — 1904–1943
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Princeton publications](../cities/princeton.md)
+- [All 1900s publications](../decades/1900s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

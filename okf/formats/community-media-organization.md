@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Community media organization"
-description: "format page for Community media organization in the NJ Black Press archive."
+description: "Format page for Community media organization in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "community-media-organization"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Community media organization
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **1** active · founding years **2022**.
 
 ## Publications
 
-- [More Jersey](../publications/036-more-jersey.md) — 2022
+| Publication | Years | Status |
+|---|---|---|
+| [More Jersey](../publications/036-more-jersey.md) | 2022–present | Active |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

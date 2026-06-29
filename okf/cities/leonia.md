@@ -1,17 +1,26 @@
 ---
-type: "citie"
+type: "city"
 title: "Leonia"
-description: "citie page for Leonia in the NJ Black Press archive."
+description: "City page for Leonia in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "leonia"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Leonia
 
-This page links 1 publication record in this citie grouping.
+**1** publication in this city grouping · **1** active · founding years **2019**.
 
 ## Publications
 
-- [NJ in Color](../publications/019-nj-in-color.md) — 2019
+| Publication | Years | Status |
+|---|---|---|
+| [NJ in Color](../publications/019-nj-in-color.md) | 2019–present | Active |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

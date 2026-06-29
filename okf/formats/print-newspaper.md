@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Print Newspaper"
-description: "format page for Print Newspaper in the NJ Black Press archive."
+description: "Format page for Print Newspaper in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "print-newspaper"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Print Newspaper
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **1968**.
 
 ## Publications
 
-- [Black Newark](../publications/028-black-newark.md) — 1968
+| Publication | Years | Status |
+|---|---|---|
+| [Black Newark](../publications/028-black-newark.md) | 1968–1974 | Ceased 1974 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

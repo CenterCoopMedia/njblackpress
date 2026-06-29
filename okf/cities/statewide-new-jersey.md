@@ -1,17 +1,26 @@
 ---
-type: "citie"
+type: "city"
 title: "Statewide (New Jersey)"
-description: "citie page for Statewide (New Jersey) in the NJ Black Press archive."
+description: "City page for Statewide (New Jersey) in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "statewide-new-jersey"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Statewide (New Jersey)
 
-This page links 1 publication record in this citie grouping.
+**1** publication in this city grouping · **1** active · founding years **2022**.
 
 ## Publications
 
-- [More Jersey](../publications/036-more-jersey.md) — 2022
+| Publication | Years | Status |
+|---|---|---|
+| [More Jersey](../publications/036-more-jersey.md) | 2022–present | Active |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

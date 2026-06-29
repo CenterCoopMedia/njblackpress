@@ -1,17 +1,26 @@
 ---
-type: "citie"
+type: "city"
 title: "Glassboro"
-description: "citie page for Glassboro in the NJ Black Press archive."
+description: "City page for Glassboro in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "glassboro"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Glassboro
 
-This page links 1 publication record in this citie grouping.
+**1** publication in this city grouping · **0** active · founding years **1938**.
 
 ## Publications
 
-- [The Little Ease Echo](../publications/090-the-little-ease-echo.md) — 1938
+| Publication | Years | Status |
+|---|---|---|
+| [The Little Ease Echo](../publications/090-the-little-ease-echo.md) | 1938–1939 | Ceased 1939 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

@@ -5,7 +5,7 @@ description: "Summary of the NJ Black Press archive scope and wiki structure."
 tags:
   - "nj-black-press"
   - "archive"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 ---
 
 # Archive overview
@@ -15,11 +15,25 @@ The archive documents Black-owned and Black-focused publications connected to Ne
 ## Wiki structure
 
 - One publication record per file under `publications/`.
-- City, decade, and format pages group records for browsing.
-- `data-model.md` explains the fields used in each publication page.
+- City, decade, format, and medium pages group records for browsing.
+- `statistics.md` summarizes counts and trends; `featured.md` lists curated records.
+- `data-model.md` explains the fields on each publication page.
 - `log.md` records generation notes.
 
-## Format counts
+## Format categories
+
+Records carry a free-text `format`; these collapse into broad categories:
+
+- Periodicals & other print: 49
+- Newspapers: 45
+- Magazines: 15
+- Digital & multimedia: 11
+- Newsletters: 9
+- Other: 4
+- Comics: 3
+- Journals: 1
+
+## Every format string
 
 - Academic/Scholarly Journal: 1
 - Bibliographies/Periodicals: 1

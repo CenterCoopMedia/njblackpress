@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Digital"
-description: "format page for Digital in the NJ Black Press archive."
+description: "Format page for Digital in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "digital"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Digital
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **1** active · founding years **2018**.
 
 ## Publications
 
-- [New Jersey Urban News](../publications/020-new-jersey-urban-news.md) — 2018
+| Publication | Years | Status |
+|---|---|---|
+| [New Jersey Urban News](../publications/020-new-jersey-urban-news.md) | 2018–present | Active |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

@@ -9,9 +9,10 @@ tags:
   - "cresskill"
   - "1970s"
   - "magazine"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 95
 status: "inactive-or-historical"
+featured: false
 ---
 
 # Right On!
@@ -22,12 +23,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Cresskill](../cities/cresskill.md) |
 | Publishers or owners | D.S. Magazines, Inc. (originally Laufer Publishing; founded by Judy Wieder) |
-| Founded | 1971 |
-| Ceased | 2014 |
+| Active years | 1971–2014 |
+| Status | Ceased 2014 |
 | Decade | [1970s](../decades/1970s.md) |
 | Format | [Magazine](../formats/magazine.md) |
+| Medium | [Print](../mediums/print.md) |
 | Frequency | Monthly |
-| Medium | Print |
 | Languages | English |
 | Primary focus | Unknown |
 | Target audience | Unknown |
@@ -44,7 +45,29 @@ Right On! was the first original fan magazine catering to an African American te
 
 - [Archive record](https://archive.org/details/right-on-v-06n-04-1977-02.-laufer-d-m)
 
-## Related wiki pages
+## Related publications
 
+### Also in Cresskill
+
+- [Right On! Focus](083-right-on-focus.md) — 1982–1985
+- [Right On! Presents Class](096-right-on-presents-class.md) — 1983–1985
+
+### Also from the 1970s
+
+- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–2015
+- [CFUN News](051-cfun-news.md) — 1970–1971
+- [The Black Voice](107-the-black-voice.md) — 1970–1975
+- [The Forum](039-the-forum.md) — 1970–1980
+- [The Liberator](109-the-liberator.md) — 1970–1971
+- [MEDIC News](068-medic-news.md) — 1971–1975
+- [Ngoma](111-ngoma.md) — 1971–1976
+- [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
+- …and 20 more
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Cresskill publications](../cities/cresskill.md)
+- [All 1970s publications](../decades/1970s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

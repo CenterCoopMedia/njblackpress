@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Academic/Scholarly Journal"
-description: "format page for Academic/Scholarly Journal in the NJ Black Press archive."
+description: "Format page for Academic/Scholarly Journal in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "academic-scholarly-journal"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Academic/Scholarly Journal
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **1995**.
 
 ## Publications
 
-- [Journal of African American Men](../publications/054-journal-of-african-american-men.md) — 1995
+| Publication | Years | Status |
+|---|---|---|
+| [Journal of African American Men](../publications/054-journal-of-african-american-men.md) | 1995–2002 | Ceased 2002 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

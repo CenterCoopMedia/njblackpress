@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Digital archive collection"
-description: "format page for Digital archive collection in the NJ Black Press archive."
+description: "Format page for Digital archive collection in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "digital-archive-collection"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Digital archive collection
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **Unknown**.
 
 ## Publications
 
-- [Newark Black Newspapers Collection | Digital Collections](../publications/128-newark-black-newspapers-collection-digital-collections.md) — Unknown
+| Publication | Years | Status |
+|---|---|---|
+| [Newark Black Newspapers Collection | Digital Collections](../publications/128-newark-black-newspapers-collection-digital-collections.md) | ?–1979 | Ceased 1979 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

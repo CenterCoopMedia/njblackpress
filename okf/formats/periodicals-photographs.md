@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Periodicals, photographs"
-description: "format page for Periodicals, photographs in the NJ Black Press archive."
+description: "Format page for Periodicals, photographs in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "periodicals-photographs"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Periodicals, photographs
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **1991**.
 
 ## Publications
 
-- [Artz](../publications/047-artz.md) — 1991
+| Publication | Years | Status |
+|---|---|---|
+| [Artz](../publications/047-artz.md) | 1991–1993 | Ceased 1993 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

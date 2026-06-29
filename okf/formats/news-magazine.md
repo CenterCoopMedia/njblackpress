@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "News Magazine"
-description: "format page for News Magazine in the NJ Black Press archive."
+description: "Format page for News Magazine in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "news-magazine"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # News Magazine
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **1989**.
 
 ## Publications
 
-- [Perspectus News Magazine](../publications/110-perspectus-news-magazine.md) — 1989
+| Publication | Years | Status |
+|---|---|---|
+| [Perspectus News Magazine](../publications/110-perspectus-news-magazine.md) | 1989–1992 | Ceased 1992 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

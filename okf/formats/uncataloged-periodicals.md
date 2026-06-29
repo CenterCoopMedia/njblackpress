@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Uncataloged periodicals"
-description: "format page for Uncataloged periodicals in the NJ Black Press archive."
+description: "Format page for Uncataloged periodicals in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "uncataloged-periodicals"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Uncataloged periodicals
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **1978**.
 
 ## Publications
 
-- [Black Atlantic City Magazine](../publications/119-black-atlantic-city-magazine.md) — 1978
+| Publication | Years | Status |
+|---|---|---|
+| [Black Atlantic City Magazine](../publications/119-black-atlantic-city-magazine.md) | 1978–1986 | Ceased 1986 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

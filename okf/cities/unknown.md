@@ -1,18 +1,27 @@
 ---
-type: "citie"
+type: "city"
 title: "Unknown"
-description: "citie page for Unknown in the NJ Black Press archive."
+description: "City page for Unknown in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "unknown"
+timestamp: "2026-06-29"
+count: 2
 ---
 
 # Unknown
 
-This page links 2 publication records in this citie grouping.
+**2** publications in this city grouping · **0** active · founding years **1978**.
 
 ## Publications
 
-- [Black Truth Bulletin](../publications/127-black-truth-bulletin.md) — 1978
-- [Newark Black Newspapers Collection | Digital Collections](../publications/128-newark-black-newspapers-collection-digital-collections.md) — Unknown
+| Publication | Years | Status |
+|---|---|---|
+| [Black Truth Bulletin](../publications/127-black-truth-bulletin.md) | 1978–1982 | Ceased 1982 |
+| [Newark Black Newspapers Collection | Digital Collections](../publications/128-newark-black-newspapers-collection-digital-collections.md) | ?–1979 | Ceased 1979 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

@@ -1,17 +1,26 @@
 ---
-type: "citie"
+type: "city"
 title: "Pleasantville"
-description: "citie page for Pleasantville in the NJ Black Press archive."
+description: "City page for Pleasantville in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "pleasantville"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Pleasantville
 
-This page links 1 publication record in this citie grouping.
+**1** publication in this city grouping · **0** active · founding years **1952**.
 
 ## Publications
 
-- [The Missionary Magazine](../publications/071-the-missionary-magazine.md) — 1952
+| Publication | Years | Status |
+|---|---|---|
+| [The Missionary Magazine](../publications/071-the-missionary-magazine.md) | 1952–1960 | Ceased 1960 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

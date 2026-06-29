@@ -9,9 +9,10 @@ tags:
   - "westfield"
   - "1980s"
   - "periodicals"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 132
 status: "inactive-or-historical"
+featured: false
 ---
 
 # Corporate Headquarters
@@ -22,12 +23,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Westfield](../cities/westfield.md) |
 | Publishers or owners | Published by Harold E. Fisher |
-| Founded | 1985 |
-| Ceased | 1991 |
+| Active years | 1985–1991 |
+| Status | Ceased 1991 |
 | Decade | [1980s](../decades/1980s.md) |
 | Format | [Periodicals](../formats/periodicals.md) |
+| Medium | [Print](../mediums/print.md) |
 | Frequency | Quarterly |
-| Medium | Print |
 | Languages | English |
 | Primary focus | Business, Education (Higher), Careers, Employment, Corporations — Employment. |
 | Target audience | Businesspeople |
@@ -40,11 +41,28 @@ status: "inactive-or-historical"
 
 Previous editor (s): Terri Fisher.
 
-## External links
+## Archive reference
 
-- [Archive record](OCLC no. 16218293)
+OCLC no. 16218293.
 
-## Related wiki pages
+## Related publications
 
+### Also from the 1980s
+
+- [Bootstrap](074-bootstrap.md) — 1981–1983
+- [Right On! Focus](083-right-on-focus.md) — 1982–1985
+- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — 1982–1991
+- [The Connection Newspaper](131-the-connection-newspaper.md) — 1982–1991
+- [City News](013-city-news.md) — 1983–2003
+- [Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women](130-communique-quarterly-newsletter-of-the-new-jersey-coalition-of-100-black-women.md) — 1983–1988
+- [Right On! Presents Class](096-right-on-presents-class.md) — 1983–1985
+- [Update](104-update.md) — 1983–1988
+- …and 12 more
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Westfield publications](../cities/westfield.md)
+- [All 1980s publications](../decades/1980s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

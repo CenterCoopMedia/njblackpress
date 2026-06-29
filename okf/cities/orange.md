@@ -1,17 +1,26 @@
 ---
-type: "citie"
+type: "city"
 title: "Orange"
-description: "citie page for Orange in the NJ Black Press archive."
+description: "City page for Orange in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "orange"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Orange
 
-This page links 1 publication record in this citie grouping.
+**1** publication in this city grouping · **0** active · founding years **1990**.
 
 ## Publications
 
-- [Harambee](../publications/026-harambee.md) — 1990
+| Publication | Years | Status |
+|---|---|---|
+| [Harambee](../publications/026-harambee.md) | 1990–1995 | Ceased 1995 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

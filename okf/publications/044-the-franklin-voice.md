@@ -9,9 +9,10 @@ tags:
   - "somerset"
   - "1990s"
   - "newspaper-periodicals"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 44
 status: "inactive-or-historical"
+featured: false
 ---
 
 # The Franklin Voice
@@ -22,12 +23,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Somerset](../cities/somerset.md) |
 | Publishers or owners | Paula McCoy-Pinderhughes |
-| Founded | 1996 |
-| Ceased | 2000 |
+| Active years | 1996–2000 |
+| Status | Ceased 2000 |
 | Decade | [1990s](../decades/1990s.md) |
 | Format | [Newspaper/Periodicals](../formats/newspaper-periodicals.md) |
+| Medium | [Print](../mediums/print.md) |
 | Frequency | Monthly |
-| Medium | Print |
 | Languages | English |
 | Primary focus | Newspaper |
 | Target audience | Unknown |
@@ -42,10 +43,30 @@ Editor: Paula McCoy-Pinderhughes.
 
 ## External links
 
-- [Archive record](OCLC no. 36814737)
 - [Website](https://search.worldcat.org/title/36814737)
 
-## Related wiki pages
+## Archive reference
 
+OCLC no. 36814737.
+
+## Related publications
+
+### Also from the 1990s
+
+- [Harambee](026-harambee.md) — 1990–1995
+- [Hype](001-hype.md) — 1990–1993
+- [Rap Masters: Reader’s Choice](135-rap-masters-reader-s-choice.md) — 1990–2001
+- [Word Up!](114-word-up.md) — 1990–2012
+- [Artz](047-artz.md) — 1991–1993
+- [Inner City Products](117-inner-city-products.md) — 1991–1995
+- [MC Squared](053-mc-squared.md) — 1991–1995
+- [The Network: The Newsletter of the African-American Institute of Islamic Research](075-the-network-the-newsletter-of-the-african-american-institute-of-islamic-research.md) — 1991–1995
+- …and 16 more
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Somerset publications](../cities/somerset.md)
+- [All 1990s publications](../decades/1990s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

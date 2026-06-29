@@ -1,17 +1,26 @@
 ---
-type: "citie"
+type: "city"
 title: "Dover"
-description: "citie page for Dover in the NJ Black Press archive."
+description: "City page for Dover in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "dover"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Dover
 
-This page links 1 publication record in this citie grouping.
+**1** publication in this city grouping · **0** active · founding years **1952**.
 
 ## Publications
 
-- [Bronze Thrills](../publications/067-bronze-thrills.md) — 1952
+| Publication | Years | Status |
+|---|---|---|
+| [Bronze Thrills](../publications/067-bronze-thrills.md) | 1952–1981 | Ceased 1981 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

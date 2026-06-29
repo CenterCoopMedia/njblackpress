@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Periodicals, Newsletters"
-description: "format page for Periodicals, Newsletters in the NJ Black Press archive."
+description: "Format page for Periodicals, Newsletters in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "periodicals-newsletters"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Periodicals, Newsletters
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **1976**.
 
 ## Publications
 
-- [Black Women’s United Front Newsletter](../publications/126-black-women-s-united-front-newsletter.md) — 1976
+| Publication | Years | Status |
+|---|---|---|
+| [Black Women’s United Front Newsletter](../publications/126-black-women-s-united-front-newsletter.md) | 1976–1976 | Ceased 1976 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

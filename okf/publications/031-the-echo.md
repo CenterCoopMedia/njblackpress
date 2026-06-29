@@ -9,12 +9,15 @@ tags:
   - "long-branch-red-bank"
   - "1900s"
   - "newspaper"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 31
 status: "inactive-or-historical"
+featured: true
 ---
 
 # The Echo
+
+> ⭐ Featured historic publication. See [Featured publications](../featured.md).
 
 | Field | Value |
 |---|---|
@@ -22,12 +25,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Long Branch/Red Bank](../cities/long-branch-red-bank.md) |
 | Publishers or owners | Rock & Howard |
-| Founded | 1904 |
-| Ceased | 1943 |
+| Active years | 1904–1943 |
+| Status | Ceased 1943 |
 | Decade | [1900s](../decades/1900s.md) |
 | Format | [Newspaper](../formats/newspaper.md) |
+| Medium | [Print](../mediums/print.md) |
 | Frequency | Weekly |
-| Medium | Print |
 | Languages | English |
 | Primary focus | • African Americans--New Jersey--Newspapers.<br>• African Americans.--fast--(OCoLC)fst00799558<br>• New Jersey.--fast--(OCoLC)fst01208379 |
 | Target audience | Unknown |
@@ -47,10 +50,22 @@ Founded in 1904 by William Elijah Rock in Long Branch, NJ. Rock was born at Pine
 
 ## External links
 
-- [Archive record](LCNC:  sn88071050/ OCLC: 17494843)
 - [Website](https://www.loc.gov/item/sn88071050/)
 
-## Related wiki pages
+## Archive reference
 
+LCNC:  sn88071050/ OCLC: 17494843.
+
+## Related publications
+
+### Also from the 1900s
+
+- [The Citizen](007-the-citizen.md) — 1909–1915
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Long Branch/Red Bank publications](../cities/long-branch-red-bank.md)
+- [All 1900s publications](../decades/1900s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

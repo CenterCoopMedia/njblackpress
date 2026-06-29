@@ -9,12 +9,15 @@ tags:
   - "newark"
   - "1940s"
   - "newspaper"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 35
 status: "inactive-or-historical"
+featured: true
 ---
 
 # New Jersey Afro-American
+
+> ⭐ Featured historic publication. See [Featured publications](../featured.md).
 
 | Field | Value |
 |---|---|
@@ -22,12 +25,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Newark](../cities/newark.md) |
 | Publishers or owners | John Oliver Jr |
-| Founded | 1941 |
-| Ceased | 1991 |
+| Active years | 1941–1991 |
+| Status | Ceased 1991 |
 | Decade | [1940s](../decades/1940s.md) |
 | Format | [Newspaper](../formats/newspaper.md) |
+| Medium | [Print](../mediums/print.md) |
 | Frequency | Weekly |
-| Medium | Print |
 | Languages | English |
 | Primary focus | Newspaper |
 | Target audience | Unknown |
@@ -47,11 +50,36 @@ The New Jersey Afro-American was the Newark regional edition of the Baltimore-ba
 
 ## External links
 
-- [Archive record](LCCN: sn 84025926
-OCLC no. 2634939, 2264866.)
 - [Website](https://www.loc.gov/item/sn84025926/)
 
-## Related wiki pages
+## Archive reference
 
+LCCN: sn 84025926
+OCLC no. 2634939, 2264866.
+
+## Related publications
+
+### Also in Newark
+
+- [New Jersey Trumpet](038-new-jersey-trumpet.md) — 1887–1897
+- [The Newark Herald](009-the-newark-herald.md) — 1928–1939
+- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
+- [New Jersey Herald News](016-new-jersey-herald-news.md) — 1938–1966
+- [The Newark Herald](024-the-newark-herald.md) — 1938–1999
+- [New Jersey After Hours](101-new-jersey-after-hours.md) — 1949–1980
+- [Hours After](072-hours-after.md) — 1951–1955
+- [Jersey Camera](066-jersey-camera.md) — 1951–1955
+- …and 30 more
+
+### Also from the 1940s
+
+- [The Hiram Star-News](079-the-hiram-star-news.md) — 1947–1955
+- [New Jersey After Hours](101-new-jersey-after-hours.md) — 1949–1980
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Newark publications](../cities/newark.md)
+- [All 1940s publications](../decades/1940s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

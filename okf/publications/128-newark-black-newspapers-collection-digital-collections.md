@@ -9,9 +9,10 @@ tags:
   - "unknown"
   - "unknown"
   - "digital-archive-collection"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 128
 status: "inactive-or-historical"
+featured: false
 ---
 
 # Newark Black Newspapers Collection | Digital Collections
@@ -22,12 +23,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Unknown](../cities/unknown.md) |
 | Publishers or owners | Unknown |
-| Founded | Unknown |
-| Ceased | 1979 |
+| Active years | ?–1979 |
+| Status | Ceased 1979 |
 | Decade | [Unknown](../decades/unknown.md) |
 | Format | [Digital archive collection](../formats/digital-archive-collection.md) |
+| Medium | [Digital](../mediums/digital.md) |
 | Frequency | Unknown |
-| Medium | Digital |
 | Languages | English |
 | Primary focus | Unknown |
 | Target audience | Unknown |
@@ -41,7 +42,21 @@ This is NOT a newspaper. It is a digital library collection hosted by Rutgers Un
 - [Archive record](https://collections.libraries.rutgers.edu/newark-black-newspapers)
 - [Website](https://collections.libraries.rutgers.edu/newark-black-newspapers)
 
-## Related wiki pages
+## Related publications
 
+### Also in Unknown
+
+- [Black Truth Bulletin](127-black-truth-bulletin.md) — 1978–1982
+
+### Also from the Unknown
+
+- [New Jersey Deadline](050-new-jersey-deadline.md) — ?–present
+- [New Jersey Record](014-new-jersey-record.md) — ?–present
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Unknown publications](../cities/unknown.md)
+- [All Unknown publications](../decades/unknown.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Literary Magazine/Periodicals"
-description: "format page for Literary Magazine/Periodicals in the NJ Black Press archive."
+description: "Format page for Literary Magazine/Periodicals in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "literary-magazine-periodicals"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Literary Magazine/Periodicals
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **1975**.
 
 ## Publications
 
-- [Fire II](../publications/080-fire-ii.md) — 1975
+| Publication | Years | Status |
+|---|---|---|
+| [Fire II](../publications/080-fire-ii.md) | 1975–1978 | Ceased 1978 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

@@ -9,9 +9,10 @@ tags:
   - "saddle-river"
   - "1880s"
   - "newspaper"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 34
 status: "inactive-or-historical"
+featured: false
 ---
 
 # The Landscape
@@ -22,12 +23,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Saddle River](../cities/saddle-river.md) |
 | Publishers or owners | A. P. Smith |
-| Founded | 1885 |
-| Ceased | 1901 |
+| Active years | 1885–1901 |
+| Status | Ceased 1901 |
 | Decade | [1880s](../decades/1880s.md) |
 | Format | [Newspaper](../formats/newspaper.md) |
+| Medium | [Print](../mediums/print.md) |
 | Frequency | Monthly |
-| Medium | Print |
 | Languages | English |
 | Primary focus | Local news |
 | Target audience | Unknown |
@@ -44,7 +45,17 @@ A four-page monthly newspaper written, printed, and published by A.P. Smith from
 
 - [Archive record](https://jerseyhistory.org/newspapers-o-z/)
 
-## Related wiki pages
+## Related publications
 
+### Also from the 1880s
+
+- [The Sentinel](010-the-sentinel.md) — 1880–1882
+- [New Jersey Trumpet](038-new-jersey-trumpet.md) — 1887–1897
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Saddle River publications](../cities/saddle-river.md)
+- [All 1880s publications](../decades/1880s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

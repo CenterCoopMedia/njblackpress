@@ -1,18 +1,27 @@
 ---
-type: "citie"
+type: "city"
 title: "Chatsworth"
-description: "citie page for Chatsworth in the NJ Black Press archive."
+description: "City page for Chatsworth in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "chatsworth"
+timestamp: "2026-06-29"
+count: 2
 ---
 
 # Chatsworth
 
-This page links 2 publication records in this citie grouping.
+**2** publications in this city grouping · **0** active · founding years **1935–1936**.
 
 ## Publications
 
-- [Ash Can](../publications/048-ash-can.md) — 1935
-- [Penn Crusader](../publications/136-penn-crusader.md) — 1936
+| Publication | Years | Status |
+|---|---|---|
+| [Ash Can](../publications/048-ash-can.md) | 1935–1935 | Ceased 1935 |
+| [Penn Crusader](../publications/136-penn-crusader.md) | 1936–1940 | Ceased 1940 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

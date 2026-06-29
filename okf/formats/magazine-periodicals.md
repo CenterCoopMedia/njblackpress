@@ -1,19 +1,28 @@
 ---
 type: "format"
 title: "Magazine/Periodicals"
-description: "format page for Magazine/Periodicals in the NJ Black Press archive."
+description: "Format page for Magazine/Periodicals in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "magazine-periodicals"
+timestamp: "2026-06-29"
+count: 3
 ---
 
 # Magazine/Periodicals
 
-This page links 3 publication records in this format grouping.
+**3** publications in this format grouping · **0** active · founding years **1917–1972**.
 
 ## Publications
 
-- [En Avant: Bulletin pour le development de la mobilisation patriotique](../publications/134-en-avant-bulletin-pour-le-development-de-la-mobilisation-patriotique.md) — 1972
-- [The Ironsides Echo](../publications/057-the-ironsides-echo.md) — 1917
-- [The Little Ease Echo](../publications/090-the-little-ease-echo.md) — 1938
+| Publication | Years | Status |
+|---|---|---|
+| [The Ironsides Echo](../publications/057-the-ironsides-echo.md) | 1917–1955 | Ceased 1955 |
+| [The Little Ease Echo](../publications/090-the-little-ease-echo.md) | 1938–1939 | Ceased 1939 |
+| [En Avant: Bulletin pour le development de la mobilisation patriotique](../publications/134-en-avant-bulletin-pour-le-development-de-la-mobilisation-patriotique.md) | 1972–1975 | Ceased 1975 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

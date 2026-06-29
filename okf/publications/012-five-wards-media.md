@@ -9,9 +9,10 @@ tags:
   - "newark"
   - "2020s"
   - "multimedia-news-platform"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 12
 status: "active"
+featured: false
 ---
 
 # Five Wards Media
@@ -22,12 +23,12 @@ status: "active"
 | Alternate name | Unknown |
 | City | [Newark](../cities/newark.md) |
 | Publishers or owners | Brit Harley, Director and Co-Founder |
-| Founded | 2021 |
-| Ceased | Active |
+| Active years | 2021–present |
+| Status | Active |
 | Decade | [2020s](../decades/2020s.md) |
 | Format | [Multimedia news platform](../formats/multimedia-news-platform.md) |
+| Medium | [Digital](../mediums/digital.md) |
 | Frequency | Weekly |
-| Medium | Digital |
 | Languages | English |
 | Primary focus | News, arts, information needs |
 | Target audience | Residents of Newark, New Jersey, especially youth and those impacted by systemic injustices |
@@ -48,7 +49,32 @@ Five Wards Media grew out of the Newark News & Story Collaborative, co-founded b
 
 - [Website](https://www.fivewardsmedia.com/)
 
-## Related wiki pages
+## Related publications
 
+### Also in Newark
+
+- [New Jersey Trumpet](038-new-jersey-trumpet.md) — 1887–1897
+- [The Newark Herald](009-the-newark-herald.md) — 1928–1939
+- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
+- [New Jersey Herald News](016-new-jersey-herald-news.md) — 1938–1966
+- [The Newark Herald](024-the-newark-herald.md) — 1938–1999
+- [New Jersey Afro-American](035-new-jersey-afro-american.md) — 1941–1991
+- [New Jersey After Hours](101-new-jersey-after-hours.md) — 1949–1980
+- [Hours After](072-hours-after.md) — 1951–1955
+- …and 30 more
+
+### Also from the 2020s
+
+- [Black In Jersey](004-black-in-jersey.md) — 2021–present
+- [Public Square Amplified](043-public-square-amplified.md) — 2021–present
+- [Trenton Journal](017-trenton-journal.md) — 2021–present
+- [Atlantic City Focus](025-atlantic-city-focus.md) — 2022–present
+- [More Jersey](036-more-jersey.md) — 2022–present
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Newark publications](../cities/newark.md)
+- [All 2020s publications](../decades/2020s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

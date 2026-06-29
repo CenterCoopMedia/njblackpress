@@ -9,9 +9,10 @@ tags:
   - "teaneck"
   - "1980s"
   - "newspaper"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 5
 status: "inactive-or-historical"
+featured: false
 ---
 
 # The Connection / North Jersey Connection
@@ -22,12 +23,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Teaneck](../cities/teaneck.md) |
 | Publishers or owners | Ralph F. Johnson |
-| Founded | 1982 |
-| Ceased | 1991 |
+| Active years | 1982–1991 |
+| Status | Ceased 1991 |
 | Decade | [1980s](../decades/1980s.md) |
 | Format | [Newspaper](../formats/newspaper.md) |
+| Medium | [Print](../mediums/print.md) |
 | Frequency | Biweekly |
-| Medium | Print |
 | Languages | English |
 | Primary focus | Unknown |
 | Target audience | Unknown |
@@ -46,10 +47,34 @@ The North Jersey Connection was a biweekly African American newspaper published 
 
 ## External links
 
-- [Archive record](LCCN no: sn88071369/OCLC no: 18514803)
 - [Website](https://www.loc.gov/item/sn88071369/)
 
-## Related wiki pages
+## Archive reference
 
+LCCN no: sn88071369/OCLC no: 18514803.
+
+## Related publications
+
+### Also in Teaneck
+
+- [The Connection Newspaper](131-the-connection-newspaper.md) — 1982–1991
+
+### Also from the 1980s
+
+- [Bootstrap](074-bootstrap.md) — 1981–1983
+- [Right On! Focus](083-right-on-focus.md) — 1982–1985
+- [The Connection Newspaper](131-the-connection-newspaper.md) — 1982–1991
+- [City News](013-city-news.md) — 1983–2003
+- [Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women](130-communique-quarterly-newsletter-of-the-new-jersey-coalition-of-100-black-women.md) — 1983–1988
+- [Right On! Presents Class](096-right-on-presents-class.md) — 1983–1985
+- [Update](104-update.md) — 1983–1988
+- [Corporate Headquarters](132-corporate-headquarters.md) — 1985–1991
+- …and 12 more
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Teaneck publications](../cities/teaneck.md)
+- [All 1980s publications](../decades/1980s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

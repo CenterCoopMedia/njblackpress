@@ -1,17 +1,26 @@
 ---
-type: "citie"
+type: "city"
 title: "Somerset"
-description: "citie page for Somerset in the NJ Black Press archive."
+description: "City page for Somerset in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "somerset"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Somerset
 
-This page links 1 publication record in this citie grouping.
+**1** publication in this city grouping · **0** active · founding years **1996**.
 
 ## Publications
 
-- [The Franklin Voice](../publications/044-the-franklin-voice.md) — 1996
+| Publication | Years | Status |
+|---|---|---|
+| [The Franklin Voice](../publications/044-the-franklin-voice.md) | 1996–2000 | Ceased 2000 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)
