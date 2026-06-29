@@ -1,17 +1,26 @@
 ---
-type: "citie"
+type: "city"
 title: "Saddle Brook"
-description: "citie page for Saddle Brook in the NJ Black Press archive."
+description: "City page for Saddle Brook in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "saddle-brook"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Saddle Brook
 
-This page links 1 publication record in this citie grouping.
+**1** publication in this city grouping · **0** active · founding years **1985**.
 
 ## Publications
 
-- [Write On Newsletter](../publications/120-write-on-newsletter.md) — 1985
+| Publication | Years | Status |
+|---|---|---|
+| [Write On Newsletter](../publications/120-write-on-newsletter.md) | 1985–1990 | Ceased 1990 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

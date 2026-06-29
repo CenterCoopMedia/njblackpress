@@ -9,9 +9,10 @@ tags:
   - "plainfield"
   - "1960s"
   - "newspaper"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 41
 status: "inactive-or-historical"
+featured: false
 ---
 
 # The Voice
@@ -22,12 +23,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Plainfield](../cities/plainfield.md) |
 | Publishers or owners | The Voice Associates, Inc. |
-| Founded | 1968 |
-| Ceased | 1974 |
+| Active years | 1968–1974 |
+| Status | Ceased 1974 |
 | Decade | [1960s](../decades/1960s.md) |
 | Format | [Newspaper](../formats/newspaper.md) |
+| Medium | [Print](../mediums/print.md) |
 | Frequency | Weekly |
-| Medium | Print |
 | Languages | English |
 | Primary focus | Newspaper |
 | Target audience | Unknown |
@@ -40,7 +41,31 @@ The Voice was an African American weekly newspaper published in Plainfield, New 
 
 - [Archive record](https://www.loc.gov/item/sn88063027/)
 
-## Related wiki pages
+## Related publications
 
+### Also in Plainfield
+
+- [City News](013-city-news.md) — 1983–2003
+- [Artz](047-artz.md) — 1991–1993
+- [Yes: Youth Excited About Success](058-yes-youth-excited-about-success.md) — 1994–1998
+- [Spirit: The Guide to the Soul](065-spirit-the-guide-to-the-soul.md) — 1996–2000
+
+### Also from the 1960s
+
+- [Wait](113-wait.md) — 1961–1965
+- [Newark Community Union Project News](076-newark-community-union-project-news.md) — 1963–1965
+- [Afro-American Festival of the Arts Magazine](062-afro-american-festival-of-the-arts-magazine.md) — 1966–1966
+- [Freedom Reports](133-freedom-reports.md) — 1966–1970
+- [Deliverance Voice](070-deliverance-voice.md) — 1967–2014
+- [Black Newark](028-black-newark.md) — 1968–1974
+- [The Black Observer](033-the-black-observer.md) — 1968–1970
+- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
+- …and 1 more
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Plainfield publications](../cities/plainfield.md)
+- [All 1960s publications](../decades/1960s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

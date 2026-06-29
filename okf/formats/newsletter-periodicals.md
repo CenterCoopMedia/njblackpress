@@ -1,18 +1,27 @@
 ---
 type: "format"
 title: "Newsletter/Periodicals"
-description: "format page for Newsletter/Periodicals in the NJ Black Press archive."
+description: "Format page for Newsletter/Periodicals in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "newsletter-periodicals"
+timestamp: "2026-06-29"
+count: 2
 ---
 
 # Newsletter/Periodicals
 
-This page links 2 publication records in this format grouping.
+**2** publications in this format grouping · **0** active · founding years **1963–1989**.
 
 ## Publications
 
-- [NJ-AAHGS Newsletter](../publications/106-nj-aahgs-newsletter.md) — 1989
-- [Newark Community Union Project News](../publications/076-newark-community-union-project-news.md) — 1963
+| Publication | Years | Status |
+|---|---|---|
+| [Newark Community Union Project News](../publications/076-newark-community-union-project-news.md) | 1963–1965 | Ceased 1965 |
+| [NJ-AAHGS Newsletter](../publications/106-nj-aahgs-newsletter.md) | 1989–2000 | Ceased 2000 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

@@ -1,18 +1,27 @@
 ---
 type: "format"
 title: "Unknown"
-description: "format page for Unknown in the NJ Black Press archive."
+description: "Format page for Unknown in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "unknown"
+timestamp: "2026-06-29"
+count: 2
 ---
 
 # Unknown
 
-This page links 2 publication records in this format grouping.
+**2** publications in this format grouping · **1** active · founding years **1972**.
 
 ## Publications
 
-- [En Avant](../publications/059-en-avant.md) — 1972
-- [New Jersey Record](../publications/014-new-jersey-record.md) — Unknown
+| Publication | Years | Status |
+|---|---|---|
+| [En Avant](../publications/059-en-avant.md) | 1972–1975 | Ceased 1975 |
+| [New Jersey Record](../publications/014-new-jersey-record.md) | ?–present | Active |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

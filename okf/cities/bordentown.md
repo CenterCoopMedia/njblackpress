@@ -1,17 +1,26 @@
 ---
-type: "citie"
+type: "city"
 title: "Bordentown"
-description: "citie page for Bordentown in the NJ Black Press archive."
+description: "City page for Bordentown in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "bordentown"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Bordentown
 
-This page links 1 publication record in this citie grouping.
+**1** publication in this city grouping · **0** active · founding years **1917**.
 
 ## Publications
 
-- [The Ironsides Echo](../publications/057-the-ironsides-echo.md) — 1917
+| Publication | Years | Status |
+|---|---|---|
+| [The Ironsides Echo](../publications/057-the-ironsides-echo.md) | 1917–1955 | Ceased 1955 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

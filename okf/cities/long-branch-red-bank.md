@@ -1,17 +1,26 @@
 ---
-type: "citie"
+type: "city"
 title: "Long Branch/Red Bank"
-description: "citie page for Long Branch/Red Bank in the NJ Black Press archive."
+description: "City page for Long Branch/Red Bank in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "long-branch-red-bank"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Long Branch/Red Bank
 
-This page links 1 publication record in this citie grouping.
+**1** publication in this city grouping · **0** active · founding years **1904**.
 
 ## Publications
 
-- [The Echo](../publications/031-the-echo.md) — 1904
+| Publication | Years | Status |
+|---|---|---|
+| [The Echo](../publications/031-the-echo.md) | 1904–1943 | Ceased 1943 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

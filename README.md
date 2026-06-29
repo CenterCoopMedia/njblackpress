@@ -127,31 +127,45 @@ If you have information about NJ Black publications not in the database, or corr
 
 This dataset is made available for research and educational purposes. Please cite the Center for Cooperative Media when using this data.
 
-## Open knowledge format wiki
+## The wiki
 
-The repository includes an open knowledge format wiki in `okf/`. Google Cloud introduced open knowledge format as a portable directory of markdown files with YAML frontmatter; this repo uses that pattern so people and agents can browse the archive without calling the website JavaScript.
+The archive is also published as a cross-linked wiki, in two forms generated
+from the same `data/publications.json` source.
 
-The wiki includes:
+### Public HTML wiki (`/wiki/`)
 
-- `okf/index.md` — entry point for the wiki bundle
-- `okf/archive-overview.md` — scope and generation notes
-- `okf/data-model.md` — field guide for generated publication pages
-- `okf/publications.md` — alphabetical publication index
-- `okf/publications/` — one markdown page per publication record
-- `okf/cities/`, `okf/decades/`, and `okf/formats/` — browse pages grouped from the archive data
+A browsable, pre-rendered HTML wiki lives in `docs/wiki/` and ships with the
+site at **[`/njblackpress/wiki/`](https://centercoopmedia.github.io/njblackpress/wiki/)**
+(linked from the main nav). It matches the site's look (ink/paper/accent
+palette, Fraunces + DM Sans) and gives every record a crawlable permalink:
 
-The generated bundle currently contains 244 markdown files: 137 publication pages, grouped browse pages, indexes, the data model, and the change log.
+- `wiki/index.html` — landing page with snapshot stats and browse links
+- `wiki/publications.html` — sortable index of all records (city, years, status)
+- `wiki/statistics.html` — counts, a founding-decade timeline, top cities, longest-running titles
+- `wiki/featured.html` — curated historic and contemporary publications
+- `wiki/publications/` — one page per publication, cross-linked to related records
+- `wiki/cities/`, `wiki/decades/`, `wiki/formats/`, `wiki/mediums/` — browse-by pages
+- `wiki/sitemap.xml` — sitemap covering every wiki page (referenced from `robots.txt`)
 
-Regenerate the wiki after updating `data/publications.json`:
+Regenerate it after updating the data:
 
 ```bash
-python3 scripts/generate_okf_wiki.py
+python3 scripts/generate_html_wiki.py
 ```
 
-Validate the generated wiki:
+### Open knowledge format wiki (`okf/`)
+
+A portable [open knowledge format](https://cloud.google.com/blog/products/ai-machine-learning/introducing-the-open-knowledge-format)
+bundle in `okf/` — a directory of markdown files with YAML frontmatter and
+standard links, so people and agents can read the archive without running the
+site JavaScript. The bundle contains 250 markdown files (137 publication pages,
+grouped browse pages for cities/decades/formats/mediums, plus index, overview,
+statistics, featured, data-model, and change-log pages).
 
 ```bash
-python3 scripts/generate_okf_wiki.py --check
+python3 scripts/generate_okf_wiki.py          # regenerate
+python3 scripts/generate_okf_wiki.py --check  # validate counts and frontmatter
 ```
 
-Use `--generated-at YYYY-MM-DD` when a reproducible timestamp is needed.
+Both generators accept `--generated-at YYYY-MM-DD` for reproducible timestamps,
+and share their data-shaping helpers so the HTML and markdown stay in lockstep.

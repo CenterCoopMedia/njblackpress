@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Newsletters"
-description: "format page for Newsletters in the NJ Black Press archive."
+description: "Format page for Newsletters in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "newsletters"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Newsletters
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **1981**.
 
 ## Publications
 
-- [Bootstrap](../publications/074-bootstrap.md) — 1981
+| Publication | Years | Status |
+|---|---|---|
+| [Bootstrap](../publications/074-bootstrap.md) | 1981–1983 | Ceased 1983 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

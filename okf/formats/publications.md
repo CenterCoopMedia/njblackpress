@@ -1,18 +1,27 @@
 ---
 type: "format"
 title: "Publications"
-description: "format page for Publications in the NJ Black Press archive."
+description: "Format page for Publications in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "publications"
+timestamp: "2026-06-29"
+count: 2
 ---
 
 # Publications
 
-This page links 2 publication records in this format grouping.
+**2** publications in this format grouping · **0** active · founding years **1934–1935**.
 
 ## Publications
 
-- [Camp Berlin Broadcast](../publications/102-camp-berlin-broadcast.md) — 1934
-- [Camp Cooper Chats](../publications/087-camp-cooper-chats.md) — 1935
+| Publication | Years | Status |
+|---|---|---|
+| [Camp Berlin Broadcast](../publications/102-camp-berlin-broadcast.md) | 1934–1935 | Ceased 1935 |
+| [Camp Cooper Chats](../publications/087-camp-cooper-chats.md) | 1935–1937 | Ceased 1937 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

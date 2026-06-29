@@ -9,12 +9,15 @@ tags:
   - "newark"
   - "1960s"
   - "print-newspaper"
-timestamp: "2026-06-23"
+timestamp: "2026-06-29"
 archive_id: 28
 status: "inactive-or-historical"
+featured: true
 ---
 
 # Black Newark
+
+> ⭐ Featured historic publication. See [Featured publications](../featured.md).
 
 | Field | Value |
 |---|---|
@@ -22,12 +25,12 @@ status: "inactive-or-historical"
 | Alternate name | Unknown |
 | City | [Newark](../cities/newark.md) |
 | Publishers or owners | Committee for Unified Newark |
-| Founded | 1968 |
-| Ceased | 1974 |
+| Active years | 1968–1974 |
+| Status | Ceased 1974 |
 | Decade | [1960s](../decades/1960s.md) |
 | Format | [Print Newspaper](../formats/print-newspaper.md) |
+| Medium | [Print](../mediums/print.md) |
 | Frequency | Monthly |
-| Medium | Print |
 | Languages | English |
 | Primary focus | Politics, News, Protest literature, Protest works. |
 | Target audience | Unknown |
@@ -46,10 +49,42 @@ Black Newark was the first in a series of interconnected newspapers published un
 
 ## External links
 
-- [Archive record](LCNC:  sn2001062056/OCLC No. 32993495)
 - [Website](https://www.loc.gov/item/sn2001062056/)
 
-## Related wiki pages
+## Archive reference
 
+LCNC:  sn2001062056/OCLC No. 32993495.
+
+## Related publications
+
+### Also in Newark
+
+- [New Jersey Trumpet](038-new-jersey-trumpet.md) — 1887–1897
+- [The Newark Herald](009-the-newark-herald.md) — 1928–1939
+- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
+- [New Jersey Herald News](016-new-jersey-herald-news.md) — 1938–1966
+- [The Newark Herald](024-the-newark-herald.md) — 1938–1999
+- [New Jersey Afro-American](035-new-jersey-afro-american.md) — 1941–1991
+- [New Jersey After Hours](101-new-jersey-after-hours.md) — 1949–1980
+- [Hours After](072-hours-after.md) — 1951–1955
+- …and 30 more
+
+### Also from the 1960s
+
+- [Wait](113-wait.md) — 1961–1965
+- [Newark Community Union Project News](076-newark-community-union-project-news.md) — 1963–1965
+- [Afro-American Festival of the Arts Magazine](062-afro-american-festival-of-the-arts-magazine.md) — 1966–1966
+- [Freedom Reports](133-freedom-reports.md) — 1966–1970
+- [Deliverance Voice](070-deliverance-voice.md) — 1967–2014
+- [The Black Observer](033-the-black-observer.md) — 1968–1970
+- [The Voice](041-the-voice.md) — 1968–1974
+- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
+- …and 1 more
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All Newark publications](../cities/newark.md)
+- [All 1960s publications](../decades/1960s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

@@ -1,19 +1,28 @@
 ---
-type: "citie"
+type: "city"
 title: "Jersey City"
-description: "citie page for Jersey City in the NJ Black Press archive."
+description: "City page for Jersey City in the NJ Black Press archive."
 tags:
   - "nj-black-press"
-  - "citie"
-timestamp: "2026-06-23"
+  - "city"
+  - "jersey-city"
+timestamp: "2026-06-29"
+count: 3
 ---
 
 # Jersey City
 
-This page links 3 publication records in this citie grouping.
+**3** publications in this city grouping · **0** active · founding years **1979–1992**.
 
 ## Publications
 
-- [Black Journal](../publications/052-black-journal.md) — 1979
-- [NJ-AAHGS Newsletter](../publications/106-nj-aahgs-newsletter.md) — 1989
-- [The Jersey Heritage](../publications/116-the-jersey-heritage.md) — 1992
+| Publication | Years | Status |
+|---|---|---|
+| [Black Journal](../publications/052-black-journal.md) | 1979–1985 | Ceased 1985 |
+| [NJ-AAHGS Newsletter](../publications/106-nj-aahgs-newsletter.md) | 1989–2000 | Ceased 2000 |
+| [The Jersey Heritage](../publications/116-the-jersey-heritage.md) | 1992–1996 | Ceased 1996 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All cities](../cities.md)

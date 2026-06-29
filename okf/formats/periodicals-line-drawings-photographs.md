@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Periodicals, line drawings, photographs"
-description: "format page for Periodicals, line drawings, photographs in the NJ Black Press archive."
+description: "Format page for Periodicals, line drawings, photographs in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "periodicals-line-drawings-photographs"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Periodicals, line drawings, photographs
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **1935**.
 
 ## Publications
 
-- [Ash Can](../publications/048-ash-can.md) — 1935
+| Publication | Years | Status |
+|---|---|---|
+| [Ash Can](../publications/048-ash-can.md) | 1935–1935 | Ceased 1935 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

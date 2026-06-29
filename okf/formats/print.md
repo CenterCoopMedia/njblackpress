@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Print"
-description: "format page for Print in the NJ Black Press archive."
+description: "Format page for Print in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "print"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Print
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **0** active · founding years **1970**.
 
 ## Publications
 
-- [The Liberator](../publications/109-the-liberator.md) — 1970
+| Publication | Years | Status |
+|---|---|---|
+| [The Liberator](../publications/109-the-liberator.md) | 1970–1971 | Ceased 1971 |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)

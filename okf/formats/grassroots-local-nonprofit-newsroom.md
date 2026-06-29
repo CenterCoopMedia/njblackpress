@@ -1,17 +1,26 @@
 ---
 type: "format"
 title: "Grassroots local nonprofit newsroom"
-description: "format page for Grassroots local nonprofit newsroom in the NJ Black Press archive."
+description: "Format page for Grassroots local nonprofit newsroom in the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "format"
-timestamp: "2026-06-23"
+  - "grassroots-local-nonprofit-newsroom"
+timestamp: "2026-06-29"
+count: 1
 ---
 
 # Grassroots local nonprofit newsroom
 
-This page links 1 publication record in this format grouping.
+**1** publication in this format grouping · **1** active · founding years **2021**.
 
 ## Publications
 
-- [Public Square Amplified](../publications/043-public-square-amplified.md) — 2021
+| Publication | Years | Status |
+|---|---|---|
+| [Public Square Amplified](../publications/043-public-square-amplified.md) | 2021–present | Active |
+
+## Navigate
+
+- [Wiki home](../index.md)
+- [All formats](../formats.md)
