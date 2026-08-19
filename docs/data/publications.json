@@ -104,7 +104,8 @@
       "Volumes"
     ],
     "activeCount": 17,
-    "ceasedCount": 120
+    "ceasedCount": 120,
+    "evidenceCount": 181
   },
   "publications": [
     {
@@ -129,7 +130,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1: 2 Hype, bimonthly, River Edge, 1990?-1993, Word Up! Video, editor Marica A. Cole. WHi Aug 1992 and Aug 1993.",
+          "file": "data/research/danky/danky-1998-p1-hype.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Hype, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 1 (entry 1).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/1/mode/1up"
+        }
+      ]
     },
     {
       "id": 2,
@@ -153,7 +166,29 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1949-01-19",
+          "caption": "Melvin B. Johnson named as former Negro newspaper publisher and editor, in the field until 1946.",
+          "file": "data/research/newspapers-com/downloads/star-ledger_1949-01-19_p14_melvin-johnson-left-papers.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "The Star-Ledger, 1949-01-19, p. 14.",
+          "url": "https://www.newspapers.com/image/1108232407/"
+        },
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1949-11-06",
+          "caption": "Photo cutline: Melvin B. Johnson, former editor and publisher of weekly newspapers at Montclair and Newark.",
+          "file": "data/research/newspapers-com/downloads/asbury-park-press_1949-11-06_p2_johnson-montclair-newark.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Asbury Park Press, 1949-11-06, p. 2.",
+          "url": "https://www.newspapers.com/image/143065742/"
+        }
+      ]
     },
     {
       "id": 3,
@@ -177,7 +212,19 @@
       "isActive": false,
       "decade": "1910s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1354: The Camden News, weekly, Camden News Publishing Co., editor C. N. Green.",
+          "file": "data/research/danky/danky-1998-p131-camden-news.png",
+          "rightsStatus": "metadata_only",
+          "citation": "The Camden News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 131 (entry 1354).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/131/mode/1up"
+        }
+      ]
     },
     {
       "id": 4,
@@ -201,7 +248,19 @@
       "isActive": true,
       "decade": "2020s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": true
+      "isFeaturedContemporary": true,
+      "evidence": [
+        {
+          "type": "website_screenshot",
+          "source": "wayback",
+          "date": "2026-08-17",
+          "caption": "Live site screenshot of Black In Jersey after Wayback replay failed",
+          "file": "data/research/wayback/clean/004-black-in-jersey-live.png",
+          "rightsStatus": "publishable_with_credit",
+          "citation": "Black In Jersey, website capture, 2026-08-17.",
+          "url": "https://www.blackinjersey.com/"
+        }
+      ]
     },
     {
       "id": 5,
@@ -225,7 +284,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1791: The Connection Newspaper, weekly, Teaneck, Ralph F. Johnson. Largest African-American weekly in New Jersey. WHi 5 June 1993-.",
+          "file": "data/research/danky/danky-1998-p172-connection.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Connection / North Jersey Connection, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 172 (entry 1791).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/172/mode/1up"
+        }
+      ]
     },
     {
       "id": 6,
@@ -249,7 +320,19 @@
       "isActive": true,
       "decade": "2010s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20180729",
+          "caption": "earliest Wayback screenshot 006-front-runner-new-jersey.png",
+          "file": "data/research/wayback/clean/006-front-runner-new-jersey-20180729184443.png",
+          "rightsStatus": "crop_first",
+          "citation": "Front Runner New Jersey, website capture, 20180729.",
+          "url": "https://web.archive.org/web/20180729184443/https://frontrunnernewjersey.com/"
+        }
+      ]
     },
     {
       "id": 7,
@@ -273,7 +356,29 @@
       "isActive": false,
       "decade": "1900s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry that ends on p.154: editor Henry J. Auston, OCLC 38227497; WHi holds v.1 n.16, 12 Mar 1909.",
+          "file": "data/research/danky/danky-1998-p154-the-citizen.png",
+          "rightsStatus": "metadata_only",
+          "citation": "The Citizen, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 154.",
+          "url": "https://archive.org/details/africanamericanne00dank/page/154/mode/1up"
+        },
+        {
+          "type": "library_page",
+          "source": "danky",
+          "date": "n.d.",
+          "caption": "HSP walking tour stop 40: The Citizen published at 9 Witherspoon by W.H. de Paur, Henry J. Auston editor.",
+          "file": "data/research/danky/hsp-citizen-9-witherspoon.png",
+          "rightsStatus": "metadata_only",
+          "citation": "The Citizen, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+          "url": "https://www.princetonhistory.org/tour/40.html"
+        }
+      ]
     },
     {
       "id": 8,
@@ -297,7 +402,19 @@
       "isActive": false,
       "decade": "2010s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "website_screenshot",
+          "source": "wayback",
+          "date": "2026-08-17",
+          "caption": "South Jersey Journal about page: monthly, South Jersey Communications LLC, 157 Bridgeton Pike, Mullica Hill. Publisher Al Thomas. Editor Clyde Hughes.",
+          "file": "data/research/wayback/clean/008-south-jersey-journal-live.png",
+          "rightsStatus": "publishable_with_credit",
+          "citation": "South Jersey Journal, website capture, 2026-08-17.",
+          "url": "https://southjerseyjournal.wordpress.com/south-jersey-journal/"
+        }
+      ]
     },
     {
       "id": 9,
@@ -321,7 +438,109 @@
       "isActive": false,
       "decade": "1920s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-05-21T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19380521a",
+          "file": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "New Jersey Herald News, May 21, 1938.",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19380521a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-06-11T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380611a",
+          "file": "data/research/ia/clean/NewarkHerald19380611a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, June 11, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380611a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-06-18T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380618a",
+          "file": "data/research/ia/clean/NewarkHerald19380618a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, June 18, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380618a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-02T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380702a",
+          "file": "data/research/ia/clean/NewarkHerald19380702a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 2, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380702a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-09T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380709a",
+          "file": "data/research/ia/clean/NewarkHerald19380709a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 9, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380709a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-16T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380716a",
+          "file": "data/research/ia/clean/NewarkHerald19380716a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 16, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380716a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-23T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380723a",
+          "file": "data/research/ia/clean/NewarkHerald19380723a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 23, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380723a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-30T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380730a",
+          "file": "data/research/ia/clean/NewarkHerald19380730a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 30, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380730a"
+        },
+        {
+          "type": "full_issue_preview",
+          "source": "ia",
+          "date": "19390311",
+          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19390311",
+          "file": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf",
+          "rightsStatus": "publishable",
+          "citation": "New Jersey Herald News, March 11, 1939.",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19390311"
+        },
+        {
+          "type": "full_issue_preview",
+          "source": "ia",
+          "date": "19420704",
+          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19420704",
+          "file": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf",
+          "rightsStatus": "publishable",
+          "citation": "New Jersey Herald News, July 4, 1942.",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19420704"
+        }
+      ]
     },
     {
       "id": 10,
@@ -345,7 +564,29 @@
       "isActive": false,
       "decade": "1880s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clipping",
+          "source": "newspapers.com",
+          "date": "1893-11-05",
+          "caption": "R. HENRI HERBERT'S ATTACK. He Asks His Colored Fellow-Citizens to Help Defeat Founder Bradley.",
+          "file": "data/research/newspapers-com/downloads/trenton-sunday-advertiser_1893-11-05_p1_herbert-vs-bradley.jpg",
+          "rightsStatus": "publishable",
+          "citation": "Trenton Sunday Advertiser, 1893-11-05, p. 1.",
+          "url": "https://www.newspapers.com/image/1194114727/"
+        },
+        {
+          "type": "clipping",
+          "source": "newspapers.com",
+          "date": "1895-10-20",
+          "caption": "R. HENRI HERBERT NOT LEFT. Appointed as a Consulting Member of the Republican State Committee.",
+          "file": "data/research/newspapers-com/downloads/trenton-sunday-advertiser_1895-10-20_p1_herbert-gop-committee.jpg",
+          "rightsStatus": "publishable",
+          "citation": "Trenton Sunday Advertiser, 1895-10-20, p. 1.",
+          "url": "https://www.newspapers.com/image/1194116748/"
+        }
+      ]
     },
     {
       "id": 11,
@@ -369,7 +610,19 @@
       "isActive": false,
       "decade": "1950s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4485: The Northern New Jersey Informer, weekly, Paterson. NjPatPhi v.1 Apr 1-June 17 1950.",
+          "file": "data/research/danky/danky-1998-p431-nnj-informer.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Northern New Jersey Informer, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 431 (entry 4485).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/431/mode/1up"
+        }
+      ]
     },
     {
       "id": 12,
@@ -393,7 +646,19 @@
       "isActive": true,
       "decade": "2020s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20250613",
+          "caption": "Wayback capture for Five Wards Media",
+          "file": "data/research/wayback/clean/012-five-wards-media-20250613131129.png",
+          "rightsStatus": "crop_first",
+          "citation": "Five Wards Media, website capture, 20250613.",
+          "url": "https://web.archive.org/web/20250613131129https://www.fivewardsmedia.com/"
+        }
+      ]
     },
     {
       "id": 13,
@@ -417,7 +682,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1607: City News, weekly, Plainfield, Jan Edgenton Johnson / Henry O. Johnson. NN-Sc 21 Aug 1991-.",
+          "file": "data/research/danky/danky-1998-p155-city-news.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "City News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 155 (entry 1607).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/155/mode/1up"
+        }
+      ]
     },
     {
       "id": 14,
@@ -441,7 +718,8 @@
       "isActive": true,
       "decade": "Unknown",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": []
     },
     {
       "id": 15,
@@ -465,7 +743,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 181: African World, monthly, Hillside, editor Imafidou Olaye. Motto The people's link. WHi Oct 1994.",
+          "file": "data/research/danky/danky-1998-p18-african-world.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "African World, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 18 (entry 181).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/18/mode/1up"
+        }
+      ]
     },
     {
       "id": 16,
@@ -489,7 +779,109 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-05-21T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19380521a",
+          "file": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "New Jersey Herald News, May 21, 1938.",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19380521a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-06-11T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380611a",
+          "file": "data/research/ia/clean/NewarkHerald19380611a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, June 11, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380611a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-06-18T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380618a",
+          "file": "data/research/ia/clean/NewarkHerald19380618a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, June 18, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380618a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-02T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380702a",
+          "file": "data/research/ia/clean/NewarkHerald19380702a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 2, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380702a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-09T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380709a",
+          "file": "data/research/ia/clean/NewarkHerald19380709a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 9, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380709a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-16T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380716a",
+          "file": "data/research/ia/clean/NewarkHerald19380716a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 16, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380716a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-23T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380723a",
+          "file": "data/research/ia/clean/NewarkHerald19380723a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 23, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380723a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-30T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380730a",
+          "file": "data/research/ia/clean/NewarkHerald19380730a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 30, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380730a"
+        },
+        {
+          "type": "full_issue_preview",
+          "source": "ia",
+          "date": "19390311",
+          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19390311",
+          "file": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf",
+          "rightsStatus": "publishable",
+          "citation": "New Jersey Herald News, March 11, 1939.",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19390311"
+        },
+        {
+          "type": "full_issue_preview",
+          "source": "ia",
+          "date": "19420704",
+          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19420704",
+          "file": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf",
+          "rightsStatus": "publishable",
+          "citation": "New Jersey Herald News, July 4, 1942.",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19420704"
+        }
+      ]
     },
     {
       "id": 17,
@@ -513,7 +905,19 @@
       "isActive": true,
       "decade": "2020s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": true
+      "isFeaturedContemporary": true,
+      "evidence": [
+        {
+          "type": "website_screenshot",
+          "source": "wayback",
+          "date": "2026-08-17",
+          "caption": "Live site screenshot of Trenton Journal after Wayback replay failed",
+          "file": "data/research/wayback/clean/017-trenton-journal-live.png",
+          "rightsStatus": "publishable_with_credit",
+          "citation": "Trenton Journal, website capture, 2026-08-17.",
+          "url": "https://trentonjournal.com/"
+        }
+      ]
     },
     {
       "id": 18,
@@ -537,7 +941,19 @@
       "isActive": false,
       "decade": "1950s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3527: The Liberator, weekly, Paterson, editor Theodore Hinton. NjPatPhi v.1 n.1-4 Aug 5-26 1950.",
+          "file": "data/research/danky/danky-1998-p336-liberator-paterson.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Liberator, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 336 (entry 3527).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/336/mode/1up"
+        }
+      ]
     },
     {
       "id": 19,
@@ -561,7 +977,19 @@
       "isActive": true,
       "decade": "2010s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20220622",
+          "caption": "earliest Wayback screenshot 019-nj-in-color.png",
+          "file": "data/research/wayback/clean/019-nj-in-color-20220622225425.png",
+          "rightsStatus": "crop_first",
+          "citation": "NJ in Color, website capture, 20220622.",
+          "url": "https://web.archive.org/web/20220622225425/https://njincolor.com/"
+        }
+      ]
     },
     {
       "id": 20,
@@ -585,7 +1013,19 @@
       "isActive": true,
       "decade": "2010s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": true
+      "isFeaturedContemporary": true,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20230307",
+          "caption": "Wayback capture for New Jersey Urban News",
+          "file": "data/research/wayback/clean/020-new-jersey-urban-news-20230307222958.png",
+          "rightsStatus": "crop_first",
+          "citation": "New Jersey Urban News, website capture, 20230307.",
+          "url": "https://web.archive.org/web/20230307222958https://njurbannews.com/"
+        }
+      ]
     },
     {
       "id": 21,
@@ -609,7 +1049,29 @@
       "isActive": false,
       "decade": "1950s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4440 leftover on p.427: Nite Lite motto and DHU microfilm 1975-1976.",
+          "file": "data/research/danky/danky-1998-p427-nite-lite.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Nite Lite, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 427 (entry 4440).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/427/mode/1up"
+        },
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4440: Nite Lite, weekly, Newark, publisher Edna M. Strothers.",
+          "file": "data/research/danky/danky-1998-p426-nite-lite-full.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Nite Lite, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 426 (entry 4440).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/426/mode/1up"
+        }
+      ]
     },
     {
       "id": 22,
@@ -633,7 +1095,19 @@
       "isActive": true,
       "decade": "2010s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": true
+      "isFeaturedContemporary": true,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20170708",
+          "caption": "Earliest Wayback capture of arkrepublic.com",
+          "file": "data/research/wayback/clean/022-ark-republic-20170708221608.png",
+          "rightsStatus": "crop_first",
+          "citation": "Ark Republic, website capture, 20170708.",
+          "url": "https://web.archive.org/web/20170708221608/http://arkrepublic.com:80/"
+        }
+      ]
     },
     {
       "id": 23,
@@ -657,7 +1131,19 @@
       "isActive": true,
       "decade": "2010s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20141018",
+          "caption": "Wayback capture for The Newark Times",
+          "file": "data/research/wayback/clean/023-the-newark-times-20141018093931.png",
+          "rightsStatus": "crop_first",
+          "citation": "The Newark Times, website capture, 20141018.",
+          "url": "https://web.archive.org/web/20141018093931http://thenewarktimes.com:80/"
+        }
+      ]
     },
     {
       "id": 24,
@@ -681,7 +1167,109 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-05-21T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19380521a",
+          "file": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "New Jersey Herald News, May 21, 1938.",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19380521a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-06-11T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380611a",
+          "file": "data/research/ia/clean/NewarkHerald19380611a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, June 11, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380611a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-06-18T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380618a",
+          "file": "data/research/ia/clean/NewarkHerald19380618a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, June 18, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380618a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-02T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380702a",
+          "file": "data/research/ia/clean/NewarkHerald19380702a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 2, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380702a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-09T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380709a",
+          "file": "data/research/ia/clean/NewarkHerald19380709a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 9, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380709a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-16T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380716a",
+          "file": "data/research/ia/clean/NewarkHerald19380716a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 16, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380716a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-23T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380723a",
+          "file": "data/research/ia/clean/NewarkHerald19380723a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 23, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380723a"
+        },
+        {
+          "type": "full_issue",
+          "source": "ia",
+          "date": "1938-07-30T00:00:00Z",
+          "caption": "New Jersey Herald News issue preview NewarkHerald19380730a",
+          "file": "data/research/ia/clean/NewarkHerald19380730a.pdf",
+          "rightsStatus": "publishable",
+          "citation": "Newark Herald, July 30, 1938.",
+          "url": "https://archive.org/details/NewarkHerald19380730a"
+        },
+        {
+          "type": "full_issue_preview",
+          "source": "ia",
+          "date": "19390311",
+          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19390311",
+          "file": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf",
+          "rightsStatus": "publishable",
+          "citation": "New Jersey Herald News, March 11, 1939.",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19390311"
+        },
+        {
+          "type": "full_issue_preview",
+          "source": "ia",
+          "date": "19420704",
+          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19420704",
+          "file": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf",
+          "rightsStatus": "publishable",
+          "citation": "New Jersey Herald News, July 4, 1942.",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19420704"
+        }
+      ]
     },
     {
       "id": 25,
@@ -705,7 +1293,19 @@
       "isActive": true,
       "decade": "2020s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20240506",
+          "caption": "Wayback capture for Atlantic City Focus",
+          "file": "data/research/wayback/clean/025-atlantic-city-focus-20240506145430.png",
+          "rightsStatus": "crop_first",
+          "citation": "Atlantic City Focus, website capture, 20240506.",
+          "url": "https://web.archive.org/web/20240506145430https://www.atlanticcityfocus.com/"
+        }
+      ]
     },
     {
       "id": 26,
@@ -729,7 +1329,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2786: Harambee, Orange, Just Us Books, a newspaper for young readers on the African-American experience. WHi 1992-1993-.",
+          "file": "data/research/danky/danky-1998-p266-harambee.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Harambee, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 266 (entry 2786).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/266/mode/1up"
+        }
+      ]
     },
     {
       "id": 27,
@@ -753,7 +1365,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2694: Greater News, weekly, Newark, editor Jeanne Jason. Also National / New Jersey Greater News.",
+          "file": "data/research/danky/danky-1998-p257-greater-news.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Greater News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 257 (entry 2694).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/257/mode/1up"
+        }
+      ]
     },
     {
       "id": 28,
@@ -777,7 +1401,19 @@
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 934: Black New Ark, monthly, Newark, 1968-?. Motto The Voice of New Ark's Inner City. WHi microfilm 1968-1974.",
+          "file": "data/research/danky/danky-1998-p91-black-new-ark.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Newark, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 91 (entry 934).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/91/mode/1up"
+        }
+      ]
     },
     {
       "id": 29,
@@ -801,7 +1437,19 @@
       "isActive": true,
       "decade": "2010s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20151025",
+          "caption": "Wayback capture for Faithfully Magazine",
+          "file": "data/research/wayback/clean/029-faithfully-magazine-20151025031224.png",
+          "rightsStatus": "crop_first",
+          "citation": "Faithfully Magazine, website capture, 20151025.",
+          "url": "https://web.archive.org/web/20151025031224http://www.faithfullymagazine.com:80/"
+        }
+      ]
     },
     {
       "id": 30,
@@ -825,7 +1473,19 @@
       "isActive": false,
       "decade": "1950s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4470: North Jersey Independent, Paterson, 1950-?, editor Albert E. Hart. NjPatPhi holds v.1 n.1 (18 Nov 1950).",
+          "file": "data/research/danky/danky-1998-p430-north-jersey-independent.png",
+          "rightsStatus": "metadata_only",
+          "citation": "North Jersey Independent, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 430 (entry 4470).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/430/mode/1up"
+        }
+      ]
     },
     {
       "id": 31,
@@ -849,7 +1509,29 @@
       "isActive": false,
       "decade": "1900s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clipping",
+          "source": "newspapers.com",
+          "date": "1904-09-08",
+          "caption": "Colored Newspaper Burned Out. The Echo, a weekly negro newspaper published at Long Branch, was burned out recently. The fire which is thought to be of incendiary origin damaged the machinery and press-room of the newspaper to the extent of several hundred dollars. The first issue of the paper was edited by Rock & Howard.",
+          "file": "data/research/newspapers-com/downloads/monmouth-democrat_1904-09-08_p4_echo-burned-out.jpg",
+          "rightsStatus": "publishable",
+          "citation": "Monmouth Democrat, 1904-09-08, p. 4.",
+          "url": "https://www.newspapers.com/image/497174278/"
+        },
+        {
+          "type": "clipping",
+          "source": "newspapers.com",
+          "date": "1909-03-05",
+          "caption": "ECHO MOVES TO RED BANK. The Echo edited and published in the interest of the colored race in Long Branch by W. E. Rock for the past five years, has moved to Red Bank, where Editor Rock has purchased a home.",
+          "file": "data/research/newspapers-com/downloads/asbury-park-press_1909-03-05_p2_echo-moves-red-bank.jpg",
+          "rightsStatus": "publishable",
+          "citation": "Asbury Park Press, 1909-03-05, p. 2.",
+          "url": "https://www.newspapers.com/image/143869436/"
+        }
+      ]
     },
     {
       "id": 32,
@@ -873,7 +1555,19 @@
       "isActive": false,
       "decade": "2010s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20211208",
+          "caption": "Wayback capture of jacque-howard.com",
+          "file": "data/research/wayback/clean/032-trenton365-stream-with-jacque-howard-20211208013612.png",
+          "rightsStatus": "crop_first",
+          "citation": "Trenton365 Stream with Jacque Howard, website capture, 20211208.",
+          "url": "https://web.archive.org/web/20211208013612/https://jacque-howard.com/"
+        }
+      ]
     },
     {
       "id": 33,
@@ -897,7 +1591,19 @@
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20210120",
+          "caption": "Wayback capture of scarletandblack.rutgers.edu",
+          "file": "data/research/wayback/clean/033-the-black-observer-20210120065101.png",
+          "rightsStatus": "crop_first",
+          "citation": "The Black Observer, website capture, 20210120.",
+          "url": "https://web.archive.org/web/20210120065101/https://scarletandblack.rutgers.edu/"
+        }
+      ]
     },
     {
       "id": 34,
@@ -921,7 +1627,39 @@
       "isActive": false,
       "decade": "1880s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1987-11-26",
+          "caption": "Tom Brady on Alfred P. Smith: The Landscape, first as A.P. Smith's Paper, printed at East Allendale Road from May 1881 until July 1901.",
+          "file": "data/research/newspapers-com/downloads/ridgewood-news_1987-11-26_p14_landscape-ap-smith.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "The Ridgewood News, 1987-11-26, p. 14.",
+          "url": "https://www.newspapers.com/image/1122504536/"
+        },
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1991-02-09",
+          "caption": "Second Look: Writer shaped civil-rights Landscape. Alfred P. Smith started A. P. Smith's Paper in 1881, then renamed it The Landscape.",
+          "file": "data/research/newspapers-com/downloads/the-record-hackensack_1991-02-09_p2_landscape-renamed.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "The Record (Hackensack), 1991-02-09, p. 2.",
+          "url": "https://www.newspapers.com/image/496517756/"
+        },
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1993-06-27",
+          "caption": "Nancy R. Peck: Alfred P. Smith printed what was called the nation's smallest newspaper from an old house overlooking the Saddle River valley.",
+          "file": "data/research/newspapers-com/downloads/sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "The Sunday News (Ridgewood), 1993-06-27, p. 2.",
+          "url": "https://www.newspapers.com/image/634766635/"
+        }
+      ]
     },
     {
       "id": 35,
@@ -945,7 +1683,19 @@
       "isActive": false,
       "decade": "1940s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clipping",
+          "source": "newspapers.com",
+          "date": "2023-05-21",
+          "caption": "The New Jersey Afro-American — published in Newark — was one of a chain of Black-owned and edited papers... the New Jersey edition no longer exists.",
+          "file": "data/research/newspapers-com/downloads/daily-record-morristown_2023-05-21_pD2_nj-afro-american-described.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Daily Record (Morristown), 2023-05-21, p. D2.",
+          "url": "https://www.newspapers.com/image/962761544/"
+        }
+      ]
     },
     {
       "id": 36,
@@ -969,7 +1719,19 @@
       "isActive": true,
       "decade": "2020s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "website_screenshot",
+          "source": "wayback",
+          "date": "2026-08-17",
+          "caption": "Live site screenshot of More Jersey after Wayback replay failed",
+          "file": "data/research/wayback/clean/036-more-jersey-live.png",
+          "rightsStatus": "publishable_with_credit",
+          "citation": "More Jersey, website capture, 2026-08-17.",
+          "url": "https://morejersey.com/"
+        }
+      ]
     },
     {
       "id": 37,
@@ -993,7 +1755,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1939-09-09",
+          "caption": "Paterson News cites The New Jersey Guardian as a journal for colored readers with state-wide circulation.",
+          "file": "data/research/newspapers-com/downloads/the-news-paterson_1939-09-09_p9_nj-guardian-cited.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "The News (Paterson), 1939-09-09, p. 9.",
+          "url": "https://www.newspapers.com/image/525697398/"
+        }
+      ]
     },
     {
       "id": 38,
@@ -1017,7 +1791,29 @@
       "isActive": false,
       "decade": "1880s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clipping",
+          "source": "newspapers.com",
+          "date": "1893-07-28",
+          "caption": "Colonel Murrell, editor of the New Jersey Trumpet, later James A. Bradley entered and was greeted with applause. The meeting was called to discuss the signs which James A. Bradley had posted on the pavilions forbidding their occupancy to the colored race.",
+          "file": "data/research/newspapers-com/downloads/shore-press_1893-07-28_p6_murrell-asbury-meeting.jpg",
+          "rightsStatus": "publishable",
+          "citation": "The Shore Press, 1893-07-28, p. 6.",
+          "url": "https://www.newspapers.com/image/436807841/"
+        },
+        {
+          "type": "clipping",
+          "source": "newspapers.com",
+          "date": "1893-07-22",
+          "caption": "Colonel Murrell, editor of the New Jersey Trumpet, was then introduced as the speaker of the evening.",
+          "file": "data/research/newspapers-com/downloads/asbury-park-press_1893-07-22_p1_murrell-speaking.jpg",
+          "rightsStatus": "publishable",
+          "citation": "Asbury Park Press, 1893-07-22, p. 1.",
+          "url": "https://www.newspapers.com/image/436760060/"
+        }
+      ]
     },
     {
       "id": 39,
@@ -1041,7 +1837,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1974-01-04",
+          "caption": "LOC directory: The Forum (Newark, N.J.) 197?-????. Forum Publications. Serving the New Jersey black community. Description based on Vol. 2, no. 47 (Jan. 4, 1974). LCCN sn88071371. OCLC 18514783.",
+          "file": "data/research/loc/forum-loc-sn88071371.png",
+          "rightsStatus": "publishable_with_credit",
+          "citation": "Library of Congress catalog record sn88071371.",
+          "url": "https://www.loc.gov/item/sn88071371/"
+        }
+      ]
     },
     {
       "id": 40,
@@ -1065,7 +1873,29 @@
       "isActive": true,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": true
+      "isFeaturedContemporary": true,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4532: The Nubian News, monthly, Trenton, Kamau Kujichagulia. New Jersey's only African-American/Hispanic news source. WHi May 1993-.",
+          "file": "data/research/danky/danky-1998-p435-nubian-news.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Nubian News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 435 (entry 4532).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/435/mode/1up"
+        },
+        {
+          "type": "full_issue",
+          "source": "depth-hunt",
+          "date": "2026-08-19",
+          "caption": "The Nubian News, Vol. 6 No. 1, Jan. 7, 2022 -- full 12-page issue PDF from the paper's own online archive",
+          "file": "data/research/depth-hunt/files/40-nubian-news-v6n1-2022.pdf",
+          "rightsStatus": "crop_first",
+          "citation": "The Nubian News, The Nubian News, Vol. 6 No. 1, Jan. 7, 2022 -- full 12-page issue PDF from the paper's own online archive.",
+          "url": "https://www.thenubiannews.com/archive"
+        }
+      ]
     },
     {
       "id": 41,
@@ -1089,7 +1919,19 @@
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 6211: The Voice, weekly, Plainfield, Voice Associates. NjPla June 22-Nov 16 1968 and June 13 1970-Mar 20 1974.",
+          "file": "data/research/danky/danky-1998-p594-voice-plainfield.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 594 (entry 6211).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/594/mode/1up"
+        }
+      ]
     },
     {
       "id": 42,
@@ -1113,7 +1955,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1972-06-29",
+          "caption": "LOC directory: Essex Forum (East Orange, N.J.) 1972-????. Multi-Linear Publications. Vol. 1, no. 1 (June 29, 1972). Weekly serving Orange, Montclair and E. Orange; later biweekly Metropolitan Essex County. LCCN sn88071370. OCLC 18514779.",
+          "file": "data/research/loc/essex-forum-loc-sn88071370.png",
+          "rightsStatus": "publishable_with_credit",
+          "citation": "Library of Congress catalog record sn88071370.",
+          "url": "https://www.loc.gov/item/sn88071370/"
+        }
+      ]
     },
     {
       "id": 43,
@@ -1137,7 +1991,19 @@
       "isActive": true,
       "decade": "2020s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "website_screenshot",
+          "source": "wayback",
+          "date": "2026-08-17",
+          "caption": "Live site screenshot of Public Square Amplified after Wayback replay failed",
+          "file": "data/research/wayback/clean/043-public-square-amplified-live.png",
+          "rightsStatus": "publishable_with_credit",
+          "citation": "Public Square Amplified, website capture, 2026-08-17.",
+          "url": "https://www.publicsq.org/"
+        }
+      ]
     },
     {
       "id": 44,
@@ -1161,7 +2027,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2469: The Franklin Voice, monthly, Somerset, editor Paula McCoy-Pinderhughes. NN-Sc Feb 1996-.",
+          "file": "data/research/danky/danky-1998-p236-franklin-voice.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Franklin Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 236 (entry 2469).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/236/mode/1up"
+        }
+      ]
     },
     {
       "id": 45,
@@ -1185,7 +2063,19 @@
       "isActive": false,
       "decade": "1920s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 467: Apex News, quarterly, Atlantic City, Apex Publishing Co., editor Archie J. Morgan.",
+          "file": "data/research/danky/danky-1998-p46-apex-news.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Apex News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 46 (entry 467).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/46/mode/1up"
+        }
+      ]
     },
     {
       "id": 46,
@@ -1209,7 +2099,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 176: The African Voice, monthly, Camden, Black Cooperative Association. WHi June/July 1972.",
+          "file": "data/research/danky/danky-1998-p18-african-voice.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The African Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 18 (entry 176).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/18/mode/1up"
+        }
+      ]
     },
     {
       "id": 47,
@@ -1233,7 +2135,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 511: Artz, monthly, Plainfield, 1991-1993?, City News Publishing. Editors Lorraine Davis Hickman; Jan M. Edgerton-Johnson. NN-Sc Mar 1992-Summer 1993.",
+          "file": "data/research/danky/danky-1998-p50-artz.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Artz, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 50 (entry 511).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/50/mode/1up"
+        }
+      ]
     },
     {
       "id": 48,
@@ -1257,7 +2171,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 517 leftover: Ash Can editor Bertram Totten, superseded by Penn Crusader; WHi May-June 1935.",
+          "file": "data/research/danky/danky-1998-p51-ash-can.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Ash Can, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 51 (entry 517).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/51/mode/1up"
+        }
+      ]
     },
     {
       "id": 49,
@@ -1281,7 +2207,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 529: At the Crossroads, six times a year, New Brunswick, Crossroads Theatre Company, editor Ernie Johnston. WHi Winter 1997-.",
+          "file": "data/research/danky/danky-1998-p51-at-the-crossroads.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "At the Crossroads, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 51 (entry 529).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/51/mode/1up"
+        }
+      ]
     },
     {
       "id": 50,
@@ -1305,7 +2243,19 @@
       "isActive": true,
       "decade": "Unknown",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4261: New Jersey Deadline, twice a month, Newark, Deadline Publishing, editor Harry B. Webber. WHi v.2 n.4 30 May 1960.",
+          "file": "data/research/danky/danky-1998-p409-nj-deadline.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "New Jersey Deadline, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 409 (entry 4261).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/409/mode/1up"
+        }
+      ]
     },
     {
       "id": 51,
@@ -1329,7 +2279,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1477: CFUN News, Newark, editor Imamu Amiri Baraka. WHi n.7 May 1971.",
+          "file": "data/research/danky/danky-1998-p142-cfun-news.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "CFUN News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 142 (entry 1477).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/142/mode/1up"
+        }
+      ]
     },
     {
       "id": 52,
@@ -1353,7 +2315,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 890: Black Journal, monthly, Jersey City State College African/Afro-American Studies Center, editor Bruce Mansa Terry. NN-Sc Mar 1980.",
+          "file": "data/research/danky/danky-1998-p87-black-journal.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Journal, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 87 (entry 890).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/87/mode/1up"
+        }
+      ]
     },
     {
       "id": 53,
@@ -1377,7 +2351,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3726: MC Squared, Piscataway, POSRO Inc. Comic books. WHi v.1 n.1-3 July 1991-1994.",
+          "file": "data/research/danky/danky-1998-p356-mc-squared.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "MC Squared, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 356 (entry 3726).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/356/mode/1up"
+        }
+      ]
     },
     {
       "id": 54,
@@ -1401,7 +2387,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3314: Journal of African American Men, quarterly, Transaction Publishers / Rutgers, New Brunswick. Editor Gary A. Sailes. WHi Summer 1995-.",
+          "file": "data/research/danky/danky-1998-p316-jaam.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Journal of African American Men, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 316 (entry 3314).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/316/mode/1up"
+        }
+      ]
     },
     {
       "id": 55,
@@ -1425,7 +2423,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4862: Point Breeze Rugcuttings, monthly 1938, Cape May Courthouse, editor George Butler.",
+          "file": "data/research/danky/danky-1998-p467-point-breeze-rugcuttings.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Point Breeze Rugcuttings, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 467 (entry 4862).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/467/mode/1up"
+        }
+      ]
     },
     {
       "id": 56,
@@ -1449,7 +2459,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 6026: The Union Messenger, Camden, U.A.M.E. Church, 1979?-?. WHi 20 Oct 1979.",
+          "file": "data/research/danky/danky-1998-p577-union-messenger.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Union Messenger, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 577 (entry 6026).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/577/mode/1up"
+        }
+      ]
     },
     {
       "id": 57,
@@ -1473,7 +2495,29 @@
       "isActive": false,
       "decade": "1910s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1932-03-22",
+          "caption": "Courier-Post: Ironsides Echo, monthly student paper of the Bordentown Manual Training School, won second place in the Columbia Scholastic Press contest. Student editor Leon Snead.",
+          "file": "data/research/newspapers-com/downloads/courier-post_1932-03-22_p14_ironsides-echo-award.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Courier-Post, 1932-03-22, p. 14.",
+          "url": "https://www.newspapers.com/image/446292432/"
+        },
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1940-05-07",
+          "caption": "Trenton Times: Ironsides Echo won two second-place Columbia awards. Staff adviser Frances O. Grant; printing instructor L. J. Roberts.",
+          "file": "data/research/newspapers-com/downloads/trenton-times_1940-05-07_p13_ironsides-echo-awards.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Trenton Times / The Times, 1940-05-07, p. 13.",
+          "url": "https://www.newspapers.com/image/1191434889/"
+        }
+      ]
     },
     {
       "id": 58,
@@ -1497,7 +2541,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 6536: Yes: Youth Excited About Success, nine times a year, Plainfield, editor Jan M. Edgenton Johnson. WHi 1994/5-.",
+          "file": "data/research/danky/danky-1998-p625-yes.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Yes: Youth Excited About Success, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 625 (entry 6536).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/625/mode/1up"
+        }
+      ]
     },
     {
       "id": 59,
@@ -1521,7 +2577,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2199: En Avant, Newark, Haiti/politics. WHi Mar/Apr 1973.",
+          "file": "data/research/danky/danky-1998-p211-en-avant.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "En Avant, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 211 (entry 2199).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/211/mode/1up"
+        }
+      ]
     },
     {
       "id": 61,
@@ -1545,7 +2613,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4098: The National Political Science Review, annual, Rutgers New Brunswick, Matthew Holden Jr. / National Conference of Black Political Scientists.",
+          "file": "data/research/danky/danky-1998-p393-npsr.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The National Political Science Review, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 393 (entry 4098).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/393/mode/1up"
+        }
+      ]
     },
     {
       "id": 62,
@@ -1569,7 +2649,19 @@
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 243: Afro-American Festival of the Arts Magazine, Newark, 1966?-?, Yusef Iman. WHi Aug 1966 Pam 01-6116.",
+          "file": "data/research/danky/danky-1998-p24-festival-arts.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Afro-American Festival of the Arts Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 24 (entry 243).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/24/mode/1up"
+        }
+      ]
     },
     {
       "id": 63,
@@ -1593,7 +2685,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5866: Today's Black Woman, nine times a year, Paramus, editor Kate Ferguson, John Blassingame publisher. WHi Apr 1995-.",
+          "file": "data/research/danky/danky-1998-p562-todays-black-woman.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Today's Black Woman / Today’s Black Woman, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 562 (entry 5866).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/562/mode/1up"
+        }
+      ]
     },
     {
       "id": 64,
@@ -1617,7 +2721,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 980: Black Racers Yearbook, annual, Trenton, Black American Racers Association. NN-Sc 1974.",
+          "file": "data/research/danky/danky-1998-p95-black-racers.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Racers Yearbook, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 95 (entry 980).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/95/mode/1up"
+        }
+      ]
     },
     {
       "id": 65,
@@ -1641,7 +2757,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5578: Spirit: The Guide to the Soul, six times a year, Plainfield, editor Natasha Munson. NN-Sc July/Aug 1996.",
+          "file": "data/research/danky/danky-1998-p535-spirit.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Spirit: The Guide to the Soul, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 535 (entry 5578).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/535/mode/1up"
+        }
+      ]
     },
     {
       "id": 66,
@@ -1665,7 +2793,19 @@
       "isActive": false,
       "decade": "1950s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3284: Jersey Camera, monthly, Newark, 48 pages. WHi v.1 n.6 Aug 1951.",
+          "file": "data/research/danky/danky-1998-p312-jersey-camera.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Jersey Camera, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 312 (entry 3284).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/312/mode/1up"
+        }
+      ]
     },
     {
       "id": 67,
@@ -1689,7 +2829,29 @@
       "isActive": false,
       "decade": "1950s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1960-05-20",
+          "caption": "Asbury Park Press Lakewood column: a book to be published in the July issue of Bronze Thrills.",
+          "file": "data/research/newspapers-com/downloads/asbury-park-press_1960-05-20_p21_bronze-thrills-july.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Asbury Park Press, 1960-05-20, p. 21.",
+          "url": "https://www.newspapers.com/image/143086953/"
+        },
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky leftover on p.117: Bronze Thrills, confession stories, ISSN 0277-8106, OCLC 7645384, WHi holdings.",
+          "file": "data/research/danky/danky-1998-p117-bronze-thrills.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Bronze Thrills, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 117.",
+          "url": "https://archive.org/details/africanamericanne00dank/page/117/mode/1up"
+        }
+      ]
     },
     {
       "id": 68,
@@ -1713,7 +2875,29 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3735: MEDIC News, quarterly, Newark, Minority Economic Development Industrial and Cultural Enterprise, editor Carolyn Odom. DHU v.1 n.1-5 to Dec 1971.",
+          "file": "data/research/danky/danky-1998-p357-medic-news.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "MEDIC News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 357 (entry 3735).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/357/mode/1up"
+        },
+        {
+          "type": "full_issue",
+          "source": "depth-hunt",
+          "date": "2026-08-19",
+          "caption": "MEDIC News, vol. 1, no. 1 — 8-page newsletter, Newark, NJ. Gus Heningburg Collection, Charles F. Cummings New Jersey Information Center, Newark Public Library.",
+          "file": "data/research/depth-hunt/files/68-medic-news-v1n1.pdf",
+          "rightsStatus": "crop_first",
+          "citation": "MEDIC News, MEDIC News, vol. 1, no. 1 — 8-page newsletter, Newark, NJ. Gus Heningburg Collection, Charles F. Cummings New Jersey Information Center, Newark Public Library..",
+          "url": "https://archive.org/details/Heningburg166"
+        }
+      ]
     },
     {
       "id": 69,
@@ -1737,7 +2921,19 @@
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1867: The Cricket: Black Music in Evolution, Newark, 1969, Jihad Publications. Editors Le Roi Jones, Amamu Baraka, Larry Neal, A. B. Spellman. WHi n.1-3.",
+          "file": "data/research/danky/danky-1998-p179-cricket.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Cricket: Black Music in Evolution, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 179 (entry 1867).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/179/mode/1up"
+        }
+      ]
     },
     {
       "id": 70,
@@ -1761,7 +2957,19 @@
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1978: Deliverance Voice, Newark, 1967?-?, Deliverance Publishing House, editor Ralph Michel. IC-CW July/Aug 1978.",
+          "file": "data/research/danky/danky-1998-p190-deliverance-voice.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Deliverance Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 190 (entry 1978).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/190/mode/1up"
+        }
+      ]
     },
     {
       "id": 71,
@@ -1785,7 +2993,19 @@
       "isActive": false,
       "decade": "1950s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20040207",
+          "caption": "Earliest Wayback capture of wms-amec.org",
+          "file": "data/research/wayback/clean/071-the-missionary-magazine-20040207205909.png",
+          "rightsStatus": "crop_first",
+          "citation": "The Missionary Magazine, website capture, 20040207.",
+          "url": "https://web.archive.org/web/20040207205909/http://www.wms-amec.org:80/"
+        }
+      ]
     },
     {
       "id": 72,
@@ -1809,7 +3029,19 @@
       "isActive": false,
       "decade": "1950s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2945: Hours After, biweekly, Newark, editor Tiny Prince. WHi 4 Apr 1951.",
+          "file": "data/research/danky/danky-1998-p280-hours-after.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Hours After, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 280 (entry 2945).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/280/mode/1up"
+        }
+      ]
     },
     {
       "id": 73,
@@ -1833,7 +3065,39 @@
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 6142: Utimme Umana/La Voz Oculta, six times a year, Trenton State College. NN-Sc Nov/Dec 1985-Nov 1993.",
+          "file": "data/research/danky/danky-1998-p587-utimme.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Utimme Umana/La Voz Oculta, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 587 (entry 6142).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/587/mode/1up"
+        },
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1976-04-23",
+          "caption": "Trenton Times: Utimme Umana/La Voz Oculta named as the weekly minority publication on the Trenton State campus.",
+          "file": "data/research/newspapers-com/downloads/trenton-times_1976-04-23_p8_utimme-umana.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Trenton Times / The Times, 1976-04-23, p. 8.",
+          "url": "https://www.newspapers.com/image/1192937414/"
+        },
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1993-09-27",
+          "caption": "Trenton Times campus guide lists Utimme Umana/La Voz Oculta as the minority magazine.",
+          "file": "data/research/newspapers-com/downloads/trenton-times_1993-09-27_p32_utimme-umana.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Trenton Times / The Times, 1993-09-27, p. 32.",
+          "url": "https://www.newspapers.com/image/1197515771/"
+        }
+      ]
     },
     {
       "id": 74,
@@ -1857,7 +3121,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1166: BootStrap, Newark, Interracial Council for Business Opportunity, Bernard H. Saperstein. NN-Sc Aug/Sept 1983.",
+          "file": "data/research/danky/danky-1998-p113-bootstrap.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Bootstrap, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 113 (entry 1166).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/113/mode/1up"
+        }
+      ]
     },
     {
       "id": 75,
@@ -1881,7 +3157,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4216: The Network, six times a year, Newark, African-American Institute of Islamic Research, editor Zain A. Abdullah. NN-Sc Jan 1991.",
+          "file": "data/research/danky/danky-1998-p405-network.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Network: The Newsletter of the African-American Institute of Islamic Research, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 405 (entry 4216).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/405/mode/1up"
+        }
+      ]
     },
     {
       "id": 76,
@@ -1905,7 +3193,19 @@
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4335: Newark Community Union Project News, irregular, Newark, 1963?-1965?, housing. WHi 1962-1965 Pam 1719.",
+          "file": "data/research/danky/danky-1998-p417-ncup.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Newark Community Union Project News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 417 (entry 4335).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/417/mode/1up"
+        }
+      ]
     },
     {
       "id": 77,
@@ -1929,7 +3229,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 935: Black New Jersey Magazine, bimonthly, Atlantic City, Barbara Johnson. NN-Sc Mar/Apr 1988.",
+          "file": "data/research/danky/danky-1998-p91-black-nj-magazine.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black New Jersey Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 91 (entry 935).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/91/mode/1up"
+        }
+      ]
     },
     {
       "id": 78,
@@ -1953,7 +3265,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2462: Fotorama, bimonthly, River Edge, Swank Publications. Premiere issue. WHi n.1 1993.",
+          "file": "data/research/danky/danky-1998-p235-fotorama.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Fotorama, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 235 (entry 2462).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/235/mode/1up"
+        }
+      ]
     },
     {
       "id": 79,
@@ -1977,7 +3301,19 @@
       "isActive": false,
       "decade": "1940s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2907: The Hiram Star-News, biweekly, Vauxhall, editor Ada Smith. Howard holds 1951 issues.",
+          "file": "data/research/danky/danky-1998-p277-hiram-star-news.png",
+          "rightsStatus": "metadata_only",
+          "citation": "The Hiram Star-News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 277 (entry 2907).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/277/mode/1up"
+        }
+      ]
     },
     {
       "id": 80,
@@ -2001,7 +3337,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2345: Fire II, annual, Trenton State College, editor Gabrielle Lynn McLemore. WHi v.9 Feb 1983.",
+          "file": "data/research/danky/danky-1998-p224-fire-ii.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Fire II, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 224 (entry 2345).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/224/mode/1up"
+        }
+      ]
     },
     {
       "id": 81,
@@ -2025,7 +3373,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4620: ONI, Newark, International Black Women's Congress, Rhashidah Elaine McNeill. NN-Sc Winter/Spring 1988.",
+          "file": "data/research/danky/danky-1998-p443-oni.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "ONI, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 443 (entry 4620).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/443/mode/1up"
+        }
+      ]
     },
     {
       "id": 82,
@@ -2049,7 +3409,19 @@
       "isActive": true,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3020: Hype Hair, bimonthly, Paramus, Word Up! Video, editor Marcia A. Cole. WHi Sept 1993-.",
+          "file": "data/research/danky/danky-1998-p287-hype-hair.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Hype Hair, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 287 (entry 3020).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/287/mode/1up"
+        }
+      ]
     },
     {
       "id": 83,
@@ -2073,7 +3445,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5153: Right On! Focus, quarterly, Cresskill, DS Magazine, editor Cynthia M. Horner. NN-Sc Summer 1983.",
+          "file": "data/research/danky/danky-1998-p494-right-on.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Right On! Focus / Right On! / Right On! Presents Class, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 494 (entry 5153).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/494/mode/1up"
+        }
+      ]
     },
     {
       "id": 84,
@@ -2097,7 +3481,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20200118",
+          "caption": "Wayback capture for Unity and Struggle",
+          "file": "data/research/wayback/clean/084-unity-and-struggle-20200118211629.png",
+          "rightsStatus": "crop_first",
+          "citation": "Unity and Struggle, website capture, 20200118.",
+          "url": "https://web.archive.org/web/20200118211629https://www.marxists.org/history/erol/periodicals/unity-struggle/index.htm"
+        }
+      ]
     },
     {
       "id": 85,
@@ -2121,7 +3517,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 776: Black Book Connection newsletter, bimonthly, West Orange. Motto Your link to Black authors. WHi Sept/Oct 1992.",
+          "file": "data/research/danky/danky-1998-p75-black-book-connection.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Book Connection, Inc. Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 75 (entry 776).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/75/mode/1up"
+        }
+      ]
     },
     {
       "id": 86,
@@ -2145,7 +3553,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5629: Starline, monthly, Paramus, Mary Anne Cassata / Starline Publications. WHi n.114- 1996-.",
+          "file": "data/research/danky/danky-1998-p540-starline.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Starline, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 540 (entry 5629).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/540/mode/1up"
+        }
+      ]
     },
     {
       "id": 87,
@@ -2169,7 +3589,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1936-01-06",
+          "caption": "Courier-Post: CCC Company 1275 at Erlton started a journalism class and turns out a paper, Camp Cooper, regularly. Educational advisor A. W. Reed.",
+          "file": "data/research/newspapers-com/downloads/courier-post_1936-01-06_p3_camp-cooper-paper.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Courier-Post, 1936-01-06, p. 3.",
+          "url": "https://www.newspapers.com/image/447571125/"
+        }
+      ]
     },
     {
       "id": 88,
@@ -2193,7 +3625,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3378: Just for Black Men, bimonthly, Paramus, editor Kate Ferguson, publisher John Blassingame. WHi Jan 1997.",
+          "file": "data/research/danky/danky-1998-p323-just-for-black-men.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Just for Black Men, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 323 (entry 3378).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/323/mode/1up"
+        }
+      ]
     },
     {
       "id": 89,
@@ -2217,7 +3661,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5411: Sixty Niner, monthly 1936-1941?, New Lisbon, Company 235.",
+          "file": "data/research/danky/danky-1998-p518-sixty-niner.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Sixty Niner, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 518 (entry 5411).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/518/mode/1up"
+        }
+      ]
     },
     {
       "id": 90,
@@ -2241,7 +3697,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3604: The Little Ease Echo, monthly 1938-1939, Glassboro, Company 1275-C.",
+          "file": "data/research/danky/danky-1998-p344-little-ease-echo.png",
+          "rightsStatus": "metadata_only",
+          "citation": "The Little Ease Echo, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 344 (entry 3604).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/344/mode/1up"
+        }
+      ]
     },
     {
       "id": 91,
@@ -2265,7 +3733,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3600: The Literary Griot, twice a year, Ousseynou B. Traore, 300 Pompton Road Wayne NJ. Place varies Indiana PA / Paterson NJ. WHi 1989-1992.",
+          "file": "data/research/danky/danky-1998-p343-literary-griot.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Literary Griot, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 343 (entry 3600).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/343/mode/1up"
+        }
+      ]
     },
     {
       "id": 92,
@@ -2289,7 +3769,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1180: Braids & Beauty, quarterly, Paramus, Word Up! Video Productions. WHi Summer 1994-Winter 1995.",
+          "file": "data/research/danky/danky-1998-p114-braids-beauty.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Braids & Beauty, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 114 (entry 1180).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/114/mode/1up"
+        }
+      ]
     },
     {
       "id": 93,
@@ -2313,7 +3805,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5954: Try It Yourself Hair!, bimonthly, Paramus, editor Adrienne Moore. WHi Feb 1994-.",
+          "file": "data/research/danky/danky-1998-p570-try-it-yourself-hair.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Try It Yourself Hair!, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 570 (entry 5954).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/570/mode/1up"
+        }
+      ]
     },
     {
       "id": 94,
@@ -2337,7 +3841,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2023: Dias Creek Echo, monthly 1938, Cape May Courthouse, Company 1275-C, editor Robert Toomer.",
+          "file": "data/research/danky/danky-1998-p194-dias-creek-echo.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Dias Creek Echo, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 194 (entry 2023).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/194/mode/1up"
+        }
+      ]
     },
     {
       "id": 95,
@@ -2361,7 +3877,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5151: Right On!, monthly. Place of publication Hollywood 1971-1982, Cresskill NJ Apr 1983-1989. Founding editor Judy Wieder.",
+          "file": "data/research/danky/danky-1998-p494-right-on.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Right On! Focus / Right On! / Right On! Presents Class, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 494 (entry 5153).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/494/mode/1up"
+        }
+      ]
     },
     {
       "id": 96,
@@ -2385,7 +3913,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5154: Right On! Presents Class, six times a year, Cresskill, DS Magazine, editor Cynthia M. Horner.",
+          "file": "data/research/danky/danky-1998-p494-right-on.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Right On! Focus / Right On! / Right On! Presents Class, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 494 (entry 5153).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/494/mode/1up"
+        }
+      ]
     },
     {
       "id": 97,
@@ -2409,7 +3949,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5148: Rifle Ranger, Fort Dix, Company 3263-C, 8 pages, superseded by Star-gazer.",
+          "file": "data/research/danky/danky-1998-p493-rifle-ranger.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Rifle Ranger, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 493 (entry 5148).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/493/mode/1up"
+        }
+      ]
     },
     {
       "id": 98,
@@ -2433,7 +3985,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1076: Black Voice/Carta Boricua, Piscataway, Paul Robeson Cultural Center.",
+          "file": "data/research/danky/danky-1998-p104-black-voice-carta.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Voice/Carta Boricua, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 104 (entry 1076).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/104/mode/1up"
+        }
+      ]
     },
     {
       "id": 99,
@@ -2457,7 +4021,19 @@
       "isActive": true,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 795: Black Caucus of ALA Newsletter, bimonthly 1971-. Place of publication Pomona, NJ, Sept 1983-Apr 1986. WHi Sept 1983-.",
+          "file": "data/research/danky/danky-1998-p77-bcala.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Caucus of ALA Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 77 (entry 795).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/77/mode/1up"
+        }
+      ]
     },
     {
       "id": 100,
@@ -2481,7 +4057,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3449: Kuumba: The Black Voice Magazine, monthly, New Brunswick, 1974-1975, editor Inga Watkins. NjR Feb-Apr 1975.",
+          "file": "data/research/danky/danky-1998-p329-kuumba.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Kuumba: The Black Voice Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 329 (entry 3449).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/329/mode/1up"
+        }
+      ]
     },
     {
       "id": 101,
@@ -2505,7 +4093,19 @@
       "isActive": false,
       "decade": "1940s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "clip",
+          "source": "newspapers.com",
+          "date": "1991-06-24",
+          "caption": "AP obit: Harry B. Webber, city editor of the New Jersey Herald News, then editor and publisher of After Hours, a Newark magazine, in the 1940s.",
+          "file": "data/research/newspapers-com/downloads/courier-news_1991-06-24_p8_webber-after-hours.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Courier-News, 1991-06-24, p. 8.",
+          "url": "https://www.newspapers.com/image/223216862/"
+        }
+      ]
     },
     {
       "id": 102,
@@ -2529,7 +4129,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky p.131: Camp Berlin Broadcast, 1934?-1935, irregular, Berlin NJ, Company 1275-C, last issue 8 pages.",
+          "file": "data/research/danky/danky-1998-p131-camp-berlin-broadcast.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Camp Berlin Broadcast, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 131 (entry 1356).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/131/mode/1up"
+        }
+      ]
     },
     {
       "id": 103,
@@ -2553,7 +4165,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 6003: Ujamaa, quarterly irregular, Wayne, William Paterson College Black Studies. Editors Lester Forrester and Eva Byrd, Jan 1974. NN-Sc 1971-1974.",
+          "file": "data/research/danky/danky-1998-p575-ujamaa.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Ujamaa: Journal of the Black Students Union, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 575 (entry 6003).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/575/mode/1up"
+        }
+      ]
     },
     {
       "id": 104,
@@ -2577,7 +4201,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 6069: Update, Newark, New Jersey Black Issues Convention. Leftover on p.581. NN-Sc Aug 1984.",
+          "file": "data/research/danky/danky-1998-p580-update.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Update, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 580 (entry 6069).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/580/mode/1up"
+        }
+      ]
     },
     {
       "id": 105,
@@ -2601,7 +4237,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4920: Primer, bimonthly, East Orange, 1973-1978, National Conference of Black and Non-White YMCA Laymen, editor Everette T. Christmas. MnU-A 1973-1978.",
+          "file": "data/research/danky/danky-1998-p472-primer.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Primer, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 472 (entry 4920).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/472/mode/1up"
+        }
+      ]
     },
     {
       "id": 106,
@@ -2625,7 +4273,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4444: NJ-AAHGS Newsletter, monthly except July and August, Elizabeth Peale Johnson, Jersey City. WHi 1994-.",
+          "file": "data/research/danky/danky-1998-p427-nj-aahgs.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "NJ-AAHGS Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 427 (entry 4444).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/427/mode/1up"
+        }
+      ]
     },
     {
       "id": 107,
@@ -2649,7 +4309,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1071: The Black Voice, monthly 1970-1975?, Newark, United Black Workers.",
+          "file": "data/research/danky/danky-1998-p104-black-voice.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Black Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 104 (entry 1071).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/104/mode/1up"
+        }
+      ]
     },
     {
       "id": 108,
@@ -2673,7 +4345,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2163: Educational Perspectives, annual, Cherry Hill, Phi Delta Kappa Eastern Region, editor Rebecca Batts Butler. NN-Sc Dec 1984 and Dec 1985.",
+          "file": "data/research/danky/danky-1998-p207-educational-perspectives.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Educational Perspectives, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 207 (entry 2163).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/207/mode/1up"
+        }
+      ]
     },
     {
       "id": 109,
@@ -2697,7 +4381,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3526: The Liberator, 1970-?, Edison NJ, Middlesex County College Urban Journalism Workshop.",
+          "file": "data/research/danky/danky-1998-p336-liberator-edison.png",
+          "rightsStatus": "metadata_only",
+          "citation": "The Liberator, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 336 (entry 3526).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/336/mode/1up"
+        }
+      ]
     },
     {
       "id": 110,
@@ -2721,7 +4417,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4807: Perspectus News Magazine, monthly, East Orange, The Perspectus Group. NN-Sc Oct 1989.",
+          "file": "data/research/danky/danky-1998-p461-perspectus.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Perspectus News Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 461 (entry 4807).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/461/mode/1up"
+        }
+      ]
     },
     {
       "id": 111,
@@ -2745,7 +4453,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4424: Ngoma, Newark, Harambee Organization. WHi 21 Jan 1972.",
+          "file": "data/research/danky/danky-1998-p425-ngoma.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Ngoma, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 425 (entry 4424).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/425/mode/1up"
+        }
+      ]
     },
     {
       "id": 112,
@@ -2769,7 +4489,29 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1394: Captain Africa, Glen Ridge, 1992-1994, African Prince Productions. Comic books. WHi June 1992 and Feb 1994.",
+          "file": "data/research/danky/danky-1998-p135-captain-africa.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Captain Africa, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 135 (entry 1394).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/135/mode/1up"
+        },
+        {
+          "type": "cover_image",
+          "source": "depth-hunt",
+          "date": "2026-08-19",
+          "caption": "Cover of 'Captain Africa: the Battle for Egyptica,' the 1992 Africa World Press reprint of Dwayne J. Ferguson's Captain Africa comic, originally published by African Prince Productions of Somerville/Glen Ridge, NJ.",
+          "file": "data/research/depth-hunt/files/112-captain-africa-cover-thumb.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Captain Africa, Cover of 'Captain Africa: the Battle for Egyptica,' the 1992 Africa World Press reprint of Dwayne J. Ferguson's Captain Africa comic, originally published by African Prince Productions of Somerville/Glen Ridge, NJ..",
+          "url": "https://archive.org/details/captainafrica00dway"
+        }
+      ]
     },
     {
       "id": 113,
@@ -2793,7 +4535,19 @@
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 6279: Wait, monthly, Trenton, A and S Publishing, editor George S. Adams Jr. WHi v.2 n.2 Feb 1962.",
+          "file": "data/research/danky/danky-1998-p601-wait.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Wait, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 601 (entry 6279).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/601/mode/1up"
+        }
+      ]
     },
     {
       "id": 114,
@@ -2817,7 +4571,29 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 6483: Word Up!, monthly, Paramus, editor Kate Ferguson, publisher Scott Mitchell Figman. WHi Nov 1991; May 1992-.",
+          "file": "data/research/danky/danky-1998-p620-word-up.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Word Up!, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 620 (entry 6483).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/620/mode/1up"
+        },
+        {
+          "type": "auction_photo",
+          "source": "depth-hunt",
+          "date": "2026-08-19",
+          "caption": "A lot of 28 issues of Word Up! magazine (1987-1997), the Paramus, NJ hip-hop teen magazine, photographed for a 2022 Sotheby's 'Art and Influence of Hip Hop' auction.",
+          "file": "data/research/depth-hunt/files/114-word-up-sothebys-lot.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Word Up!, A lot of 28 issues of Word Up! magazine (1987-1997), the Paramus, NJ hip-hop teen magazine, photographed for a 2022 Sotheby's 'Art and Influence of Hip Hop' auction. (image credit: auction listing photo, not for reproduction).",
+          "url": "https://www.sothebys.com/en/buy/auction/2022/hip-hop/a-collection-of-28-issues-of-word-up-magazine-1987"
+        }
+      ]
     },
     {
       "id": 115,
@@ -2841,7 +4617,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3900: Monthly Black Periodicals Selection Review, Newark, True Connection Subscription Agency. WHi Part 1, Section 1-4, 1973?",
+          "file": "data/research/danky/danky-1998-p374-mbpsr.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Monthly Black Periodicals Selection Review, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 374 (entry 3900).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/374/mode/1up"
+        }
+      ]
     },
     {
       "id": 116,
@@ -2865,7 +4653,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3287: The Jersey Heritage, quarterly 1992-1996, Jersey City, editor Elizabeth Peale Johnson.",
+          "file": "data/research/danky/danky-1998-p313-jersey-heritage.png",
+          "rightsStatus": "metadata_only",
+          "citation": "The Jersey Heritage, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 313 (entry 3287).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/313/mode/1up"
+        }
+      ]
     },
     {
       "id": 117,
@@ -2889,7 +4689,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 3139: Inner City Products, quarterly, Piscataway, editor Donnette Bishop Johnson.",
+          "file": "data/research/danky/danky-1998-p298-inner-city-products.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Inner City Products, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 298 (entry 3139).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/298/mode/1up"
+        }
+      ]
     },
     {
       "id": 118,
@@ -2913,7 +4725,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2656: Gospel Today Magazine, bimonthly, Teresa E. Hairston. Place of publication Fort Lee NJ Dec 1990/Jan 1992.",
+          "file": "data/research/danky/danky-1998-p253-gospel-today.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Gospel Today Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 253 (entry 2656).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/253/mode/1up"
+        }
+      ]
     },
     {
       "id": 119,
@@ -2937,7 +4761,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 765: Black Atlantic City Magazine, six times a year, BAC Publishing, editor J. H. Lyles-Belton. NN-Sc Mar/Apr 1986.",
+          "file": "data/research/danky/danky-1998-p74-black-atlantic-city.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Atlantic City Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 74 (entry 765).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/74/mode/1up"
+        }
+      ]
     },
     {
       "id": 120,
@@ -2961,7 +4797,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 6497: Write On Newsletter, quarterly, Saddle Brook, Rejoti Publishing, Veona Thomis. NN-Sc June 1985.",
+          "file": "data/research/danky/danky-1998-p621-write-on.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Write On Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 621 (entry 6497).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/621/mode/1up"
+        }
+      ]
     },
     {
       "id": 121,
@@ -2985,7 +4833,29 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5815: Testimony: A Journal of African-American Poetry, quarterly, Montclair, Sandra West. TNF Winter 1987.",
+          "file": "data/research/danky/danky-1998-p557-testimony.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Testimony: A Journal of African-American Poetry, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 557 (entry 5815).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/557/mode/1up"
+        },
+        {
+          "type": "cover_image",
+          "source": "depth-hunt",
+          "date": "2026-08-19",
+          "caption": "Cover of Testimony: A Journal of African-American Poetry, Vol. 1 (1987), edited by Sandra West, Montclair, NJ.",
+          "file": "data/research/depth-hunt/files/121-testimony.jpg",
+          "rightsStatus": "crop_first",
+          "citation": "Testimony: A Journal of African-American Poetry, Cover of Testimony: A Journal of African-American Poetry, Vol. 1 (1987), edited by Sandra West, Montclair, NJ..",
+          "url": "https://www.abebooks.co.uk/first-edition/Testimony-Journal-African-American-Poetry-Vol-Issue/31778171273/bd"
+        }
+      ]
     },
     {
       "id": 122,
@@ -3009,7 +4879,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2832: The Hart Fund, Newark, 1972-?, The People with William S. Hart for Congressman. WHi v.1 n.1 June 1972.",
+          "file": "data/research/danky/danky-1998-p270-hart-fund.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Hart Fund, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 270 (entry 2832).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/270/mode/1up"
+        }
+      ]
     },
     {
       "id": 123,
@@ -3033,7 +4915,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1012: The Black Sociologist, quarterly, New Brunswick, Transaction Periodicals Consortium, 1972?-1982. ISSN 0160-3566.",
+          "file": "data/research/danky/danky-1998-p98-black-sociologist.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Black Sociologist, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 98 (entry 1012).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/98/mode/1up"
+        }
+      ]
     },
     {
       "id": 124,
@@ -3057,7 +4951,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 698: The Best of Rap & R & B, bimonthly, Nathasha Brooks-Everett, Word Up! Publications, Paramus. Leftover on p.68. NN-Sc July 1994.",
+          "file": "data/research/danky/danky-1998-p67-best-of-rap.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Best of Rap & R&B, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 67 (entry 698).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/67/mode/1up"
+        }
+      ]
     },
     {
       "id": 125,
@@ -3081,7 +4987,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 866: Black Hair Digest, Paramus / River Edge, Word Up! Video, editor Natasha A. Brooks-Everett. WHi Nov 1993-.",
+          "file": "data/research/danky/danky-1998-p84-black-hair-digest.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Hair Digest, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 84 (entry 866).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/84/mode/1up"
+        }
+      ]
     },
     {
       "id": 126,
@@ -3105,7 +5023,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1085: Black Women's United Front Newsletter, Newark, 1976-?. Motto on abolition of oppression. WHi v.1 n.1 8 Mar 1976.",
+          "file": "data/research/danky/danky-1998-p105-bwuf.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Women's United Front Newsletter / Black Women’s United Front Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 105 (entry 1085).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/105/mode/1up"
+        }
+      ]
     },
     {
       "id": 127,
@@ -3129,7 +5059,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1057: Black Truth Bulletin, 1978?-?, NJ, history and Pan-Africanism. NN-Sc n.3 1978.",
+          "file": "data/research/danky/danky-1998-p102-black-truth-bulletin.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Truth Bulletin, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 102 (entry 1057).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/102/mode/1up"
+        }
+      ]
     },
     {
       "id": 128,
@@ -3153,7 +5095,19 @@
       "isActive": false,
       "decade": "Unknown",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "wayback_snapshot",
+          "source": "wayback",
+          "date": "20190419",
+          "caption": "Wayback capture for Newark Black Newspapers Collection | Digital Collections",
+          "file": "data/research/wayback/clean/128-newark-black-newspapers-collection-digital-colle-20190419185835.png",
+          "rightsStatus": "crop_first",
+          "citation": "Newark Black Newspapers Collection | Digital Collections, website capture, 20190419.",
+          "url": "https://web.archive.org/web/20190419185835https://collections.libraries.rutgers.edu/"
+        }
+      ]
     },
     {
       "id": 129,
@@ -3177,7 +5131,19 @@
       "isActive": false,
       "decade": "1950s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1642 starts on p.158: Club World Newsmagazine, 1955?-?, East Orange.",
+          "file": "data/research/danky/danky-1998-p158-club-world.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Club World: Newsmagazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 158 (entry 1642).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/158/mode/1up"
+        }
+      ]
     },
     {
       "id": 130,
@@ -3201,7 +5167,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1748: Communique, quarterly, East Orange, New Jersey Coalition of 100 Black Women, Pamela Miller. NN-Sc Spring 1983.",
+          "file": "data/research/danky/danky-1998-p168-communique.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 168 (entry 1748).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/168/mode/1up"
+        }
+      ]
     },
     {
       "id": 131,
@@ -3225,7 +5203,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1791: The Connection Newspaper, weekly, Teaneck, Ralph F. Johnson. Same Teaneck weekly as id 5. WHi 5 June 1993-.",
+          "file": "data/research/danky/danky-1998-p172-connection-131.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "The Connection Newspaper, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 172 (entry 1791).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/172/mode/1up"
+        }
+      ]
     },
     {
       "id": 132,
@@ -3249,7 +5239,19 @@
       "isActive": false,
       "decade": "1980s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 1839: Corporate Headquarters, quarterly, Westfield, Harold E. Fisher / Terri Fisher, 1985?-1991?. Holdings leftover on p.177.",
+          "file": "data/research/danky/danky-1998-p176-corporate-hq.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Corporate Headquarters, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 176 (entry 1839).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/176/mode/1up"
+        }
+      ]
     },
     {
       "id": 133,
@@ -3273,7 +5275,19 @@
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2512: Freedom Reports, monthly, Newark, United Committee for Political Freedom. WHi Feb, Mar 1966 Pam 84-3848.",
+          "file": "data/research/danky/danky-1998-p240-freedom-reports.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Freedom Reports, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 240 (entry 2512).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/240/mode/1up"
+        }
+      ]
     },
     {
       "id": 134,
@@ -3297,7 +5311,19 @@
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 2199: En Avant, Newark, Haiti/politics. WHi Mar/Apr 1973.",
+          "file": "data/research/danky/danky-1998-p211-en-avant-134.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "En Avant: Bulletin pour le development de la mobilisation patriotique, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 211 (entry 2199).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/211/mode/1up"
+        }
+      ]
     },
     {
       "id": 135,
@@ -3321,7 +5347,29 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5049: Rap Masters: Reader's Choice, monthly, Paramus, editor Natasha Brooks-Everett. WHi Oct 1991; Mar 1992-July 1994.",
+          "file": "data/research/danky/danky-1998-p484-rap-masters.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Rap Masters: Reader’s Choice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 484 (entry 5049).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/484/mode/1up"
+        },
+        {
+          "type": "cover_image",
+          "source": "depth-hunt",
+          "date": "2026-08-19",
+          "caption": "Rap Masters magazine cover, November 1992 issue, published by Faces Magazines, Paramus, NJ.",
+          "file": "data/research/depth-hunt/files/135-rap-masters-nov1992.webp",
+          "rightsStatus": "crop_first",
+          "citation": "Rap Masters: Reader’s Choice, Rap Masters magazine cover, November 1992 issue, published by Faces Magazines, Paramus, NJ..",
+          "url": "https://www.picclickimg.com/7JgAAeSwXudqe3xP/Vintage-Rap-Masters-Magazine-November-1992-Kris-Kross.webp"
+        }
+      ]
     },
     {
       "id": 136,
@@ -3345,7 +5393,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4764: Penn Crusader, monthly 1936-1940, Chatsworth, Company 1284-C, supersedes Ash Can.",
+          "file": "data/research/danky/danky-1998-p457-penn-crusader.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Penn Crusader, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 457 (entry 4764).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/457/mode/1up"
+        }
+      ]
     },
     {
       "id": 137,
@@ -3369,7 +5429,19 @@
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 4839: Pine Needle, monthly 1936-1940?, New Lisbon, Company 0237-C.",
+          "file": "data/research/danky/danky-1998-p464-pine-needle.png",
+          "rightsStatus": "metadata_only",
+          "citation": "Pine Needle, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 464 (entry 4839).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/464/mode/1up"
+        }
+      ]
     },
     {
       "id": 138,
@@ -3393,7 +5465,19 @@
       "isActive": false,
       "decade": "1990s",
       "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false
+      "isFeaturedContemporary": false,
+      "evidence": [
+        {
+          "type": "catalog_record",
+          "source": "danky",
+          "date": "1998",
+          "caption": "Danky entry 5866: Today's Black Woman, nine times a year, Paramus, editor Kate Ferguson. Same Danky record as id 63.",
+          "file": "data/research/danky/danky-1998-p562-todays-black-woman.jpg",
+          "rightsStatus": "metadata_only",
+          "citation": "Today's Black Woman / Today’s Black Woman, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 562 (entry 5866).",
+          "url": "https://archive.org/details/africanamericanne00dank/page/562/mode/1up"
+        }
+      ]
     }
   ]
 }
