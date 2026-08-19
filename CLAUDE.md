@@ -59,7 +59,9 @@ Tailwind CSS via CDN with inline config extending colors and fonts:
 
 ## Deployment
 
-GitHub Actions is disabled for the CenterCoopMedia org, so GitHub Pages builds are stuck. Deploy via SFTP to the CCM WordPress server instead.
+**GitHub Pages is the live site (as of 2026-08-19).** Pages serves the latest push from the `docs/` folder, so **push = deploy**. Live URL: `https://centercoopmedia.github.io/njblackpress/`.
+
+The former production host at `centerforcooperativemedia.org/njblackpress/` is dead — the CCM WordPress server migrated off 37.27.121.163 and the SFTP endpoint no longer exists. Joe confirmed the GitHub Pages URL is the home for now. The SFTP instructions below are retained only for the day CCM hosting returns; do NOT attempt them without a new endpoint from the Nestify dashboard.
 
 **SFTP deploy (from officejawn or houseofjawn):**
 ```bash
@@ -80,10 +82,8 @@ sshpass -p "$PASS" scp -rP $PORT -o StrictHostKeyChecking=no docs/wiki $USER@$HO
 ```
 
 **Live URLs:**
-- Production: `https://centerforcooperativemedia.org/njblackpress/` (WordPress serves the page, static files load from `public_html/njblackpress/`)
-- GitHub Pages (stale): `https://centercoopmedia.github.io/njblackpress/`
-
-**Note:** The WordPress page at `/njblackpress/` renders our `index.html` content within the Brooklyn theme wrapper. JS/CSS/data load via relative paths from the static directory. The bare URL path is handled by WordPress; direct file paths (e.g., `/njblackpress/archive.html`) serve our static files.
+- Production (live): `https://centercoopmedia.github.io/njblackpress/` (GitHub Pages, serves the latest push)
+- Former production (dead): `https://centerforcooperativemedia.org/njblackpress/` (CCM server migrated; may return later)
 
 **Data pipeline caveat:** The JSON has been enriched with fields (`historicalNotes`, `missionStatement`, etc.) that don't exist in the CSV. Do NOT re-run `convert_csv.py` to regenerate the JSON — it will wipe those fields. Edit the JSON directly for metadata changes.
 

@@ -42,6 +42,21 @@ Carry the archive from "captures done, uncommitted" toward launch: safe commit, 
 
 | s22 | Font pick + polish + deploy | director + agents | Joe picked Libre Franklin (no change needed; type-specimen.html deleted, port-8777 server stopped). Polish pass committed (ec43f04): cheat-sheet items on index/archive, 12 caption cleanups, 138→136 metadata counts. DEPLOY BLOCKED: CCM server migrated — old SFTP host 37.27.121.163:4377 is dead on all ports from officejawn AND houseofjawn; DNS now points to 172.236.116.153 (Akamai/Linode) with no SFTP on 22/2222/4377. Live site serves fine (403 to curl is bot-blocking; 200 with browser UA). njinfluencers runbook has the same stale IP. Joe must pull the new SFTP host/port/user from the Nestify dashboard. officejawn checkout is pulled to ec43f04 and ready |
 
+## Overnight grind (Joe left 2026-08-19 evening: "keep working until it's done")
+
+Standing facts: the CCM URL is dead (Joe confirmed); GitHub Pages serves the latest push, so push = deploy. Woven copy now says "the loom", never "the weave" (Joe's directive); fullscreen control added (ebaad54). Woven keeps its name unless Joe overrides.
+
+| ID | Task | Owner | Status |
+| --- | --- | --- | --- |
+| g1 | Close verifiably-done issues #49 #38 #45 #46 #21 with evidence comments | director | done — all five closed 2026-08-19 |
+| g2 | Fix #22 Google Fonts 400 (css2 two-axis tuple bug — confirmed live, fonts DO NOT load), #55 dead decade buttons (data-decade="1880" vs "1880s"), #23 dead HTTPS link (use working http://thenewarktimes.com/ in both publications.json) + wiki template + regen | agent | pending |
+| g3 | New OG images: og-image.png reshoot from redesigned hero (old one has Fraunces/italic/wrong counts), og-woven.png from the loom; point woven.html metas at og-woven.png. MUST run after g2 (fonts affect rendering) | agent | pending |
+| g4 | #48 remainders: border-white/* to walnut hairlines, JS-rendered card styling, letterpress type treatment, WCAG AA contrast check across pages | agent | pending |
+| g5 | #40 era and story pages: at least one era page and one story page live, clippings inline, from stories.json/events.json. Rights rule: images only from docs/data/clippings.json | agent (opus) | pending |
+| g6 | Tailwind migration #15 #18 #19 #20: compile a static stylesheet with the standalone CLI, replace the CDN script + inline config on all pages incl. 248 wiki pages (via generator template + regen). #20 note: org Actions disabled, so rebuild-on-push becomes rebuild-in-regen-script. MUST run last (compiles from final class usage) | agent | pending |
+| g7 | Update CLAUDE.md deploy section (GH Pages is live, SFTP dead), refresh handoff + this plan, update ccm-server-migrated memory | director | pending |
+| g8 | Project board: set status on all closed/open items; post #47 plain-English update covering the grind | director | pending |
+
 ## Rules in force
 
 - All prior standing rulings hold (Right On! exclusion, NJ-only keepers, cropped/cited/cleared before docs/).
