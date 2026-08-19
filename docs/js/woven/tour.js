@@ -53,7 +53,7 @@ export function createTour(app, three, model) {
       position: [camera.position.x, camera.position.y, camera.position.z]
     };
     dimForTour(t);
-    history.replaceState(null, '', `?story=${t.id}`);
+    history.replaceState(null, '', `?story=${encodeURIComponent(t.id)}`);
     app.state.tourId = t.id;
     app.state.stopIndex = 0;
     syncTwin(app.state);

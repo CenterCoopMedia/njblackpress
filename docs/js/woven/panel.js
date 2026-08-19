@@ -74,7 +74,7 @@ export function openPublication(t, model, hooks) {
     ${t.evidence.length ? t.evidence.map(evidenceCard).join('') : '<p>Nothing survives but the catalog entry.</p>'}
     ${t.stories && t.stories.length ? `<h3>Part of these threads</h3>${t.stories.map((s) => `<p><button type="button" class="woven-btn t-play" data-story="${esc(s.id)}">${esc(s.title)}</button></p>`).join('')}` : ''}
     <h3>Full record</h3>
-    <p><a class="link-thread" href="publication.html?id=${t.id}">Open the full record</a></p>`;
+    <p><a class="link-thread" href="publication.html?id=${Number(t.id)}">Open the full record</a></p>`;
   el.hidden = false;
   el.querySelectorAll('.t-play').forEach((b) => {
     b.addEventListener('click', () => hooks.playStory(b.dataset.story));
@@ -93,7 +93,7 @@ export function openEvent(k, model, hooks) {
     ${!related.length ? '<p class="p-meta">Context — not tied to a specific publication.</p>' : ''}
     <p>${esc(e.description)}</p>
     ${e.people && e.people.length ? `<h3>People</h3><p>${esc(e.people.join(', '))}</p>` : ''}
-    ${related.length ? `<h3>Publications</h3>${related.map((t) => `<p><a class="link-thread" href="?pub=${t.id}">${esc(t.name)}</a></p>`).join('')}` : ''}
+    ${related.length ? `<h3>Publications</h3>${related.map((t) => `<p><a class="link-thread" href="?pub=${Number(t.id)}">${esc(t.name)}</a></p>`).join('')}` : ''}
     ${e.sourceFiles && e.sourceFiles.length ? `<h3>Source files</h3>${e.sourceFiles.map((f) => `<p class="p-meta">${esc(f)}</p>`).join('')}` : ''}`;
   el.hidden = false;
   el.querySelector('#woven-panel-title').focus();
