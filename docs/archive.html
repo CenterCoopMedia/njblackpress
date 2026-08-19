@@ -184,7 +184,7 @@
         }
     </style>
 </head>
-<body class="surface-woven bg-ink-900 text-paper-100 font-sans selection:bg-accent selection:text-white antialiased">
+<body class="surface-woven bg-ink-900 text-paper-100 font-sans selection:bg-accent selection:text-linen-50 antialiased">
 
     <!-- Grain Overlay -->
     <div class="grain-overlay fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.07] mix-blend-soft-light"></div>
@@ -198,7 +198,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-40 bg-ink-900/90 backdrop-blur-sm border-b border-white/10">
+    <nav class="fixed top-0 w-full z-40 bg-ink-900/90 backdrop-blur-sm border-b border-walnut-600">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between gap-4">
             <a href="index.html" class="flex items-center gap-2 group shrink-0">
                 <img src="njblackpress-icon.png" alt="NJ Black Press" class="w-8 h-8 transition-transform group-hover:rotate-12">
@@ -220,7 +220,7 @@
             <!-- Finding 7: fixed-nav search affordance (archive page also has a full search
                  bar below, this gives immediate access from the top of a long scroll) -->
             <div class="nav-search-wrap ml-auto md:ml-0">
-                <input type="search" id="nav-search-input" class="nav-search-input bg-ink-800 text-paper-100 font-sans text-sm placeholder-white/40 focus:outline-none focus:border-accent" placeholder="Search the archive…" aria-label="Search publications">
+                <input type="search" id="nav-search-input" class="nav-search-input bg-ink-800 text-paper-100 font-sans text-sm placeholder-thread-400 focus:outline-none focus:border-accent" placeholder="Search the archive…" aria-label="Search publications">
                 <button type="button" id="nav-search-toggle" class="nav-search-toggle w-11 h-11 flex items-center justify-center text-paper-100 hover:text-accent" aria-expanded="false" aria-controls="nav-search-input" aria-label="Open search">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                 </button>
@@ -253,20 +253,20 @@
     <main id="main-content" class="pt-20">
 
         <!-- Hero Header -->
-        <section class="bg-ink-950 border-b border-white/10 py-12 md:py-20 px-4 md:px-8">
+        <section class="bg-ink-950 border-b border-walnut-600 py-12 md:py-20 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
                 <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
                     <div>
                         <h1 class="type-impression font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-normal text-paper-100">The archive</h1>
                         <p class="text-paper-300 mt-4 max-w-xl font-sans text-lg">
-                            A searchable catalog of <span id="hero-total" class="text-accent font-bold">136</span> publications documenting the Black press in New Jersey from <span class="text-white">1880</span> to the present day.
+                            A searchable catalog of <span id="hero-total" class="text-accent font-bold">136</span> publications documenting the Black press in New Jersey from <span class="text-linen-50">1880</span> to the present day.
                         </p>
                     </div>
 
                     <!-- Quick Stats -->
                     <div class="flex gap-8 font-mono text-sm">
                         <div class="text-center">
-                            <div class="text-3xl font-display text-white" id="stat-active">0</div>
+                            <div class="text-3xl font-display text-linen-50" id="stat-active">0</div>
                             <div class="text-paper-300 text-xs uppercase tracking-widest">Active</div>
                         </div>
                         <div class="text-center">
@@ -283,13 +283,13 @@
         </section>
 
         <!-- Sticky Filter Bar -->
-        <section class="sticky-filters border-b border-white/10 py-4 px-4 md:px-8">
+        <section class="sticky-filters border-b border-walnut-600 py-4 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
 
                 <!-- Search Row (always full width) -->
                 <div class="w-full relative mb-3 md:mb-0">
                     <input type="search" id="search-input"
-                        class="w-full md:w-80 bg-ink-800 border border-white/20 focus:border-accent px-4 py-3 md:py-2.5 text-paper-100 font-sans text-base md:text-sm focus:outline-none transition-colors placeholder-paper-300/50"
+                        class="w-full md:w-80 bg-ink-800 border border-walnut-600 focus:border-accent px-4 py-3 md:py-2.5 text-paper-100 font-sans text-base md:text-sm focus:outline-none transition-colors placeholder-paper-300/50"
                         placeholder="Search publications...">
                     <svg class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-paper-300 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -302,7 +302,7 @@
                     <!-- City Dropdown -->
                     <div class="flex-1 min-w-[120px] md:flex-none flex flex-col gap-1">
                         <label for="city-filter" class="font-mono text-[10px] uppercase tracking-widest text-paper-300">City</label>
-                        <select id="city-filter" class="w-full bg-ink-800 border border-white/20 focus:border-accent px-3 py-3 md:py-2.5 text-paper-100 font-mono text-xs uppercase focus:outline-none appearance-none cursor-pointer">
+                        <select id="city-filter" class="w-full bg-ink-800 border border-walnut-600 focus:border-accent px-3 py-3 md:py-2.5 text-paper-100 font-mono text-xs uppercase focus:outline-none appearance-none cursor-pointer">
                             <option value="all">All cities</option>
                         </select>
                     </div>
@@ -310,7 +310,7 @@
                     <!-- Decade Dropdown -->
                     <div class="flex-1 min-w-[120px] md:flex-none flex flex-col gap-1">
                         <label for="decade-filter" class="font-mono text-[10px] uppercase tracking-widest text-paper-300">Decade</label>
-                        <select id="decade-filter" class="w-full bg-ink-800 border border-white/20 focus:border-accent px-3 py-3 md:py-2.5 text-paper-100 font-mono text-xs focus:outline-none appearance-none cursor-pointer">
+                        <select id="decade-filter" class="w-full bg-ink-800 border border-walnut-600 focus:border-accent px-3 py-3 md:py-2.5 text-paper-100 font-mono text-xs focus:outline-none appearance-none cursor-pointer">
                         <option value="all">All decades</option>
                         <option value="1880s">1880s</option>
                         <option value="1890s">1890s</option>
@@ -333,17 +333,17 @@
                     <!-- Status Toggle: "archived" filter value kept stable; label reads "Ceased" (finding 15) -->
                     <div class="flex flex-col gap-1 w-full md:w-auto">
                         <span class="font-mono text-[10px] uppercase tracking-widest text-paper-300">Status</span>
-                        <div class="flex border border-white/20 w-full md:w-auto">
-                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-paper-300 hover:text-white transition-colors active" data-status="all">All</button>
-                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-paper-300 hover:text-white transition-colors border-l border-white/20" data-status="active">Active</button>
-                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-paper-300 hover:text-white transition-colors border-l border-white/20" data-status="archived">Ceased</button>
+                        <div class="flex border border-walnut-600 w-full md:w-auto">
+                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-paper-300 hover:text-linen-50 transition-colors active" data-status="all">All</button>
+                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-paper-300 hover:text-linen-50 transition-colors border-l border-walnut-600" data-status="active">Active</button>
+                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-paper-300 hover:text-linen-50 transition-colors border-l border-walnut-600" data-status="archived">Ceased</button>
                         </div>
                     </div>
 
                     <!-- Sort -->
                     <div class="flex-1 min-w-[120px] md:flex-none flex flex-col gap-1 md:ml-auto">
                         <label for="sort-select" class="font-mono text-[10px] uppercase tracking-widest text-paper-300">Sort by</label>
-                        <select id="sort-select" class="w-full bg-ink-800 border border-white/20 focus:border-accent px-3 py-3 md:py-2.5 text-paper-100 font-mono text-xs uppercase focus:outline-none appearance-none cursor-pointer">
+                        <select id="sort-select" class="w-full bg-ink-800 border border-walnut-600 focus:border-accent px-3 py-3 md:py-2.5 text-paper-100 font-mono text-xs uppercase focus:outline-none appearance-none cursor-pointer">
                             <option value="name">A-Z</option>
                             <option value="year-asc">Oldest founded first</option>
                             <option value="year-desc">Newest founded first</option>
@@ -352,13 +352,13 @@
                     </div>
 
                     <!-- View Toggle: hidden below md by design — mobile always uses the grid layout, so no tap target is needed here. -->
-                    <div class="hidden md:flex border border-white/20">
+                    <div class="hidden md:flex border border-walnut-600">
                         <button id="view-grid" class="view-btn p-2 text-accent" title="Grid view" aria-label="Grid view" aria-pressed="true">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
                             </svg>
                         </button>
-                        <button id="view-list" class="view-btn p-2 text-paper-300 hover:text-white border-l border-white/20" title="List view" aria-label="List view" aria-pressed="false">
+                        <button id="view-list" class="view-btn p-2 text-paper-300 hover:text-linen-50 border-l border-walnut-600" title="List view" aria-label="List view" aria-pressed="false">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                             </svg>
@@ -367,12 +367,12 @@
                 </div>
 
                 <!-- Active Filters & Count -->
-                <div class="flex flex-wrap items-center justify-between mt-4 pt-4 border-t border-white/10 gap-2">
+                <div class="flex flex-wrap items-center justify-between mt-4 pt-4 border-t border-walnut-600 gap-2">
                     <div id="active-filters" class="flex flex-wrap items-center gap-2">
                         <!-- Active filter chips inserted here -->
                     </div>
                     <p class="font-mono text-xs text-paper-300 ml-auto" role="status" aria-live="polite">
-                        Showing <span id="results-showing" class="text-white">0</span> of <span id="results-total" class="text-white">0</span> publications
+                        Showing <span id="results-showing" class="text-linen-50">0</span> of <span id="results-total" class="text-linen-50">0</span> publications
                     </p>
                 </div>
 
@@ -391,7 +391,7 @@
                 <!-- List View -->
                 <div id="results-list" class="hidden space-y-2">
                     <!-- List Header -->
-                    <div class="list-row py-3 border-b border-white/20 font-mono text-xs uppercase tracking-widest text-paper-300 hidden md:grid">
+                    <div class="list-row py-3 border-b border-walnut-600 font-mono text-xs uppercase tracking-widest text-paper-300 hidden md:grid">
                         <span>Publication</span>
                         <span>City</span>
                         <span>Years</span>
@@ -403,9 +403,9 @@
 
                 <!-- Empty State -->
                 <div id="empty-state" class="hidden py-20 text-center">
-                    <div class="inline-block p-8 border border-dashed border-white/20">
+                    <div class="inline-block p-8 border border-dashed border-walnut-600">
                         <p class="font-display text-3xl text-paper-200 mb-4">No publications match your criteria</p>
-                        <button id="clear-all-filters" class="text-accent hover:text-white underline font-mono text-sm uppercase tracking-widest">
+                        <button id="clear-all-filters" class="text-accent hover:text-linen-50 underline font-mono text-sm uppercase tracking-widest">
                             Clear all filters
                         </button>
                     </div>
@@ -413,7 +413,7 @@
 
                 <!-- Load More -->
                 <div id="load-more-container" class="mt-12 text-center hidden">
-                    <button id="load-more-btn" class="px-8 py-4 bg-ink-800 border border-white/20 hover:border-accent hover:text-accent transition-all font-mono text-sm uppercase tracking-widest">
+                    <button id="load-more-btn" class="px-8 py-4 bg-ink-800 border border-walnut-600 hover:border-accent hover:text-accent transition-all font-mono text-sm uppercase tracking-widest">
                         Load More
                     </button>
                 </div>
@@ -424,7 +424,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-ink-950 border-t border-white/10 py-10 px-4 md:px-8">
+    <footer class="bg-ink-950 border-t border-walnut-600 py-10 px-4 md:px-8">
         <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-paper-300 uppercase tracking-wider">
             <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
             <div class="flex gap-6">

@@ -149,7 +149,7 @@
 
         container.innerHTML = `
             <!-- Hero Section -->
-            <section class="relative bg-ink-950 border-b border-white/10 py-16 md:py-24 px-4 md:px-8">
+            <section class="relative bg-ink-950 border-b border-walnut-600 py-16 md:py-24 px-4 md:px-8">
                 <div class="max-w-[1400px] mx-auto">
 
                     <!-- Decorative corner elements -->
@@ -174,7 +174,7 @@
                             </svg>
                             <span class="font-display text-xl">${escapeHtml(pub.city || 'New Jersey')}</span>
                         </div>
-                        <span class="text-white/30">|</span>
+                        <span class="text-thread-400">|</span>
                         <span class="font-mono text-sm tracking-wide">${years}</span>
                     </div>
 
@@ -222,7 +222,7 @@
         if (!mission) return '';
 
         return `
-            <section class="bg-ink-800 border-y border-white/10 py-12 md:py-16 px-4 md:px-8 animate-in delay-4">
+            <section class="bg-ink-800 border-y border-walnut-600 py-12 md:py-16 px-4 md:px-8 animate-in delay-4">
                 <div class="max-w-[1000px] mx-auto">
                     <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Mission statement</h2>
                     <blockquote class="pull-quote font-sans text-xl sm:text-2xl md:text-3xl text-paper-100 leading-relaxed font-light italic">
@@ -249,10 +249,10 @@
 
         return `
             <div class="animate-in delay-4">
-                <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-white/10">Publication details</h2>
+                <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-walnut-600">Publication details</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     ${items.map(item => `
-                        <div class="border-l-2 border-white/10 pl-4">
+                        <div class="border-l-2 border-walnut-600 pl-4">
                             <p class="font-mono text-[10px] uppercase tracking-widest text-paper-300 mb-1">${item.label}</p>
                             <p class="font-sans text-paper-100">${escapeHtml(item.value)}</p>
                         </div>
@@ -311,7 +311,7 @@
 
         return `
             <div class="animate-in delay-5">
-                <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-white/10">Historical notes</h2>
+                <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-walnut-600">Historical notes</h2>
                 <div class="prose prose-invert max-w-none">
                     ${useColumns ? `
                         <div class="columns-1 md:columns-2 gap-8 column-rule space-y-4">
@@ -349,8 +349,8 @@
         }
 
         return `
-            <div class="bg-ink-800 border border-white/10 p-6 animate-in delay-5">
-                <h3 class="font-display text-xl font-bold mb-6 text-center border-b border-white/10 pb-4">
+            <div class="bg-ink-800 border border-walnut-600 p-6 animate-in delay-5">
+                <h3 class="font-display text-xl font-bold mb-6 text-center border-b border-walnut-600 pb-4">
                     <span class="ornament-mark" aria-hidden="true">~</span><span>Masthead</span><span class="ornament-mark" aria-hidden="true">~</span>
                 </h3>
 
@@ -402,7 +402,7 @@
                 <div class="flex flex-wrap gap-2">
                     ${tags.map(tag => `
                         <a href="archive.html?search=${encodeURIComponent(tag)}"
-                           class="px-3 py-1 bg-ink-800 border border-white/10 hover:border-accent hover:text-accent text-paper-300 text-sm font-mono transition-colors">
+                           class="px-3 py-1 bg-ink-800 border border-walnut-600 hover:border-accent hover:text-accent text-paper-300 text-sm font-mono transition-colors">
                             ${escapeHtml(tag)}
                         </a>
                     `).join('')}
@@ -518,7 +518,7 @@
             const note = rightsNote(clip.status || item.rightsStatus);
             const label = hostLabel(item.url);
             return `
-                <figure class="evidence-figure bg-ink-800 border border-white/10 flex flex-col">
+                <figure class="evidence-figure bg-ink-800 border border-walnut-600 flex flex-col">
                     <img src="${escapeAttr(clip.webPath)}"
                          alt="${escapeAttr(clip.alt || caption)}"
                          ${clip.width ? `width="${clip.width}"` : ''} ${clip.height ? `height="${clip.height}"` : ''}
@@ -539,7 +539,7 @@
             const note = rightsNote(item.rightsStatus);
             const label = hostLabel(item.url);
             return `
-                <li class="border-l-2 border-white/10 pl-4 py-1 space-y-1">
+                <li class="border-l-2 border-walnut-600 pl-4 py-1 space-y-1">
                     ${item.caption ? `<p class="measure font-sans text-sm text-paper-200 leading-relaxed">${escapeHtml(item.caption)}</p>` : ''}
                     ${item.citation ? `<p class="measure font-mono text-[11px] text-paper-300 leading-relaxed"><cite class="not-italic" title="${escapeAttr(item.citation)}">${escapeHtml(item.citation)}</cite></p>` : ''}
                     ${note ? `<p class="measure font-mono text-[11px] text-paper-300/80">${escapeHtml(note)}</p>` : ''}
@@ -554,7 +554,7 @@
 
         return `
             <div class="animate-in delay-5">
-                <h2 class="balance font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-white/10">Evidence</h2>
+                <h2 class="balance font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-walnut-600">Evidence</h2>
                 <p class="measure font-mono text-[11px] text-paper-300 mb-6">${escapeHtml(summary)}</p>
                 ${figures ? `<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">${figures}</div>` : ''}
                 ${records ? `<ul class="space-y-5">${records}</ul>` : ''}
@@ -642,7 +642,7 @@
                 </div>
 
                 ${citations.length > 0 ? `
-                    <div class="mt-6 pt-4 border-t border-white/10">
+                    <div class="mt-6 pt-4 border-t border-walnut-600">
                         <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-3">How to cite</p>
                         <ul class="space-y-3">
                             ${citations.map(c => `
@@ -673,13 +673,13 @@
         if (related.length === 0) return '';
 
         return `
-            <section class="bg-ink-950 border-t border-white/10 py-16 px-4 md:px-8">
+            <section class="bg-ink-950 border-t border-walnut-600 py-16 px-4 md:px-8">
                 <div class="max-w-[1400px] mx-auto">
                     <h2 class="font-display text-2xl font-bold mb-8">Related publications</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         ${related.map(r => `
                             <a href="publication.html?id=${r.id}"
-                               class="block bg-ink-900 border border-white/10 hover:border-accent p-6 transition-colors group">
+                               class="block bg-ink-900 border border-walnut-600 hover:border-accent p-6 transition-colors group">
                                 <p class="font-mono text-[10px] uppercase tracking-widest text-paper-300 mb-2">${escapeHtml(r.city || 'NJ')}</p>
                                 <h3 class="font-display text-lg font-bold group-hover:text-accent transition-colors">${escapeHtml(r.name)}</h3>
                                 <p class="font-mono text-xs text-paper-300 mt-2">${formatYears(r)}</p>

@@ -373,35 +373,35 @@
             const tags = pub.tags ? pub.tags.slice(0, 3) : [];
 
             return `
-                <article class="catalog-card bg-ink-800 border border-white/10 hover:border-accent transition-all p-6 fade-in" style="animation-delay: ${Math.min(index * 30, 300)}ms">
+                <article class="catalog-card surface-cloth border border-walnut-600 hover:border-oak-500 transition-all p-6 fade-in" style="animation-delay: ${Math.min(index * 30, 300)}ms">
                     <header class="mb-3">
-                        <span class="font-mono text-xs text-paper-300 index-number">#${String(pub.id).padStart(3, '0')}</span>
+                        <span class="font-mono text-xs text-linen-300 index-number">#${String(pub.id).padStart(3, '0')}</span>
                     </header>
 
                     <a href="publication.html?id=${pub.id}" class="block group">
-                        <h2 class="font-display text-xl font-bold text-paper-100 mb-1 leading-tight group-hover:text-accent transition-colors">
+                        <h2 class="font-display text-xl font-bold text-linen-100 mb-1 leading-tight group-hover:text-accent transition-colors">
                             ${escapeHtml(pub.name)}
                         </h2>
                     </a>
 
-                    <p class="font-mono text-xs text-paper-300 pb-3 border-b border-white/10">
+                    <p class="font-mono text-xs text-linen-300 pb-3 border-b border-walnut-600">
                         ${escapeHtml(pub.city || 'NJ')} &middot; ${years}
                     </p>
 
-                    <p class="text-sm text-paper-200 leading-relaxed py-3 border-b border-white/10">${escapeHtml(oneLiner)}</p>
+                    <p class="text-sm text-linen-200 leading-relaxed py-3 border-b border-walnut-600">${escapeHtml(oneLiner)}</p>
 
                     ${tags.length > 0 ? `
                         <div class="flex flex-wrap gap-1 pt-3">
-                            ${tags.map(t => `<span class="text-[10px] font-mono px-2 py-0.5 bg-white/5 text-paper-300">${escapeHtml(t)}</span>`).join('')}
+                            ${tags.map(t => `<span class="text-[10px] font-mono px-2 py-0.5 bg-walnut-800 text-linen-300">${escapeHtml(t)}</span>`).join('')}
                         </div>
                     ` : ''}
 
-                    <footer class="flex gap-4 mt-4 pt-4 border-t border-white/5">
-                        <a href="publication.html?id=${pub.id}" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors">
+                    <footer class="flex gap-4 mt-4 pt-4 border-t border-walnut-600">
+                        <a href="publication.html?id=${pub.id}" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-linen-50 transition-colors">
                             View record &rarr;
                         </a>
                         ${pub.websiteUrl ? `
-                            <a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-paper-300 hover:text-white transition-colors ml-auto">
+                            <a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-linen-300 hover:text-linen-50 transition-colors ml-auto">
                                 Website
                             </a>
                         ` : ''}
@@ -420,11 +420,11 @@
 
             return `
                 <a href="publication.html?id=${pub.id}"
-                   class="list-row py-4 border-b border-white/10 hover:bg-ink-800 transition-colors px-2 -mx-2 fade-in"
+                   class="list-row py-4 border-b border-walnut-600 hover:bg-ink-800 transition-colors px-2 -mx-2 fade-in"
                    style="animation-delay: ${Math.min(index * 20, 200)}ms">
 
                     <div class="flex items-center gap-3">
-                        <span class="font-mono text-xs text-paper-300 index-number hidden md:inline">#${String(pub.id).padStart(3, '0')}</span>
+                        <span class="font-mono text-xs text-linen-300 index-number hidden md:inline">#${String(pub.id).padStart(3, '0')}</span>
                         <span class="font-display text-lg font-bold text-paper-100 hover:text-accent transition-colors">${escapeHtml(pub.name)}</span>
                     </div>
 

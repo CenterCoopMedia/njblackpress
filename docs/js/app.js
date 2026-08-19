@@ -185,8 +185,8 @@
     const sorted = [...new Set(cities)].filter(Boolean).sort((a, b) => a.localeCompare(b));
 
     elements.cityFilters.innerHTML = `
-      <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="city" data-value="all">All</button>
-      ${sorted.map(city => `<button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="city" data-value="${escapeHtml(city)}">${escapeHtml(city)}</button>`).join('')}
+      <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-paper-300 hover:text-linen-50 transition-colors" data-filter="city" data-value="all">All</button>
+      ${sorted.map(city => `<button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-paper-300 hover:text-linen-50 transition-colors" data-filter="city" data-value="${escapeHtml(city)}">${escapeHtml(city)}</button>`).join('')}
     `;
 
     // Re-cache and re-bind: these buttons didn't exist when setupEventListeners ran.
@@ -209,11 +209,11 @@
 
     // Toggle active state
     const siblings = document.querySelectorAll(`.filter-btn[data-filter="${filterType}"]`);
-    siblings.forEach(sib => sib.classList.remove('active', 'bg-white', 'text-ink-950', 'border-white'));
-    siblings.forEach(sib => sib.classList.add('text-paper-300', 'border-white/20'));
+    siblings.forEach(sib => sib.classList.remove('active', 'bg-walnut-700', 'text-stain-light', 'border-oak-400'));
+    siblings.forEach(sib => sib.classList.add('text-paper-300', 'border-walnut-600'));
     
-    btn.classList.add('active', 'bg-white', 'text-ink-950', 'border-white');
-    btn.classList.remove('text-paper-300', 'border-white/20');
+    btn.classList.add('active', 'bg-walnut-700', 'text-stain-light', 'border-oak-400');
+    btn.classList.remove('text-paper-300', 'border-walnut-600');
 
     // Update state
     state.filters[filterType] = filterValue;
@@ -329,32 +329,32 @@
     const years = pub.yearFounded
       ? `${pub.yearFounded}–${pub.yearCeased ? pub.yearCeased : 'present'}`
       : (pub.isActive ? 'still publishing' : 'dates unknown');
-    const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors border-b border-transparent hover:border-accent">Visit site</a>` : '';
+    const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-linen-50 transition-colors border-b border-transparent hover:border-accent">Visit site</a>` : '';
     // Only show archive link if it's an actual URL (starts with http)
     const hasValidArchiveUrl = pub.archiveUrl && pub.archiveUrl.startsWith('http');
-    const archiveLink = hasValidArchiveUrl ? `<a href="${pub.archiveUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-paper-300 hover:text-white transition-colors border-b border-transparent hover:border-white">Archives</a>` : '';
+    const archiveLink = hasValidArchiveUrl ? `<a href="${pub.archiveUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-linen-300 hover:text-linen-50 transition-colors border-b border-transparent hover:border-oak-500">Archives</a>` : '';
 
     // Build one-line description from available fields
     const oneLiner = getOneLiner(pub);
 
     return `
-      <article class="bg-ink-900 border border-white/10 hover:border-accent transition-colors p-6 flex flex-col h-full group">
+      <article class="surface-cloth border border-walnut-600 hover:border-oak-500 transition-colors p-6 flex flex-col h-full group">
         <a href="publication.html?id=${pub.id}" class="block">
-            <h3 class="font-display text-2xl font-bold text-paper-100 mb-2 leading-tight group-hover:text-accent transition-colors">
+            <h3 class="font-display text-2xl font-bold text-linen-100 mb-2 leading-tight group-hover:text-accent transition-colors">
                 ${escapeHtml(pub.name)}
             </h3>
         </a>
 
-        <p class="font-mono text-xs text-paper-300 border-b border-white/10 pb-4">
+        <p class="font-mono text-xs text-linen-300 border-b border-walnut-600 pb-4">
             ${escapeHtml(pub.city || 'NJ')} &middot; ${years}
         </p>
 
-        <p class="text-sm text-paper-200 leading-relaxed py-4 border-b border-white/10 flex-grow">
+        <p class="text-sm text-linen-200 leading-relaxed py-4 border-b border-walnut-600 flex-grow">
             ${escapeHtml(oneLiner)}
         </p>
 
         <footer class="flex gap-4 mt-auto pt-4">
-            <a href="publication.html?id=${pub.id}" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors border-b border-transparent hover:border-accent">View details</a>
+            <a href="publication.html?id=${pub.id}" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-linen-50 transition-colors border-b border-transparent hover:border-accent">View details</a>
             ${websiteLink}
             ${archiveLink}
         </footer>
@@ -432,11 +432,11 @@
       const buttons = document.querySelectorAll(`.filter-btn[data-filter="${type}"]`);
       buttons.forEach(btn => {
         if(btn.dataset.value === 'all') {
-             btn.classList.add('active', 'bg-white', 'text-ink-950', 'border-white');
-             btn.classList.remove('text-paper-300', 'border-white/20');
+             btn.classList.add('active', 'bg-walnut-700', 'text-stain-light', 'border-oak-400');
+             btn.classList.remove('text-paper-300', 'border-walnut-600');
         } else {
-             btn.classList.remove('active', 'bg-white', 'text-ink-950', 'border-white');
-             btn.classList.add('text-paper-300', 'border-white/20');
+             btn.classList.remove('active', 'bg-walnut-700', 'text-stain-light', 'border-oak-400');
+             btn.classList.add('text-paper-300', 'border-walnut-600');
         }
       });
     }
@@ -459,11 +459,11 @@
     // Reset all filter buttons
     elements.filterButtons.forEach(btn => {
        if(btn.dataset.value === 'all') {
-             btn.classList.add('active', 'bg-white', 'text-ink-950', 'border-white');
-             btn.classList.remove('text-paper-300', 'border-white/20');
+             btn.classList.add('active', 'bg-walnut-700', 'text-stain-light', 'border-oak-400');
+             btn.classList.remove('text-paper-300', 'border-walnut-600');
         } else {
-             btn.classList.remove('active', 'bg-white', 'text-ink-950', 'border-white');
-             btn.classList.add('text-paper-300', 'border-white/20');
+             btn.classList.remove('active', 'bg-walnut-700', 'text-stain-light', 'border-oak-400');
+             btn.classList.add('text-paper-300', 'border-walnut-600');
         }
     });
 
@@ -491,7 +491,7 @@
         <div class="col-span-full text-center py-12 border border-accent/50 bg-accent/5">
           <p class="text-accent font-mono uppercase tracking-widest mb-4">System Error</p>
           <p class="text-paper-300 mb-6 font-sans text-lg">${escapeHtml(message)}</p>
-          <button onclick="location.reload()" class="px-6 py-3 bg-white text-ink-950 font-bold hover:bg-accent hover:text-white transition-colors">
+          <button onclick="location.reload()" class="px-6 py-3 bg-linen-100 text-walnut-950 font-bold hover:bg-stain hover:text-walnut-950 transition-colors">
             Reload System
           </button>
         </div>
