@@ -72,6 +72,23 @@
     0 -1px 0 rgba(168, 145, 121, 0.06);
 }
 
+/* Issue s21 finding 1: tabular numerals on counters that change */
+#stat-publications,
+#stat-cities,
+#stat-active,
+#results-showing,
+#results-total {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Issue s21 finding 2: balanced headings, well-wrapped paragraphs */
+h1, h2 {
+    text-wrap: balance;
+}
+p {
+    text-wrap: pretty;
+}
+
 /* Required texture opt-outs */
 @media (prefers-contrast: more), (forced-colors: active) {
   .surface-woven, .surface-cloth { background-image: none; }
@@ -129,9 +146,11 @@
     transform-origin: bottom;
 }
 
-.timeline-bar:hover {
-    fill: #e2662b !important;
-    transform: scaleY(1.1);
+@media (hover: hover) {
+    .timeline-bar:hover {
+        fill: #e2662b !important;
+        transform: scaleY(1.1);
+    }
 }
 
 /* Smooth Scrolling */
@@ -263,12 +282,18 @@ html, body {
     cursor: pointer;
     min-height: 44px;
 }
-.filter-chip:hover {
-    color: #faf7f0;
-    border-bottom-color: #e2662b;
+@media (hover: hover) {
+    .filter-chip:hover {
+        color: #faf7f0;
+        border-bottom-color: #e2662b;
+    }
 }
 .filter-chip .filter-chip-x {
     color: #e2662b;
+}
+.filter-chip:focus-visible {
+    outline: 2px solid #e2662b;
+    outline-offset: 2px;
 }
 
 /* Issue #44 finding 11: skip-to-content link, matching woven.html's pattern */
