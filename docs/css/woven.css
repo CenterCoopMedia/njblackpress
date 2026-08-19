@@ -1,0 +1,367 @@
+/* Woven — page chrome, twin, panels, tour bar.
+   Tokens come from the Tailwind inline config; this file only holds what
+   utility classes cannot express. No gradients on text, no blur, no shadows. */
+
+:root {
+  --walnut-950: #0b0806;
+  --walnut-900: #14100b;
+  --walnut-800: #1e1811;
+  --walnut-700: #2b2318;
+  --walnut-600: #3b3122;
+  --oak-500: #6b563c;
+  --oak-400: #8a7252;
+  --oak-300: #a89179;
+  --linen-50: #faf7f0;
+  --linen-100: #f3eee2;
+  --linen-200: #e3dccc;
+  --linen-300: #cdc4b1;
+  --thread-400: #a89c85;
+  --thread-500: #7d7261;
+  --stain: #e2662b;
+  --stain-light: #f0854a;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* The nav is fixed, so every in-page jump stops clear of it instead of under it. */
+html { scroll-padding-top: 5.5rem; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+#woven-skip {
+  position: absolute; left: 0; top: 0; z-index: 90;
+  transform: translateY(-120%);
+  background: var(--walnut-700); color: var(--linen-50);
+  padding: 0.75rem 1.25rem; font-family: var(--mono); font-size: 12px;
+}
+#woven-skip:focus { transform: translateY(0); outline: 2px solid var(--stain); outline-offset: 2px; }
+
+/* ---------- first screen ----------
+   The nav is a fixed 5rem band, so the intro and the stage share what is left
+   of the viewport. The stage takes the remainder, which puts the reading window,
+   the era controls, the year rail, and the key on the first screen at 1440x900
+   without anyone scrolling. */
+
+#woven-firstscreen {
+  display: flex; flex-direction: column;
+  min-height: calc(100vh - 5rem);
+  min-height: calc(100dvh - 5rem);
+}
+
+/* No canvas, no first screen to reserve: the list starts right after the intro. */
+body.twin-primary #woven-firstscreen { min-height: 0; }
+
+#woven-intro .intro-grid { display: grid; gap: 0.9rem 2.5rem; align-items: end; }
+@media (min-width: 1024px) {
+  #woven-intro .intro-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
+  #woven-intro .intro-grid p { max-width: 46ch; }
+}
+
+/* ---------- stage ---------- */
+
+#woven-stage { position: relative; flex: 1 1 auto; min-height: 440px; background: var(--walnut-950); border-top: 1px solid var(--walnut-600); border-bottom: 1px solid var(--walnut-600); }
+body.twin-primary #woven-stage { display: none; }
+
+/* Absolutely positioned so the drawing-buffer size can never feed back into
+   page layout through the canvas's intrinsic aspect ratio. */
+#woven-canvas { display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+#woven-canvas:focus-visible { outline: 2px solid var(--stain); outline-offset: 2px; }
+
+/* The two control bars stack in one absolutely positioned block. When the first
+   bar wraps to a second row the second bar moves down with it instead of being
+   printed over. */
+#woven-chrome { position: absolute; top: 0; left: 0; right: 0; z-index: 6; }
+
+#woven-topbar {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.75rem;
+  background: rgba(20, 16, 11, 0.86); border-bottom: 1px solid var(--walnut-600);
+}
+
+.woven-btn {
+  position: relative; background: transparent; border: 1px solid var(--walnut-600);
+  color: var(--linen-200); font-family: var(--mono); font-size: 11px;
+  letter-spacing: 0.12em; padding: 0.45rem 0.8rem; cursor: pointer;
+}
+.woven-btn:hover { border-color: var(--oak-500); color: var(--linen-50); }
+.woven-btn:hover::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background: var(--oak-500); transform: scaleX(1); transform-origin: left;
+}
+.woven-btn::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--oak-500); transform: scaleX(0); transform-origin: left; transition: transform 180ms; }
+.woven-btn:focus-visible { outline: 2px solid var(--stain); outline-offset: 2px; }
+.woven-btn[aria-pressed="true"] { background: var(--walnut-700); border-color: var(--oak-400); color: var(--stain-light); }
+
+#woven-yearrail {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 4;
+  display: flex; justify-content: space-between; padding: 0.35rem 0.75rem;
+  background: rgba(11, 8, 6, 0.9); border-top: 1px solid var(--walnut-600);
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em;
+  color: var(--linen-200); pointer-events: none;
+}
+
+#woven-eranav {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;
+  padding: 0.5rem 0.75rem; background: rgba(20, 16, 11, 0.86);
+  border-bottom: 1px solid var(--walnut-600);
+}
+#woven-era-now { font-family: var(--mono); font-size: 12px; color: var(--linen-100); letter-spacing: 0.06em; }
+/* Says why the page opens on a close-up instead of the whole 146 years. Hidden
+   on the narrowest bar, where the row scrolls sideways and prose would bury the
+   buttons. */
+#woven-eranav-note { display: none; font-family: var(--mono); font-size: 11px; line-height: 1.5; color: var(--linen-300); }
+@media (min-width: 700px) { #woven-eranav-note { display: inline; } }
+
+/* Labels are DOM, sized in real pixels, always on an opaque plate so they never
+   sit unreadably over geometry. */
+#woven-labels, #woven-eras { position: absolute; inset: 0; z-index: 5; pointer-events: none; }
+
+.thread-label {
+  position: absolute; transform: translateY(-50%);
+  display: inline-flex; align-items: baseline; gap: 0.5rem;
+  max-width: 22rem; white-space: nowrap; overflow: hidden;
+  background: rgba(11, 8, 6, 0.92); border-left: 2px solid var(--oak-400);
+  padding: 2px 7px;
+}
+/* When a label runs out of room the name gives way, never the years: half a date
+   reads as a wrong date. */
+.thread-label b {
+  font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; color: var(--linen-50);
+  min-width: 0; overflow: hidden; text-overflow: ellipsis;
+}
+.thread-label i { flex: none; font-family: var(--mono); font-style: normal; font-size: 11px; color: var(--linen-300); }
+.thread-label.is-ghost { border-left-color: var(--thread-500); }
+.thread-label.is-ghost b { color: var(--linen-200); }
+.thread-label.is-hover, .thread-label.is-selected { border-left-color: var(--stain); }
+.thread-label.is-hover b, .thread-label.is-selected b { color: #fff; }
+
+.era-marker {
+  position: absolute; left: 0.75rem; transform: translateY(-50%);
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em;
+  color: var(--linen-100); background: rgba(11, 8, 6, 0.92);
+  border-left: 3px solid var(--oak-500); padding: 3px 8px;
+}
+
+#woven-legend {
+  position: absolute; right: 0.75rem; bottom: 0.75rem; z-index: 6; width: min(23rem, 46vw);
+  background: rgba(11, 8, 6, 0.93); border: 1px solid var(--walnut-600); padding: 0.85rem;
+}
+#woven-legend .lg-lede { font-size: 14px; line-height: 1.5; color: var(--linen-100); margin-bottom: 0.6rem; }
+#woven-legend ul { list-style: none; padding: 0; margin: 0; }
+#woven-legend li { display: flex; align-items: center; gap: 0.55rem; font-size: 13px; line-height: 1.45; color: var(--linen-200); padding: 2px 0; }
+#woven-legend .lg-rows { font-size: 12px; color: var(--linen-300); margin-top: 0.55rem; }
+#woven-legend .lg-toggle { margin-top: 0.6rem; }
+#woven-legend[data-collapsed="true"] .lg-lede,
+#woven-legend[data-collapsed="true"] ul,
+#woven-legend[data-collapsed="true"] .lg-rows { display: none; }
+#woven-legend[data-collapsed="true"] { width: auto; }
+
+/* Docked key. Above 900px the key is a column beside the canvas, never a panel
+   floating over the cloth, so it can never cover a thread row. The chrome bars
+   stop at the dock edge so they line up with the canvas they belong to. */
+@media (min-width: 900px) {
+  #woven-canvas { width: calc(100% - 19rem); }
+  #woven-legend {
+    right: 0; top: 0; bottom: 0; left: auto; width: 19rem; z-index: 7;
+    overflow-y: auto; background: var(--walnut-900);
+    border: 0; border-left: 1px solid var(--walnut-600); padding: 1rem;
+  }
+  #woven-legend .lg-toggle { display: none; }
+  #woven-legend[data-collapsed="true"] .lg-lede,
+  #woven-legend[data-collapsed="true"] ul,
+  #woven-legend[data-collapsed="true"] .lg-rows { display: revert; }
+  #woven-legend[data-collapsed="true"] { width: 19rem; }
+  /* The chrome stops at the dock edge. The tour bar is not in this list: the
+     key is hidden while a tour runs, so the bar takes the full stage width. */
+  #woven-chrome, #woven-yearrail { right: 19rem; }
+}
+.lg-swatch { flex: none; width: 34px; height: 12px; display: block; }
+.lg-thick { background: linear-gradient(90deg, #cdc4b1 0 60%, transparent 60%); height: 7px; }
+.lg-ghost { background: repeating-linear-gradient(90deg, rgba(205,196,177,0.45) 0 4px, transparent 4px 7px); height: 3px; }
+.lg-loose { background: linear-gradient(90deg, #e3dccc 0 55%, rgba(227,220,204,0.35) 55% 100%); height: 4px; }
+.lg-knot { background: none; border: 2px solid var(--stain); border-radius: 50%; width: 12px; height: 12px; }
+
+#woven-tip {
+  position: absolute; z-index: 8; max-width: 20rem; pointer-events: none;
+  background: var(--walnut-700); border: 1px solid var(--walnut-600);
+  padding: 0.5rem 0.7rem; color: var(--linen-200); font-size: 13px; line-height: 1.45;
+}
+#woven-tip[hidden] { display: none; }
+#woven-tip .tip-name { display: block; color: var(--linen-50); font-weight: 600; }
+#woven-tip .tip-meta, #woven-tip .tip-ev { display: block; font-family: var(--mono); font-size: 11px; color: var(--linen-300); }
+
+/* ---------- publication panel ---------- */
+
+#woven-panel {
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(420px, 92vw); z-index: 9;
+  overflow-y: auto; padding: 1.5rem; background: var(--walnut-700);
+  border-left: 1px solid var(--walnut-600); color: var(--linen-200);
+}
+#woven-panel[hidden] { display: none; }
+#woven-panel h2 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 800; font-size: 1.6rem; color: var(--linen-50); line-height: 1.15; padding-right: 5rem; margin-top: 0.4rem; }
+#woven-panel h3 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 700; font-size: 1rem; color: var(--linen-100); margin-top: 1.5rem; }
+#woven-panel p { margin-top: 0.6rem; line-height: 1.6; }
+#woven-panel .p-meta { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--linen-300); }
+#woven-panel .p-close { position: absolute; top: 0.75rem; right: 0.75rem; }
+
+.evidence-card { border: 1px solid var(--walnut-600); padding: 1rem; margin-top: 0.75rem; background: var(--walnut-700); }
+.evidence-card cite { font-family: var(--mono); font-size: 12px; color: var(--linen-300); font-style: normal; display: block; }
+.evidence-card .ev-rights { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; color: var(--stain-light); display: block; margin-bottom: 0.4rem; }
+.evidence-card[data-rights="metadata_only"] { padding: 2rem 1rem; }
+.evidence-card[data-rights="metadata_only"] .shelf-label { font-size: 19px; color: var(--linen-100); padding: 1rem 0; }
+.evidence-card[data-rights="crop_first"] img { border: 1px solid var(--stain); padding: 4px; }
+.evidence-card img { display: block; width: 100%; height: auto; }
+
+.rail-wood {
+  height: 3px; border: 0;
+  background-image:
+    linear-gradient(180deg, #a89179 0%, #8a7252 35%, #6b563c 36%, #6b563c 72%, #3b3122 73%, #2b2318 100%),
+    linear-gradient(90deg, #6b563c 0%, #5e4b34 17%, #6b563c 18%, #6b563c 41%, #5a4830 42%, #6b563c 43%, #6b563c 78%, #604d36 79%, #6b563c 100%);
+  background-blend-mode: multiply;
+}
+
+.link-thread { text-decoration: underline; text-decoration-style: dotted; text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-color: var(--thread-400); color: var(--linen-100); }
+.link-thread:hover { text-decoration-color: var(--stain); }
+
+/* ---------- tour ---------- */
+
+#woven-tourbar {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 9;
+  background: var(--walnut-800); border-top: 3px solid var(--oak-500);
+  padding: 0.7rem 0.9rem; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;
+}
+#woven-tourbar[hidden] { display: none; }
+#woven-tourbar .tour-title { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; color: var(--linen-300); }
+#woven-tourbar .tour-counter { font-family: var(--mono); font-size: 11px; color: var(--linen-100); }
+#woven-rail { display: flex; gap: 3px; }
+#woven-rail i { width: 10px; height: 3px; background: var(--walnut-600); display: block; }
+#woven-rail i.on { background: var(--stain); }
+
+#woven-overlay { position: absolute; z-index: 7; max-width: 26rem; pointer-events: auto; }
+#woven-overlay[hidden] { display: none; }
+#woven-overlay figure { margin: 0; background: var(--walnut-700); border: 1px solid var(--walnut-600); padding: 0.9rem; }
+#woven-overlay figcaption { font-size: 15px; color: var(--linen-100); line-height: 1.5; }
+#woven-overlay cite { display: block; font-family: var(--mono); font-size: 11px; color: var(--linen-300); font-style: normal; margin-top: 0.5rem; user-select: text; }
+#woven-overlay .rights { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--stain); margin-top: 0.4rem; }
+
+#woven-card {
+  position: absolute; left: 0.9rem; bottom: 4.5rem; z-index: 7; max-width: 30rem;
+  /* Never grow up into the era controls; a long stop scrolls instead. */
+  max-height: calc(100% - 11rem); overflow-y: auto;
+  background: var(--walnut-800); border: 1px solid var(--walnut-600); padding: 1rem;
+}
+#woven-card[hidden] { display: none; }
+#woven-card h3 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 800; font-size: 24px; color: var(--linen-50); line-height: 1.15; }
+#woven-card p { font-size: 16px; line-height: 1.6; color: var(--linen-200); margin-top: 0.6rem; }
+#woven-card .flag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--stain); margin-top: 0.5rem; }
+#woven-card .band { font-family: var(--mono); font-size: 11px; color: var(--thread-400); }
+
+#woven-ghostcard, #woven-help-card {
+  position: absolute; inset: auto 0 0 0; top: 0; z-index: 10;
+  display: grid; place-items: center; background: rgba(11, 8, 6, 0.82); padding: 1.5rem;
+}
+#woven-ghostcard[hidden], #woven-help-card[hidden] { display: none; }
+#woven-ghostcard .inner, #woven-help-card .inner { max-width: 34rem; background: var(--walnut-800); border: 1px solid var(--walnut-600); padding: 1.5rem; }
+#woven-ghostcard h3, #woven-help-card h3 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 800; font-size: 28px; color: var(--linen-50); }
+#woven-ghostcard p, #woven-help-card p { margin-top: 0.75rem; line-height: 1.6; color: var(--linen-200); }
+#woven-help-card dl { margin-top: 0.75rem; font-family: var(--mono); font-size: 12px; color: var(--linen-200); }
+#woven-help-card dt { color: var(--linen-50); margin-top: 0.5rem; }
+
+#woven-ghostnames {
+  position: absolute; left: 0.9rem; top: 4.5rem; bottom: 5rem; z-index: 8;
+  width: min(22rem, 60vw); overflow: hidden;
+  background: rgba(20, 16, 11, 0.9); border: 1px solid var(--walnut-600); padding: 1rem;
+}
+#woven-ghostnames[hidden] { display: none; }
+#woven-ghostnames li { color: var(--linen-100); font-size: 15px; line-height: 1.5; }
+#woven-ghostnames .g-place { color: var(--thread-400); font-family: var(--mono); font-size: 11px; }
+
+#woven-notice { position: absolute; left: 0.9rem; top: 4.5rem; z-index: 8; background: var(--walnut-700); border: 1px solid var(--walnut-600); padding: 0.6rem 0.8rem; font-family: var(--mono); font-size: 11px; color: var(--linen-200); }
+#woven-notice[hidden] { display: none; }
+
+/* ---------- twin ---------- */
+
+#woven-banner { border: 1px solid var(--walnut-600); background: var(--walnut-800); padding: 1rem; margin-bottom: 1.5rem; }
+#woven-banner[hidden] { display: none; }
+
+#woven-twin { max-width: 68rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+#woven-twin h2 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 800; font-size: 2rem; color: var(--linen-50); }
+#woven-twin h3 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--linen-100); margin-top: 2rem; }
+#woven-twin h4 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--linen-100); margin-top: 1rem; }
+#woven-twin p { color: var(--linen-200); line-height: 1.65; margin-top: 0.6rem; max-width: 62ch; }
+#woven-twin ol, #woven-twin ul { list-style: none; padding: 0; }
+#woven-twin .era-band { border-top: 1px solid var(--walnut-600); margin-top: 1.5rem; padding-top: 0.5rem; }
+#woven-twin .threads > li { border-bottom: 1px solid var(--walnut-600); }
+#woven-twin .threads > li[aria-current="true"] { border-left: 3px solid var(--stain); padding-left: 0.6rem; }
+#woven-twin .threads > li[data-in-tour="true"] .t-name { color: var(--stain-light); }
+#woven-twin .t-open { display: grid; grid-template-columns: minmax(0, 2fr) 1fr 1fr 1fr 1fr; gap: 0.75rem; width: 100%; text-align: left; background: none; border: 0; color: inherit; padding: 0.7rem 0; cursor: pointer; align-items: baseline; }
+#woven-twin .t-open:focus-visible { outline: 2px solid var(--stain); outline-offset: 2px; }
+#woven-twin .t-name { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 700; font-size: 1rem; color: var(--linen-50); }
+#woven-twin .t-place, #woven-twin .t-years, #woven-twin .t-evidence, #woven-twin .t-state { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--linen-300); }
+#woven-twin li[data-ghost="true"] .t-evidence { color: var(--thread-400); }
+#woven-twin .t-detail { padding: 0 0 1.25rem; }
+#woven-twin .evidence-item { border-left: 1px solid var(--walnut-600); padding: 0.5rem 0 0.5rem 0.75rem; margin-top: 0.5rem; }
+#woven-twin .ev-rights { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; color: var(--stain); }
+#woven-twin cite { font-style: normal; font-family: var(--mono); font-size: 12px; color: var(--linen-300); }
+#woven-twin .events li { display: flex; gap: 0.75rem; padding: 0.35rem 0; flex-wrap: wrap; }
+#woven-twin .events li[aria-current="step"] { border-left: 3px solid var(--stain); padding-left: 0.5rem; }
+#woven-twin .e-date { font-family: var(--mono); font-size: 11px; color: var(--thread-400); min-width: 6.5rem; }
+#woven-twin .e-conf { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--stain); }
+#woven-twin .t-play { background: none; border: 1px solid var(--walnut-600); color: var(--linen-200); font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; padding: 0.35rem 0.7rem; margin-top: 0.5rem; cursor: pointer; }
+#woven-twin .t-play:hover { border-color: var(--oak-500); color: var(--linen-50); }
+#woven-twin .t-play:focus-visible { outline: 2px solid var(--stain); outline-offset: 2px; }
+#woven-twin .tour-list > li, #woven-twin .ghost-list > li { border-bottom: 1px solid var(--walnut-600); padding: 0.9rem 0; }
+#woven-twin .ghost-list > li[aria-current="true"] { border-left: 3px solid var(--stain); padding-left: 0.6rem; }
+#woven-twin .g-name { display: block; font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 700; color: var(--linen-50); }
+#woven-twin .g-place, #woven-twin .g-years { font-family: var(--mono); font-size: 11px; color: var(--linen-300); margin-right: 0.75rem; }
+#woven-twin summary { cursor: pointer; font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--linen-300); margin-top: 0.5rem; }
+#woven-twin .warn { color: var(--stain); font-family: var(--mono); font-size: 12px; }
+#woven-twin .e-desc { color: var(--linen-300); font-size: 14px; }
+
+@media (max-width: 700px) {
+  /* One scrolling row each, so the controls never eat half the stage. */
+  #woven-topbar, #woven-eranav { flex-wrap: nowrap; overflow-x: auto; }
+  #woven-topbar .woven-btn, #woven-eranav .woven-btn { white-space: nowrap; padding: 0.4rem 0.6rem; }
+  #woven-era-now { white-space: nowrap; }
+  .thread-label { max-width: 58vw; }
+  .thread-label b { font-size: 12px; }
+  /* An opened key floats over the cloth here, so it never takes the whole
+     stage: it stops short of the era controls and scrolls inside itself. */
+  #woven-legend { width: auto; max-width: 92vw; max-height: calc(100% - 7.5rem); overflow-y: auto; }
+}
+
+@media (max-width: 640px) {
+  #woven-stage { min-height: 380px; }
+  #woven-twin .t-open { grid-template-columns: 1fr; gap: 0.15rem; }
+  #woven-panel { width: 100%; }
+  #woven-ghostnames { width: calc(100% - 1.8rem); }
+  #woven-card { max-width: calc(100% - 1.8rem); }
+}
+
+/* Short windows — a laptop at 1280x620, a phone turned sideways. The intro gives
+   back its padding and the stage gives back its floor so the whole first screen
+   still fits without scrolling. Last in the file so it wins over the width
+   rules above. */
+@media (max-height: 700px) {
+  #woven-intro { padding-top: 0.6rem; padding-bottom: 0.6rem; }
+  #woven-intro .intro-grid { gap: 0.5rem 2.5rem; }
+  #woven-stage { min-height: 320px; }
+}
+@media (max-height: 600px) {
+  #woven-intro { padding-top: 0.35rem; padding-bottom: 0.35rem; }
+  #woven-intro .rail-wood { margin-top: 0.5rem; }
+  #woven-intro p { font-size: 0.8125rem; line-height: 1.45; }
+  #woven-stage { min-height: 285px; }
+}
+@media (max-height: 520px) {
+  #woven-stage { min-height: 260px; }
+  #woven-legend { max-height: calc(100% - 6rem); overflow-y: auto; }
+}
+
+@media (prefers-contrast: more), (forced-colors: active) {
+  .rail-wood { background-image: none; background-color: CanvasText; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .woven-btn::after { transition: none; }
+}

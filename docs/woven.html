@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Woven — one hundred and forty-six years of the New Jersey Black press, drawn as a single cloth on a loom. Every cross thread is a publication.">
+    <meta name="author" content="Center for Cooperative Media">
+
+    <meta property="og:title" content="Woven | NJ Black Press Archive">
+    <meta property="og:description" content="One hundred and forty-six years of the New Jersey Black press, woven once.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://centercoopmedia.github.io/njblackpress/woven.html">
+    <meta property="og:image" content="https://centercoopmedia.github.io/njblackpress/og-image.png">
+    <meta property="og:site_name" content="NJ Black Press Archive">
+
+    <title>Woven | NJ Black Press Archive</title>
+
+    <link rel="canonical" href="https://centercoopmedia.github.io/njblackpress/woven.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&family=Libre+Franklin:wght@400..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        walnut: { 950: '#0b0806', 900: '#14100b', 800: '#1e1811', 700: '#2b2318', 600: '#3b3122' },
+                        oak: { 500: '#6b563c', 400: '#8a7252', 300: '#a89179' },
+                        linen: { 50: '#faf7f0', 100: '#f3eee2', 200: '#e3dccc', 300: '#cdc4b1' },
+                        thread: { 400: '#a89c85', 500: '#7d7261' },
+                        stain: { DEFAULT: '#e2662b', light: '#f0854a', deep: '#8f3a14' },
+                        ink: { 950: '#0b0806', 900: '#14100b', 800: '#1e1811', 700: '#2b2318', 600: '#3b3122' },
+                        paper: { 50: '#faf7f0', 100: '#f3eee2', 200: '#e3dccc', 300: '#cdc4b1' },
+                        accent: { DEFAULT: '#e2662b', hover: '#8f3a14', light: '#f0854a' }
+                    },
+                    fontFamily: {
+                        'display': ['Libre Franklin', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        'sans': ['DM Sans', 'sans-serif'],
+                        'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'noise': "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.9\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\" opacity=\"0.05\"/%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/woven.css">
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three-0.171.0/three.module.min.js",
+        "three/addons/": "./vendor/three-0.171.0/addons/"
+      },
+      "integrity": {
+        "./vendor/three-0.171.0/three.module.min.js": "sha384-nMDT6MQtyrbFXD89PryBsu+fdRtrBVn1ot0qcqb1ddUN9CM9WlcU0mqv0ZW7zgXD"
+      }
+    }
+    </script>
+</head>
+<body class="surface-woven bg-walnut-900 text-linen-100 font-sans antialiased">
+
+    <a id="woven-skip" href="#woven-twin">Skip the weave, read the archive as a list</a>
+
+    <div class="grain-overlay fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.07] mix-blend-soft-light"></div>
+
+    <nav class="fixed top-0 w-full z-40 bg-walnut-900 border-b border-walnut-600">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="njblackpress-icon.png" alt="" class="w-8 h-8">
+                <span class="font-display font-bold text-xl tracking-wide group-hover:text-stain transition-colors">NJ Black Press</span>
+            </a>
+            <ul class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
+                <li><a href="index.html#featured" class="hover:text-stain transition-colors">Historic</a></li>
+                <li><a href="index.html#timeline" class="hover:text-stain transition-colors">Timeline</a></li>
+                <li><a href="archive.html" class="hover:text-stain transition-colors">Archive</a></li>
+                <li><a href="wiki/index.html" class="hover:text-stain transition-colors">Wiki</a></li>
+                <li><a href="woven.html" aria-current="page" class="text-stain">Woven</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <div id="woven-firstscreen">
+        <section id="woven-intro" class="max-w-[1400px] mx-auto w-full px-4 md:px-8 py-5 md:py-6">
+            <div class="intro-grid">
+                <div class="intro-head">
+                    <h1 class="font-display font-extrabold leading-[1.05] text-linen-50" style="font-size: clamp(1.6rem, 2.9vw, 2.55rem);">A hundred and forty-six years, woven once</h1>
+                    <hr class="rail-wood mt-4 max-w-md">
+                </div>
+                <p class="text-base leading-relaxed text-linen-200">Every cross thread here is one publication, starting the year it was founded and ending the year it stopped. The thicker the thread, the more of that paper we have actually found and can show you. The threads that run past the edge of the loom belong to the <span data-count="still">…</span> papers still publishing today. The thin, fraying ones belong to the <span data-count="ghost">…</span> we know only from a line in a librarian's catalog.</p>
+            </div>
+        </section>
+
+        <div id="woven-stage">
+            <canvas id="woven-canvas" role="application" tabindex="0"
+                    aria-label="The loom. Every horizontal thread is one New Jersey Black publication, drawn from the year it was founded to the year it stopped. Use the arrow keys to move between publications and decades, or read the same records as a list below."></canvas>
+
+            <div id="woven-chrome">
+            <div id="woven-topbar">
+                <button type="button" class="woven-btn" id="btn-help">About this weave</button>
+                <button type="button" class="woven-btn" id="btn-tours">Guided threads</button>
+                <button type="button" class="woven-btn" id="btn-ghost">Show what did not survive</button>
+                <button type="button" class="woven-btn" id="btn-reset">Reset the view</button>
+                <a class="woven-btn" href="#woven-twin">Read the archive as a list</a>
+            </div>
+
+            <div id="woven-eranav">
+                <button type="button" class="woven-btn" id="btn-era-prev">Earlier decades</button>
+                <span id="woven-era-now"></span>
+                <button type="button" class="woven-btn" id="btn-era-next">Later decades</button>
+                <button type="button" class="woven-btn" id="btn-whole">Zoom out to all <span data-count="total">…</span></button>
+                <span id="woven-eranav-note">You start close in on one decade so the names can be read. Zoom out to see the whole cloth at once.</span>
+            </div>
+            </div>
+
+            <div id="woven-yearrail" aria-hidden="true"></div>
+            <div id="woven-tip" role="presentation" hidden></div>
+            <div id="woven-notice" role="status" hidden></div>
+
+            <div id="woven-overlay" hidden></div>
+            <div id="woven-card" hidden></div>
+            <div id="woven-ghostnames" hidden></div>
+            <div id="woven-ghostcard" hidden></div>
+            <div id="woven-help-card" hidden></div>
+
+            <aside id="woven-panel" role="dialog" aria-modal="false" aria-labelledby="woven-panel-title" hidden></aside>
+
+            <div id="woven-tourbar" hidden></div>
+        </div>
+        </div>
+
+        <div id="woven-live" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+        <div id="woven-live-assertive" aria-live="assertive" class="sr-only"></div>
+
+        <div class="max-w-[68rem] mx-auto px-4 pt-8">
+            <div id="woven-banner" role="status" hidden>
+                <p class="banner-text"></p>
+                <p class="mt-2"><a class="link-thread" href="archive.html">Open the full archive</a> · <a class="link-thread" href="index.html#timeline">Open the decade timeline</a></p>
+            </div>
+        </div>
+
+        <div id="woven-twin" role="region" aria-labelledby="woven-twin-h"></div>
+
+        <noscript>
+            <div class="max-w-[68rem] mx-auto px-4 py-12">
+                <p>The weave is drawn with JavaScript. The same publications, their dates, and their evidence are on the archive page.</p>
+                <p class="mt-3"><a class="link-thread" href="archive.html">Open the full archive</a> · <a class="link-thread" href="index.html#timeline">Open the decade timeline</a></p>
+            </div>
+        </noscript>
+
+        <footer class="bg-walnut-900 border-t border-walnut-600 pt-12 pb-10 px-4 md:px-8">
+            <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start gap-4 text-xs font-mono text-linen-300 uppercase tracking-wider">
+                <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
+                <div class="flex gap-6">
+                    <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener noreferrer" class="hover:text-stain">CCM</a>
+                    <a href="https://github.com/CenterCoopMedia" target="_blank" rel="noopener noreferrer" class="hover:text-stain">GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script type="module" src="js/woven/main.js"></script>
+    <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
