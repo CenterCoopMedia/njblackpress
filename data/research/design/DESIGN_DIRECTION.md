@@ -384,3 +384,27 @@ Addendum. Date: 2026-08-19. Full list and rationale: `data/research/design/AI_SL
 No eyebrow text (a small all-caps kicker line floating above a heading). No italics in hero or display titles. No status pills or badges — status is plain text inside the sentence that already carries it, such as the lifespan line. No serif anywhere — no serif display face, no serif body; the only permitted serif use is quoted archival material, if it is ever needed at all. DM Sans carries all running copy and all quotation. No purple or indigo, no gradient fills or gradient text, no glassmorphism, no emoji as icons or bullets, no uniform rounded-2xl-plus-shadow cards, no centered-hero-plus-pill-CTA formula, no three/four-feature-card marketing rows, no decorative icon spam, no hype microcopy, no glowing neon accents, no bento grids, no floating blobs, no fake testimonials, no cursor-following effects, no unstyled Tailwind/shadcn defaults.
 
 Mono, uppercase, tracking-wide labels stay where they are load-bearing metadata inside the component they describe — a filter group, a provenance line, a rights label — never as a preamble line floating above a heading for atmosphere.
+
+## Intuitive UI checklist (added 2026-08-19, per Joe)
+
+Source references from Joe: uxdesigninstitute.com "How to design intuitive user interfaces" and interfacecraft.dev (paid library, principles to be folded in if access is obtained). These are working rules for every page and for Woven.
+
+Consistency: identical visual treatment for the same element type on every page — one nav, one card grammar, one label style — so a reader's first page teaches the rest.
+Simplicity: cut elements before shrinking them; every control on screen must earn its place against reader cognitive load.
+Common standards: never reinvent a known interaction (search, filters, close, back). The reader's habits are part of the interface.
+Feedback: every action gets a visible response — active filter chips, result counts, focus states, aria-live announcements.
+Discoverability: primary functions (search, navigation) live in the fixed chrome on every page, never buried down-page.
+Affordances: controls look like what they do; hit areas at least 44px on touch surfaces.
+Forgiveness: every filter and state is removable in one action; deep links preserve state so nothing is lost by navigating.
+Accessibility as a standard, not a mode: non-color cues, screen-reader names on all controls, reduced-motion respected, keyboard-complete.
+
+Applied in the 2026-08-19 usability pass: nav search (discoverability), filter chips (feedback + forgiveness), "Ceased" over "Archived" (common standards), labeled filters and aria-names (accessibility), 44px event buttons on phones (affordances).
+
+## Execution cheat sheet (added 2026-08-19, per Joe, from interfaces.dev/cheat-sheet)
+
+Typography: woff2 only. tabular-nums on any number that changes (stat counters, results counts). 60–75ch measure on long-form text. text-wrap: balance on headings, pretty on paragraphs. Store copy in natural case, present with text-transform. Curly quotes, en dash for ranges, em dash for asides. Keep truncated text reachable (tooltip or expansion).
+Color: semantic tokens only (--color-text-secondary), never primitive names in components. Accent = brand only. Dark palette is designed, not inverted. Measure contrast against the actual rendered background.
+Accessibility: native button/a elements. :focus-visible styled, never bare outline:none. aria-label on every icon button. Alt text by purpose, decorative images alt="". Real labels + type + inputmode on inputs. Never block paste. Hit areas 44px touch / 40px desktop, non-overlapping. Hover styling behind @media (hover: hover). Motion inside @media (prefers-reduced-motion: no-preference). role="status" for routine updates, role="alert" for errors. Status never by color alone. Skip link first focusable; scroll-margin-top on anchored headings.
+Animation: never transition: all. Pressed buttons scale 0.95–0.98, ~200ms ease-out. Transitions for interruptible actions, keyframes for one-shots. Disable transitions during theme swaps. No animating high-frequency hovers in lists.
+Layout: gap between groups at least twice the gap within (8px in, 16px+ between). Logical properties (margin-inline) over left/right. No fixed dimensions on text containers.
+Writing: verb-first button labels ("Save draft"). Confirmation buttons repeat the consequence. Link text names the destination, never "click here". Sentence case. Empty states orient and offer one next action. Address the reader as "you".

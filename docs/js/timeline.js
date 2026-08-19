@@ -123,7 +123,7 @@
       const ceasedSegPct = total > 0 ? (decade.ceasedCount / total) * 100 : 0;
 
       const ariaLabel = `${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ` +
-        `${decade.activeCount} active, ${decade.eventCount} recorded event${decade.eventCount === 1 ? '' : 's'}. ` +
+        `${decade.activeCount} publishing in the ${decade.label}, ${decade.eventCount} recorded event${decade.eventCount === 1 ? '' : 's'}. ` +
         `Press enter to filter the archive by this decade.`;
 
       return `
@@ -148,7 +148,7 @@
             <div class="text-xs font-mono text-linen-300 space-y-1 border-t border-walnut-600 pt-2">
               <p><span class="text-linen-50">${decade.foundedCount}</span> founded</p>
               <p><span class="text-linen-50">${decade.ceasedCount}</span> ceased</p>
-              <p><span class="text-linen-50">${decade.activeCount}</span> active</p>
+              <p><span class="text-linen-50">${decade.activeCount}</span> publishing in the ${decade.label}</p>
               <p><span class="text-linen-50">${decade.eventCount}</span> recorded event${decade.eventCount === 1 ? '' : 's'}</p>
             </div>
           </div>
@@ -179,6 +179,19 @@
       `;
     }).join('');
 
+    // Issue #44 finding 4: below 768px the per-decade dot buttons are too
+    // narrow to tap (14px wide across 15 decades). Replace them with a
+    // stacked list of full-width buttons, one per decade that has events.
+    const mobileEventsHtml = decadeData
+      .filter(decade => decade.eventCount > 0)
+      .map(decade => `
+        <button type="button"
+                class="mobile-decade-events-btn w-full text-left px-4 py-3 min-h-[44px] bg-walnut-800/60 border border-walnut-600 text-linen-100 font-sans text-sm hover:border-stain transition-colors"
+                data-decade="${decade.label}">
+          Read the ${decade.eventCount} event${decade.eventCount === 1 ? '' : 's'} from the ${decade.label}
+        </button>
+      `).join('');
+
     const labelsHtml = decadeData.map(decade => `
       <span class="flex-1 text-center font-mono text-[8px] md:text-[10px] text-linen-300 whitespace-nowrap">
         ${decade.label}
@@ -190,8 +203,11 @@
         ${barsHtml}
       </div>
       <div class="rail-wood w-full mt-2"></div>
-      <div class="flex items-start justify-between w-full ${barGap} mt-2" role="group" aria-label="Recorded events by decade">
+      <div class="hidden md:flex items-start justify-between w-full ${barGap} mt-2" role="group" aria-label="Recorded events by decade">
         ${incidentsHtml}
+      </div>
+      <div class="flex md:hidden flex-col gap-2 mt-4" role="group" aria-label="Recorded events by decade">
+        ${mobileEventsHtml || '<p class="font-sans text-sm text-linen-300">No recorded events yet.</p>'}
       </div>
       <div class="flex justify-between w-full ${barGap} mt-2">
         ${labelsHtml}
@@ -204,6 +220,13 @@
   function announce(text) {
     const live = document.getElementById('timeline-live');
     if (live) live.textContent = text;
+  }
+
+  // Issue #44 finding 8: respect prefers-reduced-motion when scrolling
+  // a revealed panel into view.
+  function scrollBehavior() {
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    return reduced ? 'auto' : 'smooth';
   }
 
   function setupEventListeners() {
@@ -220,14 +243,14 @@
       btn.addEventListener('focus', () => {
         const decade = decadeData.find(d => d.label === btn.dataset.decade);
         if (decade) {
-          announce(`${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ${decade.activeCount} active, ${decade.eventCount} recorded events.`);
+          announce(`${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ${decade.activeCount} publishing in the ${decade.label}, ${decade.eventCount} recorded events.`);
         }
       });
 
       btn.addEventListener('mouseenter', () => {
         const decade = decadeData.find(d => d.label === btn.dataset.decade);
         if (decade) {
-          announce(`${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ${decade.activeCount} active, ${decade.eventCount} recorded events.`);
+          announce(`${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ${decade.activeCount} publishing in the ${decade.label}, ${decade.eventCount} recorded events.`);
         }
       });
 
@@ -259,6 +282,11 @@
           btn.click();
         }
       });
+    });
+
+    // Mobile full-width "Read the N events from the 1930s" buttons (finding 4)
+    document.querySelectorAll('.mobile-decade-events-btn[data-decade]').forEach(btn => {
+      btn.addEventListener('click', () => showDecadeEvents(btn.dataset.decade));
     });
 
     // Decade nav buttons
@@ -326,7 +354,41 @@
         </div>
     `;
 
-    details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    details.scrollIntoView({ behavior: scrollBehavior(), block: 'nearest' });
+  }
+
+  // Issue #44 finding 21: events.json has no separate "sourcing note" field —
+  // verification prose (source disagreements, unresolved dates, house boasts
+  // the archive hasn't confirmed) is written inline as sentences inside
+  // `description`. We detect those sentences by content and move them into
+  // a <details> disclosure so the main description reads clean.
+  const SOURCING_NOTE_PATTERNS = [
+    /sources? (conflict|disagree|differ)/i,
+    /no (read )?source (gives|dates|names|confirms)/i,
+    /the archive has (not|n't) verified/i,
+    /has not been verified/i,
+    /is unsettled/i,
+    /is not settled/i,
+    /not (part of )?this event/i,
+    /a house boast/i,
+    /remains unclear/i,
+    /unverified/i,
+    /length of its run is/i
+  ];
+
+  function splitSourcingNote(description) {
+    if (!description) return { main: '', note: '' };
+    // Split into sentences, keeping the trailing period with each sentence.
+    const sentences = description.match(/[^.]+\.(?=\s|$)|[^.]+$/g) || [description];
+    const main = [];
+    const note = [];
+    sentences.forEach(sentence => {
+      const trimmed = sentence.trim();
+      if (!trimmed) return;
+      const isNote = SOURCING_NOTE_PATTERNS.some(pattern => pattern.test(trimmed));
+      (isNote ? note : main).push(trimmed);
+    });
+    return { main: main.join(' '), note: note.join(' ') };
   }
 
   function showDecadeEvents(decadeLabel) {
@@ -340,6 +402,25 @@
 
     const listItems = decade.events.map(evt => {
       const isMedium = evt.confidence !== 'high';
+      const { main, note } = splitSourcingNote(evt.description);
+
+      // Finding 20: link resolvable publicationIds to their detail page.
+      const relatedPubs = (evt.publicationIds || [])
+        .map(pid => publications.find(p => p.id === pid))
+        .filter(Boolean);
+      const relatedHtml = relatedPubs.length > 0
+        ? `<p class="font-mono text-xs text-paper-300 mt-2">Publication: ${relatedPubs.map(p =>
+            `<a href="publication.html?id=${p.id}" class="link-thread hover:text-accent">${escapeHtml(p.name)}</a>`
+          ).join(', ')}</p>`
+        : '';
+
+      const noteHtml = note
+        ? `<details class="mt-2">
+             <summary class="font-mono text-[10px] uppercase tracking-widest text-linen-300 cursor-pointer hover:text-stain">Sourcing note</summary>
+             <p class="font-sans text-sm text-paper-300 leading-relaxed mt-2">${escapeHtml(note)}</p>
+           </details>`
+        : '';
+
       return `
         <li class="border-b border-walnut-600 py-4 first:pt-0 last:border-0">
           <div class="flex items-baseline gap-3 flex-wrap">
@@ -347,7 +428,9 @@
             ${isMedium ? '<span class="font-mono text-[10px] uppercase tracking-widest text-linen-300 border-b border-dashed border-stain pb-0.5">Medium confidence</span>' : ''}
           </div>
           <h5 class="font-display text-lg md:text-xl text-white font-bold mt-1 mb-1">${escapeHtml(evt.title)}</h5>
-          <p class="font-sans text-sm text-paper-300 leading-relaxed">${escapeHtml(evt.description || '')}</p>
+          <p class="font-sans text-sm text-paper-300 leading-relaxed">${escapeHtml(main)}</p>
+          ${relatedHtml}
+          ${noteHtml}
         </li>
       `;
     }).join('');
@@ -368,7 +451,7 @@
           : '<p class="text-paper-300 font-sans">No recorded events for this decade.</p>'}
     `;
 
-    details.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    details.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
     announce(`Showing ${decade.eventCount} recorded events for ${decade.label}.`);
   }
 

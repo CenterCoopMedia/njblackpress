@@ -199,7 +199,101 @@ html, body {
 
 /* Decade timeline keyboard focus (issue #39) — never outline:none */
 .timeline-bar:focus-visible,
-.incident-btn:focus-visible {
+.incident-btn:focus-visible,
+.mobile-decade-events-btn:focus-visible,
+.nav-search-toggle:focus-visible,
+.nav-search-input:focus-visible {
     outline: 2px solid #e2662b;
     outline-offset: 2px;
+}
+
+/* Issue #44 finding 4: desktop incident-btn hit area grows to 44px tall
+   without changing the visible dot size. Mobile gets a full-width button
+   list instead (see .incident-list-mobile), so no width fix is needed here. */
+@media (min-width: 768px) {
+    .incident-btn {
+        min-height: 44px;
+    }
+}
+
+/* Issue #44 finding 7: compact nav search affordance, collapsed by default
+   on small screens, expands to a full-width input. */
+.nav-search-toggle,
+.nav-search-input {
+    min-height: 44px;
+}
+.nav-search-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.nav-search-input {
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    border: 0;
+    pointer-events: none;
+    transition: width 0.2s ease, opacity 0.2s ease, padding 0.2s ease;
+}
+.nav-search-wrap.open .nav-search-input {
+    width: 220px;
+    opacity: 1;
+    padding: 0 2.5rem 0 0.75rem;
+    pointer-events: auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 480px) {
+    .nav-search-wrap.open .nav-search-input {
+        width: 46vw;
+    }
+}
+
+/* Issue #44 finding 17: plain-text removable filter chips, no pill styling */
+.filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.75rem;
+    color: #cdc4b1;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px dashed #7d7261;
+    padding: 0.35rem 0.1rem;
+    cursor: pointer;
+    min-height: 44px;
+}
+.filter-chip:hover {
+    color: #faf7f0;
+    border-bottom-color: #e2662b;
+}
+.filter-chip .filter-chip-x {
+    color: #e2662b;
+}
+
+/* Issue #44 finding 11: skip-to-content link, matching woven.html's pattern */
+.skip-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    transform: translateY(-120%);
+    background: #2b2318;
+    color: #faf7f0;
+    padding: 0.75rem 1.25rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+}
+.skip-link:focus {
+    transform: translateY(0);
+    outline: 2px solid #e2662b;
+    outline-offset: 2px;
+}
+
+/* Issue #44 finding 24: give text-only archive links a real hit area */
+.hit-area-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0.35rem 0;
 }

@@ -147,6 +147,8 @@
     <!-- Grain Overlay -->
     <div class="grain-overlay fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.07] mix-blend-soft-light"></div>
 
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <!-- Loading Overlay -->
     <div id="loading-overlay" class="fixed inset-0 bg-ink-950 z-[100] flex flex-col items-center justify-center transition-opacity duration-500">
         <div class="text-accent text-6xl font-display font-black tracking-wide animate-pulse">NJBP</div>
@@ -155,8 +157,8 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-40 bg-ink-900/90 backdrop-blur-sm border-b border-white/10">
-        <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-2 group">
+        <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between gap-4">
+            <a href="#" class="flex items-center gap-2 group shrink-0">
                 <img src="njblackpress-icon.png" alt="NJ Black Press" class="w-8 h-8 transition-transform group-hover:rotate-12">
                 <span class="font-display font-bold text-xl tracking-wide group-hover:text-accent transition-colors">NJ Black Press</span>
             </a>
@@ -168,11 +170,20 @@
                 <li><a href="#timeline" class="inline-block py-[14px] hover:text-accent transition-colors">Timeline</a></li>
                 <li><a href="archive.html" class="inline-block py-[14px] hover:text-accent transition-colors">Archive</a></li>
                 <li><a href="wiki/index.html" class="inline-block py-[14px] hover:text-accent transition-colors">Wiki</a></li>
+                <li><a href="woven.html" class="inline-block py-[14px] hover:text-accent transition-colors">Woven</a></li>
                 <li><a href="#about" class="inline-block py-[14px] hover:text-accent transition-colors">About</a></li>
             </ul>
 
+            <!-- Finding 7: fixed-nav search affordance -->
+            <div class="nav-search-wrap ml-auto md:ml-0">
+                <input type="search" id="nav-search-input" class="nav-search-input bg-ink-800 text-paper-100 font-sans text-sm placeholder-white/40 focus:outline-none focus:border-accent" placeholder="Search the archive…" aria-label="Search publications">
+                <button type="button" id="nav-search-toggle" class="nav-search-toggle w-11 h-11 flex items-center justify-center text-paper-100 hover:text-accent" aria-expanded="false" aria-controls="nav-search-input" aria-label="Open search">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </button>
+            </div>
+
             <!-- Mobile Menu Btn -->
-            <button id="mobile-menu-btn" class="md:hidden p-[10px] text-paper-100 hover:text-accent">
+            <button id="mobile-menu-btn" class="md:hidden p-[10px] text-paper-100 hover:text-accent" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </div>
@@ -180,7 +191,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 bg-ink-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
-        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-paper-300 hover:text-accent">
+        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-paper-300 hover:text-accent" aria-label="Close menu">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
         <ul class="space-y-8 text-center font-display text-3xl font-medium tracking-wide">
@@ -189,11 +200,12 @@
             <li><a href="#timeline" class="inline-block py-2 hover:text-accent transition-colors">Timeline</a></li>
             <li><a href="archive.html" class="inline-block py-2 hover:text-accent transition-colors">Archive</a></li>
             <li><a href="wiki/index.html" class="inline-block py-2 hover:text-accent transition-colors">Wiki</a></li>
+            <li><a href="woven.html" class="inline-block py-2 hover:text-accent transition-colors">Woven</a></li>
             <li><a href="#about" class="inline-block py-2 hover:text-accent transition-colors">About</a></li>
         </ul>
     </div>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4 md:px-8 border-b border-white/10">
             <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
@@ -223,7 +235,7 @@
                     </div>
                     
                     <a href="archive.html" class="mt-4 group flex items-center gap-4 text-accent hover:text-white transition-colors">
-                        <span class="uppercase tracking-widest text-xs">Explore Full Archive</span>
+                        <span class="uppercase tracking-widest text-xs">Explore the full archive</span>
                         <span class="text-2xl transition-transform group-hover:translate-x-2">&rarr;</span>
                     </a>
                 </div>
@@ -371,7 +383,7 @@
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-mono text-xs text-paper-300">2018&ndash;present</span>
                         </div>
-                        <h3 class="font-display text-2xl font-bold mb-2 leading-tight group-hover:text-accent transition-colors">NJ Urban News</h3>
+                        <h3 class="font-display text-2xl font-bold mb-2 leading-tight group-hover:text-accent transition-colors">New Jersey Urban News</h3>
                         <p class="font-mono text-xs text-paper-300 mb-4 uppercase tracking-wider">Newark, NJ</p>
                         <p class="text-paper-200 leading-relaxed text-sm mb-4">
                             "A Voice for the Voiceless." Co-founded by Penda Howell and Dorothy Howell. Your Black news source in the Garden State, covering stories overlooked by mainstream media.
@@ -445,10 +457,28 @@
                         </div>
                     </div>
 
-                    <!-- Legend -->
-                    <p id="timeline-legend" class="font-mono text-[10px] md:text-xs text-linen-300 mt-4 pt-4 border-t border-walnut-600 leading-relaxed">
-                        Solid bar segment: titles founded that decade. Faint bar segment: titles that ceased that decade. Bar height reflects founded plus ceased combined. Solid dot below the rail: high-confidence recorded event. Hollow dashed dot: medium-confidence recorded event. Select a bar to filter the archive by decade. Select the dot row to read that decade's events.
-                    </p>
+                    <!-- Legend: short labeled lines, ~80ch measure max, 12px minimum on all breakpoints (finding 9) -->
+                    <dl id="timeline-legend" class="font-mono text-xs text-linen-300 mt-4 pt-4 border-t border-walnut-600 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 max-w-[80ch]">
+                        <div class="flex items-start gap-2">
+                            <dt aria-hidden="true" class="shrink-0 mt-1 w-2.5 h-2.5 bg-stain"></dt>
+                            <dd>Solid bar segment — titles founded that decade</dd>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <dt aria-hidden="true" class="shrink-0 mt-1 w-2.5 h-2.5 bg-thread-500/40"></dt>
+                            <dd>Faint bar segment — titles ceased that decade</dd>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <dt aria-hidden="true" class="shrink-0 mt-1 w-2 h-2 rounded-full bg-stain"></dt>
+                            <dd>Solid dot — high-confidence recorded event</dd>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <dt aria-hidden="true" class="shrink-0 mt-1 w-2 h-2 rounded-full border border-dashed border-stain"></dt>
+                            <dd>Hollow dashed dot — medium-confidence event</dd>
+                        </div>
+                        <div class="flex items-start gap-2 sm:col-span-2">
+                            <dd>Select a bar to filter the archive by decade. Select the events row to read that decade's events.</dd>
+                        </div>
+                    </dl>
 
                     <!-- Live region mirrors tooltip/aria-label content for screen readers -->
                     <div id="timeline-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
@@ -484,24 +514,21 @@
                 <!-- Filters Toolbar -->
                 <div class="mb-12 border-y border-white/10 py-6">
                     <div class="flex flex-col sm:flex-row flex-wrap gap-6 sm:gap-8">
-                        <!-- Filter Group: City -->
+                        <!-- Filter Group: City. Full list is populated by app.js from metadata.cities (finding 22). -->
                         <div class="flex flex-col gap-3">
                             <span class="font-mono text-xs text-accent uppercase tracking-widest">City</span>
                             <div class="flex flex-wrap gap-2" id="city-filters">
                                 <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="city" data-value="all">All</button>
-                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="city" data-value="Newark">Newark</button>
-                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="city" data-value="Trenton">Trenton</button>
-                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="city" data-value="Camden">Camden</button>
                             </div>
                         </div>
 
-                        <!-- Filter Group: Status -->
+                        <!-- Filter Group: Status. "defunct" filter value kept stable; label reads "Ceased" (finding 15). -->
                          <div class="flex flex-col gap-3">
                             <span class="font-mono text-xs text-accent uppercase tracking-widest">Status</span>
                             <div class="flex flex-wrap gap-2" id="status-filters">
                                 <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="status" data-value="all">All</button>
-                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="status" data-value="active">Active Only</button>
-                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="status" data-value="defunct">Archived</button>
+                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="status" data-value="active">Active only</button>
+                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="status" data-value="defunct">Ceased</button>
                             </div>
                         </div>
                     </div>
@@ -511,7 +538,7 @@
                         <div id="active-filters" class="flex-wrap gap-2" style="display: none;">
                              <span class="font-mono text-xs text-paper-300 self-center mr-2">FILTERS:</span>
                              <div id="active-filters-list" class="flex flex-wrap gap-2"></div>
-                             <button id="clear-filters" class="text-xs text-accent hover:underline ml-4">Clear All</button>
+                             <button id="clear-filters" class="text-xs text-accent hover:underline ml-4">Clear all filters</button>
                         </div>
                         <p class="font-mono text-xs text-paper-300 ml-auto">
                             <span id="results-showing" class="text-white">0</span> / <span id="results-total">136</span> RECORDS
@@ -527,13 +554,13 @@
                 <!-- Empty State -->
                 <div id="empty-results" class="hidden py-20 text-center border border-white/10 border-dashed">
                     <p class="font-display text-3xl text-paper-200 mb-2">No records found.</p>
-                    <button id="reset-search" class="text-accent underline hover:text-white">Reset Search Filters</button>
+                    <button id="reset-search" class="text-accent underline hover:text-white">Reset search filters</button>
                 </div>
 
                 <!-- Load More -->
                 <div id="load-more-container" class="mt-16 text-center hidden">
                     <button id="load-more-btn" class="px-8 py-4 bg-ink-800 border border-white/20 hover:border-accent hover:text-accent transition-all font-mono text-sm uppercase tracking-widest">
-                        Load More Records
+                        Load more records
                     </button>
                 </div>
 
@@ -569,7 +596,7 @@
 
                     <div class="border border-white/10 p-8 bg-ink-950">
                         <p class="text-paper-100 text-base mb-4">Have archives, corrections, or a publication we missed? Send them to us.</p>
-                        <a href="mailto:info@centerforcooperativemedia.org" class="inline-block px-6 py-3 bg-white text-ink-950 font-bold hover:bg-accent hover:text-white transition-colors">Contact Us</a>
+                        <a href="mailto:info@centerforcooperativemedia.org" class="inline-block px-6 py-3 bg-white text-ink-950 font-bold hover:bg-accent hover:text-white transition-colors">Contact us</a>
                     </div>
                 </div>
             </div>
@@ -603,6 +630,9 @@
          function toggleMenu() {
              menu.classList.toggle('translate-x-full');
              document.body.classList.toggle('overflow-hidden');
+             const isOpen = !menu.classList.contains('translate-x-full');
+             menuBtn.setAttribute('aria-expanded', String(isOpen));
+             menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
          }
 
          menuBtn.addEventListener('click', toggleMenu);

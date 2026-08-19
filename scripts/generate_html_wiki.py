@@ -282,7 +282,14 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
     meta = f"{esc(city)} &middot; {esc(decade)} &middot; {esc(life_span(pub))}"
     if feat:
         meta += f" &middot; featured {esc(feat)}"
-    b += f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-8">{meta}</p>'
+    b += f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-4">{meta}</p>'
+
+    # Reciprocal link back to the main-site detail page (publication.html links here).
+    b += (f'<p class="mb-8"><a href="{wiki_root}../publication.html?id={pub["id"]}" '
+          f'class="inline-block py-[14px] font-mono text-xs uppercase tracking-widest text-accent '
+          f'hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 '
+          f'focus-visible:outline-offset-2 focus-visible:outline-accent">'
+          f'Main site record for {esc(name)} <span aria-hidden="true">&rarr;</span></a></p>')
 
     rows = [
         ("Alternate name", esc(clean(pub.get("alternateName")) or "—")),
@@ -321,7 +328,7 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
     if website_url:
         links.append((website_url, "Website"))
     if links or (archive_ref and not archive_url):
-        b += section_title("Archive & links")
+        b += section_title("Archive and links")
         b += '<div class="flex flex-wrap items-center gap-3">'
         for url, label in links:
             b += (f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer" '

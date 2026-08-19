@@ -36,6 +36,8 @@
   function cacheElements() {
     elements.loadingOverlay = document.getElementById('loading-overlay');
     elements.searchInput = document.getElementById('database-search');
+    elements.navSearchInput = document.getElementById('nav-search-input');
+    elements.navSearchToggle = document.getElementById('nav-search-toggle');
     elements.resultsGrid = document.getElementById('database-results');
     elements.resultsCount = document.getElementById('results-count');
     elements.resultsShowing = document.getElementById('results-showing'); // Added this
@@ -48,12 +50,45 @@
     elements.loadMoreContainer = document.getElementById('load-more-container');
     elements.loadMoreBtn = document.getElementById('load-more-btn');
     elements.filterButtons = document.querySelectorAll('.filter-btn');
+    elements.cityFilters = document.getElementById('city-filters');
   }
 
   function setupEventListeners() {
     // Search with debounce
     if (elements.searchInput) {
       elements.searchInput.addEventListener('input', debounce(handleSearch, 300));
+    }
+
+    // Finding 7: fixed-nav search affordance. Toggling reveals a compact
+    // input that drives the same search state as the main database search,
+    // then scrolls the collection into view so results are visible.
+    if (elements.navSearchToggle && elements.navSearchInput) {
+      const wrap = elements.navSearchToggle.closest('.nav-search-wrap');
+      elements.navSearchToggle.addEventListener('click', () => {
+        const isOpen = wrap.classList.toggle('open');
+        elements.navSearchToggle.setAttribute('aria-expanded', String(isOpen));
+        if (isOpen) {
+          elements.navSearchInput.focus();
+        }
+      });
+
+      elements.navSearchInput.addEventListener('input', debounce((e) => {
+        const value = e.target.value;
+        if (elements.searchInput) elements.searchInput.value = value;
+        state.filters.search = value.toLowerCase().trim();
+        state.currentPage = 1;
+        applyFilters();
+      }, 300));
+
+      elements.navSearchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          document.getElementById('database')?.scrollIntoView({ behavior: 'smooth' });
+        } else if (e.key === 'Escape') {
+          wrap.classList.remove('open');
+          elements.navSearchToggle.setAttribute('aria-expanded', 'false');
+          elements.navSearchToggle.focus();
+        }
+      });
     }
 
     // Filter buttons
@@ -94,6 +129,10 @@
 
       // Update stats
       updateStats(data.metadata);
+
+      // Finding 22: replace the hardcoded 3-city filter list with the full,
+      // alphabetized city list from the dataset (same source archive.html uses).
+      populateCityFilters(data.metadata?.cities || []);
 
       // Initial render
       renderPublications();
@@ -139,6 +178,22 @@
     }
 
     requestAnimationFrame(update);
+  }
+
+  function populateCityFilters(cities) {
+    if (!elements.cityFilters) return;
+    const sorted = [...new Set(cities)].filter(Boolean).sort((a, b) => a.localeCompare(b));
+
+    elements.cityFilters.innerHTML = `
+      <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="city" data-value="all">All</button>
+      ${sorted.map(city => `<button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-white/20 hover:border-white text-paper-300 hover:text-white transition-colors" data-filter="city" data-value="${escapeHtml(city)}">${escapeHtml(city)}</button>`).join('')}
+    `;
+
+    // Re-cache and re-bind: these buttons didn't exist when setupEventListeners ran.
+    elements.filterButtons = document.querySelectorAll('.filter-btn');
+    document.querySelectorAll('#city-filters .filter-btn').forEach(btn => {
+      btn.addEventListener('click', handleFilterClick);
+    });
   }
 
   function handleSearch(e) {
@@ -274,10 +329,10 @@
     const years = pub.yearFounded
       ? `${pub.yearFounded}–${pub.yearCeased ? pub.yearCeased : 'present'}`
       : (pub.isActive ? 'still publishing' : 'dates unknown');
-    const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors border-b border-transparent hover:border-accent pb-1">Visit Site</a>` : '';
+    const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors border-b border-transparent hover:border-accent">Visit site</a>` : '';
     // Only show archive link if it's an actual URL (starts with http)
     const hasValidArchiveUrl = pub.archiveUrl && pub.archiveUrl.startsWith('http');
-    const archiveLink = hasValidArchiveUrl ? `<a href="${pub.archiveUrl}" target="_blank" rel="noopener" class="text-xs font-mono uppercase tracking-wider text-paper-300 hover:text-white transition-colors border-b border-transparent hover:border-white pb-1">Archives</a>` : '';
+    const archiveLink = hasValidArchiveUrl ? `<a href="${pub.archiveUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-paper-300 hover:text-white transition-colors border-b border-transparent hover:border-white">Archives</a>` : '';
 
     // Build one-line description from available fields
     const oneLiner = getOneLiner(pub);
@@ -299,7 +354,7 @@
         </p>
 
         <footer class="flex gap-4 mt-auto pt-4">
-            <a href="publication.html?id=${pub.id}" class="text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors border-b border-transparent hover:border-accent pb-1">View Details</a>
+            <a href="publication.html?id=${pub.id}" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors border-b border-transparent hover:border-accent">View details</a>
             ${websiteLink}
             ${archiveLink}
         </footer>
@@ -348,7 +403,7 @@
     if (state.filters.search) activeFilters.push({ type: 'search', label: `"${state.filters.search}"` });
     if (state.filters.city !== 'all') activeFilters.push({ type: 'city', label: state.filters.city });
     if (state.filters.decade !== 'all') activeFilters.push({ type: 'decade', label: state.filters.decade });
-    if (state.filters.status !== 'all') activeFilters.push({ type: 'status', label: state.filters.status === 'active' ? 'Active' : 'Archived' });
+    if (state.filters.status !== 'all') activeFilters.push({ type: 'status', label: state.filters.status === 'active' ? 'Active' : 'Ceased' });
     if (state.filters.format !== 'all') activeFilters.push({ type: 'format', label: state.filters.format === 'print' ? 'Print' : 'Digital' });
 
     if (activeFilters.length === 0) {
@@ -356,12 +411,14 @@
       return;
     }
 
+    // Finding 17: plain-text removable chips in the site's thread/stitch
+    // idiom, not rounded pill badges.
     elements.activeFilters.style.display = 'flex';
     elements.activeFiltersList.innerHTML = activeFilters.map(f => `
-      <span class="font-mono text-[10px] bg-white/10 text-paper-100 px-2 py-1 flex items-center gap-2 hover:bg-white/20 transition-colors cursor-pointer" onclick="window.njbp.removeFilter('${f.type}')">
+      <button type="button" class="filter-chip" onclick="window.njbp.removeFilter('${f.type}')" aria-label="Remove filter: ${escapeAttr(f.label)}">
         ${escapeHtml(f.label)}
-        <span class="text-accent">&times;</span>
-      </span>
+        <span class="filter-chip-x" aria-hidden="true">&times;</span>
+      </button>
     `).join('');
   }
 
@@ -456,6 +513,13 @@
     const div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
+  }
+
+  // escapeHtml doesn't encode quotes (safe for text nodes, not for
+  // attribute values). Chip labels can contain literal quotes (e.g. a
+  // quoted search term), which would otherwise break out of aria-label="...".
+  function escapeAttr(str) {
+    return escapeHtml(str).replace(/"/g, '&quot;');
   }
 
   function truncate(str, length) {
