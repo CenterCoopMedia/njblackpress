@@ -134,9 +134,10 @@
             <div class="w-full bg-stain border-l border-oak-500" style="height: ${foundedSegPct}%"></div>
           </div>
 
-          <!-- Interactive overlay: keyboard + click target -->
+          <!-- Interactive overlay: keyboard + click target. min-w-[44px] widens the hit area
+               without widening the visible bar (which is the separate element above). -->
           <button type="button"
-                  class="timeline-bar absolute inset-0 w-full h-full bg-transparent border-0 p-0 cursor-pointer"
+                  class="timeline-bar absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-full min-w-[44px] bg-transparent border-0 p-0 cursor-pointer"
                   data-decade="${decade.label}"
                   aria-label="${escapeHtml(ariaLabel)}">
           </button>

@@ -27,6 +27,9 @@ Carry the archive from "captures done, uncommitted" toward launch: safe commit, 
 | s8 | Milestone 4: site data + pipeline + dictionary (#34–36) | agent: site-data | done — events.json (81), stories.json (13) in data/ and docs/data/, convert_csv.py round-trip proven, DATA_DICTIONARY.md, test_site_data.py PASS. Committed 7f1bfad |
 | s9 | Milestone 5: design direction (#37) + map decision (#41) | agent: design | done — DESIGN_DIRECTION.md (now 366 lines incl. material language); #41 decided skip-map with city bar alternative; both closed |
 | s10 | Milestone 6: fact-check, alt text, usability (#42–44) | — | pending |
+| s18 | Land sweep + clippings: commit, push, closeout | agent: commit | done — 7e5143d (263 files, sweep + wiki regen) + 60bba17 (57 files, 55 clippings). Pushed 425b831..60bba17, noreply email verified. #54 closed, #47 comment ...18083539. type-specimen.html deliberately uncommitted pending Joe's font pick |
+| s19 | Mobile audit #56 (launch gate) | agents: audit + fix | audit done — 0 overflow, 0 console errors, hero 2 lines, menu/search/filters/pagination all work by touch. 8 tap-target defects (mobile menu links/buttons, footer links, timeline bar 18px hit area, wiki tag/city links 17px, top nav 14px at 768). Director spot-verified defect 2 (#mobile-menu-btn has no padding). Fix agent running: pages + styles + generator template (never hand-edit docs/wiki), re-measure to >=44px. Woven agent fenced to new files only to avoid collisions |
+| s20 | Woven build #50–53 | agent: woven-build (opus) | running — from WOVEN_SPEC.md; must derive true ghost count (spec 98 vs issue 93), vendor three.js r171, a11y twin, 375px mode, no commit. Joe directive after preview: concept approved, but "impossible to read and parse even on desktop" — legibility is now the top acceptance criterion (progressive disclosure, readable labels, hover isolation, legend, readable default camera). Steering sent |
 | s11 | Joe directive: "wood and fabric" material language | agent: design-amend | spec done (tokens walnut/linen/oak/thread, stain accent ramp #e2662b/#f0854a/#8f3a14, 16-pair AA contrast table, CSS texture recipes with opt-outs). Implementation (#48) was done pass 1+2 with screenshot verification, then WIPED by the reset incident — must be redone after remote reconciliation |
 | s12 | Joe directive: "Woven" three.js experience (#49–53) | agent: woven-spec | WOVEN_SPEC.md done. Clip production (#54): agent produced 63 clips + docs/data/clippings.json; director verify caught 8 exclusion violations (2 Right On! CA-era, 6 out-of-state — the 6 empty-publicationIds entries); fixed and director-verified: 55 clips on disk = 55 entries (crop_first 32, publishable 16, with_credit 7), 0 empty publicationIds, EXCLUDED set enforced in all 5 processors. #54 done pending commit |
 | s13 | Joe directive: full GitHub tracking | agent: tracking | done — issues #48–55 on milestone 5 + project 3, #47 creative-direction update posted (…18083077) |
@@ -41,7 +44,9 @@ Carry the archive from "captures done, uncommitted" toward launch: safe commit, 
 - .chrome-cdp/ and archival media never enter git history.
 - Every agent report checked against disk before it is believed.
 - NO destructive git commands by agents (see incident log).
+- NO blanket process kills by agents (no taskkill /IM, no pkill by name). An agent must kill only the exact PID it started. Incident 2026-08-19: a cleanup taskkill /IM python.exe killed 4 unrelated processes, including the docs preview server and browser_daemon.py.
 - Sentence case everywhere. Plain-English #47 updates after each milestone.
+- Strict ASD-STE100 in all director communication: replies to Joe, this plan, the handoff, agent briefs, and #47 updates. Use short sentences, active voice, and simple tenses. Give one instruction per sentence. Director ruling: the rule does not change the website's editorial text; Joe can override.
 
 ## Directives from Joe this session
 

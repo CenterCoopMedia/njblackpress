@@ -152,9 +152,9 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
                 <p>&copy; {date.today().year} Center for Cooperative Media</p>
             </div>
             <div class="flex gap-6">
-                <a href="{a}index.html" class="hover:text-accent">Main site</a>
-                <a href="{a}archive.html" class="hover:text-accent">Archive</a>
-                <a href="https://github.com/CenterCoopMedia/njblackpress" target="_blank" rel="noopener noreferrer" class="hover:text-accent">GitHub</a>
+                <a href="{a}index.html" class="inline-block px-3 py-[14px] hover:text-accent">Main site</a>
+                <a href="{a}archive.html" class="inline-block px-3 py-[14px] hover:text-accent">Archive</a>
+                <a href="https://github.com/CenterCoopMedia/njblackpress" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-[14px] hover:text-accent">GitHub</a>
             </div>
         </div>
     </footer>
@@ -263,7 +263,7 @@ def landing_body(pubs, by_city, by_decade, by_format, by_medium, slugs, timestam
     if featured:
         b += section_title("Featured publications")
         b += pub_grid(sorted(featured, key=lambda p: p.get("yearFounded") or 9999)[:6], 0, "")
-        b += '<p class="mt-4 font-mono text-xs uppercase tracking-widest"><a href="featured.html" class="text-accent hover:text-white transition-colors">See all featured &rarr;</a></p>'
+        b += '<p class="mt-4 font-mono text-xs uppercase tracking-widest"><a href="featured.html" class="inline-block py-[15px] text-accent hover:text-white transition-colors">See all featured &rarr;</a></p>'
 
     b += f'<p class="mt-16 font-mono text-[11px] uppercase tracking-widest text-paper-300/60">Generated {esc(timestamp)} from data/publications.json</p>'
     return b
@@ -286,13 +286,13 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
 
     rows = [
         ("Alternate name", esc(clean(pub.get("alternateName")) or "—")),
-        ("City", f'<a href="{wiki_root}cities/{city_slugs[city]}.html" class="text-accent hover:text-white transition-colors">{esc(city)}</a>'),
+        ("City", f'<a href="{wiki_root}cities/{city_slugs[city]}.html" class="inline-block py-[14px] text-accent hover:text-white transition-colors">{esc(city)}</a>'),
         ("Publishers / owners", esc(clean(pub.get("publishers")) or "—")),
         ("Active years", esc(life_span(pub))),
         ("Status", esc(status_label(pub))),
-        ("Decade", f'<a href="{wiki_root}decades/{decade_slugs[decade]}.html" class="text-accent hover:text-white transition-colors">{esc(decade)}</a>'),
-        ("Format", f'<a href="{wiki_root}formats/{format_slugs[fmt]}.html" class="text-accent hover:text-white transition-colors">{esc(fmt)}</a>'),
-        ("Medium", f'<a href="{wiki_root}mediums/{medium_slugs[medium]}.html" class="text-accent hover:text-white transition-colors">{esc(medium)}</a>'),
+        ("Decade", f'<a href="{wiki_root}decades/{decade_slugs[decade]}.html" class="inline-block py-[14px] text-accent hover:text-white transition-colors">{esc(decade)}</a>'),
+        ("Format", f'<a href="{wiki_root}formats/{format_slugs[fmt]}.html" class="inline-block py-[14px] text-accent hover:text-white transition-colors">{esc(fmt)}</a>'),
+        ("Medium", f'<a href="{wiki_root}mediums/{medium_slugs[medium]}.html" class="inline-block py-[14px] text-accent hover:text-white transition-colors">{esc(medium)}</a>'),
         ("Frequency", esc(clean(pub.get("frequency")) or "—")),
         ("Languages", esc(clean(pub.get("languages")) or "—")),
         ("Primary focus", esc(clean(pub.get("primaryFocus")) or "—")),
@@ -448,7 +448,7 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
     for name, items in ranked:
         ca = sum(1 for p in items if p.get("isActive"))
         rows += (f'<tr class="border-b border-white/10 hover:bg-ink-800 transition-colors">'
-                 f'<td class="py-2.5 pr-4"><a href="cities/{slugs["cities"][name]}.html" class="hover:text-accent transition-colors">{esc(name)}</a></td>'
+                 f'<td class="py-2.5 pr-4"><a href="cities/{slugs["cities"][name]}.html" class="inline-block py-[14px] hover:text-accent transition-colors">{esc(name)}</a></td>'
                  f'<td class="py-2.5 pr-4 font-mono text-sm text-right">{len(items)}</td>'
                  f'<td class="py-2.5 font-mono text-sm text-right text-paper-300">{ca}</td></tr>')
     b += ('<div class="border border-white/10 bg-ink-950 p-2"><table class="w-full text-left">'
