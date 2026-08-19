@@ -2,6 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Material language: wood and fabric (issue #48) */
+
+/* Woven linen ground — replaces the flat dark ground on body */
+.surface-woven {
+  background-color: #14100b;
+  background-image:
+    /* weft */ repeating-linear-gradient(0deg,
+      rgba(232, 224, 208, 0.014) 0px, rgba(232, 224, 208, 0.014) 1px,
+      transparent 1px, transparent 3px),
+    /* warp */ repeating-linear-gradient(90deg,
+      rgba(232, 224, 208, 0.010) 0px, rgba(232, 224, 208, 0.010) 1px,
+      transparent 1px, transparent 3px),
+    /* room light */ radial-gradient(120% 80% at 50% 0%,
+      rgba(138, 114, 82, 0.10) 0%, transparent 60%);
+  background-attachment: fixed, fixed, fixed;
+}
+
+/* Cloth card surface — book-cloth weave with a raised nap */
+.surface-cloth {
+  background-color: #2b2318;
+  background-image:
+    repeating-linear-gradient(45deg,
+      rgba(243, 238, 226, 0.012) 0px, rgba(243, 238, 226, 0.012) 1px,
+      transparent 1px, transparent 4px),
+    repeating-linear-gradient(-45deg,
+      rgba(11, 8, 6, 0.16) 0px, rgba(11, 8, 6, 0.16) 1px,
+      transparent 1px, transparent 4px);
+  box-shadow:
+    inset 0 1px 0 rgba(168, 145, 121, 0.10),
+    inset 0 -1px 0 rgba(11, 8, 6, 0.45);
+}
+
+/* Wood rail — the site's one piece of visible furniture */
+.rail-wood {
+  height: 3px;
+  border: 0;
+  background-image:
+    linear-gradient(180deg,
+      #a89179 0%, #8a7252 35%, #6b563c 36%,
+      #6b563c 72%, #3b3122 73%, #2b2318 100%),
+    linear-gradient(90deg,
+      #6b563c 0%, #5e4b34 17%, #6b563c 18%, #6b563c 41%, #5a4830 42%,
+      #6b563c 43%, #6b563c 78%, #604d36 79%, #6b563c 100%);
+  background-blend-mode: multiply;
+}
+
+/* Thread underline — stitched links in body copy */
+.link-thread {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: #a89c85;
+}
+.link-thread:hover { text-decoration-color: #e2662b; }
+
+/* Stitched divider — between major sections, used sparingly */
+.divider-stitched {
+  border: 0;
+  border-top: 1px dashed #7d7261;
+  margin: 2rem 0;
+}
+
+/* Letterpress impression — display headings only, 32px+, weight 700+ */
+.type-impression {
+  text-shadow:
+    0 1px 0 rgba(11, 8, 6, 0.55),
+    0 -1px 0 rgba(168, 145, 121, 0.06);
+}
+
+/* Required texture opt-outs */
+@media (prefers-contrast: more), (forced-colors: active) {
+  .surface-woven, .surface-cloth { background-image: none; }
+  .rail-wood { background-image: none; background-color: CanvasText; }
+  .type-impression { text-shadow: none; }
+  .grain-overlay { display: none; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .grain-overlay { display: none; }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -9,16 +90,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #14100b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #262626;
+  background: #3b3122;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff4d00;
+  background: #e2662b;
 }
 
 /* Hide Scrollbar Utility */
@@ -38,8 +119,8 @@
 
 /* Text Selection */
 ::selection {
-    background-color: #ff4d00;
-    color: white;
+    background-color: #e2662b;
+    color: #f3eee2;
 }
 
 /* Timeline Visualization Styles */
@@ -49,8 +130,8 @@
 }
 
 .timeline-bar:hover {
-    fill: #ff4d00 !important;
-    filter: drop-shadow(0 0 8px rgba(255, 77, 0, 0.5));
+    fill: #e2662b !important;
+    filter: drop-shadow(0 0 8px rgba(226, 102, 43, 0.5));
     transform: scaleY(1.1);
 }
 
@@ -76,7 +157,7 @@ html, body {
 
     /* Better touch feedback */
     .filter-btn, .status-btn, .timeline-decade-btn {
-        -webkit-tap-highlight-color: rgba(255, 77, 0, 0.2);
+        -webkit-tap-highlight-color: rgba(226, 102, 43, 0.2);
     }
 
     /* Make the timeline decade nav scroll smoother */
@@ -115,4 +196,11 @@ html, body {
 .timeline-tooltip.\!opacity-100 {
     opacity: 1 !important;
     pointer-events: auto;
+}
+
+/* Decade timeline keyboard focus (issue #39) — never outline:none */
+.timeline-bar:focus-visible,
+.incident-btn:focus-visible {
+    outline: 2px solid #e2662b;
+    outline-offset: 2px;
 }

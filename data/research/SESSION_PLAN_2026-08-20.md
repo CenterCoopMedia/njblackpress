@@ -1,37 +1,50 @@
-# Session plan — commit and milestones 2–3 (2026-08-19, second session)
+# Session plan — commit and milestones 2–5 (2026-08-19, second session)
 
 Director: Claude (this session). Subagents do all hands-on work. The director assigns, verifies against disk, rules, and keeps this plan current.
 
 ## Session goal
 
-Carry the archive from "captures done, uncommitted" toward launch. In order: commit the prior session's work safely (no secrets, no rights-restricted binaries in git), then milestone 2 (editorial deep-read → events.json, stories.json, editorial memo, issues #25–28), then milestone 3 (rights triage manifest, issues #29–32). Further milestones as time allows. Post a plain-English update on discussion #47 after each completed milestone.
+Carry the archive from "captures done, uncommitted" toward launch: safe commit, milestone 2 (editorial deep-read), milestone 3 (rights triage), milestone 4 (site data), milestone 5 (redesign incl. Joe's "wood and fabric" + "Woven" directives), milestone 6 as time allows. Plain-English #47 update after each milestone.
+
+## Incident log (2026-08-19)
+
+- A hotfix agent ran `git reset --hard` while the working tree held uncommitted redesign work. Wiped: the #39 timeline upgrade (docs/js/timeline.js, index.html, styles.css), the #48 styling pass (all three pages + styles.css + favicon), and this plan's latest edits. Untracked files (design docs, research artifacts) survived. Plan restored from director context; code must be redone.
+- Discovered origin/master moved 18 commits ahead (tip d1367cb), pushed by a separate workstream — includes the same publication.js fix (ba25d47), a merged PR #16, and "Add the Tailwind build and first compiled stylesheet (#24)", which may conflict with the zero-build architecture. Local master (7f1bfad) has 4 local-only commits; rebase attempt hit real conflicts (.gitignore, data/publications.json, docs/data/publications.json) and was aborted cleanly.
+- New rule in force: no agent may run `git reset --hard`, `git checkout --`, `git clean`, or any destructive git command. Recovery/reconciliation commands are director-approved only, and only after `git stash` or a WIP commit protects the working tree.
 
 ## Task list
 
 | ID | Task | Owner | Status |
 | --- | --- | --- | --- |
 | s0 | Verify prior session state on disk | director | done — counts match handoff, test_source_catalog.py PASS (138 rows, 182 keepers) |
-| s1 | Director ruling: git scope for binaries | director | decided — .chrome-cdp/ never committed (login cookies); all image/PDF media under data/research/ stays out of git via .gitignore; JSON logs, catalogs, scripts, and docs are committed. Local disk remains the archival store. Joe can override |
-| s2 | Commit session work: .gitignore, secret scan on logs, stage, commit | agent: commit | done — commits 060c93d + 76cc330, 240 files, media/profile ignored and verified untracked; one secret caught (Cloudflare challenge token in depth-hunt/apex_titles.json, excluded from git). Not pushed |
-| s3 | Fetch issue specs #25–36 from GitHub | agent: issues | done — data/research/issue-specs.md; milestone-1 update already on #47 |
-| s4 | Milestone 2: deep-read workflow (sonnet readers → opus synthesis) → events.json, stories.json, editorial memo | workflow: deep-read | first pass done — 42 readings, 70 events, 13 stories, memo written. Adversarial verify FAILED with 13 defects (issue dates as event dates, pre-dated citations, name contradictions, 1 weak story, 2 broken reading JSONs) + 1 unread artifact (Nubian News PDF over read limit). Round 1 corrections fixed all 13; Nubian PDF salvaged (text layer, full read) and integrated (+9 events, now 79). Re-verify round 2: 11/13 fixes hold, 4 new defects (evt-021 announced-vs-held, evt-074 photographer attribution, story-009 untraceable claims, memo count) + mojibake note. Round 2 fixed 4 defects +2 traceability events (evt-080/081, now 81 events); round 3 fixed 6 framing/disclosure items; final scoped verify PASS with 0 defects. Done — 81 events, 13 stories, memo, 42 readings, 3 adversarial passes. Known nits deferred to fact-check milestone: "Newark weeklies" plural outside thread 10, memo line 99 evidence-count wording, ids 9/24 duplication question |
-| s5 | Milestone 3: rights triage manifest per file | agent: rights | done — data/research/rights/rights-manifest.json, 325 files: 34 publishable, 5 publishable_with_credit, 50 crop_first, 236 metadata_only. check_manifest.py PASS, director re-ran it and spot-checked the 1930 boundary and Danky citations |
-| s6 | Discussion #47 updates after each milestone | agent | milestone 3 posted (discussioncomment-18082534), issues #29–32 closed; milestone 2 posted (discussioncomment-18082891), issues #25–28 closed. Editorial+rights+evidence committed as ea6ac11 (52 files, verified clean, not pushed) |
-| s7 | Milestone 4: evidence arrays (#33) | agent: evidence | done — 182 evidence entries across 137 pubs (id 14 honest empty), data/add_evidence.py + data/test_evidence.py PASS, docs copy byte-identical. Gap found and fixed: 2 LOC catalog screenshots added to rights manifest as publishable_with_credit (director ruling, Joe can override); manifest now 327 files, 0 unlisted, all checks re-run PASS by director |
-| s8 | Milestone 4: events/stories into site data + pipeline + data dictionary (#34–36) | — | pending, blocked on s4 |
+| s1 | Director ruling: git scope for binaries | director | decided — .chrome-cdp/ never committed; media stays out of git via .gitignore; JSON/md/py committed. Joe can override |
+| s2 | Commit session work | agent: commit | done — 060c93d + 76cc330, 240 files, verified clean; Cloudflare token file excluded. Not pushed |
+| s3 | Fetch issue specs #25–36 | agent: issues | done — data/research/issue-specs.md (later #37–44 appended) |
+| s4 | Milestone 2: deep-read → events/stories/memo | workflow + 3 fix rounds | done — 42 readings, 81 events, 13 stories, memo; 3 adversarial passes, final scoped verify PASS 0 defects. Nits deferred to fact-check: "Newark weeklies" plural outside thread 10, memo line 99 wording, ids 9/24 duplication |
+| s5 | Milestone 3: rights manifest | agent: rights | done — rights-manifest.json 327 files (34 publishable, 7 with credit incl. 2 LOC, 50 crop_first, 236 metadata_only), check PASS, director spot-checked 1930 boundary |
+| s6 | GitHub closeouts + #47 updates | agents | done — milestones 2, 3, 4 posted (…18082534, …18082891, …18082918); issues #25–36 closed; #37/#39/#41 closed later |
+| s7 | Milestone 4: evidence arrays (#33) | agent: evidence | done — 182 entries/137 pubs, tests PASS, docs copy identical |
+| s8 | Milestone 4: site data + pipeline + dictionary (#34–36) | agent: site-data | done — events.json (81), stories.json (13) in data/ and docs/data/, convert_csv.py round-trip proven, DATA_DICTIONARY.md, test_site_data.py PASS. Committed 7f1bfad |
+| s9 | Milestone 5: design direction (#37) + map decision (#41) | agent: design | done — DESIGN_DIRECTION.md (now 366 lines incl. material language); #41 decided skip-map with city bar alternative; both closed |
+| s10 | Milestone 6: fact-check, alt text, usability (#42–44) | — | pending |
+| s11 | Joe directive: "wood and fabric" material language | agent: design-amend | spec done (tokens walnut/linen/oak/thread, stain accent ramp #e2662b/#f0854a/#8f3a14, 16-pair AA contrast table, CSS texture recipes with opt-outs). Implementation (#48) was done pass 1+2 with screenshot verification, then WIPED by the reset incident — must be redone after remote reconciliation |
+| s12 | Joe directive: "Woven" three.js experience (#49–53) | agent: woven-spec | WOVEN_SPEC.md being written (opus); builders follow. Clip production (#54) still running |
+| s13 | Joe directive: full GitHub tracking | agent: tracking | done — issues #48–55 on milestone 5 + project 3, #47 creative-direction update posted (…18083077) |
+| s14 | #39 timeline upgrade | agent: timeline | was done and browser-verified (stacked bars, incident row, keyboard a11y), then WIPED by the reset incident — redo after reconciliation. #39 is closed on GitHub; reopen or track redo under #48 |
+| s15 | Production bug: publication.js duplicate const years | — | already fixed on origin (ba25d47) by the other workstream; live site OK |
+| s16 | Reconcile local commits vs remote 18 | agents: analysis, merge, remap | merged (8b6c60a) with remote activity corrections canonical + evidence regenerated (d13ac61); id-60 duplicate remapped onto 126 (968b6f5, catalog 137 rows / 181 keepers, ALL tests pass). Remote briefing: no live build step (Tailwind scaffolding unreferenced, CDN stays), provenance = Joe + Cassandra + a Claude web session + a Codex PR. No peer session on this repo |
+| s17 | Push blocked by GH007 (montclair.edu email on all 7 local commits; GitHub privacy guard) | director | ruling: rewrite local-only commits to Joe's GitHub noreply (6799804+jamditis@users.noreply.github.com — matches remote's existing practice); repo-local git config already set for future commits; history rewrite + push runs after the redo agents' work is committed (needs clean tree). Joe can override |
 
 ## Rules in force
 
-- All prior standing rulings hold (Right On! exclusion, NJ-only keepers, nothing to docs/ until cropped, cited, cleared).
-- .chrome-cdp/ and archival media never enter git history. Treat any commit as permanent.
+- All prior standing rulings hold (Right On! exclusion, NJ-only keepers, cropped/cited/cleared before docs/).
+- .chrome-cdp/ and archival media never enter git history.
 - Every agent report checked against disk before it is believed.
+- NO destructive git commands by agents (see incident log).
 - Sentence case everywhere. Plain-English #47 updates after each milestone.
 
-## Verified state
+## Directives from Joe this session
 
-- Start: working tree has ~80 untracked scripts, session docs, modified data JSONs; nothing committed since ce7deed.
-- data/research/ media on disk: newspapers-com/downloads 61 files (83M), wayback/clean 18 (68M), ia/clean 10 PDFs + log (401M), danky 233 (280M), depth-hunt 47M.
-
-## Operational notes
-
-- Update this table as tasks complete; record counts, methods, and paths in the status cell.
+- Design must feel like "wood and fabric" (intentionally vague, creative interpretation wanted).
+- Build something interactive, beautiful, culturally meaningful with the data in three.js. Think big and ambitious. Concept pitched and elaborated: "Woven" (loom of 138 threads, evidence-weight thickness, 13 story tours, ghost cloth for the 93 catalog-only pubs, a11y twin, WebGL fallback).
+- The redesign must be fully tracked on GitHub issues, milestone, project board, and discussion — done (issues #48–55).

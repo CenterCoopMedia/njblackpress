@@ -1,6 +1,9 @@
 /**
  * NJ Black Press Database - Timeline Visualization
- * Interactive decade-by-decade visualization of publication activity
+ * Interactive decade-by-decade visualization of publication activity.
+ *
+ * Each decade bar is stacked (founded + ceased, honest proportions) and
+ * carries an incident row of event dots beneath the axis. Issue #39.
  */
 
 (function() {
@@ -25,6 +28,7 @@
   ];
 
   let publications = [];
+  let events = [];
   let decadeData = [];
 
   async function init() {
@@ -41,13 +45,28 @@
       const data = await response.json();
       publications = data.publications || [];
     } catch (error) {
-      console.error('Timeline: Failed to load data:', error);
+      console.error('Timeline: Failed to load publications data:', error);
     }
+
+    try {
+      const response = await fetch('data/events.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      events = data.events || [];
+    } catch (error) {
+      console.error('Timeline: Failed to load events data:', error);
+    }
+  }
+
+  function yearOf(dateStr) {
+    if (!dateStr) return null;
+    const match = /^(\d{4})/.exec(dateStr);
+    return match ? parseInt(match[1], 10) : null;
   }
 
   function calculateDecadeData() {
     decadeData = decades.map(decade => {
-      // Count publications that were active during this decade
+      // Publications active at any point during this decade
       const activePublications = publications.filter(pub => {
         const founded = pub.yearFounded || 9999;
         const ceased = pub.yearCeased || 2026;
@@ -58,11 +77,31 @@
         pub.yearFounded >= decade.start && pub.yearFounded <= decade.end
       );
 
+      const ceased = publications.filter(pub =>
+        pub.yearCeased !== null && pub.yearCeased !== undefined &&
+        pub.yearCeased >= decade.start && pub.yearCeased <= decade.end
+      );
+
+      const decadeEvents = events
+        .filter(evt => {
+          const y = yearOf(evt.date);
+          return y !== null && y >= decade.start && y <= decade.end;
+        })
+        .sort((a, b) => (a.date > b.date ? 1 : a.date < b.date ? -1 : 0));
+
+      const highCount = decadeEvents.filter(e => e.confidence === 'high').length;
+      const mediumCount = decadeEvents.filter(e => e.confidence !== 'high').length;
+
       return {
         ...decade,
         activeCount: activePublications.length,
         foundedCount: founded.length,
-        publications: activePublications.slice(0, 5) // Top 5 for tooltip
+        ceasedCount: ceased.length,
+        publications: activePublications.slice(0, 5), // Top 5 for tooltip
+        events: decadeEvents,
+        eventCount: decadeEvents.length,
+        highConfidenceCount: highCount,
+        mediumConfidenceCount: mediumCount
       };
     });
   }
@@ -71,79 +110,152 @@
     const container = document.getElementById('timeline-visualization');
     if (!container) return;
 
-    const maxCount = Math.max(...decadeData.map(d => d.activeCount), 1);
+    const maxTotal = Math.max(...decadeData.map(d => d.foundedCount + d.ceasedCount), 1);
 
     const isMobile = window.innerWidth < 768;
     const barGap = isMobile ? 'gap-[2px]' : 'gap-1';
-    const chartHeight = isMobile ? 'h-[200px]' : 'h-[300px]';
+    const chartHeight = isMobile ? 'h-[180px]' : 'h-[260px]';
+
+    const barsHtml = decadeData.map(decade => {
+      const total = decade.foundedCount + decade.ceasedCount;
+      const barHeightPct = (total / maxTotal) * 100;
+      const foundedSegPct = total > 0 ? (decade.foundedCount / total) * 100 : 0;
+      const ceasedSegPct = total > 0 ? (decade.ceasedCount / total) * 100 : 0;
+
+      const ariaLabel = `${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ` +
+        `${decade.activeCount} active, ${decade.eventCount} recorded event${decade.eventCount === 1 ? '' : 's'}. ` +
+        `Press enter to filter the archive by this decade.`;
+
+      return `
+        <div class="relative flex flex-col justify-end items-center h-full flex-1 group timeline-bar-wrapper" data-decade="${decade.label}">
+          <!-- Stacked bar: founded at the base, ceased above it -->
+          <div class="w-full mx-[2px] flex flex-col justify-end pointer-events-none" style="height: ${Math.max(barHeightPct, total > 0 ? 2 : 0)}%">
+            <div class="w-full bg-thread-500/40" style="height: ${ceasedSegPct}%"></div>
+            <div class="w-full bg-stain border-l border-oak-500" style="height: ${foundedSegPct}%"></div>
+          </div>
+
+          <!-- Interactive overlay: keyboard + click target -->
+          <button type="button"
+                  class="timeline-bar absolute inset-0 w-full h-full bg-transparent border-0 p-0 cursor-pointer"
+                  data-decade="${decade.label}"
+                  aria-label="${escapeHtml(ariaLabel)}">
+          </button>
+
+          <!-- Tooltip -->
+          <div class="timeline-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-40 md:w-52 bg-walnut-900 border border-walnut-600 p-3 md:p-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-2xl">
+            <div class="font-serif text-base md:text-lg text-stain mb-1 font-bold">${decade.label}</div>
+            <div class="text-xs font-mono text-linen-300 space-y-1 border-t border-walnut-600 pt-2">
+              <p><span class="text-linen-50">${decade.foundedCount}</span> founded</p>
+              <p><span class="text-linen-50">${decade.ceasedCount}</span> ceased</p>
+              <p><span class="text-linen-50">${decade.activeCount}</span> active</p>
+              <p><span class="text-linen-50">${decade.eventCount}</span> recorded event${decade.eventCount === 1 ? '' : 's'}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    const incidentsHtml = decadeData.map(decade => {
+      const dots = decade.events.map(evt => {
+        return evt.confidence === 'high'
+          ? `<span class="w-[5px] h-[5px] rounded-full bg-stain" aria-hidden="true"></span>`
+          : `<span class="w-[5px] h-[5px] rounded-full border border-dashed border-stain bg-transparent" aria-hidden="true"></span>`;
+      }).join('');
+
+      const incidentAria = decade.eventCount === 0
+        ? `${decade.label}: no recorded events.`
+        : `${decade.label} events: ${decade.eventCount} recorded, ${decade.highConfidenceCount} high confidence, ` +
+          `${decade.mediumConfidenceCount} medium confidence. Press enter to read the list.`;
+
+      return `
+        <button type="button"
+                class="incident-btn flex-1 flex flex-wrap gap-[2px] content-start justify-center items-start mx-[2px] min-h-[22px] bg-transparent border-0 p-1 ${decade.eventCount === 0 ? 'cursor-default opacity-30' : 'cursor-pointer'}"
+                data-decade="${decade.label}"
+                aria-label="${escapeHtml(incidentAria)}"
+                ${decade.eventCount === 0 ? 'disabled' : ''}>
+          ${dots}
+        </button>
+      `;
+    }).join('');
+
+    const labelsHtml = decadeData.map(decade => `
+      <span class="flex-1 text-center font-mono text-[8px] md:text-[10px] text-linen-300 whitespace-nowrap">
+        ${decade.label}
+      </span>
+    `).join('');
 
     const html = `
       <div class="flex items-end justify-between ${chartHeight} w-full ${barGap}">
-        ${decadeData.map((decade, index) => {
-          const height = (decade.activeCount / maxCount) * 100;
-          const barColor = decade.foundedCount > 0 ? 'bg-paper-100' : 'bg-paper-300';
-          // Add accent if heavily active
-          const activeClass = decade.activeCount > 5 ? 'group-hover:bg-accent' : 'group-hover:bg-accent/70';
-
-          return `
-            <div class="relative flex flex-col justify-end items-center h-full flex-1 group cursor-pointer timeline-bar-wrapper" data-decade="${decade.label}">
-              <!-- Bar -->
-              <div class="w-full mx-[2px] ${barColor} ${activeClass} transition-all duration-300 ease-out origin-bottom hover:scale-y-105"
-                   style="height: ${Math.max(height, 5)}%">
-              </div>
-
-              <!-- Label -->
-              <span class="absolute -bottom-8 font-mono text-[8px] md:text-[10px] text-paper-300 -rotate-45 group-hover:text-white transition-colors origin-top-left translate-x-1 md:translate-x-2">
-                ${decade.label.replace('s', '')}
-              </span>
-
-              <!-- Tooltip -->
-              <div class="timeline-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-36 md:w-48 bg-ink-900 border border-white/10 p-3 md:p-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-2xl">
-                <div class="font-serif text-base md:text-lg text-accent mb-1 font-bold">${decade.label}</div>
-                <div class="text-xs font-mono text-paper-300 space-y-1 border-t border-white/10 pt-2">
-                  <p><span class="text-white">${decade.activeCount}</span> Active</p>
-                  <p><span class="text-white">${decade.foundedCount}</span> Founded</p>
-                </div>
-              </div>
-            </div>
-          `;
-        }).join('')}
+        ${barsHtml}
+      </div>
+      <div class="rail-wood w-full mt-2"></div>
+      <div class="flex items-start justify-between w-full ${barGap} mt-2" role="group" aria-label="Recorded events by decade">
+        ${incidentsHtml}
+      </div>
+      <div class="flex justify-between w-full ${barGap} mt-2">
+        ${labelsHtml}
       </div>
     `;
 
     container.innerHTML = html;
   }
 
-  function setupEventListeners() {
-    // Decade bar clicks - tap to show tooltip on mobile, double-tap or click to filter
-    let lastTapped = null;
-    document.querySelectorAll('.timeline-bar-wrapper[data-decade]').forEach(wrapper => {
-      wrapper.addEventListener('click', (e) => {
-        const isTouchDevice = 'ontouchstart' in window;
-        const decade = wrapper.dataset.decade;
+  function announce(text) {
+    const live = document.getElementById('timeline-live');
+    if (live) live.textContent = text;
+  }
 
-        if (isTouchDevice) {
-          // On touch: first tap shows tooltip, second tap navigates
-          if (lastTapped === wrapper) {
-            // Second tap - navigate
-            lastTapped = null;
-            if (window.njbp && window.njbp.filterByDecade) {
-              window.njbp.filterByDecade(decade);
-            }
-          } else {
-            // First tap - show tooltip
-            e.preventDefault();
-            // Hide all other tooltips
-            document.querySelectorAll('.timeline-tooltip').forEach(t => t.classList.remove('!opacity-100'));
-            // Show this tooltip
-            const tooltip = wrapper.querySelector('.timeline-tooltip');
-            if (tooltip) tooltip.classList.add('!opacity-100');
-            lastTapped = wrapper;
-          }
-        } else {
-          if (window.njbp && window.njbp.filterByDecade) {
-            window.njbp.filterByDecade(decade);
-          }
+  function setupEventListeners() {
+    const barButtons = Array.from(document.querySelectorAll('.timeline-bar[data-decade]'));
+
+    barButtons.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        const decade = btn.dataset.decade;
+        if (window.njbp && window.njbp.filterByDecade) {
+          window.njbp.filterByDecade(decade);
+        }
+      });
+
+      btn.addEventListener('focus', () => {
+        const decade = decadeData.find(d => d.label === btn.dataset.decade);
+        if (decade) {
+          announce(`${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ${decade.activeCount} active, ${decade.eventCount} recorded events.`);
+        }
+      });
+
+      btn.addEventListener('mouseenter', () => {
+        const decade = decadeData.find(d => d.label === btn.dataset.decade);
+        if (decade) {
+          announce(`${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ${decade.activeCount} active, ${decade.eventCount} recorded events.`);
+        }
+      });
+
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          const next = barButtons[index + 1];
+          if (next) next.focus();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          const prev = barButtons[index - 1];
+          if (prev) prev.focus();
+        } else if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+
+    const incidentButtons = Array.from(document.querySelectorAll('.incident-btn[data-decade]'));
+    incidentButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.disabled) return;
+        showDecadeEvents(btn.dataset.decade);
+      });
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
         }
       });
     });
@@ -169,13 +281,14 @@
     const details = document.getElementById('timeline-details');
     if (!details) return;
 
-    const decade = decadeData.find(d => d.label === decadeLabel);
-    if (!decade) return;
+    const decade = decadeData.find(d => d.label === decadeLabel + 's' || d.label === decadeLabel);
+    const resolved = decade || decadeData.find(d => d.start === parseInt(decadeLabel, 10));
+    if (!resolved) return;
 
     const pubs = publications.filter(pub => {
       const founded = pub.yearFounded || 9999;
       const ceased = pub.yearCeased || 2026;
-      return founded <= decade.end && ceased >= decade.start;
+      return founded <= resolved.end && ceased >= resolved.start;
     });
 
     // Show the details panel
@@ -184,18 +297,18 @@
     details.innerHTML = `
         <header class="flex justify-between items-start mb-6 border-b border-white/10 pb-4">
             <div>
-                <h4 class="font-serif text-3xl text-white font-bold mb-1">${decade.label}</h4>
-                <p class="font-mono text-xs text-accent uppercase tracking-widest">Historical Snapshot</p>
+                <h4 class="font-serif text-3xl text-white font-bold mb-1">${resolved.label}</h4>
+                <p class="font-mono text-xs text-accent uppercase tracking-widest">Historical snapshot</p>
             </div>
             <div class="text-right font-mono text-xs text-paper-300">
-                <p><span class="text-white text-lg">${decade.activeCount}</span> Active</p>
-                <p><span class="text-white text-lg">${decade.foundedCount}</span> Founded</p>
+                <p><span class="text-white text-lg">${resolved.activeCount}</span> active</p>
+                <p><span class="text-white text-lg">${resolved.foundedCount}</span> founded</p>
             </div>
         </header>
 
         ${pubs.length > 0 ? `
           <div>
-            <p class="font-mono text-xs text-paper-300 uppercase tracking-widest mb-3">Publications of Record</p>
+            <p class="font-mono text-xs text-paper-300 uppercase tracking-widest mb-3">Publications of record</p>
             <div class="flex flex-wrap gap-2">
               ${pubs.slice(0, 15).map(p => `
                 <span class="px-3 py-1 bg-white/5 border border-white/10 hover:border-accent hover:text-white text-paper-300 text-sm transition-colors cursor-default">${escapeHtml(p.name)}</span>
@@ -206,12 +319,58 @@
         ` : '<p class="text-paper-300 italic font-serif">No publications recorded for this decade.</p>'}
 
         <div class="mt-8 pt-4 border-t border-white/10 text-center md:text-left">
-            <button onclick="window.njbp.filterByDecade('${decade.label}')"
+            <button onclick="window.njbp.filterByDecade('${resolved.label}')"
                     class="inline-block px-6 py-3 bg-paper-100 text-ink-950 hover:bg-accent hover:text-white font-mono text-xs font-bold uppercase tracking-widest transition-colors">
-            View Full Decade Archive
+            View full decade archive
             </button>
         </div>
     `;
+
+    details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function showDecadeEvents(decadeLabel) {
+    const details = document.getElementById('timeline-details');
+    if (!details) return;
+
+    const decade = decadeData.find(d => d.label === decadeLabel);
+    if (!decade) return;
+
+    details.classList.remove('hidden');
+
+    const listItems = decade.events.map(evt => {
+      const isMedium = evt.confidence !== 'high';
+      return `
+        <li class="border-b border-walnut-600 py-4 first:pt-0 last:border-0">
+          <div class="flex items-baseline gap-3 flex-wrap">
+            <span class="font-mono text-xs text-stain">${escapeHtml(evt.date)}</span>
+            ${isMedium ? '<span class="font-mono text-[10px] uppercase tracking-widest text-linen-300 border border-dashed border-stain px-2 py-0.5">Medium confidence</span>' : ''}
+          </div>
+          <h5 class="font-serif text-lg md:text-xl text-white font-bold mt-1 mb-1">${escapeHtml(evt.title)}</h5>
+          <p class="font-sans text-sm text-paper-300 leading-relaxed">${escapeHtml(evt.description || '')}</p>
+        </li>
+      `;
+    }).join('');
+
+    details.innerHTML = `
+        <header class="flex justify-between items-start mb-6 border-b border-white/10 pb-4">
+            <div>
+                <h4 class="font-serif text-3xl text-white font-bold mb-1">${decade.label} events</h4>
+                <p class="font-mono text-xs text-accent uppercase tracking-widest">Recorded incidents</p>
+            </div>
+            <div class="text-right font-mono text-xs text-paper-300">
+                <p><span class="text-white text-lg">${decade.eventCount}</span> recorded</p>
+                <p><span class="text-white text-lg">${decade.mediumConfidenceCount}</span> medium confidence</p>
+            </div>
+        </header>
+
+        ${decade.events.length > 0
+          ? `<ol class="divide-y divide-walnut-600">${listItems}</ol>`
+          : '<p class="text-paper-300 italic font-serif">No recorded events for this decade.</p>'}
+    `;
+
+    details.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    announce(`Showing ${decade.eventCount} recorded events for ${decade.label}.`);
   }
 
   function escapeHtml(str) {
@@ -220,6 +379,9 @@
     div.textContent = str;
     return div.innerHTML;
   }
+
+  // Expose for the incident row and console debugging
+  window.njbpTimeline = { showDecadeEvents, showDecadeDetails };
 
   // Initialize when DOM is ready
   if (document.readyState === 'loading') {
