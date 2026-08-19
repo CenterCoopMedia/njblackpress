@@ -19,6 +19,7 @@
     let clippingsByPublication = {};
 
     async function init() {
+        initLightbox();
         await loadData();
 
         const id = getStoryId();
@@ -34,6 +35,80 @@
         }
 
         renderStory(story);
+    }
+
+    // ---------------------------------------------------------------
+    // Lightbox — tap/click to enlarge a clipping. Vanilla, no library.
+    // ---------------------------------------------------------------
+
+    let lightboxEl = null;
+    let lightboxImg = null;
+    let lightboxCaption = null;
+    let lightboxCloseBtn = null;
+    let lightboxLastFocused = null;
+
+    function initLightbox() {
+        lightboxEl = document.getElementById('lightbox');
+        if (!lightboxEl) return;
+        lightboxImg = document.getElementById('lightbox-img');
+        lightboxCaption = document.getElementById('lightbox-caption');
+        lightboxCloseBtn = document.getElementById('lightbox-close');
+
+        lightboxCloseBtn.addEventListener('click', closeLightbox);
+        lightboxEl.addEventListener('click', e => {
+            if (e.target === lightboxEl) closeLightbox();
+        });
+        document.addEventListener('keydown', e => {
+            if (lightboxEl.hidden) return;
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                closeLightbox();
+                return;
+            }
+            // The dialog holds exactly one focusable control, so trap by
+            // simply keeping focus on it for any Tab press.
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                lightboxCloseBtn.focus();
+            }
+        });
+        document.addEventListener('click', e => {
+            const trigger = e.target.closest('.clip-trigger');
+            if (!trigger) return;
+            const figure = trigger.closest('figure');
+            if (!figure) return;
+            openLightbox(trigger, figure);
+        });
+    }
+
+    function openLightbox(trigger, figure) {
+        if (!lightboxEl) return;
+        const img = figure.querySelector('img');
+        const caption = figure.querySelector('figcaption');
+        if (!img) return;
+        lightboxLastFocused = trigger;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.innerHTML = caption ? caption.innerHTML : '';
+        lightboxEl.hidden = false;
+        lightboxEl.classList.remove('hidden');
+        lightboxEl.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        lightboxCloseBtn.focus();
+    }
+
+    function closeLightbox() {
+        if (!lightboxEl || lightboxEl.hidden) return;
+        lightboxEl.hidden = true;
+        lightboxEl.classList.add('hidden');
+        lightboxEl.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lightboxImg.src = '';
+        lightboxCaption.innerHTML = '';
+        if (lightboxLastFocused && typeof lightboxLastFocused.focus === 'function') {
+            lightboxLastFocused.focus();
+        }
+        lightboxLastFocused = null;
     }
 
     function getStoryId() {
@@ -106,15 +181,20 @@
         });
         eras.sort(compareEra);
 
-        const groups = eras.map(era => `
+        const groups = eras.map(era => {
+            // A group of one card left an empty right column on desktop, so
+            // groups that thin stay single-column instead of forcing a grid.
+            const gridClass = byEra[era].length === 1 ? 'grid grid-cols-1 gap-4' : 'grid grid-cols-1 md:grid-cols-2 gap-4';
+            return `
             <section class="mb-14">
                 <h2 class="font-display text-2xl font-bold text-paper-100 mb-2">${escapeHtml(formatEra(era))}</h2>
                 <hr class="rail-wood mb-6" aria-hidden="true">
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <ul class="${gridClass}">
                     ${byEra[era].map(s => storyCard(s)).join('')}
                 </ul>
             </section>
-        `).join('');
+        `;
+        }).join('');
 
         container.innerHTML = `
             <section class="px-4 md:px-8 py-12 md:py-16">
@@ -194,6 +274,11 @@
             .map(id => publications[id])
             .filter(Boolean);
 
+        const order = storyIndexOrder();
+        const orderIndex = order.findIndex(s => s.id === story.id);
+        const previousStory = orderIndex > 0 ? order[orderIndex - 1] : null;
+        const nextStory = orderIndex >= 0 && orderIndex < order.length - 1 ? order[orderIndex + 1] : null;
+
         container.innerHTML = `
             <article>
                 <header class="px-4 md:px-8 pt-12 md:pt-16 pb-8">
@@ -259,14 +344,38 @@
                     </div>
                 </section>
 
-                <section class="px-4 md:px-8 pb-16">
+                <section class="px-4 md:px-8 pb-12">
                     <div class="max-w-[1100px] mx-auto flex flex-wrap gap-6 font-mono text-xs">
                         <a href="story.html" class="text-accent hover:text-paper-100 transition-colors">All stories</a>
                         ${eraDecades(story.era).length > 0 ? eraDecades(story.era).map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="text-accent hover:text-paper-100 transition-colors">The ${escapeHtml(d)}</a>`).join('') : ''}
                     </div>
                 </section>
+
+                <nav class="px-4 md:px-8 pb-16" aria-label="Story navigation">
+                    <div class="max-w-[1100px] mx-auto flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
+                        ${previousStory ? `<a href="story.html?id=${encodeURIComponent(previousStory.id)}" class="text-accent hover:text-paper-100 transition-colors"><span aria-hidden="true">&larr;</span> ${escapeHtml(previousStory.title)}</a>` : `<span class="text-paper-300">This is the first story in the index.</span>`}
+                        <a href="story.html" class="text-accent hover:text-paper-100 transition-colors">All stories</a>
+                        ${nextStory ? `<a href="story.html?id=${encodeURIComponent(nextStory.id)}" class="text-accent hover:text-paper-100 transition-colors">${escapeHtml(nextStory.title)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-paper-300">This is the last story in the index.</span>`}
+                    </div>
+                </nav>
             </article>
         `;
+    }
+
+    // Same order the index renders: eras sorted chronologically, stories in
+    // the order stories.json lists them within each era.
+    function storyIndexOrder() {
+        const eras = [];
+        const byEra = {};
+        stories.forEach(s => {
+            const era = s.era || 'Era not recorded';
+            if (!byEra[era]) { byEra[era] = []; eras.push(era); }
+            byEra[era].push(s);
+        });
+        eras.sort(compareEra);
+        const flat = [];
+        eras.forEach(era => byEra[era].forEach(s => flat.push(s)));
+        return flat;
     }
 
     function stopEntry(event, index, shown) {
@@ -311,10 +420,12 @@
         return `
             <figure class="evidence-figure surface-cloth bg-ink-700 border border-ink-600 p-4 max-w-[720px]">
                 <div class="${cropped ? 'clip-mounted' : ''}">
-                    <img src="${escapeAttr(clip.webPath)}"
-                         alt="${escapeAttr(clip.alt)}"
-                         ${clip.width ? `width="${clip.width}"` : ''} ${clip.height ? `height="${clip.height}"` : ''}
-                         loading="lazy" decoding="async">
+                    <button type="button" class="clip-trigger block w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2" aria-label="Enlarge image: ${escapeAttr(clip.alt)}">
+                        <img src="${escapeAttr(clip.webPath)}"
+                             alt="${escapeAttr(clip.alt)}"
+                             ${clip.width ? `width="${clip.width}"` : ''} ${clip.height ? `height="${clip.height}"` : ''}
+                             loading="lazy" decoding="async">
+                    </button>
                 </div>
                 <figcaption class="pt-4 space-y-2">
                     ${clip.caption ? `<p class="measure font-sans text-[15px] text-paper-100 leading-relaxed">${escapeHtml(clip.caption)}</p>` : ''}

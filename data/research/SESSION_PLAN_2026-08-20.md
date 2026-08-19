@@ -60,7 +60,7 @@ Standing facts: the CCM URL is dead (Joe confirmed); GitHub Pages serves the lat
 | g10 | Fresh-eyes smell test of woven/story/era | agent (opus) | done — story CLEAR, era CLEAR, Woven USABLE BUT ROUGH (fails on mobile: no hamburger, toolbars clipped, px-tall tap targets). Big catch: 81 historicalNotes fields show raw "[March 2026 research...]" scratch publicly. Duplicate Danky citation on Nite Lite (p426 vs p427, entry 4440). Full findings in the g10 agent report |
 | g11 | Woven fix round (17 items from g10). Director rulings: CUT the shuttle (encodes nothing), default to the zoomed-out all-136 view, pluck must be visibly perceivable or be removed, conceit copy out, add loom search box. Joe can override the shuttle cut | agent (opus) | running |
 | g12 | Story/era polish: clipping lightbox (both pages), Woven nav link, prev/next stories, era jump bar + top prev/next + scroll-margin, collapse empty decade cards, single-card grid fix | agent (sonnet) | running |
-| g13 | Editorial register rewrite: 81 bracketed research notes → public prose (facts preserved exactly, both JSONs, wiki regen). Nite Lite duplicate citation resolved at source. Zero '[' left in historicalNotes | agent (opus) | running |
+| g13 | Editorial register rewrite: 81 bracketed research notes → public prose | agent (opus) | done — 091bce5. Director-verified: files byte-identical, 0 brackets in 136 notes, wiki shows the new prose. Nite Lite "duplicate" was CORRECT (Danky entry 4440 spans the p.426/427 break — verified in danky-full.txt); no change made. Agent's mojibake flag was a console-rendering false alarm: the data holds proper U+2019/U+201C curly quotes |
 
 ## Rules in force
 

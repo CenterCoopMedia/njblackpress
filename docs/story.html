@@ -164,6 +164,7 @@
                 <li><a href="story.html" class="inline-block py-[14px] text-accent transition-colors" aria-current="page">Stories</a></li>
                 <li><a href="era.html" class="inline-block py-[14px] hover:text-accent transition-colors">Eras</a></li>
                 <li><a href="wiki/index.html" class="inline-block py-[14px] hover:text-accent transition-colors">Wiki</a></li>
+                <li><a href="woven.html" class="inline-block py-[14px] hover:text-accent transition-colors">Woven</a></li>
                 <li><a href="index.html#timeline" class="inline-block py-[14px] hover:text-accent transition-colors">Timeline</a></li>
                 <li><a href="index.html#about" class="inline-block py-[14px] hover:text-accent transition-colors">About</a></li>
             </ul>
@@ -185,6 +186,7 @@
             <li><a href="story.html" class="inline-block py-2 hover:text-accent transition-colors">Stories</a></li>
             <li><a href="era.html" class="inline-block py-2 hover:text-accent transition-colors">Eras</a></li>
             <li><a href="wiki/index.html" class="inline-block py-2 hover:text-accent transition-colors">Wiki</a></li>
+            <li><a href="woven.html" class="inline-block py-2 hover:text-accent transition-colors">Woven</a></li>
             <li><a href="index.html#timeline" class="inline-block py-2 hover:text-accent transition-colors">Timeline</a></li>
             <li><a href="index.html#about" class="inline-block py-2 hover:text-accent transition-colors">About</a></li>
         </ul>
@@ -221,6 +223,17 @@
         </div>
 
     </main>
+
+    <!-- Clipping lightbox (issue #40 friction fix) -->
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-walnut-950/95 p-4 md:p-10" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
+        <button id="lightbox-close" type="button" class="absolute top-4 right-4 md:top-6 md:right-6 min-h-[44px] min-w-[44px] p-3 text-paper-100 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2" aria-label="Close image">
+            <svg class="w-6 h-6" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <div class="flex max-h-[90vh] max-w-[92vw] flex-col items-center gap-4 overflow-auto">
+            <img id="lightbox-img" src="" alt="" class="max-h-[70vh] max-w-full object-contain bg-walnut-900 outline outline-1 outline-thread-500/40">
+            <figcaption id="lightbox-caption" class="max-w-[68ch] space-y-2 text-center"></figcaption>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-ink-950 border-t border-ink-600 py-10 px-4 md:px-8 mt-20">

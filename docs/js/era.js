@@ -25,6 +25,7 @@
     let clipsByDecade = {};
 
     async function init() {
+        initLightbox();
         await loadData();
         indexByDecade();
 
@@ -40,6 +41,80 @@
         }
 
         renderDecade(decade);
+    }
+
+    // ---------------------------------------------------------------
+    // Lightbox — tap/click to enlarge a clipping. Vanilla, no library.
+    // ---------------------------------------------------------------
+
+    let lightboxEl = null;
+    let lightboxImg = null;
+    let lightboxCaption = null;
+    let lightboxCloseBtn = null;
+    let lightboxLastFocused = null;
+
+    function initLightbox() {
+        lightboxEl = document.getElementById('lightbox');
+        if (!lightboxEl) return;
+        lightboxImg = document.getElementById('lightbox-img');
+        lightboxCaption = document.getElementById('lightbox-caption');
+        lightboxCloseBtn = document.getElementById('lightbox-close');
+
+        lightboxCloseBtn.addEventListener('click', closeLightbox);
+        lightboxEl.addEventListener('click', e => {
+            if (e.target === lightboxEl) closeLightbox();
+        });
+        document.addEventListener('keydown', e => {
+            if (lightboxEl.hidden) return;
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                closeLightbox();
+                return;
+            }
+            // The dialog holds exactly one focusable control, so trap by
+            // simply keeping focus on it for any Tab press.
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                lightboxCloseBtn.focus();
+            }
+        });
+        document.addEventListener('click', e => {
+            const trigger = e.target.closest('.clip-trigger');
+            if (!trigger) return;
+            const figure = trigger.closest('figure');
+            if (!figure) return;
+            openLightbox(trigger, figure);
+        });
+    }
+
+    function openLightbox(trigger, figure) {
+        if (!lightboxEl) return;
+        const img = figure.querySelector('img');
+        const caption = figure.querySelector('figcaption');
+        if (!img) return;
+        lightboxLastFocused = trigger;
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.innerHTML = caption ? caption.innerHTML : '';
+        lightboxEl.hidden = false;
+        lightboxEl.classList.remove('hidden');
+        lightboxEl.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        lightboxCloseBtn.focus();
+    }
+
+    function closeLightbox() {
+        if (!lightboxEl || lightboxEl.hidden) return;
+        lightboxEl.hidden = true;
+        lightboxEl.classList.add('hidden');
+        lightboxEl.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lightboxImg.src = '';
+        lightboxCaption.innerHTML = '';
+        if (lightboxLastFocused && typeof lightboxLastFocused.focus === 'function') {
+            lightboxLastFocused.focus();
+        }
+        lightboxLastFocused = null;
     }
 
     function getDecade() {
@@ -139,7 +214,12 @@
             return;
         }
 
-        const rows = decades.map(d => {
+        // A decade with no publications founded is thin — it still holds an
+        // event or a clipping, so it stays reachable, just not as a full card.
+        const fullDecades = decades.filter(d => (pubsByDecade[d] || []).length > 0);
+        const emptyDecades = decades.filter(d => (pubsByDecade[d] || []).length === 0);
+
+        const rows = fullDecades.map(d => {
             const pubs = (pubsByDecade[d] || []).length;
             const evts = (eventsByDecade[d] || []).length;
             const clips = (clipsByDecade[d] || []).length;
@@ -157,6 +237,12 @@
             `;
         }).join('');
 
+        const stripHtml = emptyDecades.length > 0 ? `
+            <p class="font-mono text-xs text-paper-300 mt-8 pt-6 border-t border-ink-600 leading-loose">
+                Also in the record: ${emptyDecades.map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="text-accent hover:text-paper-100 transition-colors">${escapeHtml(decadeStripLabel(d))}</a>`).join(', ')}
+            </p>
+        ` : '';
+
         container.innerHTML = `
             <section class="px-4 md:px-8 py-12 md:py-16">
                 <div class="max-w-[1100px] mx-auto">
@@ -167,10 +253,20 @@
                         The same material also reads as
                         <a href="story.html" class="link-thread text-accent hover:text-paper-100 transition-colors">narrative threads</a>.
                     </p>
-                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">${rows}</ul>
+                    ${fullDecades.length > 0 ? `<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">${rows}</ul>` : ''}
+                    ${stripHtml}
                 </div>
             </section>
         `;
+    }
+
+    function decadeStripLabel(d) {
+        const evts = (eventsByDecade[d] || []).length;
+        const clips = (clipsByDecade[d] || []).length;
+        const parts = [];
+        if (evts > 0) parts.push(evts === 1 ? '1 event' : evts + ' events');
+        if (clips > 0) parts.push(clips === 1 ? '1 clipping' : clips + ' clippings');
+        return d + (parts.length > 0 ? ' (' + parts.join(', ') + ')' : '');
     }
 
     // ---------------------------------------------------------------
@@ -207,9 +303,51 @@
         setMetadata(title, description, 'https://centercoopmedia.github.io/njblackpress/era.html?decade=' + encodeURIComponent(decade));
         setBreadcrumb('The ' + decade);
 
+        // Only offer jump links and prev/next sections that actually exist.
+        const sections = [];
+        if (pubs.length > 0) sections.push({ href: '#pubs-heading', label: 'Publications' });
+        if (evts.length > 0) sections.push({ href: '#events-heading', label: 'Events' });
+        if (clips.length > 0) sections.push({ href: '#clippings-heading', label: 'Clippings' });
+        if (threads.length > 0) sections.push({ href: '#threads-heading', label: 'Threads' });
+
+        const decadeNav = (label) => `
+            <nav class="px-4 md:px-8 ${label === 'top' ? 'pt-4' : 'pb-16'}" aria-label="Decade navigation, ${label === 'top' ? 'above content' : 'below content'}">
+                <div class="max-w-[1100px] mx-auto flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
+                    ${previous ? `<a href="era.html?decade=${encodeURIComponent(previous)}" class="text-accent hover:text-paper-100 transition-colors"><span aria-hidden="true">&larr;</span> The ${escapeHtml(previous)}</a>` : `<span class="text-paper-300">The ${escapeHtml(decade)} is the earliest decade on record.</span>`}
+                    <a href="era.html" class="text-accent hover:text-paper-100 transition-colors">All decades</a>
+                    ${next ? `<a href="era.html?decade=${encodeURIComponent(next)}" class="text-accent hover:text-paper-100 transition-colors">The ${escapeHtml(next)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-paper-300">The ${escapeHtml(decade)} is the most recent decade on record.</span>`}
+                </div>
+            </nav>
+        `;
+
         container.innerHTML = `
             <article>
-                <header class="px-4 md:px-8 pt-12 md:pt-16 pb-8">
+                ${sections.length > 0 ? `
+                <!-- position: fixed, not sticky — the site-wide "overflow-x: hidden"
+                     rule on html/body forces overflow-y: auto too (CSS spec quirk),
+                     which turns body into a nested scroll container and breaks
+                     position: sticky. Fixed is immune to that and stays put under
+                     the fixed nav at every scroll position.
+                     Height is auto, not fixed — the mobile 44px tap-target rule
+                     (site-wide) makes this row taller on narrow screens, and a
+                     fixed height would let it overflow behind the nav. JS
+                     measures the real height after render and sizes the spacer
+                     and heading scroll-margin to match. The spacer comes first,
+                     right after the fixed nav in flow, so nothing else on the
+                     page — including the h1 right below it — renders underneath
+                     this fixed bar. -->
+                <div id="decade-jump-bar-spacer" aria-hidden="true"></div>
+                <div id="decade-jump-bar" class="fixed inset-x-0 top-20 z-30 flex flex-col gap-2 border-y border-ink-600 bg-ink-900/95 px-4 py-3 backdrop-blur-sm md:px-8">
+                    <div class="max-w-[1100px] mx-auto flex w-full flex-col gap-2 font-mono text-xs md:flex-row md:items-center md:justify-between">
+                        <div class="flex flex-wrap gap-x-6 gap-y-1" aria-label="Jump to section">
+                            ${sections.map(s => `<a href="${s.href}" class="text-accent hover:text-paper-100 transition-colors">${s.label}</a>`).join('')}
+                        </div>
+                        <a href="#main-content" class="text-paper-300 hover:text-accent transition-colors">Back to top <span aria-hidden="true">&uarr;</span></a>
+                    </div>
+                </div>
+                ` : ''}
+
+                <header class="px-4 md:px-8 pt-8 pb-8">
                     <div class="max-w-[1100px] mx-auto">
                         <h1 class="type-impression font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[0.95] tracking-normal text-paper-100 mb-4 balance">The ${escapeHtml(decade)}</h1>
                         <p class="font-mono text-xs text-paper-300 tabular-nums">
@@ -219,6 +357,8 @@
                         </p>
                     </div>
                 </header>
+
+                ${decadeNav('top')}
 
                 <section class="px-4 md:px-8 py-10 border-t border-ink-600" aria-labelledby="pubs-heading">
                     <div class="max-w-[1100px] mx-auto">
@@ -280,15 +420,46 @@
                     </div>
                 </section>
 
-                <nav class="px-4 md:px-8 pb-16" aria-label="Decade navigation">
-                    <div class="max-w-[1100px] mx-auto flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
-                        ${previous ? `<a href="era.html?decade=${encodeURIComponent(previous)}" class="text-accent hover:text-paper-100 transition-colors"><span aria-hidden="true">&larr;</span> The ${escapeHtml(previous)}</a>` : `<span class="text-paper-300">The ${escapeHtml(decade)} is the earliest decade on record.</span>`}
-                        <a href="era.html" class="text-accent hover:text-paper-100 transition-colors">All decades</a>
-                        ${next ? `<a href="era.html?decade=${encodeURIComponent(next)}" class="text-accent hover:text-paper-100 transition-colors">The ${escapeHtml(next)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-paper-300">The ${escapeHtml(decade)} is the most recent decade on record.</span>`}
-                    </div>
-                </nav>
+                ${decadeNav('bottom')}
             </article>
         `;
+
+        sizeJumpBar();
+    }
+
+    // The jump bar is fixed and auto-height (see comment above where it's
+    // built). Measure it after every render — and again on resize, since the
+    // mobile 44px tap-target rule can push it from one row to two — and size
+    // the spacer plus each section heading's scroll-margin-top to match, so
+    // a jump link never lands a heading under the bar or the fixed nav.
+    let jumpBarResizeBound = false;
+
+    function sizeJumpBar() {
+        const bar = document.getElementById('decade-jump-bar');
+        const spacer = document.getElementById('decade-jump-bar-spacer');
+        if (!bar || !spacer) return;
+        const height = bar.getBoundingClientRect().height;
+        spacer.style.height = height + 'px';
+        const scrollMargin = (80 + height + 24) + 'px'; // fixed nav (80px) + bar + buffer
+        ['pubs-heading', 'events-heading', 'clippings-heading', 'threads-heading'].forEach(id => {
+            const heading = document.getElementById(id);
+            if (heading) heading.style.scrollMarginTop = scrollMargin;
+        });
+
+        if (!jumpBarResizeBound) {
+            jumpBarResizeBound = true;
+            let resizeTimer = null;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(sizeJumpBar, 150);
+            });
+            // Web fonts can finish loading after the first measurement and
+            // reflow the bar's text to a different height.
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(sizeJumpBar);
+            }
+            window.addEventListener('load', sizeJumpBar);
+        }
     }
 
     function eventEntry(event) {
@@ -315,10 +486,12 @@
         return `
             <figure class="evidence-figure surface-cloth bg-ink-700 border border-ink-600 p-4 max-w-[720px]">
                 <div class="${cropped ? 'clip-mounted' : ''}">
-                    <img src="${escapeAttr(clip.webPath)}"
-                         alt="${escapeAttr(clip.alt)}"
-                         ${clip.width ? `width="${clip.width}"` : ''} ${clip.height ? `height="${clip.height}"` : ''}
-                         loading="lazy" decoding="async">
+                    <button type="button" class="clip-trigger block w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2" aria-label="Enlarge image: ${escapeAttr(clip.alt)}">
+                        <img src="${escapeAttr(clip.webPath)}"
+                             alt="${escapeAttr(clip.alt)}"
+                             ${clip.width ? `width="${clip.width}"` : ''} ${clip.height ? `height="${clip.height}"` : ''}
+                             loading="lazy" decoding="async">
+                    </button>
                 </div>
                 <figcaption class="pt-4 space-y-2">
                     ${clip.caption ? `<p class="measure font-sans text-[15px] text-paper-100 leading-relaxed">${escapeHtml(clip.caption)}</p>` : ''}
