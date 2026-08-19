@@ -49,13 +49,13 @@ Standing facts: the CCM URL is dead (Joe confirmed); GitHub Pages serves the lat
 | ID | Task | Owner | Status |
 | --- | --- | --- | --- |
 | g1 | Close verifiably-done issues #49 #38 #45 #46 #21 with evidence comments | director | done — all five closed 2026-08-19 |
-| g2 | Fix #22 Google Fonts 400 (css2 two-axis tuple bug — confirmed live, fonts DO NOT load), #55 dead decade buttons (data-decade="1880" vs "1880s"), #23 dead HTTPS link (use working http://thenewarktimes.com/ in both publications.json) + wiki template + regen | agent | pending |
-| g3 | New OG images: og-image.png reshoot from redesigned hero (old one has Fraunces/italic/wrong counts), og-woven.png from the loom; point woven.html metas at og-woven.png. MUST run after g2 (fonts affect rendering) | agent | pending |
-| g4 | #48 remainders: border-white/* to walnut hairlines, JS-rendered card styling, letterpress type treatment, WCAG AA contrast check across pages | agent | pending |
-| g5 | #40 era and story pages: at least one era page and one story page live, clippings inline, from stories.json/events.json. Rights rule: images only from docs/data/clippings.json | agent (opus) | pending |
+| g2 | Fix #22 Google Fonts 400, #55 decade buttons, #23 dead HTTPS link | agent | done — 9be4047 pushed, closed #22 #23 #55. Fonts URL 400→200 (range tuple 300..700), fixed across 4 pages + wiki template + 247 regenerated pages, document.fonts.check true. #55 needed no code change (timeline.js already normalizes label+'s'; browser-verified panel opens). Newark Times http:// in both JSONs |
+| g3 | New OG images | agent | done — 97e438a. og-image.png 1200x630 reshot from redesigned hero (director-verified: 136/45/17, Libre Franklin, no slop); og-woven.png shot in fullscreen loom mode; woven.html metas point at og-woven.png + gained a Twitter Card block |
+| g4 | #48 remainders: cold-hairline sweep, JS card styling, WCAG AA contrast audit | agent (opus) | running |
+| g5 | #40 era and story pages | agent (opus) | done — 97e438a, closed #40. 13 story pages + 17 decade pages, rights rule verified (0 research paths, images via clippings webPath only), nav links on all 4 pages (director applied), sitemap + robots.txt repointed to the live GitHub Pages domain and story/era added |
 | g6 | Tailwind migration #15 #18 #19 #20: compile a static stylesheet with the standalone CLI, replace the CDN script + inline config on all pages incl. 248 wiki pages (via generator template + regen). #20 note: org Actions disabled, so rebuild-on-push becomes rebuild-in-regen-script. MUST run last (compiles from final class usage) | agent | pending |
-| g7 | Update CLAUDE.md deploy section (GH Pages is live, SFTP dead), refresh handoff + this plan, update ccm-server-migrated memory | director | pending |
-| g8 | Project board: set status on all closed/open items; post #47 plain-English update covering the grind | director | pending |
+| g7 | Update CLAUDE.md deploy section (GH Pages is live, SFTP dead), refresh handoff + this plan, update ccm-server-migrated memory | director | CLAUDE.md + memory done (in 9be4047); handoff refresh at end of grind. Also: Joe's standing rule saved — delete desktop.ini on sight (10 deleted) |
+| g8 | Project board: set status on all closed/open items; post #47 plain-English update covering the grind | director | board auto-syncs closed→Done (verified); ProjectV2 status update posted (ON_TRACK, id ...ADqSM). #47 comment at end of grind |
 
 ## Rules in force
 
