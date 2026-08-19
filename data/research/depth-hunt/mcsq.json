@@ -1,0 +1,1 @@
+{"responseHeader":{"status":0,"QTime":123,"params":{"query":"(text:&quot;MC Squared&quot; OR text:&quot;MC Squared&quot; OR text__reviews:&quot;MC Squared&quot;)(text:Piscataway OR text:Piscataway OR text__reviews:Piscataway)","qin":"&quot;MC Squared&quot; Piscataway","fields":"identifier,title,date","wt":"json","rows":10,"start":0}},"response":{"numFound":0,"start":0,"docs":[]}}

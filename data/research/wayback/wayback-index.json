@@ -1,0 +1,1750 @@
+{
+  "sites": [
+    {
+      "host": "blackinjersey.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20140616021408",
+        "original": "http://blackinjersey.com:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "470"
+      },
+      "last": {
+        "timestamp": "20250213091146",
+        "original": "https://www.blackinjersey.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "26926"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20140616021408",
+          "original": "http://blackinjersey.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "470"
+        },
+        {
+          "timestamp": "20140904121434",
+          "original": "http://blackinjersey.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20778"
+        },
+        {
+          "timestamp": "20160109105452",
+          "original": "http://blackinjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "21025"
+        },
+        {
+          "timestamp": "20160307072538",
+          "original": "http://blackinjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "22798"
+        },
+        {
+          "timestamp": "20161002014356",
+          "original": "http://blackinjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "15047"
+        },
+        {
+          "timestamp": "20170602215358",
+          "original": "http://blackinjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "41036"
+        },
+        {
+          "timestamp": "20211218184219",
+          "original": "https://www.blackinjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "18499"
+        },
+        {
+          "timestamp": "20220204165936",
+          "original": "https://www.blackinjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "21602"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20140616021408/http://blackinjersey.com:80/",
+      "wayback_last": "https://web.archive.org/web/20250213091146/https://www.blackinjersey.com/",
+      "id": 4,
+      "name": "Black In Jersey",
+      "url": "https://www.blackinjersey.com/"
+    },
+    {
+      "host": "frontrunnernewjersey.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20180729184443",
+        "original": "https://frontrunnernewjersey.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "13079"
+      },
+      "last": {
+        "timestamp": "20220206103235",
+        "original": "https://frontrunnernewjersey.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "23514"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20180729184443",
+          "original": "https://frontrunnernewjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "13079"
+        },
+        {
+          "timestamp": "20190818235228",
+          "original": "https://frontrunnernewjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "18983"
+        },
+        {
+          "timestamp": "20191018132239",
+          "original": "https://frontrunnernewjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20174"
+        },
+        {
+          "timestamp": "20191116234711",
+          "original": "https://frontrunnernewjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20624"
+        },
+        {
+          "timestamp": "20191211132737",
+          "original": "https://frontrunnernewjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20986"
+        },
+        {
+          "timestamp": "20200108145806",
+          "original": "https://frontrunnernewjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "21101"
+        },
+        {
+          "timestamp": "20200212163536",
+          "original": "https://frontrunnernewjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "21063"
+        },
+        {
+          "timestamp": "20200305223319",
+          "original": "https://frontrunnernewjersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20950"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20180729184443/https://frontrunnernewjersey.com/",
+      "wayback_last": "https://web.archive.org/web/20220206103235/https://frontrunnernewjersey.com/",
+      "id": 6,
+      "name": "Front Runner New Jersey",
+      "url": "https://frontrunnernewjersey.com/"
+    },
+    {
+      "host": "fivewardsmedia.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20211204084833",
+        "original": "http://fivewardsmedia.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "1914"
+      },
+      "last": {
+        "timestamp": "20250613131129",
+        "original": "https://www.fivewardsmedia.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "7463"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20211204084833",
+          "original": "http://fivewardsmedia.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1914"
+        },
+        {
+          "timestamp": "20220506003252",
+          "original": "https://www.fivewardsmedia.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "12695"
+        },
+        {
+          "timestamp": "20220609191549",
+          "original": "https://www.fivewardsmedia.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "15952"
+        },
+        {
+          "timestamp": "20220721195158",
+          "original": "https://www.fivewardsmedia.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "16449"
+        },
+        {
+          "timestamp": "20221007091807",
+          "original": "https://www.fivewardsmedia.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "22533"
+        },
+        {
+          "timestamp": "20221206172704",
+          "original": "https://www.fivewardsmedia.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20186"
+        },
+        {
+          "timestamp": "20230117153444",
+          "original": "https://www.fivewardsmedia.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "16502"
+        },
+        {
+          "timestamp": "20230205010734",
+          "original": "https://www.fivewardsmedia.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20583"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20211204084833/http://fivewardsmedia.com/",
+      "wayback_last": "https://web.archive.org/web/20250613131129/https://www.fivewardsmedia.com/",
+      "id": 12,
+      "name": "Five Wards Media",
+      "url": "https://www.fivewardsmedia.com/"
+    },
+    {
+      "host": "trentonjournal.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20210111152414",
+        "original": "http://www.trentonjournal.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "1179"
+      },
+      "last": {
+        "timestamp": "20241201002842",
+        "original": "https://trentonjournal.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "46394"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20210111152414",
+          "original": "http://www.trentonjournal.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1179"
+        },
+        {
+          "timestamp": "20210407212502",
+          "original": "https://trentonjournal.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "7259"
+        },
+        {
+          "timestamp": "20211118204922",
+          "original": "https://trentonjournal.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "325"
+        },
+        {
+          "timestamp": "20220201202404",
+          "original": "https://www.trentonjournal.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "18603"
+        },
+        {
+          "timestamp": "20220310152024",
+          "original": "https://www.trentonjournal.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "21236"
+        },
+        {
+          "timestamp": "20220411185931",
+          "original": "https://trentonjournal.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "447"
+        },
+        {
+          "timestamp": "20221221185158",
+          "original": "https://trentonjournal.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "38966"
+        },
+        {
+          "timestamp": "20230102134727",
+          "original": "https://trentonjournal.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "39208"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20210111152414/http://www.trentonjournal.com/",
+      "wayback_last": "https://web.archive.org/web/20241201002842/https://trentonjournal.com/",
+      "id": 17,
+      "name": "Trenton Journal",
+      "url": "https://trentonjournal.com/"
+    },
+    {
+      "host": "njincolor.com",
+      "count": 21,
+      "first": {
+        "timestamp": "20220622225425",
+        "original": "https://njincolor.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "14754"
+      },
+      "last": {
+        "timestamp": "20251103050559",
+        "original": "https://njincolor.com/robots.txt",
+        "statuscode": "200",
+        "mimetype": "text/plain",
+        "length": "769"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20220622225425",
+          "original": "https://njincolor.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "14754"
+        },
+        {
+          "timestamp": "20220817062136",
+          "original": "https://njincolor.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "18595"
+        },
+        {
+          "timestamp": "20230316202936",
+          "original": "https://njincolor.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20550"
+        },
+        {
+          "timestamp": "20230402195513",
+          "original": "https://njincolor.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20281"
+        },
+        {
+          "timestamp": "20241128024908",
+          "original": "https://njincolor.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20565"
+        },
+        {
+          "timestamp": "20250209131341",
+          "original": "https://njincolor.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "21098"
+        },
+        {
+          "timestamp": "20250312064303",
+          "original": "https://njincolor.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20310"
+        },
+        {
+          "timestamp": "20250402075600",
+          "original": "https://njincolor.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20303"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20220622225425/https://njincolor.com/",
+      "wayback_last": "https://web.archive.org/web/20251103050559/https://njincolor.com/robots.txt",
+      "id": 19,
+      "name": "NJ in Color",
+      "url": "https://njincolor.com/"
+    },
+    {
+      "host": "njurbannews.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20151107202643",
+        "original": "http://www.njurbannews.com:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "9610"
+      },
+      "last": {
+        "timestamp": "20230307222958",
+        "original": "https://njurbannews.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "35934"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20151107202643",
+          "original": "http://www.njurbannews.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "9610"
+        },
+        {
+          "timestamp": "20151208075748",
+          "original": "http://www.njurbannews.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "9789"
+        },
+        {
+          "timestamp": "20160108094332",
+          "original": "http://www.njurbannews.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "9913"
+        },
+        {
+          "timestamp": "20160318085328",
+          "original": "http://www.njurbannews.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "10058"
+        },
+        {
+          "timestamp": "20160420024421",
+          "original": "http://www.njurbannews.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "10135"
+        },
+        {
+          "timestamp": "20160521165648",
+          "original": "http://www.njurbannews.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "10270"
+        },
+        {
+          "timestamp": "20160701022706",
+          "original": "http://www.njurbannews.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "10791"
+        },
+        {
+          "timestamp": "20180819173926",
+          "original": "https://www.njurbannews.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "16783"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20151107202643/http://www.njurbannews.com:80/",
+      "wayback_last": "https://web.archive.org/web/20230307222958/https://njurbannews.com/",
+      "id": 20,
+      "name": "New Jersey Urban News",
+      "url": "https://njurbannews.com/"
+    },
+    {
+      "host": "arkrepublic.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20170708221608",
+        "original": "http://arkrepublic.com:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "26221"
+      },
+      "last": {
+        "timestamp": "20210307113832",
+        "original": "https://www.arkrepublic.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "50909"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20170708221608",
+          "original": "http://arkrepublic.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "26221"
+        },
+        {
+          "timestamp": "20170809113839",
+          "original": "http://arkrepublic.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "28440"
+        },
+        {
+          "timestamp": "20170909051133",
+          "original": "http://arkrepublic.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "28437"
+        },
+        {
+          "timestamp": "20180215190320",
+          "original": "http://arkrepublic.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "48664"
+        },
+        {
+          "timestamp": "20180303190019",
+          "original": "http://arkrepublic.com:80/?",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "49181"
+        },
+        {
+          "timestamp": "20180403165026",
+          "original": "http://arkrepublic.com:80/?",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "49570"
+        },
+        {
+          "timestamp": "20180506021505",
+          "original": "http://arkrepublic.com:80/?",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "45596"
+        },
+        {
+          "timestamp": "20180606153722",
+          "original": "http://arkrepublic.com:80/?",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "45208"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20170708221608/http://arkrepublic.com:80/",
+      "wayback_last": "https://web.archive.org/web/20210307113832/https://www.arkrepublic.com/",
+      "id": 22,
+      "name": "Ark Republic",
+      "url": "https://www.arkrepublic.com/"
+    },
+    {
+      "host": "thenewarktimes.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20070513064844",
+        "original": "http://www.thenewarktimes.com:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "3079"
+      },
+      "last": {
+        "timestamp": "20180128223053",
+        "original": "http://thenewarktimes.com:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "16485"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20070513064844",
+          "original": "http://www.thenewarktimes.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "3079"
+        },
+        {
+          "timestamp": "20111121030043",
+          "original": "http://thenewarktimes.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5099"
+        },
+        {
+          "timestamp": "20111222051012",
+          "original": "http://thenewarktimes.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5100"
+        },
+        {
+          "timestamp": "20120712184125",
+          "original": "http://thenewarktimes.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "6837"
+        },
+        {
+          "timestamp": "20130718135553",
+          "original": "http://thenewarktimes.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "4150"
+        },
+        {
+          "timestamp": "20141018093931",
+          "original": "http://thenewarktimes.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "10585"
+        },
+        {
+          "timestamp": "20141108124550",
+          "original": "http://thenewarktimes.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "10859"
+        },
+        {
+          "timestamp": "20150214053741",
+          "original": "http://thenewarktimes.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "12137"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20070513064844/http://www.thenewarktimes.com:80/",
+      "wayback_last": "https://web.archive.org/web/20180128223053/http://thenewarktimes.com:80/",
+      "id": 23,
+      "name": "The Newark Times",
+      "url": "https://thenewarktimes.com/"
+    },
+    {
+      "host": "atlanticcityfocus.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20230517160636",
+        "original": "https://www.atlanticcityfocus.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "7416"
+      },
+      "last": {
+        "timestamp": "20260301194057",
+        "original": "https://www.atlanticcityfocus.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "10863"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20230517160636",
+          "original": "https://www.atlanticcityfocus.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "7416"
+        },
+        {
+          "timestamp": "20230607142336",
+          "original": "https://www.atlanticcityfocus.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "7445"
+        },
+        {
+          "timestamp": "20230924092153",
+          "original": "https://www.atlanticcityfocus.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5901"
+        },
+        {
+          "timestamp": "20231022181206",
+          "original": "https://www.atlanticcityfocus.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5780"
+        },
+        {
+          "timestamp": "20231204053525",
+          "original": "https://www.atlanticcityfocus.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "6929"
+        },
+        {
+          "timestamp": "20240311140117",
+          "original": "https://www.atlanticcityfocus.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "6893"
+        },
+        {
+          "timestamp": "20240419163056",
+          "original": "https://www.atlanticcityfocus.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "6226"
+        },
+        {
+          "timestamp": "20240506145430",
+          "original": "https://www.atlanticcityfocus.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "7528"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20230517160636/https://www.atlanticcityfocus.com/",
+      "wayback_last": "https://web.archive.org/web/20260301194057/https://www.atlanticcityfocus.com/",
+      "id": 25,
+      "name": "Atlantic City Focus",
+      "url": "https://www.atlanticcityfocus.com/"
+    },
+    {
+      "host": "faithfullymagazine.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20150706052920",
+        "original": "http://www.faithfullymagazine.com:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "19583"
+      },
+      "last": {
+        "timestamp": "20200820225347",
+        "original": "https://faithfullymagazine.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "31636"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20150706052920",
+          "original": "http://www.faithfullymagazine.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "19583"
+        },
+        {
+          "timestamp": "20150924022140",
+          "original": "http://www.faithfullymagazine.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "15329"
+        },
+        {
+          "timestamp": "20151025031224",
+          "original": "http://www.faithfullymagazine.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "19891"
+        },
+        {
+          "timestamp": "20151217065207",
+          "original": "http://www.faithfullymagazine.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1072"
+        },
+        {
+          "timestamp": "20160116173737",
+          "original": "http://www.faithfullymagazine.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1131"
+        },
+        {
+          "timestamp": "20160403092420",
+          "original": "http://www.faithfullymagazine.com:80/?",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "17649"
+        },
+        {
+          "timestamp": "20160510150808",
+          "original": "http://www.faithfullymagazine.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "14065"
+        },
+        {
+          "timestamp": "20160617231309",
+          "original": "http://www.faithfullymagazine.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "14048"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20150706052920/http://www.faithfullymagazine.com:80/",
+      "wayback_last": "https://web.archive.org/web/20200820225347/https://faithfullymagazine.com/",
+      "id": 29,
+      "name": "Faithfully Magazine",
+      "url": "https://faithfullymagazine.com/"
+    },
+    {
+      "host": "jacque-howard.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20211208013612",
+        "original": "https://jacque-howard.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "23330"
+      },
+      "last": {
+        "timestamp": "20211208013611",
+        "original": "https://jacque-howard.com/robots.txt",
+        "statuscode": "200",
+        "mimetype": "text/plain",
+        "length": "819"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20211208013612",
+          "original": "https://jacque-howard.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "23330"
+        },
+        {
+          "timestamp": "20220307044517",
+          "original": "https://jacque-howard.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "23345"
+        },
+        {
+          "timestamp": "20220426024333",
+          "original": "https://jacque-howard.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20955"
+        },
+        {
+          "timestamp": "20220718185414",
+          "original": "https://jacque-howard.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20892"
+        },
+        {
+          "timestamp": "20220816152837",
+          "original": "https://jacque-howard.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "20998"
+        },
+        {
+          "timestamp": "20230214151118",
+          "original": "https://jacque-howard.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "24123"
+        },
+        {
+          "timestamp": "20230402050502",
+          "original": "https://jacque-howard.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "24197"
+        },
+        {
+          "timestamp": "20230818223013",
+          "original": "https://jacque-howard.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "29526"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20211208013612/https://jacque-howard.com/",
+      "wayback_last": "https://web.archive.org/web/20211208013611/https://jacque-howard.com/robots.txt",
+      "id": 32,
+      "name": "Trenton365 Stream with Jacque Howard",
+      "url": "https://jacque-howard.com/trenton365-stream"
+    },
+    {
+      "host": "morejersey.com",
+      "count": 30,
+      "first": {
+        "timestamp": "20040401133823",
+        "original": "http://morejersey.com:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "263"
+      },
+      "last": {
+        "timestamp": "20250206201427",
+        "original": "https://morejersey.com/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "28690"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20040401133823",
+          "original": "http://morejersey.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "263"
+        },
+        {
+          "timestamp": "20130617075211",
+          "original": "http://morejersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "7169"
+        },
+        {
+          "timestamp": "20140102193041",
+          "original": "http://morejersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "606"
+        },
+        {
+          "timestamp": "20140517164516",
+          "original": "http://morejersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "608"
+        },
+        {
+          "timestamp": "20160910125257",
+          "original": "http://www.morejersey.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "19407"
+        },
+        {
+          "timestamp": "20161011145653",
+          "original": "http://www.morejersey.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "19196"
+        },
+        {
+          "timestamp": "20161114083457",
+          "original": "http://www.morejersey.com:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "19515"
+        },
+        {
+          "timestamp": "20220311212943",
+          "original": "https://morejersey.com/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "13448"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20040401133823/http://morejersey.com:80/",
+      "wayback_last": "https://web.archive.org/web/20250206201427/https://morejersey.com/",
+      "id": 36,
+      "name": "More Jersey",
+      "url": "https://morejersey.com/"
+    },
+    {
+      "host": "publicsq.org",
+      "count": 30,
+      "first": {
+        "timestamp": "20211007213810",
+        "original": "https://www.publicsq.org/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "21451"
+      },
+      "last": {
+        "timestamp": "20241102180148",
+        "original": "https://www.publicsq.org/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "32573"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20211007213810",
+          "original": "https://www.publicsq.org/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "21451"
+        },
+        {
+          "timestamp": "20211118213347",
+          "original": "https://www.publicsq.org/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "25377"
+        },
+        {
+          "timestamp": "20211202034305",
+          "original": "https://www.publicsq.org/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "25580"
+        },
+        {
+          "timestamp": "20220125174438",
+          "original": "https://www.publicsq.org/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "38079"
+        },
+        {
+          "timestamp": "20220211172310",
+          "original": "https://www.publicsq.org/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "31568"
+        },
+        {
+          "timestamp": "20220302181543",
+          "original": "https://www.publicsq.org/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "26211"
+        },
+        {
+          "timestamp": "20220402172026",
+          "original": "https://www.publicsq.org/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "21994"
+        },
+        {
+          "timestamp": "20220502164047",
+          "original": "https://www.publicsq.org/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "24392"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20211007213810/https://www.publicsq.org/",
+      "wayback_last": "https://web.archive.org/web/20241102180148/https://www.publicsq.org/",
+      "id": 43,
+      "name": "Public Square Amplified",
+      "url": "https://www.publicsq.org/"
+    },
+    {
+      "host": "marxists.org",
+      "count": 30,
+      "first": {
+        "timestamp": "19981111190648",
+        "original": "http://www.marxists.org:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "1220"
+      },
+      "last": {
+        "timestamp": "20021202163424",
+        "original": "http://www.marxists.org:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "2461"
+      },
+      "html_sample": [
+        {
+          "timestamp": "19981111190648",
+          "original": "http://www.marxists.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1220"
+        },
+        {
+          "timestamp": "19981212030812",
+          "original": "http://www.marxists.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1234"
+        },
+        {
+          "timestamp": "19990125101050",
+          "original": "http://www.marxists.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1238"
+        },
+        {
+          "timestamp": "19990208014702",
+          "original": "http://www.marxists.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1239"
+        },
+        {
+          "timestamp": "19990421172633",
+          "original": "http://marxists.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1196"
+        },
+        {
+          "timestamp": "19991011230352",
+          "original": "http://marxists.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1337"
+        },
+        {
+          "timestamp": "19991111014225",
+          "original": "http://marxists.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1340"
+        },
+        {
+          "timestamp": "20000302171708",
+          "original": "http://www.marxists.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1402"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/19981111190648/http://www.marxists.org:80/",
+      "wayback_last": "https://web.archive.org/web/20021202163424/http://www.marxists.org:80/",
+      "id": 84,
+      "name": "Unity and Struggle",
+      "url": "https://www.marxists.org/history/erol/periodicals/unity-struggle/index.htm"
+    },
+    {
+      "host": "collections.libraries.rutgers.edu",
+      "count": 30,
+      "first": {
+        "timestamp": "20190419185835",
+        "original": "https://collections.libraries.rutgers.edu/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "6688"
+      },
+      "last": {
+        "timestamp": "20220520145710",
+        "original": "https://collections.libraries.rutgers.edu/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "35509"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20190419185835",
+          "original": "https://collections.libraries.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "6688"
+        },
+        {
+          "timestamp": "20190821002208",
+          "original": "https://collections.libraries.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "9590"
+        },
+        {
+          "timestamp": "20190916051337",
+          "original": "https://collections.libraries.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "9403"
+        },
+        {
+          "timestamp": "20191009190502",
+          "original": "https://collections.libraries.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "9763"
+        },
+        {
+          "timestamp": "20191201211030",
+          "original": "https://collections.libraries.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "9915"
+        },
+        {
+          "timestamp": "20200121083356",
+          "original": "https://collections.libraries.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "10076"
+        },
+        {
+          "timestamp": "20200315175426",
+          "original": "https://collections.libraries.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "10642"
+        },
+        {
+          "timestamp": "20200410012127",
+          "original": "https://collections.libraries.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "10831"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20190419185835/https://collections.libraries.rutgers.edu/",
+      "wayback_last": "https://web.archive.org/web/20220520145710/https://collections.libraries.rutgers.edu/",
+      "id": 128,
+      "name": "Newark Black Newspapers Collection",
+      "url": "https://collections.libraries.rutgers.edu/newark-black-newspapers"
+    },
+    {
+      "host": "scarletandblack.rutgers.edu",
+      "count": 30,
+      "first": {
+        "timestamp": "20161122105348",
+        "original": "http://scarletandblack.rutgers.edu/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "5753"
+      },
+      "last": {
+        "timestamp": "20210120065101",
+        "original": "https://scarletandblack.rutgers.edu/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "9258"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20161122105348",
+          "original": "http://scarletandblack.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5753"
+        },
+        {
+          "timestamp": "20161201162905",
+          "original": "http://scarletandblack.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5754"
+        },
+        {
+          "timestamp": "20170101194939",
+          "original": "http://scarletandblack.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5759"
+        },
+        {
+          "timestamp": "20170218145604",
+          "original": "http://scarletandblack.rutgers.edu/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5939"
+        },
+        {
+          "timestamp": "20170504145804",
+          "original": "http://scarletandblack.rutgers.edu:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5777"
+        },
+        {
+          "timestamp": "20170607050222",
+          "original": "http://scarletandblack.rutgers.edu:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5777"
+        },
+        {
+          "timestamp": "20170726081202",
+          "original": "http://scarletandblack.rutgers.edu:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5776"
+        },
+        {
+          "timestamp": "20170827080307",
+          "original": "http://scarletandblack.rutgers.edu:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "5778"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20161122105348/http://scarletandblack.rutgers.edu/",
+      "wayback_last": "https://web.archive.org/web/20210120065101/https://scarletandblack.rutgers.edu/",
+      "id": 33,
+      "name": "The Black Observer",
+      "url": "https://scarletandblack.rutgers.edu/archive/items/show/949"
+    },
+    {
+      "host": "wms-amec.org",
+      "count": 30,
+      "first": {
+        "timestamp": "20040207205909",
+        "original": "http://www.wms-amec.org:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "1476"
+      },
+      "last": {
+        "timestamp": "20110505155427",
+        "original": "http://www.wms-amec.org:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "3813"
+      },
+      "html_sample": [
+        {
+          "timestamp": "20040207205909",
+          "original": "http://www.wms-amec.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1476"
+        },
+        {
+          "timestamp": "20040418135036",
+          "original": "http://www.wms-amec.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1419"
+        },
+        {
+          "timestamp": "20040508050857",
+          "original": "http://www.wms-amec.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1417"
+        },
+        {
+          "timestamp": "20040606210212",
+          "original": "http://www.wms-amec.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1419"
+        },
+        {
+          "timestamp": "20040929222144",
+          "original": "http://www.wms-amec.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1421"
+        },
+        {
+          "timestamp": "20070910114312",
+          "original": "http://www.wms-amec.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "2867"
+        },
+        {
+          "timestamp": "20071128095511",
+          "original": "http://www.wms-amec.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "2870"
+        },
+        {
+          "timestamp": "20071228180100",
+          "original": "http://www.wms-amec.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "3166"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/20040207205909/http://www.wms-amec.org:80/",
+      "wayback_last": "https://web.archive.org/web/20110505155427/http://www.wms-amec.org:80/",
+      "id": 71,
+      "name": "The Missionary Magazine",
+      "url": "https://www.wms-amec.org/missionary-magazine.html"
+    },
+    {
+      "host": "archive.org",
+      "count": 30,
+      "first": {
+        "timestamp": "19970126045828",
+        "original": "http://www.archive.org:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "1415"
+      },
+      "last": {
+        "timestamp": "20021001124437",
+        "original": "http://www.archive.org:80/",
+        "statuscode": "200",
+        "mimetype": "text/html",
+        "length": "7518"
+      },
+      "html_sample": [
+        {
+          "timestamp": "19970126045828",
+          "original": "http://www.archive.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1415"
+        },
+        {
+          "timestamp": "19971011050034",
+          "original": "http://www.archive.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1402"
+        },
+        {
+          "timestamp": "19971211122953",
+          "original": "http://www.archive.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1405"
+        },
+        {
+          "timestamp": "19980109140106",
+          "original": "http://archive.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1402"
+        },
+        {
+          "timestamp": "19980501124530",
+          "original": "http://archive.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1393"
+        },
+        {
+          "timestamp": "19990116225149",
+          "original": "http://archive.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1486"
+        },
+        {
+          "timestamp": "19990202042615",
+          "original": "http://www.archive.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1483"
+        },
+        {
+          "timestamp": "19990421173451",
+          "original": "http://www.archive.org:80/",
+          "statuscode": "200",
+          "mimetype": "text/html",
+          "length": "1484"
+        }
+      ],
+      "image_sample": [],
+      "wayback_first": "https://web.archive.org/web/19970126045828/http://www.archive.org:80/",
+      "wayback_last": "https://web.archive.org/web/20021001124437/http://www.archive.org:80/",
+      "id": 95,
+      "name": "Right On!",
+      "url": "https://archive.org/details/right-on-v-06n-04-1977-02.-laufer-d-m"
+    }
+  ],
+  "ia_search": [
+    {
+      "query": "New Jersey Afro-American newspaper",
+      "hits": [
+        {
+          "identifier": "VOA_Africa_20180611_030000",
+          "title": "VOA [Voice of America] Africa : June 10, 2018 11:00PM-12:00AM EDT",
+          "year": 2018,
+          "description": "Closed captions transcript: 00:00:00 Well we get today a group of 7 meeting the U.S. 00:00:02 Withdrew support from 00:00:03 a joint communique after Mr Trudeau insisted Canada will move ahead with for 00:00:08 a Tele a tour of measures July 1st to U.S. 00:00:11 Tariffs on steel and aluminum White House economic adviser Larry Kudlow said the 00:00:16 remarks came at a bad time ahead of the U.S. 00",
+          "url": "https://archive.org/details/VOA_Africa_20180611_030000"
+        },
+        {
+          "identifier": "NewarkEagles0707026",
+          "title": "Letters (correspondence)",
+          "year": 1946,
+          "description": "Newspaper publicity. Encloses payment.",
+          "url": "https://archive.org/details/NewarkEagles0707026"
+        },
+        {
+          "identifier": "NewarkEagles1109010",
+          "title": "Copy (production stage)",
+          "year": 1941,
+          "description": "Publicity for John Borican Day four-team doubleheader.",
+          "url": "https://archive.org/details/NewarkEagles1109010"
+        },
+        {
+          "identifier": "NewarkEagles0707007",
+          "title": "Letters (correspondence)",
+          "year": 1946,
+          "description": "Newspaper publicity. Encloses payment.",
+          "url": "https://archive.org/details/NewarkEagles0707007"
+        },
+        {
+          "identifier": "NewarkEagles0709041",
+          "title": "Letters (correspondence)",
+          "year": 1946,
+          "description": "Newspaper publicity.",
+          "url": "https://archive.org/details/NewarkEagles0709041"
+        },
+        {
+          "identifier": "NewarkEagles0304007",
+          "title": "Letters (correspondence)",
+          "year": 1941,
+          "description": "Opening game publicity. Newspaper publicity.",
+          "url": "https://archive.org/details/NewarkEagles0304007"
+        },
+        {
+          "identifier": "MGNwkMisc024",
+          "title": "The Newark Patriot vol. 2 no. 1",
+          "year": 1976,
+          "description": "A copy of the Newark Patriot, a newspaper of Afro-Asian-Latin American Peoples Solidarity Forum.",
+          "url": "https://archive.org/details/MGNwkMisc024"
+        },
+        {
+          "identifier": "NewarkEagles0707010",
+          "title": "Letters (correspondence)",
+          "year": 1946,
+          "description": "Newspaper publicity. Encloses payment.",
+          "url": "https://archive.org/details/NewarkEagles0707010"
+        }
+      ]
+    },
+    {
+      "query": "Newark Herald African American newspaper",
+      "hits": [
+        {
+          "identifier": "NewJerseyHeraldNews19420425",
+          "title": "New Jersey Herald News",
+          "year": 1942,
+          "description": null,
+          "url": "https://archive.org/details/NewJerseyHeraldNews19420425"
+        },
+        {
+          "identifier": "NewJerseyHeraldNews19420704",
+          "title": "New Jersey Herald News",
+          "year": 1942,
+          "description": null,
+          "url": "https://archive.org/details/NewJerseyHeraldNews19420704"
+        },
+        {
+          "identifier": "NewJerseyHeraldNews19430828",
+          "title": "New Jersey Herald News",
+          "year": 1943,
+          "description": null,
+          "url": "https://archive.org/details/NewJerseyHeraldNews19430828"
+        },
+        {
+          "identifier": "HeraldAdvance19661126",
+          "title": "New Jersey Herald News",
+          "year": 1966,
+          "description": null,
+          "url": "https://archive.org/details/HeraldAdvance19661126"
+        },
+        {
+          "identifier": "Advance19651016",
+          "title": "New Jersey Herald News",
+          "year": 1965,
+          "description": null,
+          "url": "https://archive.org/details/Advance19651016"
+        },
+        {
+          "identifier": "Advance19660106",
+          "title": "New Jersey Herald News",
+          "year": 1966,
+          "description": null,
+          "url": "https://archive.org/details/Advance19660106"
+        },
+        {
+          "identifier": "NewJerseyHeraldNews19660305",
+          "title": "New Jersey Herald News",
+          "year": 1966,
+          "description": null,
+          "url": "https://archive.org/details/NewJerseyHeraldNews19660305"
+        },
+        {
+          "identifier": "NewarkHerald19380924",
+          "title": "New Jersey Herald News",
+          "year": 1938,
+          "description": null,
+          "url": "https://archive.org/details/NewarkHerald19380924"
+        }
+      ]
+    },
+    {
+      "query": "\"Black Newark\" newspaper",
+      "hits": []
+    },
+    {
+      "query": "\"Ironsides Echo\" Bordentown",
+      "hits": []
+    },
+    {
+      "query": "\"The Echo\" \"Red Bank\" newspaper",
+      "hits": []
+    },
+    {
+      "query": "Unity and Struggle Newark",
+      "hits": [
+        {
+          "identifier": "ANorthShoreUIDEC2014Copy",
+          "title": "A North Shore U& I DEC 2014 Copy",
+          "year": null,
+          "description": "Summary of the Decisions of the Second Labor Fightback Conference (Rutgers, N.J., May 15-17, 2015) (report presented by Alan Benjamin on behalf of the Labor Fightback Network Steering Committee and approved unanimously, following a Motion to Adopt by Donna Dewitt, President Emeritus of the South Carolina AFL-CIO) The Second Labor Fightback Conference brought together more than 100 union leaders an",
+          "url": "https://archive.org/details/ANorthShoreUIDEC2014Copy"
+        },
+        {
+          "identifier": "NEWARK_CHURCH_OF_CHRIST-am_20260809_sermon",
+          "title": "The Murderous Heart of Anger (Matthew 5:21–26)",
+          "year": 2026,
+          "description": "Preached Sunday Morning August 9, 2026 by Mr. Paul Yu",
+          "url": "https://archive.org/details/NEWARK_CHURCH_OF_CHRIST-am_20260809_sermon"
+        },
+        {
+          "identifier": "VOA_Africa_20180123_190000",
+          "title": "VOA [Voice of America] Africa : January 23, 2018 02:00PM-03:00PM EST",
+          "year": 2018,
+          "description": "Closed captions transcript: 00:00:00 Most active volcano afterwards and the huge cloud of volcanic ash and rock several 00:00:04 kilometers in the air Monday huge explosion from Mount me on was the most powerful 00:00:09 since the 2460 meter tall volcano 1st began belching red hot lava 00:00:16 ash and super heated gas and volcanic debris nearly 2 weeks ago u.s. 00:00:21 Vice president Mike Pence ",
+          "url": "https://archive.org/details/VOA_Africa_20180123_190000"
+        },
+        {
+          "identifier": "MahoningValleyPodcastEpisode30",
+          "title": "Mahoning Valley Podcast Episode 30",
+          "year": 2017,
+          "description": "Photo 2017 Opens this Saturday March 11, with Deshawn Scott from 7-9 PM . Deshawn Scott will be the Featured Artist. Deshawn has been working here in the Mahoning Valley as a photographer for over 2o years and is eclectic in his choice of subjects for his pictures. I took a few minutes to peruse his website and he does really good work. So if you can head out there on Saturday, you should have the",
+          "url": "https://archive.org/details/MahoningValleyPodcastEpisode30"
+        },
+        {
+          "identifier": "cia-readingroom-document-cia-rdp87b00858r000600910009-1",
+          "title": "CIA Reading Room cia-rdp87b00858r000600910009-1: QADHAFI, TERRORISM, AND THE STINGER",
+          "year": 1986,
+          "description": "Approved For Release 2011/01/07: CIA-RDP87B00858R000600910009-1 S 4454 CONGRESSIONAL RECORD - SENATE The PRESIDING OFFICER. The bill is open to amendment. If there be no amendment to be proposed, the question is on the engrossment and third reading of the bill. The bill (S. 2319) was ordered to be engrossed for a third reading, was read the third time, and passed, as follows: S. 2319 Be it enacted",
+          "url": "https://archive.org/details/cia-readingroom-document-cia-rdp87b00858r000600910009-1"
+        },
+        {
+          "identifier": "VOA_Global_English_20200503_230000",
+          "title": "VOA [Voice of America] Global English : May 03, 2020 07:00PM-08:00PM EDT",
+          "year": 2020,
+          "description": "Closed captions transcript: 00:00:11 This is the Elaine news via remote I'm Arista Melton White House coronavirus task 00:00:16 force coordinator Deborah Brooks said on Sunday she's concerned that vast numbers 00:00:21 of Americans are failing to heed continued warnings to keep 00:00:24 a safe distance from other people to spread the to prevent the spread of the 00:00:28 pandemic at least half of ",
+          "url": "https://archive.org/details/VOA_Global_English_20200503_230000"
+        },
+        {
+          "identifier": "JamesBooker1964",
+          "title": "MLK Service event",
+          "year": 2011,
+          "description": "On Monday, January 17, 2011, City of Newark Deputy Mayor of Neighborhood Engagement Margarita Mu'iz, members of the Newark Municipal Council, Brick City SERVES Chief Service Officer Nichelle Holder, PSE&G Director of Corporate Social Responsibility and Sustainability Vaughn McKoy, La Casa de Don Pedro Executive Director Raymond Ocasio, representatives from the New Jersey Public Interest Research G",
+          "url": "https://archive.org/details/JamesBooker1964"
+        },
+        {
+          "identifier": "Unity_Unitarian-Forgive_Us_Our_Debts_Rev__Rob_Eller_Isaacs_October_27_2019",
+          "title": "Forgive Us Our Debts, Rev. Rob Eller-Isaacs, October 27, 2019",
+          "year": 2019,
+          "description": "ORDER OF WORSHIP Sunday, October 27, 2019 *Please rise in body or in spirit.  Gathering Music Words of Welcome Rev. Rob Eller-Isaacs Ringing of the Bell PRELUDE (9:00/11:00) Round and Round (traditional round) The Earth Is Our Mother (Cherokee song) Tulla Wallace, soloist Prelude (4:30) Eintritt (Entry) — R. SchumannCall to Worship Bob PeskinLighting the Chalice *Opening Hymn (18) What Wondrous Lo",
+          "url": "https://archive.org/details/Unity_Unitarian-Forgive_Us_Our_Debts_Rev__Rob_Eller_Isaacs_October_27_2019"
+        }
+      ]
+    },
+    {
+      "query": "New Jersey Herald News African American",
+      "hits": [
+        {
+          "identifier": "NewJerseyHeraldNews19420425",
+          "title": "New Jersey Herald News",
+          "year": 1942,
+          "description": null,
+          "url": "https://archive.org/details/NewJerseyHeraldNews19420425"
+        },
+        {
+          "identifier": "NewJerseyHeraldNews19420704",
+          "title": "New Jersey Herald News",
+          "year": 1942,
+          "description": null,
+          "url": "https://archive.org/details/NewJerseyHeraldNews19420704"
+        },
+        {
+          "identifier": "NewJerseyHeraldNews19430828",
+          "title": "New Jersey Herald News",
+          "year": 1943,
+          "description": null,
+          "url": "https://archive.org/details/NewJerseyHeraldNews19430828"
+        },
+        {
+          "identifier": "cia-readingroom-document-cia-rdp73-00475r000200620001-7",
+          "title": "CIA Reading Room cia-rdp73-00475r000200620001-7: FILE SEARCH: SONS OF THE REPUBLIC OF TEXAS DALLAS COUNCIL OF WORLD AFFAIRS",
+          "year": 1964,
+          "description": "STAT Declassified in Part - Sanitized Copy Approved for Release @ 50-Yr 2014/01/06: CIA-RDP73-00475R000200620001-7 R Next 1 Page(s) In Document Denied Declassified in Part - Sanitized Copy Approved for Release @ 50-Yr 2014/01/06: CIA-RDP73-00475R000200620001-7 WHO'S WHO /962 Declassified in Part - Sanitized Copy Approved for Release @ 50-Yr 2014/01/06: CIA-RDP73-00475R000200620001-7 ra. (risme: In",
+          "url": "https://archive.org/details/cia-readingroom-document-cia-rdp73-00475r000200620001-7"
+        },
+        {
+          "identifier": "HeraldAdvance19661126",
+          "title": "New Jersey Herald News",
+          "year": 1966,
+          "description": null,
+          "url": "https://archive.org/details/HeraldAdvance19661126"
+        },
+        {
+          "identifier": "Advance19651016",
+          "title": "New Jersey Herald News",
+          "year": 1965,
+          "description": null,
+          "url": "https://archive.org/details/Advance19651016"
+        },
+        {
+          "identifier": "Advance19660106",
+          "title": "New Jersey Herald News",
+          "year": 1966,
+          "description": null,
+          "url": "https://archive.org/details/Advance19660106"
+        },
+        {
+          "identifier": "NewJerseyHeraldNews19660305",
+          "title": "New Jersey Herald News",
+          "year": 1966,
+          "description": null,
+          "url": "https://archive.org/details/NewJerseyHeraldNews19660305"
+        }
+      ]
+    },
+    {
+      "query": "Nubian News Trenton",
+      "hits": [
+        {
+          "identifier": "RawDeal-19910919",
+          "title": "Raw Deal: September 19 1991",
+          "year": 1991,
+          "description": "This may be the first special edition 11-hour episode that the Raw Deal crew did (though they did do a six hour New Year's Eve show at one point). Celebrating their five-year anniversary, this special episode started at 1pm, but my tape starts at about 2:15pm. If my school day ended right about 2, I likely got home, came straight upstairs, and hit record. At the end of the 2:15pm side, a funny mom",
+          "url": "https://archive.org/details/RawDeal-19910919"
+        }
+      ]
+    }
+  ]
+}

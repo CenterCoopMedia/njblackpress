@@ -1,0 +1,207 @@
+[
+  {
+    "url": "https://www.newspapers.com/image/497174278/",
+    "status": 200,
+    "ct": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://www.newspapers.com/_next/static/chunks/app/products/%5Bsubdomain%5D/%5Blocale%5D/image/%5BimageId%5D/page-4bbd36f4e582892e.js",
+    "status": 200,
+    "ct": "application/javascript; charset=UTF-8"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=0,738,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=1424,1476,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=2136,0,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=1424,0,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=0,0,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=712,1476,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=2136,1476,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=0,1476,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=712,0,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=1424,738,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=712,738,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://www.newspapers.com/img/thumbnail/497174278/400/400/.jpg?cs=86400",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://img.newspapers.com/img/img?id=497174278&width=356&height=369&crop=2136,738,712,738&brightness=0&contrast=0&invert=0&ts=1&cacheable=1&iat=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJwIjo0OTcxNzQyNzgsImlhdCI6MTc4NzE0OTI1MywiZXhwIjoxNzg3MjM1NjUzLCJ1IjoxNzI4ODk4NiwidXMiOjUsImZ0IjowfQ.P0NkUMcUvKQPN0-LJlVzKotgSuaV-baTCAXbCl0RgRglfNX4RSGGtIQ1lok9IRDtmVy2MGQ2T5P6lhQYAlVt1g&user=17288986",
+    "status": 200,
+    "ct": "image/jpeg"
+  },
+  {
+    "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&ae=g&auid=1982200216.1786987915&dt=Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2&en=page_view&dl=https%3A%2F%2Fwww.newspapers.com%2Fimage%2F497174278%2F&scrsrc=www.googletagmanager.com&rnd=2070514910.1787149255&navt=n&npa=0&us_privacy=error&gdpr=0&gdpr_consent=tcempty&ep",
+    "status": 200,
+    "ct": ""
+  },
+  {
+    "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=1375501598&t=pageview&_s=1&dl=https%3A%2F%2Fwww.newspapers.com%2Fimage%2F497174278%2F&ul=en-us&dt=Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2&sr=1920x1200&vp=1398x1030&_utma=33320481.217084147.1786987915.1786987989.1786987989.1&_utmz=33320481.1786987989.1.1.utmcsr%3D",
+    "status": 200,
+    "ct": "text/plain"
+  },
+  {
+    "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=1375501598&t=pageview&_s=1&dl=https%3A%2F%2Fwww.newspapers.com%2Fimage%2F497174278%2F&ul=en-us&dt=Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2&sr=1920x1200&vp=1398x1030&_utma=33320481.217084147.1786987915.1786987989.1786987989.1&_utmz=33320481.1786987989.1.1.utmcsr%3D",
+    "status": 200,
+    "ct": "text/plain"
+  },
+  {
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-7T5H12SHSY&gtm=45je68h1v9117606710z8831879219za20gzb831879219zd831879219&_p=1787149254684&gcs=G111&gcd=13v3v3l3l5l1&npa=0&dma=0&tcfd=10658&_eu=AAAAAGQC&are=1&cid=217084147.1786987915&frm=0&pscdl=noapi&rcb=1&sr=1920x1200&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&ua",
+    "status": 204,
+    "ct": "text/plain"
+  },
+  {
+    "url": "https://13687001.fls.doubleclick.net/activityi;src=13687001;type=auto_act;cat=newsp00;rcb=11;ord=1;num=7993320372546;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;uaa=x86;uab=64;uafvl",
+    "status": 302,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://13687001.fls.doubleclick.net/activityi;dc_pre=CJyWkeTxrJYDFYYaaAgdZ84V8Q;src=13687001;type=auto_act;cat=newsp00;rcb=11;ord=1;num=7993320372546;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers",
+    "status": 200,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://8889547.fls.doubleclick.net/activityi;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=8247606386237;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;uaa=x86;uab=64;uafvl=Not%",
+    "status": 302,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://8889547.fls.doubleclick.net/activityi;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=2275468816252;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;uaa=x86;uab=64;uafvl=Not%",
+    "status": 302,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://adservice.google.com/ddm/fls/z/dc_pre=CJyWkeTxrJYDFYYaaAgdZ84V8Q;src=13687001;type=auto_act;cat=newsp00;rcb=11;ord=1;num=7993320372546;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=*;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;uaa=x86;uab=64",
+    "status": 200,
+    "ct": "image/gif"
+  },
+  {
+    "url": "https://bat.bing.com/action/0?ti=5440005&Ver=2&mid=f5949001-5991-4a48-be6c-96660a4e4c0b&bo=1&sid=8ac8b3609a6111f19d6747c772ed4b19&vid=8ac90a709a6111f1820e799ce23b2570&vids=0&msclkid=N&uach=pv%3D19.0.0&pi=918639831&lg=en-US&sw=1920&sh=1200&sc=24&tl=Sep%2008,%201904,%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2&p=https%3A%2F%2Fwww.newspapers.com%2",
+    "status": 204,
+    "ct": ""
+  },
+  {
+    "url": "https://8889547.fls.doubleclick.net/activityi;dc_pre=CNXoleTxrJYDFVcNaAgdgQsBPQ;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=2275468816252;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%",
+    "status": 200,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://8889547.fls.doubleclick.net/activityi;dc_pre=CLffleTxrJYDFT0KaAgdEZwqPQ;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=8247606386237;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%",
+    "status": 200,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://www.facebook.com/tr/?id=578471552340387&ev=PageView&dl=https%3A%2F%2Fwww.newspapers.com%2Fimage%2F497174278%2F&rl=&if=false&ts=1787149255295&iw=false&sw=1920&sh=1200&v=2.9.380&r=stable&ec=0&o=12318&aems=0%3B0&fbp=fb.1.1786987915643.927822534953254159&ler=empty&cdl=API_unavailable&pmd[title]=Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20News",
+    "status": 200,
+    "ct": "text/plain"
+  },
+  {
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-7T5H12SHSY&gtm=45je68h1v9117606710za20gzb831879219zd831879219&_p=1787149254684&gcs=G111&gcd=13v3v3l3l5l1&npa=0&dma=0&tcfd=10658&_eu=AEAAAGQC&ae=a&are=1&cid=217084147.1786987915&frm=0&pscdl=noapi&rcb=1&sr=1920x1200&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&uap=Wind",
+    "status": 204,
+    "ct": "text/plain"
+  },
+  {
+    "url": "https://ad.doubleclick.net/activity;src=13687001;type=auto_act;cat=newsp00;rcb=11;ord=1;num=7993320372546;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;uaa=x86;uab=64;uafvl=Not%253DA%",
+    "status": 302,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://ad.doubleclick.net/activity;dc_pre=CL2HkeTxrJYDFeB23gYdrUw80g;src=13687001;type=auto_act;cat=newsp00;rcb=11;ord=1;num=7993320372546;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%",
+    "status": 302,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://www.google.com/gmp/conversion/_dc_unique_id=5816374221782641743;_dc_ptd=ChAI8KiV1AYQqIOqioCu8rlEEh8A2vajeXSQ4FiYe9GN5w7AmD08Sl3LF-DsLgKJNjeS;_dc_time=1787149255;dc_pre=CL2HkeTxrJYDFeB23gYdrUw80g;src=13687001;type=auto_act;cat=newsp00;rcb=11;ord=1;num=7993320372546;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F49",
+    "status": 200,
+    "ct": "image/gif"
+  },
+  {
+    "url": "https://adservice.google.com/ddm/fls/z/dc_pre=CLffleTxrJYDFT0KaAgdEZwqPQ;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=8247606386237;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=*;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;uaa=x86;uab=64;uaf",
+    "status": 200,
+    "ct": "image/gif"
+  },
+  {
+    "url": "https://adservice.google.com/ddm/fls/z/dc_pre=CNXoleTxrJYDFVcNaAgdgQsBPQ;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=2275468816252;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=*;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;uaa=x86;uab=64;uaf",
+    "status": 200,
+    "ct": "image/gif"
+  },
+  {
+    "url": "https://ad.doubleclick.net/activity;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=2275468816252;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;uaa=x86;uab=64;uafvl=Not%253DA%253F",
+    "status": 302,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://ad.doubleclick.net/activity;dc_pre=CLOhlOTxrJYDFftE3gYdHMg3xQ;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=2275468816252;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;u",
+    "status": 302,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://www.google.com/gmp/conversion/_dc_unique_id=9013858205904142516;_dc_ptd=ChAI8KiV1AYQqIOqioCu8rlEEh8A2vajebzzgRs43SSmuiu5Y3YN9sizOuMO4srcYcru;_dc_time=1787149255;dc_pre=CLOhlOTxrJYDFftE3gYdHMg3xQ;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=2275468816252;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174",
+    "status": 200,
+    "ct": "image/gif"
+  },
+  {
+    "url": "https://ad.doubleclick.net/activity;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=8247606386237;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;uaa=x86;uab=64;uafvl=Not%253DA%253F",
+    "status": 302,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://ad.doubleclick.net/activity;dc_pre=CKDBleTxrJYDFSlT3gYd0-kI0g;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=8247606386237;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174278%2F%3A%20Sep%2008%2C%201904%2C%20page%204%20-%20Monmouth%20Democrat%20at%20Newspapers.com%E2%84%A2%20-%20Newspapers.com%E2%84%A2;u",
+    "status": 302,
+    "ct": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://www.google.com/gmp/conversion/_dc_unique_id=9238879596154650472;_dc_ptd=ChAI8KiV1AYQqIOqioCu8rlEEh8A2vajefSXw-EOvHWaQbg1t-0w5NelFxJfk-I5twjS;_dc_time=1787149255;dc_pre=CKDBleTxrJYDFSlT3gYd0-kI0g;src=8889547;type=usnews;cat=newsall;rcb=1;ord=1;num=8247606386237;gdpr=0;gdpr_consent=tcempty;npa=0;auiddc=1982200216.1786987915;u1=extra-monthly-subscriber;u33=newspapers%20%3A%20%2Fimage%2F497174",
+    "status": 200,
+    "ct": "image/gif"
+  },
+  {
+    "url": "https://analytics.google.com/g/collect?v=2&tid=G-7T5H12SHSY&gtm=45je68h1v9117606710z8831879219za20gzb831879219zd831879219&_p=1787149254684&gcs=G111&gcd=13v3v3l3l5l1&npa=0&dma=0&tcfd=10658&_eu=AAAAAGQC&are=1&cid=217084147.1786987915&frm=0&pscdl=noapi&rcb=1&sr=1920x1200&uaa=x86&uab=64&uafvl=Not%253DA%253FBrand%3B99.0.0.0%7CGoogle%2520Chrome%3B151.0.7922.138%7CChromium%3B151.0.7922.138&uam=&uamb=0&ua",
+    "status": 204,
+    "ct": "text/plain"
+  }
+]

@@ -1,0 +1,165 @@
+{
+  "searches": [
+    {
+      "id": 87,
+      "slug": "cooper-chats",
+      "count": "2,212",
+      "nj": [],
+      "keyword": "\"Camp Cooper Chats\" OR \"Cooper Chats\""
+    },
+    {
+      "id": 55,
+      "slug": "rugcuttings",
+      "count": "640",
+      "nj": [],
+      "keyword": "Rugcuttings OR \"Point Breeze\" CCC"
+    },
+    {
+      "id": 97,
+      "slug": "rifle-ranger",
+      "count": "54",
+      "nj": [],
+      "keyword": "\"Rifle Ranger\" CCC"
+    },
+    {
+      "id": 89,
+      "slug": "sixty-niner",
+      "count": "46",
+      "nj": [
+        {
+          "text": "Courier-Post \u2022 Page 33 Thursday, October 5, 2000 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/184022634/?match=2&terms=%22Sixty%20Niner%22%20OR%20%22Sixty-Niner%22%20CCC&search-id=f64eca3d-b2d1-4641-8126-c224a51f1d1f&search-rank=1"
+        }
+      ],
+      "keyword": "\"Sixty Niner\" OR \"Sixty-Niner\" CCC"
+    },
+    {
+      "id": 137,
+      "slug": "pine-needle-lisbon",
+      "count": "89",
+      "nj": [
+        {
+          "text": "Courier-Post \u2022 Page 24 Wednesday, November 5, 1975 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/181230906/?match=1&terms=%22Pine%20Needle%22%20%22New%20Lisbon%22&search-id=3f85083b-470f-4c26-aadc-a5e5aa6b0a90&search-rank=4"
+        },
+        {
+          "text": "Asbury Park Press \u2022 Page 68 Wednesday, October 19, 1994 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/148259913/?match=1&terms=%22Pine%20Needle%22%20%22New%20Lisbon%22&search-id=3f85083b-470f-4c26-aadc-a5e5aa6b0a90&search-rank=9"
+        }
+      ],
+      "keyword": "\"Pine Needle\" \"New Lisbon\""
+    },
+    {
+      "id": 87,
+      "slug": "toomer-editor",
+      "count": "7,000",
+      "nj": [
+        {
+          "text": "Courier-Post \u2022 Page 5 Tuesday, July 21, 1942 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/448350943/?match=1&terms=%22Robert%20Toomer%22%20OR%20%22Robert%20R.%20Toomer%22&search-id=8c723b12-beee-4066-94ef-6eaa62a4cb57&search-rank=2"
+        }
+      ],
+      "keyword": "\"Robert Toomer\" OR \"Robert R. Toomer\""
+    },
+    {
+      "id": 48,
+      "slug": "totten",
+      "count": "182",
+      "nj": [],
+      "keyword": "\"Bertram Totten\""
+    },
+    {
+      "id": 102,
+      "slug": "reed-berlin",
+      "count": "64",
+      "nj": [
+        {
+          "text": "Evening Courier \u2022 Page 5 Monday, January 6, 1936 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/479485272/?match=1&terms=%22A.%20W.%20Reed%22%20CCC&search-id=658b3f16-22ed-4723-9b3c-391fb8eae265&search-rank=1"
+        },
+        {
+          "text": "Courier-Post \u2022 Page 3 Monday, January 6, 1936 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/447571125/?match=1&terms=%22A.%20W.%20Reed%22%20CCC&search-id=658b3f16-22ed-4723-9b3c-391fb8eae265&search-rank=2"
+        }
+      ],
+      "keyword": "\"A. W. Reed\" CCC"
+    },
+    {
+      "id": 137,
+      "slug": "cato-gilbert",
+      "count": "19",
+      "nj": [
+        {
+          "text": "Courier-Post \u2022 Page 15 Monday, February 21, 1994 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/183082915/?match=1&terms=%22Milledge%20Cato%22%20OR%20%22Marvello%20Gilbert%22&search-id=3bf13e4f-565c-4e04-9962-34881cea0484&search-rank=9"
+        }
+      ],
+      "keyword": "\"Milledge Cato\" OR \"Marvello Gilbert\""
+    },
+    {
+      "id": 136,
+      "slug": "richardson-crusader",
+      "count": "25",
+      "nj": [],
+      "keyword": "\"James W. Richardson\" CCC"
+    },
+    {
+      "id": 0,
+      "slug": "ccc-paper-nj",
+      "count": "75,261",
+      "nj": [],
+      "keyword": "\"camp paper\" OR \"camp newspaper\" CCC (colored OR Negro)"
+    }
+  ],
+  "opened": [
+    {
+      "id": 89,
+      "slug": "sixty-niner",
+      "card": "Courier-Post \u2022 Page 33 Thursday, October 5, 2000 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/184022634/?match=2&terms=%22Sixty%20Niner%22%20OR%20%22Sixty-Niner%22%20CCC&search-id=f64eca3d-b2d1-4641-8126-c224a51f1d1f&search-rank=1",
+      "shot": "q7gopen-sixty-niner-2000.png"
+    },
+    {
+      "id": 137,
+      "slug": "pine-needle-lisbon",
+      "card": "Courier-Post \u2022 Page 24 Wednesday, November 5, 1975 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/181230906/?match=1&terms=%22Pine%20Needle%22%20%22New%20Lisbon%22&search-id=3f85083b-470f-4c26-aadc-a5e5aa6b0a90&search-rank=4",
+      "shot": "q7gopen-pine-needle-lisbon-1975.png"
+    },
+    {
+      "id": 137,
+      "slug": "pine-needle-lisbon",
+      "card": "Asbury Park Press \u2022 Page 68 Wednesday, October 19, 1994 Asbury Park, New Jersey",
+      "url": "https://www.newspapers.com/image/148259913/?match=1&terms=%22Pine%20Needle%22%20%22New%20Lisbon%22&search-id=3f85083b-470f-4c26-aadc-a5e5aa6b0a90&search-rank=9",
+      "shot": "q7gopen-pine-needle-lisbon-1994.png"
+    },
+    {
+      "id": 87,
+      "slug": "toomer-editor",
+      "card": "Courier-Post \u2022 Page 5 Tuesday, July 21, 1942 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/448350943/?match=1&terms=%22Robert%20Toomer%22%20OR%20%22Robert%20R.%20Toomer%22&search-id=8c723b12-beee-4066-94ef-6eaa62a4cb57&search-rank=2",
+      "shot": "q7gopen-toomer-editor-1942.png"
+    },
+    {
+      "id": 102,
+      "slug": "reed-berlin",
+      "card": "Evening Courier \u2022 Page 5 Monday, January 6, 1936 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/479485272/?match=1&terms=%22A.%20W.%20Reed%22%20CCC&search-id=658b3f16-22ed-4723-9b3c-391fb8eae265&search-rank=1",
+      "shot": "q7gopen-reed-berlin-1936.png"
+    },
+    {
+      "id": 102,
+      "slug": "reed-berlin",
+      "card": "Courier-Post \u2022 Page 3 Monday, January 6, 1936 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/447571125/?match=1&terms=%22A.%20W.%20Reed%22%20CCC&search-id=658b3f16-22ed-4723-9b3c-391fb8eae265&search-rank=2",
+      "shot": "q7gopen-reed-berlin-1936.png"
+    },
+    {
+      "id": 137,
+      "slug": "cato-gilbert",
+      "card": "Courier-Post \u2022 Page 15 Monday, February 21, 1994 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/183082915/?match=1&terms=%22Milledge%20Cato%22%20OR%20%22Marvello%20Gilbert%22&search-id=3bf13e4f-565c-4e04-9962-34881cea0484&search-rank=9",
+      "shot": "q7gopen-cato-gilbert-1994.png"
+    }
+  ]
+}

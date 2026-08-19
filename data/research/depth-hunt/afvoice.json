@@ -1,0 +1,1 @@
+{"responseHeader":{"status":0,"QTime":84,"params":{"query":"(text:&quot;African Voice&quot; OR text:&quot;African Voice&quot; OR text__reviews:&quot;African Voice&quot;)(text:Camden OR text:Camden OR text__reviews:Camden)","qin":"&quot;African Voice&quot; Camden","fields":"identifier,title,date","wt":"json","rows":10,"start":0}},"response":{"numFound":0,"start":0,"docs":[]}}

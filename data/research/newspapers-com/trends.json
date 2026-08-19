@@ -1,0 +1,663 @@
+{
+  "dataset": {
+    "total": 138,
+    "active": 97,
+    "ceased": 41,
+    "pre1950": 26,
+    "newspaper_format": 45,
+    "foundings_by_decade": {
+      "1880s": 3,
+      "1900s": 2,
+      "1910s": 2,
+      "1920s": 2,
+      "1930s": 14,
+      "1940s": 3,
+      "1950s": 9,
+      "1960s": 10,
+      "1970s": 30,
+      "1980s": 21,
+      "1990s": 25,
+      "2010s": 8,
+      "2020s": 6,
+      "Unknown": 3
+    },
+    "closures_by_decade": {
+      "1880s": 1,
+      "1890s": 1,
+      "1900s": 1,
+      "1910s": 1,
+      "1930s": 8,
+      "1940s": 6,
+      "1950s": 1,
+      "1960s": 3,
+      "1970s": 6,
+      "1980s": 4,
+      "1990s": 8,
+      "2000s": 1
+    },
+    "top_cities": [
+      [
+        "Newark",
+        40
+      ],
+      [
+        "Paramus",
+        10
+      ],
+      [
+        "Trenton",
+        9
+      ],
+      [
+        "Atlantic City",
+        5
+      ],
+      [
+        "Plainfield",
+        5
+      ],
+      [
+        "East Orange",
+        5
+      ],
+      [
+        "New Brunswick",
+        5
+      ],
+      [
+        "Camden",
+        4
+      ],
+      [
+        "River Edge",
+        3
+      ],
+      [
+        "Paterson",
+        3
+      ],
+      [
+        "Jersey City",
+        3
+      ],
+      [
+        "Piscataway",
+        3
+      ]
+    ],
+    "oldest": [
+      {
+        "id": 10,
+        "name": "The Sentinel",
+        "city": "Trenton",
+        "years": "1880-1882"
+      },
+      {
+        "id": 34,
+        "name": "The Landscape",
+        "city": "Saddle River",
+        "years": "1885-1901"
+      },
+      {
+        "id": 38,
+        "name": "New Jersey Trumpet",
+        "city": "Newark",
+        "years": "1887-1897"
+      },
+      {
+        "id": 31,
+        "name": "The Echo",
+        "city": "Long Branch/Red Bank",
+        "years": "1904-1943"
+      },
+      {
+        "id": 7,
+        "name": "The Citizen",
+        "city": "Princeton",
+        "years": "1909-None"
+      },
+      {
+        "id": 3,
+        "name": "The Camden News",
+        "city": "Camden",
+        "years": "1915-1918"
+      },
+      {
+        "id": 57,
+        "name": "The Ironsides Echo",
+        "city": "Bordentown",
+        "years": "1917-1955"
+      },
+      {
+        "id": 9,
+        "name": "The Newark Herald",
+        "city": "Newark",
+        "years": "1928-1939"
+      },
+      {
+        "id": 45,
+        "name": "Apex News",
+        "city": "Atlantic City",
+        "years": "1929-1940"
+      },
+      {
+        "id": 2,
+        "name": "The Jersey Express",
+        "city": "Montclair",
+        "years": "1932-None"
+      },
+      {
+        "id": 37,
+        "name": "The New Jersey Guardian",
+        "city": "Newark",
+        "years": "1934-1942"
+      },
+      {
+        "id": 102,
+        "name": "Camp Berlin Broadcast",
+        "city": "Berlin",
+        "years": "1934-1935"
+      }
+    ]
+  },
+  "searches": [
+    {
+      "slug": "herbert",
+      "keyword": "\"R. Henri Herbert\"",
+      "nj_click": {
+        "clicked": true,
+        "text": "New Jersey\n396"
+      },
+      "url": "https://www.newspapers.com/search/results/?keyword=%22R.+Henri+Herbert%22",
+      "count": "559",
+      "results": [
+        {
+          "text": "New-York Tribune • Page 14 Sunday, December 8, 1895 New York, New York",
+          "href": "https://www.newspapers.com/image/78953914/?match=3&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=1"
+        },
+        {
+          "text": "The Times • Page 13 Sunday, July 11, 1948 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1194316185/?match=1&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=2"
+        },
+        {
+          "text": "The New York Age • Page 1 Thursday, October 21, 1909 New York, New York",
+          "href": "https://www.newspapers.com/image/33451515/?match=1&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=3"
+        },
+        {
+          "text": "Trenton Sunday Advertiser • Page 1 Sunday, October 20, 1895 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1194116748/?match=1&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=4"
+        },
+        {
+          "text": "Trenton Sunday Advertiser • Page 16 Sunday, October 17, 1909 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1194273522/?match=1&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=5"
+        },
+        {
+          "text": "Trenton Sunday Advertiser • Page 1 Sunday, November 5, 1893 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1194114727/?match=1&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=6"
+        },
+        {
+          "text": "Trenton Sunday Advertiser • Page 1 Sunday, February 12, 1905 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1193901773/?match=1&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=7"
+        },
+        {
+          "text": "The Times • Page 3 Wednesday, October 13, 1909 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1191362139/?match=1&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=8"
+        },
+        {
+          "text": "The Times • Page 1 Wednesday, October 13, 1909 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1191362132/?match=1&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=9"
+        },
+        {
+          "text": "The Afro-American • Page 6 Saturday, October 23, 1909 Baltimore, Maryland",
+          "href": "https://www.newspapers.com/image/1038393954/?match=1&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=10"
+        }
+      ]
+    },
+    {
+      "slug": "trumpet",
+      "keyword": "\"New Jersey Trumpet\"",
+      "nj_click": {
+        "clicked": true,
+        "text": "New Jersey\n262"
+      },
+      "url": "https://www.newspapers.com/search/results/?keyword=%22New+Jersey+Trumpet%22",
+      "count": "451",
+      "results": [
+        {
+          "text": "The Olympian • Page 4 Wednesday, January 3, 2001 Olympia, Washington",
+          "href": "https://www.newspapers.com/image/805629382/?match=2&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=1"
+        },
+        {
+          "text": "The Evening World • Page 2 Tuesday, December 11, 1888 New York, New York",
+          "href": "https://www.newspapers.com/image/50663302/?match=1&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=2"
+        },
+        {
+          "text": "The Shore Press • Page 6 Friday, July 28, 1893 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/436807841/?match=2&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=3"
+        },
+        {
+          "text": "The Evening World • Page 2 Thursday, August 3, 1893 New York, New York",
+          "href": "https://www.newspapers.com/image/79007573/?match=6&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=4"
+        },
+        {
+          "text": "Asbury Park Press • Page 1 Saturday, July 22, 1893 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/436760060/?match=3&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=5"
+        },
+        {
+          "text": "Asbury Park Press • Page 2 Saturday, September 20, 1986 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/145086812/?match=1&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=6"
+        },
+        {
+          "text": "The Evening World • Page 2 Thursday, August 3, 1893 New York, New York",
+          "href": "https://www.newspapers.com/image/79007658/?match=4&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=7"
+        },
+        {
+          "text": "The Washington Bee • Page 2 Saturday, May 18, 1889 Washington, District of Columbia",
+          "href": "https://www.newspapers.com/image/46319440/?match=2&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=8"
+        },
+        {
+          "text": "The New York Times • Page 5 Friday, August 4, 1893 New York, New York",
+          "href": "https://www.newspapers.com/image/20328976/?match=2&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=9"
+        },
+        {
+          "text": "The Montclair Times • Page 20 Thursday, December 21, 1989 Montclair, New Jersey",
+          "href": "https://www.newspapers.com/image/516014445/?match=2&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=10"
+        }
+      ]
+    },
+    {
+      "slug": "murrell",
+      "keyword": "\"Colonel Murrell\" editor",
+      "nj_click": {
+        "clicked": true,
+        "text": "New Jersey\n85"
+      },
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Colonel+Murrell%22+editor",
+      "count": "369",
+      "results": [
+        {
+          "text": "The Buffalo Times • Page 43 Sunday, March 20, 1927 Buffalo, New York",
+          "href": "https://www.newspapers.com/image/891910122/?match=2&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=1"
+        },
+        {
+          "text": "The Times-Picayune • Page 2 Friday, June 17, 1892 New Orleans, Louisiana",
+          "href": "https://www.newspapers.com/image/28206913/?match=6&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=2"
+        },
+        {
+          "text": "The Morning Journal-Courier • Page 8 Saturday, September 10, 1898 New Haven, Connecticut",
+          "href": "https://www.newspapers.com/image/595073278/?match=10&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=3"
+        },
+        {
+          "text": "The Sentinel • Page 4 Thursday, March 7, 1957 Winston-Salem, North Carolina",
+          "href": "https://www.newspapers.com/image/934997101/?match=7&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=4"
+        },
+        {
+          "text": "The Daily Times • Page 1 Saturday, December 21, 1895 New Brunswick, New Jersey",
+          "href": "https://www.newspapers.com/image/12201888/?match=3&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=5"
+        },
+        {
+          "text": "The Saline County Journal • Page 1 Thursday, October 8, 1891 Salina, Kansas",
+          "href": "https://www.newspapers.com/image/72109290/?match=10&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=6"
+        },
+        {
+          "text": "Rochester Journal and the Post Express • Page 2 Thursday, August 3, 1893 Rochester, New York",
+          "href": "https://www.newspapers.com/image/1334538697/?match=11&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=7"
+        },
+        {
+          "text": "The Florida Times-Union • Page 2 Tuesday, August 8, 1893 Jacksonville, Florida",
+          "href": "https://www.newspapers.com/image/1257544511/?match=3&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=8"
+        },
+        {
+          "text": "The Evening Times-Union • Page 4 Monday, August 7, 1893 Jacksonville, Florida",
+          "href": "https://www.newspapers.com/image/1257541938/?match=10&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=9"
+        },
+        {
+          "text": "New Orleans Republican • Page 1 Thursday, March 4, 1875 New Orleans, Louisiana",
+          "href": "https://www.newspapers.com/image/325998935/?match=1&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=10"
+        }
+      ]
+    },
+    {
+      "slug": "echo",
+      "keyword": "\"The Echo\" (Rock OR \"Red Bank\" OR \"Long Branch\")",
+      "nj_click": {
+        "clicked": true,
+        "text": "New Jersey\n180K+"
+      },
+      "url": "https://www.newspapers.com/search/results/?keyword=%22The+Echo%22+%28Rock+OR+%22Red+Bank%22+OR+%22Long+Branch%22%29",
+      "count": "5,746,904",
+      "results": [
+        {
+          "text": "The Brooklyn Union • Page 1 Wednesday, September 4, 1872 Brooklyn, New York",
+          "href": "https://www.newspapers.com/image/541738440/?match=2&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=1"
+        },
+        {
+          "text": "Asbury Park Press • Page 34 Monday, March 21, 1977 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/145719304/?match=4&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=2"
+        },
+        {
+          "text": "Asbury Park Press • Page 60 Thursday, August 29, 1985 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/145831249/?match=36&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=3"
+        },
+        {
+          "text": "Asbury Park Press • Page 99 Wednesday, June 19, 1985 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/145191696/?match=2&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=4"
+        },
+        {
+          "text": "Asbury Park Press • Page 54 Tuesday, April 28, 1992 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/145146140/?match=4&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=5"
+        },
+        {
+          "text": "Asbury Park Press • Page 19 Wednesday, December 17, 1930 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/143072323/?match=17&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=6"
+        },
+        {
+          "text": "Asbury Park Press • Page 23 Saturday, February 14, 1976 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/145743836/?match=1&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=7"
+        },
+        {
+          "text": "Asbury Park Press • Page 96 Friday, June 21, 1991 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/145161859/?match=2&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=8"
+        },
+        {
+          "text": "Asbury Park Press • Page 95 Friday, October 9, 1992 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/145766322/?match=3&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=9"
+        },
+        {
+          "text": "Asbury Park Press • Page 31 Tuesday, February 8, 1977 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/143858487/?match=2&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=10"
+        }
+      ]
+    },
+    {
+      "slug": "herald-fold",
+      "keyword": "\"Newark Herald\" (ceased OR folded OR suspend)",
+      "nj_click": {
+        "clicked": true,
+        "text": "New Jersey\n56"
+      },
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Newark+Herald%22+%28ceased+OR+folded+OR+suspend%29",
+      "count": "321",
+      "results": [
+        {
+          "text": "The Cincinnati Enquirer • Page 2 Saturday, May 6, 1854 Cincinnati, Ohio",
+          "href": "https://www.newspapers.com/image/31302540/?match=1&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=1"
+        },
+        {
+          "text": "The Afro-American • Page 7 Saturday, July 9, 1932 Baltimore, Maryland",
+          "href": "https://www.newspapers.com/image/1134167020/?match=1&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=2"
+        },
+        {
+          "text": "The Gloucestershire Echo • Page 2 Monday, May 10, 1926 Cheltenham, Gloucestershire, England",
+          "href": "https://www.newspapers.com/image/798738082/?match=1&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=3"
+        },
+        {
+          "text": "The Northwest Enterprise • Page 1 Thursday, July 14, 1932 Seattle, Washington",
+          "href": "https://www.newspapers.com/image/890784462/?match=1&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=4"
+        },
+        {
+          "text": "The Laurel Advocate • Page 6 Thursday, December 17, 1908 Laurel, Nebraska",
+          "href": "https://www.newspapers.com/image/708990965/?match=2&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=5"
+        },
+        {
+          "text": "Western Mail • Page 5 Tuesday, May 11, 1926 Cardiff, South Glamorgan, Wales",
+          "href": "https://www.newspapers.com/image/816509197/?match=2&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=6"
+        },
+        {
+          "text": "The Zanesville Courier • Page 2 Saturday, October 26, 1850 Zanesville, Ohio",
+          "href": "https://www.newspapers.com/image/37840030/?match=2&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=7"
+        },
+        {
+          "text": "Evening Gazette • Page 4 Thursday, October 18, 1900 Middlesbrough, Cleveland, England",
+          "href": "https://www.newspapers.com/image/1356118633/?match=3&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=8"
+        },
+        {
+          "text": "The Morning News • Page 6 Thursday, March 26, 1925 Wilmington, Delaware",
+          "href": "https://www.newspapers.com/image/159793233/?match=1&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=9"
+        },
+        {
+          "text": "Daily Sentinel • Page 2 Friday, September 16, 1887 Rome, New York",
+          "href": "https://www.newspapers.com/image/1124968873/?match=2&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=10"
+        }
+      ]
+    },
+    {
+      "slug": "guardian",
+      "keyword": "\"New Jersey Guardian\"",
+      "nj_click": {
+        "clicked": true,
+        "text": "New Jersey"
+      },
+      "url": "https://www.newspapers.com/search/results/?keyword=%22New+Jersey+Guardian%22",
+      "count": "2,658",
+      "results": [
+        {
+          "text": "The Herald Statesman • Page 8 Friday, September 16, 1921 Yonkers, New York",
+          "href": "https://www.newspapers.com/image/676645530/?article=8b27467f-17e3-43cf-b3e6-838793aa4ab2&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=1"
+        },
+        {
+          "text": "The Beatrice Daily Express • Page 2 Tuesday, September 13, 1921 Beatrice, Nebraska",
+          "href": "https://www.newspapers.com/image/672404679/?article=80b8b45c-9d80-4023-9d9c-0dc20d2dbe6a&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=2"
+        },
+        {
+          "text": "Peninsula Daily News • Page 4 Thursday, November 3, 1921 Port Angeles, Washington",
+          "href": "https://www.newspapers.com/image/1212665396/?article=6442b22a-25db-4db4-beca-34f4b1ef448a&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=3"
+        },
+        {
+          "text": "The Austin American • Page 6 Sunday, October 9, 1921 Austin, Texas",
+          "href": "https://www.newspapers.com/image/384391546/?article=4f935abf-1505-4dfa-bd0f-1d3b0f5ba755&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=4"
+        },
+        {
+          "text": "The Owensboro Messenger • Page 4 Saturday, September 17, 1921 Owensboro, Kentucky",
+          "href": "https://www.newspapers.com/image/375890522/?article=11123ff9-b78a-4760-ba05-07a86199fca9&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=5"
+        },
+        {
+          "text": "The Times-Herald • Page 4 Saturday, September 17, 1921 Vallejo, California",
+          "href": "https://www.newspapers.com/image/1035061664/?article=030ca1e8-e746-4bda-9cb5-bd77d4c3c389&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=6"
+        },
+        {
+          "text": "The Daily Register • Page 16 Friday, September 25, 1987 Red Bank, New Jersey",
+          "href": "https://www.newspapers.com/image/517663510/?match=1&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=7"
+        },
+        {
+          "text": "Asbury Park Press • Page 11 Tuesday, September 22, 1987 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/144136159/?match=3&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=8"
+        },
+        {
+          "text": "Wanstead and Woodford Guardian • Page 29 Thursday, August 10, 2006 London, London, England",
+          "href": "https://www.newspapers.com/image/1337800291/?match=1&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=9"
+        },
+        {
+          "text": "Wayne Today • Page A14 Thursday, May 29, 2014 Wayne, New Jersey",
+          "href": "https://www.newspapers.com/image/596304159/?match=1&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=10"
+        }
+      ]
+    },
+    {
+      "slug": "afro",
+      "keyword": "\"New Jersey Afro-American\"",
+      "nj_click": {
+        "clicked": true,
+        "text": "New Jersey\n433"
+      },
+      "url": "https://www.newspapers.com/search/results/?keyword=%22New+Jersey+Afro-American%22",
+      "count": "3,558",
+      "results": [
+        {
+          "text": "Daily Record • Page D2 Sunday, May 21, 2023 Morristown, New Jersey",
+          "href": "https://www.newspapers.com/image/962761544/?match=3&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=1"
+        },
+        {
+          "text": "The Herald-News • Page O3 Sunday, May 21, 2023 Passaic, New Jersey",
+          "href": "https://www.newspapers.com/image/962750116/?match=3&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=2"
+        },
+        {
+          "text": "The Times • Page 15 Saturday, March 16, 1991 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1197044099/?match=1&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=3"
+        },
+        {
+          "text": "New Pittsburgh Courier • Page 15 Saturday, November 13, 1976 Pittsburgh, Pennsylvania",
+          "href": "https://www.newspapers.com/image/1144245214/?match=1&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=4"
+        },
+        {
+          "text": "New Pittsburgh Courier • Page 7 Wednesday, February 2, 1994 Pittsburgh, Pennsylvania",
+          "href": "https://www.newspapers.com/image/1137655425/?match=1&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=5"
+        },
+        {
+          "text": "New Pittsburgh Courier • Page 27 Saturday, June 19, 1982 Pittsburgh, Pennsylvania",
+          "href": "https://www.newspapers.com/image/1137433792/?match=2&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=6"
+        },
+        {
+          "text": "Baltimore Afro-American • Page 2 Saturday, December 25, 1943 Baltimore, Maryland",
+          "href": "https://www.newspapers.com/image/1135990484/?match=1&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=7"
+        },
+        {
+          "text": "The Afro-American • Page 29 Saturday, December 26, 1942 Baltimore, Maryland",
+          "href": "https://www.newspapers.com/image/1135986971/?match=1&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=8"
+        },
+        {
+          "text": "The Afro-American • Page 29 Saturday, September 5, 1942 Baltimore, Maryland",
+          "href": "https://www.newspapers.com/image/1135985738/?match=1&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=9"
+        },
+        {
+          "text": "Call and Post • Page 13 Saturday, February 12, 1949 Cleveland, Ohio",
+          "href": "https://www.newspapers.com/image/1135776293/?match=2&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=10"
+        }
+      ]
+    },
+    {
+      "slug": "colored-newspaper-nj",
+      "keyword": "\"colored newspaper\" (Newark OR Trenton OR \"Jersey City\")",
+      "nj_click": {
+        "clicked": true,
+        "text": "New Jersey\n252"
+      },
+      "url": "https://www.newspapers.com/search/results/?keyword=%22colored+newspaper%22+%28Newark+OR+Trenton+OR+%22Jersey+City%22%29",
+      "count": "3,183",
+      "results": [
+        {
+          "text": "The Philadelphia Tribune • Page 13 Saturday, January 23, 1926 Philadelphia, Pennsylvania",
+          "href": "https://www.newspapers.com/image/1135357938/?match=4&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=1"
+        },
+        {
+          "text": "New Pittsburgh Courier • Page 4 Saturday, March 15, 1941 Pittsburgh, Pennsylvania",
+          "href": "https://www.newspapers.com/image/1144205767/?match=3&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=2"
+        },
+        {
+          "text": "The Afro-American • Page 26 Saturday, September 19, 1942 Baltimore, Maryland",
+          "href": "https://www.newspapers.com/image/1134927008/?match=1&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=3"
+        },
+        {
+          "text": "Washington Afro American • Page 3 Saturday, March 17, 1962 Washington, District of Columbia",
+          "href": "https://www.newspapers.com/image/1043708188/?match=10&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=4"
+        },
+        {
+          "text": "Washington Afro American • Page 20 Saturday, April 23, 1955 Washington, District of Columbia",
+          "href": "https://www.newspapers.com/image/1042193333/?match=4&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=5"
+        },
+        {
+          "text": "New Pittsburgh Courier • Page 13 Saturday, September 8, 1928 Pittsburgh, Pennsylvania",
+          "href": "https://www.newspapers.com/image/40104074/?match=3&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=6"
+        },
+        {
+          "text": "Reading Times • Page 1 Wednesday, May 28, 1884 Reading, Pennsylvania",
+          "href": "https://www.newspapers.com/image/45339106/?match=5&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=7"
+        },
+        {
+          "text": "The Philadelphia Tribune • Page 13 Thursday, August 29, 1929 Philadelphia, Pennsylvania",
+          "href": "https://www.newspapers.com/image/1135366329/?match=3&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=8"
+        },
+        {
+          "text": "The Chicago Defender • Page 21 Saturday, August 23, 1924 Chicago, Illinois",
+          "href": "https://www.newspapers.com/image/1135890317/?match=3&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=9"
+        },
+        {
+          "text": "The Leader • Page 5 Saturday, May 4, 1889 Washington, District of Columbia",
+          "href": "https://www.newspapers.com/image/1038168862/?match=1&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=10"
+        }
+      ]
+    }
+  ],
+  "opened": [
+    {
+      "slug": "herbert",
+      "from": {
+        "text": "New-York Tribune • Page 14 Sunday, December 8, 1895 New York, New York",
+        "href": "https://www.newspapers.com/image/78953914/?match=3&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=1"
+      },
+      "url": "https://www.newspapers.com/image/78953914/?match=3&terms=%22R.%20Henri%20Herbert%22&search-id=8230671d-f45e-4684-a602-8805ce94a294&search-rank=1",
+      "title": "Dec 08, 1895, page 14 - New-York Tribune at Newspapers.com™ - Newspapers.com™",
+      "screenshot": "trendclip-herbert.png"
+    },
+    {
+      "slug": "trumpet",
+      "from": {
+        "text": "The Evening World • Page 2 Tuesday, December 11, 1888 New York, New York",
+        "href": "https://www.newspapers.com/image/50663302/?match=1&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=2"
+      },
+      "url": "https://www.newspapers.com/image/50663302/?match=1&terms=%22New%20Jersey%20Trumpet%22&search-id=98d98791-902b-4cf3-8394-d6a65ee2b3b4&search-rank=2",
+      "title": "Dec 11, 1888, page 2 - The Evening World at Newspapers.com™ - Newspapers.com™",
+      "screenshot": "trendclip-trumpet.png"
+    },
+    {
+      "slug": "murrell",
+      "from": {
+        "text": "The Buffalo Times • Page 43 Sunday, March 20, 1927 Buffalo, New York",
+        "href": "https://www.newspapers.com/image/891910122/?match=2&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=1"
+      },
+      "url": "https://www.newspapers.com/image/891910122/?match=2&terms=%22Colonel%20Murrell%22%20editor&search-id=31a6f928-a17d-4e00-aa93-bae47c9d0bdc&search-rank=1",
+      "title": "Mar 20, 1927, page 43 - The Buffalo Times at Newspapers.com™ - Newspapers.com™",
+      "screenshot": "trendclip-murrell.png"
+    },
+    {
+      "slug": "echo",
+      "from": {
+        "text": "Asbury Park Press • Page 19 Wednesday, December 17, 1930 Asbury Park, New Jersey",
+        "href": "https://www.newspapers.com/image/143072323/?match=17&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=6"
+      },
+      "url": "https://www.newspapers.com/image/143072323/?match=17&terms=%22The%20Echo%22%20%28Rock%20OR%20%22Red%20Bank%22%20OR%20%22Long%20Branch%22%29&search-id=00221f3f-6283-4c82-9b3a-70c474a176d7&search-rank=6",
+      "title": "Dec 17, 1930, page 19 - Asbury Park Press at Newspapers.com™ - Newspapers.com™",
+      "screenshot": "trendclip-echo.png"
+    },
+    {
+      "slug": "herald-fold",
+      "from": {
+        "text": "The Afro-American • Page 7 Saturday, July 9, 1932 Baltimore, Maryland",
+        "href": "https://www.newspapers.com/image/1134167020/?match=1&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=2"
+      },
+      "url": "https://www.newspapers.com/image/1134167020/?match=1&terms=%22Newark%20Herald%22%20%28ceased%20OR%20folded%20OR%20suspend%29&search-id=ab9ab894-6645-4646-8a51-5b3335d21f6f&search-rank=2",
+      "title": "Jul 09, 1932, page 7 - The Afro-American at Newspapers.com™ - Newspapers.com™",
+      "screenshot": "trendclip-herald-fold.png"
+    },
+    {
+      "slug": "guardian",
+      "from": {
+        "text": "The Herald Statesman • Page 8 Friday, September 16, 1921 Yonkers, New York",
+        "href": "https://www.newspapers.com/image/676645530/?article=8b27467f-17e3-43cf-b3e6-838793aa4ab2&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=1"
+      },
+      "url": "https://www.newspapers.com/image/676645530/?article=8b27467f-17e3-43cf-b3e6-838793aa4ab2&terms=%22New%20Jersey%20Guardian%22&search-id=960ae551-8a40-431d-9c29-5c651ba44560&search-rank=1",
+      "title": "Sep 16, 1921, page 8 - The Herald Statesman at Newspapers.com™ - Newspapers.com™",
+      "screenshot": "trendclip-guardian.png"
+    },
+    {
+      "slug": "afro",
+      "from": {
+        "text": "Baltimore Afro-American • Page 2 Saturday, December 25, 1943 Baltimore, Maryland",
+        "href": "https://www.newspapers.com/image/1135990484/?match=1&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=7"
+      },
+      "url": "https://www.newspapers.com/image/1135990484/?match=1&terms=%22New%20Jersey%20Afro-American%22&search-id=e94a29bd-87b2-4f21-b06b-bd5ebd38826b&search-rank=7",
+      "title": "Dec 25, 1943, page 2 - Baltimore Afro-American at Newspapers.com™ - Newspapers.com™",
+      "screenshot": "trendclip-afro.png"
+    },
+    {
+      "slug": "colored-newspaper-nj",
+      "from": {
+        "text": "The Philadelphia Tribune • Page 13 Saturday, January 23, 1926 Philadelphia, Pennsylvania",
+        "href": "https://www.newspapers.com/image/1135357938/?match=4&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=1"
+      },
+      "url": "https://www.newspapers.com/image/1135357938/?match=4&terms=%22colored%20newspaper%22%20%28Newark%20OR%20Trenton%20OR%20%22Jersey%20City%22%29&search-id=8654fe0d-162f-4836-9c17-21913dc61900&search-rank=1",
+      "title": "Jan 23, 1926, page 13 - The Philadelphia Tribune at Newspapers.com™ - Newspapers.com™",
+      "screenshot": "trendclip-colored-newspaper-nj.png"
+    }
+  ]
+}

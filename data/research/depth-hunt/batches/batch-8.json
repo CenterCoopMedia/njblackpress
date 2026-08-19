@@ -1,0 +1,101 @@
+[
+  {
+    "pubId": 130,
+    "name": "Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 131,
+    "name": "The Connection Newspaper",
+    "result": "none",
+    "source": "Library of Congress Chronicling America title directory (catalog record only)",
+    "url": "https://www.loc.gov/item/sn88071369/",
+    "localFile": null,
+    "whyMatch": "LOC directory record confirms title/place/publisher (Ralph F. Johnson, Teaneck) but has no digitized issue images, only bibliographic metadata. Not a real page/masthead.",
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 132,
+    "name": "Corporate Headquarters",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 133,
+    "name": "Freedom Reports",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": "Existing newspapers.com screenshots in data/research/newspapers-com (q8open-freedom-reports-1918/1931) are for an unrelated earlier-era 'Freedom Reports' and do not match this pub's 1966 Newark founding era. Not reused.",
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 134,
+    "name": "En Avant: Bulletin pour le development de la mobilisation patriotique",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 135,
+    "name": "Rap Masters: Reader's Choice",
+    "result": "found",
+    "source": "PicClick (eBay listing aggregator)",
+    "url": "https://www.picclickimg.com/7JgAAeSwXudqe3xP/Vintage-Rap-Masters-Magazine-November-1992-Kris-Kross.webp",
+    "localFile": "data/research/depth-hunt/files/135-rap-masters-nov1992.webp",
+    "whyMatch": "Vintage cover photo of Rap Masters magazine, November 1992 issue (Kris Kross cover). Rap Masters was published by Faces Magazines of Paramus, NJ (sister publication to Word Up!), matching city and 1990-founding era. Falls within WHi holdings window (Mar 1992-July 1994) noted in Danky entry 5049.",
+    "caption": "Rap Masters magazine cover, November 1992 issue, published by Faces Magazines, Paramus, NJ.",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 136,
+    "name": "Penn Crusader",
+    "result": "none",
+    "source": "University of Illinois HPNL / CCC Camp Newspapers Digital Collection (metadata only)",
+    "url": "https://www.library.illinois.edu/hpnl/newspapers/results_full.php?bib_id=35529",
+    "localFile": null,
+    "whyMatch": "Confirmed as a CCC camp newspaper (Chatsworth, NJ, African American Company 1284-C) held by Center for Research Libraries via UIUC's digital collection, but access is restricted to UIUC affiliates -- no downloadable page image found.",
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 137,
+    "name": "Pine Needle",
+    "result": "none",
+    "source": "University of Illinois HPNL / CCC Camp Newspapers Digital Collection (metadata only)",
+    "url": "https://www.library.illinois.edu/hpnl/newspapers/results_full.php?bib_id=35529",
+    "localFile": null,
+    "whyMatch": "Confirmed as CCC Company 237(-C) camp newspaper, New Lisbon, NJ, continued by 'Sixty Niner (City)'. Digitized issues (Oct 1936, May 1937) exist in UIUC's CCC Camp Newspapers Digital Collection but access is restricted to UIUC affiliates -- no downloadable page image found.",
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 138,
+    "name": "Today's Black Woman",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": "Only eBay listings found are for a later-era (2008-2009) 'Today's Black Woman' magazine of uncertain relation to the 1995 Paramus title; too weak to confirm as the same publication, so not counted as a match.",
+    "caption": null,
+    "date": "2026-08-19"
+  }
+]

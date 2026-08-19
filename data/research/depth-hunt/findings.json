@@ -1,0 +1,469 @@
+{
+  "generated": "2026-08-19",
+  "pubsHunted": 100,
+  "confirmedCount": 6,
+  "rejectedCount": 1,
+  "noneCount": 93,
+  "confirmed": [
+    {
+      "pubId": 40,
+      "name": "The Nubian News",
+      "result": "found",
+      "source": "publisher's own website archive",
+      "url": "https://www.thenubiannews.com/archive",
+      "localFile": "data/research/depth-hunt/files/40-nubian-news-v6n1-2022.pdf",
+      "whyMatch": "The Nubian News's own site hosts a self-published PDF archive of full back issues under assets/pdf/. Downloaded Vol. 6 No. 1 (Jan. 7, 2022), a complete 12-page issue of the actual newspaper -- masthead, layout, articles, ads all present. Title, city (Trenton), and publisher (Kamau Kujichagulia, per site) match the dankyNote exactly; this is an active, still-publishing paper (yearCeased null).",
+      "caption": "The Nubian News, Vol. 6 No. 1, Jan. 7, 2022 -- full 12-page issue PDF from the paper's own online archive",
+      "date": "2026-08-19",
+      "notes": "Archive page (thenubiannews.com/archive) lists dozens more issues from 2020-2023 (V4-V6) available at the same assets/pdf/ path if additional issues are needed.",
+      "verdict": "confirmed",
+      "verdictReason": "Local file is a valid PDF (%PDF-1.3, 28.1 MB, 12 pages, well-formed trailer/EOF). Extracted page 1 text shows the actual masthead 'The Nubian News / Loving the Black Perspective', with 'Volume 6 / Number 1 / FREE / January 7, 2022' and the paper's own contact block (nubiannews@thenubiannews.com, www.thenubiannews.com, (609) 858-2777 -- a Trenton-area 609 number). Body content is Trenton local news (fire at Rusling St. and Division St., Trenton) and is bilingual English/Spanish, matching the record's 'New Jersey's only African-American-Hispanic news source' and languages 'English/Some spanish'. City (Trenton), title, and era (yearCeased null = still publishing, 2022 issue) all match publication id 40. Source URL https://www.thenubiannews.com/archive returns HTTP 200 and is the publisher's own site. This is a primary issue of the named paper, not a mention, catalog record, or similarly named title."
+    },
+    {
+      "pubId": 68,
+      "name": "MEDIC News",
+      "result": "found",
+      "source": "Internet Archive (Gus Heningburg Collection, Newark Public Library)",
+      "url": "https://archive.org/details/Heningburg166",
+      "localFile": "data/research/depth-hunt/files/68-medic-news-v1n1.pdf",
+      "whyMatch": "Digitized item is titled exactly \"MEDIC News vol. 1 no. 1\", described as the newsletter of Minority Economic Development and Cultural Enterprises, Inc. (matches MEDIC acronym), part of the Gus Heningburg Collection held by the Charles F. Cummings New Jersey Information Center at Newark Public Library. Right title, right city (Newark), plausible era. A companion issue (Heningburg167, vol.1 no.2) also exists.",
+      "caption": "MEDIC News, vol. 1, no. 1 — 8-page newsletter, Newark, NJ. Gus Heningburg Collection, Charles F. Cummings New Jersey Information Center, Newark Public Library.",
+      "date": "2026-08-19",
+      "verdict": "confirmed",
+      "verdictReason": "localFile is a valid 8-page PDF (455 KB, PDF-1.5, all pages non-blank with images and OCR text). PDF metadata: title 'MEDIC News vol. 1 no. 1', creator Internet Archive, keywords link to https://archive.org/details/Heningburg166. Source URL returns 200; IA metadata gives title 'MEDIC News vol. 1 no. 1', collections npl-heningburg / newarkpubliclibrary, described as the Minority, Economic, Development and Cultural Enterprises, Inc. newsletter. Page text is the publication itself, not a mention: masthead reads 'Medic / Vol. 1 / Issue 1 / MEDIC Enterprises, Inc. / Minority, Economic, Development, Industrial and Cultural Enterprises, Inc.', with the address 287 Washington Street, Newark, New Jersey. Content is Newark minority economic development (MEDIC Press, Tri-Cities Limo, Secretary of Commerce Stans visit to Newark, NJ minority enterprise program). Era fits: references 1971 Ford wagons and 'New Directions for the 70's', matching yearFounded 1971. Page count 8 matches the Danky 1998 entry 3735 description (Newark, MEDIC Inc., 8 pages, business and economic development)."
+    },
+    {
+      "pubId": 112,
+      "name": "Captain Africa",
+      "result": "found",
+      "source": "Internet Archive (archive.org)",
+      "url": "https://archive.org/details/captainafrica00dway",
+      "localFile": "data/research/depth-hunt/files/112-captain-africa-cover-thumb.jpg",
+      "whyMatch": "IA item 'Captain Africa: the battle for Egyptica' (Trenton, NJ: Africa World Press, 1992) — IA metadata description states it is a reprint 'Originally published: Somerville, N.J.: African Prince Productions, 1990.' Same title, same creator work (Dwayne J. Ferguson / African Prince Productions), matching NJ publisher and era in dankyNote (Glen Ridge/Somerville, African Prince Productions, 1992-1994). Downloaded the item's cover thumbnail image (full-text PDF is lending-restricted).",
+      "caption": "Cover of 'Captain Africa: the Battle for Egyptica,' the 1992 Africa World Press reprint of Dwayne J. Ferguson's Captain Africa comic, originally published by African Prince Productions of Somerville/Glen Ridge, NJ.",
+      "date": "2026-08-19",
+      "verdict": "confirmed",
+      "verdictReason": "File 112-captain-africa-cover-thumb.jpg (180x288 JPEG, non-blank, mean 108/stddev 53) shows the actual cover of 'Captain Africa: The Battle for Egyptica' by Dwayne J. Ferguson. IA metadata for captainafrica00dway confirms Africa World Press, Trenton, N.J., 1992, originally published Somerville, N.J.: African Prince Productions, 1990. Title, creator, publisher (African Prince Productions) and NJ city (Somerville, listed as an alternate city in the entry's historicalNotes) all match; era is within the 1990-1994 window. Caveat: this is the collected graphic-novel edition, not a numbered issue of the 1992-1994 comic serial, so it is an edition artifact rather than a single issue cover. It is a primary artifact of the named title, not a mention, catalog record, or different work."
+    },
+    {
+      "pubId": 114,
+      "name": "Word Up!",
+      "result": "found",
+      "source": "Sotheby's auction listing (Art and Influence of Hip Hop, 2022)",
+      "url": "https://www.sothebys.com/en/buy/auction/2022/hip-hop/a-collection-of-28-issues-of-word-up-magazine-1987",
+      "localFile": "data/research/depth-hunt/files/114-word-up-sothebys-lot.jpg",
+      "whyMatch": "Sotheby's lot photographs a physical collection of 28 issues of Word Up! magazine spanning 1987-1997, the same Paramus, NJ-headquartered hip-hop magazine (Enoble Media, publisher John Blassingame, founding editor Gerrie Summers) described in the dankyNote. High-resolution (4717x3657) auction-house photo shows actual magazine covers/spines, not a catalog record or mention.",
+      "caption": "A lot of 28 issues of Word Up! magazine (1987-1997), the Paramus, NJ hip-hop teen magazine, photographed for a 2022 Sotheby's 'Art and Influence of Hip Hop' auction.",
+      "date": "2026-08-19",
+      "verdict": "confirmed",
+      "verdictReason": "File 114-word-up-sothebys-lot.jpg (4717x3657 JPEG, non-blank) is an auction-house photograph of a physical fan of Word Up! magazine issues; the top copy is legibly the 'PREMIERE ISSUE' with Run-DMC cover, July/August 1987, No. 1, and later issues show the Word Up! '!' logo spines. Sotheby's lot page confirms 28 issues spanning 1987-1997 from founding editor Gerrie Summers' personal collection. Title, run and era match publication 114 (Paramus, NJ; founded 1987/1990 per record, still active). This is a photo of the real issues, not a catalog or bibliography record."
+    },
+    {
+      "pubId": 121,
+      "name": "Testimony: A Journal of African-American Poetry",
+      "result": "found",
+      "source": "AbeBooks (Crow Hop Rare Books listing)",
+      "url": "https://www.abebooks.co.uk/first-edition/Testimony-Journal-African-American-Poetry-Vol-Issue/31778171273/bd",
+      "localFile": "data/research/depth-hunt/files/121-testimony.jpg",
+      "whyMatch": "Rare-book listing for the exact title, Vol.1 Issue One (Winter 1987) and Issue Two (Spring 1987), edited by Sandra West, Montclair NJ origin matches dankyNote (founding editor, 1987 start). Listing photo shows the actual stapled-wraps journal cover(s), described as 8.5x11 in, 30-34 pp, matching Danky-era small-press poetry journal format.",
+      "caption": "Cover of Testimony: A Journal of African-American Poetry, Vol. 1 (1987), edited by Sandra West, Montclair, NJ.",
+      "date": "2026-08-19",
+      "verdict": "confirmed",
+      "verdictReason": "Local file 121-testimony.jpg (1125x1386 JPEG, non-blank, stddev 61.8) shows the actual front cover of the journal: masthead reads 'Testimony / a journal of african-american poetry', with 'Vol. I Issue One', 'WINTER 1987', $4.00, cover photograph, and a contributor box listing Sandra West among others. Source AbeBooks listing (fetched) states the exact title, Vol. 1 Issues One and Two, 1987, place of publication Montclair, NJ, editor Sandra West, 8.5x11 stapled wraps, 30-34 pp, four OCLC holdings. Title, New Jersey city (Montclair), publisher/editor, and era (yearFounded 1987) all match the publication record. This is an artifact of the publication itself, not a mention, catalog record, or similar-named title."
+    },
+    {
+      "pubId": 135,
+      "name": "Rap Masters: Reader's Choice",
+      "result": "found",
+      "source": "PicClick (eBay listing aggregator)",
+      "url": "https://www.picclickimg.com/7JgAAeSwXudqe3xP/Vintage-Rap-Masters-Magazine-November-1992-Kris-Kross.webp",
+      "localFile": "data/research/depth-hunt/files/135-rap-masters-nov1992.webp",
+      "whyMatch": "Vintage cover photo of Rap Masters magazine, November 1992 issue (Kris Kross cover). Rap Masters was published by Faces Magazines of Paramus, NJ (sister publication to Word Up!), matching city and 1990-founding era. Falls within WHi holdings window (Mar 1992-July 1994) noted in Danky entry 5049.",
+      "caption": "Rap Masters magazine cover, November 1992 issue, published by Faces Magazines, Paramus, NJ.",
+      "date": "2026-08-19",
+      "verdict": "confirmed",
+      "verdictReason": "Local file 135-rap-masters-nov1992.webp is a valid WEBP (RIFF/VP8X header, 480x640, non-blank, stddev ~55-69 per channel) and is byte-identical in size (71,664 bytes) to the live source URL (HTTP 200, image/webp). The image shows an actual physical copy of the magazine with the full 'RAP MASTERS' masthead and the cover date 'NOVEMBER 1992' plus cover price, Kris Kross cover feature, and 'Hip-hop style for the '90s' cover line. This is the issue itself, not a mention, catalog record, or lookalike title. Era matches pubId 135 (founded 1990, still active; Danky entry 5049 records WHi holdings Mar 1992-July 1994, which brackets Nov 1992). NJ tie is established by the publisher of record (Word Up! Publications / Faces Magazines, Paramus and River Edge, NJ) rather than by text visible on the cover -- the only weakness, but the title, publisher lineage, and date are otherwise unambiguous."
+    }
+  ],
+  "rejected": [
+    {
+      "pubId": 95,
+      "name": "Right On! (second issue)",
+      "reason": "Correct title but wrong place and era. localFile 95-right-on-1977-v6n4.pdf is a genuine 75-page scan of Right On! vol. 6 no. 4, February 1977, editor Cynthia M. Horner. However its masthead reads 'published monthly by Laufer Publishing Company, 7060 Hollywood Blvd., Hollywood, California 90028.' Per the record's own Danky note, Right On! was published in Hollywood 1971-1982 and only moved to Cresskill, NJ in April 1983. This issue therefore documents the California era and is not evidence of the New Jersey publication."
+    }
+  ],
+  "none": [
+    {
+      "pubId": 1,
+      "name": "Hype"
+    },
+    {
+      "pubId": 3,
+      "name": "The Camden News"
+    },
+    {
+      "pubId": 5,
+      "name": "The Connection / North Jersey Connection"
+    },
+    {
+      "pubId": 11,
+      "name": "The Northern New Jersey Informer"
+    },
+    {
+      "pubId": 13,
+      "name": "City News"
+    },
+    {
+      "pubId": 15,
+      "name": "African World"
+    },
+    {
+      "pubId": 18,
+      "name": "The Liberator"
+    },
+    {
+      "pubId": 26,
+      "name": "Harambee"
+    },
+    {
+      "pubId": 27,
+      "name": "Greater News"
+    },
+    {
+      "pubId": 28,
+      "name": "Black Newark"
+    },
+    {
+      "pubId": 30,
+      "name": "North Jersey Independent"
+    },
+    {
+      "pubId": 41,
+      "name": "The Voice"
+    },
+    {
+      "pubId": 44,
+      "name": "The Franklin Voice"
+    },
+    {
+      "pubId": 45,
+      "name": "Apex News"
+    },
+    {
+      "pubId": 46,
+      "name": "The African Voice"
+    },
+    {
+      "pubId": 47,
+      "name": "Artz"
+    },
+    {
+      "pubId": 48,
+      "name": "Ash Can"
+    },
+    {
+      "pubId": 49,
+      "name": "At the Crossroads"
+    },
+    {
+      "pubId": 50,
+      "name": "New Jersey Deadline"
+    },
+    {
+      "pubId": 51,
+      "name": "CFUN News"
+    },
+    {
+      "pubId": 52,
+      "name": "Black Journal"
+    },
+    {
+      "pubId": 53,
+      "name": "MC Squared"
+    },
+    {
+      "pubId": 54,
+      "name": "Journal of African American Men"
+    },
+    {
+      "pubId": 55,
+      "name": "Point Breeze Rugcuttings"
+    },
+    {
+      "pubId": 56,
+      "name": "The Union Messenger"
+    },
+    {
+      "pubId": 58,
+      "name": "Yes: Youth Excited About Success"
+    },
+    {
+      "pubId": 59,
+      "name": "En Avant"
+    },
+    {
+      "pubId": 60,
+      "name": "Black Women's United Front Newsletter"
+    },
+    {
+      "pubId": 61,
+      "name": "The National Political Science Review"
+    },
+    {
+      "pubId": 62,
+      "name": "Afro-American Festival of the Arts Magazine"
+    },
+    {
+      "pubId": 63,
+      "name": "Today's Black Woman"
+    },
+    {
+      "pubId": 64,
+      "name": "Black Racers Yearbook"
+    },
+    {
+      "pubId": 65,
+      "name": "Spirit: The Guide to the Soul"
+    },
+    {
+      "pubId": 66,
+      "name": "Jersey Camera"
+    },
+    {
+      "pubId": 69,
+      "name": "The Cricket: Black Music in Evolution"
+    },
+    {
+      "pubId": 70,
+      "name": "Deliverance Voice"
+    },
+    {
+      "pubId": 72,
+      "name": "Hours After"
+    },
+    {
+      "pubId": 74,
+      "name": "Bootstrap"
+    },
+    {
+      "pubId": 75,
+      "name": "The Network: The Newsletter of the African-American Institute of Islamic Research"
+    },
+    {
+      "pubId": 76,
+      "name": "Newark Community Union Project News"
+    },
+    {
+      "pubId": 77,
+      "name": "Black New Jersey Magazine"
+    },
+    {
+      "pubId": 78,
+      "name": "Fotorama"
+    },
+    {
+      "pubId": 79,
+      "name": "The Hiram Star-News"
+    },
+    {
+      "pubId": 80,
+      "name": "Fire II"
+    },
+    {
+      "pubId": 81,
+      "name": "ONI"
+    },
+    {
+      "pubId": 82,
+      "name": "Hype Hair"
+    },
+    {
+      "pubId": 83,
+      "name": "Right On! Focus"
+    },
+    {
+      "pubId": 85,
+      "name": "Black Book Connection, Inc. Newsletter"
+    },
+    {
+      "pubId": 86,
+      "name": "Starline"
+    },
+    {
+      "pubId": 88,
+      "name": "Just for Black Men"
+    },
+    {
+      "pubId": 89,
+      "name": "Sixty Niner"
+    },
+    {
+      "pubId": 90,
+      "name": "The Little Ease Echo"
+    },
+    {
+      "pubId": 91,
+      "name": "The Literary Griot"
+    },
+    {
+      "pubId": 92,
+      "name": "Braids & Beauty"
+    },
+    {
+      "pubId": 93,
+      "name": "Try It Yourself Hair!"
+    },
+    {
+      "pubId": 94,
+      "name": "Dias Creek Echo"
+    },
+    {
+      "pubId": 96,
+      "name": "Right On! Presents Class"
+    },
+    {
+      "pubId": 97,
+      "name": "Rifle Ranger"
+    },
+    {
+      "pubId": 98,
+      "name": "Black Voice/Carta Boricua"
+    },
+    {
+      "pubId": 99,
+      "name": "Black Caucus of ALA Newsletter"
+    },
+    {
+      "pubId": 100,
+      "name": "Kuumba: The Black Voice Magazine"
+    },
+    {
+      "pubId": 102,
+      "name": "Camp Berlin Broadcast"
+    },
+    {
+      "pubId": 103,
+      "name": "Ujamaa: Journal of the Black Students Union"
+    },
+    {
+      "pubId": 104,
+      "name": "Update"
+    },
+    {
+      "pubId": 105,
+      "name": "Primer"
+    },
+    {
+      "pubId": 106,
+      "name": "NJ-AAHGS Newsletter"
+    },
+    {
+      "pubId": 107,
+      "name": "The Black Voice"
+    },
+    {
+      "pubId": 108,
+      "name": "Educational Perspectives"
+    },
+    {
+      "pubId": 109,
+      "name": "The Liberator"
+    },
+    {
+      "pubId": 110,
+      "name": "Perspectus News Magazine"
+    },
+    {
+      "pubId": 111,
+      "name": "Ngoma"
+    },
+    {
+      "pubId": 113,
+      "name": "Wait"
+    },
+    {
+      "pubId": 115,
+      "name": "Monthly Black Periodicals Selection Review"
+    },
+    {
+      "pubId": 116,
+      "name": "The Jersey Heritage"
+    },
+    {
+      "pubId": 117,
+      "name": "Inner City Products"
+    },
+    {
+      "pubId": 118,
+      "name": "Gospel Today Magazine"
+    },
+    {
+      "pubId": 119,
+      "name": "Black Atlantic City Magazine"
+    },
+    {
+      "pubId": 120,
+      "name": "Write On Newsletter"
+    },
+    {
+      "pubId": 122,
+      "name": "The Hart Fund"
+    },
+    {
+      "pubId": 123,
+      "name": "The Black Sociologist"
+    },
+    {
+      "pubId": 124,
+      "name": "The Best of Rap & R&B"
+    },
+    {
+      "pubId": 125,
+      "name": "Black Hair Digest"
+    },
+    {
+      "pubId": 126,
+      "name": "Black Women's United Front Newsletter"
+    },
+    {
+      "pubId": 127,
+      "name": "Black Truth Bulletin"
+    },
+    {
+      "pubId": 129,
+      "name": "Club World: Newsmagazine"
+    },
+    {
+      "pubId": 130,
+      "name": "Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women"
+    },
+    {
+      "pubId": 131,
+      "name": "The Connection Newspaper"
+    },
+    {
+      "pubId": 132,
+      "name": "Corporate Headquarters"
+    },
+    {
+      "pubId": 133,
+      "name": "Freedom Reports"
+    },
+    {
+      "pubId": 134,
+      "name": "En Avant: Bulletin pour le development de la mobilisation patriotique"
+    },
+    {
+      "pubId": 136,
+      "name": "Penn Crusader"
+    },
+    {
+      "pubId": 137,
+      "name": "Pine Needle"
+    },
+    {
+      "pubId": 138,
+      "name": "Today's Black Woman"
+    }
+  ]
+}

@@ -60,6 +60,10 @@ Tailwind CSS via CDN with inline config extending colors and fonts:
 
 Push to `master` → GitHub Pages auto-deploys from `docs/`. No CI/CD pipeline, no environment variables needed.
 
+## Project updates (mandatory)
+
+After every achievement or merged PR, post a plain-English update as a comment on the "Road to launch" GitHub discussion (https://github.com/CenterCoopMedia/njblackpress/discussions/47) so nontechnical colleagues (Cassandra Etienne) can follow along. No jargon, no file paths, 3–6 sentences: what happened, why it matters for the archive, what comes next. An achievement is not done until its update is posted.
+
 ## Conventions
 
 - Sentence case for all headings and UI text (never Title Case)

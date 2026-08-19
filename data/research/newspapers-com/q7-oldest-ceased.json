@@ -1,0 +1,282 @@
+{
+  "searches": [
+    {
+      "id": 34,
+      "slug": "landscape-smith",
+      "keyword": "\"A. P. Smith\" OR \"A.P. Smith\" \"Saddle River\"",
+      "count": null,
+      "cards": 0,
+      "nj_cards": [],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22A.+P.+Smith%22+OR+%22A.P.+Smith%22+%22Saddle+River%22"
+    },
+    {
+      "id": 34,
+      "slug": "landscape-title",
+      "keyword": "\"The Landscape\" \"Saddle River\"",
+      "count": "82,703",
+      "cards": 10,
+      "nj_cards": [],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22The+Landscape%22+%22Saddle+River%22"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-dupaur",
+      "keyword": "\"Du Paur\" OR DuPaur OR \"DuPaur\"",
+      "count": null,
+      "cards": 0,
+      "nj_cards": [],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Du+Paur%22+OR+DuPaur+OR+%22DuPaur%22"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-auston",
+      "keyword": "\"Henry J. Auston\" OR \"Henry Auston\" Princeton",
+      "count": "24",
+      "cards": 10,
+      "nj_cards": [
+        {
+          "text": "Gloucester County Times \u2022 Page 2 Monday, March 9, 1942 Woodbury, New Jersey",
+          "href": "https://www.newspapers.com/image/1094683376/?match=2&terms=%22Henry%20J.%20Auston%22%20OR%20%22Henry%20Auston%22%20Princeton&search-id=9d8ea3cd-9395-4a1d-9766-3c90ec0c3a85&search-rank=5"
+        },
+        {
+          "text": "The Times \u2022 Page 7 Monday, October 7, 1946 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1196643456/?match=2&terms=%22Henry%20J.%20Auston%22%20OR%20%22Henry%20Auston%22%20Princeton&search-id=9d8ea3cd-9395-4a1d-9766-3c90ec0c3a85&search-rank=1"
+        }
+      ],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Henry+J.+Auston%22+OR+%22Henry+Auston%22+Princeton"
+    },
+    {
+      "id": 3,
+      "slug": "camden-green",
+      "keyword": "\"Camden News\" (colored OR negro OR \"C. N. Green\")",
+      "count": "166,527",
+      "cards": 10,
+      "nj_cards": [
+        {
+          "text": "Courier-Post \u2022 Page 1 Friday, December 27, 1907 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/478975744/?match=1&terms=%22Camden%20News%22%20%28colored%20OR%20negro%20OR%20%22C.%20N.%20Green%22%29&search-id=7bdd1997-d767-4ffa-b7e4-88d0a04a653d&search-rank=5"
+        },
+        {
+          "text": "Courier-Post \u2022 Page 1 Monday, July 23, 1917 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/446037700/?match=1&terms=%22Camden%20News%22%20%28colored%20OR%20negro%20OR%20%22C.%20N.%20Green%22%29&search-id=7bdd1997-d767-4ffa-b7e4-88d0a04a653d&search-rank=1"
+        },
+        {
+          "text": "Evening Courier \u2022 Page 11 Wednesday, August 28, 1946 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/479521681/?match=6&terms=%22Camden%20News%22%20%28colored%20OR%20negro%20OR%20%22C.%20N.%20Green%22%29&search-id=7bdd1997-d767-4ffa-b7e4-88d0a04a653d&search-rank=7"
+        }
+      ],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Camden+News%22+%28colored+OR+negro+OR+%22C.+N.+Green%22%29"
+    },
+    {
+      "id": 57,
+      "slug": "ironsides",
+      "keyword": "\"Ironsides Echo\" OR \"Ironsides\" Bordentown",
+      "count": "10,414",
+      "cards": 10,
+      "nj_cards": [],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Ironsides+Echo%22+OR+%22Ironsides%22+Bordentown"
+    },
+    {
+      "id": 45,
+      "slug": "apex",
+      "keyword": "\"Apex News\" (Atlantic OR Morgan OR colored)",
+      "count": "29,107",
+      "cards": 10,
+      "nj_cards": [
+        {
+          "text": "Press of Atlantic City \u2022 Page 10 Tuesday, January 5, 1943 Atlantic City, New Jersey",
+          "href": "https://www.newspapers.com/image/918804630/?match=9&terms=%22Apex%20News%22%20%28Atlantic%20OR%20Morgan%20OR%20colored%29&search-id=2327c0fc-29c2-449f-9974-8eb6f750378f&search-rank=9"
+        },
+        {
+          "text": "Press of Atlantic City \u2022 Page 18 Monday, September 1, 1958 Atlantic City, New Jersey",
+          "href": "https://www.newspapers.com/image/920215208/?match=1&terms=%22Apex%20News%22%20%28Atlantic%20OR%20Morgan%20OR%20colored%29&search-id=2327c0fc-29c2-449f-9974-8eb6f750378f&search-rank=7"
+        }
+      ],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Apex+News%22+%28Atlantic+OR+Morgan+OR+colored%29"
+    },
+    {
+      "id": 2,
+      "slug": "jersey-express",
+      "keyword": "\"Jersey Express\" Montclair",
+      "count": "2,536",
+      "cards": 10,
+      "nj_cards": [
+        {
+          "text": "The Montclair Times \u2022 Page 12 Tuesday, May 24, 1932 Montclair, New Jersey",
+          "href": "https://www.newspapers.com/image/515597946/?match=1&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=10"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 6 Saturday, September 30, 1933 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/221034208/?match=6&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=3"
+        },
+        {
+          "text": "The Herald-News \u2022 Page 13 Tuesday, December 5, 1933 Passaic, New Jersey",
+          "href": "https://www.newspapers.com/image/525928236/?match=1&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=4"
+        },
+        {
+          "text": "The Herald-News \u2022 Page 13 Tuesday, December 5, 1933 Passaic, New Jersey",
+          "href": "https://www.newspapers.com/image/525928094/?match=1&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=5"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 27 Monday, April 23, 1979 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1110889107/?match=6&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=1"
+        },
+        {
+          "text": "Daily Record \u2022 Page 40 Thursday, November 8, 2007 Morristown, New Jersey",
+          "href": "https://www.newspapers.com/image/256941478/?match=5&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=7"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 20 Thursday, January 31, 2008 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1119422874/?match=5&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=6"
+        },
+        {
+          "text": "Daily Record \u2022 Page 14 Monday, December 15, 2008 Morristown, New Jersey",
+          "href": "https://www.newspapers.com/image/256708455/?match=1&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=8"
+        },
+        {
+          "text": "The Montclair Times \u2022 Page B4 Thursday, January 14, 2010 Montclair, New Jersey",
+          "href": "https://www.newspapers.com/image/499555866/?match=15&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=2"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 20 Friday, May 21, 2010 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1120394593/?match=5&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=9"
+        }
+      ],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Jersey+Express%22+Montclair"
+    },
+    {
+      "id": 2,
+      "slug": "jersey-express-johnson",
+      "keyword": "\"Melvin B. Johnson\" (editor OR newspaper) Montclair",
+      "count": "39",
+      "cards": 10,
+      "nj_cards": [
+        {
+          "text": "The Montclair Times \u2022 Page 6 Tuesday, October 20, 1931 Montclair, New Jersey",
+          "href": "https://www.newspapers.com/image/515578564/?match=1&terms=%22Melvin%20B.%20Johnson%22%20%28editor%20OR%20newspaper%29%20Montclair&search-id=5e49edf9-bb41-4f31-b6b5-1c5e4284ae6c&search-rank=10"
+        },
+        {
+          "text": "The Montclair Times \u2022 Page 23 Friday, May 11, 1934 Montclair, New Jersey",
+          "href": "https://www.newspapers.com/image/515662770/?match=61&terms=%22Melvin%20B.%20Johnson%22%20%28editor%20OR%20newspaper%29%20Montclair&search-id=5e49edf9-bb41-4f31-b6b5-1c5e4284ae6c&search-rank=2"
+        },
+        {
+          "text": "The Montclair Times \u2022 Page 6 Tuesday, April 17, 1934 Montclair, New Jersey",
+          "href": "https://www.newspapers.com/image/515682726/?match=2&terms=%22Melvin%20B.%20Johnson%22%20%28editor%20OR%20newspaper%29%20Montclair&search-id=5e49edf9-bb41-4f31-b6b5-1c5e4284ae6c&search-rank=3"
+        },
+        {
+          "text": "Asbury Park Press \u2022 Page 2 Sunday, November 6, 1949 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/143065742/?match=5&terms=%22Melvin%20B.%20Johnson%22%20%28editor%20OR%20newspaper%29%20Montclair&search-id=5e49edf9-bb41-4f31-b6b5-1c5e4284ae6c&search-rank=1"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 14 Wednesday, January 19, 1949 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1108232407/?match=7&terms=%22Melvin%20B.%20Johnson%22%20%28editor%20OR%20newspaper%29%20Montclair&search-id=5e49edf9-bb41-4f31-b6b5-1c5e4284ae6c&search-rank=8"
+        }
+      ],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Melvin+B.+Johnson%22+%28editor+OR+newspaper%29+Montclair"
+    },
+    {
+      "id": 37,
+      "slug": "guardian",
+      "keyword": "\"New Jersey Guardian\" (colored OR Negro OR Newark)",
+      "count": "1,240",
+      "cards": 10,
+      "nj_cards": [
+        {
+          "text": "The News \u2022 Page 9 Saturday, September 9, 1939 Paterson, New Jersey",
+          "href": "https://www.newspapers.com/image/525697398/?match=1&terms=%22New%20Jersey%20Guardian%22%20%28colored%20OR%20Negro%20OR%20Newark%29&search-id=fb4c6019-70bc-4a72-9f4c-acc82aa1e8fa&search-rank=7"
+        }
+      ],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22New+Jersey+Guardian%22+%28colored+OR+Negro+OR+Newark%29"
+    }
+  ],
+  "opened": [
+    {
+      "id": 7,
+      "slug": "citizen-auston",
+      "card": "Gloucester County Times \u2022 Page 2 Monday, March 9, 1942 Woodbury, New Jersey",
+      "url": "https://www.newspapers.com/image/1094683376/?match=2&terms=%22Henry%20J.%20Auston%22%20OR%20%22Henry%20Auston%22%20Princeton&search-id=9d8ea3cd-9395-4a1d-9766-3c90ec0c3a85&search-rank=5",
+      "shot": "q7open-citizen-auston-1942.png",
+      "find": "Auston"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-auston",
+      "card": "The Times \u2022 Page 7 Monday, October 7, 1946 Trenton, New Jersey",
+      "url": "https://www.newspapers.com/image/1196643456/?match=2&terms=%22Henry%20J.%20Auston%22%20OR%20%22Henry%20Auston%22%20Princeton&search-id=9d8ea3cd-9395-4a1d-9766-3c90ec0c3a85&search-rank=1",
+      "shot": "q7open-citizen-auston-1946.png",
+      "find": "Auston"
+    },
+    {
+      "id": 3,
+      "slug": "camden-green",
+      "card": "Courier-Post \u2022 Page 1 Friday, December 27, 1907 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/478975744/?match=1&terms=%22Camden%20News%22%20%28colored%20OR%20negro%20OR%20%22C.%20N.%20Green%22%29&search-id=7bdd1997-d767-4ffa-b7e4-88d0a04a653d&search-rank=5",
+      "shot": "q7open-camden-green-1907.png",
+      "find": "Camden News"
+    },
+    {
+      "id": 3,
+      "slug": "camden-green",
+      "card": "Courier-Post \u2022 Page 1 Monday, July 23, 1917 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/446037700/?match=1&terms=%22Camden%20News%22%20%28colored%20OR%20negro%20OR%20%22C.%20N.%20Green%22%29&search-id=7bdd1997-d767-4ffa-b7e4-88d0a04a653d&search-rank=1",
+      "shot": "q7open-camden-green-1917.png",
+      "find": "Camden News"
+    },
+    {
+      "id": 45,
+      "slug": "apex",
+      "card": "Press of Atlantic City \u2022 Page 10 Tuesday, January 5, 1943 Atlantic City, New Jersey",
+      "url": "https://www.newspapers.com/image/918804630/?match=9&terms=%22Apex%20News%22%20%28Atlantic%20OR%20Morgan%20OR%20colored%29&search-id=2327c0fc-29c2-449f-9974-8eb6f750378f&search-rank=9",
+      "shot": "q7open-apex-1943.png",
+      "find": "Apex News"
+    },
+    {
+      "id": 45,
+      "slug": "apex",
+      "card": "Press of Atlantic City \u2022 Page 18 Monday, September 1, 1958 Atlantic City, New Jersey",
+      "url": "https://www.newspapers.com/image/920215208/?match=1&terms=%22Apex%20News%22%20%28Atlantic%20OR%20Morgan%20OR%20colored%29&search-id=2327c0fc-29c2-449f-9974-8eb6f750378f&search-rank=7",
+      "shot": "q7open-apex-1958.png",
+      "find": "Apex News"
+    },
+    {
+      "id": 2,
+      "slug": "jersey-express",
+      "card": "The Montclair Times \u2022 Page 12 Tuesday, May 24, 1932 Montclair, New Jersey",
+      "url": "https://www.newspapers.com/image/515597946/?match=1&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=10",
+      "shot": "q7open-jersey-express-1932.png",
+      "find": "Express"
+    },
+    {
+      "id": 2,
+      "slug": "jersey-express",
+      "card": "The Courier-News \u2022 Page 6 Saturday, September 30, 1933 Bridgewater, New Jersey",
+      "url": "https://www.newspapers.com/image/221034208/?match=6&terms=%22Jersey%20Express%22%20Montclair&search-id=aa02dc0d-cde6-44f5-a811-0f19f5235415&search-rank=3",
+      "shot": "q7open-jersey-express-1933.png",
+      "find": "Express"
+    },
+    {
+      "id": 2,
+      "slug": "jersey-express-johnson",
+      "card": "The Montclair Times \u2022 Page 6 Tuesday, October 20, 1931 Montclair, New Jersey",
+      "url": "https://www.newspapers.com/image/515578564/?match=1&terms=%22Melvin%20B.%20Johnson%22%20%28editor%20OR%20newspaper%29%20Montclair&search-id=5e49edf9-bb41-4f31-b6b5-1c5e4284ae6c&search-rank=10",
+      "shot": "q7open-jersey-express-johnson-1931.png",
+      "find": "Johnson"
+    },
+    {
+      "id": 2,
+      "slug": "jersey-express-johnson",
+      "card": "The Montclair Times \u2022 Page 23 Friday, May 11, 1934 Montclair, New Jersey",
+      "url": "https://www.newspapers.com/image/515662770/?match=61&terms=%22Melvin%20B.%20Johnson%22%20%28editor%20OR%20newspaper%29%20Montclair&search-id=5e49edf9-bb41-4f31-b6b5-1c5e4284ae6c&search-rank=2",
+      "shot": "q7open-jersey-express-johnson-1934.png",
+      "find": "Johnson"
+    },
+    {
+      "id": 37,
+      "slug": "guardian",
+      "card": "The News \u2022 Page 9 Saturday, September 9, 1939 Paterson, New Jersey",
+      "url": "https://www.newspapers.com/image/525697398/?match=1&terms=%22New%20Jersey%20Guardian%22%20%28colored%20OR%20Negro%20OR%20Newark%29&search-id=fb4c6019-70bc-4a72-9f4c-acc82aa1e8fa&search-rank=7",
+      "shot": "q7open-guardian-1939.png",
+      "find": "Guardian"
+    }
+  ]
+}

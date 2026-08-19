@@ -1,0 +1,2779 @@
+{
+  "generated": "2026-08-19T11:09:23",
+  "summary": {
+    "publications": 138,
+    "fullyClean": 136,
+    "partial": 1,
+    "noCleanCapture": 1,
+    "keeperTotal": 176,
+    "keeperClean": 174,
+    "keeperSloppyOnly": 2,
+    "cleanFilesOnDisk": {
+      "wayback": 18,
+      "iaPdfs": 10,
+      "newspapersCom": 24
+    }
+  },
+  "gaps": [
+    {
+      "id": 14,
+      "name": "New Jersey Record",
+      "yearFounded": null,
+      "keeperCount": 0,
+      "needs": [
+        "no keepers in catalog at all"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "id": 10,
+      "name": "The Sentinel",
+      "yearFounded": 1880,
+      "keeperCount": 2,
+      "cleanCount": 2,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clipping",
+          "url": "https://www.newspapers.com/image/1194114727/",
+          "legacyFile": "data/research/newspapers-com/clips/herbert-1893-11-05-trenton-advertiser-bradley.png",
+          "cleanFile": "data/research/newspapers-com/downloads/trenton-sunday-advertiser_1893-11-05_p1_herbert-vs-bradley.jpg",
+          "need": null
+        },
+        {
+          "kind": "clipping",
+          "url": "https://www.newspapers.com/image/1194116748/",
+          "legacyFile": "data/research/newspapers-com/clips/herbert-1895-10-20-trenton-advertiser-gop.png",
+          "cleanFile": "data/research/newspapers-com/downloads/trenton-sunday-advertiser_1895-10-20_p1_herbert-gop-committee.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "The Landscape",
+      "yearFounded": 1885,
+      "keeperCount": 3,
+      "cleanCount": 3,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/1122504536/",
+          "legacyFile": "data/research/newspapers-com/clips/landscape-1987-11-26-ridgewood-news-ap-smith.png",
+          "cleanFile": "data/research/newspapers-com/downloads/ridgewood-news_1987-11-26_p14_landscape-ap-smith.jpg",
+          "need": null
+        },
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/496517756/",
+          "legacyFile": "data/research/newspapers-com/clips/landscape-1991-02-09-the-record-civil-rights.png",
+          "cleanFile": "data/research/newspapers-com/downloads/the-record-hackensack_1991-02-09_p2_landscape-renamed.jpg",
+          "need": null
+        },
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/634766635/",
+          "legacyFile": "data/research/newspapers-com/clips/landscape-1993-06-27-sunday-news-smallest.png",
+          "cleanFile": "data/research/newspapers-com/downloads/sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "New Jersey Trumpet",
+      "yearFounded": 1887,
+      "keeperCount": 2,
+      "cleanCount": 2,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clipping",
+          "url": "https://www.newspapers.com/image/436807841/",
+          "legacyFile": "data/research/newspapers-com/clips/trumpet-1893-07-28-shore-press-murrell.png",
+          "cleanFile": "data/research/newspapers-com/downloads/shore-press_1893-07-28_p6_murrell-asbury-meeting.jpg",
+          "need": null
+        },
+        {
+          "kind": "clipping",
+          "url": "https://www.newspapers.com/image/436760060/",
+          "legacyFile": "data/research/newspapers-com/clips/trumpet-1893-07-22-asbury-park-press-murrell.png",
+          "cleanFile": "data/research/newspapers-com/downloads/asbury-park-press_1893-07-22_p1_murrell-speaking.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "The Echo",
+      "yearFounded": 1904,
+      "keeperCount": 2,
+      "cleanCount": 2,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clipping",
+          "url": "https://www.newspapers.com/image/497174278/",
+          "legacyFile": "data/research/newspapers-com/clips/echo-1904-09-08-monmouth-democrat-burned-out.png",
+          "cleanFile": "data/research/newspapers-com/downloads/monmouth-democrat_1904-09-08_p4_echo-burned-out.jpg",
+          "need": null
+        },
+        {
+          "kind": "clipping",
+          "url": "https://www.newspapers.com/image/143869436/",
+          "legacyFile": "data/research/newspapers-com/clips/echo-1909-03-05-asbury-park-press-moves-red-bank.png",
+          "cleanFile": "data/research/newspapers-com/downloads/asbury-park-press_1909-03-05_p2_echo-moves-red-bank.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "The Citizen",
+      "yearFounded": 1909,
+      "keeperCount": 2,
+      "cleanCount": 2,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/154/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p154-the-citizen.png",
+          "cleanFile": "data/research/danky/danky-1998-p154-the-citizen.png",
+          "need": null
+        },
+        {
+          "kind": "library_page",
+          "url": "https://www.princetonhistory.org/tour/40.html",
+          "legacyFile": "data/research/danky/hsp-citizen-9-witherspoon.png",
+          "cleanFile": "data/research/danky/hsp-citizen-9-witherspoon.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "The Camden News",
+      "yearFounded": 1915,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/131/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p131-camden-news.png",
+          "cleanFile": "data/research/danky/danky-1998-p131-camden-news.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "The Ironsides Echo",
+      "yearFounded": 1917,
+      "keeperCount": 2,
+      "cleanCount": 2,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/446292432/",
+          "legacyFile": "data/research/newspapers-com/clips/ironsides-1932-03-22-courier-post-leon-snead.png",
+          "cleanFile": "data/research/newspapers-com/downloads/courier-post_1932-03-22_p14_ironsides-echo-award.jpg",
+          "need": null
+        },
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/1191434889/",
+          "legacyFile": "data/research/newspapers-com/clips/ironsides-1940-05-07-trenton-times-awards.png",
+          "cleanFile": "data/research/newspapers-com/downloads/trenton-times_1940-05-07_p13_ironsides-echo-awards.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "The Newark Herald",
+      "yearFounded": 1928,
+      "keeperCount": 10,
+      "cleanCount": 10,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19380521a",
+          "legacyFile": "data/research/wayback/ia-issues/NewJerseyHeraldNews19380521a.jpg",
+          "cleanFile": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380611a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380611a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380611a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380618a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380618a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380618a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380702a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380702a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380702a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380709a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380709a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380709a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380716a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380716a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380716a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380723a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380723a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380723a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380730a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380730a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380730a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue_preview",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19390311",
+          "legacyFile": "data/research/wayback/ia-issues/NewJerseyHeraldNews19390311.jpg",
+          "cleanFile": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue_preview",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19420704",
+          "legacyFile": "data/research/wayback/ia-issues/NewJerseyHeraldNews19420704.jpg",
+          "cleanFile": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Apex News",
+      "yearFounded": 1929,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/46/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p46-apex-news.png",
+          "cleanFile": "data/research/danky/danky-1998-p46-apex-news.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "The Jersey Express",
+      "yearFounded": 1932,
+      "keeperCount": 2,
+      "cleanCount": 2,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/1108232407/",
+          "legacyFile": "data/research/newspapers-com/clips/jersey-express-1949-01-19-star-ledger-johnson.png",
+          "cleanFile": "data/research/newspapers-com/downloads/star-ledger_1949-01-19_p14_melvin-johnson-left-papers.jpg",
+          "need": null
+        },
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/143065742/",
+          "legacyFile": "data/research/newspapers-com/clips/jersey-express-1949-11-06-asbury-park-press-johnson.png",
+          "cleanFile": "data/research/newspapers-com/downloads/asbury-park-press_1949-11-06_p2_johnson-montclair-newark.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "The New Jersey Guardian",
+      "yearFounded": 1934,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/525697398/",
+          "legacyFile": "data/research/newspapers-com/clips/guardian-1939-09-09-paterson-news-journal.png",
+          "cleanFile": "data/research/newspapers-com/downloads/the-news-paterson_1939-09-09_p9_nj-guardian-cited.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "Camp Berlin Broadcast",
+      "yearFounded": 1934,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/131/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p131-camp-berlin-broadcast.png",
+          "cleanFile": "data/research/danky/danky-1998-p131-camp-berlin-broadcast.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Ash Can",
+      "yearFounded": 1935,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/51/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p51-ash-can.png",
+          "cleanFile": "data/research/danky/danky-1998-p51-ash-can.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "name": "Camp Cooper Chats",
+      "yearFounded": 1935,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/447571125/",
+          "legacyFile": "data/research/newspapers-com/clips/camp-cooper-1936-01-06-courier-post.png",
+          "cleanFile": "data/research/newspapers-com/downloads/courier-post_1936-01-06_p3_camp-cooper-paper.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "name": "Sixty Niner",
+      "yearFounded": 1936,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/518/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p518-sixty-niner.png",
+          "cleanFile": "data/research/danky/danky-1998-p518-sixty-niner.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "name": "Penn Crusader",
+      "yearFounded": 1936,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/457/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p457-penn-crusader.png",
+          "cleanFile": "data/research/danky/danky-1998-p457-penn-crusader.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "name": "Pine Needle",
+      "yearFounded": 1936,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/464/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p464-pine-needle.png",
+          "cleanFile": "data/research/danky/danky-1998-p464-pine-needle.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "New Jersey Herald News",
+      "yearFounded": 1938,
+      "keeperCount": 10,
+      "cleanCount": 10,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19380521a",
+          "legacyFile": "data/research/wayback/ia-issues/NewJerseyHeraldNews19380521a.jpg",
+          "cleanFile": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380611a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380611a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380611a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380618a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380618a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380618a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380702a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380702a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380702a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380709a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380709a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380709a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380716a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380716a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380716a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380723a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380723a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380723a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380730a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380730a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380730a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue_preview",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19390311",
+          "legacyFile": "data/research/wayback/ia-issues/NewJerseyHeraldNews19390311.jpg",
+          "cleanFile": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue_preview",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19420704",
+          "legacyFile": "data/research/wayback/ia-issues/NewJerseyHeraldNews19420704.jpg",
+          "cleanFile": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "The Newark Herald",
+      "yearFounded": 1938,
+      "keeperCount": 10,
+      "cleanCount": 10,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19380521a",
+          "legacyFile": "data/research/wayback/ia-issues/NewJerseyHeraldNews19380521a.jpg",
+          "cleanFile": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380611a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380611a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380611a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380618a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380618a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380618a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380702a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380702a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380702a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380709a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380709a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380709a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380716a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380716a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380716a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380723a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380723a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380723a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue",
+          "url": "https://archive.org/details/NewarkHerald19380730a",
+          "legacyFile": "data/research/wayback/ia-issues/NewarkHerald19380730a.jpg",
+          "cleanFile": "data/research/ia/clean/NewarkHerald19380730a.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue_preview",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19390311",
+          "legacyFile": "data/research/wayback/ia-issues/NewJerseyHeraldNews19390311.jpg",
+          "cleanFile": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf",
+          "need": null
+        },
+        {
+          "kind": "full_issue_preview",
+          "url": "https://archive.org/details/NewJerseyHeraldNews19420704",
+          "legacyFile": "data/research/wayback/ia-issues/NewJerseyHeraldNews19420704.jpg",
+          "cleanFile": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Point Breeze Rugcuttings",
+      "yearFounded": 1938,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/467/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p467-point-breeze-rugcuttings.png",
+          "cleanFile": "data/research/danky/danky-1998-p467-point-breeze-rugcuttings.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "name": "The Little Ease Echo",
+      "yearFounded": 1938,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/344/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p344-little-ease-echo.png",
+          "cleanFile": "data/research/danky/danky-1998-p344-little-ease-echo.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "name": "Dias Creek Echo",
+      "yearFounded": 1938,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/194/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p194-dias-creek-echo.png",
+          "cleanFile": "data/research/danky/danky-1998-p194-dias-creek-echo.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "name": "Rifle Ranger",
+      "yearFounded": 1938,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/493/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p493-rifle-ranger.png",
+          "cleanFile": "data/research/danky/danky-1998-p493-rifle-ranger.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "New Jersey Afro-American",
+      "yearFounded": 1941,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clipping",
+          "url": "https://www.newspapers.com/image/962761544/",
+          "legacyFile": "data/research/newspapers-com/clips/nj-afro-2023-05-21-daily-record-masthead.png",
+          "cleanFile": "data/research/newspapers-com/downloads/daily-record-morristown_2023-05-21_pD2_nj-afro-american-described.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "name": "The Hiram Star-News",
+      "yearFounded": 1947,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/277/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p277-hiram-star-news.png",
+          "cleanFile": "data/research/danky/danky-1998-p277-hiram-star-news.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "name": "New Jersey After Hours",
+      "yearFounded": 1949,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/223216862/",
+          "legacyFile": "data/research/newspapers-com/clips/after-hours-1991-06-24-courier-news-webber-obit.png",
+          "cleanFile": "data/research/newspapers-com/downloads/courier-news_1991-06-24_p8_webber-after-hours.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "The Northern New Jersey Informer",
+      "yearFounded": 1950,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/431/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p431-nnj-informer.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p431-nnj-informer.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "The Liberator",
+      "yearFounded": 1950,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/336/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p336-liberator-paterson.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p336-liberator-paterson.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "North Jersey Independent",
+      "yearFounded": 1950,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/430/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p430-north-jersey-independent.png",
+          "cleanFile": "data/research/danky/danky-1998-p430-north-jersey-independent.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Jersey Camera",
+      "yearFounded": 1951,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/312/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p312-jersey-camera.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p312-jersey-camera.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "name": "Hours After",
+      "yearFounded": 1951,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/280/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p280-hours-after.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p280-hours-after.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Bronze Thrills",
+      "yearFounded": 1952,
+      "keeperCount": 2,
+      "cleanCount": 2,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/143086953/",
+          "legacyFile": "data/research/newspapers-com/clips/bronze-thrills-1960-05-20-asbury-park-press.png",
+          "cleanFile": "data/research/newspapers-com/downloads/asbury-park-press_1960-05-20_p21_bronze-thrills-july.jpg",
+          "need": null
+        },
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/117/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p117-bronze-thrills.png",
+          "cleanFile": "data/research/danky/danky-1998-p117-bronze-thrills.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "The Missionary Magazine",
+      "yearFounded": 1952,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20040207205909/http://www.wms-amec.org:80/",
+          "legacyFile": "data/research/wayback/snapshots/071-the-missionary-magazine.png",
+          "cleanFile": "data/research/wayback/clean/071-the-missionary-magazine-20040207205909.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "name": "Club World: Newsmagazine",
+      "yearFounded": 1955,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/158/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p158-club-world.png",
+          "cleanFile": "data/research/danky/danky-1998-p158-club-world.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Nite Lite",
+      "yearFounded": 1959,
+      "keeperCount": 2,
+      "cleanCount": 2,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/427/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p427-nite-lite.png",
+          "cleanFile": "data/research/danky/danky-1998-p427-nite-lite.png",
+          "need": null
+        },
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/426/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p426-nite-lite-full.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p426-nite-lite-full.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "name": "Wait",
+      "yearFounded": 1961,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/601/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p601-wait.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p601-wait.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "name": "Newark Community Union Project News",
+      "yearFounded": 1963,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/417/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p417-ncup.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p417-ncup.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Afro-American Festival of the Arts Magazine",
+      "yearFounded": 1966,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/24/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p24-festival-arts.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p24-festival-arts.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "name": "Freedom Reports",
+      "yearFounded": 1966,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/240/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p240-freedom-reports.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p240-freedom-reports.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Deliverance Voice",
+      "yearFounded": 1967,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/190/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p190-deliverance-voice.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p190-deliverance-voice.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Black Newark",
+      "yearFounded": 1968,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/91/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p91-black-new-ark.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p91-black-new-ark.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "The Black Observer",
+      "yearFounded": 1968,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20210120065101/https://scarletandblack.rutgers.edu/",
+          "legacyFile": "data/research/wayback/snapshots/033-the-black-observer.png",
+          "cleanFile": "data/research/wayback/clean/033-the-black-observer-20210120065101.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "The Voice",
+      "yearFounded": 1968,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/594/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p594-voice-plainfield.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p594-voice-plainfield.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Utimme Umana/La Voz Oculta",
+      "yearFounded": 1968,
+      "keeperCount": 3,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 2,
+      "status": "partial",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/587/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p587-utimme.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p587-utimme.jpg",
+          "need": null
+        },
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/1192937414/",
+          "legacyFile": "data/research/newspapers-com/clips/utimme-1976-04-23-trenton-times.png",
+          "cleanFile": null,
+          "need": "needs newspapers.com full-page re-export"
+        },
+        {
+          "kind": "clip",
+          "url": "https://www.newspapers.com/image/1197515771/",
+          "legacyFile": "data/research/newspapers-com/clips/utimme-1993-09-27-trenton-times.png",
+          "cleanFile": null,
+          "need": "needs newspapers.com full-page re-export"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "The Cricket: Black Music in Evolution",
+      "yearFounded": 1969,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/179/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p179-cricket.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p179-cricket.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "The Forum",
+      "yearFounded": 1970,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://www.loc.gov/item/sn88071371/",
+          "legacyFile": "data/research/loc/forum-loc-sn88071371.png",
+          "cleanFile": "data/research/loc/forum-loc-sn88071371.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "CFUN News",
+      "yearFounded": 1970,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/142/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p142-cfun-news.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p142-cfun-news.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "name": "Black Voice/Carta Boricua",
+      "yearFounded": 1970,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/104/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p104-black-voice-carta.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p104-black-voice-carta.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "name": "The Black Voice",
+      "yearFounded": 1970,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/104/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p104-black-voice.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p104-black-voice.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "name": "The Liberator",
+      "yearFounded": 1970,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/336/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p336-liberator-edison.png",
+          "cleanFile": "data/research/danky/danky-1998-p336-liberator-edison.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "name": "MEDIC News",
+      "yearFounded": 1971,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/357/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p357-medic-news.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p357-medic-news.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "name": "Right On!",
+      "yearFounded": 1971,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/494/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p494-right-on.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p494-right-on.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "name": "Ujamaa: Journal of the Black Students Union",
+      "yearFounded": 1971,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/575/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p575-ujamaa.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p575-ujamaa.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "name": "Ngoma",
+      "yearFounded": 1971,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/425/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p425-ngoma.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p425-ngoma.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Essex Forum",
+      "yearFounded": 1972,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://www.loc.gov/item/sn88071370/",
+          "legacyFile": "data/research/loc/essex-forum-loc-sn88071370.png",
+          "cleanFile": "data/research/loc/essex-forum-loc-sn88071370.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "The African Voice",
+      "yearFounded": 1972,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/18/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p18-african-voice.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p18-african-voice.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "En Avant",
+      "yearFounded": 1972,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/211/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p211-en-avant.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p211-en-avant.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "name": "Unity and Struggle",
+      "yearFounded": 1972,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20200118211629https://www.marxists.org/history/erol/periodicals/unity-struggle/index.htm",
+          "legacyFile": "data/research/wayback/snapshots/084-unity-and-struggle.png",
+          "cleanFile": "data/research/wayback/clean/084-unity-and-struggle-20200118211629.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "name": "The Hart Fund",
+      "yearFounded": 1972,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/270/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p270-hart-fund.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p270-hart-fund.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "name": "The Black Sociologist",
+      "yearFounded": 1972,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/98/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p98-black-sociologist.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p98-black-sociologist.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "name": "En Avant: Bulletin pour le development de la mobilisation patriotique",
+      "yearFounded": 1972,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/211/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p211-en-avant-134.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p211-en-avant-134.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "name": "Primer",
+      "yearFounded": 1973,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/472/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p472-primer.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p472-primer.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "name": "Monthly Black Periodicals Selection Review",
+      "yearFounded": 1973,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/374/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p374-mbpsr.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p374-mbpsr.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "name": "Black Racers Yearbook",
+      "yearFounded": 1974,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/95/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p95-black-racers.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p95-black-racers.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "name": "Black Caucus of ALA Newsletter",
+      "yearFounded": 1974,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/77/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p77-bcala.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p77-bcala.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "name": "Kuumba: The Black Voice Magazine",
+      "yearFounded": 1974,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/329/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p329-kuumba.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p329-kuumba.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "name": "Fire II",
+      "yearFounded": 1975,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/224/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p224-fire-ii.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p224-fire-ii.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Black Women's United Front Newsletter",
+      "yearFounded": 1976,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/105/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p105-bwuf.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p105-bwuf.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "name": "Black Women\u2019s United Front Newsletter",
+      "yearFounded": 1976,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/105/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p105-bwuf.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p105-bwuf.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "name": "Educational Perspectives",
+      "yearFounded": 1978,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/207/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p207-educational-perspectives.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p207-educational-perspectives.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "name": "Black Atlantic City Magazine",
+      "yearFounded": 1978,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/74/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p74-black-atlantic-city.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p74-black-atlantic-city.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "name": "Black Truth Bulletin",
+      "yearFounded": 1978,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/102/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p102-black-truth-bulletin.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p102-black-truth-bulletin.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Greater News",
+      "yearFounded": 1979,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/257/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p257-greater-news.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p257-greater-news.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Black Journal",
+      "yearFounded": 1979,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/87/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p87-black-journal.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p87-black-journal.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "The Union Messenger",
+      "yearFounded": 1979,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/577/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p577-union-messenger.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p577-union-messenger.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Bootstrap",
+      "yearFounded": 1981,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/113/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p113-bootstrap.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p113-bootstrap.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "The Connection / North Jersey Connection",
+      "yearFounded": 1982,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/172/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p172-connection.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p172-connection.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "name": "Right On! Focus",
+      "yearFounded": 1982,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/494/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p494-right-on.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p494-right-on.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "name": "The Connection Newspaper",
+      "yearFounded": 1982,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/172/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p172-connection-131.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p172-connection-131.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "City News",
+      "yearFounded": 1983,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/155/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p155-city-news.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p155-city-news.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "name": "Right On! Presents Class",
+      "yearFounded": 1983,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/494/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p494-right-on.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p494-right-on.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "name": "Update",
+      "yearFounded": 1983,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/580/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p580-update.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p580-update.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "name": "Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women",
+      "yearFounded": 1983,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/168/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p168-communique.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p168-communique.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "name": "Write On Newsletter",
+      "yearFounded": 1985,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/621/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p621-write-on.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p621-write-on.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "name": "Corporate Headquarters",
+      "yearFounded": 1985,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/176/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p176-corporate-hq.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p176-corporate-hq.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "name": "Starline",
+      "yearFounded": 1987,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/540/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p540-starline.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p540-starline.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "name": "Testimony: A Journal of African-American Poetry",
+      "yearFounded": 1987,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/557/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p557-testimony.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p557-testimony.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "name": "Black New Jersey Magazine",
+      "yearFounded": 1988,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/91/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p91-black-nj-magazine.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p91-black-nj-magazine.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "name": "ONI",
+      "yearFounded": 1988,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/443/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p443-oni.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p443-oni.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "name": "The Literary Griot",
+      "yearFounded": 1988,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/343/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p343-literary-griot.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p343-literary-griot.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "name": "The Best of Rap & R&B",
+      "yearFounded": 1988,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/67/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p67-best-of-rap.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p67-best-of-rap.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "The Nubian News",
+      "yearFounded": 1989,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/435/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p435-nubian-news.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p435-nubian-news.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "The National Political Science Review",
+      "yearFounded": 1989,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/393/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p393-npsr.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p393-npsr.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "name": "NJ-AAHGS Newsletter",
+      "yearFounded": 1989,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/427/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p427-nj-aahgs.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p427-nj-aahgs.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "name": "Perspectus News Magazine",
+      "yearFounded": 1989,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/461/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p461-perspectus.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p461-perspectus.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "name": "Gospel Today Magazine",
+      "yearFounded": 1989,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/253/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p253-gospel-today.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p253-gospel-today.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Hype",
+      "yearFounded": 1990,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/1/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p1-hype.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p1-hype.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Harambee",
+      "yearFounded": 1990,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/266/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p266-harambee.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p266-harambee.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "name": "Word Up!",
+      "yearFounded": 1990,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/620/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p620-word-up.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p620-word-up.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "name": "Rap Masters: Reader\u2019s Choice",
+      "yearFounded": 1990,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/484/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p484-rap-masters.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p484-rap-masters.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Artz",
+      "yearFounded": 1991,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/50/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p50-artz.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p50-artz.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "MC Squared",
+      "yearFounded": 1991,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/356/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p356-mc-squared.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p356-mc-squared.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "name": "The Network: The Newsletter of the African-American Institute of Islamic Research",
+      "yearFounded": 1991,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/405/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p405-network.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p405-network.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "name": "Inner City Products",
+      "yearFounded": 1991,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/298/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p298-inner-city-products.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p298-inner-city-products.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "name": "Black Book Connection, Inc. Newsletter",
+      "yearFounded": 1992,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/75/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p75-black-book-connection.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p75-black-book-connection.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "name": "Captain Africa",
+      "yearFounded": 1992,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/135/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p135-captain-africa.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p135-captain-africa.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "name": "The Jersey Heritage",
+      "yearFounded": 1992,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/313/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p313-jersey-heritage.png",
+          "cleanFile": "data/research/danky/danky-1998-p313-jersey-heritage.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "name": "Fotorama",
+      "yearFounded": 1993,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/235/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p235-fotorama.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p235-fotorama.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "name": "Hype Hair",
+      "yearFounded": 1993,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/287/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p287-hype-hair.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p287-hype-hair.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "name": "Try It Yourself Hair!",
+      "yearFounded": 1993,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/570/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p570-try-it-yourself-hair.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p570-try-it-yourself-hair.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "name": "Black Hair Digest",
+      "yearFounded": 1993,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/84/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p84-black-hair-digest.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p84-black-hair-digest.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "African World",
+      "yearFounded": 1994,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/18/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p18-african-world.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p18-african-world.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Yes: Youth Excited About Success",
+      "yearFounded": 1994,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/625/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p625-yes.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p625-yes.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "Today's Black Woman",
+      "yearFounded": 1994,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/562/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p562-todays-black-woman.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p562-todays-black-woman.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "name": "Braids & Beauty",
+      "yearFounded": 1994,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/114/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p114-braids-beauty.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p114-braids-beauty.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Journal of African American Men",
+      "yearFounded": 1995,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/316/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p316-jaam.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p316-jaam.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "name": "Today\u2019s Black Woman",
+      "yearFounded": 1995,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/562/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p562-todays-black-woman.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p562-todays-black-woman.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "The Franklin Voice",
+      "yearFounded": 1996,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/236/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p236-franklin-voice.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p236-franklin-voice.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "name": "Spirit: The Guide to the Soul",
+      "yearFounded": 1996,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/535/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p535-spirit.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p535-spirit.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "name": "Just for Black Men",
+      "yearFounded": 1996,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/323/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p323-just-for-black-men.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p323-just-for-black-men.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "At the Crossroads",
+      "yearFounded": 1997,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/51/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p51-at-the-crossroads.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p51-at-the-crossroads.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "South Jersey Journal",
+      "yearFounded": 2011,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "website_screenshot",
+          "url": "https://southjerseyjournal.wordpress.com/south-jersey-journal/",
+          "legacyFile": "data/research/sites/south-jersey-journal-about.png",
+          "cleanFile": "data/research/wayback/clean/008-south-jersey-journal-live.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "The Newark Times",
+      "yearFounded": 2014,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20141018093931http://thenewarktimes.com:80/",
+          "legacyFile": "data/research/wayback/snapshots/023-the-newark-times.png",
+          "cleanFile": "data/research/wayback/clean/023-the-newark-times-20141018093931.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Faithfully Magazine",
+      "yearFounded": 2016,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20151025031224http://www.faithfullymagazine.com:80/",
+          "legacyFile": "data/research/wayback/snapshots/029-faithfully-magazine.png",
+          "cleanFile": "data/research/wayback/clean/029-faithfully-magazine-20151025031224.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Trenton365 Stream with Jacque Howard",
+      "yearFounded": 2016,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20211208013612/https://jacque-howard.com/",
+          "legacyFile": "data/research/wayback/snapshots/032-trenton365-stream-with-jacque-howard.png",
+          "cleanFile": "data/research/wayback/clean/032-trenton365-stream-with-jacque-howard-20211208013612.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Front Runner New Jersey",
+      "yearFounded": 2017,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20180729184443/https://frontrunnernewjersey.com/",
+          "legacyFile": "data/research/wayback/snapshots/006-front-runner-new-jersey.png",
+          "cleanFile": "data/research/wayback/clean/006-front-runner-new-jersey-20180729184443.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Ark Republic",
+      "yearFounded": 2017,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20170708221608/http://arkrepublic.com:80/",
+          "legacyFile": "data/research/wayback/snapshots/022-ark-republic.png",
+          "cleanFile": "data/research/wayback/clean/022-ark-republic-20170708221608.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "New Jersey Urban News",
+      "yearFounded": 2018,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20230307222958https://njurbannews.com/",
+          "legacyFile": "data/research/wayback/snapshots/020-new-jersey-urban-news.png",
+          "cleanFile": "data/research/wayback/clean/020-new-jersey-urban-news-20230307222958.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "NJ in Color",
+      "yearFounded": 2019,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20220622225425/https://njincolor.com/",
+          "legacyFile": "data/research/wayback/snapshots/019-nj-in-color.png",
+          "cleanFile": "data/research/wayback/clean/019-nj-in-color-20220622225425.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Black In Jersey",
+      "yearFounded": 2021,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "website_screenshot",
+          "url": "https://www.blackinjersey.com/",
+          "legacyFile": "data/research/wayback/snapshots/004-black-in-jersey.png",
+          "cleanFile": "data/research/wayback/clean/004-black-in-jersey-live.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Five Wards Media",
+      "yearFounded": 2021,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20250613131129https://www.fivewardsmedia.com/",
+          "legacyFile": "data/research/wayback/snapshots/012-five-wards-media.png",
+          "cleanFile": "data/research/wayback/clean/012-five-wards-media-20250613131129.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Trenton Journal",
+      "yearFounded": 2021,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "website_screenshot",
+          "url": "https://trentonjournal.com/",
+          "legacyFile": "data/research/wayback/snapshots/017-trenton-journal.png",
+          "cleanFile": "data/research/wayback/clean/017-trenton-journal-live.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Public Square Amplified",
+      "yearFounded": 2021,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "website_screenshot",
+          "url": "https://www.publicsq.org/",
+          "legacyFile": "data/research/wayback/snapshots/043-public-square-amplified.png",
+          "cleanFile": "data/research/wayback/clean/043-public-square-amplified-live.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Atlantic City Focus",
+      "yearFounded": 2022,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20240506145430https://www.atlanticcityfocus.com/",
+          "legacyFile": "data/research/wayback/snapshots/025-atlantic-city-focus.png",
+          "cleanFile": "data/research/wayback/clean/025-atlantic-city-focus-20240506145430.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "More Jersey",
+      "yearFounded": 2022,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "website_screenshot",
+          "url": "https://morejersey.com/",
+          "legacyFile": "data/research/wayback/snapshots/036-more-jersey.png",
+          "cleanFile": "data/research/wayback/clean/036-more-jersey-live.png",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "New Jersey Record",
+      "yearFounded": null,
+      "keeperCount": 0,
+      "cleanCount": 0,
+      "sloppyOnlyCount": 0,
+      "status": "none",
+      "keepers": []
+    },
+    {
+      "id": 50,
+      "name": "New Jersey Deadline",
+      "yearFounded": null,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "catalog_record",
+          "url": "https://archive.org/details/africanamericanne00dank/page/409/mode/1up",
+          "legacyFile": "data/research/danky/danky-1998-p409-nj-deadline.jpg",
+          "cleanFile": "data/research/danky/danky-1998-p409-nj-deadline.jpg",
+          "need": null
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "name": "Newark Black Newspapers Collection | Digital Collections",
+      "yearFounded": null,
+      "keeperCount": 1,
+      "cleanCount": 1,
+      "sloppyOnlyCount": 0,
+      "status": "clean",
+      "keepers": [
+        {
+          "kind": "wayback_snapshot",
+          "url": "https://web.archive.org/web/20190419185835https://collections.libraries.rutgers.edu/",
+          "legacyFile": "data/research/wayback/snapshots/128-newark-black-newspapers-collection---digital-c.png",
+          "cleanFile": "data/research/wayback/clean/128-newark-black-newspapers-collection-digital-colle-20190419185835.png",
+          "need": null
+        }
+      ]
+    }
+  ]
+}

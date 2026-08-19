@@ -1,0 +1,12 @@
+[
+  {
+    "pubId": 112,
+    "verdict": "confirmed",
+    "reason": "File 112-captain-africa-cover-thumb.jpg (180x288 JPEG, non-blank, mean 108/stddev 53) shows the actual cover of 'Captain Africa: The Battle for Egyptica' by Dwayne J. Ferguson. IA metadata for captainafrica00dway confirms Africa World Press, Trenton, N.J., 1992, originally published Somerville, N.J.: African Prince Productions, 1990. Title, creator, publisher (African Prince Productions) and NJ city (Somerville, listed as an alternate city in the entry's historicalNotes) all match; era is within the 1990-1994 window. Caveat: this is the collected graphic-novel edition, not a numbered issue of the 1992-1994 comic serial, so it is an edition artifact rather than a single issue cover. It is a primary artifact of the named title, not a mention, catalog record, or different work."
+  },
+  {
+    "pubId": 114,
+    "verdict": "confirmed",
+    "reason": "File 114-word-up-sothebys-lot.jpg (4717x3657 JPEG, non-blank) is an auction-house photograph of a physical fan of Word Up! magazine issues; the top copy is legibly the 'PREMIERE ISSUE' with Run-DMC cover, July/August 1987, No. 1, and later issues show the Word Up! '!' logo spines. Sotheby's lot page confirms 28 issues spanning 1987-1997 from founding editor Gerrie Summers' personal collection. Title, run and era match publication 114 (Paramus, NJ; founded 1987/1990 per record, still active). This is a photo of the real issues, not a catalog or bibliography record."
+  }
+]

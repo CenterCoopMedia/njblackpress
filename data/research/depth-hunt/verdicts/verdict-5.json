@@ -1,0 +1,12 @@
+[
+  {
+    "pubId": 95,
+    "verdict": "rejected",
+    "reason": "Wrong publication entirely. localFile 95-right-on-1971-v3n1.pdf (archive.org/details/right_on_3.1) is a 2-page mimeographed newsletter titled 'Right On!' issued by The Campus Conservative Club, P.O. Box 2063, Georgia University Station, Athens, Georgia, dated May 1, 1971. It is a white conservative student flyer, not the Laufer Publishing Black teen fan magazine, and has no New Jersey connection. The date also predates the magazine's October 1971 launch, so a 'volume 3, number 1' from May 1971 was impossible."
+  },
+  {
+    "pubId": 95,
+    "verdict": "rejected",
+    "reason": "Correct title but wrong place and era. localFile 95-right-on-1977-v6n4.pdf is a genuine 75-page scan of Right On! vol. 6 no. 4, February 1977, editor Cynthia M. Horner. However its masthead reads 'published monthly by Laufer Publishing Company, 7060 Hollywood Blvd., Hollywood, California 90028.' Per the record's own Danky note, Right On! was published in Hollywood 1971-1982 and only moved to Cresskill, NJ in April 1983. This issue therefore documents the California era and is not evidence of the New Jersey publication."
+  }
+]

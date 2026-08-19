@@ -1,0 +1,7 @@
+[
+  {
+    "pubId": 135,
+    "verdict": "confirmed",
+    "reason": "Local file 135-rap-masters-nov1992.webp is a valid WEBP (RIFF/VP8X header, 480x640, non-blank, stddev ~55-69 per channel) and is byte-identical in size (71,664 bytes) to the live source URL (HTTP 200, image/webp). The image shows an actual physical copy of the magazine with the full 'RAP MASTERS' masthead and the cover date 'NOVEMBER 1992' plus cover price, Kris Kross cover feature, and 'Hip-hop style for the '90s' cover line. This is the issue itself, not a mention, catalog record, or lookalike title. Era matches pubId 135 (founded 1990, still active; Danky entry 5049 records WHi holdings Mar 1992-July 1994, which brackets Nov 1992). NJ tie is established by the publisher of record (Word Up! Publications / Faces Magazines, Paramus and River Edge, NJ) rather than by text visible on the cover -- the only weakness, but the title, publisher lineage, and date are otherwise unambiguous."
+  }
+]

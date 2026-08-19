@@ -1,0 +1,145 @@
+[
+  {
+    "pubId": 58,
+    "name": "Yes: Youth Excited About Success",
+    "result": "none",
+    "source": "Internet Archive advancedsearch, IA metadata",
+    "url": "",
+    "localFile": "",
+    "whyMatch": "",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 59,
+    "name": "En Avant",
+    "result": "none",
+    "source": "WebSearch, Internet Archive advancedsearch (npl-heningburg collection)",
+    "url": "",
+    "localFile": "",
+    "whyMatch": "",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 60,
+    "name": "Black Women's United Front Newsletter",
+    "result": "none",
+    "source": "WebSearch, Internet Archive advancedsearch",
+    "url": "",
+    "localFile": "",
+    "whyMatch": "Found scholarly references (AAIHS, Project MUSE) and an archival finding-aid entry at Auburn Avenue Research Library, but no digitized page or issue of the newsletter itself.",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 61,
+    "name": "The National Political Science Review",
+    "result": "none",
+    "source": "WebSearch, HathiTrust catalog",
+    "url": "https://catalog.hathitrust.org/Record/004020753",
+    "localFile": "",
+    "whyMatch": "HathiTrust holds a catalog record for the journal but access is restricted (403 on fetch); no downloadable page found.",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 62,
+    "name": "Afro-American Festival of the Arts Magazine",
+    "result": "none",
+    "source": "WebSearch",
+    "url": "",
+    "localFile": "",
+    "whyMatch": "Confirmed held in the Harris Collection of American Poetry and Plays at Brown University, but no digitized scan found online.",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 63,
+    "name": "Today's Black Woman",
+    "result": "none",
+    "source": "Internet Archive advancedsearch, WebSearch",
+    "url": "",
+    "localFile": "",
+    "whyMatch": "eBay results only for a different, unrelated Today's Black Woman magazine (2009+, not the 1994-95 Paramus NJ title); no genuine match found.",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 64,
+    "name": "Black Racers Yearbook",
+    "result": "none",
+    "source": "WebSearch, Smithsonian Open Access API",
+    "url": "https://americanhistory.si.edu/collections/object/nmah_1824787",
+    "localFile": "",
+    "whyMatch": "Smithsonian National Museum of American History confirms it holds the 1974 Black American Racers Association yearbook (Trenton, NJ) in its physical collection, but the Open Access API record has no associated online_media / image, so no downloadable file of the actual publication exists.",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 65,
+    "name": "Spirit: The Guide to the Soul",
+    "result": "none",
+    "source": "Internet Archive advancedsearch",
+    "url": "",
+    "localFile": "",
+    "whyMatch": "",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 66,
+    "name": "Jersey Camera",
+    "result": "none",
+    "source": "Internet Archive advancedsearch, WebSearch",
+    "url": "",
+    "localFile": "",
+    "whyMatch": "",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 68,
+    "name": "MEDIC News",
+    "result": "found",
+    "source": "Internet Archive (Gus Heningburg Collection, Newark Public Library)",
+    "url": "https://archive.org/details/Heningburg166",
+    "localFile": "data/research/depth-hunt/files/68-medic-news-v1n1.pdf",
+    "whyMatch": "Digitized item is titled exactly \"MEDIC News vol. 1 no. 1\", described as the newsletter of Minority Economic Development and Cultural Enterprises, Inc. (matches MEDIC acronym), part of the Gus Heningburg Collection held by the Charles F. Cummings New Jersey Information Center at Newark Public Library. Right title, right city (Newark), plausible era. A companion issue (Heningburg167, vol.1 no.2) also exists.",
+    "caption": "MEDIC News, vol. 1, no. 1 — 8-page newsletter, Newark, NJ. Gus Heningburg Collection, Charles F. Cummings New Jersey Information Center, Newark Public Library.",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 69,
+    "name": "The Cricket: Black Music in Evolution",
+    "result": "none",
+    "source": "Internet Archive advancedsearch, WebSearch",
+    "url": "https://www.blankforms.org/publications/the-cricket-black-music-in-evolution-1968-69",
+    "localFile": "",
+    "whyMatch": "Only a 2022 Blank Forms Editions facsimile reprint (a modern book, not the original 1968-69 mimeograph) was found for sale; no digitized scan of an original issue located.",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 70,
+    "name": "Deliverance Voice",
+    "result": "none",
+    "source": "Internet Archive advancedsearch",
+    "url": "",
+    "localFile": "",
+    "whyMatch": "",
+    "caption": "",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 72,
+    "name": "Hours After",
+    "result": "none",
+    "source": "Internet Archive advancedsearch",
+    "url": "",
+    "localFile": "",
+    "whyMatch": "One IA hit (\"Business certificate with State of NJ for After Hours\", 1951) is a differently-named entity/document, not this publication; rejected as a weak match.",
+    "caption": "",
+    "date": "2026-08-19"
+  }
+]

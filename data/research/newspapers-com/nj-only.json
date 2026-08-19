@@ -1,0 +1,202 @@
+{
+  "scope": "New Jersey newspapers only",
+  "searches": [
+    {
+      "slug": "herbert",
+      "keyword": "\"R. Henri Herbert\"",
+      "url": "https://www.newspapers.com/image/1194316185/?match=1&terms=%22R.%20Henri%20Herbert%22&search-id=473c0c1a-ffbd-4001-a2ce-ef0d6d2011d9&search-rank=2",
+      "count": "5",
+      "location_ok": true,
+      "location_error": null,
+      "all_results": [],
+      "nj_results": []
+    },
+    {
+      "slug": "trumpet",
+      "keyword": "\"New Jersey Trumpet\"",
+      "url": "https://www.newspapers.com/search/results/?keyword=%22New+Jersey+Trumpet%22",
+      "count": null,
+      "location_ok": false,
+      "location_error": "Page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator(\"a:has-text(\\\"New Jersey\\\"), button:has-text(\\\"New Jersey\\\")\")\n",
+      "all_results": [],
+      "nj_results": []
+    },
+    {
+      "slug": "murrell",
+      "keyword": "\"William Murrell\" (Trumpet OR editor)",
+      "url": "https://www.newspapers.com/image/856112661/?match=4&terms=%22William%20Murrell%22%20%28Trumpet%20OR%20editor%29&search-id=153cf55f-efd3-4223-b1f3-7e3725f6aaeb&search-rank=1",
+      "count": "5",
+      "location_ok": true,
+      "location_error": null,
+      "all_results": [],
+      "nj_results": []
+    },
+    {
+      "slug": "echo-red-bank",
+      "keyword": "\"The Echo\" \"Red Bank\"",
+      "url": "https://www.newspapers.com/image/147731836/?match=4&terms=%22The%20Echo%22%20%22Red%20Bank%22&search-id=28d51028-a76b-427e-be4a-ad9643406725&search-rank=1",
+      "count": "10",
+      "location_ok": true,
+      "location_error": null,
+      "all_results": [],
+      "nj_results": []
+    },
+    {
+      "slug": "echo-long-branch",
+      "keyword": "\"The Echo\" \"Long Branch\"",
+      "url": "https://www.newspapers.com/image/145581684/?match=2&terms=%22The%20Echo%22%20%22Long%20Branch%22&search-id=97234bef-e2f9-4530-9b81-438d509168d1&search-rank=1",
+      "count": "13",
+      "location_ok": true,
+      "location_error": null,
+      "all_results": [],
+      "nj_results": []
+    },
+    {
+      "slug": "newark-herald",
+      "keyword": "\"Newark Herald\" (colored OR Negro OR Clark)",
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Newark+Herald%22+%28colored+OR+Negro+OR+Clark%29",
+      "count": "1,470",
+      "location_ok": false,
+      "location_error": "Page.click: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator(\"a:has-text(\\\"New Jersey\\\"), button:has-text(\\\"New Jersey\\\")\")\n",
+      "all_results": [
+        {
+          "text": "New Journal and Guide • Page 5 Saturday, April 14, 1934 Norfolk, Virginia",
+          "href": "https://www.newspapers.com/image/1138076082/?match=15&terms=%22Newark%20Herald%22%20%28colored%20OR%20Negro%20OR%20Clark%29&search-id=bdaef7a1-5aaf-4554-8ed0-735fa976ebd2&search-rank=1"
+        },
+        {
+          "text": "New Pittsburgh Courier • Page 11 Saturday, June 24, 1933 Pittsburgh, Pennsylvania",
+          "href": "https://www.newspapers.com/image/40047915/?match=6&terms=%22Newark%20Herald%22%20%28colored%20OR%20Negro%20OR%20Clark%29&search-id=bdaef7a1-5aaf-4554-8ed0-735fa976ebd2&search-rank=2"
+        },
+        {
+          "text": "The Afro-American • Page 7 Saturday, July 9, 1932 Baltimore, Maryland",
+          "href": "https://www.newspapers.com/image/1134167020/?match=17&terms=%22Newark%20Herald%22%20%28colored%20OR%20Negro%20OR%20Clark%29&search-id=bdaef7a1-5aaf-4554-8ed0-735fa976ebd2&search-rank=3"
+        },
+        {
+          "text": "New Journal and Guide • Page 6 Saturday, August 23, 1930 Norfolk, Virginia",
+          "href": "https://www.newspapers.com/image/1135384543/?match=6&terms=%22Newark%20Herald%22%20%28colored%20OR%20Negro%20OR%20Clark%29&search-id=bdaef7a1-5aaf-4554-8ed0-735fa976ebd2&search-rank=4"
+        },
+        {
+          "text": "New Journal and Guide • Page 14 Saturday, April 14, 1934 Norfolk, Virginia",
+          "href": "https://www.newspapers.com/image/1138076368/?match=11&terms=%22Newark%20Herald%22%20%28colored%20OR%20Negro%20OR%20Clark%29&search-id=bdaef7a1-5aaf-4554-8ed0-735fa976ebd2&search-rank=5"
+        },
+        {
+          "text": "The Afro-American • Page 20 Saturday, September 28, 1935 Baltimore, Maryland",
+          "href": "https://www.newspapers.com/image/1042189337/?match=3&terms=%22Newark%20Herald%22%20%28colored%20OR%20Negro%20OR%20Clark%29&search-id=bdaef7a1-5aaf-4554-8ed0-735fa976ebd2&search-rank=6"
+        },
+        {
+          "text": "California Eagle • Page 3 Thursday, May 26, 1938 Los Angeles, California",
+          "href": "https://www.newspapers.com/image/693144911/?match=13&terms=%22Newark%20Herald%22%20%28colored%20OR%20Negro%20OR%20Clark%29&search-id=bdaef7a1-5aaf-4554-8ed0-735fa976ebd2&search-rank=7"
+        },
+        {
+          "text": "Atlanta Daily World • Page 5 Saturday, May 16, 1936 Atlanta, Georgia",
+          "href": "https://www.newspapers.com/image/1134046260/?match=1&terms=%22Newark%20Herald%22%20%28colored%20OR%20Negro%20OR%20Clark%29&search-id=bdaef7a1-5aaf-4554-8ed0-735fa976ebd2&search-rank=8"
+        },
+        {
+          "text": "New Journal and Guide • Page 4 Saturday, March 30, 1935 Norfolk, Virginia",
+          "href": "https://www.newspapers.com/image/1136767678/?match=9&terms=%22Newark%20Herald%22%20%28colored%20OR%20Negro%20OR%20Clark%29&search-id=bdaef7a1-5aaf-4554-8ed0-735fa976ebd2&search-rank=9"
+        },
+        {
+          "text": "The New York Age • Page 4 Saturday, July 27, 1929 New York, New York",
+          "href": "https://www.newspapers.com/image/40792075/?match=7&terms=%22Newark%20Herald%22%20%28colored%20OR%20Negro%20OR%20Clark%29&search-id=bdaef7a1-5aaf-4554-8ed0-735fa976ebd2&search-rank=10"
+        }
+      ],
+      "nj_results": []
+    },
+    {
+      "slug": "guardian",
+      "keyword": "\"New Jersey Guardian\"",
+      "url": "https://www.newspapers.com/search/results/?keyword=%22New+Jersey+Guardian%22",
+      "count": "2,658",
+      "location_ok": true,
+      "location_error": null,
+      "all_results": [
+        {
+          "text": "The Herald Statesman • Page 8 Friday, September 16, 1921 Yonkers, New York",
+          "href": "https://www.newspapers.com/image/676645530/?article=8b27467f-17e3-43cf-b3e6-838793aa4ab2&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=1"
+        },
+        {
+          "text": "The Beatrice Daily Express • Page 2 Tuesday, September 13, 1921 Beatrice, Nebraska",
+          "href": "https://www.newspapers.com/image/672404679/?article=80b8b45c-9d80-4023-9d9c-0dc20d2dbe6a&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=2"
+        },
+        {
+          "text": "Peninsula Daily News • Page 4 Thursday, November 3, 1921 Port Angeles, Washington",
+          "href": "https://www.newspapers.com/image/1212665396/?article=6442b22a-25db-4db4-beca-34f4b1ef448a&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=3"
+        },
+        {
+          "text": "The Austin American • Page 6 Sunday, October 9, 1921 Austin, Texas",
+          "href": "https://www.newspapers.com/image/384391546/?article=4f935abf-1505-4dfa-bd0f-1d3b0f5ba755&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=4"
+        },
+        {
+          "text": "The Owensboro Messenger • Page 4 Saturday, September 17, 1921 Owensboro, Kentucky",
+          "href": "https://www.newspapers.com/image/375890522/?article=11123ff9-b78a-4760-ba05-07a86199fca9&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=5"
+        },
+        {
+          "text": "The Times-Herald • Page 4 Saturday, September 17, 1921 Vallejo, California",
+          "href": "https://www.newspapers.com/image/1035061664/?article=030ca1e8-e746-4bda-9cb5-bd77d4c3c389&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=6"
+        },
+        {
+          "text": "The Daily Register • Page 16 Friday, September 25, 1987 Red Bank, New Jersey",
+          "href": "https://www.newspapers.com/image/517663510/?match=1&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=7"
+        },
+        {
+          "text": "Asbury Park Press • Page 11 Tuesday, September 22, 1987 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/144136159/?match=3&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=8"
+        },
+        {
+          "text": "Wanstead and Woodford Guardian • Page 29 Thursday, August 10, 2006 London, London, England",
+          "href": "https://www.newspapers.com/image/1337800291/?match=1&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=9"
+        },
+        {
+          "text": "Wayne Today • Page A14 Thursday, May 29, 2014 Wayne, New Jersey",
+          "href": "https://www.newspapers.com/image/596304159/?match=1&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=10"
+        }
+      ],
+      "nj_results": [
+        {
+          "text": "The Daily Register • Page 16 Friday, September 25, 1987 Red Bank, New Jersey",
+          "href": "https://www.newspapers.com/image/517663510/?match=1&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=7"
+        },
+        {
+          "text": "Asbury Park Press • Page 11 Tuesday, September 22, 1987 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/144136159/?match=3&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=8"
+        },
+        {
+          "text": "Wayne Today • Page A14 Thursday, May 29, 2014 Wayne, New Jersey",
+          "href": "https://www.newspapers.com/image/596304159/?match=1&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=10"
+        }
+      ]
+    },
+    {
+      "slug": "nj-afro",
+      "keyword": "\"New Jersey Afro-American\"",
+      "url": "https://www.newspapers.com/image/962761544/?match=3&terms=%22New%20Jersey%20Afro-American%22&search-id=d9273f18-0532-4490-9a2b-9f0fe7901f03&search-rank=1",
+      "count": "5",
+      "location_ok": true,
+      "location_error": null,
+      "all_results": [],
+      "nj_results": []
+    }
+  ],
+  "opened": [
+    {
+      "slug": "guardian",
+      "from": {
+        "text": "The Daily Register • Page 16 Friday, September 25, 1987 Red Bank, New Jersey",
+        "href": "https://www.newspapers.com/image/517663510/?match=1&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=7"
+      },
+      "url": "https://www.newspapers.com/image/517663510/?match=1&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=7",
+      "title": "Sep 25, 1987, page 16 - The Daily Register at Newspapers.com™ - Newspapers.com™",
+      "screenshot": "njclip-guardian-00.png"
+    },
+    {
+      "slug": "guardian",
+      "from": {
+        "text": "Asbury Park Press • Page 11 Tuesday, September 22, 1987 Asbury Park, New Jersey",
+        "href": "https://www.newspapers.com/image/144136159/?match=3&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=8"
+      },
+      "url": "https://www.newspapers.com/image/144136159/?match=3&terms=%22New%20Jersey%20Guardian%22&search-id=74ece89f-45f1-4a92-85e3-7c330b599fd8&search-rank=8",
+      "title": "Sep 22, 1987, page 11 - Asbury Park Press at Newspapers.com™ - Newspapers.com™",
+      "screenshot": "njclip-guardian-01.png"
+    }
+  ]
+}

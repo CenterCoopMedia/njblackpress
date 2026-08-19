@@ -1,0 +1,1 @@
+{"responseHeader":{"status":0,"QTime":16,"params":{"query":"title:ONI (text:Newark OR text:Newark OR text__reviews:Newark)","qin":"title:(ONI) Newark","fields":"identifier,title,date","wt":"json","rows":20,"start":0}},"response":{"numFound":0,"start":0,"docs":[]}}

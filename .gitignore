@@ -15,3 +15,15 @@ __pycache__/
 *.py[cod]
 venv/
 .env
+
+# Chrome CDP profile (contains login cookies)
+.chrome-cdp/
+
+# Research media (images/PDFs) - not committed to git
+data/research/**/*.jpg
+data/research/**/*.jpeg
+data/research/**/*.png
+data/research/**/*.pdf
+data/research/**/*.jp2
+data/research/**/*.gif
+data/research/**/*.webp

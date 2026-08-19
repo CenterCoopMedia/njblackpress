@@ -1,0 +1,579 @@
+{
+  "generated": "2026-08-19",
+  "counts": {
+    "repoints": 68,
+    "byBucket": {
+      "newspapers_com": 20,
+      "wayback": 18,
+      "ia": 30,
+      "danky_untouched": 106,
+      "other_untouched": 2
+    },
+    "newKeepers": 6,
+    "notesAppended": 1,
+    "unmatched": 0,
+    "keeperTotalBefore": 176,
+    "keeperTotalAfter": 182
+  },
+  "problems": [],
+  "changes": [
+    {
+      "pubId": 2,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/jersey-express-1949-01-19-star-ledger-johnson.png",
+      "new": "data/research/newspapers-com/downloads/star-ledger_1949-01-19_p14_melvin-johnson-left-papers.jpg"
+    },
+    {
+      "pubId": 2,
+      "keeperIndex": 1,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/jersey-express-1949-11-06-asbury-park-press-johnson.png",
+      "new": "data/research/newspapers-com/downloads/asbury-park-press_1949-11-06_p2_johnson-montclair-newark.jpg"
+    },
+    {
+      "pubId": 4,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/004-black-in-jersey.png",
+      "new": "data/research/wayback/clean/004-black-in-jersey-live.png"
+    },
+    {
+      "pubId": 6,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/006-front-runner-new-jersey.png",
+      "new": "data/research/wayback/clean/006-front-runner-new-jersey-20180729184443.png"
+    },
+    {
+      "pubId": 8,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/sites/south-jersey-journal-about.png",
+      "new": "data/research/wayback/clean/008-south-jersey-journal-live.png"
+    },
+    {
+      "pubId": 9,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewJerseyHeraldNews19380521a.jpg",
+      "new": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf"
+    },
+    {
+      "pubId": 9,
+      "keeperIndex": 1,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380611a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380611a.pdf"
+    },
+    {
+      "pubId": 9,
+      "keeperIndex": 2,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380618a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380618a.pdf"
+    },
+    {
+      "pubId": 9,
+      "keeperIndex": 3,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380702a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380702a.pdf"
+    },
+    {
+      "pubId": 9,
+      "keeperIndex": 4,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380709a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380709a.pdf"
+    },
+    {
+      "pubId": 9,
+      "keeperIndex": 5,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380716a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380716a.pdf"
+    },
+    {
+      "pubId": 9,
+      "keeperIndex": 6,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380723a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380723a.pdf"
+    },
+    {
+      "pubId": 9,
+      "keeperIndex": 7,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380730a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380730a.pdf"
+    },
+    {
+      "pubId": 9,
+      "keeperIndex": 8,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewJerseyHeraldNews19390311.jpg",
+      "new": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf"
+    },
+    {
+      "pubId": 9,
+      "keeperIndex": 9,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewJerseyHeraldNews19420704.jpg",
+      "new": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf"
+    },
+    {
+      "pubId": 10,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/herbert-1893-11-05-trenton-advertiser-bradley.png",
+      "new": "data/research/newspapers-com/downloads/trenton-sunday-advertiser_1893-11-05_p1_herbert-vs-bradley.jpg"
+    },
+    {
+      "pubId": 10,
+      "keeperIndex": 1,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/herbert-1895-10-20-trenton-advertiser-gop.png",
+      "new": "data/research/newspapers-com/downloads/trenton-sunday-advertiser_1895-10-20_p1_herbert-gop-committee.jpg"
+    },
+    {
+      "pubId": 12,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/012-five-wards-media.png",
+      "new": "data/research/wayback/clean/012-five-wards-media-20250613131129.png"
+    },
+    {
+      "pubId": 16,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewJerseyHeraldNews19380521a.jpg",
+      "new": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf"
+    },
+    {
+      "pubId": 16,
+      "keeperIndex": 1,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380611a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380611a.pdf"
+    },
+    {
+      "pubId": 16,
+      "keeperIndex": 2,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380618a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380618a.pdf"
+    },
+    {
+      "pubId": 16,
+      "keeperIndex": 3,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380702a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380702a.pdf"
+    },
+    {
+      "pubId": 16,
+      "keeperIndex": 4,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380709a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380709a.pdf"
+    },
+    {
+      "pubId": 16,
+      "keeperIndex": 5,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380716a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380716a.pdf"
+    },
+    {
+      "pubId": 16,
+      "keeperIndex": 6,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380723a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380723a.pdf"
+    },
+    {
+      "pubId": 16,
+      "keeperIndex": 7,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380730a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380730a.pdf"
+    },
+    {
+      "pubId": 16,
+      "keeperIndex": 8,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewJerseyHeraldNews19390311.jpg",
+      "new": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf"
+    },
+    {
+      "pubId": 16,
+      "keeperIndex": 9,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewJerseyHeraldNews19420704.jpg",
+      "new": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf"
+    },
+    {
+      "pubId": 17,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/017-trenton-journal.png",
+      "new": "data/research/wayback/clean/017-trenton-journal-live.png"
+    },
+    {
+      "pubId": 19,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/019-nj-in-color.png",
+      "new": "data/research/wayback/clean/019-nj-in-color-20220622225425.png"
+    },
+    {
+      "pubId": 20,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/020-new-jersey-urban-news.png",
+      "new": "data/research/wayback/clean/020-new-jersey-urban-news-20230307222958.png"
+    },
+    {
+      "pubId": 22,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/022-ark-republic.png",
+      "new": "data/research/wayback/clean/022-ark-republic-20170708221608.png"
+    },
+    {
+      "pubId": 23,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/023-the-newark-times.png",
+      "new": "data/research/wayback/clean/023-the-newark-times-20141018093931.png"
+    },
+    {
+      "pubId": 24,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewJerseyHeraldNews19380521a.jpg",
+      "new": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf"
+    },
+    {
+      "pubId": 24,
+      "keeperIndex": 1,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380611a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380611a.pdf"
+    },
+    {
+      "pubId": 24,
+      "keeperIndex": 2,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380618a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380618a.pdf"
+    },
+    {
+      "pubId": 24,
+      "keeperIndex": 3,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380702a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380702a.pdf"
+    },
+    {
+      "pubId": 24,
+      "keeperIndex": 4,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380709a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380709a.pdf"
+    },
+    {
+      "pubId": 24,
+      "keeperIndex": 5,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380716a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380716a.pdf"
+    },
+    {
+      "pubId": 24,
+      "keeperIndex": 6,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380723a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380723a.pdf"
+    },
+    {
+      "pubId": 24,
+      "keeperIndex": 7,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewarkHerald19380730a.jpg",
+      "new": "data/research/ia/clean/NewarkHerald19380730a.pdf"
+    },
+    {
+      "pubId": 24,
+      "keeperIndex": 8,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewJerseyHeraldNews19390311.jpg",
+      "new": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf"
+    },
+    {
+      "pubId": 24,
+      "keeperIndex": 9,
+      "field": "localFile",
+      "old": "data/research/wayback/ia-issues/NewJerseyHeraldNews19420704.jpg",
+      "new": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf"
+    },
+    {
+      "pubId": 25,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/025-atlantic-city-focus.png",
+      "new": "data/research/wayback/clean/025-atlantic-city-focus-20240506145430.png"
+    },
+    {
+      "pubId": 29,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/029-faithfully-magazine.png",
+      "new": "data/research/wayback/clean/029-faithfully-magazine-20151025031224.png"
+    },
+    {
+      "pubId": 31,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/echo-1904-09-08-monmouth-democrat-burned-out.png",
+      "new": "data/research/newspapers-com/downloads/monmouth-democrat_1904-09-08_p4_echo-burned-out.jpg"
+    },
+    {
+      "pubId": 31,
+      "keeperIndex": 1,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/echo-1909-03-05-asbury-park-press-moves-red-bank.png",
+      "new": "data/research/newspapers-com/downloads/asbury-park-press_1909-03-05_p2_echo-moves-red-bank.jpg"
+    },
+    {
+      "pubId": 32,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/032-trenton365-stream-with-jacque-howard.png",
+      "new": "data/research/wayback/clean/032-trenton365-stream-with-jacque-howard-20211208013612.png"
+    },
+    {
+      "pubId": 33,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/033-the-black-observer.png",
+      "new": "data/research/wayback/clean/033-the-black-observer-20210120065101.png"
+    },
+    {
+      "pubId": 34,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/landscape-1987-11-26-ridgewood-news-ap-smith.png",
+      "new": "data/research/newspapers-com/downloads/ridgewood-news_1987-11-26_p14_landscape-ap-smith.jpg"
+    },
+    {
+      "pubId": 34,
+      "keeperIndex": 1,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/landscape-1991-02-09-the-record-civil-rights.png",
+      "new": "data/research/newspapers-com/downloads/the-record-hackensack_1991-02-09_p2_landscape-renamed.jpg"
+    },
+    {
+      "pubId": 34,
+      "keeperIndex": 2,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/landscape-1993-06-27-sunday-news-smallest.png",
+      "new": "data/research/newspapers-com/downloads/sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper.jpg"
+    },
+    {
+      "pubId": 35,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/nj-afro-2023-05-21-daily-record-masthead.png",
+      "new": "data/research/newspapers-com/downloads/daily-record-morristown_2023-05-21_pD2_nj-afro-american-described.jpg"
+    },
+    {
+      "pubId": 36,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/036-more-jersey.png",
+      "new": "data/research/wayback/clean/036-more-jersey-live.png"
+    },
+    {
+      "pubId": 37,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/guardian-1939-09-09-paterson-news-journal.png",
+      "new": "data/research/newspapers-com/downloads/the-news-paterson_1939-09-09_p9_nj-guardian-cited.jpg"
+    },
+    {
+      "pubId": 38,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/trumpet-1893-07-28-shore-press-murrell.png",
+      "new": "data/research/newspapers-com/downloads/shore-press_1893-07-28_p6_murrell-asbury-meeting.jpg"
+    },
+    {
+      "pubId": 38,
+      "keeperIndex": 1,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/trumpet-1893-07-22-asbury-park-press-murrell.png",
+      "new": "data/research/newspapers-com/downloads/asbury-park-press_1893-07-22_p1_murrell-speaking.jpg"
+    },
+    {
+      "pubId": 43,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/043-public-square-amplified.png",
+      "new": "data/research/wayback/clean/043-public-square-amplified-live.png"
+    },
+    {
+      "pubId": 57,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/ironsides-1932-03-22-courier-post-leon-snead.png",
+      "new": "data/research/newspapers-com/downloads/courier-post_1932-03-22_p14_ironsides-echo-award.jpg"
+    },
+    {
+      "pubId": 57,
+      "keeperIndex": 1,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/ironsides-1940-05-07-trenton-times-awards.png",
+      "new": "data/research/newspapers-com/downloads/trenton-times_1940-05-07_p13_ironsides-echo-awards.jpg"
+    },
+    {
+      "pubId": 67,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/bronze-thrills-1960-05-20-asbury-park-press.png",
+      "new": "data/research/newspapers-com/downloads/asbury-park-press_1960-05-20_p21_bronze-thrills-july.jpg"
+    },
+    {
+      "pubId": 71,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/071-the-missionary-magazine.png",
+      "new": "data/research/wayback/clean/071-the-missionary-magazine-20040207205909.png"
+    },
+    {
+      "pubId": 73,
+      "keeperIndex": 1,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/utimme-1976-04-23-trenton-times.png",
+      "new": "data/research/newspapers-com/downloads/trenton-times_1976-04-23_p8_utimme-umana.jpg"
+    },
+    {
+      "pubId": 73,
+      "keeperIndex": 2,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/utimme-1993-09-27-trenton-times.png",
+      "new": "data/research/newspapers-com/downloads/trenton-times_1993-09-27_p32_utimme-umana.jpg"
+    },
+    {
+      "pubId": 84,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/084-unity-and-struggle.png",
+      "new": "data/research/wayback/clean/084-unity-and-struggle-20200118211629.png"
+    },
+    {
+      "pubId": 87,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/camp-cooper-1936-01-06-courier-post.png",
+      "new": "data/research/newspapers-com/downloads/courier-post_1936-01-06_p3_camp-cooper-paper.jpg"
+    },
+    {
+      "pubId": 101,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/newspapers-com/clips/after-hours-1991-06-24-courier-news-webber-obit.png",
+      "new": "data/research/newspapers-com/downloads/courier-news_1991-06-24_p8_webber-after-hours.jpg"
+    },
+    {
+      "pubId": 128,
+      "keeperIndex": 0,
+      "field": "localFile",
+      "old": "data/research/wayback/snapshots/128-newark-black-newspapers-collection---digital-c.png",
+      "new": "data/research/wayback/clean/128-newark-black-newspapers-collection-digital-colle-20190419185835.png"
+    }
+  ],
+  "newKeepers": [
+    {
+      "pubId": 40,
+      "keeper": {
+        "kind": "full_issue",
+        "title": "The Nubian News — The Nubian News, Vol. 6 No. 1, Jan. 7, 2022 -- full 12-page issue PDF from the paper's own online archive",
+        "url": "https://www.thenubiannews.com/archive",
+        "localFile": "data/research/depth-hunt/files/40-nubian-news-v6n1-2022.pdf",
+        "source": "publisher's own website archive",
+        "date": "2026-08-19",
+        "caption": "The Nubian News, Vol. 6 No. 1, Jan. 7, 2022 -- full 12-page issue PDF from the paper's own online archive"
+      }
+    },
+    {
+      "pubId": 68,
+      "keeper": {
+        "kind": "full_issue",
+        "title": "MEDIC News — MEDIC News, vol. 1, no. 1 — 8-page newsletter, Newark, NJ. Gus Heningburg Collection, Charles F. Cummings New Jersey Information Center, Newark Public Library.",
+        "url": "https://archive.org/details/Heningburg166",
+        "localFile": "data/research/depth-hunt/files/68-medic-news-v1n1.pdf",
+        "source": "Internet Archive (Gus Heningburg Collection, Newark Public Library)",
+        "date": "2026-08-19",
+        "caption": "MEDIC News, vol. 1, no. 1 — 8-page newsletter, Newark, NJ. Gus Heningburg Collection, Charles F. Cummings New Jersey Information Center, Newark Public Library."
+      }
+    },
+    {
+      "pubId": 112,
+      "keeper": {
+        "kind": "cover_image",
+        "title": "Captain Africa — Cover of 'Captain Africa: the Battle for Egyptica,' the 1992 Africa World Press reprint of Dwayne J. Ferguson's Captain Africa comic, originally published by African Prince Productions of Somerville/Glen Ridge, NJ.",
+        "url": "https://archive.org/details/captainafrica00dway",
+        "localFile": "data/research/depth-hunt/files/112-captain-africa-cover-thumb.jpg",
+        "source": "Internet Archive (archive.org)",
+        "date": "2026-08-19",
+        "caption": "Cover of 'Captain Africa: the Battle for Egyptica,' the 1992 Africa World Press reprint of Dwayne J. Ferguson's Captain Africa comic, originally published by African Prince Productions of Somerville/Glen Ridge, NJ."
+      }
+    },
+    {
+      "pubId": 114,
+      "keeper": {
+        "kind": "auction_photo",
+        "title": "Word Up! — A lot of 28 issues of Word Up! magazine (1987-1997), the Paramus, NJ hip-hop teen magazine, photographed for a 2022 Sotheby's 'Art and Influence of Hip Hop' auction.",
+        "url": "https://www.sothebys.com/en/buy/auction/2022/hip-hop/a-collection-of-28-issues-of-word-up-magazine-1987",
+        "localFile": "data/research/depth-hunt/files/114-word-up-sothebys-lot.jpg",
+        "source": "Sotheby's auction listing (Art and Influence of Hip Hop, 2022)",
+        "date": "2026-08-19",
+        "caption": "A lot of 28 issues of Word Up! magazine (1987-1997), the Paramus, NJ hip-hop teen magazine, photographed for a 2022 Sotheby's 'Art and Influence of Hip Hop' auction."
+      }
+    },
+    {
+      "pubId": 121,
+      "keeper": {
+        "kind": "cover_image",
+        "title": "Testimony: A Journal of African-American Poetry — Cover of Testimony: A Journal of African-American Poetry, Vol. 1 (1987), edited by Sandra West, Montclair, NJ.",
+        "url": "https://www.abebooks.co.uk/first-edition/Testimony-Journal-African-American-Poetry-Vol-Issue/31778171273/bd",
+        "localFile": "data/research/depth-hunt/files/121-testimony.jpg",
+        "source": "AbeBooks (Crow Hop Rare Books listing)",
+        "date": "2026-08-19",
+        "caption": "Cover of Testimony: A Journal of African-American Poetry, Vol. 1 (1987), edited by Sandra West, Montclair, NJ."
+      }
+    },
+    {
+      "pubId": 135,
+      "keeper": {
+        "kind": "cover_image",
+        "title": "Rap Masters: Reader's Choice — Rap Masters magazine cover, November 1992 issue, published by Faces Magazines, Paramus, NJ.",
+        "url": "https://www.picclickimg.com/7JgAAeSwXudqe3xP/Vintage-Rap-Masters-Magazine-November-1992-Kris-Kross.webp",
+        "localFile": "data/research/depth-hunt/files/135-rap-masters-nov1992.webp",
+        "source": "PicClick (eBay listing aggregator)",
+        "date": "2026-08-19",
+        "caption": "Rap Masters magazine cover, November 1992 issue, published by Faces Magazines, Paramus, NJ."
+      }
+    }
+  ],
+  "notes": [
+    {
+      "pubId": 95,
+      "field": "sources.other.notes",
+      "append": "Right On! 1971/1977 full issues found (data/research/depth-hunt/files/95-*.pdf) but excluded: Hollywood-era mastheads predate the 1983 move to Cresskill NJ."
+    }
+  ],
+  "unmatched": []
+}

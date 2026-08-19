@@ -1,0 +1,262 @@
+{
+  "searches": [
+    {
+      "id": 7,
+      "slug": "citizen-colored",
+      "count": "805",
+      "nj": [
+        {
+          "text": "Courier-Post \u2022 Page 8 Wednesday, March 2, 1904 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/478883596/?match=3&terms=%22colored%20newspaper%22%20Princeton&search-id=18d644bc-4802-4fd3-a26c-dddb207f097d&search-rank=2"
+        },
+        {
+          "text": "Monmouth Democrat \u2022 Page 4 Thursday, September 8, 1904 Freehold, New Jersey",
+          "href": "https://www.newspapers.com/image/497174278/?match=3&terms=%22colored%20newspaper%22%20Princeton&search-id=18d644bc-4802-4fd3-a26c-dddb207f097d&search-rank=5"
+        }
+      ],
+      "keyword": "\"colored newspaper\" Princeton"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-dupaur2",
+      "count": "841",
+      "nj": [
+        {
+          "text": "Press of Atlantic City \u2022 Page 8 Saturday, August 16, 1952 Atlantic City, New Jersey",
+          "href": "https://www.newspapers.com/image/919179022/?match=2&terms=%22Du%20Paur%22%20OR%20%22DuPaur%22%20OR%20%22W.%20H.%20DuPaur%22&search-id=7fe44f39-6009-43f3-964c-5a41f90966e0&search-rank=4"
+        },
+        {
+          "text": "Press of Atlantic City \u2022 Page 9 Saturday, August 2, 1952 Atlantic City, New Jersey",
+          "href": "https://www.newspapers.com/image/919175617/?match=2&terms=%22Du%20Paur%22%20OR%20%22DuPaur%22%20OR%20%22W.%20H.%20DuPaur%22&search-id=7fe44f39-6009-43f3-964c-5a41f90966e0&search-rank=5"
+        }
+      ],
+      "keyword": "\"Du Paur\" OR \"DuPaur\" OR \"W. H. DuPaur\""
+    },
+    {
+      "id": 45,
+      "slug": "apex-morgan",
+      "count": "279",
+      "nj": [],
+      "keyword": "\"Archie J. Morgan\" (Apex OR editor OR newspaper)"
+    },
+    {
+      "id": 45,
+      "slug": "apex-spencer",
+      "count": "367",
+      "nj": [
+        {
+          "text": "Press of Atlantic City \u2022 Page 9 Monday, June 3, 1929 Atlantic City, New Jersey",
+          "href": "https://www.newspapers.com/image/918002449/?match=3&terms=%22Sarah%20Spencer%20Washington%22%20%28Apex%20News%20OR%20newspaper%29&search-id=106a1761-bf5c-4929-b9b9-8e1d54f6a453&search-rank=2"
+        },
+        {
+          "text": "Press of Atlantic City \u2022 Page 26 Friday, September 3, 1948 Atlantic City, New Jersey",
+          "href": "https://www.newspapers.com/image/920167515/?match=3&terms=%22Sarah%20Spencer%20Washington%22%20%28Apex%20News%20OR%20newspaper%29&search-id=106a1761-bf5c-4929-b9b9-8e1d54f6a453&search-rank=6"
+        },
+        {
+          "text": "Press of Atlantic City \u2022 Page 18 Monday, April 12, 2004 Atlantic City, New Jersey",
+          "href": "https://www.newspapers.com/image/926281060/?match=14&terms=%22Sarah%20Spencer%20Washington%22%20%28Apex%20News%20OR%20newspaper%29&search-id=106a1761-bf5c-4929-b9b9-8e1d54f6a453&search-rank=10"
+        }
+      ],
+      "keyword": "\"Sarah Spencer Washington\" (Apex News OR newspaper)"
+    },
+    {
+      "id": 57,
+      "slug": "ironsides-school",
+      "count": "9,064",
+      "nj": [
+        {
+          "text": "Courier-Post \u2022 Page 14 Tuesday, March 22, 1932 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/446292432/?match=15&terms=%22Bordentown%22%20%22Ironsides%22%20%28newspaper%20OR%20Echo%20OR%20school%29&search-id=6f0e6806-bc1d-492e-94e4-e6cb2cee766b&search-rank=8"
+        },
+        {
+          "text": "The Times \u2022 Page 13 Tuesday, May 7, 1940 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1191434889/?match=5&terms=%22Bordentown%22%20%22Ironsides%22%20%28newspaper%20OR%20Echo%20OR%20school%29&search-id=6f0e6806-bc1d-492e-94e4-e6cb2cee766b&search-rank=9"
+        }
+      ],
+      "keyword": "\"Bordentown\" \"Ironsides\" (newspaper OR Echo OR school)"
+    },
+    {
+      "id": 57,
+      "slug": "ironsides-manual",
+      "count": "5,791",
+      "nj": [
+        {
+          "text": "The Times \u2022 Page 49 Wednesday, May 31, 1950 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1197146754/?match=10&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=1"
+        },
+        {
+          "text": "The Times \u2022 Page 13 Tuesday, May 7, 1940 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1191434889/?match=2&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=2"
+        },
+        {
+          "text": "Trenton Evening Times \u2022 Page 1 Thursday, February 5, 1920 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/16170529/?match=1&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=3"
+        },
+        {
+          "text": "The Jersey Journal \u2022 Page 16 Friday, March 24, 1944 Jersey City, New Jersey",
+          "href": "https://www.newspapers.com/image/1191803146/?match=1&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=5"
+        },
+        {
+          "text": "The Jersey Journal \u2022 Page 16 Friday, March 24, 1944 Jersey City, New Jersey",
+          "href": "https://www.newspapers.com/image/1191803126/?match=1&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=6"
+        },
+        {
+          "text": "The Times \u2022 Page 15 Monday, December 1, 1952 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1197396115/?match=2&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=7"
+        },
+        {
+          "text": "Camden Daily Telegram \u2022 Page 1 Tuesday, May 29, 1894 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/445989309/?match=1&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=8"
+        },
+        {
+          "text": "The Record \u2022 Page 84 Friday, September 23, 1955 Hackensack, New Jersey",
+          "href": "https://www.newspapers.com/image/490225641/?match=8&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=9"
+        },
+        {
+          "text": "The Times \u2022 Page 1 Thursday, February 5, 1920 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1191350313/?match=10&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=10"
+        }
+      ],
+      "keyword": "\"Manual Training\" Bordentown (newspaper OR Echo)"
+    },
+    {
+      "id": 3,
+      "slug": "camden-cn-green",
+      "count": "319",
+      "nj": [
+        {
+          "text": "Courier-Post \u2022 Page 19 Wednesday, August 10, 1921 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/478769186/?match=13&terms=%22C.%20N.%20Green%22%20%28editor%20OR%20newspaper%29%20Camden&search-id=3d8f6956-7ac2-4c54-b6c1-17492b6a5c0c&search-rank=9"
+        },
+        {
+          "text": "Courier-Post \u2022 Page 5 Monday, September 26, 1938 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/446288393/?match=22&terms=%22C.%20N.%20Green%22%20%28editor%20OR%20newspaper%29%20Camden&search-id=3d8f6956-7ac2-4c54-b6c1-17492b6a5c0c&search-rank=10"
+        }
+      ],
+      "keyword": "\"C. N. Green\" (editor OR newspaper) Camden"
+    },
+    {
+      "id": 79,
+      "slug": "hiram",
+      "count": null,
+      "nj": [],
+      "keyword": "\"Hiram Star\" OR \"Hiram Star-News\" Vauxhall"
+    },
+    {
+      "id": 101,
+      "slug": "after-hours",
+      "count": "701,429",
+      "nj": [
+        {
+          "text": "The Courier-News \u2022 Page 13 Saturday, April 18, 1942 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/218942640/?match=5&terms=%22After%20Hours%22%20%28Negro%20OR%20colored%20OR%20Newark%29%20magazine&search-id=ccc5aec1-d2fb-4784-8e8b-8bed7fa69305&search-rank=5"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 8 Tuesday, September 22, 1953 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1109085891/?match=2&terms=%22After%20Hours%22%20%28Negro%20OR%20colored%20OR%20Newark%29%20magazine&search-id=ccc5aec1-d2fb-4784-8e8b-8bed7fa69305&search-rank=6"
+        }
+      ],
+      "keyword": "\"After Hours\" (Negro OR colored OR Newark) magazine"
+    }
+  ],
+  "opened": [
+    {
+      "id": 7,
+      "slug": "citizen-colored",
+      "card": "Courier-Post \u2022 Page 8 Wednesday, March 2, 1904 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/478883596/?match=3&terms=%22colored%20newspaper%22%20Princeton&search-id=18d644bc-4802-4fd3-a26c-dddb207f097d&search-rank=2",
+      "shot": "q7copen-citizen-colored.png"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-colored",
+      "card": "Monmouth Democrat \u2022 Page 4 Thursday, September 8, 1904 Freehold, New Jersey",
+      "url": "https://www.newspapers.com/image/497174278/?match=3&terms=%22colored%20newspaper%22%20Princeton&search-id=18d644bc-4802-4fd3-a26c-dddb207f097d&search-rank=5",
+      "shot": "q7copen-citizen-colored.png"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-dupaur2",
+      "card": "Press of Atlantic City \u2022 Page 8 Saturday, August 16, 1952 Atlantic City, New Jersey",
+      "url": "https://www.newspapers.com/image/919179022/?match=2&terms=%22Du%20Paur%22%20OR%20%22DuPaur%22%20OR%20%22W.%20H.%20DuPaur%22&search-id=7fe44f39-6009-43f3-964c-5a41f90966e0&search-rank=4",
+      "shot": "q7copen-citizen-dupaur2.png"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-dupaur2",
+      "card": "Press of Atlantic City \u2022 Page 9 Saturday, August 2, 1952 Atlantic City, New Jersey",
+      "url": "https://www.newspapers.com/image/919175617/?match=2&terms=%22Du%20Paur%22%20OR%20%22DuPaur%22%20OR%20%22W.%20H.%20DuPaur%22&search-id=7fe44f39-6009-43f3-964c-5a41f90966e0&search-rank=5",
+      "shot": "q7copen-citizen-dupaur2.png"
+    },
+    {
+      "id": 45,
+      "slug": "apex-spencer",
+      "card": "Press of Atlantic City \u2022 Page 9 Monday, June 3, 1929 Atlantic City, New Jersey",
+      "url": "https://www.newspapers.com/image/918002449/?match=3&terms=%22Sarah%20Spencer%20Washington%22%20%28Apex%20News%20OR%20newspaper%29&search-id=106a1761-bf5c-4929-b9b9-8e1d54f6a453&search-rank=2",
+      "shot": "q7copen-apex-spencer.png"
+    },
+    {
+      "id": 45,
+      "slug": "apex-spencer",
+      "card": "Press of Atlantic City \u2022 Page 26 Friday, September 3, 1948 Atlantic City, New Jersey",
+      "url": "https://www.newspapers.com/image/920167515/?match=3&terms=%22Sarah%20Spencer%20Washington%22%20%28Apex%20News%20OR%20newspaper%29&search-id=106a1761-bf5c-4929-b9b9-8e1d54f6a453&search-rank=6",
+      "shot": "q7copen-apex-spencer.png"
+    },
+    {
+      "id": 57,
+      "slug": "ironsides-school",
+      "card": "Courier-Post \u2022 Page 14 Tuesday, March 22, 1932 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/446292432/?match=15&terms=%22Bordentown%22%20%22Ironsides%22%20%28newspaper%20OR%20Echo%20OR%20school%29&search-id=6f0e6806-bc1d-492e-94e4-e6cb2cee766b&search-rank=8",
+      "shot": "q7copen-ironsides-school.png"
+    },
+    {
+      "id": 57,
+      "slug": "ironsides-school",
+      "card": "The Times \u2022 Page 13 Tuesday, May 7, 1940 Trenton, New Jersey",
+      "url": "https://www.newspapers.com/image/1191434889/?match=5&terms=%22Bordentown%22%20%22Ironsides%22%20%28newspaper%20OR%20Echo%20OR%20school%29&search-id=6f0e6806-bc1d-492e-94e4-e6cb2cee766b&search-rank=9",
+      "shot": "q7copen-ironsides-school.png"
+    },
+    {
+      "id": 57,
+      "slug": "ironsides-manual",
+      "card": "The Times \u2022 Page 49 Wednesday, May 31, 1950 Trenton, New Jersey",
+      "url": "https://www.newspapers.com/image/1197146754/?match=10&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=1",
+      "shot": "q7copen-ironsides-manual.png"
+    },
+    {
+      "id": 57,
+      "slug": "ironsides-manual",
+      "card": "The Times \u2022 Page 13 Tuesday, May 7, 1940 Trenton, New Jersey",
+      "url": "https://www.newspapers.com/image/1191434889/?match=2&terms=%22Manual%20Training%22%20Bordentown%20%28newspaper%20OR%20Echo%29&search-id=63796913-41f0-480d-bcaf-fc3e6dbb9521&search-rank=2",
+      "shot": "q7copen-ironsides-manual.png"
+    },
+    {
+      "id": 3,
+      "slug": "camden-cn-green",
+      "card": "Courier-Post \u2022 Page 19 Wednesday, August 10, 1921 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/478769186/?match=13&terms=%22C.%20N.%20Green%22%20%28editor%20OR%20newspaper%29%20Camden&search-id=3d8f6956-7ac2-4c54-b6c1-17492b6a5c0c&search-rank=9",
+      "shot": "q7copen-camden-cn-green.png"
+    },
+    {
+      "id": 3,
+      "slug": "camden-cn-green",
+      "card": "Courier-Post \u2022 Page 5 Monday, September 26, 1938 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/446288393/?match=22&terms=%22C.%20N.%20Green%22%20%28editor%20OR%20newspaper%29%20Camden&search-id=3d8f6956-7ac2-4c54-b6c1-17492b6a5c0c&search-rank=10",
+      "shot": "q7copen-camden-cn-green.png"
+    },
+    {
+      "id": 101,
+      "slug": "after-hours",
+      "card": "The Courier-News \u2022 Page 13 Saturday, April 18, 1942 Bridgewater, New Jersey",
+      "url": "https://www.newspapers.com/image/218942640/?match=5&terms=%22After%20Hours%22%20%28Negro%20OR%20colored%20OR%20Newark%29%20magazine&search-id=ccc5aec1-d2fb-4784-8e8b-8bed7fa69305&search-rank=5",
+      "shot": "q7copen-after-hours.png"
+    },
+    {
+      "id": 101,
+      "slug": "after-hours",
+      "card": "The Star-Ledger \u2022 Page 8 Tuesday, September 22, 1953 Newark, New Jersey",
+      "url": "https://www.newspapers.com/image/1109085891/?match=2&terms=%22After%20Hours%22%20%28Negro%20OR%20colored%20OR%20Newark%29%20magazine&search-id=ccc5aec1-d2fb-4784-8e8b-8bed7fa69305&search-rank=6",
+      "shot": "q7copen-after-hours.png"
+    }
+  ]
+}

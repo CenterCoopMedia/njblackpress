@@ -1,0 +1,363 @@
+{
+  "searches": [
+    {
+      "id": 39,
+      "slug": "forum-newark",
+      "count": "1,079,935",
+      "nj": []
+    },
+    {
+      "id": 42,
+      "slug": "essex-forum",
+      "count": "1,670",
+      "nj": [
+        {
+          "text": "The Star-Ledger \u2022 Page 30 Saturday, November 22, 1980 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1111905758/?match=25&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=4"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 30 Sunday, September 20, 1998 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1117041767/?match=27&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=8"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 2 Sunday, May 30, 1999 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1117064884/?match=1&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=9"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 4 Sunday, October 7, 2001 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1117583044/?match=1&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=10"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 9 Sunday, June 19, 2005 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1119370257/?match=19&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=1"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 17 Sunday, June 26, 2005 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1121474081/?match=9&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=5"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 25 Sunday, June 26, 2005 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1121474089/?match=5&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=6"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 7 Sunday, April 16, 2006 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1119474421/?match=12&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=3"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 10 Sunday, April 23, 2006 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1119468227/?match=23&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=7"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 17 Sunday, October 12, 2008 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1120939536/?match=30&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=2"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "slug": "union-messenger",
+      "count": "63,886",
+      "nj": [
+        {
+          "text": "Courier-Post \u2022 Page 2 Thursday, October 11, 1951 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/180139546/?match=3&terms=%22Union%20Messenger%22%20%28Camden%20OR%20UAME%20OR%20church%29&search-id=b599ab4e-2e99-4ea7-aa12-f2ddc3bee45c&search-rank=2"
+        },
+        {
+          "text": "Courier-Post \u2022 Page 8 Wednesday, October 3, 1951 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/180138943/?match=23&terms=%22Union%20Messenger%22%20%28Camden%20OR%20UAME%20OR%20church%29&search-id=b599ab4e-2e99-4ea7-aa12-f2ddc3bee45c&search-rank=3"
+        },
+        {
+          "text": "Courier-Post \u2022 Page 4 Saturday, December 27, 1952 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/180246277/?match=23&terms=%22Union%20Messenger%22%20%28Camden%20OR%20UAME%20OR%20church%29&search-id=b599ab4e-2e99-4ea7-aa12-f2ddc3bee45c&search-rank=1"
+        },
+        {
+          "text": "The Daily Journal \u2022 Page 14 Saturday, May 18, 1974 Vineland, New Jersey",
+          "href": "https://www.newspapers.com/image/280938594/?match=1&terms=%22Union%20Messenger%22%20%28Camden%20OR%20UAME%20OR%20church%29&search-id=b599ab4e-2e99-4ea7-aa12-f2ddc3bee45c&search-rank=5"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "slug": "medic-news",
+      "count": "1,082",
+      "nj": [
+        {
+          "text": "The Star-Ledger \u2022 Page 1 Sunday, June 28, 1970 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1109779121/?match=2&terms=%22MEDIC%20News%22%20Newark&search-id=621606b0-1703-402b-91f7-109d50562dcf&search-rank=6"
+        },
+        {
+          "text": "The Newark Advocate \u2022 Page 18 Tuesday, May 2, 1978 Newark, Ohio",
+          "href": "https://www.newspapers.com/image/288464220/?match=19&terms=%22MEDIC%20News%22%20Newark&search-id=621606b0-1703-402b-91f7-109d50562dcf&search-rank=3"
+        },
+        {
+          "text": "The Newark Advocate \u2022 Page 18 Saturday, September 10, 1983 Newark, Ohio",
+          "href": "https://www.newspapers.com/image/1307329357/?match=23&terms=%22MEDIC%20News%22%20Newark&search-id=621606b0-1703-402b-91f7-109d50562dcf&search-rank=4"
+        },
+        {
+          "text": "The Newark Advocate \u2022 Page 58 Thursday, November 24, 1983 Newark, Ohio",
+          "href": "https://www.newspapers.com/image/1307313203/?match=10&terms=%22MEDIC%20News%22%20Newark&search-id=621606b0-1703-402b-91f7-109d50562dcf&search-rank=7"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 46 Monday, September 5, 2005 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1121671121/?match=8&terms=%22MEDIC%20News%22%20Newark&search-id=621606b0-1703-402b-91f7-109d50562dcf&search-rank=2"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "slug": "ujamaa",
+      "count": "1,744",
+      "nj": [
+        {
+          "text": "The News \u2022 Page 13 Tuesday, September 27, 1983 Paterson, New Jersey",
+          "href": "https://www.newspapers.com/image/533280942/?match=3&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=1"
+        },
+        {
+          "text": "Daily Record \u2022 Page 34 Sunday, January 31, 1993 Morristown, New Jersey",
+          "href": "https://www.newspapers.com/image/255230525/?match=6&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=2"
+        },
+        {
+          "text": "Daily Record \u2022 Page 20 Friday, February 19, 1993 Morristown, New Jersey",
+          "href": "https://www.newspapers.com/image/254917959/?match=3&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=8"
+        },
+        {
+          "text": "The Record \u2022 Page 381 Wednesday, January 26, 1994 Hackensack, New Jersey",
+          "href": "https://www.newspapers.com/image/496858254/?match=2&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=4"
+        },
+        {
+          "text": "The Record \u2022 Page 324 Wednesday, January 26, 1994 Hackensack, New Jersey",
+          "href": "https://www.newspapers.com/image/496858197/?match=2&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=5"
+        },
+        {
+          "text": "The Record \u2022 Page 265 Wednesday, February 15, 1995 Hackensack, New Jersey",
+          "href": "https://www.newspapers.com/image/498530801/?match=1&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=3"
+        },
+        {
+          "text": "The Record \u2022 Page 5 Tuesday, February 21, 1995 Hackensack, New Jersey",
+          "href": "https://www.newspapers.com/image/497432828/?match=6&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=6"
+        },
+        {
+          "text": "The Record \u2022 Page 120 Friday, February 13, 1998 Hackensack, New Jersey",
+          "href": "https://www.newspapers.com/image/498048265/?match=7&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=7"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 113 Friday, January 30, 1998 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1116095636/?match=2&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=9"
+        },
+        {
+          "text": "New Jersey Herald \u2022 Page 34 Friday, February 4, 2000 Newton, New Jersey",
+          "href": "https://www.newspapers.com/image/1353902052/?match=2&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=10"
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "slug": "hart-fund",
+      "count": "1,199",
+      "nj": [
+        {
+          "text": "The Star-Ledger \u2022 Page 15 Thursday, June 1, 1972 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1109800738/?match=4&terms=%22Hart%20Fund%22%20%28Newark%20OR%20Congressman%29&search-id=85e2b6eb-ecc4-4d93-9068-4a4d003d9d87&search-rank=1"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 30 Wednesday, May 31, 1972 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1110043121/?match=5&terms=%22Hart%20Fund%22%20%28Newark%20OR%20Congressman%29&search-id=85e2b6eb-ecc4-4d93-9068-4a4d003d9d87&search-rank=2"
+        },
+        {
+          "text": "Verona-Cedar Grove Times \u2022 Page 9 Thursday, December 28, 1972 Verona, New Jersey",
+          "href": "https://www.newspapers.com/image/539400225/?match=5&terms=%22Hart%20Fund%22%20%28Newark%20OR%20Congressman%29&search-id=85e2b6eb-ecc4-4d93-9068-4a4d003d9d87&search-rank=3"
+        },
+        {
+          "text": "The Montclair Times \u2022 Page 4 Thursday, December 28, 1972 Montclair, New Jersey",
+          "href": "https://www.newspapers.com/image/516009916/?match=4&terms=%22Hart%20Fund%22%20%28Newark%20OR%20Congressman%29&search-id=85e2b6eb-ecc4-4d93-9068-4a4d003d9d87&search-rank=5"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 104 Sunday, May 21, 1972 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1110040768/?match=4&terms=%22Hart%20Fund%22%20%28Newark%20OR%20Congressman%29&search-id=85e2b6eb-ecc4-4d93-9068-4a4d003d9d87&search-rank=7"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 15 Monday, May 8, 1972 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1110025235/?match=1&terms=%22Hart%20Fund%22%20%28Newark%20OR%20Congressman%29&search-id=85e2b6eb-ecc4-4d93-9068-4a4d003d9d87&search-rank=8"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 26 Tuesday, May 16, 1972 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1110040366/?match=10&terms=%22Hart%20Fund%22%20%28Newark%20OR%20Congressman%29&search-id=85e2b6eb-ecc4-4d93-9068-4a4d003d9d87&search-rank=9"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 9 Thursday, May 18, 1972 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1110040487/?match=2&terms=%22Hart%20Fund%22%20%28Newark%20OR%20Congressman%29&search-id=85e2b6eb-ecc4-4d93-9068-4a4d003d9d87&search-rank=10"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "slug": "primer-ymca",
+      "count": "2,390",
+      "nj": [
+        {
+          "text": "The Courier-News \u2022 Page 20 Saturday, November 30, 1940 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/219679728/?match=17&terms=%22Primer%22%20%28%22East%20Orange%22%29%20%28YMCA%20OR%20Christmas%29&search-id=dcb6b22b-993e-4d8b-9495-c3ecee2c7cff&search-rank=3"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 20 Saturday, November 30, 1940 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/219679543/?match=10&terms=%22Primer%22%20%28%22East%20Orange%22%29%20%28YMCA%20OR%20Christmas%29&search-id=dcb6b22b-993e-4d8b-9495-c3ecee2c7cff&search-rank=5"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 11 Friday, January 2, 1942 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/220030651/?match=11&terms=%22Primer%22%20%28%22East%20Orange%22%29%20%28YMCA%20OR%20Christmas%29&search-id=dcb6b22b-993e-4d8b-9495-c3ecee2c7cff&search-rank=7"
+        },
+        {
+          "text": "Evening Courier \u2022 Page 3 Saturday, March 28, 1942 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/479512273/?match=1&terms=%22Primer%22%20%28%22East%20Orange%22%29%20%28YMCA%20OR%20Christmas%29&search-id=dcb6b22b-993e-4d8b-9495-c3ecee2c7cff&search-rank=9"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 42 Sunday, January 20, 1957 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1108421174/?match=1&terms=%22Primer%22%20%28%22East%20Orange%22%29%20%28YMCA%20OR%20Christmas%29&search-id=dcb6b22b-993e-4d8b-9495-c3ecee2c7cff&search-rank=4"
+        },
+        {
+          "text": "Courier-Post \u2022 Page 19 Tuesday, March 14, 1961 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/180805838/?match=9&terms=%22Primer%22%20%28%22East%20Orange%22%29%20%28YMCA%20OR%20Christmas%29&search-id=dcb6b22b-993e-4d8b-9495-c3ecee2c7cff&search-rank=1"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "slug": "fire-ii",
+      "count": "803",
+      "nj": [
+        {
+          "text": "The Bayonne Times \u2022 Page 12 Thursday, February 26, 1970 Bayonne, New Jersey",
+          "href": "https://www.newspapers.com/image/910026196/?match=1&terms=%22Fire%20II%22%20%28Trenton%20OR%20%22Trenton%20State%22%29&search-id=07e69316-b7e1-473d-8aa3-066c03b4a531&search-rank=9"
+        },
+        {
+          "text": "The Times \u2022 Page 11 Monday, October 4, 1971 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1193005508/?match=10&terms=%22Fire%20II%22%20%28Trenton%20OR%20%22Trenton%20State%22%29&search-id=07e69316-b7e1-473d-8aa3-066c03b4a531&search-rank=6"
+        },
+        {
+          "text": "Courier-Post \u2022 Page 19 Saturday, May 2, 1981 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/181570748/?match=2&terms=%22Fire%20II%22%20%28Trenton%20OR%20%22Trenton%20State%22%29&search-id=07e69316-b7e1-473d-8aa3-066c03b4a531&search-rank=2"
+        },
+        {
+          "text": "The Times \u2022 Page 9 Monday, April 26, 1982 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1195423245/?match=1&terms=%22Fire%20II%22%20%28Trenton%20OR%20%22Trenton%20State%22%29&search-id=07e69316-b7e1-473d-8aa3-066c03b4a531&search-rank=8"
+        },
+        {
+          "text": "Asbury Park Press \u2022 Page 153 Sunday, January 29, 1984 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/146057227/?match=1&terms=%22Fire%20II%22%20%28Trenton%20OR%20%22Trenton%20State%22%29&search-id=07e69316-b7e1-473d-8aa3-066c03b4a531&search-rank=10"
+        },
+        {
+          "text": "The Times \u2022 Page 131 Sunday, June 23, 1991 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1197235589/?match=5&terms=%22Fire%20II%22%20%28Trenton%20OR%20%22Trenton%20State%22%29&search-id=07e69316-b7e1-473d-8aa3-066c03b4a531&search-rank=1"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 125 Sunday, March 31, 1996 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1115951701/?match=1&terms=%22Fire%20II%22%20%28Trenton%20OR%20%22Trenton%20State%22%29&search-id=07e69316-b7e1-473d-8aa3-066c03b4a531&search-rank=4"
+        },
+        {
+          "text": "The Bayonne Herald and Greenville Register \u2022 Page 5 Saturday, January 22, 1887 Bayonne, New Jersey",
+          "href": "https://www.newspapers.com/image/908477335/?match=5&terms=%22Fire%20II%22%20%28Trenton%20OR%20%22Trenton%20State%22%29&search-id=07e69316-b7e1-473d-8aa3-066c03b4a531&search-rank=7"
+        }
+      ]
+    }
+  ],
+  "opened": [
+    {
+      "id": 42,
+      "slug": "essex-forum",
+      "card": "The Star-Ledger \u2022 Page 30 Saturday, November 22, 1980 Newark, New Jersey",
+      "url": "https://www.newspapers.com/image/1111905758/?match=25&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=4",
+      "shot": "q9open-essex-forum-1980.png"
+    },
+    {
+      "id": 42,
+      "slug": "essex-forum",
+      "card": "The Star-Ledger \u2022 Page 30 Sunday, September 20, 1998 Newark, New Jersey",
+      "url": "https://www.newspapers.com/image/1117041767/?match=27&terms=%22Essex%20Forum%22%20%28East%20Orange%20OR%20Newark%29&search-id=5d82ac9c-e8e5-4b14-8486-1d850d7213c5&search-rank=8",
+      "shot": "q9open-essex-forum-1998.png"
+    },
+    {
+      "id": 56,
+      "slug": "union-messenger",
+      "card": "Courier-Post \u2022 Page 2 Thursday, October 11, 1951 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/180139546/?match=3&terms=%22Union%20Messenger%22%20%28Camden%20OR%20UAME%20OR%20church%29&search-id=b599ab4e-2e99-4ea7-aa12-f2ddc3bee45c&search-rank=2",
+      "shot": "q9open-union-messenger-1951.png"
+    },
+    {
+      "id": 56,
+      "slug": "union-messenger",
+      "card": "Courier-Post \u2022 Page 8 Wednesday, October 3, 1951 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/180138943/?match=23&terms=%22Union%20Messenger%22%20%28Camden%20OR%20UAME%20OR%20church%29&search-id=b599ab4e-2e99-4ea7-aa12-f2ddc3bee45c&search-rank=3",
+      "shot": "q9open-union-messenger-1951.png"
+    },
+    {
+      "id": 68,
+      "slug": "medic-news",
+      "card": "The Star-Ledger \u2022 Page 1 Sunday, June 28, 1970 Newark, New Jersey",
+      "url": "https://www.newspapers.com/image/1109779121/?match=2&terms=%22MEDIC%20News%22%20Newark&search-id=621606b0-1703-402b-91f7-109d50562dcf&search-rank=6",
+      "shot": "q9open-medic-news-1970.png"
+    },
+    {
+      "id": 68,
+      "slug": "medic-news",
+      "card": "The Newark Advocate \u2022 Page 18 Tuesday, May 2, 1978 Newark, Ohio",
+      "url": "https://www.newspapers.com/image/288464220/?match=19&terms=%22MEDIC%20News%22%20Newark&search-id=621606b0-1703-402b-91f7-109d50562dcf&search-rank=3",
+      "shot": "q9open-medic-news-1978.png"
+    },
+    {
+      "id": 103,
+      "slug": "ujamaa",
+      "card": "The News \u2022 Page 13 Tuesday, September 27, 1983 Paterson, New Jersey",
+      "url": "https://www.newspapers.com/image/533280942/?match=3&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=1",
+      "shot": "q9open-ujamaa-1983.png"
+    },
+    {
+      "id": 103,
+      "slug": "ujamaa",
+      "card": "Daily Record \u2022 Page 34 Sunday, January 31, 1993 Morristown, New Jersey",
+      "url": "https://www.newspapers.com/image/255230525/?match=6&terms=%22Ujamaa%22%20%28Wayne%20OR%20%22William%20Paterson%22%29&search-id=e1293dbf-922a-4ddb-81f8-49049288ace2&search-rank=2",
+      "shot": "q9open-ujamaa-1993.png"
+    },
+    {
+      "id": 122,
+      "slug": "hart-fund",
+      "card": "The Star-Ledger \u2022 Page 15 Thursday, June 1, 1972 Newark, New Jersey",
+      "url": "https://www.newspapers.com/image/1109800738/?match=4&terms=%22Hart%20Fund%22%20%28Newark%20OR%20Congressman%29&search-id=85e2b6eb-ecc4-4d93-9068-4a4d003d9d87&search-rank=1",
+      "shot": "q9open-hart-fund-1972.png"
+    },
+    {
+      "id": 122,
+      "slug": "hart-fund",
+      "card": "The Star-Ledger \u2022 Page 30 Wednesday, May 31, 1972 Newark, New Jersey",
+      "url": "https://www.newspapers.com/image/1110043121/?match=5&terms=%22Hart%20Fund%22%20%28Newark%20OR%20Congressman%29&search-id=85e2b6eb-ecc4-4d93-9068-4a4d003d9d87&search-rank=2",
+      "shot": "q9open-hart-fund-1972.png"
+    },
+    {
+      "id": 105,
+      "slug": "primer-ymca",
+      "card": "The Courier-News \u2022 Page 20 Saturday, November 30, 1940 Bridgewater, New Jersey",
+      "url": "https://www.newspapers.com/image/219679728/?match=17&terms=%22Primer%22%20%28%22East%20Orange%22%29%20%28YMCA%20OR%20Christmas%29&search-id=dcb6b22b-993e-4d8b-9495-c3ecee2c7cff&search-rank=3",
+      "shot": "q9open-primer-ymca-1940.png"
+    },
+    {
+      "id": 105,
+      "slug": "primer-ymca",
+      "card": "The Courier-News \u2022 Page 20 Saturday, November 30, 1940 Bridgewater, New Jersey",
+      "url": "https://www.newspapers.com/image/219679543/?match=10&terms=%22Primer%22%20%28%22East%20Orange%22%29%20%28YMCA%20OR%20Christmas%29&search-id=dcb6b22b-993e-4d8b-9495-c3ecee2c7cff&search-rank=5",
+      "shot": "q9open-primer-ymca-1940.png"
+    },
+    {
+      "id": 80,
+      "slug": "fire-ii",
+      "card": "The Bayonne Times \u2022 Page 12 Thursday, February 26, 1970 Bayonne, New Jersey",
+      "url": "https://www.newspapers.com/image/910026196/?match=1&terms=%22Fire%20II%22%20%28Trenton%20OR%20%22Trenton%20State%22%29&search-id=07e69316-b7e1-473d-8aa3-066c03b4a531&search-rank=9",
+      "shot": "q9open-fire-ii-1970.png"
+    },
+    {
+      "id": 80,
+      "slug": "fire-ii",
+      "card": "The Times \u2022 Page 11 Monday, October 4, 1971 Trenton, New Jersey",
+      "url": "https://www.newspapers.com/image/1193005508/?match=10&terms=%22Fire%20II%22%20%28Trenton%20OR%20%22Trenton%20State%22%29&search-id=07e69316-b7e1-473d-8aa3-066c03b4a531&search-rank=6",
+      "shot": "q9open-fire-ii-1971.png"
+    }
+  ]
+}

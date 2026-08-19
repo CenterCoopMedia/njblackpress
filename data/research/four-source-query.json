@@ -1,0 +1,155 @@
+{
+  "titles": {
+    "7": {
+      "ia": [
+        {
+          "q": "The Citizen Princeton Negro newspaper",
+          "n": 0,
+          "docs": []
+        },
+        {
+          "q": "\"The Citizen\" Princeton \"New Jersey\" (Negro OR colored)",
+          "n": 0,
+          "docs": []
+        },
+        {
+          "q": "\"Henry J. Auston\" Princeton",
+          "n": 0,
+          "docs": []
+        },
+        {
+          "q": "\"Du Paur\" newspaper Princeton",
+          "n": 0,
+          "docs": []
+        }
+      ],
+      "ca": {
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "3": {
+      "ia": [
+        {
+          "q": "\"Camden News\" (Negro OR colored) 1915",
+          "n": 0,
+          "docs": []
+        },
+        {
+          "q": "\"C. N. Green\" Camden newspaper",
+          "n": 0,
+          "docs": []
+        },
+        {
+          "q": "Camden News Publishing Co",
+          "n": 3,
+          "docs": [
+            {
+              "id": "cia-readingroom-document-cia-rdp66b00403r000300080027-3",
+              "title": "CIA Reading Room cia-rdp66b00403r000300080027-3: AMENDMENT OF FOREIGN ASSISTANCE ACT OF 1961",
+              "url": "https://archive.org/details/cia-readingroom-document-cia-rdp66b00403r000300080027-3"
+            },
+            {
+              "id": "cia-readingroom-document-cia-rdp99-01448r000401660033-6",
+              "title": "CIA Reading Room cia-rdp99-01448r000401660033-6: ELI JACOBS WEIGHS SELLING THE ORIOLES",
+              "url": "https://archive.org/details/cia-readingroom-document-cia-rdp99-01448r000401660033-6"
+            },
+            {
+              "id": "cia-readingroom-document-cia-rdp83-00423r000900930002-8",
+              "title": "CIA Reading Room cia-rdp83-00423r000900930002-8: MEMBERSHIP LIST SOCIETY FOR EXPERIMENTAL STRESS ANALYSIS",
+              "url": "https://archive.org/details/cia-readingroom-document-cia-rdp83-00423r000900930002-8"
+            }
+          ]
+        }
+      ],
+      "ca": {
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "45": {
+      "ia": [
+        {
+          "q": "\"Apex News\" Atlantic City",
+          "n": 0,
+          "docs": []
+        },
+        {
+          "q": "\"Apex Publishing\" newspaper",
+          "n": 0,
+          "docs": []
+        },
+        {
+          "q": "\"Archie J. Morgan\" Apex",
+          "n": 0,
+          "docs": []
+        }
+      ],
+      "ca": {
+        "error": "HTTP Error 403: Forbidden"
+      }
+    },
+    "79": {
+      "ia": [
+        {
+          "q": "\"Hiram Star-News\"",
+          "n": 0,
+          "docs": []
+        },
+        {
+          "q": "\"Hiram Star\" Vauxhall",
+          "n": 0,
+          "docs": []
+        },
+        {
+          "q": "\"Star-News\" Vauxhall New Jersey",
+          "n": 0,
+          "docs": []
+        }
+      ],
+      "ca": {
+        "error": "HTTP Error 403: Forbidden"
+      }
+    }
+  },
+  "libraries": {
+    "npl": {
+      "status": 200,
+      "url": "https://archive.org/details/newarkafamnewspapers",
+      "has_citizen": false,
+      "has_camden_news": false,
+      "has_apex": false,
+      "has_hiram": false
+    },
+    "rutgers": {
+      "status": 200,
+      "url": "https://collections.libraries.rutgers.edu/newark-black-newspapers",
+      "has_citizen": false,
+      "has_camden_news": false,
+      "has_apex": false,
+      "has_hiram": false
+    },
+    "njsl": {
+      "status": 200,
+      "url": "https://www.njstatelib.org/ironsides_echo/",
+      "has_citizen": false,
+      "has_camden_news": false,
+      "has_apex": false,
+      "has_hiram": false
+    },
+    "redbank": {
+      "status": 404,
+      "url": "http://www.digifind-it.com/redbank/echo.php",
+      "has_citizen": false,
+      "has_camden_news": false,
+      "has_apex": false,
+      "has_hiram": false
+    },
+    "danky": {
+      "status": 200,
+      "url": "https://archive.org/details/africanamericanne00dank",
+      "has_citizen": false,
+      "has_camden_news": false,
+      "has_apex": false,
+      "has_hiram": false
+    }
+  }
+}

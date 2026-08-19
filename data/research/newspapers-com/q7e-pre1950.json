@@ -1,0 +1,173 @@
+{
+  "searches": [
+    {
+      "id": 7,
+      "slug": "citizen-auston-only",
+      "count": "6",
+      "nj": [
+        {
+          "text": "The Star-Ledger \u2022 Page 17 Tuesday, October 29, 1991 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1114233152/?match=1&terms=%22Henry%20J.%20Auston%22&search-id=7cbced4f-66ff-4f7d-9da3-c4dfcc477718&search-rank=1"
+        }
+      ],
+      "keyword": "\"Henry J. Auston\""
+    },
+    {
+      "id": 7,
+      "slug": "citizen-colored-wkly",
+      "count": "1,787,450",
+      "nj": [],
+      "keyword": "\"The Citizen\" (colored OR Negro) Princeton"
+    },
+    {
+      "id": 45,
+      "slug": "apex-news-quoted",
+      "count": "58,408",
+      "nj": [],
+      "keyword": "\"Apex News\""
+    },
+    {
+      "id": 45,
+      "slug": "apex-publishing",
+      "count": "661",
+      "nj": [
+        {
+          "text": "Courier-Post \u2022 Page 16 Tuesday, April 15, 1997 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/183748871/?match=1&terms=%22Apex%20Publishing%22&search-id=2cf55312-2df3-4d31-a1e1-880ecff3767f&search-rank=9"
+        },
+        {
+          "text": "Courier-Post \u2022 Page 65 Sunday, April 13, 1997 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/183747297/?match=1&terms=%22Apex%20Publishing%22&search-id=2cf55312-2df3-4d31-a1e1-880ecff3767f&search-rank=10"
+        }
+      ],
+      "keyword": "\"Apex Publishing\""
+    },
+    {
+      "id": 101,
+      "slug": "webber-afterhours",
+      "count": "755",
+      "nj": [
+        {
+          "text": "The Star-Ledger \u2022 Page 36 Sunday, June 23, 1991 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1114841380/?match=18&terms=%22Harry%20B.%20Webber%22%20%28After%20Hours%20OR%20magazine%20OR%20editor%29&search-id=c8b9d6e8-5725-4ba1-98d7-52a1118feb42&search-rank=2"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 16 Monday, June 24, 1991 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1114846143/?match=10&terms=%22Harry%20B.%20Webber%22%20%28After%20Hours%20OR%20magazine%20OR%20editor%29&search-id=c8b9d6e8-5725-4ba1-98d7-52a1118feb42&search-rank=3"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 8 Monday, June 24, 1991 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/223216862/?match=3&terms=%22Harry%20B.%20Webber%22%20%28After%20Hours%20OR%20magazine%20OR%20editor%29&search-id=c8b9d6e8-5725-4ba1-98d7-52a1118feb42&search-rank=4"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 8 Monday, June 24, 1991 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/223216642/?match=3&terms=%22Harry%20B.%20Webber%22%20%28After%20Hours%20OR%20magazine%20OR%20editor%29&search-id=c8b9d6e8-5725-4ba1-98d7-52a1118feb42&search-rank=5"
+        }
+      ],
+      "keyword": "\"Harry B. Webber\" (After Hours OR magazine OR editor)"
+    },
+    {
+      "id": 79,
+      "slug": "hiram-starnews",
+      "count": "30,946",
+      "nj": [],
+      "keyword": "\"Star-News\" Vauxhall"
+    },
+    {
+      "id": 136,
+      "slug": "penn-crusader",
+      "count": "678",
+      "nj": [],
+      "keyword": "\"Penn Crusader\""
+    },
+    {
+      "id": 102,
+      "slug": "berlin-broadcast",
+      "count": "11,367",
+      "nj": [
+        {
+          "text": "Evening Courier \u2022 Page 6 Saturday, November 2, 1935 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/479258029/?match=6&terms=%22Camp%20Berlin%22%20%28Broadcast%20OR%20newspaper%20OR%20CCC%29&search-id=91339100-509c-4f5d-8c83-db6e7a141789&search-rank=7"
+        }
+      ],
+      "keyword": "\"Camp Berlin\" (Broadcast OR newspaper OR CCC)"
+    },
+    {
+      "id": 90,
+      "slug": "little-ease",
+      "count": "1",
+      "nj": [],
+      "keyword": "\"Little Ease Echo\""
+    },
+    {
+      "id": 94,
+      "slug": "dias-creek",
+      "count": null,
+      "nj": [],
+      "keyword": "\"Dias Creek Echo\""
+    },
+    {
+      "id": 48,
+      "slug": "ash-can-ccc",
+      "count": "120,592",
+      "nj": [
+        {
+          "text": "Courier-Post \u2022 Page 1 Tuesday, June 26, 1934 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/447544639/?match=3&terms=%22Ash%20Can%22%20%28CCC%20OR%20Chatsworth%20OR%20camp%29&search-id=ab937578-37bf-4611-a1b9-63ee639988d8&search-rank=6"
+        }
+      ],
+      "keyword": "\"Ash Can\" (CCC OR Chatsworth OR camp)"
+    }
+  ],
+  "opened": [
+    {
+      "id": 7,
+      "slug": "citizen-auston-only",
+      "card": "The Star-Ledger \u2022 Page 17 Tuesday, October 29, 1991 Newark, New Jersey",
+      "url": "https://www.newspapers.com/image/1114233152/?match=1&terms=%22Henry%20J.%20Auston%22&search-id=7cbced4f-66ff-4f7d-9da3-c4dfcc477718&search-rank=1",
+      "shot": "q7eopen-citizen-auston-only-1991.png"
+    },
+    {
+      "id": 45,
+      "slug": "apex-publishing",
+      "card": "Courier-Post \u2022 Page 16 Tuesday, April 15, 1997 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/183748871/?match=1&terms=%22Apex%20Publishing%22&search-id=2cf55312-2df3-4d31-a1e1-880ecff3767f&search-rank=9",
+      "shot": "q7eopen-apex-publishing-1997.png"
+    },
+    {
+      "id": 45,
+      "slug": "apex-publishing",
+      "card": "Courier-Post \u2022 Page 65 Sunday, April 13, 1997 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/183747297/?match=1&terms=%22Apex%20Publishing%22&search-id=2cf55312-2df3-4d31-a1e1-880ecff3767f&search-rank=10",
+      "shot": "q7eopen-apex-publishing-1997.png"
+    },
+    {
+      "id": 101,
+      "slug": "webber-afterhours",
+      "card": "The Star-Ledger \u2022 Page 36 Sunday, June 23, 1991 Newark, New Jersey",
+      "url": "https://www.newspapers.com/image/1114841380/?match=18&terms=%22Harry%20B.%20Webber%22%20%28After%20Hours%20OR%20magazine%20OR%20editor%29&search-id=c8b9d6e8-5725-4ba1-98d7-52a1118feb42&search-rank=2",
+      "shot": "q7eopen-webber-afterhours-1991.png"
+    },
+    {
+      "id": 101,
+      "slug": "webber-afterhours",
+      "card": "The Star-Ledger \u2022 Page 16 Monday, June 24, 1991 Newark, New Jersey",
+      "url": "https://www.newspapers.com/image/1114846143/?match=10&terms=%22Harry%20B.%20Webber%22%20%28After%20Hours%20OR%20magazine%20OR%20editor%29&search-id=c8b9d6e8-5725-4ba1-98d7-52a1118feb42&search-rank=3",
+      "shot": "q7eopen-webber-afterhours-1991.png"
+    },
+    {
+      "id": 102,
+      "slug": "berlin-broadcast",
+      "card": "Evening Courier \u2022 Page 6 Saturday, November 2, 1935 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/479258029/?match=6&terms=%22Camp%20Berlin%22%20%28Broadcast%20OR%20newspaper%20OR%20CCC%29&search-id=91339100-509c-4f5d-8c83-db6e7a141789&search-rank=7",
+      "shot": "q7eopen-berlin-broadcast-1935.png"
+    },
+    {
+      "id": 48,
+      "slug": "ash-can-ccc",
+      "card": "Courier-Post \u2022 Page 1 Tuesday, June 26, 1934 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/447544639/?match=3&terms=%22Ash%20Can%22%20%28CCC%20OR%20Chatsworth%20OR%20camp%29&search-id=ab937578-37bf-4611-a1b9-63ee639988d8&search-rank=6",
+      "shot": "q7eopen-ash-can-ccc-1934.png"
+    }
+  ]
+}

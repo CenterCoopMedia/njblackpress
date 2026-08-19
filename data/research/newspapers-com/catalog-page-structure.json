@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "action": "eval",
+  "value": {
+    "inputs": [
+      {
+        "type": "search",
+        "placeholder": "Filter by paper or location",
+        "name": "",
+        "id": "filter-papers",
+        "aria": null
+      }
+    ],
+    "url": "https://www.newspapers.com/papers/",
+    "title": "Newspaper Publication search - Newspapers.com™"
+  },
+  "url": "https://www.newspapers.com/papers/"
+}

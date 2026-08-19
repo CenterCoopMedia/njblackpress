@@ -1,0 +1,344 @@
+{
+  "searches": [
+    {
+      "id": 113,
+      "slug": "wait-adams",
+      "count": "313",
+      "nj": [
+        {
+          "text": "The Freehold Transcript and The Monmouth Inquirer \u2022 Page 1 Friday, October 8, 1948 Freehold, New Jersey",
+          "href": "https://www.newspapers.com/image/358902792/?match=11&terms=%22George%20S.%20Adams%22%20%28Wait%20OR%20editor%20OR%20newspaper%29%20Trenton&search-id=bbad54ab-4622-4e2a-b7ff-ec1871b91e9c&search-rank=2"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 30 Thursday, October 5, 1961 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/220011364/?match=2&terms=%22George%20S.%20Adams%22%20%28Wait%20OR%20editor%20OR%20newspaper%29%20Trenton&search-id=bbad54ab-4622-4e2a-b7ff-ec1871b91e9c&search-rank=7"
+        },
+        {
+          "text": "The Times \u2022 Page 33 Saturday, March 31, 2001 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1199480446/?match=5&terms=%22George%20S.%20Adams%22%20%28Wait%20OR%20editor%20OR%20newspaper%29%20Trenton&search-id=bbad54ab-4622-4e2a-b7ff-ec1871b91e9c&search-rank=8"
+        },
+        {
+          "text": "The Times \u2022 Page 21 Saturday, March 31, 2001 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1199480388/?match=5&terms=%22George%20S.%20Adams%22%20%28Wait%20OR%20editor%20OR%20newspaper%29%20Trenton&search-id=bbad54ab-4622-4e2a-b7ff-ec1871b91e9c&search-rank=9"
+        },
+        {
+          "text": "The Times \u2022 Page 9 Saturday, March 31, 2001 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1199480330/?match=22&terms=%22George%20S.%20Adams%22%20%28Wait%20OR%20editor%20OR%20newspaper%29%20Trenton&search-id=bbad54ab-4622-4e2a-b7ff-ec1871b91e9c&search-rank=10"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "slug": "ncup",
+      "count": "393",
+      "nj": [
+        {
+          "text": "The News \u2022 Page 25 Tuesday, April 6, 1965 Paterson, New Jersey",
+          "href": "https://www.newspapers.com/image/530609893/?match=27&terms=%22Newark%20Community%20Union%22%20%28News%20OR%20newspaper%20OR%20NCUP%29&search-id=fbbe7ee9-0061-40fa-b7d0-5d4c384dc459&search-rank=3"
+        },
+        {
+          "text": "The Daily Register \u2022 Page 1 Tuesday, November 14, 1967 Red Bank, New Jersey",
+          "href": "https://www.newspapers.com/image/516308193/?match=3&terms=%22Newark%20Community%20Union%22%20%28News%20OR%20newspaper%20OR%20NCUP%29&search-id=fbbe7ee9-0061-40fa-b7d0-5d4c384dc459&search-rank=5"
+        },
+        {
+          "text": "The Herald-News \u2022 Page 1 Tuesday, November 14, 1967 Passaic, New Jersey",
+          "href": "https://www.newspapers.com/image/527282491/?match=1&terms=%22Newark%20Community%20Union%22%20%28News%20OR%20newspaper%20OR%20NCUP%29&search-id=fbbe7ee9-0061-40fa-b7d0-5d4c384dc459&search-rank=6"
+        },
+        {
+          "text": "The Herald-News \u2022 Page 73 Tuesday, November 14, 1967 Passaic, New Jersey",
+          "href": "https://www.newspapers.com/image/527283606/?match=19&terms=%22Newark%20Community%20Union%22%20%28News%20OR%20newspaper%20OR%20NCUP%29&search-id=fbbe7ee9-0061-40fa-b7d0-5d4c384dc459&search-rank=7"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 1 Tuesday, November 14, 1967 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/221920749/?match=1&terms=%22Newark%20Community%20Union%22%20%28News%20OR%20newspaper%20OR%20NCUP%29&search-id=fbbe7ee9-0061-40fa-b7d0-5d4c384dc459&search-rank=9"
+        },
+        {
+          "text": "The Herald-News \u2022 Page 1 Tuesday, November 14, 1967 Passaic, New Jersey",
+          "href": "https://www.newspapers.com/image/527284166/?match=20&terms=%22Newark%20Community%20Union%22%20%28News%20OR%20newspaper%20OR%20NCUP%29&search-id=fbbe7ee9-0061-40fa-b7d0-5d4c384dc459&search-rank=10"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 11 Tuesday, August 27, 1996 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1115962043/?match=14&terms=%22Newark%20Community%20Union%22%20%28News%20OR%20newspaper%20OR%20NCUP%29&search-id=fbbe7ee9-0061-40fa-b7d0-5d4c384dc459&search-rank=4"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "slug": "black-newark",
+      "count": "10,475",
+      "nj": [
+        {
+          "text": "Asbury Park Press \u2022 Page 31 Friday, November 17, 1972 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/143725814/?match=8&terms=%22Black%20Newark%22%20%28Committee%20OR%20Baraka%20OR%20newspaper%29&search-id=552ac2cd-20fe-45b3-9555-139a56d1c928&search-rank=2"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 4 Monday, January 17, 1972 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1110100325/?match=3&terms=%22Black%20Newark%22%20%28Committee%20OR%20Baraka%20OR%20newspaper%29&search-id=552ac2cd-20fe-45b3-9555-139a56d1c928&search-rank=6"
+        },
+        {
+          "text": "The Herald-News \u2022 Page 1 Saturday, November 11, 1972 Passaic, New Jersey",
+          "href": "https://www.newspapers.com/image/528709798/?match=3&terms=%22Black%20Newark%22%20%28Committee%20OR%20Baraka%20OR%20newspaper%29&search-id=552ac2cd-20fe-45b3-9555-139a56d1c928&search-rank=9"
+        },
+        {
+          "text": "Asbury Park Press \u2022 Page 2 Sunday, February 27, 1972 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/145629365/?match=1&terms=%22Black%20Newark%22%20%28Committee%20OR%20Baraka%20OR%20newspaper%29&search-id=552ac2cd-20fe-45b3-9555-139a56d1c928&search-rank=10"
+        },
+        {
+          "text": "The Times \u2022 Page 11 Sunday, July 10, 1977 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1194598021/?match=1&terms=%22Black%20Newark%22%20%28Committee%20OR%20Baraka%20OR%20newspaper%29&search-id=552ac2cd-20fe-45b3-9555-139a56d1c928&search-rank=4"
+        },
+        {
+          "text": "The Central New Jersey Home News \u2022 Page 44 Sunday, November 14, 1999 New Brunswick, New Jersey",
+          "href": "https://www.newspapers.com/image/315236769/?match=3&terms=%22Black%20Newark%22%20%28Committee%20OR%20Baraka%20OR%20newspaper%29&search-id=552ac2cd-20fe-45b3-9555-139a56d1c928&search-rank=1"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "slug": "voice-plainfield",
+      "count": "827,382",
+      "nj": [
+        {
+          "text": "The Courier-News \u2022 Page 4 Tuesday, August 17, 1937 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/219539587/?match=7&terms=%22The%20Voice%22%20Plainfield%20%28Negro%20OR%20Black%20OR%20newspaper%29&search-id=514afaf8-608b-4f8c-abc4-90c84d081a8e&search-rank=3"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 10 Monday, September 30, 1946 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/221364575/?match=3&terms=%22The%20Voice%22%20Plainfield%20%28Negro%20OR%20Black%20OR%20newspaper%29&search-id=514afaf8-608b-4f8c-abc4-90c84d081a8e&search-rank=5"
+        },
+        {
+          "text": "The Record \u2022 Page 17 Tuesday, July 25, 1967 Hackensack, New Jersey",
+          "href": "https://www.newspapers.com/image/492162185/?match=4&terms=%22The%20Voice%22%20Plainfield%20%28Negro%20OR%20Black%20OR%20newspaper%29&search-id=514afaf8-608b-4f8c-abc4-90c84d081a8e&search-rank=6"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 5 Wednesday, July 19, 1967 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/222025650/?match=18&terms=%22The%20Voice%22%20Plainfield%20%28Negro%20OR%20Black%20OR%20newspaper%29&search-id=514afaf8-608b-4f8c-abc4-90c84d081a8e&search-rank=7"
+        },
+        {
+          "text": "The Central New Jersey Home News \u2022 Page 7 Thursday, July 20, 1967 New Brunswick, New Jersey",
+          "href": "https://www.newspapers.com/image/315716351/?match=12&terms=%22The%20Voice%22%20Plainfield%20%28Negro%20OR%20Black%20OR%20newspaper%29&search-id=514afaf8-608b-4f8c-abc4-90c84d081a8e&search-rank=8"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 27 Friday, October 25, 1968 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/222309800/?match=1&terms=%22The%20Voice%22%20Plainfield%20%28Negro%20OR%20Black%20OR%20newspaper%29&search-id=514afaf8-608b-4f8c-abc4-90c84d081a8e&search-rank=10"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 30 Tuesday, May 19, 1970 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/222387169/?match=18&terms=%22The%20Voice%22%20Plainfield%20%28Negro%20OR%20Black%20OR%20newspaper%29&search-id=514afaf8-608b-4f8c-abc4-90c84d081a8e&search-rank=2"
+        },
+        {
+          "text": "The Courier-News \u2022 Page 3 Friday, January 8, 1897 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/218856254/?match=7&terms=%22The%20Voice%22%20Plainfield%20%28Negro%20OR%20Black%20OR%20newspaper%29&search-id=514afaf8-608b-4f8c-abc4-90c84d081a8e&search-rank=1"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "slug": "deliverance-voice",
+      "count": "67",
+      "nj": []
+    },
+    {
+      "id": 133,
+      "slug": "freedom-reports",
+      "count": "1,578",
+      "nj": [
+        {
+          "text": "The Courier-News \u2022 Page 34 Friday, May 3, 1918 Bridgewater, New Jersey",
+          "href": "https://www.newspapers.com/image/220226552/?match=2&terms=%22Freedom%20Reports%22%20Newark&search-id=0ff9f81d-9a2d-48de-a097-671a05e9cef1&search-rank=6"
+        },
+        {
+          "text": "The Central New Jersey Home News \u2022 Page 1 Monday, June 8, 1931 New Brunswick, New Jersey",
+          "href": "https://www.newspapers.com/image/314123955/?match=3&terms=%22Freedom%20Reports%22%20Newark&search-id=0ff9f81d-9a2d-48de-a097-671a05e9cef1&search-rank=7"
+        },
+        {
+          "text": "The Record \u2022 Page 14 Wednesday, November 3, 1948 Hackensack, New Jersey",
+          "href": "https://www.newspapers.com/image/489765265/?match=2&terms=%22Freedom%20Reports%22%20Newark&search-id=0ff9f81d-9a2d-48de-a097-671a05e9cef1&search-rank=2"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "slug": "festival-arts",
+      "count": "26,750",
+      "nj": [
+        {
+          "text": "Press of Atlantic City \u2022 Page 83 Sunday, May 8, 1983 Atlantic City, New Jersey",
+          "href": "https://www.newspapers.com/image/924340611/?match=1&terms=%22Festival%20of%20the%20Arts%22%20%28Yusef%20OR%20Iman%20OR%20Newark%29&search-id=365f8d29-5a73-4506-af78-faff2128d2af&search-rank=4"
+        },
+        {
+          "text": "The Daily Register \u2022 Page 16 Friday, August 31, 1984 Red Bank, New Jersey",
+          "href": "https://www.newspapers.com/image/517509906/?match=7&terms=%22Festival%20of%20the%20Arts%22%20%28Yusef%20OR%20Iman%20OR%20Newark%29&search-id=365f8d29-5a73-4506-af78-faff2128d2af&search-rank=7"
+        },
+        {
+          "text": "The Jersey Journal \u2022 Page 21 Friday, September 11, 2015 Jersey City, New Jersey",
+          "href": "https://www.newspapers.com/image/1143946772/?match=1&terms=%22Festival%20of%20the%20Arts%22%20%28Yusef%20OR%20Iman%20OR%20Newark%29&search-id=365f8d29-5a73-4506-af78-faff2128d2af&search-rank=6"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "slug": "cricket-jihad",
+      "count": "21,158",
+      "nj": [
+        {
+          "text": "Asbury Park Press \u2022 Page 167 Sunday, February 8, 1987 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/144128102/?match=1&terms=%22The%20Cricket%22%20%28Jihad%20OR%20Baraka%20OR%20%22Black%20Music%22%29&search-id=0111cba6-69da-4c0e-9733-7776155758ed&search-rank=2"
+        },
+        {
+          "text": "Asbury Park Press \u2022 Page 4 Sunday, April 26, 1987 Asbury Park, New Jersey",
+          "href": "https://www.newspapers.com/image/144271293/?match=1&terms=%22The%20Cricket%22%20%28Jihad%20OR%20Baraka%20OR%20%22Black%20Music%22%29&search-id=0111cba6-69da-4c0e-9733-7776155758ed&search-rank=3"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 71 Friday, July 2, 1993 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1114863307/?match=5&terms=%22The%20Cricket%22%20%28Jihad%20OR%20Baraka%20OR%20%22Black%20Music%22%29&search-id=0111cba6-69da-4c0e-9733-7776155758ed&search-rank=1"
+        },
+        {
+          "text": "The Star-Ledger \u2022 Page 33 Friday, July 2, 2004 Newark, New Jersey",
+          "href": "https://www.newspapers.com/image/1118627921/?match=5&terms=%22The%20Cricket%22%20%28Jihad%20OR%20Baraka%20OR%20%22Black%20Music%22%29&search-id=0111cba6-69da-4c0e-9733-7776155758ed&search-rank=10"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "slug": "utimme",
+      "count": "5",
+      "nj": [
+        {
+          "text": "The Times \u2022 Page 8 Friday, April 23, 1976 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1192937414/?match=4&terms=%22Utimme%22%20OR%20%22La%20Voz%20Oculta%22%20Trenton&search-id=abf1df39-6240-4b7e-a4d9-81d315a79710&search-rank=1"
+        },
+        {
+          "text": "The Times \u2022 Page 32 Monday, September 27, 1993 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1197515771/?match=5&terms=%22Utimme%22%20OR%20%22La%20Voz%20Oculta%22%20Trenton&search-id=abf1df39-6240-4b7e-a4d9-81d315a79710&search-rank=2"
+        },
+        {
+          "text": "The Times \u2022 Page 20 Monday, September 27, 1993 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1197515759/?match=1&terms=%22Utimme%22%20OR%20%22La%20Voz%20Oculta%22%20Trenton&search-id=abf1df39-6240-4b7e-a4d9-81d315a79710&search-rank=3"
+        },
+        {
+          "text": "The Times \u2022 Page 8 Monday, September 27, 1993 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1197515747/?match=5&terms=%22Utimme%22%20OR%20%22La%20Voz%20Oculta%22%20Trenton&search-id=abf1df39-6240-4b7e-a4d9-81d315a79710&search-rank=4"
+        },
+        {
+          "text": "The Times \u2022 Page 8 Monday, September 27, 1993 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1197515735/?match=1&terms=%22Utimme%22%20OR%20%22La%20Voz%20Oculta%22%20Trenton&search-id=abf1df39-6240-4b7e-a4d9-81d315a79710&search-rank=5"
+        }
+      ]
+    }
+  ],
+  "opened": [
+    {
+      "id": 113,
+      "slug": "wait-adams",
+      "card": "The Freehold Transcript and The Monmouth Inquirer \u2022 Page 1 Friday, October 8, 1948 Freehold, New Jersey",
+      "url": "https://www.newspapers.com/image/358902792/?match=11&terms=%22George%20S.%20Adams%22%20%28Wait%20OR%20editor%20OR%20newspaper%29%20Trenton&search-id=bbad54ab-4622-4e2a-b7ff-ec1871b91e9c&search-rank=2",
+      "shot": "q8open-wait-adams-1948.png"
+    },
+    {
+      "id": 113,
+      "slug": "wait-adams",
+      "card": "The Courier-News \u2022 Page 30 Thursday, October 5, 1961 Bridgewater, New Jersey",
+      "url": "https://www.newspapers.com/image/220011364/?match=2&terms=%22George%20S.%20Adams%22%20%28Wait%20OR%20editor%20OR%20newspaper%29%20Trenton&search-id=bbad54ab-4622-4e2a-b7ff-ec1871b91e9c&search-rank=7",
+      "shot": "q8open-wait-adams-1961.png"
+    },
+    {
+      "id": 76,
+      "slug": "ncup",
+      "card": "The News \u2022 Page 25 Tuesday, April 6, 1965 Paterson, New Jersey",
+      "url": "https://www.newspapers.com/image/530609893/?match=27&terms=%22Newark%20Community%20Union%22%20%28News%20OR%20newspaper%20OR%20NCUP%29&search-id=fbbe7ee9-0061-40fa-b7d0-5d4c384dc459&search-rank=3",
+      "shot": "q8open-ncup-1965.png"
+    },
+    {
+      "id": 76,
+      "slug": "ncup",
+      "card": "The Daily Register \u2022 Page 1 Tuesday, November 14, 1967 Red Bank, New Jersey",
+      "url": "https://www.newspapers.com/image/516308193/?match=3&terms=%22Newark%20Community%20Union%22%20%28News%20OR%20newspaper%20OR%20NCUP%29&search-id=fbbe7ee9-0061-40fa-b7d0-5d4c384dc459&search-rank=5",
+      "shot": "q8open-ncup-1967.png"
+    },
+    {
+      "id": 28,
+      "slug": "black-newark",
+      "card": "Asbury Park Press \u2022 Page 31 Friday, November 17, 1972 Asbury Park, New Jersey",
+      "url": "https://www.newspapers.com/image/143725814/?match=8&terms=%22Black%20Newark%22%20%28Committee%20OR%20Baraka%20OR%20newspaper%29&search-id=552ac2cd-20fe-45b3-9555-139a56d1c928&search-rank=2",
+      "shot": "q8open-black-newark-1972.png"
+    },
+    {
+      "id": 28,
+      "slug": "black-newark",
+      "card": "The Star-Ledger \u2022 Page 4 Monday, January 17, 1972 Newark, New Jersey",
+      "url": "https://www.newspapers.com/image/1110100325/?match=3&terms=%22Black%20Newark%22%20%28Committee%20OR%20Baraka%20OR%20newspaper%29&search-id=552ac2cd-20fe-45b3-9555-139a56d1c928&search-rank=6",
+      "shot": "q8open-black-newark-1972.png"
+    },
+    {
+      "id": 41,
+      "slug": "voice-plainfield",
+      "card": "The Courier-News \u2022 Page 4 Tuesday, August 17, 1937 Bridgewater, New Jersey",
+      "url": "https://www.newspapers.com/image/219539587/?match=7&terms=%22The%20Voice%22%20Plainfield%20%28Negro%20OR%20Black%20OR%20newspaper%29&search-id=514afaf8-608b-4f8c-abc4-90c84d081a8e&search-rank=3",
+      "shot": "q8open-voice-plainfield-1937.png"
+    },
+    {
+      "id": 41,
+      "slug": "voice-plainfield",
+      "card": "The Courier-News \u2022 Page 10 Monday, September 30, 1946 Bridgewater, New Jersey",
+      "url": "https://www.newspapers.com/image/221364575/?match=3&terms=%22The%20Voice%22%20Plainfield%20%28Negro%20OR%20Black%20OR%20newspaper%29&search-id=514afaf8-608b-4f8c-abc4-90c84d081a8e&search-rank=5",
+      "shot": "q8open-voice-plainfield-1946.png"
+    },
+    {
+      "id": 133,
+      "slug": "freedom-reports",
+      "card": "The Courier-News \u2022 Page 34 Friday, May 3, 1918 Bridgewater, New Jersey",
+      "url": "https://www.newspapers.com/image/220226552/?match=2&terms=%22Freedom%20Reports%22%20Newark&search-id=0ff9f81d-9a2d-48de-a097-671a05e9cef1&search-rank=6",
+      "shot": "q8open-freedom-reports-1918.png"
+    },
+    {
+      "id": 133,
+      "slug": "freedom-reports",
+      "card": "The Central New Jersey Home News \u2022 Page 1 Monday, June 8, 1931 New Brunswick, New Jersey",
+      "url": "https://www.newspapers.com/image/314123955/?match=3&terms=%22Freedom%20Reports%22%20Newark&search-id=0ff9f81d-9a2d-48de-a097-671a05e9cef1&search-rank=7",
+      "shot": "q8open-freedom-reports-1931.png"
+    },
+    {
+      "id": 62,
+      "slug": "festival-arts",
+      "card": "Press of Atlantic City \u2022 Page 83 Sunday, May 8, 1983 Atlantic City, New Jersey",
+      "url": "https://www.newspapers.com/image/924340611/?match=1&terms=%22Festival%20of%20the%20Arts%22%20%28Yusef%20OR%20Iman%20OR%20Newark%29&search-id=365f8d29-5a73-4506-af78-faff2128d2af&search-rank=4",
+      "shot": "q8open-festival-arts-1983.png"
+    },
+    {
+      "id": 62,
+      "slug": "festival-arts",
+      "card": "The Daily Register \u2022 Page 16 Friday, August 31, 1984 Red Bank, New Jersey",
+      "url": "https://www.newspapers.com/image/517509906/?match=7&terms=%22Festival%20of%20the%20Arts%22%20%28Yusef%20OR%20Iman%20OR%20Newark%29&search-id=365f8d29-5a73-4506-af78-faff2128d2af&search-rank=7",
+      "shot": "q8open-festival-arts-1984.png"
+    },
+    {
+      "id": 69,
+      "slug": "cricket-jihad",
+      "card": "Asbury Park Press \u2022 Page 167 Sunday, February 8, 1987 Asbury Park, New Jersey",
+      "url": "https://www.newspapers.com/image/144128102/?match=1&terms=%22The%20Cricket%22%20%28Jihad%20OR%20Baraka%20OR%20%22Black%20Music%22%29&search-id=0111cba6-69da-4c0e-9733-7776155758ed&search-rank=2",
+      "shot": "q8open-cricket-jihad-1987.png"
+    },
+    {
+      "id": 69,
+      "slug": "cricket-jihad",
+      "card": "Asbury Park Press \u2022 Page 4 Sunday, April 26, 1987 Asbury Park, New Jersey",
+      "url": "https://www.newspapers.com/image/144271293/?match=1&terms=%22The%20Cricket%22%20%28Jihad%20OR%20Baraka%20OR%20%22Black%20Music%22%29&search-id=0111cba6-69da-4c0e-9733-7776155758ed&search-rank=3",
+      "shot": "q8open-cricket-jihad-1987.png"
+    },
+    {
+      "id": 73,
+      "slug": "utimme",
+      "card": "The Times \u2022 Page 8 Friday, April 23, 1976 Trenton, New Jersey",
+      "url": "https://www.newspapers.com/image/1192937414/?match=4&terms=%22Utimme%22%20OR%20%22La%20Voz%20Oculta%22%20Trenton&search-id=abf1df39-6240-4b7e-a4d9-81d315a79710&search-rank=1",
+      "shot": "q8open-utimme-1976.png"
+    },
+    {
+      "id": 73,
+      "slug": "utimme",
+      "card": "The Times \u2022 Page 32 Monday, September 27, 1993 Trenton, New Jersey",
+      "url": "https://www.newspapers.com/image/1197515771/?match=5&terms=%22Utimme%22%20OR%20%22La%20Voz%20Oculta%22%20Trenton&search-id=abf1df39-6240-4b7e-a4d9-81d315a79710&search-rank=2",
+      "shot": "q8open-utimme-1993.png"
+    }
+  ]
+}

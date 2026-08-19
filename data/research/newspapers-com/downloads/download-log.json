@@ -1,0 +1,197 @@
+[
+  {
+    "ok": false,
+    "slug": "echo-1904-fire",
+    "url": "https://www.newspapers.com/image/497174278/",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Print or Download",
+        "aria": null,
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save to Ancestry",
+        "aria": null,
+        "href": null
+      },
+      {
+        "tag": "A",
+        "text": "Monmouth Democrat",
+        "aria": null,
+        "href": "https://www.newspapers.com/image/497174278/"
+      },
+      {
+        "tag": "A",
+        "text": "Thu, Sep 08, 1904",
+        "aria": null,
+        "href": "https://www.newspapers.com/image/497174278/"
+      }
+    ],
+    "click": {
+      "ok": true,
+      "action": "click",
+      "url": "https://www.newspapers.com/image/497174278/",
+      "title": "Sep 08, 1904, page 4 - Monmouth Democrat at Newspapers.com\u2122 - Newspapers.com\u2122"
+    },
+    "file": null,
+    "uiShot": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\screenshots\\download-ui-echo-1904-fire.png"
+  },
+  {
+    "ok": false,
+    "slug": "herbert-1893-bradley",
+    "url": "https://www.newspapers.com/image/1194114727/",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Print or Download",
+        "aria": null,
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save to Ancestry",
+        "aria": null,
+        "href": null
+      },
+      {
+        "tag": "A",
+        "text": "Trenton Sunday Advertiser",
+        "aria": null,
+        "href": "https://www.newspapers.com/image/1194114727/"
+      },
+      {
+        "tag": "A",
+        "text": "Sun, Nov 05, 1893",
+        "aria": null,
+        "href": "https://www.newspapers.com/image/1194114727/"
+      }
+    ],
+    "click": {
+      "ok": true,
+      "action": "click",
+      "url": "https://www.newspapers.com/image/1194114727/",
+      "title": "Nov 05, 1893, page 1 - Trenton Sunday Advertiser at Newspapers.com\u2122 - Newspapers.com\u2122"
+    },
+    "file": null,
+    "uiShot": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\screenshots\\download-ui-herbert-1893-bradley.png"
+  },
+  {
+    "ok": false,
+    "slug": "trumpet-1893-asbury",
+    "url": "https://www.newspapers.com/image/436807841/",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Print or Download",
+        "aria": null,
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save to Ancestry",
+        "aria": null,
+        "href": null
+      },
+      {
+        "tag": "A",
+        "text": "The Shore Press",
+        "aria": null,
+        "href": "https://www.newspapers.com/image/436807841/"
+      },
+      {
+        "tag": "A",
+        "text": "Fri, Jul 28, 1893",
+        "aria": null,
+        "href": "https://www.newspapers.com/image/436807841/"
+      }
+    ],
+    "click": {
+      "ok": true,
+      "action": "click",
+      "url": "https://www.newspapers.com/image/436807841/",
+      "title": "Jul 28, 1893, page 6 - The Shore Press at Newspapers.com\u2122 - Newspapers.com\u2122"
+    },
+    "file": null,
+    "uiShot": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\screenshots\\download-ui-trumpet-1893-asbury.png"
+  },
+  {
+    "ok": false,
+    "slug": "echo-1909-move",
+    "url": "https://www.newspapers.com/image/143869436/",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Print or Download",
+        "aria": null,
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save to Ancestry",
+        "aria": null,
+        "href": null
+      },
+      {
+        "tag": "A",
+        "text": "Asbury Park Press",
+        "aria": null,
+        "href": "https://www.newspapers.com/image/143869436/"
+      },
+      {
+        "tag": "A",
+        "text": "Fri, Mar 05, 1909",
+        "aria": null,
+        "href": "https://www.newspapers.com/image/143869436/"
+      }
+    ],
+    "click": {
+      "ok": true,
+      "action": "click",
+      "url": "https://www.newspapers.com/image/143869436/",
+      "title": "Mar 05, 1909, page 2 - Asbury Park Press at Newspapers.com\u2122 - Newspapers.com\u2122"
+    },
+    "file": null,
+    "uiShot": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\screenshots\\download-ui-echo-1909-move.png"
+  },
+  {
+    "ok": false,
+    "slug": "herbert-1895-gop",
+    "url": "https://www.newspapers.com/image/1194116748/",
+    "controls": [
+      {
+        "tag": "BUTTON",
+        "text": "Print or Download",
+        "aria": null,
+        "href": null
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Save to Ancestry",
+        "aria": null,
+        "href": null
+      },
+      {
+        "tag": "A",
+        "text": "Trenton Sunday Advertiser",
+        "aria": null,
+        "href": "https://www.newspapers.com/image/1194116748/"
+      },
+      {
+        "tag": "A",
+        "text": "Sun, Oct 20, 1895",
+        "aria": null,
+        "href": "https://www.newspapers.com/image/1194116748/"
+      }
+    ],
+    "click": {
+      "ok": true,
+      "action": "click",
+      "url": "https://www.newspapers.com/image/1194116748/",
+      "title": "Oct 20, 1895, page 1 - Trenton Sunday Advertiser at Newspapers.com\u2122 - Newspapers.com\u2122"
+    },
+    "file": null,
+    "uiShot": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\screenshots\\download-ui-herbert-1895-gop.png"
+  }
+]

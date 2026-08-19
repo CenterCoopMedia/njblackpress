@@ -1,0 +1,145 @@
+[
+  {
+    "pubId": 116,
+    "name": "The Jersey Heritage",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 117,
+    "name": "Inner City Products",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 118,
+    "name": "Gospel Today Magazine",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": "WebSearch confirmed founding history (Teresa Hairston, 1989, Gospel SCORE -> Gospel Today) but found no image or scan of an actual issue, cover, or masthead from the publication itself.",
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 119,
+    "name": "Black Atlantic City Magazine",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": "WebSearch found only secondary references (a Wikipedia article on Black history in Atlantic City) confirming publication dates, no scan or image of the magazine itself.",
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 120,
+    "name": "Write On Newsletter",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 121,
+    "name": "Testimony: A Journal of African-American Poetry",
+    "result": "found",
+    "source": "AbeBooks (Crow Hop Rare Books listing)",
+    "url": "https://www.abebooks.co.uk/first-edition/Testimony-Journal-African-American-Poetry-Vol-Issue/31778171273/bd",
+    "localFile": "data/research/depth-hunt/files/121-testimony.jpg",
+    "whyMatch": "Rare-book listing for the exact title, Vol.1 Issue One (Winter 1987) and Issue Two (Spring 1987), edited by Sandra West, Montclair NJ origin matches dankyNote (founding editor, 1987 start). Listing photo shows the actual stapled-wraps journal cover(s), described as 8.5x11 in, 30-34 pp, matching Danky-era small-press poetry journal format.",
+    "caption": "Cover of Testimony: A Journal of African-American Poetry, Vol. 1 (1987), edited by Sandra West, Montclair, NJ.",
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 122,
+    "name": "The Hart Fund",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 123,
+    "name": "The Black Sociologist",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": "WebSearch confirmed publisher (Transaction Periodicals Consortium, New Brunswick) but no scan, cover image, or issue page found.",
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 124,
+    "name": "The Best of Rap & R&B",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": "Internet Archive advanced search returned a backend error for this query and no further leads were found within the two-strike limit.",
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 125,
+    "name": "Black Hair Digest",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 126,
+    "name": "Black Women's United Front Newsletter",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 127,
+    "name": "Black Truth Bulletin",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  },
+  {
+    "pubId": 129,
+    "name": "Club World: Newsmagazine",
+    "result": "none",
+    "source": null,
+    "url": null,
+    "localFile": null,
+    "whyMatch": null,
+    "caption": null,
+    "date": "2026-08-19"
+  }
+]

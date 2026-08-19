@@ -1,0 +1,94 @@
+{
+  "searches": [
+    {
+      "id": 7,
+      "slug": "citizen-dupaur-trenton",
+      "count": "515",
+      "nj": [
+        {
+          "text": "The Times \u2022 Page 3 Tuesday, April 17, 1917 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1191356929/?match=1&terms=%22Du%20Paur%22%20OR%20%22DuPaur%22%20%28Trenton%20OR%20Princeton%29%20newspaper&search-id=ff4009db-c972-4d04-bc8a-f6cd08f18e2d&search-rank=1"
+        },
+        {
+          "text": "The Times \u2022 Page 2 Thursday, January 17, 1918 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/1191423384/?match=1&terms=%22Du%20Paur%22%20OR%20%22DuPaur%22%20%28Trenton%20OR%20Princeton%29%20newspaper&search-id=ff4009db-c972-4d04-bc8a-f6cd08f18e2d&search-rank=2"
+        },
+        {
+          "text": "Trenton Evening Times \u2022 Page 10 Thursday, January 17, 1918 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/16157427/?match=1&terms=%22Du%20Paur%22%20OR%20%22DuPaur%22%20%28Trenton%20OR%20Princeton%29%20newspaper&search-id=ff4009db-c972-4d04-bc8a-f6cd08f18e2d&search-rank=3"
+        }
+      ],
+      "keyword": "\"Du Paur\" OR \"DuPaur\" (Trenton OR Princeton) newspaper"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-nj-colored",
+      "count": "1,908,591",
+      "nj": [
+        {
+          "text": "Camden County Courier \u2022 Page 3 Saturday, April 8, 1893 Camden, New Jersey",
+          "href": "https://www.newspapers.com/image/478203337/?match=8&terms=%22The%20Citizen%22%20%22New%20Jersey%22%20%28colored%20OR%20Negro%29%20editor&search-id=0c35008d-4855-43cc-a2c9-ba1aa0802f9b&search-rank=4"
+        }
+      ],
+      "keyword": "\"The Citizen\" \"New Jersey\" (colored OR Negro) editor"
+    },
+    {
+      "id": 3,
+      "slug": "camden-pubco",
+      "count": "4,475",
+      "nj": [],
+      "keyword": "\"Camden News Publishing\""
+    },
+    {
+      "id": 3,
+      "slug": "camden-green-colored",
+      "count": "7,476",
+      "nj": [],
+      "keyword": "\"C. N. Green\" (colored OR Negro OR editor)"
+    },
+    {
+      "id": 45,
+      "slug": "apex-1934-press",
+      "count": "58,408",
+      "nj": [],
+      "keyword": "\"Apex News\""
+    },
+    {
+      "id": 45,
+      "slug": "apex-morgan-only",
+      "count": "465",
+      "nj": [],
+      "keyword": "\"Archie J. Morgan\""
+    },
+    {
+      "id": 79,
+      "slug": "hiram-union",
+      "count": null,
+      "nj": [],
+      "keyword": "\"Hiram\" (newspaper OR \"Star-News\") (Vauxhall OR Union)"
+    }
+  ],
+  "opened": [
+    {
+      "id": 7,
+      "slug": "citizen-dupaur-trenton",
+      "card": "The Times \u2022 Page 3 Tuesday, April 17, 1917 Trenton, New Jersey",
+      "url": "https://www.newspapers.com/image/1191356929/?match=1&terms=%22Du%20Paur%22%20OR%20%22DuPaur%22%20%28Trenton%20OR%20Princeton%29%20newspaper&search-id=ff4009db-c972-4d04-bc8a-f6cd08f18e2d&search-rank=1",
+      "shot": "q7iopen-citizen-dupaur-trenton-1917.png"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-dupaur-trenton",
+      "card": "The Times \u2022 Page 2 Thursday, January 17, 1918 Trenton, New Jersey",
+      "url": "https://www.newspapers.com/image/1191423384/?match=1&terms=%22Du%20Paur%22%20OR%20%22DuPaur%22%20%28Trenton%20OR%20Princeton%29%20newspaper&search-id=ff4009db-c972-4d04-bc8a-f6cd08f18e2d&search-rank=2",
+      "shot": "q7iopen-citizen-dupaur-trenton-1918.png"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-nj-colored",
+      "card": "Camden County Courier \u2022 Page 3 Saturday, April 8, 1893 Camden, New Jersey",
+      "url": "https://www.newspapers.com/image/478203337/?match=8&terms=%22The%20Citizen%22%20%22New%20Jersey%22%20%28colored%20OR%20Negro%29%20editor&search-id=0c35008d-4855-43cc-a2c9-ba1aa0802f9b&search-rank=4",
+      "shot": "q7iopen-citizen-nj-colored-1893.png"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "searches": [
+    {
+      "id": 7,
+      "slug": "citizen-depaur",
+      "keyword": "\"de Paur\" OR \"De Paur\" Princeton",
+      "count": "67",
+      "cards": 10,
+      "nj_cards": [
+        {
+          "text": "Trenton Evening Times \u2022 Page 10 Tuesday, August 27, 1918 Trenton, New Jersey",
+          "href": "https://www.newspapers.com/image/16614882/?match=5&terms=%22de%20Paur%22%20OR%20%22De%20Paur%22%20Princeton&search-id=ba7ea218-d55e-46ec-a2ea-6bd7c1aec989&search-rank=4"
+        },
+        {
+          "text": "The News \u2022 Page 12 Saturday, September 23, 1950 Paterson, New Jersey",
+          "href": "https://www.newspapers.com/image/526713370/?match=3&terms=%22de%20Paur%22%20OR%20%22De%20Paur%22%20Princeton&search-id=ba7ea218-d55e-46ec-a2ea-6bd7c1aec989&search-rank=3"
+        },
+        {
+          "text": "Ridgewood Herald-News \u2022 Page 37 Thursday, January 9, 1969 Ridgewood, New Jersey",
+          "href": "https://www.newspapers.com/image/633024122/?match=1&terms=%22de%20Paur%22%20OR%20%22De%20Paur%22%20Princeton&search-id=ba7ea218-d55e-46ec-a2ea-6bd7c1aec989&search-rank=10"
+        }
+      ],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22de+Paur%22+OR+%22De+Paur%22+Princeton"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-depaur-cafe",
+      "keyword": "\"De Paur\" (cafe OR restaurant OR caterer)",
+      "count": "295",
+      "cards": 10,
+      "nj_cards": [
+        {
+          "text": "The Morning Call \u2022 Page 6 Saturday, November 12, 1949 Paterson, New Jersey",
+          "href": "https://www.newspapers.com/image/553483960/?match=1&terms=%22De%20Paur%22%20%28cafe%20OR%20restaurant%20OR%20caterer%29&search-id=011fe965-fad8-43ff-a8d1-c0922ffc608b&search-rank=2"
+        }
+      ],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22De+Paur%22+%28cafe+OR+restaurant+OR+caterer%29"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-colored-paper",
+      "keyword": "Princeton \"colored newspaper\"",
+      "count": null,
+      "cards": 0,
+      "nj_cards": [],
+      "url": "https://web.archive.org/web/20220502164047id_/https://www.publicsq.org/"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-title-race",
+      "keyword": "\"The Citizen\" Princeton (colored OR negro OR \"Negro race\")",
+      "count": "1,787,450",
+      "cards": 10,
+      "nj_cards": [],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22The+Citizen%22+Princeton+%28colored+OR+negro+OR+%22Negro+race%22%29"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-witherspoon",
+      "keyword": "\"9 Witherspoon\"",
+      "count": null,
+      "cards": 0,
+      "nj_cards": [],
+      "url": "https://www.newspapers.com/search/results/?keyword=%229+Witherspoon%22"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-mission",
+      "keyword": "\"industrial improvement of the Negro\"",
+      "count": "44",
+      "cards": 10,
+      "nj_cards": [],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22industrial+improvement+of+the+Negro%22"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-auston-editor",
+      "keyword": "\"Henry J. Auston\" OR \"Henry Auston\" (editor OR newspaper OR Citizen)",
+      "count": "279",
+      "cards": 10,
+      "nj_cards": [],
+      "url": "https://www.newspapers.com/search/results/?keyword=%22Henry+J.+Auston%22+OR+%22Henry+Auston%22+%28editor+OR+newspaper+OR+Citizen%29"
+    }
+  ],
+  "opened": [
+    {
+      "id": 7,
+      "slug": "citizen-depaur",
+      "card": "Trenton Evening Times \u2022 Page 10 Tuesday, August 27, 1918 Trenton, New Jersey",
+      "url": "https://www.newspapers.com/image/16614882/?match=5&terms=%22de%20Paur%22%20OR%20%22De%20Paur%22%20Princeton&search-id=ba7ea218-d55e-46ec-a2ea-6bd7c1aec989&search-rank=4",
+      "shot": "q7copen-citizen-depaur-1918.png",
+      "find": "de Paur"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-depaur",
+      "card": "The News \u2022 Page 12 Saturday, September 23, 1950 Paterson, New Jersey",
+      "url": "https://www.newspapers.com/image/526713370/?match=3&terms=%22de%20Paur%22%20OR%20%22De%20Paur%22%20Princeton&search-id=ba7ea218-d55e-46ec-a2ea-6bd7c1aec989&search-rank=3",
+      "shot": "q7copen-citizen-depaur-1950.png",
+      "find": "de Paur"
+    },
+    {
+      "id": 7,
+      "slug": "citizen-depaur-cafe",
+      "card": "The Morning Call \u2022 Page 6 Saturday, November 12, 1949 Paterson, New Jersey",
+      "url": "https://www.newspapers.com/image/553483960/?match=1&terms=%22De%20Paur%22%20%28cafe%20OR%20restaurant%20OR%20caterer%29&search-id=011fe965-fad8-43ff-a8d1-c0922ffc608b&search-rank=2",
+      "shot": "q7copen-citizen-depaur-cafe-1949.png",
+      "find": "Paur"
+    }
+  ]
+}

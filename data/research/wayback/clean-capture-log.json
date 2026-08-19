@@ -1,0 +1,386 @@
+{
+  "generated": "2026-08-19T11:03:59",
+  "total": 18,
+  "ok": 18,
+  "failed": 0,
+  "captures": [
+    {
+      "pub_id": 4,
+      "name": "Black In Jersey",
+      "kind": "website_screenshot",
+      "url": "https://www.blackinjersey.com/",
+      "original_url": "https://www.blackinjersey.com/",
+      "old_file": "data/research/wayback/snapshots/004-black-in-jersey.png",
+      "file": "data/research/wayback/clean/004-black-in-jersey-live.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 7150,
+      "dimensions": [
+        2880,
+        14300
+      ],
+      "stddev": 59.66,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 16154214
+    },
+    {
+      "pub_id": 6,
+      "name": "Front Runner New Jersey",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20180729184443/https://frontrunnernewjersey.com/",
+      "original_url": "https://web.archive.org/web/20180729184443/https://frontrunnernewjersey.com/",
+      "old_file": "data/research/wayback/snapshots/006-front-runner-new-jersey.png",
+      "file": "data/research/wayback/clean/006-front-runner-new-jersey-20180729184443.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 3126,
+      "dimensions": [
+        2880,
+        6252
+      ],
+      "stddev": 34.77,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 1008422
+    },
+    {
+      "pub_id": 8,
+      "name": "South Jersey Journal",
+      "kind": "website_screenshot",
+      "url": "https://southjerseyjournal.wordpress.com/south-jersey-journal/",
+      "original_url": "https://southjerseyjournal.wordpress.com/south-jersey-journal/",
+      "old_file": "data/research/sites/south-jersey-journal-about.png",
+      "file": "data/research/wayback/clean/008-south-jersey-journal-live.png",
+      "http_status": 403,
+      "clipped": false,
+      "page_height": 1000,
+      "dimensions": [
+        2880,
+        4724
+      ],
+      "stddev": 93.96,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 2570643
+    },
+    {
+      "pub_id": 12,
+      "name": "Five Wards Media",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20250613131129/https://www.fivewardsmedia.com/",
+      "original_url": "https://web.archive.org/web/20250613131129https://www.fivewardsmedia.com/",
+      "old_file": "data/research/wayback/snapshots/012-five-wards-media.png",
+      "file": "data/research/wayback/clean/012-five-wards-media-20250613131129.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 3124,
+      "dimensions": [
+        2880,
+        6248
+      ],
+      "stddev": 62.86,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 6059855
+    },
+    {
+      "pub_id": 17,
+      "name": "Trenton Journal",
+      "kind": "website_screenshot",
+      "url": "https://trentonjournal.com/",
+      "original_url": "https://trentonjournal.com/",
+      "old_file": "data/research/wayback/snapshots/017-trenton-journal.png",
+      "file": "data/research/wayback/clean/017-trenton-journal-live.png",
+      "http_status": 403,
+      "clipped": false,
+      "page_height": 4989,
+      "dimensions": [
+        2880,
+        9978
+      ],
+      "stddev": 94.58,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 7038029
+    },
+    {
+      "pub_id": 19,
+      "name": "NJ in Color",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20220622225425/https://njincolor.com/",
+      "original_url": "https://web.archive.org/web/20220622225425/https://njincolor.com/",
+      "old_file": "data/research/wayback/snapshots/019-nj-in-color.png",
+      "file": "data/research/wayback/clean/019-nj-in-color-20220622225425.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 2848,
+      "dimensions": [
+        2914,
+        7872
+      ],
+      "stddev": 69.24,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 308296
+    },
+    {
+      "pub_id": 20,
+      "name": "New Jersey Urban News",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20230307222958/https://njurbannews.com/",
+      "original_url": "https://web.archive.org/web/20230307222958https://njurbannews.com/",
+      "old_file": "data/research/wayback/snapshots/020-new-jersey-urban-news.png",
+      "file": "data/research/wayback/clean/020-new-jersey-urban-news-20230307222958.png",
+      "http_status": 200,
+      "clipped": true,
+      "page_height": 11210,
+      "dimensions": [
+        2880,
+        16000
+      ],
+      "stddev": 102.68,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 12889750
+    },
+    {
+      "pub_id": 22,
+      "name": "Ark Republic",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20170708221608/http://arkrepublic.com:80/",
+      "original_url": "https://web.archive.org/web/20170708221608/http://arkrepublic.com:80/",
+      "old_file": "data/research/wayback/snapshots/022-ark-republic.png",
+      "file": "data/research/wayback/clean/022-ark-republic-20170708221608.png",
+      "http_status": 200,
+      "clipped": true,
+      "page_height": 9167,
+      "dimensions": [
+        2880,
+        16000
+      ],
+      "stddev": 34.0,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 1071656
+    },
+    {
+      "pub_id": 23,
+      "name": "The Newark Times",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20141018093931/http://thenewarktimes.com:80/",
+      "original_url": "https://web.archive.org/web/20141018093931http://thenewarktimes.com:80/",
+      "old_file": "data/research/wayback/snapshots/023-the-newark-times.png",
+      "file": "data/research/wayback/clean/023-the-newark-times-20141018093931.png",
+      "http_status": 200,
+      "clipped": true,
+      "page_height": 16131,
+      "dimensions": [
+        2880,
+        16000
+      ],
+      "stddev": 24.11,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 630972
+    },
+    {
+      "pub_id": 25,
+      "name": "Atlantic City Focus",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20240506145430/https://www.atlanticcityfocus.com/",
+      "original_url": "https://web.archive.org/web/20240506145430https://www.atlanticcityfocus.com/",
+      "old_file": "data/research/wayback/snapshots/025-atlantic-city-focus.png",
+      "file": "data/research/wayback/clean/025-atlantic-city-focus-20240506145430.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 3858,
+      "dimensions": [
+        2880,
+        7998
+      ],
+      "stddev": 50.02,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 4413148
+    },
+    {
+      "pub_id": 29,
+      "name": "Faithfully Magazine",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20151025031224/http://www.faithfullymagazine.com:80/",
+      "original_url": "https://web.archive.org/web/20151025031224http://www.faithfullymagazine.com:80/",
+      "old_file": "data/research/wayback/snapshots/029-faithfully-magazine.png",
+      "file": "data/research/wayback/clean/029-faithfully-magazine-20151025031224.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 4923,
+      "dimensions": [
+        2880,
+        9846
+      ],
+      "stddev": 62.92,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 1305469
+    },
+    {
+      "pub_id": 32,
+      "name": "Trenton365 Stream with Jacque Howard",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20211208013612/https://jacque-howard.com/",
+      "original_url": "https://web.archive.org/web/20211208013612/https://jacque-howard.com/",
+      "old_file": "data/research/wayback/snapshots/032-trenton365-stream-with-jacque-howard.png",
+      "file": "data/research/wayback/clean/032-trenton365-stream-with-jacque-howard-20211208013612.png",
+      "http_status": 200,
+      "clipped": true,
+      "page_height": 5356,
+      "dimensions": [
+        2880,
+        16000
+      ],
+      "stddev": 107.48,
+      "ok": true,
+      "notes": "ok; cropped to 8000 css px cap",
+      "attempts": 1,
+      "bytes": 363595
+    },
+    {
+      "pub_id": 33,
+      "name": "The Black Observer",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20210120065101/https://scarletandblack.rutgers.edu/",
+      "original_url": "https://web.archive.org/web/20210120065101/https://scarletandblack.rutgers.edu/",
+      "old_file": "data/research/wayback/snapshots/033-the-black-observer.png",
+      "file": "data/research/wayback/clean/033-the-black-observer-20210120065101.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 2165,
+      "dimensions": [
+        2880,
+        4330
+      ],
+      "stddev": 108.93,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 1950833
+    },
+    {
+      "pub_id": 36,
+      "name": "More Jersey",
+      "kind": "website_screenshot",
+      "url": "https://morejersey.com/",
+      "original_url": "https://morejersey.com/",
+      "old_file": "data/research/wayback/snapshots/036-more-jersey.png",
+      "file": "data/research/wayback/clean/036-more-jersey-live.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 3179,
+      "dimensions": [
+        2880,
+        6456
+      ],
+      "stddev": 96.1,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 4546252
+    },
+    {
+      "pub_id": 43,
+      "name": "Public Square Amplified",
+      "kind": "website_screenshot",
+      "url": "https://www.publicsq.org/",
+      "original_url": "https://www.publicsq.org/",
+      "old_file": "data/research/wayback/snapshots/043-public-square-amplified.png",
+      "file": "data/research/wayback/clean/043-public-square-amplified-live.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 4180,
+      "dimensions": [
+        2880,
+        9154
+      ],
+      "stddev": 65.18,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 5705704
+    },
+    {
+      "pub_id": 71,
+      "name": "The Missionary Magazine",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20040207205909/http://www.wms-amec.org:80/",
+      "original_url": "https://web.archive.org/web/20040207205909/http://www.wms-amec.org:80/",
+      "old_file": "data/research/wayback/snapshots/071-the-missionary-magazine.png",
+      "file": "data/research/wayback/clean/071-the-missionary-magazine-20040207205909.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 1000,
+      "dimensions": [
+        2880,
+        2000
+      ],
+      "stddev": 21.92,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 303663
+    },
+    {
+      "pub_id": 84,
+      "name": "Unity and Struggle",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20200118211629/https://www.marxists.org/history/erol/periodicals/unity-struggle/index.htm",
+      "original_url": "https://web.archive.org/web/20200118211629https://www.marxists.org/history/erol/periodicals/unity-struggle/index.htm",
+      "old_file": "data/research/wayback/snapshots/084-unity-and-struggle.png",
+      "file": "data/research/wayback/clean/084-unity-and-struggle-20200118211629.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 2861,
+      "dimensions": [
+        2880,
+        5722
+      ],
+      "stddev": 30.45,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 450409
+    },
+    {
+      "pub_id": 128,
+      "name": "Newark Black Newspapers Collection | Digital Collections",
+      "kind": "wayback_snapshot",
+      "url": "https://web.archive.org/web/20190419185835/https://collections.libraries.rutgers.edu/",
+      "original_url": "https://web.archive.org/web/20190419185835https://collections.libraries.rutgers.edu/",
+      "old_file": "data/research/wayback/snapshots/128-newark-black-newspapers-collection---digital-c.png",
+      "file": "data/research/wayback/clean/128-newark-black-newspapers-collection-digital-colle-20190419185835.png",
+      "http_status": 200,
+      "clipped": false,
+      "page_height": 2367,
+      "dimensions": [
+        2880,
+        4734
+      ],
+      "stddev": 77.87,
+      "ok": true,
+      "notes": "ok",
+      "attempts": 1,
+      "bytes": 4405303
+    }
+  ]
+}

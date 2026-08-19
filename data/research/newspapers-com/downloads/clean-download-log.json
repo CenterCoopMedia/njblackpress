@@ -1,0 +1,634 @@
+{
+  "monmouth-democrat_1904-09-08_p4_echo-burned-out": {
+    "slug": "monmouth-democrat_1904-09-08_p4_echo-burned-out",
+    "url": "https://www.newspapers.com/image/497174278/",
+    "image_id": "497174278",
+    "nj_printed": true,
+    "when": "2026-08-19T10:23:27",
+    "jpg": {
+      "bytes": 3931177,
+      "width": 3557,
+      "height": 4418,
+      "mean_lum": 206.4,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\monmouth-democrat_1904-09-08_p4_echo-burned-out.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "e6e055da-0e5e-4a75-878f-c6b805696abd"
+    },
+    "pdf": {
+      "bytes": 1012215,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\monmouth-democrat_1904-09-08_p4_echo-burned-out.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "8a059a4d-f097-4878-a5d7-5ca66155060f"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "trenton-sunday-advertiser_1893-11-05_p1_herbert-vs-bradley": {
+    "slug": "trenton-sunday-advertiser_1893-11-05_p1_herbert-vs-bradley",
+    "url": "https://www.newspapers.com/image/1194114727/",
+    "image_id": "1194114727",
+    "nj_printed": true,
+    "when": "2026-08-19T10:23:56",
+    "jpg": {
+      "bytes": 2963933,
+      "width": 2803,
+      "height": 3652,
+      "mean_lum": 182.3,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\trenton-sunday-advertiser_1893-11-05_p1_herbert-vs-bradley.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "3f9d466d-c8df-40ab-a655-5f4c1282ea57"
+    },
+    "pdf": {
+      "bytes": 1146541,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\trenton-sunday-advertiser_1893-11-05_p1_herbert-vs-bradley.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "8befcc1f-5047-4b14-9e4d-afd1360758ca"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "asbury-park-press_1893-07-22_p1_murrell-speaking": {
+    "slug": "asbury-park-press_1893-07-22_p1_murrell-speaking",
+    "url": "https://www.newspapers.com/image/436760060/",
+    "image_id": "436760060",
+    "nj_printed": true,
+    "when": "2026-08-19T10:24:18",
+    "jpg": {
+      "bytes": 2040512,
+      "width": 2484,
+      "height": 4121,
+      "mean_lum": 185.3,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\asbury-park-press_1893-07-22_p1_murrell-speaking.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "f7f3e00f-dc08-4779-ab6e-4deadb9c0642"
+    },
+    "pdf": {
+      "bytes": 790057,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\asbury-park-press_1893-07-22_p1_murrell-speaking.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "8426b58a-572d-4d6b-8a83-9160472772c6"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "shore-press_1893-07-28_p6_murrell-asbury-meeting": {
+    "slug": "shore-press_1893-07-28_p6_murrell-asbury-meeting",
+    "url": "https://www.newspapers.com/image/436807841/",
+    "image_id": "436807841",
+    "nj_printed": true,
+    "when": "2026-08-19T10:26:56",
+    "jpg": {
+      "bytes": 1759080,
+      "width": 2454,
+      "height": 4171,
+      "mean_lum": 197.7,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\shore-press_1893-07-28_p6_murrell-asbury-meeting.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "0bf6c121-14b9-4966-a997-eb8bc8f570cd"
+    },
+    "pdf": {
+      "bytes": 683924,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\shore-press_1893-07-28_p6_murrell-asbury-meeting.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "trenton-sunday-advertiser_1895-10-20_p1_herbert-gop-committee": {
+    "slug": "trenton-sunday-advertiser_1895-10-20_p1_herbert-gop-committee",
+    "url": "https://www.newspapers.com/image/1194116748/",
+    "image_id": "1194116748",
+    "nj_printed": true,
+    "when": "2026-08-19T10:29:47",
+    "jpg": {
+      "bytes": 3194775,
+      "width": 2816,
+      "height": 3635,
+      "mean_lum": 176.2,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\trenton-sunday-advertiser_1895-10-20_p1_herbert-gop-committee.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "18c4aeb9-789f-4cba-a11b-69fa9228b2d2"
+    },
+    "pdf": {
+      "bytes": 1282473,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\trenton-sunday-advertiser_1895-10-20_p1_herbert-gop-committee.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "7bc446de-8d45-446b-9ead-420564220c60"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "asbury-park-press_1909-03-05_p2_echo-moves-red-bank": {
+    "slug": "asbury-park-press_1909-03-05_p2_echo-moves-red-bank",
+    "url": "https://www.newspapers.com/image/143869436/",
+    "image_id": "143869436",
+    "nj_printed": true,
+    "when": "2026-08-19T10:30:09",
+    "jpg": {
+      "bytes": 1976048,
+      "width": 2627,
+      "height": 3897,
+      "mean_lum": 190.8,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\asbury-park-press_1909-03-05_p2_echo-moves-red-bank.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "90889796-7a72-49b9-b755-a5185e216bc8"
+    },
+    "pdf": {
+      "bytes": 770572,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\asbury-park-press_1909-03-05_p2_echo-moves-red-bank.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "e03bdc05-0c3d-4f3d-96de-48f9190d610d"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "courier-post_1932-03-22_p14_ironsides-echo-award": {
+    "slug": "courier-post_1932-03-22_p14_ironsides-echo-award",
+    "url": "https://www.newspapers.com/image/446292432/",
+    "image_id": "446292432",
+    "nj_printed": true,
+    "when": "2026-08-19T10:30:31",
+    "jpg": {
+      "bytes": 2360771,
+      "width": 2715,
+      "height": 3770,
+      "mean_lum": 189.2,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\courier-post_1932-03-22_p14_ironsides-echo-award.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "ffd0de1e-2c56-42db-b919-85fb78200d11"
+    },
+    "pdf": {
+      "bytes": 919915,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\courier-post_1932-03-22_p14_ironsides-echo-award.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "courier-post_1936-01-06_p3_camp-cooper-paper": {
+    "slug": "courier-post_1936-01-06_p3_camp-cooper-paper",
+    "url": "https://www.newspapers.com/image/447571125/",
+    "image_id": "447571125",
+    "nj_printed": true,
+    "when": "2026-08-19T10:33:21",
+    "jpg": {
+      "bytes": 2278586,
+      "width": 2820,
+      "height": 3630,
+      "mean_lum": 204.2,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\courier-post_1936-01-06_p3_camp-cooper-paper.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "cff2c93e-4f1e-4c51-97af-2522210eb4fb"
+    },
+    "pdf": {
+      "bytes": 944332,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\courier-post_1936-01-06_p3_camp-cooper-paper.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "4a7267e5-4700-400a-830e-4d8d2b00cc7c"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "the-news-paterson_1939-09-09_p9_nj-guardian-cited": {
+    "slug": "the-news-paterson_1939-09-09_p9_nj-guardian-cited",
+    "url": "https://www.newspapers.com/image/525697398/",
+    "image_id": "525697398",
+    "nj_printed": true,
+    "when": "2026-08-19T10:33:43",
+    "jpg": {
+      "bytes": 2144990,
+      "width": 2662,
+      "height": 3846,
+      "mean_lum": 124.4,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\the-news-paterson_1939-09-09_p9_nj-guardian-cited.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "ee2aac4e-46d0-4498-9dfa-8b43e35b3579"
+    },
+    "pdf": {
+      "bytes": 818072,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\the-news-paterson_1939-09-09_p9_nj-guardian-cited.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "trenton-times_1940-05-07_p13_ironsides-echo-awards": {
+    "slug": "trenton-times_1940-05-07_p13_ironsides-echo-awards",
+    "url": "https://www.newspapers.com/image/1191434889/",
+    "image_id": "1191434889",
+    "nj_printed": true,
+    "when": "2026-08-19T10:36:34",
+    "jpg": {
+      "bytes": 2552784,
+      "width": 2707,
+      "height": 3781,
+      "mean_lum": 193.5,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\trenton-times_1940-05-07_p13_ironsides-echo-awards.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "a4b608ac-e787-4830-9e8c-6c4632bb89ff"
+    },
+    "pdf": {
+      "bytes": 1008909,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\trenton-times_1940-05-07_p13_ironsides-echo-awards.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "c14e4cc1-c743-49b9-b783-aaa24a19ad24"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "star-ledger_1949-01-19_p14_melvin-johnson-left-papers": {
+    "slug": "star-ledger_1949-01-19_p14_melvin-johnson-left-papers",
+    "url": "https://www.newspapers.com/image/1108232407/",
+    "image_id": "1108232407",
+    "nj_printed": true,
+    "when": "2026-08-19T10:36:56",
+    "jpg": {
+      "bytes": 2314495,
+      "width": 2640,
+      "height": 3878,
+      "mean_lum": 184.3,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\star-ledger_1949-01-19_p14_melvin-johnson-left-papers.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "86f14746-0485-4ff4-ab81-770efe913226"
+    },
+    "pdf": {
+      "bytes": 898555,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\star-ledger_1949-01-19_p14_melvin-johnson-left-papers.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "asbury-park-press_1949-11-06_p2_johnson-montclair-newark": {
+    "slug": "asbury-park-press_1949-11-06_p2_johnson-montclair-newark",
+    "url": "https://www.newspapers.com/image/143065742/",
+    "image_id": "143065742",
+    "nj_printed": true,
+    "when": "2026-08-19T10:39:46",
+    "jpg": {
+      "bytes": 3271943,
+      "width": 3042,
+      "height": 3999,
+      "mean_lum": 185.7,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\asbury-park-press_1949-11-06_p2_johnson-montclair-newark.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "8b3caa40-e4df-4a1f-83ac-754bad037b8c"
+    },
+    "pdf": {
+      "bytes": 1123562,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\asbury-park-press_1949-11-06_p2_johnson-montclair-newark.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "asbury-park-press_1960-05-20_p21_bronze-thrills-july": {
+    "slug": "asbury-park-press_1960-05-20_p21_bronze-thrills-july",
+    "url": "https://www.newspapers.com/image/143086953/",
+    "image_id": "143086953",
+    "nj_printed": true,
+    "when": "2026-08-19T10:42:37",
+    "jpg": {
+      "bytes": 1867989,
+      "width": 2725,
+      "height": 3756,
+      "mean_lum": 177.0,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\asbury-park-press_1960-05-20_p21_bronze-thrills-july.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "158da24f-d18f-4520-845e-6dd61b2371c3"
+    },
+    "pdf": {
+      "bytes": 757741,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\asbury-park-press_1960-05-20_p21_bronze-thrills-july.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "998cfe1b-ebe5-4663-813f-8054bc77309f"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "ridgewood-news_1987-11-26_p14_landscape-ap-smith": {
+    "slug": "ridgewood-news_1987-11-26_p14_landscape-ap-smith",
+    "url": "https://www.newspapers.com/image/1122504536/",
+    "image_id": "1122504536",
+    "nj_printed": true,
+    "when": "2026-08-19T10:42:59",
+    "jpg": {
+      "bytes": 1944211,
+      "width": 2739,
+      "height": 3737,
+      "mean_lum": 186.8,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\ridgewood-news_1987-11-26_p14_landscape-ap-smith.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "6899e75d-2b87-4139-8763-0b217d8ff4d5"
+    },
+    "pdf": {
+      "bytes": 785957,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\ridgewood-news_1987-11-26_p14_landscape-ap-smith.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "courier-news_1991-06-24_p8_webber-after-hours": {
+    "slug": "courier-news_1991-06-24_p8_webber-after-hours",
+    "url": "https://www.newspapers.com/image/223216862/",
+    "image_id": "223216862",
+    "nj_printed": true,
+    "when": "2026-08-19T10:45:50",
+    "jpg": {
+      "bytes": 2022224,
+      "width": 2425,
+      "height": 4221,
+      "mean_lum": 179.5,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\courier-news_1991-06-24_p8_webber-after-hours.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "9676d80c-f117-4ce1-bf57-ea4f7c84e00c"
+    },
+    "pdf": {
+      "bytes": 707422,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\courier-news_1991-06-24_p8_webber-after-hours.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "the-record-hackensack_1991-02-09_p2_landscape-renamed": {
+    "slug": "the-record-hackensack_1991-02-09_p2_landscape-renamed",
+    "url": "https://www.newspapers.com/image/496517756/",
+    "image_id": "496517756",
+    "nj_printed": true,
+    "when": "2026-08-19T10:48:40",
+    "jpg": {
+      "bytes": 1638171,
+      "width": 2452,
+      "height": 4174,
+      "mean_lum": 192.7,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\the-record-hackensack_1991-02-09_p2_landscape-renamed.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "d06ddce9-1605-4709-aaef-6ece74c17398"
+    },
+    "pdf": {
+      "bytes": 626598,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\the-record-hackensack_1991-02-09_p2_landscape-renamed.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper": {
+    "slug": "sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper",
+    "url": "https://www.newspapers.com/image/634766635/",
+    "image_id": "634766635",
+    "nj_printed": true,
+    "when": "2026-08-19T10:51:31",
+    "jpg": {
+      "bytes": 1381531,
+      "width": 2838,
+      "height": 3607,
+      "mean_lum": 151.4,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "4f5e1a91-c589-4783-ac82-f3076cf03fc6"
+    },
+    "pdf": {
+      "bytes": 617168,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "daily-record-morristown_2023-05-21_pD2_nj-afro-american-described": {
+    "slug": "daily-record-morristown_2023-05-21_pD2_nj-afro-american-described",
+    "url": "https://www.newspapers.com/image/962761544/",
+    "image_id": "962761544",
+    "nj_printed": true,
+    "when": "2026-08-19T10:54:22",
+    "jpg": {
+      "bytes": 2220369,
+      "width": 2304,
+      "height": 4442,
+      "mean_lum": 214.7,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\daily-record-morristown_2023-05-21_pD2_nj-afro-american-described.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "69e6f110-1d0a-43fe-aa59-05917c87900d"
+    },
+    "pdf": {
+      "bytes": 720739,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\daily-record-morristown_2023-05-21_pD2_nj-afro-american-described.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "5b6e3367-b30e-44b8-b98e-f3ef90c4e925"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "evening-world_1888-12-11_p2_trumpet-negro-organ": {
+    "slug": "evening-world_1888-12-11_p2_trumpet-negro-organ",
+    "url": "https://www.newspapers.com/image/50663302/",
+    "image_id": "50663302",
+    "nj_printed": false,
+    "when": "2026-08-19T10:54:45",
+    "jpg": {
+      "bytes": 2789573,
+      "width": 2898,
+      "height": 3532,
+      "mean_lum": 188.7,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\evening-world_1888-12-11_p2_trumpet-negro-organ.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "867f3df2-a515-47d6-9227-9b11c6f01b60"
+    },
+    "pdf": {
+      "bytes": 1312663,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\evening-world_1888-12-11_p2_trumpet-negro-organ.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "16f3a22e-c94c-4f02-a2de-a17bb802de94"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "washington-bee_1889-05-18_p2_murrell-trumpet-editor": {
+    "slug": "washington-bee_1889-05-18_p2_murrell-trumpet-editor",
+    "url": "https://www.newspapers.com/image/46319440/",
+    "image_id": "46319440",
+    "nj_printed": false,
+    "when": "2026-08-19T10:55:07",
+    "jpg": {
+      "bytes": 3682326,
+      "width": 3470,
+      "height": 5160,
+      "mean_lum": 196.8,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\washington-bee_1889-05-18_p2_murrell-trumpet-editor.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "5b4b76f8-b979-4f1e-aea3-be05bbf5a168"
+    },
+    "pdf": {
+      "bytes": 935282,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\washington-bee_1889-05-18_p2_murrell-trumpet-editor.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "f442e8c2-e816-42bd-ab89-fcaea3288b6b"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "new-york-tribune_1895-12-08_p14_herbert-profile": {
+    "slug": "new-york-tribune_1895-12-08_p14_herbert-profile",
+    "url": "https://www.newspapers.com/image/78953914/",
+    "image_id": "78953914",
+    "nj_printed": false,
+    "when": "2026-08-19T10:55:30",
+    "jpg": {
+      "bytes": 2943632,
+      "width": 3116,
+      "height": 4552,
+      "mean_lum": 175.6,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\new-york-tribune_1895-12-08_p14_herbert-profile.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "95204bc3-d717-4e23-b086-b89371bc562b"
+    },
+    "pdf": {
+      "bytes": 832972,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\new-york-tribune_1895-12-08_p14_herbert-profile.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "new-york-age_1909-10-21_p1_herbert-obituary": {
+    "slug": "new-york-age_1909-10-21_p1_herbert-obituary",
+    "url": "https://www.newspapers.com/image/33451515/",
+    "image_id": "33451515",
+    "nj_printed": false,
+    "when": "2026-08-19T10:58:21",
+    "jpg": {
+      "bytes": 2384959,
+      "width": 2827,
+      "height": 3621,
+      "mean_lum": 135.5,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\new-york-age_1909-10-21_p1_herbert-obituary.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "80e901e3-8d3a-496a-8106-34c2799bede6"
+    },
+    "pdf": {
+      "bytes": 1012714,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\new-york-age_1909-10-21_p1_herbert-obituary.pdf",
+      "method": "native \"Save as PDF*\" export via CDP allowAndName",
+      "source_name": "9e33faab-8949-4e84-8b8f-72329f721bce"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "new-york-age_1921-04-09_p4_red-bank-echo-cited": {
+    "slug": "new-york-age_1921-04-09_p4_red-bank-echo-cited",
+    "url": "https://www.newspapers.com/image/39621583/",
+    "image_id": "39621583",
+    "nj_printed": false,
+    "when": "2026-08-19T10:58:43",
+    "jpg": {
+      "bytes": 2149885,
+      "width": 2572,
+      "height": 3980,
+      "mean_lum": 180.9,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\new-york-age_1921-04-09_p4_red-bank-echo-cited.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "c744b7f1-f0d8-41e2-b271-96f7cb39700c"
+    },
+    "pdf": {
+      "bytes": 840902,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\new-york-age_1921-04-09_p4_red-bank-echo-cited.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "afro-american_1932-07-09_p7_newark-herald-folded": {
+    "slug": "afro-american_1932-07-09_p7_newark-herald-folded",
+    "url": "https://www.newspapers.com/image/1134167020/",
+    "image_id": "1134167020",
+    "nj_printed": false,
+    "when": "2026-08-19T11:01:33",
+    "jpg": {
+      "bytes": 2921375,
+      "width": 3105,
+      "height": 4121,
+      "mean_lum": 191.8,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\afro-american_1932-07-09_p7_newark-herald-folded.jpg",
+      "method": "native \"Save as JPG\" export via CDP allowAndName",
+      "source_name": "0fd73623-d3f3-4820-8096-72c70c7d4fdd"
+    },
+    "pdf": {
+      "bytes": 905202,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\afro-american_1932-07-09_p7_newark-herald-folded.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "trenton-times_1976-04-23_p8_utimme-umana": {
+    "slug": "trenton-times_1976-04-23_p8_utimme-umana",
+    "url": "https://www.newspapers.com/image/1192937414/",
+    "image_id": "1192937414",
+    "nj_printed": true,
+    "jpg": {
+      "bytes": 2218127,
+      "width": 2535,
+      "height": 4038,
+      "mean_lum": 169.6,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\trenton-times_1976-04-23_p8_utimme-umana.jpg",
+      "method": "native \"Save as JPG\" export"
+    },
+    "pdf": {
+      "bytes": 776328,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\trenton-times_1976-04-23_p8_utimme-umana.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  },
+  "trenton-times_1993-09-27_p32_utimme-umana": {
+    "slug": "trenton-times_1993-09-27_p32_utimme-umana",
+    "url": "https://www.newspapers.com/image/1197515771/",
+    "image_id": "1197515771",
+    "nj_printed": true,
+    "jpg": {
+      "bytes": 2030768,
+      "width": 2498,
+      "height": 4097,
+      "mean_lum": 189.3,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\trenton-times_1993-09-27_p32_utimme-umana.jpg",
+      "method": "native \"Save as JPG\" export"
+    },
+    "pdf": {
+      "bytes": 713036,
+      "ok": true,
+      "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\newspapers-com\\downloads\\trenton-times_1993-09-27_p32_utimme-umana.pdf",
+      "method": "native \"Save as PDF*\" trusted click, retry pass"
+    },
+    "verified": "2026-08-19 final pass: both formats present and validated"
+  }
+}
