@@ -27,3 +27,6 @@ data/research/**/*.pdf
 data/research/**/*.jp2
 data/research/**/*.gif
 data/research/**/*.webp
+
+# Node
+node_modules/

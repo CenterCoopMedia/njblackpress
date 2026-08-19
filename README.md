@@ -1,5 +1,7 @@
 # NJ Black Press Archive
 
+<img width="1549" height="680" alt="image" src="https://github.com/user-attachments/assets/6a8dcb8d-192f-44f6-9043-cddd5f8219c0" />
+
 **[→ View the live archive](https://centercoopmedia.github.io/njblackpress/)**
 
 A historical database documenting Black publications in New Jersey from 1880 to present day. Built and maintained by the [Center for Cooperative Media](https://centerforcooperativemedia.org/) at Montclair State University.
@@ -124,3 +126,46 @@ If you have information about NJ Black publications not in the database, or corr
 ## License
 
 This dataset is made available for research and educational purposes. Please cite the Center for Cooperative Media when using this data.
+
+## The wiki
+
+The archive is also published as a cross-linked wiki, in two forms generated
+from the same `data/publications.json` source.
+
+### Public HTML wiki (`/wiki/`)
+
+A browsable, pre-rendered HTML wiki lives in `docs/wiki/` and ships with the
+site at **[`/njblackpress/wiki/`](https://centercoopmedia.github.io/njblackpress/wiki/)**
+(linked from the main nav). It matches the site's look (ink/paper/accent
+palette, Fraunces + DM Sans) and gives every record a crawlable permalink:
+
+- `wiki/index.html` — landing page with snapshot stats and browse links
+- `wiki/publications.html` — sortable index of all records (city, years, status)
+- `wiki/statistics.html` — counts, a founding-decade timeline, top cities, longest-running titles
+- `wiki/featured.html` — curated historic and contemporary publications
+- `wiki/publications/` — one page per publication, cross-linked to related records
+- `wiki/cities/`, `wiki/decades/`, `wiki/formats/`, `wiki/mediums/` — browse-by pages
+- `wiki/sitemap.xml` — sitemap covering every wiki page (referenced from `robots.txt`)
+
+Regenerate it after updating the data:
+
+```bash
+python3 scripts/generate_html_wiki.py
+```
+
+### Open knowledge format wiki (`okf/`)
+
+A portable [open knowledge format](https://cloud.google.com/blog/products/ai-machine-learning/introducing-the-open-knowledge-format)
+bundle in `okf/` — a directory of markdown files with YAML frontmatter and
+standard links, so people and agents can read the archive without running the
+site JavaScript. The bundle contains 250 markdown files (137 publication pages,
+grouped browse pages for cities/decades/formats/mediums, plus index, overview,
+statistics, featured, data-model, and change-log pages).
+
+```bash
+python3 scripts/generate_okf_wiki.py          # regenerate
+python3 scripts/generate_okf_wiki.py --check  # validate counts and frontmatter
+```
+
+Both generators accept `--generated-at YYYY-MM-DD` for reproducible timestamps,
+and share their data-shaping helpers so the HTML and markdown stay in lockstep.
