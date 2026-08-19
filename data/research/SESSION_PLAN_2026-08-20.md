@@ -40,6 +40,8 @@ Carry the archive from "captures done, uncommitted" toward launch: safe commit, 
 
 | s21 | Cheat-sheet polish for index/archive (tabular-nums counters, text-wrap balance, hover-media gating, focus-visible on nav search/chips, role=status on results count) | director | decided — DEFERRED to a follow-up pass. The usability agent refused the mid-flight addendum as a suspected injection. The publication-page agent applied its copy. The five items are small polish and do not block the stopping point. Joe can override |
 
+| s22 | Font pick + polish + deploy | director + agents | Joe picked Libre Franklin (no change needed; type-specimen.html deleted, port-8777 server stopped). Polish pass committed (ec43f04): cheat-sheet items on index/archive, 12 caption cleanups, 138→136 metadata counts. DEPLOY BLOCKED: CCM server migrated — old SFTP host 37.27.121.163:4377 is dead on all ports from officejawn AND houseofjawn; DNS now points to 172.236.116.153 (Akamai/Linode) with no SFTP on 22/2222/4377. Live site serves fine (403 to curl is bot-blocking; 200 with browser UA). njinfluencers runbook has the same stale IP. Joe must pull the new SFTP host/port/user from the Nestify dashboard. officejawn checkout is pulled to ec43f04 and ready |
+
 ## Rules in force
 
 - All prior standing rulings hold (Right On! exclusion, NJ-only keepers, cropped/cited/cleared before docs/).
