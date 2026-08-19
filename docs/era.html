@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta id="meta-description" name="description" content="Publication details from the NJ Black Press Archive — 136 Black-owned newspapers, magazines, and digital outlets in New Jersey from 1880 to present.">
+    <meta id="meta-description" name="description" content="Decade by decade through the NJ Black Press Archive — publications founded, dated events and clippings for each era.">
 
-    <!-- Open Graph (static fallbacks; JS sets per-publication values after load) -->
-    <meta id="og-title" property="og:title" content="Publication | NJ Black Press Archive">
-    <meta id="og-description" property="og:description" content="Publication details from the NJ Black Press Archive — 136 Black-owned newspapers, magazines, and digital outlets in New Jersey from 1880 to present.">
+    <!-- Open Graph (static fallbacks; JS sets per-story values after load) -->
+    <meta id="og-title" property="og:title" content="Eras | NJ Black Press Archive">
+    <meta id="og-description" property="og:description" content="Decade by decade through the NJ Black Press Archive — publications founded, dated events and clippings for each era.">
     <meta property="og:type" content="article">
-    <meta id="og-url" property="og:url" content="https://centercoopmedia.github.io/njblackpress/publication.html">
+    <meta id="og-url" property="og:url" content="https://centercoopmedia.github.io/njblackpress/era.html">
     <meta property="og:image" content="https://centercoopmedia.github.io/njblackpress/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -17,14 +17,14 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta id="twitter-title" name="twitter:title" content="Publication | NJ Black Press Archive">
-    <meta id="twitter-description" name="twitter:description" content="Publication details from the NJ Black Press Archive.">
+    <meta id="twitter-title" name="twitter:title" content="Eras | NJ Black Press Archive">
+    <meta id="twitter-description" name="twitter:description" content="Decade by decade through the NJ Black Press Archive.">
     <meta name="twitter:image" content="https://centercoopmedia.github.io/njblackpress/og-image.png">
 
-    <title id="page-title">Publication | NJ Black Press</title>
+    <title id="page-title">Eras | NJ Black Press</title>
 
-    <!-- Canonical (JS updates per publication) -->
-    <link id="canonical" rel="canonical" href="https://centercoopmedia.github.io/njblackpress/publication.html">
+    <!-- Canonical (JS updates per story) -->
+    <link id="canonical" rel="canonical" href="https://centercoopmedia.github.io/njblackpress/era.html">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -108,33 +108,17 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Publication page specific styles */
-        .drop-cap::first-letter {
-            float: left;
-            font-family: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
-            font-size: 4.5rem;
-            line-height: 0.8;
-            padding-right: 0.75rem;
-            padding-top: 0.25rem;
-            color: #e2662b;
-            font-weight: 900;
-        }
-        @media (max-width: 640px) {
-            .drop-cap::first-letter {
-                font-size: 3rem;
-                padding-right: 0.5rem;
-            }
+        /* Long-read measure for the narrative column */
+        .measure {
+            max-width: 68ch;
         }
 
-        /* Decorative marks flanking the masthead label. Rendered as real
-           elements with aria-hidden so screen readers do not read "tilde". */
-        .ornament-mark {
-            color: #e2662b;
-            padding: 0 0.5rem;
+        .balance {
+            text-wrap: balance;
         }
 
-        /* Evidence figures. The inset hairline makes a scan read as an object
-           sitting on the surface rather than a hole cut into it. */
+        /* Evidence images sit on a dark field with a hairline so a scan reads
+           as an object on the surface rather than a hole cut into it. */
         .evidence-figure img {
             display: block;
             width: 100%;
@@ -145,107 +129,29 @@
             outline-offset: -1px;
         }
 
-        /* Reading measure for evidence captions, citations and rights notes */
-        .measure {
-            max-width: 68ch;
+        /* A crop_first clipping is a mounted fragment, not a whole page. */
+        .clip-mounted {
+            border: 1px solid #e2662b;
+            padding: 4px;
         }
 
-        .balance {
-            text-wrap: balance;
-        }
-
-        /* Keyboard focus for the links this page builds at runtime */
-        #publication-content a:focus-visible {
+        /* Keyboard focus for links this page builds at runtime */
+        #era-content a:focus-visible {
             outline: 2px solid #e2662b;
             outline-offset: 3px;
             border-radius: 1px;
-        }
-
-        .column-rule {
-            column-rule: 1px solid #3b3122;
-        }
-
-        /* Staggered animations */
-        .animate-in {
-            animation: slideUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
-        .delay-5 { animation-delay: 0.5s; }
-        .delay-6 { animation-delay: 0.6s; }
-
-        /* Pull quote styling */
-        .pull-quote {
-            position: relative;
-            padding-left: 2rem;
-        }
-        .pull-quote::before {
-            content: '"';
-            position: absolute;
-            left: 0;
-            top: -0.5rem;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 4rem;
-            color: #e2662b;
-            line-height: 1;
-            opacity: 0.5;
-        }
-        @media (max-width: 640px) {
-            .pull-quote {
-                padding-left: 1.5rem;
-            }
-            .pull-quote::before {
-                font-size: 3rem;
-            }
-        }
-
-        /* Masthead styling */
-        .masthead-entry {
-            position: relative;
-        }
-        .masthead-entry::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2rem;
-            height: 1px;
-            background: #3b3122;
-        }
-        .masthead-entry:last-child::after {
-            display: none;
         }
     </style>
 </head>
 <body class="surface-woven bg-ink-900 text-paper-100 font-sans selection:bg-accent selection:text-white antialiased">
 
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <!-- Grain Overlay -->
     <div class="grain-overlay fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.07] mix-blend-soft-light"></div>
 
-    <!-- Loading Overlay -->
-    <div id="loading-overlay" class="fixed inset-0 bg-ink-950 z-[100] flex flex-col items-center justify-center transition-opacity duration-500">
-        <div class="text-accent text-6xl font-display font-black tracking-wide animate-pulse">NJBP</div>
-        <div class="mt-4 font-mono text-xs uppercase tracking-widest text-paper-300">Loading record...</div>
-    </div>
-
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-40 bg-ink-900/90 backdrop-blur-sm border-b border-white/10">
+    <nav class="fixed top-0 w-full z-40 bg-ink-900/90 backdrop-blur-sm border-b border-ink-600">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2 group">
                 <img src="njblackpress-icon.png" alt="NJ Black Press" class="w-8 h-8 transition-transform group-hover:rotate-12">
@@ -256,63 +162,60 @@
             <ul class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
                 <li><a href="archive.html" class="inline-block py-[14px] hover:text-accent transition-colors">Archive</a></li>
                 <li><a href="story.html" class="inline-block py-[14px] hover:text-accent transition-colors">Stories</a></li>
-                <li><a href="era.html" class="inline-block py-[14px] hover:text-accent transition-colors">Eras</a></li>
+                <li><a href="era.html" class="inline-block py-[14px] text-accent transition-colors" aria-current="page">Eras</a></li>
                 <li><a href="wiki/index.html" class="inline-block py-[14px] hover:text-accent transition-colors">Wiki</a></li>
-                <li><a href="woven.html" class="inline-block py-[14px] hover:text-accent transition-colors">Woven</a></li>
                 <li><a href="index.html#timeline" class="inline-block py-[14px] hover:text-accent transition-colors">Timeline</a></li>
-                <li><a href="index.html#database" class="inline-block py-[14px] hover:text-accent transition-colors">Database</a></li>
                 <li><a href="index.html#about" class="inline-block py-[14px] hover:text-accent transition-colors">About</a></li>
             </ul>
 
             <!-- Mobile Menu Btn -->
-            <button id="mobile-menu-btn" class="md:hidden p-[10px] text-paper-100 hover:text-accent">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <button id="mobile-menu-btn" class="md:hidden p-[10px] text-paper-100 hover:text-accent" aria-label="Open menu">
+                <svg class="w-6 h-6" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 bg-ink-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
-        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-paper-300 hover:text-accent">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-paper-300 hover:text-accent" aria-label="Close menu">
+            <svg class="w-8 h-8" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
         <ul class="space-y-8 text-center font-display text-3xl font-medium tracking-wide">
             <li><a href="archive.html" class="inline-block py-2 hover:text-accent transition-colors">Archive</a></li>
             <li><a href="story.html" class="inline-block py-2 hover:text-accent transition-colors">Stories</a></li>
             <li><a href="era.html" class="inline-block py-2 hover:text-accent transition-colors">Eras</a></li>
             <li><a href="wiki/index.html" class="inline-block py-2 hover:text-accent transition-colors">Wiki</a></li>
-            <li><a href="woven.html" class="inline-block py-2 hover:text-accent transition-colors">Woven</a></li>
             <li><a href="index.html#timeline" class="inline-block py-2 hover:text-accent transition-colors">Timeline</a></li>
-            <li><a href="index.html#database" class="inline-block py-2 hover:text-accent transition-colors">Database</a></li>
             <li><a href="index.html#about" class="inline-block py-2 hover:text-accent transition-colors">About</a></li>
         </ul>
     </div>
 
-    <main class="pt-20">
+    <main id="main-content" class="pt-20">
 
-        <!-- Back Navigation -->
-        <div class="bg-ink-950 border-b border-white/10 py-4 px-4 md:px-8">
-            <div class="max-w-[1400px] mx-auto">
-                <a href="archive.html" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-paper-300 hover:text-accent transition-colors group">
-                    <span class="transition-transform group-hover:-translate-x-1">&larr;</span>
-                    <span>Back to archive</span>
-                </a>
-            </div>
+        <!-- Breadcrumb -->
+        <div class="bg-ink-950 border-b border-ink-600 py-4 px-4 md:px-8">
+            <nav aria-label="Breadcrumb" class="max-w-[1400px] mx-auto">
+                <ol id="breadcrumb" class="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-paper-300">
+                    <li><a href="index.html" class="hover:text-accent transition-colors">Archive</a></li>
+                    <li aria-hidden="true">/</li>
+                    <li><a href="era.html" class="hover:text-accent transition-colors">Eras</a></li>
+                </ol>
+            </nav>
         </div>
 
-        <!-- Publication Content Container -->
-        <div id="publication-content">
+        <!-- Story content container -->
+        <div id="era-content">
             <!-- Content injected by JavaScript -->
         </div>
 
-        <!-- Error State -->
+        <!-- Error state -->
         <div id="error-state" class="hidden py-32 px-4 text-center">
             <div class="max-w-xl mx-auto">
                 <div class="text-8xl font-display font-black text-accent mb-6">404</div>
-                <h1 class="font-display text-4xl mb-4">Publication not found</h1>
-                <p class="text-paper-300 mb-8">The requested publication record could not be located in our archive.</p>
-                <a href="archive.html" class="inline-block px-8 py-4 bg-white text-ink-950 font-bold hover:bg-accent hover:text-white transition-colors">
-                    Browse full archive
+                <h1 class="font-display text-4xl mb-4">Decade not found</h1>
+                <p class="text-paper-300 mb-8">No decade by that name holds records in this archive.</p>
+                <a href="era.html" class="inline-block px-8 py-4 bg-white text-ink-950 font-bold hover:bg-accent hover:text-white transition-colors">
+                    Browse all decades
                 </a>
             </div>
         </div>
@@ -320,36 +223,37 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-ink-950 border-t border-white/10 py-10 px-4 md:px-8 mt-20">
+    <footer class="bg-ink-950 border-t border-ink-600 py-10 px-4 md:px-8 mt-20">
         <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-paper-300 uppercase tracking-wider">
             <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
-            <div class="flex gap-6">
+            <div class="flex flex-wrap justify-center gap-6">
                 <a href="index.html" class="inline-block px-3 py-[14px] hover:text-accent">Home</a>
                 <a href="archive.html" class="inline-block px-3 py-[14px] hover:text-accent">Archive</a>
-                <a href="wiki/index.html" class="inline-block px-3 py-[14px] hover:text-accent">Wiki</a>
-                <a href="index.html#about" class="inline-block px-3 py-[14px] hover:text-accent">About</a>
+                <a href="story.html" class="inline-block px-3 py-[14px] hover:text-accent">Stories</a>
+                <a href="era.html" class="inline-block px-3 py-[14px] hover:text-accent">Eras</a>
             </div>
         </div>
     </footer>
 
-    <script src="js/publication.js?v=20260819"></script>
+    <script src="js/era.js?v=20260819"></script>
     <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const menuClose = document.getElementById('mobile-menu-close');
-        const menu = document.getElementById('mobile-menu');
+        // Mobile menu toggle
+        (function () {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const menuClose = document.getElementById('mobile-menu-close');
+            const menu = document.getElementById('mobile-menu');
 
-        function toggleMenu() {
-            menu.classList.toggle('translate-x-full');
-            document.body.classList.toggle('overflow-hidden');
-        }
+            function toggleMenu() {
+                menu.classList.toggle('translate-x-full');
+                document.body.classList.toggle('overflow-hidden');
+            }
 
-        menuBtn.addEventListener('click', toggleMenu);
-        menuClose.addEventListener('click', toggleMenu);
-        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', toggleMenu));
+            menuBtn.addEventListener('click', toggleMenu);
+            menuClose.addEventListener('click', toggleMenu);
+            menu.querySelectorAll('a').forEach(link => link.addEventListener('click', toggleMenu));
 
-        // Copyright
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        })();
     </script>
 </body>
 </html>
