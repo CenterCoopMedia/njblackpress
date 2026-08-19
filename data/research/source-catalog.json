@@ -1,12 +1,12 @@
 {
   "generated": "2026-08-17",
   "goal": "Archival record for every NJ Black press title",
-  "publicationCount": 138,
+  "publicationCount": 137,
   "counts": {
-    "has_keeper": 137,
+    "has_keeper": 136,
     "searched_none": 1,
     "not_searched": 0,
-    "keeper_total": 182
+    "keeper_total": 181
   },
   "publications": [
     {
@@ -6439,63 +6439,6 @@
           "source": "Danky and Hady, African-American Newspapers and Periodicals",
           "date": "1998",
           "caption": "Danky entry 2199: En Avant, Newark, Haiti/politics. WHi Mar/Apr 1973."
-        }
-      ],
-      "updated": "2026-08-17"
-    },
-    {
-      "id": 60,
-      "name": "Black Women's United Front Newsletter",
-      "city": "Newark",
-      "yearFounded": 1976,
-      "yearCeased": null,
-      "status": "has_keeper",
-      "sources": {
-        "newspapers_com": {
-          "searched": true,
-          "hits": [],
-          "notes": "None matches; 0 NJ cards on first page"
-        },
-        "internet_archive": {
-          "searched": true,
-          "hits": [],
-          "notes": "IA texts query returned 0 docs"
-        },
-        "wayback": {
-          "searched": true,
-          "hits": [],
-          "notes": "no live websiteUrl; CDX not applicable"
-        },
-        "chronicling_america": {
-          "searched": true,
-          "hits": [],
-          "notes": "no LCCN in record; CA JSON not queried"
-        },
-        "other": {
-          "searched": true,
-          "hits": [
-            {
-              "kind": "catalog_record",
-              "title": "Danky entry 1085: Black Women's United Front Newsletter, Newark, 1976-?. Motto on abolition of oppression. WHi v.1 n.1 8 Mar 1976.",
-              "url": "https://archive.org/details/africanamericanne00dank/page/105/mode/1up",
-              "localFile": "data/research/danky/danky-1998-p105-bwuf.jpg",
-              "source": "Danky and Hady 1998 / Internet Archive",
-              "date": "1998",
-              "caption": "Danky entry 1085: Black Women's United Front Newsletter, Newark, 1976-?. Motto on abolition of oppression. WHi v.1 n.1 8 Mar 1976."
-            }
-          ],
-          "notes": "named library catalogs checked; no collection match for this title; Danky entry 1085: Black Women's United Front Newsletter, Newark, 1976-?. Motto on abolition of oppression. WHi v.1 n.1 8 Mar 1976."
-        }
-      },
-      "keepers": [
-        {
-          "kind": "catalog_record",
-          "title": "Danky entry 1085: Black Women's United Front Newsletter, Newark, 1976-?. Motto on abolition of oppression. WHi v.1 n.1 8 Mar 1976.",
-          "url": "https://archive.org/details/africanamericanne00dank/page/105/mode/1up",
-          "localFile": "data/research/danky/danky-1998-p105-bwuf.jpg",
-          "source": "Danky and Hady 1998 / Internet Archive",
-          "date": "1998",
-          "caption": "Danky entry 1085: Black Women's United Front Newsletter, Newark, 1976-?. Motto on abolition of oppression. WHi v.1 n.1 8 Mar 1976."
         }
       ],
       "updated": "2026-08-17"
