@@ -1,0 +1,213 @@
+{
+  "file": "C:/Users/Joe Amditis/Desktop/Crimes/playground/njblackpress/data/research/ia/clean/NewJerseyHeraldNews19420704.pdf",
+  "publication": "New Jersey Herald News (combined with The Newark Herald)",
+  "date": "1942-07-04",
+  "summary": "12-page weekly, 15th Yr. No. 26, self-described 'New Jersey's oldest and only colored weekly of 12 pages or more,' published from 130 W. Kinney St., Newark. Front page leads with a conscientious objector (Bill Sutherland) resisting the draft, William R. Jackson named to Newark Board of Education, Baxter Terrace public housing tenant organizing, and the death sentence of Odell Waller in Virginia. Interior pages cover Senate politics (Lorenzo Harris vs. Sen. William Smathers), Elks and Masonic conventions, an all-Negro Coast Guard station at Pea Island NC, extensive society/wedding pages, an editorial page under publishers Frederick W. Martin and Richard L. Martin, community correspondent columns from a dozen NJ towns, an amusements/nightlife page, a sports page (Newark Eagles Negro National League, AAU track), and church news including Dorie Miller's Navy Cross ceremony photo.",
+  "people": [
+    {
+      "name": "Bill (William Henry) Sutherland Jr.",
+      "role": "Glen Ridge conscientious objector, held by FBI for refusing CCC draft camp assignment, active in Newark Christian Colony of Religious Education"
+    },
+    {
+      "name": "William R. Jackson",
+      "role": "Court Street YMCA executive secretary, newly named to Newark Board of Education"
+    },
+    {
+      "name": "Vincent Murphy",
+      "role": "Mayor of Newark, made the Board of Education appointment"
+    },
+    {
+      "name": "Lorenzo H. Harris",
+      "role": "Asbury Park civic leader, historian, Progressive Democratic candidate for U.S. Senate, attacks Sen. William Smathers"
+    },
+    {
+      "name": "William Smathers",
+      "role": "U.S. Senator, target of 'duplicity' and Boss Frank Hague criticism"
+    },
+    {
+      "name": "Odell Waller",
+      "role": "Virginia Black sharecropper sentenced to death for murder of white tenant farmer; clemency appeal denied by Gov. Darden"
+    },
+    {
+      "name": "Frank R. Conwell",
+      "role": "attorney/civic figure appealing to FDR on Waller case"
+    },
+    {
+      "name": "Dorothy Maynor",
+      "role": "noted soprano, married Rev. Shelby Rooks in Princeton"
+    },
+    {
+      "name": "Rev. Shelby Rooks",
+      "role": "professor of religion, Westminster (PA) University; married Dorothy Maynor"
+    },
+    {
+      "name": "Henry Stokes",
+      "role": "Bayonne resident named to civilian police/fire department post"
+    },
+    {
+      "name": "Silas Hogan",
+      "role": "insurance expert named by Puggsley to Bartky St. post"
+    },
+    {
+      "name": "Rev. H. B. Jackson",
+      "role": "pastor, 13th Ave. Presbyterian Church, addressed Mosque on 4th event"
+    },
+    {
+      "name": "Samuel J. Leonard",
+      "role": "Jersey City postal worker, 33-year veteran, retiring"
+    },
+    {
+      "name": "Ersalyne Surratt",
+      "role": "Orange popular Miss, dies at 17"
+    },
+    {
+      "name": "Miss Edna P. Gipson",
+      "role": "Cranford graduate, daughter of Mr. and Mrs. Daniel Gipson"
+    },
+    {
+      "name": "Rev. William P. Hayes",
+      "role": "chairman, Newark Housing Authority; out of Board of Education race"
+    },
+    {
+      "name": "Sumner Daly",
+      "role": "South Orange, elected president of New Jersey Elks State Association"
+    },
+    {
+      "name": "Mrs. Eleanor Roosevelt",
+      "role": "First Lady, scheduled to speak at Bordentown YMCA conference"
+    },
+    {
+      "name": "Admiral Chester W. Nimitz",
+      "role": "pins Navy Cross on Dorie Miller at Pearl Harbor ceremony, May 27, 1942 (photo)"
+    },
+    {
+      "name": "Dorie (Doris) Miller",
+      "role": "Navy mess attendant, hero of Pearl Harbor, awarded Navy Cross; editorial notes he was passed over for Congressional Medal"
+    },
+    {
+      "name": "Paul V. McNutt",
+      "role": "chairman, War Manpower Commission, addressed discrimination in war industry hiring"
+    },
+    {
+      "name": "David D. Woody",
+      "role": "Newark funeral director (recurring advertiser)"
+    },
+    {
+      "name": "James H. Beckett",
+      "role": "Newark funeral director (advertiser)"
+    },
+    {
+      "name": "John M. Dabney",
+      "role": "Newark funeral director (advertiser)"
+    },
+    {
+      "name": "Frederick W. Martin",
+      "role": "President, Herald News Publishing Co."
+    },
+    {
+      "name": "Richard L. Martin",
+      "role": "Secretary-Treasurer, Herald News Publishing Co."
+    },
+    {
+      "name": "Mrs. James Otto Hill",
+      "role": "hosted Men's 400 Club dinner at Bethany Baptist Church, West Market Street, Newark; introduced by Mrs. Hedgeman"
+    },
+    {
+      "name": "Mrs. Anna J. Hedgeman",
+      "role": "spoke to Men's 400 Club dinner; NY State Civilian Defense/War Council figure"
+    },
+    {
+      "name": "William Jackson (orchestra leader)",
+      "role": "led N.J. Herald News band/dance orchestra featured in amusements coverage"
+    },
+    {
+      "name": "Mari Bailey / C. Thompson",
+      "role": "married at Bethany Baptist Church, Orange"
+    },
+    {
+      "name": "Gladys Holloway / Hazel Holloway",
+      "role": "twin ceremony brides, East Orange"
+    },
+    {
+      "name": "Miss Dixon / L. Manor (Lawrence Manor)",
+      "role": "married in elaborate Bayonne wedding"
+    },
+    {
+      "name": "Rev. Florence Randolph",
+      "role": "pastor, Wallace Chapel AME Zion Church Summit, celebrating 45th anniversary in the ministry"
+    }
+  ],
+  "places": [
+    "Newark, NJ",
+    "Glen Ridge, NJ",
+    "Bayonne, NJ",
+    "Asbury Park, NJ",
+    "Jersey City, NJ",
+    "East Orange, NJ",
+    "South Orange, NJ",
+    "Summit, NJ",
+    "Cranford, NJ",
+    "Orange, NJ",
+    "Bordentown, NJ",
+    "Elizabeth, NJ",
+    "Plainfield, NJ",
+    "Trenton, NJ",
+    "Princeton, NJ",
+    "Westfield, NJ",
+    "Montclair, NJ",
+    "Richmond, VA",
+    "Pea Island, NC",
+    "Pearl Harbor, HI",
+    "Salem, NJ",
+    "Belleville, NJ"
+  ],
+  "incidents": [
+    {
+      "date": "1942-06 (week ending)",
+      "what": "Bill Sutherland Jr. of Glen Ridge, a conscientious objector, arrested/held by FBI in Hackensack for failing to report to CCC camp at Coshocton, Ohio; released on $500 bail",
+      "who": [
+        "Bill Sutherland Jr.",
+        "Dr. W. H. Sutherland"
+      ]
+    },
+    {
+      "date": "1942-07-01 (week of)",
+      "what": "William R. Jackson named to Newark Board of Education by Mayor Vincent Murphy, first Black appointee in city's 106-year Board history alongside Joseph Kramer and Charles J. Fox",
+      "who": [
+        "William R. Jackson",
+        "Vincent Murphy",
+        "Joseph Kramer",
+        "Charles J. Fox"
+      ]
+    },
+    {
+      "date": "1942 (upcoming, pending appeal)",
+      "what": "Odell Waller scheduled to die Thursday in Virginia electric chair unless Gov. Darden intervenes; case tied to poll-tax jury controversy",
+      "who": [
+        "Odell Waller",
+        "Gov. Colgate Darden"
+      ]
+    },
+    {
+      "date": "1942-05-27",
+      "what": "Admiral Nimitz pinned the Navy Cross on Dorie Miller aboard warship at Pearl Harbor for heroism during the Dec. 7, 1941 attack",
+      "who": [
+        "Dorie Miller",
+        "Admiral Chester W. Nimitz"
+      ]
+    },
+    {
+      "date": "1942-07 (reported)",
+      "what": "All-white Grand Jury indictment of a Black man (Harraway) challenged as unconstitutional by NAACP counsel; case appealed to State Supreme Court",
+      "who": [
+        "Harraway"
+      ]
+    }
+  ],
+  "connections": [
+    "Masthead states paper is 'combined with The Newark Herald,' confirming direct lineage/merger between the two mastheads being read in this batch",
+    "Coverage of Newark Eagles and Baltimore Elite Giants (Negro National League) ties to Black baseball history network",
+    "References to NAACP Newark branch membership drive (1,535 members) and NAACP national fair employment activism"
+  ],
+  "legibility": "full"
+}

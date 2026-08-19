@@ -1,0 +1,194 @@
+{
+  "file": "C:\\Users\\Joe Amditis\\Desktop\\Crimes\\playground\\njblackpress\\data\\research\\depth-hunt\\files\\40-nubian-news-v6n1-2022.pdf",
+  "publication": "The Nubian News",
+  "date": "2022-01-07",
+  "summary": "Vol. 6 No. 1 (Jan. 7, 2022), 12 pages, bilingual English/Spanish Trenton weekly. Covers a fatal Christmas Day arson in Trenton, the funeral of a 17-year-old who died by suicide, a school-security funding bill, a Toys for Tots giveaway, 2021 Black celebrity obituaries, an editorial on the Minority Business Development Agency becoming permanent, a COVID health-disparity editorial, book reviews, and the announcement of the 2022 National Black Political Convention in Newark.",
+  "people": [
+    {
+      "name": "Kamau Kujichagulia",
+      "role": "Publisher, The Nubian News"
+    },
+    {
+      "name": "Tanya Henry Turner",
+      "role": "Managing Editor, The Nubian News"
+    },
+    {
+      "name": "Carlos Avila",
+      "role": "El Latino News Editor / reporter, The Nubian News"
+    },
+    {
+      "name": "Al Alatunji",
+      "role": "Reporter, The Nubian News"
+    },
+    {
+      "name": "Laura Lucia Rodriguez Pena",
+      "role": "Reporter, The Nubian News"
+    },
+    {
+      "name": "Karen Hilton",
+      "role": "Photographer, The Nubian News"
+    },
+    {
+      "name": "Leslie Lauts",
+      "role": "Circulation, The Nubian News"
+    },
+    {
+      "name": "Vernon Daniels",
+      "role": "Circulation, The Nubian News"
+    },
+    {
+      "name": "Ronal Ordóñez Lima",
+      "role": "Arson/murder suspect, Trenton fire (age 28)"
+    },
+    {
+      "name": "Luis González",
+      "role": "Community activist quoted on Trenton fire"
+    },
+    {
+      "name": "Francisco Choc",
+      "role": "Fire witness/resident, Trenton"
+    },
+    {
+      "name": "Brenda Meraz",
+      "role": "Mother of Christopher David"
+    },
+    {
+      "name": "Christopher David",
+      "role": "17-year-old subject of obituary, died of suspected suicide"
+    },
+    {
+      "name": "Roy Freiman",
+      "role": "NJ Assemblyman (D-Somerset, Mercer, Middlesex, Hunterdon), sponsor of school security bill A-6258"
+    },
+    {
+      "name": "Cathy Bennett",
+      "role": "President and CEO, New Jersey Hospital Association"
+    },
+    {
+      "name": "Gina Raimondo",
+      "role": "US Secretary of Commerce"
+    },
+    {
+      "name": "Ras Baraka",
+      "role": "Mayor of Newark, announced 2022 National Black Political Convention"
+    },
+    {
+      "name": "Chokwe Antar Lumumba",
+      "role": "Mayor of Jackson, Mississippi"
+    },
+    {
+      "name": "James Mtume",
+      "role": "Jazz and R&B icon, joined convention announcement"
+    },
+    {
+      "name": "Joel Bloom",
+      "role": "President, New Jersey Institute of Technology"
+    },
+    {
+      "name": "Amiri Baraka, Sr.",
+      "role": "Poet/playwright, organizer of 1972 Gary Convention, father of Ras Baraka"
+    },
+    {
+      "name": "Richard Hatcher",
+      "role": "Former mayor of Gary, Indiana, host of 1972 National Black Political Convention"
+    },
+    {
+      "name": "Charles Diggs",
+      "role": "US Representative, co-organizer of 1972 Gary Convention"
+    },
+    {
+      "name": "Ron Daniels",
+      "role": "Key organizer of 1972 Gary Convention, led reparations demand"
+    },
+    {
+      "name": "Betty Shabazz",
+      "role": "Widow of Malcolm X, attendee of 1972 Gary Convention"
+    },
+    {
+      "name": "Coretta Scott-King",
+      "role": "Attendee of 1972 Gary Convention"
+    }
+  ],
+  "places": [
+    "Trenton, NJ",
+    "Rusling St. and Division St., Trenton, NJ",
+    "Newark, NJ",
+    "New Jersey Institute of Technology, Newark, NJ",
+    "Gary, Indiana",
+    "Jackson, Mississippi",
+    "Mercer County, NJ",
+    "Atlantic City, NJ",
+    "Paterson, NJ",
+    "Camden, NJ",
+    "Colombia"
+  ],
+  "incidents": [
+    {
+      "date": "2021-12-25",
+      "what": "Fatal arson fire at 200 block of Rusling St. and Division St., Trenton, during Christmas; six adjacent houses and vehicles burned.",
+      "who": [
+        "Ronal Ordóñez Lima",
+        "Luis González",
+        "Francisco Choc"
+      ]
+    },
+    {
+      "date": "2021-12-27",
+      "what": "Mercer County prosecutor's office announced suspect Ronal Ordóñez Lima, 28, arrested and charged with murder in the Christmas Day Trenton arson.",
+      "who": [
+        "Ronal Ordóñez Lima"
+      ]
+    },
+    {
+      "date": "2021-12-21",
+      "what": "Mercer CCYC toy giveaway to families with young children, with West Trenton Toys for Tots and US Marine Corps.",
+      "who": []
+    },
+    {
+      "date": "2021-12-23",
+      "what": "Funeral service for Christopher David, 17, held at Ledford Home, Trenton; mother says he died after struggling with depression and school bullying.",
+      "who": [
+        "Christopher David",
+        "Brenda Meraz"
+      ]
+    },
+    {
+      "date": "2022-01-06",
+      "what": "NJ Assembly Appropriations Committee introduced bill A-6258, allocating $5,150,531 for school security projects (panic alarms) statewide.",
+      "who": [
+        "Roy Freiman"
+      ]
+    },
+    {
+      "date": "2021-11",
+      "what": "President Biden signed the Bipartisan Infrastructure Investment and Jobs Act, making the Minority Business Development Agency permanent.",
+      "who": [
+        "Gina Raimondo"
+      ]
+    },
+    {
+      "date": "2021-11",
+      "what": "Newark Mayor Ras Baraka announced the 2022 National Black Political Convention, to be held April 28-May 1, 2022 at NJIT.",
+      "who": [
+        "Ras Baraka",
+        "Chokwe Antar Lumumba",
+        "James Mtume",
+        "Joel Bloom"
+      ]
+    },
+    {
+      "date": "1972-03-10",
+      "what": "First National Black Political Convention (Gary Convention) held in Gary, Indiana, through March 12, 1972; adopted the Gary Declaration.",
+      "who": [
+        "Richard Hatcher",
+        "Amiri Baraka, Sr.",
+        "Charles Diggs",
+        "Ron Daniels",
+        "Betty Shabazz",
+        "Coretta Scott-King"
+      ]
+    }
+  ],
+  "connections": [],
+  "legibility": "full"
+}

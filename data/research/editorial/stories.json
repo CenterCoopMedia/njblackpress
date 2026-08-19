@@ -1,0 +1,286 @@
+{
+  "stories": [
+    {
+      "id": "story-001",
+      "title": "The one-man newspaper of Saddle River",
+      "thread": "Alfred P. Smith, born in Saddle River in 1832 to a family descended from enslaved people, wrote to Lincoln in 1862 against colonization while reporting for the Paterson Guardian. He opened a job-printing shop in 1876 and started his own paper to advertise it. For twenty years he wrote, edited, printed, translated, and delivered The Landscape alone, campaigning for paved roads and against lynching and Englewood school segregation. The paper died with him in 1901, and three separate Bergen County retrospectives brought him back in 1987, 1991, and 1993.",
+      "people": [
+        "Alfred P. Smith"
+      ],
+      "publicationIds": [
+        34
+      ],
+      "eventIds": [
+        "evt-002",
+        "evt-003",
+        "evt-005",
+        "evt-010",
+        "evt-013",
+        "evt-017",
+        "evt-064",
+        "evt-065",
+        "evt-068"
+      ],
+      "era": "1860s-1900s"
+    },
+    {
+      "id": "story-002",
+      "title": "R. Henri Herbert: from the Weekly Sentinel to the Republican State Committee",
+      "thread": "R. Henri Herbert was born in Trenton in 1857, the son of Mansfield Herbert, who escaped slavery, bought his family's freedom, and ran an Underground Railroad station in South Trenton. Herbert worked in newspapers from boyhood and founded The Weekly Sentinel in 1880 before selling it. He then turned the same organizing skill on politics, publicly urging Black voters to defeat Asbury Park founder James A. Bradley in 1893 and joining the Republican State Committee in 1895. When he dropped dead in a Trenton street in 1909, the New York Age gave him page one and Newark buried him with the state's Black political leadership as pallbearers.",
+      "people": [
+        "R. Henri Herbert",
+        "Mansfield Herbert",
+        "James A. Bradley",
+        "John W. Griggs"
+      ],
+      "publicationIds": [
+        10
+      ],
+      "eventIds": [
+        "evt-001",
+        "evt-004",
+        "evt-006",
+        "evt-014",
+        "evt-015",
+        "evt-016",
+        "evt-020",
+        "evt-021"
+      ],
+      "era": "1880s-1900s"
+    },
+    {
+      "id": "story-003",
+      "title": "Colonel Murrell, the Trumpet, and the Asbury Park color line",
+      "thread": "Col. William Murrell edited the New Jersey Trumpet out of Newark and used the paper and the platform together. In 1889 the Washington Bee reported his federal Interior Department appointment and said it would absorb the Trumpet's subscribers, yet the paper survived. In July 1893 Murrell spoke at the Marrow's Hall mass meeting against James A. Bradley's pavilion signs, and within a week the Shore Press noted that the first issue of a Trumpet Monmouth edition, edited by Rev. Fillmore Smith to cover that community directly, had reached its office. The launch date itself is not documented. The paper followed the fight.",
+      "people": [
+        "William Murrell",
+        "Fillmore Smith",
+        "James A. Bradley"
+      ],
+      "publicationIds": [
+        38
+      ],
+      "eventIds": [
+        "evt-007",
+        "evt-008",
+        "evt-009",
+        "evt-011",
+        "evt-012"
+      ],
+      "era": "1880s-1890s"
+    },
+    {
+      "id": "story-004",
+      "title": "The Echo survives a fire and moves down the shore",
+      "thread": "The Echo began as a Black weekly in Long Branch under the editors Rock and Howard. A suspected arson fire gutted its press room in 1904. It kept publishing, and by 1909 editor W. E. Rack moved it to Red Bank after buying a home there and planning an industrial school. By 1921 the New York Age was reprinting Red Bank Echo items alongside the Detroit Leader and the Christian Recorder, which puts a small shore weekly inside the national Black press exchange.",
+      "people": [
+        "W. E. Rack",
+        "Rock",
+        "Howard"
+      ],
+      "publicationIds": [
+        31
+      ],
+      "eventIds": [
+        "evt-018",
+        "evt-019",
+        "evt-022"
+      ],
+      "era": "1900s-1920s"
+    },
+    {
+      "id": "story-005",
+      "title": "Two Newark weeklies become one",
+      "thread": "In 1932 the Afro-American reported the Newark Herald had folded after four years. By 1938 the Herald was publishing again at Volume 11 while a brand-new rival, the New Jersey Herald News, was on Volume 1 and printing the motto 'Owned and Published by New Jersey Negroes.' A single archive scan holds both papers for June 11, 1938. By March 1939 the Herald News masthead read 'combined with THE NEWARK HERALD' and claimed to be New Jersey's oldest colored weekly in its twelfth year. By 1942 it printed from 130 W. Kinney St., the Herald's old address.",
+      "people": [
+        "Merrill Biddle",
+        "Julius J. Adams",
+        "Melvin B. Johnson",
+        "Frederick W. Martin",
+        "Richard L. Martin"
+      ],
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "eventIds": [
+        "evt-024",
+        "evt-027",
+        "evt-028",
+        "evt-046",
+        "evt-050"
+      ],
+      "era": "1930s-1940s"
+    },
+    {
+      "id": "story-006",
+      "title": "A civil rights beat before the civil rights movement",
+      "thread": "Between 1938 and 1942 the Newark weeklies ran a continuous local civil rights beat. They covered a Jim Crow theater suit in Elizabeth, a Matawan landlord barring Black guests, a Newark bar refusing service to Urban League staff, a Long Branch beach ordinance, the Elizabeth pool that closed rather than integrate, a Klan cross-burning near Butler, a state commission finding 200,000 Black residents denied their rights, and a Rutgers admissions inquiry they called a whitewash. The New Jersey Herald News turned that beat into a planned municipal investigative series in March 1939.",
+      "people": [
+        "Harold Lett",
+        "Roger M. Yancey",
+        "Kenneth Worde",
+        "William H. Brown",
+        "Frank S. Hargraves"
+      ],
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "eventIds": [
+        "evt-025",
+        "evt-026",
+        "evt-029",
+        "evt-030",
+        "evt-039",
+        "evt-041",
+        "evt-044",
+        "evt-045",
+        "evt-046"
+      ],
+      "era": "1930s-1940s"
+    },
+    {
+      "id": "story-007",
+      "title": "Melvin B. Johnson leaves the press for the governor's office",
+      "thread": "Melvin B. Johnson was managing editor of the New Jersey Herald News in its first weeks in May 1938. He left the Black newspaper business in 1946 to organize Black voters for Alfred Driscoll's campaign for governor. By 1949 he was a Driscoll adviser on minority-group affairs, a public relations aide in the state Labor Department, and a prospective Newark City Commission candidate himself. The clippings describe him as a former editor and publisher of weeklies in both Montclair and Newark, which is more papers than the archive currently attributes to him.",
+      "people": [
+        "Melvin B. Johnson",
+        "Alfred E. Driscoll"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "eventIds": [
+        "evt-027",
+        "evt-053",
+        "evt-054",
+        "evt-055"
+      ],
+      "era": "1930s-1940s"
+    },
+    {
+      "id": "story-008",
+      "title": "Bordentown's student paper wins on the national stage",
+      "thread": "The Ironsides Echo was the monthly student paper of the New Jersey State Manual Training and Industrial School for Colored Youth in Bordentown. It placed second in the Columbia University Scholastic Press Association contest in 1932 against 800 publications, then took two more second-place awards in Columbia's 16th annual contest in 1940. In the same years the Bordentown campus was the meeting ground for the NJ State Federation of Colored Women's Clubs, whose conventions the Newark weeklies covered heavily.",
+      "people": [
+        "Leon Snead",
+        "A. Harry Moore"
+      ],
+      "publicationIds": [
+        57
+      ],
+      "eventIds": [
+        "evt-023",
+        "evt-048",
+        "evt-042",
+        "evt-043"
+      ],
+      "era": "1930s-1940s"
+    },
+    {
+      "id": "story-009",
+      "title": "The women's club movement on the front page",
+      "thread": "In July 1938 the New Jersey Herald News, then still printing as the Newark Herald, covered the NJ State Federation of Colored Women's Clubs convention at the Bordentown Manual Training School as hard news. The July 16 issue reported the convention opening on that campus. The July 30 issue front-paged a WPA official's remark about 'Mammy' and Mrs. Armeta H. Douglass's objection, then reported that Mrs. Alice B. Arrington resigned the presidency to take a YWCA post in Baltimore and that Mrs. Ida Brown of Jersey City succeeded her, with founder Rev. Florence Randolph presiding. Randolph appears again in the July 4, 1942 issue of the same paper, which identified her as pastor of Wallace Chapel in Summit and, separately, as celebrating 45 years in the ministry. Every 1938 and 1942 source in this thread is that one title, publication id 16.",
+      "people": [
+        "Florence Randolph",
+        "Ida Brown",
+        "Alice B. Arrington",
+        "Armeta H. Douglass"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "eventIds": [
+        "evt-080",
+        "evt-042",
+        "evt-043",
+        "evt-081"
+      ],
+      "era": "1930s-1940s"
+    },
+    {
+      "id": "story-010",
+      "title": "Printers who became publishers",
+      "thread": "Two Black New Jersey publishing operations begin the same way, ninety years apart: with a press, not a newsroom. Alfred P. Smith opened a job-printing shop in Saddle River in 1876 and started a paper partly to advertise it. MEDIC Enterprises in Newark founded MEDIC Press in July 1969 with $9,000 of donated letterpress equipment, grossed about $45,000 in ten months, and launched the MEDIC News newsletter in April 1971. Editor Carolyn Odom framed the newsletter as heir to 'the black journals of the early 1800's.'",
+      "people": [
+        "Alfred P. Smith",
+        "Carolyn Odom",
+        "Elvin R. Austin"
+      ],
+      "publicationIds": [
+        34,
+        68
+      ],
+      "eventIds": [
+        "evt-003",
+        "evt-005",
+        "evt-058",
+        "evt-059"
+      ],
+      "era": "1870s-1970s"
+    },
+    {
+      "id": "story-011",
+      "title": "Utimme Umana/La Voz Oculta outlasts the campus",
+      "thread": "In April 1976 the Trenton State College trustees voted to arm campus patrolmen. Utimme/La Voz Oculta, then described as the weekly minority publication on campus, opposed the vote alongside the mainstream student paper and the Minority Executive Council. Seventeen years later the college's fall 1993 orientation guide still listed Utimme Umana/La Voz Oculta among about twenty minority organizations, now called the minority magazine. Two clippings, seventeen years apart, are the only evidence in this batch of a Black student publication with real institutional staying power.",
+      "people": [
+        "Clayton R. Brower",
+        "Sue Baldwin-Way"
+      ],
+      "publicationIds": [
+        73
+      ],
+      "eventIds": [
+        "evt-061",
+        "evt-069"
+      ],
+      "era": "1970s-1990s"
+    },
+    {
+      "id": "story-012",
+      "title": "Newark's byline culture",
+      "thread": "The 1938 Newark papers name their own staff constantly, which makes them a roster of a working Black press corps: Julius J. Adams on 'Sophisticates,' Lou Blackmon on 'Mainly About Tan Town,' Frank Tucker on 'Sportbeams,' Charles Countee Edwards on 'The New Jersey Whirl Uncensored,' Lillian B. Huff as society editor, William H. A. Moore on 'Judge Moore This Week.' Harry B. Webber, city editor of the New Jersey Herald News, later published his own Newark magazine, After Hours, and wrote 'Jersey Happenings' for the Afro-American until his death in 1991 at 90.",
+      "people": [
+        "Julius J. Adams",
+        "Lou Blackmon",
+        "Lillian B. Huff",
+        "Frank Tucker",
+        "Harry B. Webber"
+      ],
+      "publicationIds": [
+        9,
+        16,
+        24,
+        101,
+        35
+      ],
+      "eventIds": [
+        "evt-038",
+        "evt-041",
+        "evt-066"
+      ],
+      "era": "1930s-1990s"
+    },
+    {
+      "id": "story-013",
+      "title": "Two Black consumer magazines, documented only by cover artifacts",
+      "thread": "Weak thread. Word Up! is represented by a Sotheby's auction photo of a stack of issues, headed by an August premiere issue fronting Run-DMC, with later covers naming MC Lyte, Public Enemy, Salt-N-Pepa, and others. Rap Masters is represented by a single November 1992 cover carrying Kris Kross. The Rap Masters log is internally inconsistent on how Kris Kross appears: its summary says the cover advertises a Kris Kross mini-mag insert, while its people entry calls Kris Kross the cover feature. Both logs are cover artifacts rather than editorial pages. Neither shows a New Jersey imprint, a masthead, or an office address, so this thread rests on the publication record alone. Do not publish a geographic or causal claim about these titles until a masthead page is read.",
+      "people": [],
+      "publicationIds": [
+        114,
+        135
+      ],
+      "eventIds": [
+        "evt-067"
+      ],
+      "era": "1980s-1990s",
+      "strength": "weak"
+    }
+  ],
+  "metadata": {
+    "totalCount": 13
+  }
+}

@@ -1,0 +1,3349 @@
+{
+  "files": [
+    {
+      "path": "data/research/newspapers-com/downloads/afro-american_1932-07-09_p7_newark-herald-folded.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "crop_first",
+      "citation": "Afro-American, 1932-07-09, p. 7.",
+      "cropPlan": "Crop the story: newark herald folded",
+      "notes": "Newspapers.com clipping. Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/afro-american_1932-07-09_p7_newark-herald-folded.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "crop_first",
+      "citation": "Afro-American, 1932-07-09, p. 7.",
+      "cropPlan": "Crop the story: newark herald folded",
+      "notes": "Newspapers.com clipping. Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/asbury-park-press_1893-07-22_p1_murrell-speaking.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        38
+      ],
+      "status": "publishable",
+      "citation": "Asbury Park Press, 1893-07-22, p. 1.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/asbury-park-press_1893-07-22_p1_murrell-speaking.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        38
+      ],
+      "status": "publishable",
+      "citation": "Asbury Park Press, 1893-07-22, p. 1.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/asbury-park-press_1909-03-05_p2_echo-moves-red-bank.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        31
+      ],
+      "status": "publishable",
+      "citation": "Asbury Park Press, 1909-03-05, p. 2.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/asbury-park-press_1909-03-05_p2_echo-moves-red-bank.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        31
+      ],
+      "status": "publishable",
+      "citation": "Asbury Park Press, 1909-03-05, p. 2.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/asbury-park-press_1949-11-06_p2_johnson-montclair-newark.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        2
+      ],
+      "status": "crop_first",
+      "citation": "Asbury Park Press, 1949-11-06, p. 2.",
+      "cropPlan": "Crop the story: Photo cutline: Melvin B. Johnson, former editor and publisher of weekly newspapers at Montclair and Newark.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/asbury-park-press_1949-11-06_p2_johnson-montclair-newark.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        2
+      ],
+      "status": "crop_first",
+      "citation": "Asbury Park Press, 1949-11-06, p. 2.",
+      "cropPlan": "Crop the story: Photo cutline: Melvin B. Johnson, former editor and publisher of weekly newspapers at Montclair and Newark.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/asbury-park-press_1960-05-20_p21_bronze-thrills-july.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        67
+      ],
+      "status": "crop_first",
+      "citation": "Asbury Park Press, 1960-05-20, p. 21.",
+      "cropPlan": "Crop the story: Asbury Park Press Lakewood column: a book to be published in the July issue of Bronze Thrills.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/asbury-park-press_1960-05-20_p21_bronze-thrills-july.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        67
+      ],
+      "status": "crop_first",
+      "citation": "Asbury Park Press, 1960-05-20, p. 21.",
+      "cropPlan": "Crop the story: Asbury Park Press Lakewood column: a book to be published in the July issue of Bronze Thrills.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/cdp-fail.png",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "",
+      "cropPlan": "",
+      "notes": "Non-content capture artifact (debug/probe screenshot from the scraping session), not an archival newspaper page. Not tied to any publication."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/courier-news_1991-06-24_p8_webber-after-hours.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        101
+      ],
+      "status": "crop_first",
+      "citation": "Courier-News, 1991-06-24, p. 8.",
+      "cropPlan": "Crop the story: AP obit: Harry B. Webber, city editor of the New Jersey Herald News, then editor and publisher of After Hours, a Newark magazine, in the 1940s.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/courier-news_1991-06-24_p8_webber-after-hours.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        101
+      ],
+      "status": "crop_first",
+      "citation": "Courier-News, 1991-06-24, p. 8.",
+      "cropPlan": "Crop the story: AP obit: Harry B. Webber, city editor of the New Jersey Herald News, then editor and publisher of After Hours, a Newark magazine, in the 1940s.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/courier-post_1932-03-22_p14_ironsides-echo-award.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        57
+      ],
+      "status": "crop_first",
+      "citation": "Courier-Post, 1932-03-22, p. 14.",
+      "cropPlan": "Crop the story: Courier-Post: Ironsides Echo, monthly student paper of the Bordentown Manual Training School, won second place in the Columbia Scholastic Press contest. Student editor Leon Snead.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/courier-post_1932-03-22_p14_ironsides-echo-award.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        57
+      ],
+      "status": "crop_first",
+      "citation": "Courier-Post, 1932-03-22, p. 14.",
+      "cropPlan": "Crop the story: Courier-Post: Ironsides Echo, monthly student paper of the Bordentown Manual Training School, won second place in the Columbia Scholastic Press contest. Student editor Leon Snead.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/courier-post_1936-01-06_p3_camp-cooper-paper.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        87
+      ],
+      "status": "crop_first",
+      "citation": "Courier-Post, 1936-01-06, p. 3.",
+      "cropPlan": "Crop the story: Courier-Post: CCC Company 1275 at Erlton started a journalism class and turns out a paper, Camp Cooper, regularly. Educational advisor A. W. Reed.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/courier-post_1936-01-06_p3_camp-cooper-paper.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        87
+      ],
+      "status": "crop_first",
+      "citation": "Courier-Post, 1936-01-06, p. 3.",
+      "cropPlan": "Crop the story: Courier-Post: CCC Company 1275 at Erlton started a journalism class and turns out a paper, Camp Cooper, regularly. Educational advisor A. W. Reed.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/daily-record-morristown_2023-05-21_pD2_nj-afro-american-described.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        35
+      ],
+      "status": "crop_first",
+      "citation": "Daily Record (Morristown), 2023-05-21, p. D2.",
+      "cropPlan": "Crop the story: The New Jersey Afro-American — published in Newark — was one of a chain of Black-owned and edited papers... the New Jersey edition no longer exists.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/daily-record-morristown_2023-05-21_pD2_nj-afro-american-described.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        35
+      ],
+      "status": "crop_first",
+      "citation": "Daily Record (Morristown), 2023-05-21, p. D2.",
+      "cropPlan": "Crop the story: The New Jersey Afro-American — published in Newark — was one of a chain of Black-owned and edited papers... the New Jersey edition no longer exists.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/evening-world_1888-12-11_p2_trumpet-negro-organ.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "publishable",
+      "citation": "Evening World, 1888-12-11, p. 2.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade). Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/evening-world_1888-12-11_p2_trumpet-negro-organ.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "publishable",
+      "citation": "Evening World, 1888-12-11, p. 2.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade). Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/export-probe-state.png",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "",
+      "cropPlan": "",
+      "notes": "Non-content capture artifact (debug/probe screenshot from the scraping session), not an archival newspaper page. Not tied to any publication."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/monmouth-democrat_1904-09-08_p4_echo-burned-out.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        31
+      ],
+      "status": "publishable",
+      "citation": "Monmouth Democrat, 1904-09-08, p. 4.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/monmouth-democrat_1904-09-08_p4_echo-burned-out.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        31
+      ],
+      "status": "publishable",
+      "citation": "Monmouth Democrat, 1904-09-08, p. 4.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/new-york-age_1909-10-21_p1_herbert-obituary.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "publishable",
+      "citation": "New York Age, 1909-10-21, p. 1.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade). Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/new-york-age_1909-10-21_p1_herbert-obituary.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "publishable",
+      "citation": "New York Age, 1909-10-21, p. 1.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade). Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/new-york-age_1921-04-09_p4_red-bank-echo-cited.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "publishable",
+      "citation": "New York Age, 1921-04-09, p. 4.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade). Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/new-york-age_1921-04-09_p4_red-bank-echo-cited.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "publishable",
+      "citation": "New York Age, 1921-04-09, p. 4.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade). Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/new-york-tribune_1895-12-08_p14_herbert-profile.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "publishable",
+      "citation": "New York Tribune, 1895-12-08, p. 14.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade). Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/new-york-tribune_1895-12-08_p14_herbert-profile.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "publishable",
+      "citation": "New York Tribune, 1895-12-08, p. 14.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade). Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/ridgewood-news_1987-11-26_p14_landscape-ap-smith.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        34
+      ],
+      "status": "crop_first",
+      "citation": "The Ridgewood News, 1987-11-26, p. 14.",
+      "cropPlan": "Crop the story: Tom Brady on Alfred P. Smith: The Landscape, first as A.P. Smith's Paper, printed at East Allendale Road from May 1881 until July 1901.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/ridgewood-news_1987-11-26_p14_landscape-ap-smith.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        34
+      ],
+      "status": "crop_first",
+      "citation": "The Ridgewood News, 1987-11-26, p. 14.",
+      "cropPlan": "Crop the story: Tom Brady on Alfred P. Smith: The Landscape, first as A.P. Smith's Paper, printed at East Allendale Road from May 1881 until July 1901.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/shore-press_1893-07-28_p6_murrell-asbury-meeting.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        38
+      ],
+      "status": "publishable",
+      "citation": "The Shore Press, 1893-07-28, p. 6.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/shore-press_1893-07-28_p6_murrell-asbury-meeting.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        38
+      ],
+      "status": "publishable",
+      "citation": "The Shore Press, 1893-07-28, p. 6.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/star-ledger_1949-01-19_p14_melvin-johnson-left-papers.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        2
+      ],
+      "status": "crop_first",
+      "citation": "The Star-Ledger, 1949-01-19, p. 14.",
+      "cropPlan": "Crop the story: Melvin B. Johnson named as former Negro newspaper publisher and editor, in the field until 1946.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/star-ledger_1949-01-19_p14_melvin-johnson-left-papers.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        2
+      ],
+      "status": "crop_first",
+      "citation": "The Star-Ledger, 1949-01-19, p. 14.",
+      "cropPlan": "Crop the story: Melvin B. Johnson named as former Negro newspaper publisher and editor, in the field until 1946.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        34
+      ],
+      "status": "crop_first",
+      "citation": "The Sunday News (Ridgewood), 1993-06-27, p. 2.",
+      "cropPlan": "Crop the story: Nancy R. Peck: Alfred P. Smith printed what was called the nation's smallest newspaper from an old house overlooking the Saddle River valley.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        34
+      ],
+      "status": "crop_first",
+      "citation": "The Sunday News (Ridgewood), 1993-06-27, p. 2.",
+      "cropPlan": "Crop the story: Nancy R. Peck: Alfred P. Smith printed what was called the nation's smallest newspaper from an old house overlooking the Saddle River valley.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/the-news-paterson_1939-09-09_p9_nj-guardian-cited.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        37
+      ],
+      "status": "crop_first",
+      "citation": "The News (Paterson), 1939-09-09, p. 9.",
+      "cropPlan": "Crop the story: Paterson News cites The New Jersey Guardian as a journal for colored readers with state-wide circulation.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/the-news-paterson_1939-09-09_p9_nj-guardian-cited.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        37
+      ],
+      "status": "crop_first",
+      "citation": "The News (Paterson), 1939-09-09, p. 9.",
+      "cropPlan": "Crop the story: Paterson News cites The New Jersey Guardian as a journal for colored readers with state-wide circulation.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/the-record-hackensack_1991-02-09_p2_landscape-renamed.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        34
+      ],
+      "status": "crop_first",
+      "citation": "The Record (Hackensack), 1991-02-09, p. 2.",
+      "cropPlan": "Crop the story: Second Look: Writer shaped civil-rights Landscape. Alfred P. Smith started A. P. Smith's Paper in 1881, then renamed it The Landscape.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/the-record-hackensack_1991-02-09_p2_landscape-renamed.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        34
+      ],
+      "status": "crop_first",
+      "citation": "The Record (Hackensack), 1991-02-09, p. 2.",
+      "cropPlan": "Crop the story: Second Look: Writer shaped civil-rights Landscape. Alfred P. Smith started A. P. Smith's Paper in 1881, then renamed it The Landscape.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/trenton-sunday-advertiser_1893-11-05_p1_herbert-vs-bradley.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        10
+      ],
+      "status": "publishable",
+      "citation": "Trenton Sunday Advertiser, 1893-11-05, p. 1.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/trenton-sunday-advertiser_1893-11-05_p1_herbert-vs-bradley.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        10
+      ],
+      "status": "publishable",
+      "citation": "Trenton Sunday Advertiser, 1893-11-05, p. 1.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/trenton-sunday-advertiser_1895-10-20_p1_herbert-gop-committee.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        10
+      ],
+      "status": "publishable",
+      "citation": "Trenton Sunday Advertiser, 1895-10-20, p. 1.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/trenton-sunday-advertiser_1895-10-20_p1_herbert-gop-committee.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        10
+      ],
+      "status": "publishable",
+      "citation": "Trenton Sunday Advertiser, 1895-10-20, p. 1.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade)."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/trenton-times_1940-05-07_p13_ironsides-echo-awards.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        57
+      ],
+      "status": "crop_first",
+      "citation": "Trenton Times / The Times, 1940-05-07, p. 13.",
+      "cropPlan": "Crop the story: Trenton Times: Ironsides Echo won two second-place Columbia awards. Staff adviser Frances O. Grant; printing instructor L. J. Roberts.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/trenton-times_1940-05-07_p13_ironsides-echo-awards.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        57
+      ],
+      "status": "crop_first",
+      "citation": "Trenton Times / The Times, 1940-05-07, p. 13.",
+      "cropPlan": "Crop the story: Trenton Times: Ironsides Echo won two second-place Columbia awards. Staff adviser Frances O. Grant; printing instructor L. J. Roberts.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/trenton-times_1976-04-23_p8_utimme-umana.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        73
+      ],
+      "status": "crop_first",
+      "citation": "Trenton Times / The Times, 1976-04-23, p. 8.",
+      "cropPlan": "Crop the story: Trenton Times: Utimme Umana/La Voz Oculta named as the weekly minority publication on the Trenton State campus.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/trenton-times_1976-04-23_p8_utimme-umana.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        73
+      ],
+      "status": "crop_first",
+      "citation": "Trenton Times / The Times, 1976-04-23, p. 8.",
+      "cropPlan": "Crop the story: Trenton Times: Utimme Umana/La Voz Oculta named as the weekly minority publication on the Trenton State campus.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/trenton-times_1993-09-27_p32_utimme-umana.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [
+        73
+      ],
+      "status": "crop_first",
+      "citation": "Trenton Times / The Times, 1993-09-27, p. 32.",
+      "cropPlan": "Crop the story: Trenton Times campus guide lists Utimme Umana/La Voz Oculta as the minority magazine.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/trenton-times_1993-09-27_p32_utimme-umana.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [
+        73
+      ],
+      "status": "crop_first",
+      "citation": "Trenton Times / The Times, 1993-09-27, p. 32.",
+      "cropPlan": "Crop the story: Trenton Times campus guide lists Utimme Umana/La Voz Oculta as the minority magazine.",
+      "notes": "Newspapers.com clipping."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/washington-bee_1889-05-18_p2_murrell-trumpet-editor.jpg",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "publishable",
+      "citation": "The Washington Bee, 1889-05-18, p. 2.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade). Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/newspapers-com/downloads/washington-bee_1889-05-18_p2_murrell-trumpet-editor.pdf",
+      "source": "newspapers.com",
+      "publicationIds": [],
+      "status": "publishable",
+      "citation": "The Washington Bee, 1889-05-18, p. 2.",
+      "cropPlan": "",
+      "notes": "Newspapers.com clipping. Published before 1930, public domain in the US; citation still required (issue 29/30 policy upgrade). Out-of-state supporting clip not referenced by any keeper in source-catalog.json for a specific NJ publication; corroborating evidence only, no publicationIds assigned."
+    },
+    {
+      "path": "data/research/wayback/clean/004-black-in-jersey-live.png",
+      "source": "wayback",
+      "publicationIds": [
+        4
+      ],
+      "status": "publishable_with_credit",
+      "citation": "Black In Jersey, website capture, 2026-08-17.",
+      "cropPlan": "",
+      "notes": "Live screenshot of Black In Jersey's own current website (Wayback replay had failed, so the capture session shot the live site directly). Publication is currently active and this is their own official site, so credited use is allowed (issue 30 policy judgment call)."
+    },
+    {
+      "path": "data/research/wayback/clean/006-front-runner-new-jersey-20180729184443.png",
+      "source": "wayback",
+      "publicationIds": [
+        6
+      ],
+      "status": "crop_first",
+      "citation": "Front Runner New Jersey, website capture, 20180729.",
+      "cropPlan": "Crop a representative masthead/section from the Front Runner New Jersey site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of Front Runner New Jersey's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/008-south-jersey-journal-live.png",
+      "source": "wayback",
+      "publicationIds": [
+        8
+      ],
+      "status": "publishable_with_credit",
+      "citation": "South Jersey Journal, website capture, 2026-08-17.",
+      "cropPlan": "",
+      "notes": "Live screenshot of South Jersey Journal's own current website (Wayback replay had failed, so the capture session shot the live site directly). Publication is currently active and this is their own official site, so credited use is allowed (issue 30 policy judgment call)."
+    },
+    {
+      "path": "data/research/wayback/clean/012-five-wards-media-20250613131129.png",
+      "source": "wayback",
+      "publicationIds": [
+        12
+      ],
+      "status": "crop_first",
+      "citation": "Five Wards Media, website capture, 20250613.",
+      "cropPlan": "Crop a representative masthead/section from the Five Wards Media site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of Five Wards Media's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/017-trenton-journal-live.png",
+      "source": "wayback",
+      "publicationIds": [
+        17
+      ],
+      "status": "publishable_with_credit",
+      "citation": "Trenton Journal, website capture, 2026-08-17.",
+      "cropPlan": "",
+      "notes": "Live screenshot of Trenton Journal's own current website (Wayback replay had failed, so the capture session shot the live site directly). Publication is currently active and this is their own official site, so credited use is allowed (issue 30 policy judgment call)."
+    },
+    {
+      "path": "data/research/wayback/clean/019-nj-in-color-20220622225425.png",
+      "source": "wayback",
+      "publicationIds": [
+        19
+      ],
+      "status": "crop_first",
+      "citation": "NJ in Color, website capture, 20220622.",
+      "cropPlan": "Crop a representative masthead/section from the NJ in Color site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of NJ in Color's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/020-new-jersey-urban-news-20230307222958.png",
+      "source": "wayback",
+      "publicationIds": [
+        20
+      ],
+      "status": "crop_first",
+      "citation": "New Jersey Urban News, website capture, 20230307.",
+      "cropPlan": "Crop a representative masthead/section from the New Jersey Urban News site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of New Jersey Urban News's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/022-ark-republic-20170708221608.png",
+      "source": "wayback",
+      "publicationIds": [
+        22
+      ],
+      "status": "crop_first",
+      "citation": "Ark Republic, website capture, 20170708.",
+      "cropPlan": "Crop a representative masthead/section from the Ark Republic site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of Ark Republic's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/023-the-newark-times-20141018093931.png",
+      "source": "wayback",
+      "publicationIds": [
+        23
+      ],
+      "status": "crop_first",
+      "citation": "The Newark Times, website capture, 20141018.",
+      "cropPlan": "Crop a representative masthead/section from the The Newark Times site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of The Newark Times's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/025-atlantic-city-focus-20240506145430.png",
+      "source": "wayback",
+      "publicationIds": [
+        25
+      ],
+      "status": "crop_first",
+      "citation": "Atlantic City Focus, website capture, 20240506.",
+      "cropPlan": "Crop a representative masthead/section from the Atlantic City Focus site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of Atlantic City Focus's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/029-faithfully-magazine-20151025031224.png",
+      "source": "wayback",
+      "publicationIds": [
+        29
+      ],
+      "status": "crop_first",
+      "citation": "Faithfully Magazine, website capture, 20151025.",
+      "cropPlan": "Crop a representative masthead/section from the Faithfully Magazine site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of Faithfully Magazine's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/032-trenton365-stream-with-jacque-howard-20211208013612.png",
+      "source": "wayback",
+      "publicationIds": [
+        32
+      ],
+      "status": "crop_first",
+      "citation": "Trenton365 Stream with Jacque Howard, website capture, 20211208.",
+      "cropPlan": "Crop a representative masthead/section from the Trenton365 Stream with Jacque Howard site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of Trenton365 Stream with Jacque Howard's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/033-the-black-observer-20210120065101.png",
+      "source": "wayback",
+      "publicationIds": [
+        33
+      ],
+      "status": "crop_first",
+      "citation": "The Black Observer, website capture, 20210120.",
+      "cropPlan": "Crop a representative masthead/section from the The Black Observer site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of The Black Observer's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/036-more-jersey-live.png",
+      "source": "wayback",
+      "publicationIds": [
+        36
+      ],
+      "status": "publishable_with_credit",
+      "citation": "More Jersey, website capture, 2026-08-17.",
+      "cropPlan": "",
+      "notes": "Live screenshot of More Jersey's own current website (Wayback replay had failed, so the capture session shot the live site directly). Publication is currently active and this is their own official site, so credited use is allowed (issue 30 policy judgment call)."
+    },
+    {
+      "path": "data/research/wayback/clean/043-public-square-amplified-live.png",
+      "source": "wayback",
+      "publicationIds": [
+        43
+      ],
+      "status": "publishable_with_credit",
+      "citation": "Public Square Amplified, website capture, 2026-08-17.",
+      "cropPlan": "",
+      "notes": "Live screenshot of Public Square Amplified's own current website (Wayback replay had failed, so the capture session shot the live site directly). Publication is currently active and this is their own official site, so credited use is allowed (issue 30 policy judgment call)."
+    },
+    {
+      "path": "data/research/wayback/clean/071-the-missionary-magazine-20040207205909.png",
+      "source": "wayback",
+      "publicationIds": [
+        71
+      ],
+      "status": "crop_first",
+      "citation": "The Missionary Magazine, website capture, 20040207.",
+      "cropPlan": "Crop a representative masthead/section from the The Missionary Magazine site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of The Missionary Magazine's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/084-unity-and-struggle-20200118211629.png",
+      "source": "wayback",
+      "publicationIds": [
+        84
+      ],
+      "status": "crop_first",
+      "citation": "Unity and Struggle, website capture, 20200118.",
+      "cropPlan": "Crop a representative masthead/section from the Unity and Struggle site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of Unity and Struggle's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/wayback/clean/128-newark-black-newspapers-collection-digital-colle-20190419185835.png",
+      "source": "wayback",
+      "publicationIds": [
+        128
+      ],
+      "status": "crop_first",
+      "citation": "Newark Black Newspapers Collection | Digital Collections, website capture, 20190419.",
+      "cropPlan": "Crop a representative masthead/section from the Newark Black Newspapers Collection | Digital Collections site capture; do not publish the full screenshot uncropped.",
+      "notes": "Low risk: historical Wayback capture, may not reflect the site's current design/ownership of Newark Black Newspapers Collection | Digital Collections's website. Crop and cite rather than reproduce the full screenshot (issue 30 policy default)."
+    },
+    {
+      "path": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "New Jersey Herald News, May 21, 1938.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy)."
+    },
+    {
+      "path": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "New Jersey Herald News, March 11, 1939.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy)."
+    },
+    {
+      "path": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "New Jersey Herald News, July 4, 1942.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy)."
+    },
+    {
+      "path": "data/research/ia/clean/NewarkHerald19380611a.pdf",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "Newark Herald, June 11, 1938.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy)."
+    },
+    {
+      "path": "data/research/ia/clean/NewarkHerald19380618a.pdf",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "Newark Herald, June 18, 1938.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy)."
+    },
+    {
+      "path": "data/research/ia/clean/NewarkHerald19380702a.pdf",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "Newark Herald, July 2, 1938.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy)."
+    },
+    {
+      "path": "data/research/ia/clean/NewarkHerald19380709a.pdf",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "Newark Herald, July 9, 1938.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy)."
+    },
+    {
+      "path": "data/research/ia/clean/NewarkHerald19380716a.pdf",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "Newark Herald, July 16, 1938.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy)."
+    },
+    {
+      "path": "data/research/ia/clean/NewarkHerald19380723a.pdf",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "Newark Herald, July 23, 1938.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy)."
+    },
+    {
+      "path": "data/research/ia/clean/NewarkHerald19380723a.txt",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "Newark Herald, July 23, 1938.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy). OCR transcript companion to the matching PDF scan."
+    },
+    {
+      "path": "data/research/ia/clean/NewarkHerald19380730a.pdf",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "Newark Herald, July 30, 1938.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy)."
+    },
+    {
+      "path": "data/research/ia/clean/NewarkHerald19380730a.txt",
+      "source": "ia",
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "status": "publishable",
+      "citation": "Newark Herald, July 30, 1938.",
+      "cropPlan": "",
+      "notes": "Internet Archive capture, 1938-1942 Newark Herald / NJ Herald News run, public domain (issue 29 policy). OCR transcript companion to the matching PDF scan."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p1-hype.jpg",
+      "source": "danky",
+      "publicationIds": [
+        1
+      ],
+      "status": "metadata_only",
+      "citation": "Hype, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 1 (entry 1).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p102-black-truth-bulletin.jpg",
+      "source": "danky",
+      "publicationIds": [
+        127
+      ],
+      "status": "metadata_only",
+      "citation": "Black Truth Bulletin, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 102 (entry 1057).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p102-truth.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Truth (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 102.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p103-truth.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Truth (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 103.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p104-black-voice-carta.jpg",
+      "source": "danky",
+      "publicationIds": [
+        98
+      ],
+      "status": "metadata_only",
+      "citation": "Black Voice/Carta Boricua, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 104 (entry 1076).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p104-black-voice.jpg",
+      "source": "danky",
+      "publicationIds": [
+        107
+      ],
+      "status": "metadata_only",
+      "citation": "The Black Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 104 (entry 1071).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p104-bwuf.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Bwuf (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 104.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p105-bwuf.jpg",
+      "source": "danky",
+      "publicationIds": [
+        60,
+        126
+      ],
+      "status": "metadata_only",
+      "citation": "Black Women's United Front Newsletter / Black Women’s United Front Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 105 (entry 1085).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p113-bootstrap.jpg",
+      "source": "danky",
+      "publicationIds": [
+        74
+      ],
+      "status": "metadata_only",
+      "citation": "Bootstrap, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 113 (entry 1166).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p114-braids-beauty.jpg",
+      "source": "danky",
+      "publicationIds": [
+        92
+      ],
+      "status": "metadata_only",
+      "citation": "Braids & Beauty, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 114 (entry 1180).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p114-braids.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Braids (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 114.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p115-braids2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Braids2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 115.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p117-bronze-thrills.png",
+      "source": "danky",
+      "publicationIds": [
+        67
+      ],
+      "status": "metadata_only",
+      "citation": "Bronze Thrills, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 117.",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p131-camden-news.png",
+      "source": "danky",
+      "publicationIds": [
+        3
+      ],
+      "status": "metadata_only",
+      "citation": "The Camden News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 131 (entry 1354).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p131-camp-berlin-broadcast.png",
+      "source": "danky",
+      "publicationIds": [
+        102
+      ],
+      "status": "metadata_only",
+      "citation": "Camp Berlin Broadcast, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 131 (entry 1356).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p134-captain.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Captain (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 134.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p135-captain-africa.jpg",
+      "source": "danky",
+      "publicationIds": [
+        112
+      ],
+      "status": "metadata_only",
+      "citation": "Captain Africa, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 135 (entry 1394).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p135-captain.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Captain (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 135.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p142-cfun-news.jpg",
+      "source": "danky",
+      "publicationIds": [
+        51
+      ],
+      "status": "metadata_only",
+      "citation": "CFUN News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 142 (entry 1477).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p154-the-citizen.png",
+      "source": "danky",
+      "publicationIds": [
+        7
+      ],
+      "status": "metadata_only",
+      "citation": "The Citizen, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 154.",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p155-city-news.jpg",
+      "source": "danky",
+      "publicationIds": [
+        13
+      ],
+      "status": "metadata_only",
+      "citation": "City News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 155 (entry 1607).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p158-club-world.png",
+      "source": "danky",
+      "publicationIds": [
+        129
+      ],
+      "status": "metadata_only",
+      "citation": "Club World: Newsmagazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 158 (entry 1642).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p168-communique.jpg",
+      "source": "danky",
+      "publicationIds": [
+        130
+      ],
+      "status": "metadata_only",
+      "citation": "Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 168 (entry 1748).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p172-connection-131.jpg",
+      "source": "danky",
+      "publicationIds": [
+        131
+      ],
+      "status": "metadata_only",
+      "citation": "The Connection Newspaper, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 172 (entry 1791).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p172-connection.jpg",
+      "source": "danky",
+      "publicationIds": [
+        5
+      ],
+      "status": "metadata_only",
+      "citation": "The Connection / North Jersey Connection, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 172 (entry 1791).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p176-corporate-hq.jpg",
+      "source": "danky",
+      "publicationIds": [
+        132
+      ],
+      "status": "metadata_only",
+      "citation": "Corporate Headquarters, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 176 (entry 1839).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p179-cricket.jpg",
+      "source": "danky",
+      "publicationIds": [
+        69
+      ],
+      "status": "metadata_only",
+      "citation": "The Cricket: Black Music in Evolution, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 179 (entry 1867).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p18-african-voice.jpg",
+      "source": "danky",
+      "publicationIds": [
+        46
+      ],
+      "status": "metadata_only",
+      "citation": "The African Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 18 (entry 176).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p18-african-world.jpg",
+      "source": "danky",
+      "publicationIds": [
+        15
+      ],
+      "status": "metadata_only",
+      "citation": "African World, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 18 (entry 181).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p18-afrworld.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Afrworld (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 18.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p19-afrworld2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Afrworld2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 19.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p190-deliverance-voice.jpg",
+      "source": "danky",
+      "publicationIds": [
+        70
+      ],
+      "status": "metadata_only",
+      "citation": "Deliverance Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 190 (entry 1978).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p194-dias-creek-echo.png",
+      "source": "danky",
+      "publicationIds": [
+        94
+      ],
+      "status": "metadata_only",
+      "citation": "Dias Creek Echo, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 194 (entry 2023).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p2-hype2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Hype2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 2.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p206-edperspectives.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Edperspectives (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 206.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p207-edperspectives.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Edperspectives (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 207.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p207-educational-perspectives.jpg",
+      "source": "danky",
+      "publicationIds": [
+        108
+      ],
+      "status": "metadata_only",
+      "citation": "Educational Perspectives, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 207 (entry 2163).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p211-en-avant-134.jpg",
+      "source": "danky",
+      "publicationIds": [
+        134
+      ],
+      "status": "metadata_only",
+      "citation": "En Avant: Bulletin pour le development de la mobilisation patriotique, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 211 (entry 2199).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p211-en-avant.jpg",
+      "source": "danky",
+      "publicationIds": [
+        59
+      ],
+      "status": "metadata_only",
+      "citation": "En Avant, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 211 (entry 2199).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p223-fire2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Fire2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 223.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p224-fire-ii.jpg",
+      "source": "danky",
+      "publicationIds": [
+        80
+      ],
+      "status": "metadata_only",
+      "citation": "Fire II, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 224 (entry 2345).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p224-fire2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Fire2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 224.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p235-fotorama.jpg",
+      "source": "danky",
+      "publicationIds": [
+        78
+      ],
+      "status": "metadata_only",
+      "citation": "Fotorama, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 235 (entry 2462).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p236-franklin-voice.jpg",
+      "source": "danky",
+      "publicationIds": [
+        44
+      ],
+      "status": "metadata_only",
+      "citation": "The Franklin Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 236 (entry 2469).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p236-franklin.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Franklin (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 236.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p24-festival-arts.jpg",
+      "source": "danky",
+      "publicationIds": [
+        62
+      ],
+      "status": "metadata_only",
+      "citation": "Afro-American Festival of the Arts Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 24 (entry 243).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p24-festival.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Festival (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 24.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p240-freedom-reports.jpg",
+      "source": "danky",
+      "publicationIds": [
+        133
+      ],
+      "status": "metadata_only",
+      "citation": "Freedom Reports, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 240 (entry 2512).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p240-freedom.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Freedom (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 240.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p253-gospel-today.jpg",
+      "source": "danky",
+      "publicationIds": [
+        118
+      ],
+      "status": "metadata_only",
+      "citation": "Gospel Today Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 253 (entry 2656).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p257-greater-news.jpg",
+      "source": "danky",
+      "publicationIds": [
+        27
+      ],
+      "status": "metadata_only",
+      "citation": "Greater News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 257 (entry 2694).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p266-harambee.jpg",
+      "source": "danky",
+      "publicationIds": [
+        26
+      ],
+      "status": "metadata_only",
+      "citation": "Harambee, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 266 (entry 2786).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p267-harambee.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Harambee (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 267.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p269-hart.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Hart (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 269.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p270-hart-fund.jpg",
+      "source": "danky",
+      "publicationIds": [
+        122
+      ],
+      "status": "metadata_only",
+      "citation": "The Hart Fund, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 270 (entry 2832).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p270-hart.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Hart (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 270.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p277-hiram-star-news.png",
+      "source": "danky",
+      "publicationIds": [
+        79
+      ],
+      "status": "metadata_only",
+      "citation": "The Hiram Star-News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 277 (entry 2907).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p280-hours-after.jpg",
+      "source": "danky",
+      "publicationIds": [
+        72
+      ],
+      "status": "metadata_only",
+      "citation": "Hours After, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 280 (entry 2945).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p287-hype-hair.jpg",
+      "source": "danky",
+      "publicationIds": [
+        82
+      ],
+      "status": "metadata_only",
+      "citation": "Hype Hair, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 287 (entry 3020).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p287-hypehair.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Hypehair (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 287.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p298-icp.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Icp (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 298.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p298-inner-city-products.jpg",
+      "source": "danky",
+      "publicationIds": [
+        117
+      ],
+      "status": "metadata_only",
+      "citation": "Inner City Products, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 298 (entry 3139).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p300-icp.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Icp (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 300.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p312-jersey-camera.jpg",
+      "source": "danky",
+      "publicationIds": [
+        66
+      ],
+      "status": "metadata_only",
+      "citation": "Jersey Camera, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 312 (entry 3284).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p313-jersey-heritage.png",
+      "source": "danky",
+      "publicationIds": [
+        116
+      ],
+      "status": "metadata_only",
+      "citation": "The Jersey Heritage, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 313 (entry 3287).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p316-jaam.jpg",
+      "source": "danky",
+      "publicationIds": [
+        54
+      ],
+      "status": "metadata_only",
+      "citation": "Journal of African American Men, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 316 (entry 3314).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p317-jaam.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Jaam (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 317.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p323-jfbm.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Jfbm (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 323.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p323-just-for-black-men.jpg",
+      "source": "danky",
+      "publicationIds": [
+        88
+      ],
+      "status": "metadata_only",
+      "citation": "Just for Black Men, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 323 (entry 3378).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p329-kuumba.jpg",
+      "source": "danky",
+      "publicationIds": [
+        100
+      ],
+      "status": "metadata_only",
+      "citation": "Kuumba: The Black Voice Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 329 (entry 3449).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p330-kuumba.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Kuumba (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 330.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p336-liberator-edison.png",
+      "source": "danky",
+      "publicationIds": [
+        109
+      ],
+      "status": "metadata_only",
+      "citation": "The Liberator, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 336 (entry 3526).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p336-liberator-paterson.jpg",
+      "source": "danky",
+      "publicationIds": [
+        18
+      ],
+      "status": "metadata_only",
+      "citation": "The Liberator, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 336 (entry 3527).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p343-literary-griot.jpg",
+      "source": "danky",
+      "publicationIds": [
+        91
+      ],
+      "status": "metadata_only",
+      "citation": "The Literary Griot, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 343 (entry 3600).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p344-little-ease-echo.png",
+      "source": "danky",
+      "publicationIds": [
+        90
+      ],
+      "status": "metadata_only",
+      "citation": "The Little Ease Echo, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 344 (entry 3604).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p356-mc-squared.jpg",
+      "source": "danky",
+      "publicationIds": [
+        53
+      ],
+      "status": "metadata_only",
+      "citation": "MC Squared, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 356 (entry 3726).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p356-mcsq.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Mcsq (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 356.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p357-medic-news.jpg",
+      "source": "danky",
+      "publicationIds": [
+        68
+      ],
+      "status": "metadata_only",
+      "citation": "MEDIC News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 357 (entry 3735).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p357-medic.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Medic (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 357.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p373-mbpsr.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Mbpsr (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 373.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p374-mbpsr.jpg",
+      "source": "danky",
+      "publicationIds": [
+        115
+      ],
+      "status": "metadata_only",
+      "citation": "Monthly Black Periodicals Selection Review, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 374 (entry 3900).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p393-npsr.jpg",
+      "source": "danky",
+      "publicationIds": [
+        61
+      ],
+      "status": "metadata_only",
+      "citation": "The National Political Science Review, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 393 (entry 4098).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p404-network.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Network (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 404.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p405-network.jpg",
+      "source": "danky",
+      "publicationIds": [
+        75
+      ],
+      "status": "metadata_only",
+      "citation": "The Network: The Newsletter of the African-American Institute of Islamic Research, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 405 (entry 4216).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p405-network2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Network2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 405.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p409-deadline.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Deadline (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 409.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p409-nj-deadline.jpg",
+      "source": "danky",
+      "publicationIds": [
+        50
+      ],
+      "status": "metadata_only",
+      "citation": "New Jersey Deadline, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 409 (entry 4261).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p417-ncup.jpg",
+      "source": "danky",
+      "publicationIds": [
+        76
+      ],
+      "status": "metadata_only",
+      "citation": "Newark Community Union Project News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 417 (entry 4335).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p425-ngoma.jpg",
+      "source": "danky",
+      "publicationIds": [
+        111
+      ],
+      "status": "metadata_only",
+      "citation": "Ngoma, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 425 (entry 4424).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p426-nite-lite-full.jpg",
+      "source": "danky",
+      "publicationIds": [
+        21
+      ],
+      "status": "metadata_only",
+      "citation": "Nite Lite, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 426 (entry 4440).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p427-nite-lite.png",
+      "source": "danky",
+      "publicationIds": [
+        21
+      ],
+      "status": "metadata_only",
+      "citation": "Nite Lite, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 427 (entry 4440).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p427-nj-aahgs.jpg",
+      "source": "danky",
+      "publicationIds": [
+        106
+      ],
+      "status": "metadata_only",
+      "citation": "NJ-AAHGS Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 427 (entry 4444).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p430-north-jersey-independent.png",
+      "source": "danky",
+      "publicationIds": [
+        30
+      ],
+      "status": "metadata_only",
+      "citation": "North Jersey Independent, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 430 (entry 4470).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p431-nnj-informer.jpg",
+      "source": "danky",
+      "publicationIds": [
+        11
+      ],
+      "status": "metadata_only",
+      "citation": "The Northern New Jersey Informer, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 431 (entry 4485).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p435-nubian-news.jpg",
+      "source": "danky",
+      "publicationIds": [
+        40
+      ],
+      "status": "metadata_only",
+      "citation": "The Nubian News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 435 (entry 4532).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p443-oni.jpg",
+      "source": "danky",
+      "publicationIds": [
+        81
+      ],
+      "status": "metadata_only",
+      "citation": "ONI, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 443 (entry 4620).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p457-penn-crusader.png",
+      "source": "danky",
+      "publicationIds": [
+        136
+      ],
+      "status": "metadata_only",
+      "citation": "Penn Crusader, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 457 (entry 4764).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p46-apex-news.png",
+      "source": "danky",
+      "publicationIds": [
+        45
+      ],
+      "status": "metadata_only",
+      "citation": "Apex News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 46 (entry 467).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p461-perspectus.jpg",
+      "source": "danky",
+      "publicationIds": [
+        110
+      ],
+      "status": "metadata_only",
+      "citation": "Perspectus News Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 461 (entry 4807).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p464-pine-needle.png",
+      "source": "danky",
+      "publicationIds": [
+        137
+      ],
+      "status": "metadata_only",
+      "citation": "Pine Needle, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 464 (entry 4839).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p467-point-breeze-rugcuttings.png",
+      "source": "danky",
+      "publicationIds": [
+        55
+      ],
+      "status": "metadata_only",
+      "citation": "Point Breeze Rugcuttings, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 467 (entry 4862).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p472-primer.jpg",
+      "source": "danky",
+      "publicationIds": [
+        105
+      ],
+      "status": "metadata_only",
+      "citation": "Primer, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 472 (entry 4920).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p484-rap-masters.jpg",
+      "source": "danky",
+      "publicationIds": [
+        135
+      ],
+      "status": "metadata_only",
+      "citation": "Rap Masters: Reader’s Choice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 484 (entry 5049).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p484-rapmasters.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Rapmasters (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 484.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p493-rifle-ranger.png",
+      "source": "danky",
+      "publicationIds": [
+        97
+      ],
+      "status": "metadata_only",
+      "citation": "Rifle Ranger, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 493 (entry 5148).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p493-righton.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Righton (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 493.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p494-right-on.jpg",
+      "source": "danky",
+      "publicationIds": [
+        83,
+        95,
+        96
+      ],
+      "status": "metadata_only",
+      "citation": "Right On! Focus / Right On! / Right On! Presents Class, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 494 (entry 5153).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p494-righton2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Righton2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 494.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p50-artz.jpg",
+      "source": "danky",
+      "publicationIds": [
+        47
+      ],
+      "status": "metadata_only",
+      "citation": "Artz, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 50 (entry 511).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p51-artz2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Artz2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 51.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p51-ash-can.png",
+      "source": "danky",
+      "publicationIds": [
+        48
+      ],
+      "status": "metadata_only",
+      "citation": "Ash Can, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 51 (entry 517).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p51-at-the-crossroads.jpg",
+      "source": "danky",
+      "publicationIds": [
+        49
+      ],
+      "status": "metadata_only",
+      "citation": "At the Crossroads, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 51 (entry 529).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p518-sixty-niner.png",
+      "source": "danky",
+      "publicationIds": [
+        89
+      ],
+      "status": "metadata_only",
+      "citation": "Sixty Niner, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 518 (entry 5411).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p52-crossroads.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Crossroads (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 52.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p535-spirit.jpg",
+      "source": "danky",
+      "publicationIds": [
+        65
+      ],
+      "status": "metadata_only",
+      "citation": "Spirit: The Guide to the Soul, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 535 (entry 5578).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p540-starline.jpg",
+      "source": "danky",
+      "publicationIds": [
+        86
+      ],
+      "status": "metadata_only",
+      "citation": "Starline, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 540 (entry 5629).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p557-testimony.jpg",
+      "source": "danky",
+      "publicationIds": [
+        121
+      ],
+      "status": "metadata_only",
+      "citation": "Testimony: A Journal of African-American Poetry, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 557 (entry 5815).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p560-tbw.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Tbw (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 560.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p561-tbw.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Tbw (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 561.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p562-tbw.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Tbw (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 562.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p562-todays-black-woman.jpg",
+      "source": "danky",
+      "publicationIds": [
+        63,
+        138
+      ],
+      "status": "metadata_only",
+      "citation": "Today's Black Woman / Today’s Black Woman, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 562 (entry 5866).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p570-try-it-yourself-hair.jpg",
+      "source": "danky",
+      "publicationIds": [
+        93
+      ],
+      "status": "metadata_only",
+      "citation": "Try It Yourself Hair!, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 570 (entry 5954).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p570-tryhair.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Tryhair (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 570.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p574-ujamaa.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Ujamaa (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 574.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p575-ujamaa.jpg",
+      "source": "danky",
+      "publicationIds": [
+        103
+      ],
+      "status": "metadata_only",
+      "citation": "Ujamaa: Journal of the Black Students Union, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 575 (entry 6003).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p576-unionmsg.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Unionmsg (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 576.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p577-union-messenger.jpg",
+      "source": "danky",
+      "publicationIds": [
+        56
+      ],
+      "status": "metadata_only",
+      "citation": "The Union Messenger, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 577 (entry 6026).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p577-unionmsg2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Unionmsg2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 577.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p580-update.jpg",
+      "source": "danky",
+      "publicationIds": [
+        104
+      ],
+      "status": "metadata_only",
+      "citation": "Update, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 580 (entry 6069).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p585-unionmsg.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Unionmsg (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 585.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p586-unionmsg2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Unionmsg2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 586.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p587-utimme.jpg",
+      "source": "danky",
+      "publicationIds": [
+        73
+      ],
+      "status": "metadata_only",
+      "citation": "Utimme Umana/La Voz Oculta, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 587 (entry 6142).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p594-voice-plainfield.jpg",
+      "source": "danky",
+      "publicationIds": [
+        41
+      ],
+      "status": "metadata_only",
+      "citation": "The Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 594 (entry 6211).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p594-voice.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Voice (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 594.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p595-voice2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Voice2 (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 595.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p601-wait.jpg",
+      "source": "danky",
+      "publicationIds": [
+        113
+      ],
+      "status": "metadata_only",
+      "citation": "Wait, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 601 (entry 6279).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p620-word-up.jpg",
+      "source": "danky",
+      "publicationIds": [
+        114
+      ],
+      "status": "metadata_only",
+      "citation": "Word Up!, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 620 (entry 6483).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p620-wordup.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Wordup (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 620.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p621-write-on.jpg",
+      "source": "danky",
+      "publicationIds": [
+        120
+      ],
+      "status": "metadata_only",
+      "citation": "Write On Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 621 (entry 6497).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p625-yes.jpg",
+      "source": "danky",
+      "publicationIds": [
+        58
+      ],
+      "status": "metadata_only",
+      "citation": "Yes: Youth Excited About Success, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 625 (entry 6536).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p67-best-of-rap.jpg",
+      "source": "danky",
+      "publicationIds": [
+        124
+      ],
+      "status": "metadata_only",
+      "citation": "The Best of Rap & R&B, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 67 (entry 698).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p74-atlantic.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Atlantic (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 74.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p74-black-atlantic-city.jpg",
+      "source": "danky",
+      "publicationIds": [
+        119
+      ],
+      "status": "metadata_only",
+      "citation": "Black Atlantic City Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 74 (entry 765).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p75-bbc.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Bbc (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 75.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p75-black-book-connection.jpg",
+      "source": "danky",
+      "publicationIds": [
+        85
+      ],
+      "status": "metadata_only",
+      "citation": "Black Book Connection, Inc. Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 75 (entry 776).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p77-bcala.jpg",
+      "source": "danky",
+      "publicationIds": [
+        99
+      ],
+      "status": "metadata_only",
+      "citation": "Black Caucus of ALA Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 77 (entry 795).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p84-black-hair-digest.jpg",
+      "source": "danky",
+      "publicationIds": [
+        125
+      ],
+      "status": "metadata_only",
+      "citation": "Black Hair Digest, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 84 (entry 866).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p84-hairdigest.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Hairdigest (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 84.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p85-hairdigest.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Hairdigest (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 85.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p87-black-journal.jpg",
+      "source": "danky",
+      "publicationIds": [
+        52
+      ],
+      "status": "metadata_only",
+      "citation": "Black Journal, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 87 (entry 890).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p87-journal.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Journal (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 87.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p91-black-new-ark.jpg",
+      "source": "danky",
+      "publicationIds": [
+        28
+      ],
+      "status": "metadata_only",
+      "citation": "Black Newark, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 91 (entry 934).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p91-black-nj-magazine.jpg",
+      "source": "danky",
+      "publicationIds": [
+        77
+      ],
+      "status": "metadata_only",
+      "citation": "Black New Jersey Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 91 (entry 935).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p91-blacknewark.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Blacknewark (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 91.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p94-racers.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Racers (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 94.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p95-black-racers.jpg",
+      "source": "danky",
+      "publicationIds": [
+        64
+      ],
+      "status": "metadata_only",
+      "citation": "Black Racers Yearbook, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 95 (entry 980).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p95-racers.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Racers (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 95.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p97-sociologist.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Sociologist (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 97.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p98-black-sociologist.jpg",
+      "source": "danky",
+      "publicationIds": [
+        123
+      ],
+      "status": "metadata_only",
+      "citation": "The Black Sociologist, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 98 (entry 1012).",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-1998-p98-sociologist.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Sociologist (untitled in catalog), in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 98.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p104-n147-black-voice.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P104 N147 Black Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p105-n148-black-voice-105.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P105 N148 Black Voice 105, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p113-n156-bootstrap.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P113 N156 Bootstrap, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p114-n157-bootstrap-114.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P114 N157 Bootstrap 114, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p141-n184-cfun.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P141 N184 Cfun, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p142-n185-cfun-142.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P142 N185 Cfun 142, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p143-n186-cfun-143.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P143 N186 Cfun 143, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p154-n197-city-news.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P154 N197 City News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p155-n198-city-news-155.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P155 N198 City News 155, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p167-n210-communique.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P167 N210 Communique, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p168-n211-communique-168.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P168 N211 Communique 168, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p17-n60-african-voice.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P17 N60 African Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p171-n214-connection.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P171 N214 Connection, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p172-n215-connection-172.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P172 N215 Connection 172, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p176-n219-corporate-176.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P176 N219 Corporate 176, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p177-n220-corporate-hq.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P177 N220 Corporate Hq, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p179-n221-cricket-1867.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P179 N221 Cricket 1867, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p18-n61-african-voice-18.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P18 N61 African Voice 18, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p190-n232-deliverance-guess.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P190 N232 Deliverance Guess, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p191-n233-deliverance-guess2.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P191 N233 Deliverance Guess2, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p210-n253-en-avant.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P210 N253 En Avant, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p211-n254-en-avant-211.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P211 N254 En Avant 211, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p24-n66-festival-243-below-fold.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P24 N66 Festival 243 Below Fold, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p253-n296-gospel-253.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P253 N296 Gospel 253, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p254-n297-gospel-254.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P254 N297 Gospel 254, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p256-n299-greater-news.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P256 N299 Greater News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p257-n300-greater-news-257.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P257 N300 Greater News 257, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p280-n323-hours-after.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P280 N323 Hours After, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p281-n324-hours-after-281.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P281 N324 Hours After 281, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p312-n355-jersey-camera.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P312 N355 Jersey Camera, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p313-n356-jersey-camera-313.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P313 N356 Jersey Camera 313, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p336-n379-liberator-paterson.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P336 N379 Liberator Paterson, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p337-n380-liberator-paterson-337.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P337 N380 Liberator Paterson 337, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p342-n385-griot-342.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P342 N385 Griot 342, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p343-n386-literary-griot.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P343 N386 Literary Griot, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p392-n435-npsr-392.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P392 N435 Npsr 392, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p393-n436-npsr-393.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P393 N436 Npsr 393, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p394-n437-npsr-394.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P394 N437 Npsr 394, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p417-n459-ncup-see-ref.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P417 N459 Ncup See Ref, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p418-n460-ncup-entry.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P418 N460 Ncup Entry, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p425-n468-ngoma.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P425 N468 Ngoma, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p426-n469-ngoma-426.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P426 N469 Ngoma 426, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p427-n470-aahgs.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P427 N470 Aahgs, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p431-n474-informer.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P431 N474 Informer, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p435-n478-nubian-435.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P435 N478 Nubian 435, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p436-n479-nubian.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P436 N479 Nubian, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p443-n486-oni-443.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P443 N486 Oni 443, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p444-n487-oni-444.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P444 N487 Oni 444, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p445-n488-oni.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P445 N488 Oni, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p460-n503-perspectus.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P460 N503 Perspectus, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p461-n504-perspectus-461.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P461 N504 Perspectus 461, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p538-n581-starline-538.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P538 N581 Starline 538, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p539-n582-starline.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P539 N582 Starline, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p540-n583-starline-540.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P540 N583 Starline 540, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p555-n598-testimony-555.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P555 N598 Testimony 555, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p556-n599-testimony.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P556 N599 Testimony, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p557-n600-testimony-557.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P557 N600 Testimony 557, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p579-n622-update-579.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P579 N622 Update 579, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p580-n623-update.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P580 N623 Update, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p581-n624-update-581.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P581 N624 Update 581, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p587-n629-utimme-guess.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P587 N629 Utimme Guess, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p594-n636-voice-guess.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P594 N636 Voice Guess, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p621-n664-write-on-621.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P621 N664 Write On 621, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p622-n665-write-on-622.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P622 N665 Write On 622, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p623-n666-write-on.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P623 N666 Write On, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p67-n110-best-rap-67.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P67 N110 Best Rap 67, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p68-n111-best-rap-68.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P68 N111 Best Rap 68, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p76-n119-bcala-76.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P76 N119 Bcala 76, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p77-n120-bcala-77.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P77 N120 Bcala 77, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p78-n121-bcala-78.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P78 N121 Bcala 78, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p91-n133-blacknewark-934-below-fold.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P91 N133 Blacknewark 934 Below Fold, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/danky-leaf-p91-n134-black-nj-mag.jpg",
+      "source": "danky",
+      "publicationIds": [],
+      "status": "metadata_only",
+      "citation": "Danky Leaf P91 N134 Black Nj Mag, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan not referenced by any keeper in source-catalog.json (orphan). Citation is best-effort from the filename slug/page, not a matched publication record. Never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/danky/hsp-citizen-9-witherspoon.png",
+      "source": "danky",
+      "publicationIds": [
+        7
+      ],
+      "status": "metadata_only",
+      "citation": "The Citizen, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998.",
+      "cropPlan": "",
+      "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
+    },
+    {
+      "path": "data/research/depth-hunt/files/112-captain-africa-cover-thumb.jpg",
+      "source": "depth-hunt",
+      "publicationIds": [
+        112
+      ],
+      "status": "crop_first",
+      "citation": "Captain Africa, Cover of 'Captain Africa: the Battle for Egyptica,' the 1992 Africa World Press reprint of Dwayne J. Ferguson's Captain Africa comic, originally published by African Prince Productions of Somerville/Glen Ridge, NJ..",
+      "cropPlan": "Use as a small cropped cover preview only for Captain Africa; do not publish at full resolution.",
+      "notes": "Cover thumbnail for Captain Africa (issue 32 depth-hunt judgment: crop_first small preview)."
+    },
+    {
+      "path": "data/research/depth-hunt/files/114-word-up-sothebys-lot.jpg",
+      "source": "depth-hunt",
+      "publicationIds": [
+        114
+      ],
+      "status": "metadata_only",
+      "citation": "Word Up!, A lot of 28 issues of Word Up! magazine (1987-1997), the Paramus, NJ hip-hop teen magazine, photographed for a 2022 Sotheby's 'Art and Influence of Hip Hop' auction. (image credit: auction listing photo, not for reproduction).",
+      "cropPlan": "",
+      "notes": "Auction/sale photo for Word Up!, not an archival scan of the publication itself (issue 32 depth-hunt judgment: metadata_only with credit note)."
+    },
+    {
+      "path": "data/research/depth-hunt/files/121-testimony.jpg",
+      "source": "depth-hunt",
+      "publicationIds": [
+        121
+      ],
+      "status": "crop_first",
+      "citation": "Testimony: A Journal of African-American Poetry, Cover of Testimony: A Journal of African-American Poetry, Vol. 1 (1987), edited by Sandra West, Montclair, NJ..",
+      "cropPlan": "Use as a small cropped cover preview only for Testimony: A Journal of African-American Poetry; do not publish at full resolution.",
+      "notes": "Cover thumbnail for Testimony: A Journal of African-American Poetry (issue 32 depth-hunt judgment: crop_first small preview)."
+    },
+    {
+      "path": "data/research/depth-hunt/files/135-rap-masters-nov1992.webp",
+      "source": "depth-hunt",
+      "publicationIds": [
+        135
+      ],
+      "status": "crop_first",
+      "citation": "Rap Masters: Reader’s Choice, Rap Masters magazine cover, November 1992 issue, published by Faces Magazines, Paramus, NJ..",
+      "cropPlan": "Use as a small cropped cover preview only for Rap Masters: Reader’s Choice; do not publish at full resolution.",
+      "notes": "Cover thumbnail for Rap Masters: Reader’s Choice (issue 32 depth-hunt judgment: crop_first small preview)."
+    },
+    {
+      "path": "data/research/depth-hunt/files/40-nubian-news-v6n1-2022.pdf",
+      "source": "depth-hunt",
+      "publicationIds": [
+        40
+      ],
+      "status": "crop_first",
+      "citation": "The Nubian News, The Nubian News, Vol. 6 No. 1, Jan. 7, 2022 -- full 12-page issue PDF from the paper's own online archive.",
+      "cropPlan": "Crop a representative page/article from the The Nubian News issue PDF; do not publish the full issue uncropped.",
+      "notes": "Library-held issue PDF for The Nubian News (issue 32 depth-hunt judgment: crop_first, same as other full-issue scans)."
+    },
+    {
+      "path": "data/research/depth-hunt/files/68-medic-news-v1n1.pdf",
+      "source": "depth-hunt",
+      "publicationIds": [
+        68
+      ],
+      "status": "crop_first",
+      "citation": "MEDIC News, MEDIC News, vol. 1, no. 1 — 8-page newsletter, Newark, NJ. Gus Heningburg Collection, Charles F. Cummings New Jersey Information Center, Newark Public Library..",
+      "cropPlan": "Crop a representative page/article from the MEDIC News issue PDF; do not publish the full issue uncropped.",
+      "notes": "Library-held issue PDF for MEDIC News (issue 32 depth-hunt judgment: crop_first, same as other full-issue scans)."
+    },
+    {
+      "path": "data/research/depth-hunt/files/95-right-on-1971-v3n1.pdf",
+      "source": "depth-hunt",
+      "publicationIds": [
+        95
+      ],
+      "status": "crop_first",
+      "citation": "Right On!.",
+      "cropPlan": "Crop a representative page/article from the Right On! issue PDF; do not publish the full issue uncropped.",
+      "notes": "Library-held issue PDF for Right On! (issue 32 depth-hunt judgment: crop_first, same as other full-issue scans). Not referenced by any keeper in source-catalog.json; publication matched by filename number prefix. Likely a supplementary find from the same depth-hunt pass as its sibling keeper file for this publication."
+    },
+    {
+      "path": "data/research/depth-hunt/files/95-right-on-1977-v6n4.pdf",
+      "source": "depth-hunt",
+      "publicationIds": [
+        95
+      ],
+      "status": "crop_first",
+      "citation": "Right On!.",
+      "cropPlan": "Crop a representative page/article from the Right On! issue PDF; do not publish the full issue uncropped.",
+      "notes": "Library-held issue PDF for Right On! (issue 32 depth-hunt judgment: crop_first, same as other full-issue scans). Not referenced by any keeper in source-catalog.json; publication matched by filename number prefix. Likely a supplementary find from the same depth-hunt pass as its sibling keeper file for this publication."
+    },
+    {
+      "path": "data/research/loc/forum-loc-sn88071371.png",
+      "source": "loc",
+      "publicationIds": [
+        39
+      ],
+      "status": "publishable_with_credit",
+      "citation": "Library of Congress catalog record sn88071371.",
+      "cropPlan": "",
+      "notes": "Screenshot of an LOC catalog record; government catalog data, low risk. Director ruling 2026-08-19; Joe can override."
+    },
+    {
+      "path": "data/research/loc/essex-forum-loc-sn88071370.png",
+      "source": "loc",
+      "publicationIds": [
+        42
+      ],
+      "status": "publishable_with_credit",
+      "citation": "Library of Congress catalog record sn88071370.",
+      "cropPlan": "",
+      "notes": "Screenshot of an LOC catalog record; government catalog data, low risk. Director ruling 2026-08-19; Joe can override."
+    }
+  ],
+  "metadata": {
+    "totalCount": 327,
+    "byStatus": {
+      "crop_first": 50,
+      "publishable": 34,
+      "metadata_only": 236,
+      "publishable_with_credit": 7
+    },
+    "generated": "2026-08-19"
+  }
+}

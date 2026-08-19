@@ -1,0 +1,1384 @@
+{
+  "events": [
+    {
+      "id": "evt-001",
+      "date": "1843",
+      "title": "Mansfield Herbert opens an Underground Railroad station in South Trenton",
+      "description": "A Tribune profile of his son reports that from 1843 until the Civil War, Mansfield Herbert's house in South Trenton was the principal Underground Railroad station between Philadelphia and New Brunswick. Herbert had escaped slavery at 14 and later bought freedom for himself, his father, and his sister for more than $3,000.",
+      "people": [
+        "Mansfield Herbert"
+      ],
+      "publicationIds": [],
+      "sourceFiles": [
+        "new-york-tribune_1895-12-08_p14_herbert-profile.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-002",
+      "date": "1862",
+      "title": "Alfred P. Smith writes to President Lincoln against colonization",
+      "description": "While working as a reporter for the Paterson Guardian, Alfred P. Smith of Saddle River sent President Abraham Lincoln a letter criticizing the proposal to colonize freed slaves abroad.",
+      "people": [
+        "Alfred P. Smith",
+        "Abraham Lincoln"
+      ],
+      "publicationIds": [
+        34
+      ],
+      "sourceFiles": [
+        "the-record-hackensack_1991-02-09_p2_landscape-renamed.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-003",
+      "date": "1876",
+      "title": "Smith starts a job-printing business in Saddle River",
+      "description": "After his father died, Alfred P. Smith opened a job-printing shop on East Allendale Road. He later launched his own newspaper partly to advertise the shop.",
+      "people": [
+        "Alfred P. Smith"
+      ],
+      "publicationIds": [
+        34
+      ],
+      "sourceFiles": [
+        "ridgewood-news_1987-11-26_p14_landscape-ap-smith.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-004",
+      "date": "1880",
+      "title": "R. Henri Herbert founds The Weekly Sentinel in Trenton",
+      "description": "Herbert founded The Weekly Sentinel in 1880 and ran it for three years before selling it to Colonel E. C. Stahl, who merged it into The Trenton Herald. Herbert had already worked as business manager of The New-Jersey State Republican in Plainfield and as an editorial writer for The Daily State Sentinel and The Daily Free Press in Trenton.",
+      "people": [
+        "R. Henri Herbert",
+        "E. C. Stahl"
+      ],
+      "publicationIds": [
+        10
+      ],
+      "sourceFiles": [
+        "new-york-tribune_1895-12-08_p14_herbert-profile.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-005",
+      "date": "1881-05",
+      "title": "Alfred P. Smith publishes the first issue of A.P. Smith's Paper",
+      "description": "Smith bought a printing press and began publishing A.P. Smith's Paper, later renamed The Landscape, from his house on East Allendale Road in Saddle River. He wrote, edited, printed, translated, and distributed it alone.",
+      "people": [
+        "Alfred P. Smith"
+      ],
+      "publicationIds": [
+        34
+      ],
+      "sourceFiles": [
+        "ridgewood-news_1987-11-26_p14_landscape-ap-smith.json",
+        "the-record-hackensack_1991-02-09_p2_landscape-renamed.json",
+        "sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-006",
+      "date": "1884",
+      "title": "Herbert serves as NJ commissioner of colored exhibits at the New Orleans Exposition",
+      "description": "In 1884-85 R. Henri Herbert served as New Jersey commissioner of the Department of Colored Exhibits at the New Orleans Exposition, then returned to Trenton to manufacture cigars.",
+      "people": [
+        "R. Henri Herbert"
+      ],
+      "publicationIds": [],
+      "sourceFiles": [
+        "new-york-tribune_1895-12-08_p14_herbert-profile.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-007",
+      "date": "1888-12-11",
+      "title": "The Evening World runs a squib on 'A Roaring New Jersey Negro Editor'",
+      "description": "A short item in the New York Evening World's 'Squibs from the Squibs' column is headed 'A Roaring New Jersey Negro Editor.' The body text is too degraded to transcribe, so the paper referred to is unconfirmed. The file slug points to the New Jersey Trumpet.",
+      "people": [],
+      "publicationIds": [
+        38
+      ],
+      "sourceFiles": [
+        "evening-world_1888-12-11_p2_trumpet-negro-organ.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-008",
+      "date": "1889-05-15",
+      "title": "Col. William Murrell of the New Jersey Trumpet receives a federal commission",
+      "description": "The Washington Bee reported that Col. Wm. Murrell, editor of the New Jersey Trumpet, received his commission for an Interior Department appointment on Wednesday, May 15, 1889. A gossip item on the same page said the Bee would take over the Trumpet's subscribers.",
+      "people": [
+        "William Murrell"
+      ],
+      "publicationIds": [
+        38
+      ],
+      "sourceFiles": [
+        "washington-bee_1889-05-18_p2_murrell-trumpet-editor.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-009",
+      "date": "1889-05-25",
+      "title": "Murrell enters his federal office",
+      "description": "The Washington Bee reported Murrell would enter upon the duties of his new federal office on May 25, 1889.",
+      "people": [
+        "William Murrell"
+      ],
+      "publicationIds": [
+        38
+      ],
+      "sourceFiles": [
+        "washington-bee_1889-05-18_p2_murrell-trumpet-editor.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-010",
+      "date": "1891-04",
+      "title": "Smith campaigns for paved roads in Saddle River and wins the vote",
+      "description": "Between April and June 1891 Smith used The Landscape to push for paving Saddle River's roads. The vote carried and $2,000 was appropriated. He also predicted Bergen County's suburban growth.",
+      "people": [
+        "Alfred P. Smith"
+      ],
+      "publicationIds": [
+        34
+      ],
+      "sourceFiles": [
+        "ridgewood-news_1987-11-26_p14_landscape-ap-smith.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-011",
+      "date": "1893-07-21",
+      "title": "Mass meeting at Marrow's Hall protests Asbury Park's pavilion color line",
+      "description": "Black residents met at Marrow's Hall in West Park to protest signs on James A. Bradley's Asbury Park pavilions barring Black patrons. Col. William Murrell, editor of the New Jersey Trumpet, spoke from the platform. Bradley arrived later and defended the policy as a private property right. The Daily Press put attendance at about 100; the Shore Press put it at about 500.",
+      "people": [
+        "William Murrell",
+        "James A. Bradley",
+        "William H. Dickerson",
+        "Joseph Morgan"
+      ],
+      "publicationIds": [
+        38
+      ],
+      "sourceFiles": [
+        "asbury-park-press_1893-07-22_p1_murrell-speaking.json",
+        "shore-press_1893-07-28_p6_murrell-asbury-meeting.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-012",
+      "date": "1893-07-28",
+      "title": "The Shore Press notes the first issue of the New Jersey Trumpet's Monmouth edition",
+      "description": "On July 28, 1893 the Shore Press reported that the first issue of the Monmouth edition of the New Jersey Trumpet, Murrell's Newark-based Black weekly, had just reached its office. Rev. Fillmore Smith edited the Monmouth edition locally. The launch date itself is not stated in the source, so this event is dated to the day the Shore Press noted the copy's arrival.",
+      "people": [
+        "William Murrell",
+        "Fillmore Smith"
+      ],
+      "publicationIds": [
+        38
+      ],
+      "sourceFiles": [
+        "shore-press_1893-07-28_p6_murrell-asbury-meeting.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-013",
+      "date": "1893-10",
+      "title": "Smith editorializes against 'barbarism' in The Landscape",
+      "description": "Smith wrote against racism in The Landscape, invoking Senator Sumner's 'Barbarism of Slavery' speech and arguing that daily barbarism 'would disgrace a nation of savages' still remained.",
+      "people": [
+        "Alfred P. Smith"
+      ],
+      "publicationIds": [
+        34
+      ],
+      "sourceFiles": [
+        "ridgewood-news_1987-11-26_p14_landscape-ap-smith.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-014",
+      "date": "1893-11-04",
+      "title": "R. Henri Herbert circulates a letter urging Black voters to defeat James A. Bradley",
+      "description": "Herbert wrote and circulated a public letter urging Black voters in Monmouth County to help defeat Bradley's state senate candidacy, citing Bradley's order the previous summer barring Black waiters from his Asbury Park band pavilion.",
+      "people": [
+        "R. Henri Herbert",
+        "James A. Bradley"
+      ],
+      "publicationIds": [],
+      "sourceFiles": [
+        "trenton-sunday-advertiser_1893-11-05_p1_herbert-vs-bradley.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-015",
+      "date": "1895-10-19",
+      "title": "Herbert joins the NJ Republican State Committee as a consulting member",
+      "description": "The state committee adopted a resolution naming Herbert a consulting member charged with securing the Black vote statewide for gubernatorial candidate John W. Griggs. He shared the work with Charles R. Robinson, the Black committee member from Camden.",
+      "people": [
+        "R. Henri Herbert",
+        "Charles R. Robinson",
+        "John W. Griggs"
+      ],
+      "publicationIds": [],
+      "sourceFiles": [
+        "trenton-sunday-advertiser_1895-10-20_p1_herbert-gop-committee.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-016",
+      "date": "1895-12-08",
+      "title": "The New-York Tribune profiles Herbert and documents his newspaper career",
+      "description": "A New Jersey news page sketch, 'A Noted Colored Leader,' laid out Herbert's biography: born in Trenton in 1857, in newspapers from boyhood, founder of The Weekly Sentinel, and the organizer who unified Black Republican voters in Mercer County behind Gov. Griggs.",
+      "people": [
+        "R. Henri Herbert"
+      ],
+      "publicationIds": [
+        10
+      ],
+      "sourceFiles": [
+        "new-york-tribune_1895-12-08_p14_herbert-profile.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-017",
+      "date": "1901-07",
+      "title": "The Landscape ceases when Alfred P. Smith dies",
+      "description": "Smith stopped publishing in July 1901. The Record's account says the paper ceased in July 1901 and Smith died four months later at age 69. The Ridgewood News says he died in July 1901; the Sunday News says he died in 1901 at age 65. The Hackensack Republican eulogized him as 'a conspicuous figure and a power among the men of his race.'",
+      "people": [
+        "Alfred P. Smith"
+      ],
+      "publicationIds": [
+        34
+      ],
+      "sourceFiles": [
+        "the-record-hackensack_1991-02-09_p2_landscape-renamed.json",
+        "ridgewood-news_1987-11-26_p14_landscape-ap-smith.json",
+        "sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-018",
+      "date": "1904",
+      "title": "Fire destroys the Echo's press room in Long Branch",
+      "description": "The Monmouth Democrat reported that the Echo, a Black weekly published in Long Branch, was burned out by a fire believed to be of incendiary origin. Machinery and press room damage ran to several hundred dollars. The item noted the paper's first issue was edited by Rock & Howard.",
+      "people": [
+        "Rock",
+        "Howard"
+      ],
+      "publicationIds": [
+        31
+      ],
+      "sourceFiles": [
+        "monmouth-democrat_1904-09-08_p4_echo-burned-out.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-019",
+      "date": "1909-03-05",
+      "title": "The Echo moves from Long Branch to Red Bank",
+      "description": "The Asbury Park Evening Press reported that The Echo, edited and published by W. E. Rack in the interest of the colored race in Long Branch, relocated to Red Bank after Rack bought a home there. Rack planned to run an industrial school in Red Bank.",
+      "people": [
+        "W. E. Rack"
+      ],
+      "publicationIds": [
+        31
+      ],
+      "sourceFiles": [
+        "asbury-park-press_1909-03-05_p2_echo-moves-red-bank.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-020",
+      "date": "1909-10-13",
+      "title": "R. Henri Herbert dies suddenly in a Trenton street",
+      "description": "Herbert, a document clerk at the New Jersey State House and a leading Black Republican, was found dead in the middle of a street in Trenton. The New York Age gave the death page-one play.",
+      "people": [
+        "R. Henri Herbert"
+      ],
+      "publicationIds": [],
+      "sourceFiles": [
+        "new-york-age_1909-10-21_p1_herbert-obituary.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-021",
+      "date": "1909-10-21",
+      "title": "Herbert's funeral in Newark is dated Saturday, October 23, 1909 (sources conflict)",
+      "description": "The artifact is the October 21, 1909 issue of the New York Age, which reported Herbert's sudden death in Trenton on October 13 and gave the funeral as Saturday, October 23, in Newark. It listed honorary pallbearers including Fred R. Moore, James M. Baxter, former U.S. Minister to Haiti William S. Powell, and Essex County Colored Republican Association chairman J. H. E. Scotland, and reported memorial resolutions adopted by the association. Sources conflict on whether this is an announcement or a report. The reading log records the article as describing the funeral as held, names Rev. H. B. Anderson as the officiant, and dates the funeral October 23 per the article. An October 21 press date cannot witness an October 23 event. The likely explanations are that the obituary printed funeral plans in past-tense style, or that the log conflated an announcement with a report. Do not treat the funeral as independently confirmed until a later issue is read.",
+      "people": [
+        "R. Henri Herbert",
+        "Fred R. Moore",
+        "James M. Baxter",
+        "William S. Powell",
+        "J. H. E. Scotland"
+      ],
+      "publicationIds": [],
+      "sourceFiles": [
+        "new-york-age_1909-10-21_p1_herbert-obituary.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-022",
+      "date": "1921-04-09",
+      "title": "The New York Age reprints an item from the Red Bank Echo",
+      "description": "The Age's clippings column credited the Red Bank Echo for a story about a Baltimore man who had a five-inch horn removed from his forehead. The column ran the Echo alongside the Detroit Leader, the Christian Recorder, and the Galveston City Times, showing the Echo inside the national Black press exchange network.",
+      "people": [],
+      "publicationIds": [
+        31
+      ],
+      "sourceFiles": [
+        "new-york-age_1921-04-09_p4_red-bank-echo-cited.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-023",
+      "date": "1932-03-21",
+      "title": "The Ironsides Echo wins a Columbia scholastic press award",
+      "description": "The Ironsides Echo, the monthly student paper of the New Jersey State Manual Training and Industrial School for Colored Youth in Bordentown, took second place among technical and agricultural high school papers in the Columbia University Scholastic Press Association contest, which judged 800 publications. Gov. A. Harry Moore announced the grading. Leon Snead was the student editor.",
+      "people": [
+        "Leon Snead",
+        "A. Harry Moore"
+      ],
+      "publicationIds": [
+        57
+      ],
+      "sourceFiles": [
+        "courier-post_1932-03-22_p14_ironsides-echo-award.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-024",
+      "date": "1932-07-09",
+      "title": "The Afro-American reports the Newark Herald has ceased publication",
+      "description": "A Washington edition item said the Newark Herald, described as New Jersey's only colored weekly, had stopped publishing after more than four years, and that editor Clark moved his office out of the Cotton Building. The Newark Herald was publishing again by 1938 under Volume 11 numbering, so either the suspension was temporary or the volume count predates the 1928 start implied here.",
+      "people": [
+        "Clark"
+      ],
+      "publicationIds": [
+        9,
+        24
+      ],
+      "sourceFiles": [
+        "afro-american_1932-07-09_p7_newark-herald-folded.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-025",
+      "date": "1938-05-04",
+      "title": "Third Ward protest reinstates a Black Douglass Park attendant",
+      "description": "After Newark's Third Ward residents protested the dismissal of colored Douglass Park attendants, Deputy Director Ernest Masini met Attorney Roger M. Yancey and a delegation, and Mrs. Elizabeth Mitchell was reinstated. The New Jersey Herald News covered it.",
+      "people": [
+        "Elizabeth Mitchell",
+        "Roger M. Yancey",
+        "Ernest Masini"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewJerseyHeraldNews19380521a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-026",
+      "date": "1938-05-10",
+      "title": "Kenneth Worde sues the Liberty Theatre in Elizabeth over Jim Crow pricing",
+      "description": "Worde, a Summit political leader, filed a civil rights suit against Skouras Liberty Theatre Corp. over segregated seating and admission pricing at the Elizabeth theater. George M. Fieldman was his attorney. The suit led the New Jersey Herald News front page.",
+      "people": [
+        "Kenneth Worde",
+        "George M. Fieldman",
+        "George Nichols"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewJerseyHeraldNews19380521a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-027",
+      "date": "1938-05-21",
+      "title": "The New Jersey Herald News publishes Vol. 1, No. 3",
+      "description": "The third issue of the new Newark weekly carried Melvin B. Johnson as managing editor, Oliver W. Brown as business manager, and H. B. Kelley as advertising director. Volume 1, Number 3 on May 21, 1938 places the paper's first issue in early May 1938.",
+      "people": [
+        "Melvin B. Johnson",
+        "Oliver W. Brown",
+        "H. B. Kelley"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewJerseyHeraldNews19380521a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-028",
+      "date": "1938-06-11",
+      "title": "Two Newark Black weeklies publish the same day and are bound together",
+      "description": "A single archive scan holds The Newark Herald (Vol. 11, No. 18) and the New Jersey Herald News (Vol. 1, No. 6), both dated Saturday, June 11, 1938. The Herald ran under Merrill Biddle as president and Julius J. Adams as managing editor; the Herald News under the motto 'Owned and Published by New Jersey Negroes.' The pair confirms two competing Black weeklies operated in Newark at once before their later merger. The June 11 reading log renders the two names as 'Julius X. Adams' and 'Melvin R. Johnson'; seven other logs in this batch give Julius J. Adams and Melvin B. Johnson, so the majority spellings are used here and the June 11 variants are treated as OCR error.",
+      "people": [
+        "Merrill Biddle",
+        "Julius J. Adams",
+        "F. Sweeney Jones",
+        "Melvin B. Johnson"
+      ],
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380611a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-029",
+      "date": "1938-06",
+      "title": "Black leaders are refused service at Newark's Novelty Bar & Grill",
+      "description": "The New Jersey Herald News reported that Harold Lett of the New Jersey Urban League, Dr. J. B. Parks, Alma Stemple, and Carolyn Hilliard were refused service at the Novelty Bar & Grill, 220 Market St., Newark, and that the grill closed itself to Black patrons. A petition went to the prosecutor. Anna Nash was battered in a related incident.",
+      "people": [
+        "Harold Lett",
+        "J. B. Parks",
+        "Anna Nash",
+        "Robert F. Kearse"
+      ],
+      "publicationIds": [
+        9,
+        16
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380611a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-030",
+      "date": "1938-06",
+      "title": "Long Branch adopts a beach ordinance aimed at excluding Black residents",
+      "description": "The Newark Herald covered a Long Branch bathhouse-access ordinance designed to keep Black residents off North Long Branch beaches, and the local Committee on Legal Redress and NAACP opposition led by Rev. Jackson.",
+      "people": [
+        "Rev. Jackson"
+      ],
+      "publicationIds": [
+        9,
+        24
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380618a.json",
+        "NewarkHerald19380611a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-031",
+      "date": "1938-06",
+      "title": "Arthur A. Schomburg dies in Brooklyn",
+      "description": "The Newark Herald reported the death of Schomburg, curator of the Negro literature and history collection at the 135th Street branch of the New York Public Library.",
+      "people": [
+        "Arthur A. Schomburg"
+      ],
+      "publicationIds": [
+        9,
+        24
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380618a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-032",
+      "date": "1938-06-11",
+      "title": "Daniel Winge disappears from the Douglass-Harrison apartments",
+      "description": "The Newark Herald reported that bank and insurance cashier Daniel Winge vanished from the Douglass-Harrison Apartments with a shortage of about $2,000, then mailed a letter from Grand Central pledging to return and tell all. June 3, 1938 is the postmark on that letter, not a documented disappearance date, so this event is dated to the Herald's first coverage. The read issues that carry the story are June 11 and July 2, 1938; the story returns on July 16 and July 23 (see evt-036 and evt-038). The June 18 and July 9, 1938 issues do not mention Winge.",
+      "people": [
+        "Daniel Winge"
+      ],
+      "publicationIds": [
+        9,
+        24
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380611a.json",
+        "NewarkHerald19380702a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-033",
+      "date": "1938-06-22",
+      "title": "Joe Louis knocks out Max Schmeling and gives $2,500 to the Urban League and NAACP",
+      "description": "Both Newark weeklies built up and then covered the Yankee Stadium rematch, including Louis's training at Pompton Lakes with James Braddock and Gene Tunney. After the one-round win Louis donated $2,500 from the receipts to the Urban League and the NAACP.",
+      "people": [
+        "Joe Louis",
+        "Max Schmeling",
+        "James Braddock",
+        "Gene Tunney"
+      ],
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380611a.json",
+        "NewarkHerald19380618a.json",
+        "NewarkHerald19380702a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-034",
+      "date": "1938-06-26",
+      "title": "James Weldon Johnson is killed in a Maine grade-crossing crash",
+      "description": "Both The Newark Herald and the New Jersey Herald News led their July 2 issues with the death of the poet and former NAACP executive secretary, whose car was struck by a train near Wiscasset, Maine. His widow Grace Nail Johnson was injured. The Newark Herald eulogized him on its editorial page, and the Springfield Avenue branch library in Newark exhibited his books.",
+      "people": [
+        "James Weldon Johnson",
+        "Grace Nail Johnson"
+      ],
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380702a.json",
+        "NewarkHerald19380709a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-035",
+      "date": "1938-07-04",
+      "title": "About 100,000 people attend the Weequahic Park Independence Day festival",
+      "description": "The Newark Herald reported a crowd of roughly 100,000 at the Weequahic Park July 4 observance.",
+      "people": [],
+      "publicationIds": [
+        9,
+        24
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380709a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-036",
+      "date": "1938-07-16",
+      "title": "Daniel E. Winge is arrested and pleads guilty to embezzlement",
+      "description": "The July 16, 1938 issue reported that Detective William J. Freary had arrested the former assistant manager of the Douglass-Harrison Apartments. Winge pleaded guilty, and the issue said sentencing was set for July 20.",
+      "people": [
+        "Daniel E. Winge",
+        "William J. Freary",
+        "George Mayr"
+      ],
+      "publicationIds": [
+        9,
+        24
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380716a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-037",
+      "date": "1938-07-22",
+      "title": "The North Jersey Baptist Association parades through Newark's Third Ward",
+      "description": "The association's Silver Jubilee parade honored Dr. L. K. Williams, president of the National Baptist Convention. Rev. J. H. Burks chaired the parade committee and Dr. C. T. Wilcher was re-elected moderator.",
+      "people": [
+        "L. K. Williams",
+        "J. H. Burks",
+        "C. T. Wilcher",
+        "J. Mercer Burrell"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380730a.json",
+        "NewarkHerald19380723a.json",
+        "NewarkHerald19380716a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-038",
+      "date": "1938-07-23",
+      "title": "The Newark Herald reports Winge's sentencing and prints a jailhouse confession",
+      "description": "The July 23, 1938 issue printed Winge's sentencing alongside a jailhouse confession detailing the embezzlement scheme, closing a local scandal it had followed since June 11. The issue does not state the sentencing date; the July 16 issue reported it was set for July 20 (evt-036), so this event is dated to the issue date.",
+      "people": [
+        "Daniel E. Winge"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380723a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-039",
+      "date": "1938-07-23",
+      "title": "The Ku Klux Klan burns a cross at Fayson Lake near Butler",
+      "description": "After a Black family moved into the Fayson Lake development, the Klan burned a cross and a mob stoned the cottage. The paper reported it on the front page.",
+      "people": [],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380730a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-040",
+      "date": "1938-07-24",
+      "title": "'The Duke Is Tops' opens at the National Theatre in Newark",
+      "description": "The Ralph Cooper and Lena Horne film opened in Newark and was covered on the paper's entertainment pages alongside Apollo Theatre news and a reprinted Paul Robeson speech.",
+      "people": [
+        "Ralph Cooper",
+        "Lena Horne",
+        "Paul Robeson"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380723a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-041",
+      "date": "1938-07-25",
+      "title": "Elizabeth closes the Dowd Natatorium rather than desegregate it",
+      "description": "A Negro delegation led by NAACP Elizabeth branch president Dr. William H. Brown, with attorney J. Leroy Jordan as spokesman, refused a segregated-hours compromise. The Elizabeth Recreation Commission voted to close the pool permanently for the season. The fight followed the drowning death of William 'Bud' Jackson.",
+      "people": [
+        "William H. Brown",
+        "J. Leroy Jordan",
+        "Bernard P. Gold",
+        "William 'Bud' Jackson"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380730a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-042",
+      "date": "1938-07-27",
+      "title": "A WPA official's 'Mammy' remark draws protest at the Bordentown women's convention",
+      "description": "Mrs. Elizabeth C. Denny Van, state director of Women's and Professional Projects for the WPA, made a remark about 'Mammy' at the NJ State Federation of Colored Women's Clubs convention. Mrs. Armeta H. Douglass objected. The paper made the exchange front-page news.",
+      "people": [
+        "Elizabeth C. Denny Van",
+        "Armeta H. Douglass"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380730a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-043",
+      "date": "1938-07",
+      "title": "Mrs. Ida Brown is elected president of the NJ State Federation of Colored Women's Clubs",
+      "description": "Brown, of Jersey City, succeeded Mrs. Alice B. Arrington, who resigned to take a YWCA post in Baltimore. Federation founder Rev. Florence Randolph presided at the election in Bordentown.",
+      "people": [
+        "Ida Brown",
+        "Alice B. Arrington",
+        "Florence Randolph"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380730a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-044",
+      "date": "1939-03",
+      "title": "The state commission reports systemic denial of rights to 200,000 Black New Jerseyans",
+      "description": "The New Jersey Herald News front-paged the NJ State Temporary Commission on the Condition of the Urban Colored Population, chaired by Dr. Frank S. Hargraves, and demanded legislative and administrative action.",
+      "people": [
+        "Frank S. Hargraves"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewJerseyHeraldNews19390311.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-045",
+      "date": "1939-03",
+      "title": "The paper calls the Rutgers admissions inquiry a whitewash",
+      "description": "After Rutgers was accused and then publicly exonerated of discriminatory admissions toward Ernest Baxter, the Essex County committee investigation was branded a 'whitewash' by Black citizens in the paper's coverage.",
+      "people": [
+        "Ernest Baxter",
+        "Frank S. Hargraves"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewJerseyHeraldNews19390311.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-046",
+      "date": "1939-03-11",
+      "title": "The New Jersey Herald News launches a municipal investigative series and claims seniority",
+      "description": "The March 11, 1939 issue (Vol. XII, No. 5) carried the masthead 'combined with THE NEWARK HERALD' and the billing 'New Jersey's Oldest Colored Weekly, Twelfth Year.' Its front page opened a multi-part series, 'Obstacles Faced by the Race in Newark,' promising Jersey City the following week. An editorial titled 'The Negro Press in New Jersey' positioned the paper inside a statewide network of Black papers.",
+      "people": [
+        "Frederick W. Martin",
+        "Richard L. Martin"
+      ],
+      "publicationIds": [
+        9,
+        16,
+        24
+      ],
+      "sourceFiles": [
+        "NewJerseyHeraldNews19390311.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-047",
+      "date": "1939-09-09",
+      "title": "The Jersey Guardian praises a Paterson college president as a foe of prejudice",
+      "description": "The Paterson Evening News reported that The Jersey Guardian, a statewide newspaper for Black readers, published an article praising Dr. Herbert Spencer Robinson, president of the College of Paterson, who favored boycotts to fight segregation. The same page covered Robinson introducing NAACP field secretary William Pickens at a Paterson branch meeting.",
+      "people": [
+        "Herbert Spencer Robinson",
+        "William Pickens"
+      ],
+      "publicationIds": [
+        37
+      ],
+      "sourceFiles": [
+        "the-news-paterson_1939-09-09_p9_nj-guardian-cited.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-048",
+      "date": "1940-05-07",
+      "title": "The Ironsides Echo wins two more Columbia press awards",
+      "description": "The May 7, 1940 issue of the Trenton Evening Times reported that the Bordentown Manual Training and Industrial School student paper had taken two second-place awards in Columbia University's 16th annual scholastic press contest, its second documented showing after 1932. The issue reports the awards as already made; it does not date the contest itself.",
+      "people": [],
+      "publicationIds": [
+        57
+      ],
+      "sourceFiles": [
+        "trenton-times_1940-05-07_p13_ironsides-echo-awards.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-049",
+      "date": "1942-06",
+      "title": "The FBI holds Glen Ridge conscientious objector Bill Sutherland",
+      "description": "The New Jersey Herald News led its July 4 issue with Sutherland, held in Hackensack for refusing to report to a CCC camp in Coshocton, Ohio, and released on $500 bail.",
+      "people": [
+        "Bill Sutherland Jr."
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewJerseyHeraldNews19420704.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-050",
+      "date": "1942-07-04",
+      "title": "The New Jersey Herald News runs 12 pages and claims to be the state's oldest colored weekly",
+      "description": "The July 4, 1942 issue (15th Year, No. 26) described itself as 'New Jersey's oldest and only colored weekly of 12 pages or more' and published from 130 W. Kinney St., Newark. Frederick W. Martin was president of the Herald News Publishing Co. and Richard L. Martin secretary-treasurer. For context only, and not as evidence for the 1942 facts above: the June 11, 1938 Newark Herald scan (evt-028) shows the same W. Kinney St. address in use by the Newark Herald Publishing Co.",
+      "people": [
+        "Frederick W. Martin",
+        "Richard L. Martin"
+      ],
+      "publicationIds": [
+        16,
+        9,
+        24
+      ],
+      "sourceFiles": [
+        "NewJerseyHeraldNews19420704.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-051",
+      "date": "1942-07",
+      "title": "William R. Jackson becomes the first Black member of the Newark Board of Education",
+      "description": "Mayor Vincent Murphy named Jackson, executive secretary of the Court Street YMCA, to the board. The Herald News reported he was the first Black appointee in the board's 106-year history.",
+      "people": [
+        "William R. Jackson",
+        "Vincent Murphy"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewJerseyHeraldNews19420704.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-052",
+      "date": "1946",
+      "title": "The New Jersey Afro-American publishes its 'Year of Great Negro Resistance to Hate Groups' issue",
+      "description": "The issue featured the blinded Black veteran Isaac Woodard on its cover.",
+      "people": [
+        "Isaac Woodard"
+      ],
+      "publicationIds": [
+        35
+      ],
+      "sourceFiles": [
+        "daily-record-morristown_2023-05-21_pD2_nj-afro-american-described.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-053",
+      "date": "1946",
+      "title": "Melvin B. Johnson leaves the Black newspaper business for Republican politics",
+      "description": "The Star-Ledger reported that Johnson, a former Negro newspaper publisher and editor, left newspapers in 1946 to organize Black voters for Gov. Alfred Driscoll's campaign, then took a public relations job with the NJ Department of Labor.",
+      "people": [
+        "Melvin B. Johnson",
+        "Alfred Driscoll"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "star-ledger_1949-01-19_p14_melvin-johnson-left-papers.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-054",
+      "date": "1949-01-19",
+      "title": "Johnson is named a prospective Newark City Commission candidate",
+      "description": "The Star-Ledger listed Johnson, of 55 Somerset St., Newark, among prospective candidates for the May municipal election.",
+      "people": [
+        "Melvin B. Johnson",
+        "Frank Miller"
+      ],
+      "publicationIds": [],
+      "sourceFiles": [
+        "star-ledger_1949-01-19_p14_melvin-johnson-left-papers.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-055",
+      "date": "1949-11-06",
+      "title": "Johnson is announced as a speaker at an upcoming Asbury Park Driscoll rally",
+      "description": "The Asbury Park Sunday Press of November 6, 1949 announced that Melvin B. Johnson would speak the next day at a West Side Republican club rally for the Driscoll campaign. It described him as a former editor and publisher of weekly newspapers in Montclair and Newark, then with the state's migrant labor division and a close Driscoll adviser on minority-group affairs since 1946. The source reports the November 7 rally as upcoming; it does not report that it was held.",
+      "people": [
+        "Melvin B. Johnson",
+        "Alfred E. Driscoll"
+      ],
+      "publicationIds": [],
+      "sourceFiles": [
+        "asbury-park-press_1949-11-06_p2_johnson-montclair-newark.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-056",
+      "date": "1960-07",
+      "title": "Bronze Thrills publishes a Lakewood woman's life story",
+      "description": "Emily Rodriquez of Lakewood, entering a Carmelite convent on June 12, 1960, wrote a book based on her life, 'Out of Darkness to Light,' scheduled for the July issue of Bronze Thrills.",
+      "people": [
+        "Emily Rodriquez"
+      ],
+      "publicationIds": [
+        67
+      ],
+      "sourceFiles": [
+        "asbury-park-press_1960-05-20_p21_bronze-thrills-july.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-057",
+      "date": "1968-09",
+      "title": "MEDIC Enterprises incorporates in Newark",
+      "description": "MEDIC Enterprises, Inc. (Minority, Economic, Development, Industrial and Cultural Enterprises) was founded and incorporated as a New Jersey non-profit in September 1968. Its own newsletter later told the story. The newsletter credits unnamed founders; Elvin R. Austin (president) and William A. Mercer (board chairman) are identified only by their 1971 roles, so neither is listed here as a founder.",
+      "people": [],
+      "publicationIds": [
+        68
+      ],
+      "sourceFiles": [
+        "68-medic-news-v1n1.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-058",
+      "date": "1969-07",
+      "title": "MEDIC Press opens with donated letterpress equipment",
+      "description": "MEDIC Enterprises founded MEDIC Press, Inc. in July 1969 with $9,000 of donated letterpress equipment. In ten months of 1970 the shop grossed close to $45,000 and acquired about $30,000 in fixed assets.",
+      "people": [],
+      "publicationIds": [
+        68
+      ],
+      "sourceFiles": [
+        "68-medic-news-v1n1.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-059",
+      "date": "1971-04",
+      "title": "MEDIC News publishes its first issue and claims the Black press tradition",
+      "description": "The eight-page Newark newsletter launched with editor Carolyn Odom writing that it would document minority economic development honestly, invoking 'the black journals of the early 1800's.' The issue profiled MEDIC Press, board chairman William A. Mercer, and MEDIC-financed businesses, and covered Mayor Kenneth Gibson's economic development committee.",
+      "people": [
+        "Carolyn Odom",
+        "Elvin R. Austin",
+        "William A. Mercer",
+        "Kenneth A. Gibson"
+      ],
+      "publicationIds": [
+        68
+      ],
+      "sourceFiles": [
+        "68-medic-news-v1n1.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-060",
+      "date": "1971-04-23",
+      "title": "Newark holds its first annual Manpower Workshop-Conference",
+      "description": "The April 23-24 conference at Ebony Manor, 100 Clinton Avenue, took up 'Newark's Manpower Needs: New Directions for the 70's,' with Clayton J. Cottrell, Cyril Tyson, and Sen. Harrison P. Williams as speakers. MEDIC News covered it in its launch issue.",
+      "people": [
+        "Clayton J. Cottrell",
+        "Cyril Tyson",
+        "Harrison P. Williams"
+      ],
+      "publicationIds": [
+        68
+      ],
+      "sourceFiles": [
+        "68-medic-news-v1n1.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-071",
+      "date": "1972-03-10",
+      "title": "The first National Black Political Convention meets in Gary, Indiana",
+      "description": "A January 2022 Nubian News article on the announcement of a 2022 convention recaps the original: the first National Black Political Convention was held in Gary, Indiana, March 10-12, 1972, hosted by Gary mayor Richard Hatcher and organized with Amiri Baraka, Sr. and US Rep. Charles Diggs. The article names Ron Daniels as a key organizer who led a reparations demand, and Betty Shabazz and Coretta Scott-King among the attendees, and says the convention adopted the Gary Declaration. This is a 2022 retrospective account, not contemporaneous reporting.",
+      "people": [
+        "Richard Hatcher",
+        "Amiri Baraka, Sr.",
+        "Charles Diggs",
+        "Ron Daniels",
+        "Betty Shabazz",
+        "Coretta Scott-King"
+      ],
+      "publicationIds": [
+        40
+      ],
+      "sourceFiles": [
+        "40-nubian-news-v6n1-2022.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-061",
+      "date": "1976-04-22",
+      "title": "Trenton State trustees vote to arm campus police over minority student opposition",
+      "description": "The board voted 4-1 for a six-month trial arming patrolmen from September 1. Utimme/La Voz Oculta, the weekly minority campus publication, opposed the move, as did the student paper The Signal and the Minority Executive Council.",
+      "people": [
+        "Clayton R. Brower",
+        "Nathaniel Lomax",
+        "Nadine S. Schwartz"
+      ],
+      "publicationIds": [
+        73
+      ],
+      "sourceFiles": [
+        "trenton-times_1976-04-23_p8_utimme-umana.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-062",
+      "date": "1977",
+      "title": "Ollie Stewart dies in Paris",
+      "description": "Stewart, the first accredited Black war correspondent of World War II, reported for the New Jersey Afro-American and kept writing for the AFRO papers until his death.",
+      "people": [
+        "Ollie Stewart"
+      ],
+      "publicationIds": [
+        35
+      ],
+      "sourceFiles": [
+        "daily-record-morristown_2023-05-21_pD2_nj-afro-american-described.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-063",
+      "date": "1987",
+      "title": "Testimony publishes its premiere issue of African-American poetry",
+      "description": "Volume I, Issue One of Testimony: A Journal of African-American Poetry appeared in Winter 1987 at $4.00, with a boxed 'Poetry of the 1980s' section listing 23 contributors including Rashidah Ismaili AbuBakr, Sandra West, and Nagueyalti Warren.",
+      "people": [
+        "Rashidah Ismaili AbuBakr",
+        "Sandra West",
+        "Nagueyalti Warren"
+      ],
+      "publicationIds": [
+        121
+      ],
+      "sourceFiles": [
+        "121-testimony.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-064",
+      "date": "1987-11-26",
+      "title": "The Ridgewood News revives the memory of Alfred P. Smith",
+      "description": "Tom Brady's retrospective, 'Newspaper of days ago remembered,' drew on David Steven Cohen's essay 'Alfred P. Smith: Bergen County's Latter-Day Ben Franklin' and included a photo portrait of Smith.",
+      "people": [
+        "Alfred P. Smith",
+        "Tom Brady",
+        "David Steven Cohen"
+      ],
+      "publicationIds": [
+        34
+      ],
+      "sourceFiles": [
+        "ridgewood-news_1987-11-26_p14_landscape-ap-smith.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-065",
+      "date": "1991-02-09",
+      "title": "The Record profiles Smith as a civil rights writer",
+      "description": "Joan Verdon's 'Second Look' column framed Smith as a publisher who editorialized against Southern lynchings and Englewood's school segregation policy.",
+      "people": [
+        "Alfred P. Smith",
+        "Joan Verdon"
+      ],
+      "publicationIds": [
+        34
+      ],
+      "sourceFiles": [
+        "the-record-hackensack_1991-02-09_p2_landscape-renamed.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-066",
+      "date": "1991-06-21",
+      "title": "Harry B. Webber dies in Newark at 90",
+      "description": "Webber was city editor of the New Jersey Herald News, editor and publisher of the Newark magazine After Hours, and author of the 'Jersey Happenings' column for the Afro-American.",
+      "people": [
+        "Harry B. Webber"
+      ],
+      "publicationIds": [
+        16,
+        101,
+        35
+      ],
+      "sourceFiles": [
+        "courier-news_1991-06-24_p8_webber-after-hours.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-067",
+      "date": "1992-11",
+      "title": "Rap Masters runs its November 1992 issue",
+      "description": "The cover carried Kris Kross, plus 'Hip-Hop Style for the '90s' and a 'Who's Hot Now?' sidebar. The reading log is internally inconsistent about how Kris Kross appears. Its summary says the cover advertised a Kris Kross mini-mag insert. Its people array calls Kris Kross the 'cover feature'. Do not resolve this until the cover is re-examined at higher resolution.",
+      "people": [],
+      "publicationIds": [
+        135
+      ],
+      "sourceFiles": [
+        "135-rap-masters-nov1992.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-068",
+      "date": "1993-06-27",
+      "title": "The Sunday News calls The Landscape the nation's smallest newspaper",
+      "description": "Nancy R. Peck's feature described Smith's 6-by-8-inch paper and dated the first issue to June 1882, twenty years of publication ending with his death in 1901 at 65. The date and age differ from the 1987 and 1991 accounts.",
+      "people": [
+        "Alfred P. Smith",
+        "Nancy R. Peck"
+      ],
+      "publicationIds": [
+        34
+      ],
+      "sourceFiles": [
+        "sunday-news-ridgewood_1993-06-27_p2_smallest-newspaper.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-069",
+      "date": "1993",
+      "title": "Trenton State lists Utimme Umana/La Voz Oculta among 20 minority organizations",
+      "description": "The fall 1993 orientation guide called it 'the minority magazine,' seventeen years after the paper was described as a weekly.",
+      "people": [
+        "Sue Baldwin-Way",
+        "Alfred Bridges"
+      ],
+      "publicationIds": [
+        73
+      ],
+      "sourceFiles": [
+        "trenton-times_1993-09-27_p32_utimme-umana.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-072",
+      "date": "2021-11",
+      "title": "The Minority Business Development Agency is made permanent",
+      "description": "A Nubian News editorial reports that President Biden signed the Bipartisan Infrastructure Investment and Jobs Act, which made the Minority Business Development Agency a permanent federal agency. Commerce Secretary Gina Raimondo is named in the item. The log dates the signing only to November 2021.",
+      "people": [
+        "Gina Raimondo"
+      ],
+      "publicationIds": [
+        40
+      ],
+      "sourceFiles": [
+        "40-nubian-news-v6n1-2022.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-073",
+      "date": "2021-11",
+      "title": "Newark announces the 2022 National Black Political Convention",
+      "description": "Newark Mayor Ras Baraka announced that the National Black Political Convention would return in 2022, to be held April 28-May 1, 2022 at the New Jersey Institute of Technology in Newark, fifty years after the 1972 Gary convention organized by his father Amiri Baraka, Sr. Jackson, Mississippi mayor Chokwe Antar Lumumba, jazz and R&B musician James Mtume, and NJIT president Joel Bloom joined the announcement. The log dates the announcement only to November 2021; the convention dates are as announced, not as held.",
+      "people": [
+        "Ras Baraka",
+        "Chokwe Antar Lumumba",
+        "James Mtume",
+        "Joel Bloom",
+        "Amiri Baraka, Sr."
+      ],
+      "publicationIds": [
+        40
+      ],
+      "sourceFiles": [
+        "40-nubian-news-v6n1-2022.json"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "evt-074",
+      "date": "2021-12-21",
+      "title": "A Mercer County toy giveaway reaches families in Trenton",
+      "description": "The Mercer CCYC gave toys to families with young children, working with West Trenton Toys for Tots and the US Marine Corps. The Nubian News covered it.",
+      "people": [],
+      "publicationIds": [
+        40
+      ],
+      "sourceFiles": [
+        "40-nubian-news-v6n1-2022.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-075",
+      "date": "2021-12-23",
+      "title": "Trenton buries Christopher David, 17",
+      "description": "The funeral service for Christopher David, 17, was held at the Ledford Home in Trenton. The Nubian News ran the obituary and quoted his mother, Brenda Meraz, who said he died after struggling with depression and bullying at school. The paper reports a suspected suicide; no official cause is given in the issue.",
+      "people": [
+        "Christopher David",
+        "Brenda Meraz"
+      ],
+      "publicationIds": [
+        40
+      ],
+      "sourceFiles": [
+        "40-nubian-news-v6n1-2022.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-076",
+      "date": "2021-12-25",
+      "title": "A Christmas Day arson fire kills a Trenton resident and burns six houses",
+      "description": "A fatal fire set on the 200 block of Rusling St. at Division St. in Trenton on Christmas Day spread to six adjacent houses and to vehicles. The Nubian News covered it in English and Spanish, quoting community activist Luis González and resident Francisco Choc.",
+      "people": [
+        "Luis González",
+        "Francisco Choc"
+      ],
+      "publicationIds": [
+        40
+      ],
+      "sourceFiles": [
+        "40-nubian-news-v6n1-2022.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-077",
+      "date": "2021-12-27",
+      "title": "A suspect is charged with murder in the Trenton Christmas arson",
+      "description": "The Mercer County prosecutor's office announced the arrest of Ronal Ordóñez Lima, 28, and charged him with murder in the Christmas Day Rusling St. fire.",
+      "people": [
+        "Ronal Ordóñez Lima"
+      ],
+      "publicationIds": [
+        40
+      ],
+      "sourceFiles": [
+        "40-nubian-news-v6n1-2022.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-078",
+      "date": "2022-01-06",
+      "title": "A New Jersey bill would fund $5.15 million in school panic alarms",
+      "description": "The Assembly Appropriations Committee introduced bill A-6258, allocating $5,150,531 for school security projects, chiefly panic alarms, statewide. Assemblyman Roy Freiman (D-Somerset, Mercer, Middlesex, Hunterdon) sponsored it. The Nubian News reported the introduction the next day.",
+      "people": [
+        "Roy Freiman"
+      ],
+      "publicationIds": [
+        40
+      ],
+      "sourceFiles": [
+        "40-nubian-news-v6n1-2022.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-079",
+      "date": "2022-01-07",
+      "title": "The Nubian News publishes a 12-page bilingual issue as Vol. 6, No. 1",
+      "description": "The January 7, 2022 issue runs 12 pages in English and Spanish out of Trenton, numbered Volume 6, No. 1. The masthead names Kamau Kujichagulia as publisher, Tanya Henry Turner as managing editor, Carlos Avila as El Latino News editor, Al Alatunji and Laura Lucia Rodriguez Pena as reporters, Karen Hilton as photographer, and Leslie Lauts and Vernon Daniels in circulation. The issue mixes local Trenton crime and community coverage with national editorials, book reviews, and 2021 obituaries. This is the only firsthand read of a contemporary New Jersey Black paper in the reading base.",
+      "people": [
+        "Kamau Kujichagulia",
+        "Tanya Henry Turner",
+        "Carlos Avila",
+        "Al Alatunji",
+        "Laura Lucia Rodriguez Pena",
+        "Karen Hilton",
+        "Leslie Lauts",
+        "Vernon Daniels"
+      ],
+      "publicationIds": [
+        40
+      ],
+      "sourceFiles": [
+        "40-nubian-news-v6n1-2022.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-070",
+      "date": "2023-05-23",
+      "title": "A Newark Public Library program on Ollie Stewart is announced for May 23, 2023",
+      "description": "A May 21, 2023 Daily Record column promoted an upcoming program, 'Fighting on Two Fronts: Black GIs in World War II and Ollie Stewart's Reporting in the NJ Afro-American,' led by Seton Hall historian Larry Greene and co-sponsored by NJPAC and the Newark History Society. The column promotes the program; it does not report that it was held. Savannah Wood, great-great-granddaughter of the paper's founder and manager of the AFRO archives, is quoted in the column and is not listed as a program participant.",
+      "people": [
+        "Larry Greene",
+        "Ollie Stewart"
+      ],
+      "publicationIds": [
+        35
+      ],
+      "sourceFiles": [
+        "daily-record-morristown_2023-05-21_pD2_nj-afro-american-described.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-080",
+      "date": "1938-07-16",
+      "title": "The NJ State Federation of Colored Women's Clubs convention is reported convening at Bordentown Manual Training School",
+      "description": "The date is the issue date of the July 16, 1938 Newark Herald, not the opening date of the convention. The issue reported the NJ State Federation of Colored Women's Clubs 23rd annual convention opening at the Bordentown Manual Training School, the same campus as the Ironsides Echo student paper. The issue does not date the opening. Batch evidence points to mid-to-late July proceedings: the July 30, 1938 issue dates convention proceedings, including the 'Mammy' remark and the objection to it, to Wednesday, July 27, 1938.",
+      "people": [],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewarkHerald19380716a.json"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "evt-081",
+      "date": "1942-07-04",
+      "title": "Rev. Florence Randolph, pastor of Wallace Chapel, marks 45 years in the ministry",
+      "description": "The date is the issue date of the July 4, 1942 New Jersey Herald News. The issue recorded two separate facts about Rev. Florence Randolph: she is pastor of Wallace Chapel A.M.E. Zion Church in Summit, and she is celebrating her 45th anniversary in the ministry. The log does not tie the milestone to Wallace Chapel as its venue. The issue reports the anniversary; it does not describe a ceremony.",
+      "people": [
+        "Florence Randolph"
+      ],
+      "publicationIds": [
+        16
+      ],
+      "sourceFiles": [
+        "NewJerseyHeraldNews19420704.json"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "metadata": {
+    "totalCount": 81,
+    "generated": "2026-08-19"
+  }
+}
