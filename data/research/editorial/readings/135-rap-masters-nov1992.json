@@ -1,1 +1,52 @@
-{"file": "C:/Users/Joe Amditis/Desktop/Crimes/playground/njblackpress/data/research/depth-hunt/files/135-rap-masters-nov1992.webp", "publication": "Rap Masters", "date": "November 1992", "summary": "Cover of Rap Masters magazine, issue price $2.95 US / $3.50 Canada / £1.75 UK, cover-dated November 1992. Kris Kross mini-mag insert advertised, plus a 'Who's Hot Now?' sidebar and 'Hip-Hop Style for the '90s' cover line.", "people": [{"name": "Kris Kross", "role": "cover feature, hip-hop duo (Kris and Chris)"}, {"name": "Yo-Yo", "role": "cover-line artist ('Yo-Yo Style')"}, {"name": "Too Short", "role": "cover-line artist ('Too Short')"}, {"name": "College Boyz", "role": "Who's Hot Now sidebar act"}, {"name": "Pete Rock & CL Smooth", "role": "Who's Hot Now sidebar act"}, {"name": "James Starr", "role": "Who's Hot Now sidebar act"}, {"name": "BMC", "role": "small cover-strip photo credit"}], "places": [], "incidents": [], "connections": [], "legibility": "partial"}
+{
+  "file": "C:/Users/Joe Amditis/Desktop/Crimes/playground/njblackpress/data/research/depth-hunt/files/135-rap-masters-nov1992.webp",
+  "publication": "Rap Masters",
+  "date": "November 1992",
+  "summary": "Cover of Rap Masters magazine, issue price $2.95 US / $3.50 Canada / GBP 1.75 UK, cover-dated November 1992. A full-bleed photograph of the duo Kris Kross fills the centre-right of the cover, with the red-and-yellow banner \"Exclusive! KRIS KROSS MINI-MAG!!\" set directly above and overlapping it, so Kris Kross is both the cover photograph and the subject of the advertised mini-mag. Also on the cover: a \"Who's Hot Now?\" sidebar of three stacked panels and a \"Hip-Hop Style for the '90s\" cover line, plus a bottom photo strip of captioned acts.",
+  "people": [
+    {
+      "name": "Kris Kross",
+      "role": "cover photograph and subject of the advertised mini-mag insert; no member names are printed on the cover"
+    },
+    {
+      "name": "Yo-Yo",
+      "role": "cover-line artist ('Yo-Yo Style')"
+    },
+    {
+      "name": "Too Short",
+      "role": "cover-line artist ('Too Short')"
+    },
+    {
+      "name": "College Boyz",
+      "role": "Who's Hot Now sidebar panel (top)"
+    },
+    {
+      "name": "Pete Rock & CL Smooth",
+      "role": "Who's Hot Now sidebar panel (middle)"
+    },
+    {
+      "name": "Gang Starr",
+      "role": "Who's Hot Now sidebar panel (bottom)"
+    },
+    {
+      "name": "Salt 'N Pepa",
+      "role": "bottom cover photo strip caption"
+    },
+    {
+      "name": "DMC",
+      "role": "bottom cover photo strip caption"
+    },
+    {
+      "name": "Queen Latifah",
+      "role": "bottom cover photo strip caption; New Jersey artist"
+    },
+    {
+      "name": "MC Phlme",
+      "role": "bottom cover photo strip caption"
+    }
+  ],
+  "places": [],
+  "incidents": [],
+  "connections": [],
+  "legibility": "partial"
+}

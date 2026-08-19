@@ -18,7 +18,7 @@ count: 9
 
 | Publication | Years | Status |
 |---|---|---|
-| [The Sentinel](../publications/010-the-sentinel.md) | 1880–1882 | Ceased 1882 |
+| [The Sentinel](../publications/010-the-sentinel.md) | 1880–1883 | Ceased 1883 |
 | [Wait](../publications/113-wait.md) | 1961–1965 | Ceased 1965 |
 | [Utimme Umana/La Voz Oculta](../publications/073-utimme-umana-la-voz-oculta.md) | 1968–1990 | Ceased 1990 |
 | [Black Racers Yearbook](../publications/064-black-racers-yearbook.md) | 1974–1974 | Ceased 1974 |

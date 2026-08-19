@@ -60,12 +60,12 @@ LCCN no: sn84025698/OCLC no. 10284983.
 - [New Jersey Trumpet](038-new-jersey-trumpet.md) — 1887–1897
 - [The Newark Herald](009-the-newark-herald.md) — 1928–1939
 - [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
-- [The Newark Herald](024-the-newark-herald.md) — 1938–1999
 - [New Jersey Afro-American](035-new-jersey-afro-american.md) — 1941–1991
 - [New Jersey After Hours](101-new-jersey-after-hours.md) — 1949–1980
 - [Hours After](072-hours-after.md) — 1951–1955
 - [Jersey Camera](066-jersey-camera.md) — 1951–1955
-- …and 30 more
+- [Nite Lite](021-nite-lite.md) — 1959–1965
+- …and 29 more
 
 ### Also from the 1930s
 
@@ -77,7 +77,7 @@ LCCN no: sn84025698/OCLC no. 10284983.
 - [Penn Crusader](136-penn-crusader.md) — 1936–1940
 - [Pine Needle](137-pine-needle.md) — 1936–1940
 - [Sixty Niner](089-sixty-niner.md) — 1936–1941
-- …and 5 more
+- …and 4 more
 
 ## Navigate
 

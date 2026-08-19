@@ -12,10 +12,12 @@ tags:
 timestamp: "2026-06-29"
 archive_id: 70
 status: "inactive-or-historical"
-featured: false
+featured: true
 ---
 
 # Deliverance Voice
+
+> ⭐ Featured historic publication. See [Featured publications](../featured.md).
 
 | Field | Value |
 |---|---|
@@ -49,11 +51,11 @@ No specific archival or historical records were found for the Deliverance Voice 
 - [The Newark Herald](009-the-newark-herald.md) — 1928–1939
 - [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
 - [New Jersey Herald News](016-new-jersey-herald-news.md) — 1938–1966
-- [The Newark Herald](024-the-newark-herald.md) — 1938–1999
 - [New Jersey Afro-American](035-new-jersey-afro-american.md) — 1941–1991
 - [New Jersey After Hours](101-new-jersey-after-hours.md) — 1949–1980
 - [Hours After](072-hours-after.md) — 1951–1955
-- …and 30 more
+- [Jersey Camera](066-jersey-camera.md) — 1951–1955
+- …and 29 more
 
 ### Also from the 1960s
 

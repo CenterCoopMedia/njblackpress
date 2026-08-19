@@ -57,7 +57,7 @@ OCLC no. 277249509.
 - [Penn Crusader](136-penn-crusader.md) — 1936–1940
 - [Pine Needle](137-pine-needle.md) — 1936–1940
 - [Sixty Niner](089-sixty-niner.md) — 1936–1941
-- …and 5 more
+- …and 4 more
 
 ## Navigate
 

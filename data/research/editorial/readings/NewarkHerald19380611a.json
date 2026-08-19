@@ -94,7 +94,7 @@
     },
     {
       "name": "Anna Nash",
-      "role": "victim of Jim Crow-related assault at Novelty Bar & Grill, Newark; battered by unknown assailant"
+      "role": "assault victim in a separate street-crime brief, battered by an unknown assailant; not connected to the Novelty Bar"
     },
     {
       "name": "Rev. Charles Thomas",
@@ -102,11 +102,27 @@
     },
     {
       "name": "Robert F. Kearse",
-      "role": "colored postmaster of Vaux Hall, petitioned Union County prosecutor over inadequate police protection"
+      "role": "colored postmaster of Vaux Hall; led 29 Union Township merchants in a petition to the Union County prosecutor over inadequate police protection - a separate story from the Novelty Bar"
     },
     {
       "name": "Harold Lett",
-      "role": "Executive Secretary, New Jersey Urban League, prominent figure in Jim Crow complaint against Novelty Bar & Grill"
+      "role": "Executive Secretary, New Jersey Urban League and member of the Newark Housing Authority; one of five refused service at the Novelty Bar & Grill"
+    },
+    {
+      "name": "Mrs. J. B. Parks",
+      "role": "wife of Dr. J. B. Parks; one of five refused service at the Novelty Bar & Grill"
+    },
+    {
+      "name": "Alene Simpkins",
+      "role": "Social Worker, New Jersey Urban League; one of five refused service at the Novelty Bar & Grill"
+    },
+    {
+      "name": "Dr. William Kinchelow",
+      "role": "one of five refused service at the Novelty Bar & Grill"
+    },
+    {
+      "name": "Carolyn Hilliard",
+      "role": "Recreation Supervisor at Morton Street School; one of five refused service at the Novelty Bar & Grill"
     },
     {
       "name": "James Brown",
@@ -162,12 +178,28 @@
       ]
     },
     {
-      "date": "1938 (reported)",
-      "what": "Jim Crow discrimination reported at Novelty Bar & Grill, 220 Market St., Newark; leading Black citizens (Harold Lett, Dr. J. B. Parks, Alma Stemple, Carolyn Hilliard) refused service and grill closed to Black patrons; petition to prosecutor filed",
+      "date": "1938-06 (reported)",
+      "what": "Five prominent members of the race refused service at the Novelty Bar & Grill, 220 Market St., Newark, under the headline 'Leading Citizens Victim Of Jim Crow At Novelty Bar; Planning To Enter Suit': Mr. Harold Lett, Executive Secretary of the New Jersey Urban League and member of the Newark Housing Authority; Mrs. J. B. Parks, wife of Dr. J. B. Parks; Miss Alene Simpkins, Social Worker of the Urban League; Dr. William Kinchelow; and Miss Carolyn Hilliard, Recreation Supervisor at Morton Street School. The group was planning to enter suit; no petition to a prosecutor is part of this story",
       "who": [
         "Harold Lett",
-        "Dr. J. B. Parks",
+        "Mrs. J. B. Parks",
+        "Alene Simpkins",
+        "William Kinchelow",
+        "Carolyn Hilliard"
+      ]
+    },
+    {
+      "date": "1938-06 (Monday, reported)",
+      "what": "Separate story 'Kearse Leads Fight For Merchants': twenty-nine merchants in the Vaux Hall section of Union, led by Robert F. Kearse, colored postmaster of Vaux Hall, petitioned Union County Prosecutor David to investigate inadequate police protection for businesses in that section. This is not connected to the Novelty Bar",
+      "who": [
         "Robert F. Kearse"
+      ]
+    },
+    {
+      "date": "1938-06 (Monday 1:30 a.m., reported)",
+      "what": "Separate brief 'Menaced By Knife Wielder': Anna Nash, of 7 Sayre street, assaulted by an unknown assailant who battered her with his fists; police unable to locate her attacker. Printed alongside other unrelated stabbings (George Benson, Claude Ferguson). No connection to the Novelty Bar",
+      "who": [
+        "Anna Nash"
       ]
     },
     {
@@ -197,9 +229,10 @@
   ],
   "connections": [
     "The two mastheads (The Newark Herald and New Jersey Herald News) share the identical publication date of June 11, 1938, directly supporting the 1942 New Jersey Herald News masthead's claim of being 'combined with The Newark Herald'",
-    "Newark Herald Publishing Co. address (130 W. Kinney St.) matches address used by the 1942-era New Jersey Herald News",
+    "The two papers printed from different addresses on the same street, and the address is no evidence of the later merger. The Newark Herald editorial-page masthead (p. 6) reads 'THE NEWARK HERALD PUBLISHING CO. (Incorporated) / 152 West Kinney St. ... Telephone MArket 3-0940'. The New Jersey Herald News section (p. 13) carries 'Send News Items To N.J. Herald News, 130 W. Kinney Street, Newark. Telephone Market 2-9799', which is the Herald News's own address from its first months and the same address it still used in 1939 and 1942. An earlier version of this log attributed 130 W. Kinney St. to the Newark Herald Publishing Co.; that was read off the Herald News section of the bundle and is wrong.",
     "Coverage overlaps heavily with NAACP branch activity, Urban League, and NJ Elks/Masonic conventions referenced in the 1942 NJ Herald News issue read in this same batch",
-    "Joe Louis/Newark Eagles Negro National League sports coverage recurs across both 1938 and 1942 issues, indicating a consistent community sports-news thread across NJ Black papers"
+    "Joe Louis/Newark Eagles Negro National League sports coverage recurs across both 1938 and 1942 issues, indicating a consistent community sports-news thread across NJ Black papers",
+    "The Novelty Bar & Grill story is on p. 13, i.e. in the New Jersey Herald News half of this bundle, not the Newark Herald half. An earlier version of this log named the refused party as 'Alma Stemple' and 'Dr. J. B. Parks', dropped Alene Simpkins and Dr. William Kinchelow, and merged Robert F. Kearse's Vaux Hall prosecutor petition and the Anna Nash assault brief into the bar story. All three are separate items on the same page."
   ],
   "legibility": "full"
 }

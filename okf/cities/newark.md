@@ -7,12 +7,12 @@ tags:
   - "city"
   - "newark"
 timestamp: "2026-06-29"
-count: 39
+count: 38
 ---
 
 # Newark
 
-**39** publications in this city grouping · **7** active · founding years **1887–2021**.
+**38** publications in this city grouping · **7** active · founding years **1887–2021**.
 
 ## Publications
 
@@ -22,7 +22,6 @@ count: 39
 | [The Newark Herald](../publications/009-the-newark-herald.md) | 1928–1939 | Ceased 1939 |
 | [The New Jersey Guardian](../publications/037-the-new-jersey-guardian.md) | 1934–1942 | Ceased 1942 |
 | [New Jersey Herald News](../publications/016-new-jersey-herald-news.md) | 1938–1966 | Ceased 1966 |
-| [The Newark Herald](../publications/024-the-newark-herald.md) | 1938–1999 | Ceased 1999 |
 | [New Jersey Afro-American](../publications/035-new-jersey-afro-american.md) | 1941–1991 | Ceased 1991 |
 | [New Jersey After Hours](../publications/101-new-jersey-after-hours.md) | 1949–1980 | Ceased 1980 |
 | [Hours After](../publications/072-hours-after.md) | 1951–1955 | Ceased 1955 |

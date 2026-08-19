@@ -1,1 +1,30 @@
-{"file": "C:/Users/Joe Amditis/Desktop/Crimes/playground/njblackpress/data/research/newspapers-com/downloads/asbury-park-press_1909-03-05_p2_echo-moves-red-bank.jpg", "publication": "Asbury Park Evening Press", "date": "1909-03-05", "summary": "Page 2 local-news page. Target item, \"Echo Moves to Red Bank,\" reports that The Echo, a paper edited and published by W. E. Rack in the interest of the colored race in Long Branch, has relocated to Red Bank after Rack purchased a home there; he plans to run an industrial school for his race in Red Bank. Rest of page is routine Monmouth County local items (recitals, weddings, church notes, obituary-adjacent society notes) with no other Black-press content.", "people": [{"name": "W. E. Rack", "role": "editor and publisher of The Echo, a Black-interest newspaper"}], "places": ["Long Branch, N.J.", "Red Bank, N.J."], "incidents": [{"date": "1909-03-05 (reported)", "what": "The Echo newspaper relocates from Long Branch to Red Bank following editor W. E. Rack's purchase of a home there; Rack to establish an industrial school for Black residents in Red Bank", "who": ["W. E. Rack"]}], "connections": ["The Echo (Long Branch/Red Bank), edited by W. E. Rack, is a Black-owned NJ newspaper of this period relevant to the project"], "legibility": "full"}
+{
+  "file": "C:/Users/Joe Amditis/Desktop/Crimes/playground/njblackpress/data/research/newspapers-com/downloads/asbury-park-press_1909-03-05_p2_echo-moves-red-bank.jpg",
+  "publication": "Asbury Park Evening Press",
+  "date": "1909-03-05",
+  "summary": "Page 2 local-news page. Target item, \"ECHO MOVES TO RED BANK,\" reads: \"The Echo, edited and published in the interest of the colored race in Long Branch by W. E. Rock for the past five years, has moved to Red Bank, where Editor Rock has purchased a home.\" It continues: \"While in Long Branch he has done good work toward elevating his race. He wll help run an industrial school for his race at Red Bank.\" The clipping prints the surname as Rock in both instances; publication id 31 records him as \"Rock, William E.\" He is named as a participant in the industrial school, not its principal. Rest of page is routine Monmouth County local items (recitals, weddings, church notes, obituary-adjacent society notes) with no other Black-press content.",
+  "people": [
+    {
+      "name": "W. E. Rock",
+      "role": "editor and publisher of The Echo, a Black-interest newspaper, for the past five years in Long Branch"
+    }
+  ],
+  "places": [
+    "Long Branch, N.J.",
+    "Red Bank, N.J."
+  ],
+  "incidents": [
+    {
+      "date": "1909-03-05 (reported)",
+      "what": "The Echo relocates from Long Branch to Red Bank after editor W. E. Rock purchased a home there; the item says Rock will help run an industrial school for his race at Red Bank",
+      "who": [
+        "W. E. Rock"
+      ]
+    }
+  ],
+  "connections": [
+    "The Echo (Long Branch/Red Bank), edited by W. E. Rock, is a Black-owned NJ newspaper of this period relevant to the project.",
+    "The \"Rock & Howard\" named as editors of the paper's first issue in the 1904 Monmouth Democrat item is the same Rock: there is no separate person named Rack."
+  ],
+  "legibility": "full"
+}

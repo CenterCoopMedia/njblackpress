@@ -12,13 +12,13 @@ count: 1
 
 # Saddle River
 
-**1** publication in this city grouping · **0** active · founding years **1885**.
+**1** publication in this city grouping · **0** active · founding years **1881**.
 
 ## Publications
 
 | Publication | Years | Status |
 |---|---|---|
-| [The Landscape](../publications/034-the-landscape.md) | 1885–1901 | Ceased 1901 |
+| [The Landscape](../publications/034-the-landscape.md) | 1881–1901 | Ceased 1901 |
 
 ## Navigate
 

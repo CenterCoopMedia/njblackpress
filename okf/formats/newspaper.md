@@ -7,19 +7,19 @@ tags:
   - "format"
   - "newspaper"
 timestamp: "2026-06-29"
-count: 34
+count: 33
 ---
 
 # Newspaper
 
-**34** publications in this format grouping · **1** active · founding years **1880–2011**.
+**33** publications in this format grouping · **1** active · founding years **1880–2011**.
 
 ## Publications
 
 | Publication | Years | Status |
 |---|---|---|
-| [The Sentinel](../publications/010-the-sentinel.md) | 1880–1882 | Ceased 1882 |
-| [The Landscape](../publications/034-the-landscape.md) | 1885–1901 | Ceased 1901 |
+| [The Sentinel](../publications/010-the-sentinel.md) | 1880–1883 | Ceased 1883 |
+| [The Landscape](../publications/034-the-landscape.md) | 1881–1901 | Ceased 1901 |
 | [New Jersey Trumpet](../publications/038-new-jersey-trumpet.md) | 1887–1897 | Ceased 1897 |
 | [The Echo](../publications/031-the-echo.md) | 1904–1943 | Ceased 1943 |
 | [The Newark Herald](../publications/009-the-newark-herald.md) | 1928–1939 | Ceased 1939 |
@@ -31,7 +31,6 @@ count: 34
 | [New Jersey Herald News](../publications/016-new-jersey-herald-news.md) | 1938–1966 | Ceased 1966 |
 | [Point Breeze Rugcuttings](../publications/055-point-breeze-rugcuttings.md) | 1938–1938 | Ceased 1938 |
 | [Rifle Ranger](../publications/097-rifle-ranger.md) | 1938–1938 | Ceased 1938 |
-| [The Newark Herald](../publications/024-the-newark-herald.md) | 1938–1999 | Ceased 1999 |
 | [New Jersey Afro-American](../publications/035-new-jersey-afro-american.md) | 1941–1991 | Ceased 1991 |
 | [The Black Observer](../publications/033-the-black-observer.md) | 1968–1970 | Ceased 1970 |
 | [The Voice](../publications/041-the-voice.md) | 1968–1974 | Ceased 1974 |

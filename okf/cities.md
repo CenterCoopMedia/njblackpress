@@ -11,9 +11,9 @@ count: 45
 
 # Cities index
 
-45 cities group the 137 publication records.
+45 cities group the 136 publication records.
 
-- [Newark](cities/newark.md) — 39 · 7 active
+- [Newark](cities/newark.md) — 38 · 7 active
 - [Paramus](cities/paramus.md) — 10 · 1 active
 - [Trenton](cities/trenton.md) — 9 · 3 active
 - [Atlantic City](cities/atlantic-city.md) — 5 · 2 active

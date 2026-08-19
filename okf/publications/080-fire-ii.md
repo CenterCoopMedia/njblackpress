@@ -49,7 +49,7 @@ OCLC no. 29551936.
 
 ### Also in Trenton
 
-- [The Sentinel](010-the-sentinel.md) — 1880–1882
+- [The Sentinel](010-the-sentinel.md) — 1880–1883
 - [Wait](113-wait.md) — 1961–1965
 - [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
 - [Black Racers Yearbook](064-black-racers-yearbook.md) — 1974–1974

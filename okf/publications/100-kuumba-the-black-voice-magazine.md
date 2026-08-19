@@ -12,12 +12,10 @@ tags:
 timestamp: "2026-06-29"
 archive_id: 100
 status: "inactive-or-historical"
-featured: true
+featured: false
 ---
 
 # Kuumba: The Black Voice Magazine
-
-> ⭐ Featured historic publication. See [Featured publications](../featured.md).
 
 | Field | Value |
 |---|---|

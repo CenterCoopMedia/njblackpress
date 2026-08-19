@@ -57,7 +57,7 @@ OCLC no. 30066660.
 - [Penn Crusader](136-penn-crusader.md) — 1936–1940
 - [Pine Needle](137-pine-needle.md) — 1936–1940
 - [Dias Creek Echo](094-dias-creek-echo.md) — 1938–1938
-- …and 5 more
+- …and 4 more
 
 ## Navigate
 

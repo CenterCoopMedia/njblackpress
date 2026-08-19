@@ -57,11 +57,11 @@ LCCN no: sn88071371/OCLC no: 18514783.
 - [The Newark Herald](009-the-newark-herald.md) — 1928–1939
 - [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
 - [New Jersey Herald News](016-new-jersey-herald-news.md) — 1938–1966
-- [The Newark Herald](024-the-newark-herald.md) — 1938–1999
 - [New Jersey Afro-American](035-new-jersey-afro-american.md) — 1941–1991
 - [New Jersey After Hours](101-new-jersey-after-hours.md) — 1949–1980
 - [Hours After](072-hours-after.md) — 1951–1955
-- …and 30 more
+- [Jersey Camera](066-jersey-camera.md) — 1951–1955
+- …and 29 more
 
 ### Also from the 1970s
 

@@ -25,8 +25,8 @@ featured: true
 | Alternate name | Unknown |
 | City | [Trenton](../cities/trenton.md) |
 | Publishers or owners | R. Henri Herbert |
-| Active years | 1880–1882 |
-| Status | Ceased 1882 |
+| Active years | 1880–1883 |
+| Status | Ceased 1883 |
 | Decade | [1880s](../decades/1880s.md) |
 | Format | [Newspaper](../formats/newspaper.md) |
 | Medium | [Print](../mediums/print.md) |
@@ -45,7 +45,7 @@ Founded, edited and published by R. Henri Herbert.
 
 ## Historical notes
 
-Founded by R. Henri Herbert, The Sentinel was Trenton's first and New Jersey's earliest African American newspaper. Herbert, born in 1857, began publishing the staunchly Republican weekly in his early twenties. Publication ran from Vol. I, no. 8 (June 26, 1880) through Vol. III, no. 19 (November 13, 1882). Herbert asserted the paper stood for 'earnest advocacy of the broadest freedom and purest liberty for white men, black men, Chinamen, and all men alike.' Advertisers included the Irish National Land & Industrial League, the Ancient Order of Hibernians, the local National Guard regiment, and the local Grand Army of the Republic chapter. The Sentinel later merged with the Trenton Herald at 4 North Broad Street. Herbert was a native of Trenton, son of Mansfield Herbert, a cabinet maker and artistic picture framer (whose clients included John A. Roebling). Henri's sister Priscilla Herbert was the first African American to graduate from the State Normal School (now College of New Jersey) in 1879. Issues were digitized from microfilm created by the Committee on Negro Studies of the American Council of Learned Societies and are available through Chronicling America.
+Founded by R. Henri Herbert, The Sentinel was Trenton's first and New Jersey's earliest African American newspaper. Herbert, born in 1857, began publishing the staunchly Republican weekly in his early twenties. Publication ran from Vol. I, no. 8 (June 26, 1880) through Vol. III, no. 19 (November 13, 1882). Herbert asserted the paper stood for 'earnest advocacy of the broadest freedom and purest liberty for white men, black men, Chinamen, and all men alike.' Advertisers included the Irish National Land & Industrial League, the Ancient Order of Hibernians, the local National Guard regiment, and the local Grand Army of the Republic chapter. Herbert was a native of Trenton, son of Mansfield Herbert, a cabinet maker and artistic picture framer (whose clients included John A. Roebling). Henri's sister Priscilla Herbert was the first African American to graduate from the State Normal School (now College of New Jersey) in 1879. Issues were digitized from microfilm created by the Committee on Negro Studies of the American Council of Learned Societies and are available through Chronicling America. The New-York Tribune of December 8, 1895 says Herbert 'started "The Weekly Sentinel," and continued the paper with marked success three years, when the paper was sold to Colonel E. C. Stahl and consolidated with "The Trenton Herald."' Three years from 1880 ends about 1883, and the title continued inside the Herald, so this was a sale to a different owner rather than a cessation or a rename. No source read gives a year for the consolidation or assigns the paper an address, and the last known surviving issue is Vol. III, no. 19, November 13, 1882, so the end year is approximate.
 
 ## External links
 
@@ -70,7 +70,7 @@ OCLC no. 664615924/LC card no. 664615924.
 
 ### Also from the 1880s
 
-- [The Landscape](034-the-landscape.md) — 1885–1901
+- [The Landscape](034-the-landscape.md) — 1881–1901
 - [New Jersey Trumpet](038-new-jersey-trumpet.md) — 1887–1897
 
 ## Navigate

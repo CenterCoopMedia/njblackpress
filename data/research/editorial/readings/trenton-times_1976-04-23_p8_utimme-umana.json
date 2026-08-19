@@ -1,1 +1,44 @@
-{"file": "C:/Users/Joe Amditis/Desktop/Crimes/playground/njblackpress/data/research/newspapers-com/downloads/trenton-times_1976-04-23_p8_utimme-umana.jpg", "publication": "The Evening Times (Trenton, N.J.)", "date": "1976-04-23", "summary": "Page B2. Target story, by staff writer J. Stryker Meyer, reports Trenton State College's board of trustees voted 4-1 to arm campus patrolmen for a six-month trial starting September 1. 'The Signal' (the campus student newspaper) and 'Utimme/La Voz Oculta,' described as the weekly minority publication on campus, opposed the move; the student Minority Executive Council also opposed it. Rest of the page is a 'People' gossip column (Princess Anne, Ti-Grace Atkinson, Stepin Fetchit's stroke), weather, and garden-center ads.", "people": [{"name": "J. Stryker Meyer", "role": "Staff writer, byline on the campus guns story"}, {"name": "Clayton R. Brower", "role": "President of Trenton State College, favored arming officers"}, {"name": "Dr. Nadine S. Schwartz", "role": "Associate professor and campus activist, called arming officers a 'serious, irreparable move'"}, {"name": "Nathaniel Lomax", "role": "Security supervisor at Trenton State College, supported arming patrolmen"}], "places": ["Trenton, NJ", "Trenton State College", "Sea Girt, NJ (State Police Training Academy)"], "incidents": [{"date": "1976-04-22", "what": "Trenton State College board of trustees voted 4-1, after a 1.5-hour debate, to arm campus patrolmen for a six-month trial period beginning Sept. 1", "who": ["Clayton R. Brower", "Nathaniel Lomax", "Nadine S. Schwartz"]}], "connections": ["Utimme/La Voz Oculta identified as the weekly minority student publication at Trenton State College (now The College of New Jersey) that opposed arming campus police, distinct from the mainstream student paper The Signal"], "legibility": "full"}
+{
+  "file": "C:/Users/Joe Amditis/Desktop/Crimes/playground/njblackpress/data/research/newspapers-com/downloads/trenton-times_1976-04-23_p8_utimme-umana.jpg",
+  "publication": "The Evening Times (Trenton, N.J.)",
+  "date": "1976-04-23",
+  "summary": "Page B2. Target story, by staff writer J. Stryker Meyer, reports Trenton State College's board of trustees voted 4-1 to arm campus patrolmen for a six-month trial starting September 1. The page reads verbatim: \"The administration, the 14 police officers, and The Signal, the student newspaper, have favored arming the officers. The student government has ardently opposed the move and has been supported by the Minority Executive Council and Utimme Umana/La Voz Oculta, the weekly minority publication on campus. The faculty senate is divided on the question.\" The opposition coalition is therefore the student government, the Minority Executive Council and Utimme Umana/La Voz Oculta; The Signal was on the other side. Rest of the page is a 'People' gossip column (Princess Anne, Ti-Grace Atkinson, Stepin Fetchit's stroke), weather, and garden-center ads.",
+  "people": [
+    {
+      "name": "J. Stryker Meyer",
+      "role": "Staff writer, byline on the campus guns story"
+    },
+    {
+      "name": "Clayton R. Brower",
+      "role": "President of Trenton State College, favored arming officers"
+    },
+    {
+      "name": "Dr. Nadine S. Schwartz",
+      "role": "Associate professor and campus activist, called arming officers a 'serious, irreparable move'"
+    },
+    {
+      "name": "Nathaniel Lomax",
+      "role": "Security supervisor at Trenton State College, supported arming patrolmen"
+    }
+  ],
+  "places": [
+    "Trenton, NJ",
+    "Trenton State College",
+    "Sea Girt, NJ (State Police Training Academy)"
+  ],
+  "incidents": [
+    {
+      "date": "1976-04-22",
+      "what": "Trenton State College board of trustees voted 4-1, after a 1.5-hour debate, to arm campus patrolmen for a six-month trial period beginning Sept. 1",
+      "who": [
+        "Clayton R. Brower",
+        "Nathaniel Lomax",
+        "Nadine S. Schwartz"
+      ]
+    }
+  ],
+  "connections": [
+    "Utimme Umana/La Voz Oculta identified as the weekly minority student publication at Trenton State College (now The College of New Jersey). It opposed arming campus police alongside the student government and the Minority Executive Council. The mainstream student paper, The Signal, favored arming the officers and was not part of the opposition."
+  ],
+  "legibility": "full"
+}

@@ -3,7 +3,7 @@
     {
       "id": 10,
       "name": "The Sentinel",
-      "alternateName": "The Trenton Herald (merged 1883)",
+      "alternateName": "The Weekly Sentinel",
       "city": "Trenton",
       "founders": [
         "R. Henri Herbert"
@@ -18,7 +18,7 @@
         }
       ],
       "yearFounded": 1880,
-      "yearCeased": 1882,
+      "yearCeased": 1883,
       "frequency": "Weekly",
       "medium": "Print",
       "format": "Newspaper",
@@ -27,7 +27,7 @@
       ],
       "primaryFocus": "Local news, political advocacy, education, church notices, social commentary",
       "missionStatement": "The Sentinel has a larger weekly circulation than any weekly paper published in this city (with one exception.) This statement we are prepared to verify at any time. Advertisers will do well to remember this fact, as our advertising rates are lower than those of any other newspaper with equal circulation.",
-      "historicalNotes": "Trenton's first Black newspaper and one of the earliest in New Jersey, founded during the post-Reconstruction era. Published every Saturday at 4 North Broad Street for 3 cents per issue or $1.25 annually. Known for its staunchly Republican editorial stance and popular 'Chit-Chat' column of community gossip and announcements. Merged with the Trenton Herald in 1883 due to financial pressures. The New York Age of October 21, 1909 reported that founder R. Henri Herbert died suddenly in Trenton and was found dead in the street; he was then a document clerk at the State House (https://www.newspapers.com/image/33451515/). A New-York Tribune profile of December 8, 1895 called him a noted colored leader of Mercer County (https://www.newspapers.com/image/78953914/). The Trenton Sunday Advertiser of November 5, 1893 printed his letter against Founder Bradley's Asbury Park pavilion ban (https://www.newspapers.com/image/1194114727/). On October 20, 1895 that paper reported him appointed to the Republican State Committee (https://www.newspapers.com/image/1194116748/).",
+      "historicalNotes": "Trenton's first Black newspaper and one of the earliest in New Jersey, founded during the post-Reconstruction era. Known for its staunchly Republican editorial stance and popular 'Chit-Chat' column of community gossip and announcements. The New-York Tribune of December 8, 1895 calls it 'The Weekly Sentinel' and says Herbert ran it three years from 1880 before selling it to Colonel E. C. Stahl, who consolidated it with The Trenton Herald; no source read gives a year for the consolidation, and the last known surviving issue is dated November 13, 1882. No issue of the paper has been read, and no read source assigns it an address. That same Tribune profile called Herbert a noted colored leader of Mercer County (https://www.newspapers.com/image/78953914/). The New York Age of October 21, 1909 reported that he died suddenly in Trenton and was found dead in the street; he was then a document clerk at the State House (https://www.newspapers.com/image/33451515/). The Trenton Sunday Advertiser of November 5, 1893 printed his letter against Founder Bradley's Asbury Park pavilion ban (https://www.newspapers.com/image/1194114727/). On October 20, 1895 that paper reported him named a consulting member of the Republican State Committee (https://www.newspapers.com/image/1194116748/).",
       "archiveUrl": "https://chroniclingamerica.loc.gov/lccn/2014254331/",
       "physicalArchive": "Trenton Free Public Library (microfilm)",
       "tags": [
@@ -111,7 +111,7 @@
     {
       "id": 9,
       "name": "Newark Herald",
-      "alternateName": "New Jersey Herald News (successor, 1938-1966)",
+      "alternateName": "Absorbed by the New Jersey Herald News, 1939",
       "city": "Newark",
       "founders": [],
       "publishers": [
@@ -127,8 +127,8 @@
         "English"
       ],
       "primaryFocus": "News, African American community",
-      "missionStatement": "Serving Newark's Black community through the Great Depression.",
-      "historicalNotes": "A weekly African American newspaper published in Newark during the late 1920s and 1930s. Part of Newark and Essex County's Black press landscape during the Great Migration. Succeeded by the New Jersey Herald News (1938-1966), indicating a continuation under a new name rather than a complete shutdown.",
+      "missionStatement": "We Print the News, When It's News - Accurately, and Unbiasedly",
+      "historicalNotes": "A weekly African American newspaper published in Newark from 1928, part of Newark and Essex County's Black press landscape during the Great Migration. The Afro-American reported it had folded in 1932, but it was publishing again by 1938 at Volume 11 and its masthead ears read 'We Print the News, When It's News - Accurately, and Unbiasedly' and 'New Jersey's Largest Weekly Newspaper'. The New Jersey Herald News was not a rename: the two titles published side by side as rivals through at least May to July 1938, with independent volume series, publishers, addresses and mastheads. The Herald News absorbed the Herald afterwards, and by March 11, 1939 its masthead read 'combined with THE NEWARK HERALD'.",
       "archiveUrl": "https://www.loc.gov/item/sn88071222/",
       "physicalArchive": "Free Public Library of Newark, NJ (microfilm, dated 1938, holdings incomplete)",
       "tags": [
@@ -182,11 +182,9 @@
       "name": "New Jersey Afro-American",
       "alternateName": null,
       "city": "Newark",
-      "founders": [
-        "John Oliver Jr"
-      ],
+      "founders": [],
       "publishers": [
-        "John Oliver Jr"
+        "The Afro-American Newspapers (Baltimore)"
       ],
       "keyStaff": [
         {
@@ -211,7 +209,7 @@
         }
       ],
       "yearFounded": 1941,
-      "yearCeased": null,
+      "yearCeased": 1991,
       "frequency": "Weekly",
       "medium": "Print",
       "format": "Newspaper",
@@ -220,15 +218,15 @@
       ],
       "primaryFocus": "News, civic welfare, civil rights",
       "missionStatement": "Champion of Civic Welfare and the Square Deal. The longest running and most widely read black newspaper in New Jersey.",
-      "historicalNotes": "The longest-running Black newspaper in New Jersey, operating continuously for over 80 years. Founded in 1941 by John Oliver Jr, with a circulation of 14,609 in 1951, making it a major voice during the Civil Rights era. Adopted Afro-American numeration in 1979, connecting it to the broader Afro-American newspaper family.",
+      "historicalNotes": "The New Jersey edition of the Baltimore-based AFRO chain, published in Newark from 1941, with a circulation of 14,609 in 1951, which made it a major voice during the Civil Rights era. It adopted Afro-American numeration in 1979. The chain was founded in 1892 by John H. Murphy Sr.; John J. Oliver Jr. is the modern AFRO publisher, not the founder of the Newark edition. A May 21, 2023 Daily Record column reports that the New Jersey edition no longer exists, and the archive record ends the paper in 1991.",
       "archiveUrl": "https://www.loc.gov/item/sn84025926/",
       "physicalArchive": "Library of Congress (extensive microfilm collection)",
       "tags": [
         "Newark",
-        "longest-running",
+        "AFRO chain",
         "Civil Rights",
         "1940s",
-        "still active"
+        "ceased"
       ]
     },
     {
@@ -485,12 +483,21 @@
       "alternateName": null,
       "city": "Newark",
       "founders": [
-        "Penda Howell"
+        "Penda Howell",
+        "Dorothy Howell"
       ],
       "publishers": [
         "Penda Howell"
       ],
       "keyStaff": [
+        {
+          "name": "Penda Howell",
+          "role": "CEO, Publisher, Co-Founder"
+        },
+        {
+          "name": "Dorothy Howell",
+          "role": "Co-Founder, COO"
+        },
         {
           "name": "Taylor Jung",
           "role": "Staff"
@@ -523,8 +530,9 @@
         "21st century",
         "digital media",
         "NJCIC grantee",
+        "active",
         "Penda Howell",
-        "active"
+        "Dorothy Howell"
       ]
     },
     {

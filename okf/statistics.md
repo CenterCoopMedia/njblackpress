@@ -10,9 +10,9 @@ timestamp: "2026-06-29"
 
 # Archive statistics
 
-- Publication records: **137**
+- Publication records: **136**
 - Active: **17**
-- Ceased or historical: **120**
+- Ceased or historical: **119**
 - Cities: **45**
 - Distinct formats: **40**
 - Founding span: **1880–2022**
@@ -25,7 +25,7 @@ timestamp: "2026-06-29"
 | [1900s](decades/1900s.md) | 2 | 0 | ██ |
 | [1910s](decades/1910s.md) | 2 | 0 | ██ |
 | [1920s](decades/1920s.md) | 2 | 0 | ██ |
-| [1930s](decades/1930s.md) | 14 | 0 | ████████████ |
+| [1930s](decades/1930s.md) | 13 | 0 | ███████████ |
 | [1940s](decades/1940s.md) | 3 | 0 | ██ |
 | [1950s](decades/1950s.md) | 9 | 0 | ███████ |
 | [1960s](decades/1960s.md) | 10 | 0 | ████████ |
@@ -40,7 +40,7 @@ timestamp: "2026-06-29"
 
 | City | Count | Active |
 |---|---|---|
-| [Newark](cities/newark.md) | 39 | 7 |
+| [Newark](cities/newark.md) | 38 | 7 |
 | [Paramus](cities/paramus.md) | 10 | 1 |
 | [Trenton](cities/trenton.md) | 9 | 3 |
 | [Atlantic City](cities/atlantic-city.md) | 5 | 2 |
@@ -62,7 +62,7 @@ _24 cities have a single recorded publication. See the [full city index](cities.
 
 | Medium | Count |
 |---|---|
-| Print | 124 |
+| Print | 123 |
 | Digital | 12 |
 | Print/Digital | 1 |
 
@@ -71,7 +71,7 @@ _24 cities have a single recorded publication. See the [full city index](cities.
 | Category | Count |
 |---|---|
 | Periodicals & other print | 49 |
-| Newspapers | 45 |
+| Newspapers | 44 |
 | Magazines | 15 |
 | Digital & multimedia | 11 |
 | Newsletters | 9 |
@@ -83,7 +83,6 @@ _24 cities have a single recorded publication. See the [full city index](cities.
 
 | Publication | Years | Span |
 |---|---|---|
-| [The Newark Herald](publications/024-the-newark-herald.md) | 1938–1999 | 61 yrs |
 | [Black Caucus of ALA Newsletter](publications/099-black-caucus-of-ala-newsletter.md) | 1974–present | 52 yrs |
 | [New Jersey Afro-American](publications/035-new-jersey-afro-american.md) | 1941–1991 | 50 yrs |
 | [Deliverance Voice](publications/070-deliverance-voice.md) | 1967–2014 | 47 yrs |
@@ -93,6 +92,7 @@ _24 cities have a single recorded publication. See the [full city index](cities.
 | [The Ironsides Echo](publications/057-the-ironsides-echo.md) | 1917–1955 | 38 yrs |
 | [The Nubian News](publications/040-the-nubian-news.md) | 1989–present | 37 yrs |
 | [Hype Hair](publications/082-hype-hair.md) | 1993–present | 33 yrs |
+| [New Jersey After Hours](publications/101-new-jersey-after-hours.md) | 1949–1980 | 31 yrs |
 
 ## Navigate
 

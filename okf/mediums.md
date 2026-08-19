@@ -11,8 +11,8 @@ count: 3
 
 # Mediums index
 
-3 mediums group the 137 publication records.
+3 mediums group the 136 publication records.
 
-- [Print](mediums/print.md) — 124 · 5 active
+- [Print](mediums/print.md) — 123 · 5 active
 - [Digital](mediums/digital.md) — 12 · 11 active
 - [Print/Digital](mediums/print-digital.md) — 1 · 1 active

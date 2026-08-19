@@ -1,78 +1,335 @@
 {
   "file": "C:/Users/Joe Amditis/Desktop/Crimes/playground/njblackpress/data/research/ia/clean/NewarkHerald19380730a.pdf",
-  "publication": "New Jersey Herald News (Newark Herald)",
+  "publication": "The Newark Herald",
   "date": "1938-07-30",
-  "summary": "National Edition, 12-page issue, Saturday July 30, 1938. Front page covers the permanent closing of the Elizabeth Dowd Natatorium after an NAACP-led delegation refused a segregated-hours compromise; a fatal two-car crash on Route 29 that killed Newark cab starter William Gibbons and passenger Eddie Pollard; a controversy at the NJ State Federation of Colored Women's Clubs convention over remarks by WPA official Mrs. Elizabeth C. Denny Van about 'Mammy'; the North Jersey Baptist Association's Silver Jubilee convention parade honoring Dr. L. K. Williams; a Ku Klux Klan cross-burning and mob harassment of a Black family at the Fayson Lake development near Butler, NJ; and coverage of a Father Divine disciple's court fight over legal use of 'Divine' names. National/international items include a fatal dynamite explosion killing ten Black workers on a Baltimore PWA water-tunnel project, NAACP secretary Walter White's Virgin Islands visit with Judge William H. Hastie, composer William Grant Still's World's Fair commission, and Governor A. Harry Moore's appointments to a state study commission on Negro living conditions. Extensive club, society, church, and sports pages cover Newark, Orange, Montclair, Summit, Hackensack, Vaux Hall, Jersey City, Bayonne, Nutley, Atlantic City and other NJ communities, plus Newark Eagles baseball, Henry Armstrong's title-fight training, and nightlife columns ('Mainly About Tan Town', 'Definitely About Jersey', 'Stuff & Nonsense').",
+  "summary": "The Newark Herald, Vol. 11, No. 24, National Edition, 12-page issue, Saturday July 30, 1938. Unlike the July 23 and June 11 scans, this issue is Newark Herald throughout; no New Jersey Herald News section is bound with it. Front page covers the permanent closing of the Elizabeth Dowd Natatorium after an NAACP-led delegation refused a segregated-hours compromise; a fatal two-car crash on Route 29 that killed Newark cab starter William Gibbons and passenger Eddie Pollard; a controversy at the NJ State Federation of Colored Women's Clubs convention over remarks by WPA official Mrs. Elizabeth C. Denny Van about 'Mammy'; the North Jersey Baptist Association's Silver Jubilee convention parade honoring Dr. L. K. Williams; the Father Divine name case; and Hoot Gibson's indictment. Page 2 carries the Ku Klux Klan cross-burning and mob harassment of a Black family at the Fayson Lake development near Butler, NJ, under the head 'Hooded Mob Stirs Terror - Fiery Cross Burned in Front of House at Fayson Lake Development'; the Klan story is not a front-page item. National/international items include a fatal dynamite explosion killing ten Black workers on a Baltimore PWA water-tunnel project, NAACP secretary Walter White's Virgin Islands visit with Judge William H. Hastie, composer William Grant Still's World's Fair commission, and Governor A. Harry Moore's appointments to a state study commission on Negro living conditions. Extensive club, society, church, and sports pages cover Newark, Orange, Montclair, Summit, Hackensack, Vaux Hall, Jersey City, Bayonne, Nutley, Atlantic City and other NJ communities, plus Newark Eagles baseball, Henry Armstrong's title-fight training, and nightlife columns ('Mainly About Tan Town', 'Definitely About Jersey', 'Stuff & Nonsense').",
   "people": [
-    {"name": "Dr. William H. Brown", "role": "president, NAACP Elizabeth branch, led delegation refusing pool segregation compromise"},
-    {"name": "Attorney J. Leroy Jordan", "role": "spokesman for the Negro delegation to Elizabeth Recreation Commission"},
-    {"name": "Bernard P. Gold", "role": "head of Elizabeth Recreation Commission Board"},
-    {"name": "John T. Hall", "role": "Elizabeth Recreation Commission board member"},
-    {"name": "William Gibbons", "role": "Green Taxi Company starter, killed in Route 29 crash"},
-    {"name": "Eddie Pollard", "role": "passenger killed in same Route 29 crash, identified later"},
-    {"name": "Mrs. Elizabeth C. Denny Van", "role": "State Director of Women's and Professional Projects (WPA), made controversial 'Mammy' remark"},
-    {"name": "Mrs. Armeta H. Douglass", "role": "prominent women's leader who objected to Mrs. Van's remarks"},
-    {"name": "Mrs. Ida Brown", "role": "elected president, NJ State Federation of Colored Women's Clubs"},
-    {"name": "Mrs. Alice B. Arrington", "role": "outgoing president, NJ State Federation of Colored Women's Clubs, resigned to take YWCA post in Baltimore"},
-    {"name": "Rev. Florence Randolph", "role": "founder, NJ State Federation of Colored Women's Clubs, presided at election"},
-    {"name": "Dr. C. T. Wilcher", "role": "re-elected Moderator, North Jersey District Baptist Association"},
-    {"name": "Dr. L. K. Williams", "role": "president, National Baptist Convention Inc., honored guest at Newark parade"},
-    {"name": "Rev. J. H. Burks", "role": "pastor, Mt. Zion Baptist Newark, chairman of parade committee"},
-    {"name": "J. Mercer Burrell", "role": "Commander-elect, Guyton Post American Legion; legal advisor, Modern Beauticians Association, led fight against beauty-shop closing ordinance"},
-    {"name": "Harold A. Lett", "role": "Executive Secretary, NJ Urban League, spoke against proposed beauty-shop closing ordinance"},
-    {"name": "James 'Bill-Board' Jackson", "role": "special representative, Esso Marketers, spoke on Negro economic advancement"},
-    {"name": "Walter White", "role": "national secretary, NAACP, visited St. Thomas Virgin Islands"},
-    {"name": "Judge William H. Hastie", "role": "hosted Walter White in Virgin Islands"},
-    {"name": "Gov. Lawrence Cramer", "role": "Virgin Islands governor, hosted reception for the Whites"},
-    {"name": "William Grant Still", "role": "composer, in NYC for World's Fair theme music conferences"},
-    {"name": "Roger M. Yancey", "role": "named by Gov. A. Harry Moore to state commission on Negro living conditions"},
-    {"name": "Richard R. Smith", "role": "Jersey City realtor, named to same commission"},
-    {"name": "James J. McMahon", "role": "Montclair commissioner named temporary chairman, Essex County Democratic Organization"},
-    {"name": "William H. Kelly", "role": "relinquished chairmanship of Essex County Democratic org"},
-    {"name": "J. Bernard Johnson", "role": "president, Afro-American Democratic League"},
-    {"name": "Dr. Louis T. Wright", "role": "chairman, NAACP board of directors, surgeon-in-chief Harlem Hospital, spoke at National Health Conference in DC"},
-    {"name": "Richard Wright", "role": "author, honored for prize-winning book 'Uncle Tom's Children'"},
-    {"name": "Bishop R. R. Wright Jr.", "role": "A.M.E. bishop, sailed for South Africa, spoke on segregation there"},
-    {"name": "Dr. L. L. Berry", "role": "secretary-treasurer, Mission Board of the A.M.E. Church"},
-    {"name": "Ethel Waters", "role": "presided at Negro Actors Guild meeting"},
-    {"name": "Bill 'Bojangles' Robinson", "role": "dancer, broke his arm in Los Angeles"},
-    {"name": "Lou Blackmon", "role": "nightlife columnist, 'Mainly About Tan Town'"},
-    {"name": "Tommy Watkins", "role": "columnist, 'Definitely About Jersey'"},
-    {"name": "Betty Marsh", "role": "columnist, 'Stuff & Nonsense'"},
-    {"name": "Lillian B. Huff", "role": "Newark Herald Society Editor, covered NJ Federation convention"},
-    {"name": "Henry Armstrong", "role": "boxer, training at Pompton Lakes for lightweight title fight vs Lou Ambers"},
-    {"name": "Lou Ambers", "role": "boxer, defending lightweight title vs Armstrong"},
-    {"name": "Tony Galento", "role": "heavyweight boxer, fight vs John Henry Lewis postponed due to illness"},
-    {"name": "John Henry Lewis", "role": "boxer, positioned as heavyweight challenger"},
-    {"name": "Mike Jacobs", "role": "boxing promoter"},
-    {"name": "Ray Dandridge", "role": "Newark Eagles third baseman"},
-    {"name": "Willie Wells", "role": "Newark Eagles shortstop"},
-    {"name": "Dick Seay", "role": "Newark Eagles second baseman"},
-    {"name": "Mule Suttles", "role": "Newark Eagles first baseman"},
-    {"name": "Satchell Paige", "role": "pitcher, arrived to join Eagles"},
-    {"name": "Dr. Reginald E. Weir", "role": "tennis player seeking fifth ATA national singles title"},
-    {"name": "Ora Washington", "role": "women's tennis champion"},
-    {"name": "Andrew F. Jackson", "role": "editor, Makasar Beauty News"},
-    {"name": "Mrs. Cordelia G. Johnson", "role": "President, Modern Beauticians Association"},
-    {"name": "Homer Cummings", "role": "US Attorney General, admitted federal government 'powerless' to act on lynchings"},
-    {"name": "James Weldon Johnson", "role": "referenced posthumously as ideal Supreme Court candidate"},
-    {"name": "Mary McLeod Bethune", "role": "referenced as exemplar of Negro womanhood, 'woman Moses' of the race"},
-    {"name": "Ernest Settles", "role": "first Black authorized furniture dealer/salesman in North Jersey, Leon Furniture Co."},
-    {"name": "Benjamin Anderson", "role": "appointed county investigator, Atlantic County Prosecutor's office, former athlete"}
+    {
+      "name": "Dr. William H. Brown",
+      "role": "president, NAACP Elizabeth branch, led delegation refusing pool segregation compromise"
+    },
+    {
+      "name": "Attorney J. Leroy Jordan",
+      "role": "spokesman for the Negro delegation to Elizabeth Recreation Commission"
+    },
+    {
+      "name": "Bernard P. Gold",
+      "role": "head of Elizabeth Recreation Commission Board"
+    },
+    {
+      "name": "John T. Hall",
+      "role": "Elizabeth Recreation Commission board member"
+    },
+    {
+      "name": "William Gibbons",
+      "role": "Green Taxi Company starter, killed in Route 29 crash"
+    },
+    {
+      "name": "Eddie Pollard",
+      "role": "passenger killed in same Route 29 crash, identified later"
+    },
+    {
+      "name": "Mrs. Elizabeth C. Denny Van",
+      "role": "State Director of Women's and Professional Projects (WPA), made controversial 'Mammy' remark"
+    },
+    {
+      "name": "Mrs. Armeta H. Douglass",
+      "role": "prominent women's leader who objected to Mrs. Van's remarks"
+    },
+    {
+      "name": "Mrs. Ida Brown",
+      "role": "elected president, NJ State Federation of Colored Women's Clubs"
+    },
+    {
+      "name": "Mrs. Alice B. Arrington",
+      "role": "outgoing president, NJ State Federation of Colored Women's Clubs, resigned to take YWCA post in Baltimore"
+    },
+    {
+      "name": "Rev. Florence Randolph",
+      "role": "founder, NJ State Federation of Colored Women's Clubs, presided at election"
+    },
+    {
+      "name": "Dr. C. T. Wilcher",
+      "role": "re-elected Moderator, North Jersey District Baptist Association"
+    },
+    {
+      "name": "Dr. L. K. Williams",
+      "role": "president, National Baptist Convention Inc., honored guest at Newark parade"
+    },
+    {
+      "name": "Rev. J. H. Burks",
+      "role": "pastor, Mt. Zion Baptist Newark, chairman of parade committee"
+    },
+    {
+      "name": "J. Mercer Burrell",
+      "role": "Commander-elect, Guyton Post American Legion; legal advisor, Modern Beauticians Association, led fight against beauty-shop closing ordinance"
+    },
+    {
+      "name": "Harold A. Lett",
+      "role": "Executive Secretary, NJ Urban League, spoke against proposed beauty-shop closing ordinance"
+    },
+    {
+      "name": "James 'Bill-Board' Jackson",
+      "role": "special representative, Esso Marketers, spoke on Negro economic advancement"
+    },
+    {
+      "name": "Walter White",
+      "role": "national secretary, NAACP, visited St. Thomas Virgin Islands"
+    },
+    {
+      "name": "Judge William H. Hastie",
+      "role": "hosted Walter White in Virgin Islands"
+    },
+    {
+      "name": "Gov. Lawrence Cramer",
+      "role": "Virgin Islands governor, hosted reception for the Whites"
+    },
+    {
+      "name": "William Grant Still",
+      "role": "composer, in NYC for World's Fair theme music conferences"
+    },
+    {
+      "name": "Roger M. Yancey",
+      "role": "named by Gov. A. Harry Moore to state commission on Negro living conditions"
+    },
+    {
+      "name": "Richard R. Smith",
+      "role": "Jersey City realtor, named to same commission"
+    },
+    {
+      "name": "James J. McMahon",
+      "role": "Montclair commissioner named temporary chairman, Essex County Democratic Organization"
+    },
+    {
+      "name": "William H. Kelly",
+      "role": "relinquished chairmanship of Essex County Democratic org"
+    },
+    {
+      "name": "J. Bernard Johnson",
+      "role": "president, Afro-American Democratic League"
+    },
+    {
+      "name": "Dr. Louis T. Wright",
+      "role": "chairman, NAACP board of directors, surgeon-in-chief Harlem Hospital, spoke at National Health Conference in DC"
+    },
+    {
+      "name": "Richard Wright",
+      "role": "author, honored for prize-winning book 'Uncle Tom's Children'"
+    },
+    {
+      "name": "Bishop R. R. Wright Jr.",
+      "role": "A.M.E. bishop, sailed for South Africa, spoke on segregation there"
+    },
+    {
+      "name": "Dr. L. L. Berry",
+      "role": "secretary-treasurer, Mission Board of the A.M.E. Church"
+    },
+    {
+      "name": "Ethel Waters",
+      "role": "presided at Negro Actors Guild meeting"
+    },
+    {
+      "name": "Bill 'Bojangles' Robinson",
+      "role": "dancer, broke his arm in Los Angeles"
+    },
+    {
+      "name": "Lou Blackmon",
+      "role": "nightlife columnist, 'Mainly About Tan Town'"
+    },
+    {
+      "name": "Tommy Watkins",
+      "role": "columnist, 'Definitely About Jersey'"
+    },
+    {
+      "name": "Betty Marsh",
+      "role": "columnist, 'Stuff & Nonsense'"
+    },
+    {
+      "name": "Lillian B. Huff",
+      "role": "Newark Herald Society Editor, covered NJ Federation convention"
+    },
+    {
+      "name": "Henry Armstrong",
+      "role": "boxer, training at Pompton Lakes for lightweight title fight vs Lou Ambers"
+    },
+    {
+      "name": "Lou Ambers",
+      "role": "boxer, defending lightweight title vs Armstrong"
+    },
+    {
+      "name": "Tony Galento",
+      "role": "heavyweight boxer, fight vs John Henry Lewis postponed due to illness"
+    },
+    {
+      "name": "John Henry Lewis",
+      "role": "boxer, positioned as heavyweight challenger"
+    },
+    {
+      "name": "Mike Jacobs",
+      "role": "boxing promoter"
+    },
+    {
+      "name": "Ray Dandridge",
+      "role": "Newark Eagles third baseman"
+    },
+    {
+      "name": "Willie Wells",
+      "role": "Newark Eagles shortstop"
+    },
+    {
+      "name": "Dick Seay",
+      "role": "Newark Eagles second baseman"
+    },
+    {
+      "name": "Mule Suttles",
+      "role": "Newark Eagles first baseman"
+    },
+    {
+      "name": "Satchell Paige",
+      "role": "pitcher, arrived to join Eagles"
+    },
+    {
+      "name": "Dr. Reginald E. Weir",
+      "role": "tennis player seeking fifth ATA national singles title"
+    },
+    {
+      "name": "Ora Washington",
+      "role": "women's tennis champion"
+    },
+    {
+      "name": "Andrew F. Jackson",
+      "role": "editor, Makasar Beauty News"
+    },
+    {
+      "name": "Mrs. Cordelia G. Johnson",
+      "role": "President, Modern Beauticians Association"
+    },
+    {
+      "name": "Homer Cummings",
+      "role": "US Attorney General, admitted federal government 'powerless' to act on lynchings"
+    },
+    {
+      "name": "James Weldon Johnson",
+      "role": "referenced posthumously as ideal Supreme Court candidate"
+    },
+    {
+      "name": "Mary McLeod Bethune",
+      "role": "referenced as exemplar of Negro womanhood, 'woman Moses' of the race"
+    },
+    {
+      "name": "Ernest Settles",
+      "role": "first Black authorized furniture dealer/salesman in North Jersey, Leon Furniture Co."
+    },
+    {
+      "name": "Benjamin Anderson",
+      "role": "appointed county investigator, Atlantic County Prosecutor's office, former athlete"
+    }
   ],
-  "places": ["Newark, NJ", "Elizabeth, NJ", "Union Township, NJ", "Montclair, NJ", "Orange, NJ", "East Orange, NJ", "South Orange, NJ", "Summit, NJ", "Hackensack, NJ", "Vaux Hall, NJ", "Bayonne, NJ", "Nutley, NJ", "Jersey City, NJ", "Bordentown, NJ", "Atlantic City, NJ", "Asbury Park, NJ", "Belleville, NJ", "Freehold, NJ", "Woodbine, NJ", "Fayson Lake / Butler, NJ", "Eatontown, NJ", "Trenton, NJ", "Baltimore, MD", "St. Thomas, Virgin Islands", "Monrovia, Liberia", "Washington, D.C.", "New York, NY (Harlem)"],
+  "places": [
+    "Newark, NJ",
+    "Elizabeth, NJ",
+    "Union Township, NJ",
+    "Montclair, NJ",
+    "Orange, NJ",
+    "East Orange, NJ",
+    "South Orange, NJ",
+    "Summit, NJ",
+    "Hackensack, NJ",
+    "Vaux Hall, NJ",
+    "Bayonne, NJ",
+    "Nutley, NJ",
+    "Jersey City, NJ",
+    "Bordentown, NJ",
+    "Atlantic City, NJ",
+    "Asbury Park, NJ",
+    "Belleville, NJ",
+    "Freehold, NJ",
+    "Woodbine, NJ",
+    "Fayson Lake / Butler, NJ",
+    "Eatontown, NJ",
+    "Trenton, NJ",
+    "Baltimore, MD",
+    "St. Thomas, Virgin Islands",
+    "Monrovia, Liberia",
+    "Washington, D.C.",
+    "New York, NY (Harlem)"
+  ],
   "incidents": [
-    {"date": "1938-07-25 (Monday)", "what": "Negro delegation led by Dr. William H. Brown refuses segregated-hours compromise; Elizabeth Recreation Commission votes to permanently close Dowd Natatorium for the season", "who": ["Dr. William H. Brown", "Attorney J. Leroy Jordan", "Bernard P. Gold", "John T. Hall"]},
-    {"date": "1938-07-25 (early Monday)", "what": "Fatal head-on two-car crash on Route 29 in Union Township; William Gibbons and Eddie Pollard killed, four others injured", "who": ["William Gibbons", "Eddie Pollard"]},
-    {"date": "1938-07-27 (Wednesday)", "what": "Mrs. Elizabeth C. Denny Van's 'Mammy' remark at NJ Federation of Colored Women's Clubs conference in Bordentown draws protest from Mrs. Armeta H. Douglass", "who": ["Mrs. Elizabeth C. Denny Van", "Mrs. Armeta H. Douglass"]},
-    {"date": "1938-07-thursday", "what": "Mrs. Ida Brown of Jersey City elected president of NJ State Federation of Colored Women's Clubs, succeeding Mrs. Alice B. Arrington", "who": ["Mrs. Ida Brown", "Mrs. Alice B. Arrington", "Rev. Florence Randolph"]},
-    {"date": "1938-07-22 (Friday)", "what": "North Jersey District Baptist Association Silver Jubilee parade through Newark's Third Ward honoring Dr. L. K. Williams", "who": ["Dr. L. K. Williams", "Dr. C. T. Wilcher", "Rev. J. H. Burks", "J. Mercer Burrell"]},
-    {"date": "1938-07-23 (Saturday night, reported)", "what": "Ku Klux Klan burns cross and mob stones cottage at Fayson Lake development near Butler, NJ, after a Negro family moved in", "who": []},
-    {"date": "1938-07 (reported)", "what": "500 pounds of dynamite explode prematurely in Loch Raven-Monte Bello water tunnel PWA project, Baltimore, killing ten Black workers", "who": []},
-    {"date": "1938-07-26 (Tuesday, reported)", "what": "Father Divine disciple 'Faithful Mary' faces traffic-court case over using 'Divine' name on license/registration", "who": ["Faithful Mary"]},
-    {"date": "1938-07 (reported)", "what": "Newark beauticians organize opposition to proposed city ordinance requiring early closing of beauty shops", "who": ["J. Mercer Burrell", "Harold A. Lett", "Mrs. Cordelia G. Johnson", "Andrew F. Jackson"]}
+    {
+      "date": "1938-07-25 (Monday)",
+      "what": "Negro delegation led by Dr. William H. Brown refuses segregated-hours compromise; Elizabeth Recreation Commission votes to permanently close Dowd Natatorium for the season",
+      "who": [
+        "Dr. William H. Brown",
+        "Attorney J. Leroy Jordan",
+        "Bernard P. Gold",
+        "John T. Hall"
+      ]
+    },
+    {
+      "date": "1938-07-25 (early Monday)",
+      "what": "Fatal head-on two-car crash on Route 29 in Union Township; William Gibbons and Eddie Pollard killed, four others injured",
+      "who": [
+        "William Gibbons",
+        "Eddie Pollard"
+      ]
+    },
+    {
+      "date": "1938-07-20 (Wednesday; the issue says 'last Wednesday')",
+      "what": "Mrs. Elizabeth C. Denny Van's 'Mammy' remark at the NJ Federation of Colored Women's Clubs convention in Bordentown draws protest from Mrs. Armeta H. Douglass. The convention was printed in advance as running July 20-23, 1938, so its only Wednesday was July 20; the earlier reading of July 27 falls after the convention closed",
+      "who": [
+        "Mrs. Elizabeth C. Denny Van",
+        "Mrs. Armeta H. Douglass"
+      ]
+    },
+    {
+      "date": "1938-07-thursday",
+      "what": "Mrs. Ida Brown of Jersey City elected president of NJ State Federation of Colored Women's Clubs, succeeding Mrs. Alice B. Arrington",
+      "who": [
+        "Mrs. Ida Brown",
+        "Mrs. Alice B. Arrington",
+        "Rev. Florence Randolph"
+      ]
+    },
+    {
+      "date": "1938-07-22 (Friday)",
+      "what": "North Jersey District Baptist Association Silver Jubilee parade through Newark's Third Ward honoring Dr. L. K. Williams",
+      "who": [
+        "Dr. L. K. Williams",
+        "Dr. C. T. Wilcher",
+        "Rev. J. H. Burks",
+        "J. Mercer Burrell"
+      ]
+    },
+    {
+      "date": "1938-07-23 (Saturday night, reported)",
+      "what": "Ku Klux Klan burns cross and mob stones cottage at Fayson Lake development near Butler, NJ, after a Negro family moved in; reported on page 2, not the front page",
+      "who": []
+    },
+    {
+      "date": "1938-07 (reported)",
+      "what": "500 pounds of dynamite explode prematurely in Loch Raven-Monte Bello water tunnel PWA project, Baltimore, killing ten Black workers",
+      "who": []
+    },
+    {
+      "date": "1938-07-26 (Tuesday, reported)",
+      "what": "Father Divine disciple 'Faithful Mary' faces traffic-court case over using 'Divine' name on license/registration",
+      "who": [
+        "Faithful Mary"
+      ]
+    },
+    {
+      "date": "1938-07 (reported)",
+      "what": "Newark beauticians organize opposition to proposed city ordinance requiring early closing of beauty shops",
+      "who": [
+        "J. Mercer Burrell",
+        "Harold A. Lett",
+        "Mrs. Cordelia G. Johnson",
+        "Andrew F. Jackson"
+      ]
+    }
   ],
   "connections": [
+    "This scan is The Newark Herald only, 12 pages, Vol. 11, No. 24. It carries no New Jersey Herald News section, so items from it must not be attributed to the Herald News (publication id 16).",
     "Society editor Lillian B. Huff and columnists Lou Blackmon and Tommy Watkins are recurring Newark Herald staff also referenced in the July 23 issue.",
     "Coverage of NAACP national secretary Walter White and NJ NAACP branches (Elizabeth, state office under Dr. D. W. Anthony) links to national NAACP activity.",
     "References the Negro Actors Guild of America (Ethel Waters presiding) consistent with the July 23 issue's mention of the Guild's newsletter editor Mrs. Geraldine Dismond.",

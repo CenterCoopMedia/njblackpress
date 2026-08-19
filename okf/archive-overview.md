@@ -25,7 +25,7 @@ The archive documents Black-owned and Black-focused publications connected to Ne
 Records carry a free-text `format`; these collapse into broad categories:
 
 - Periodicals & other print: 49
-- Newspapers: 45
+- Newspapers: 44
 - Magazines: 15
 - Digital & multimedia: 11
 - Newsletters: 9
@@ -60,7 +60,7 @@ Records carry a free-text `format`; these collapse into broad categories:
 - Newsletter/Periodicals: 2
 - Newsletter/periodicals: 1
 - Newsletters: 1
-- Newspaper: 34
+- Newspaper: 33
 - Newspaper/Periodicals: 9
 - Periodicals: 36
 - Periodicals, Newsletters: 1

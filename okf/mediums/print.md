@@ -7,19 +7,19 @@ tags:
   - "medium"
   - "print"
 timestamp: "2026-06-29"
-count: 124
+count: 123
 ---
 
 # Print
 
-**124** publications in this medium grouping · **5** active · founding years **1880–2016**.
+**123** publications in this medium grouping · **5** active · founding years **1880–2016**.
 
 ## Publications
 
 | Publication | Years | Status |
 |---|---|---|
-| [The Sentinel](../publications/010-the-sentinel.md) | 1880–1882 | Ceased 1882 |
-| [The Landscape](../publications/034-the-landscape.md) | 1885–1901 | Ceased 1901 |
+| [The Sentinel](../publications/010-the-sentinel.md) | 1880–1883 | Ceased 1883 |
+| [The Landscape](../publications/034-the-landscape.md) | 1881–1901 | Ceased 1901 |
 | [New Jersey Trumpet](../publications/038-new-jersey-trumpet.md) | 1887–1897 | Ceased 1897 |
 | [The Echo](../publications/031-the-echo.md) | 1904–1943 | Ceased 1943 |
 | [The Citizen](../publications/007-the-citizen.md) | 1909–1915 | Ceased 1915 |
@@ -40,7 +40,6 @@ count: 124
 | [Point Breeze Rugcuttings](../publications/055-point-breeze-rugcuttings.md) | 1938–1938 | Ceased 1938 |
 | [Rifle Ranger](../publications/097-rifle-ranger.md) | 1938–1938 | Ceased 1938 |
 | [The Little Ease Echo](../publications/090-the-little-ease-echo.md) | 1938–1939 | Ceased 1939 |
-| [The Newark Herald](../publications/024-the-newark-herald.md) | 1938–1999 | Ceased 1999 |
 | [New Jersey Afro-American](../publications/035-new-jersey-afro-american.md) | 1941–1991 | Ceased 1991 |
 | [The Hiram Star-News](../publications/079-the-hiram-star-news.md) | 1947–1955 | Ceased 1955 |
 | [New Jersey After Hours](../publications/101-new-jersey-after-hours.md) | 1949–1980 | Ceased 1980 |

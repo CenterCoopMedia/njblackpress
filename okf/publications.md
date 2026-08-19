@@ -10,7 +10,7 @@ timestamp: "2026-06-29"
 
 # Publication index
 
-All 137 records, alphabetical. See [statistics](statistics.md) for breakdowns.
+All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 
 | Publication | City | Years | Status |
 |---|---|---|---|
@@ -33,7 +33,7 @@ All 137 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [Black Racers Yearbook](publications/064-black-racers-yearbook.md) | Trenton | 1974–1974 | Ceased 1974 |
 | [Black Truth Bulletin](publications/127-black-truth-bulletin.md) | Unknown | 1978–1982 | Ceased 1982 |
 | [Black Voice/Carta Boricua](publications/098-black-voice-carta-boricua.md) | Piscataway | 1970–2015 | Ceased 2015 |
-| [Black Women’s United Front Newsletter](publications/126-black-women-s-united-front-newsletter.md) | Newark | 1976–1976 | Ceased 1976 |
+| [Black Women’s United Front Newsletter](publications/126-black-women-s-united-front-newsletter.md) ⭐ | Newark | 1976–1976 | Ceased 1976 |
 | [Bootstrap](publications/074-bootstrap.md) | Newark | 1981–1983 | Ceased 1983 |
 | [Braids & Beauty](publications/092-braids-and-beauty.md) | Paramus | 1994–1995 | Ceased 1995 |
 | [Bronze Thrills](publications/067-bronze-thrills.md) | Dover | 1952–1981 | Ceased 1981 |
@@ -45,7 +45,7 @@ All 137 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [Club World: Newsmagazine](publications/129-club-world-newsmagazine.md) | East Orange | 1955–1959 | Ceased 1959 |
 | [Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women](publications/130-communique-quarterly-newsletter-of-the-new-jersey-coalition-of-100-black-women.md) | East Orange | 1983–1988 | Ceased 1988 |
 | [Corporate Headquarters](publications/132-corporate-headquarters.md) | Westfield | 1985–1991 | Ceased 1991 |
-| [Deliverance Voice](publications/070-deliverance-voice.md) | Newark | 1967–2014 | Ceased 2014 |
+| [Deliverance Voice](publications/070-deliverance-voice.md) ⭐ | Newark | 1967–2014 | Ceased 2014 |
 | [Dias Creek Echo](publications/094-dias-creek-echo.md) | Cape May | 1938–1938 | Ceased 1938 |
 | [Educational Perspectives](publications/108-educational-perspectives.md) | Cherry Hill | 1978–1985 | Ceased 1985 |
 | [En Avant](publications/059-en-avant.md) | Newark | 1972–1975 | Ceased 1975 |
@@ -67,7 +67,7 @@ All 137 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [Jersey Camera](publications/066-jersey-camera.md) | Newark | 1951–1955 | Ceased 1955 |
 | [Journal of African American Men](publications/054-journal-of-african-american-men.md) | New Brunswick | 1995–2002 | Ceased 2002 |
 | [Just for Black Men](publications/088-just-for-black-men.md) | Paramus | 1996–2009 | Ceased 2009 |
-| [Kuumba: The Black Voice Magazine](publications/100-kuumba-the-black-voice-magazine.md) ⭐ | New Brunswick | 1974–1975 | Ceased 1975 |
+| [Kuumba: The Black Voice Magazine](publications/100-kuumba-the-black-voice-magazine.md) | New Brunswick | 1974–1975 | Ceased 1975 |
 | [MC Squared](publications/053-mc-squared.md) | Piscataway | 1991–1995 | Ceased 1995 |
 | [MEDIC News](publications/068-medic-news.md) | Newark | 1971–1975 | Ceased 1975 |
 | [Monthly Black Periodicals Selection Review](publications/115-monthly-black-periodicals-selection-review.md) | Newark | 1973–1980 | Ceased 1980 |
@@ -121,7 +121,7 @@ All 137 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [The Ironsides Echo](publications/057-the-ironsides-echo.md) | Bordentown | 1917–1955 | Ceased 1955 |
 | [The Jersey Express](publications/002-the-jersey-express.md) | Montclair | 1932–1940 | Ceased 1940 |
 | [The Jersey Heritage](publications/116-the-jersey-heritage.md) | Jersey City | 1992–1996 | Ceased 1996 |
-| [The Landscape](publications/034-the-landscape.md) | Saddle River | 1885–1901 | Ceased 1901 |
+| [The Landscape](publications/034-the-landscape.md) | Saddle River | 1881–1901 | Ceased 1901 |
 | [The Liberator](publications/018-the-liberator.md) | Paterson | 1950–1955 | Ceased 1955 |
 | [The Liberator](publications/109-the-liberator.md) | Edison | 1970–1971 | Ceased 1971 |
 | [The Literary Griot](publications/091-the-literary-griot.md) | Fort Wayne | 1988–2002 | Ceased 2002 |
@@ -131,11 +131,10 @@ All 137 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [The Network: The Newsletter of the African-American Institute of Islamic Research](publications/075-the-network-the-newsletter-of-the-african-american-institute-of-islamic-research.md) | Newark | 1991–1995 | Ceased 1995 |
 | [The New Jersey Guardian](publications/037-the-new-jersey-guardian.md) ⭐ | Newark | 1934–1942 | Ceased 1942 |
 | [The Newark Herald](publications/009-the-newark-herald.md) ⭐ | Newark | 1928–1939 | Ceased 1939 |
-| [The Newark Herald](publications/024-the-newark-herald.md) ⭐ | Newark | 1938–1999 | Ceased 1999 |
 | [The Newark Times](publications/023-the-newark-times.md) | Newark | 2014–present | Active |
 | [The Northern New Jersey Informer](publications/011-the-northern-new-jersey-informer.md) | Paterson | 1950–1955 | Ceased 1955 |
 | [The Nubian News](publications/040-the-nubian-news.md) ⭐ | Trenton | 1989–present | Active |
-| [The Sentinel](publications/010-the-sentinel.md) ⭐ | Trenton | 1880–1882 | Ceased 1882 |
+| [The Sentinel](publications/010-the-sentinel.md) ⭐ | Trenton | 1880–1883 | Ceased 1883 |
 | [The Union Messenger](publications/056-the-union-messenger.md) | Camden | 1979–1985 | Ceased 1985 |
 | [The Voice](publications/041-the-voice.md) | Plainfield | 1968–1974 | Ceased 1974 |
 | [Today's Black Woman](publications/063-today-s-black-woman.md) | Paramus | 1994–2012 | Ceased 2012 |

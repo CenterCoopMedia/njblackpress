@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "totalCount": 137,
+    "totalCount": 136,
     "cities": [
       "Atlantic City",
       "Berlin",
@@ -104,8 +104,8 @@
       "Volumes"
     ],
     "activeCount": 17,
-    "ceasedCount": 120,
-    "evidenceCount": 181
+    "ceasedCount": 119,
+    "evidenceCount": 171
   },
   "publications": [
     {
@@ -427,7 +427,7 @@
       "frequency": "Weekly",
       "format": "Newspaper",
       "languages": "English",
-      "archiveUrl": "LCCN: sn 88071222/OCLC no: 2696527",
+      "archiveUrl": "LCCN: sn 88071222/OCLC no: 2696527 (unverified second catalog record: LCCN 2012210650)",
       "websiteUrl": "https://search.worldcat.org/title/2696527",
       "targetAudience": null,
       "primaryFocus": "News",
@@ -549,7 +549,7 @@
       "city": "Trenton",
       "publishers": "R. Henri Herbert",
       "yearFounded": 1880,
-      "yearCeased": 1882,
+      "yearCeased": 1883,
       "frequency": "Weekly",
       "format": "Newspaper",
       "languages": "English",
@@ -560,7 +560,7 @@
       "medium": "Print",
       "missionStatement": "\"Trenton’s first – and one of the state’s earliest – Black newspapers.”",
       "keyStaff": "Founded, edited and published by R. Henri Herbert.",
-      "historicalNotes": "Founded by R. Henri Herbert, The Sentinel was Trenton's first and New Jersey's earliest African American newspaper. Herbert, born in 1857, began publishing the staunchly Republican weekly in his early twenties. Publication ran from Vol. I, no. 8 (June 26, 1880) through Vol. III, no. 19 (November 13, 1882). Herbert asserted the paper stood for 'earnest advocacy of the broadest freedom and purest liberty for white men, black men, Chinamen, and all men alike.' Advertisers included the Irish National Land & Industrial League, the Ancient Order of Hibernians, the local National Guard regiment, and the local Grand Army of the Republic chapter. The Sentinel later merged with the Trenton Herald at 4 North Broad Street. Herbert was a native of Trenton, son of Mansfield Herbert, a cabinet maker and artistic picture framer (whose clients included John A. Roebling). Henri's sister Priscilla Herbert was the first African American to graduate from the State Normal School (now College of New Jersey) in 1879. Issues were digitized from microfilm created by the Committee on Negro Studies of the American Council of Learned Societies and are available through Chronicling America.",
+      "historicalNotes": "Founded by R. Henri Herbert, The Sentinel was Trenton's first and New Jersey's earliest African American newspaper. Herbert, born in 1857, began publishing the staunchly Republican weekly in his early twenties. Publication ran from Vol. I, no. 8 (June 26, 1880) through Vol. III, no. 19 (November 13, 1882). Herbert asserted the paper stood for 'earnest advocacy of the broadest freedom and purest liberty for white men, black men, Chinamen, and all men alike.' Advertisers included the Irish National Land & Industrial League, the Ancient Order of Hibernians, the local National Guard regiment, and the local Grand Army of the Republic chapter. Herbert was a native of Trenton, son of Mansfield Herbert, a cabinet maker and artistic picture framer (whose clients included John A. Roebling). Henri's sister Priscilla Herbert was the first African American to graduate from the State Normal School (now College of New Jersey) in 1879. Issues were digitized from microfilm created by the Committee on Negro Studies of the American Council of Learned Societies and are available through Chronicling America. The New-York Tribune of December 8, 1895 says Herbert 'started \"The Weekly Sentinel,\" and continued the paper with marked success three years, when the paper was sold to Colonel E. C. Stahl and consolidated with \"The Trenton Herald.\"' Three years from 1880 ends about 1883, and the title continued inside the Herald, so this was a sale to a different owner rather than a cessation or a rename. No source read gives a year for the consolidation or assigns the paper an address, and the last known surviving issue is Vol. III, no. 19, November 13, 1882, so the end year is approximate.",
       "isActive": false,
       "decade": "1880s",
       "isFeaturedHistoric": true,
@@ -1146,132 +1146,6 @@
       ]
     },
     {
-      "id": 24,
-      "name": "The Newark Herald",
-      "alternateName": null,
-      "city": "Newark",
-      "publishers": "New Jersey Herald News Pub. Co. (related to Herald-Advance lineage)",
-      "yearFounded": 1938,
-      "yearCeased": 1999,
-      "frequency": "Weekly",
-      "format": "Newspaper",
-      "languages": "English",
-      "archiveUrl": "OCLC no. 2696527/LCCN no. 2012210650",
-      "websiteUrl": null,
-      "targetAudience": null,
-      "primaryFocus": "African American newspapers",
-      "medium": "Print",
-      "missionStatement": null,
-      "keyStaff": null,
-      "historicalNotes": null,
-      "isActive": false,
-      "decade": "1930s",
-      "isFeaturedHistoric": true,
-      "isFeaturedContemporary": false,
-      "evidence": [
-        {
-          "type": "full_issue",
-          "source": "ia",
-          "date": "1938-05-21T00:00:00Z",
-          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19380521a",
-          "file": "data/research/ia/clean/NewJerseyHeraldNews19380521a.pdf",
-          "rightsStatus": "publishable",
-          "citation": "New Jersey Herald News, May 21, 1938.",
-          "url": "https://archive.org/details/NewJerseyHeraldNews19380521a"
-        },
-        {
-          "type": "full_issue",
-          "source": "ia",
-          "date": "1938-06-11T00:00:00Z",
-          "caption": "New Jersey Herald News issue preview NewarkHerald19380611a",
-          "file": "data/research/ia/clean/NewarkHerald19380611a.pdf",
-          "rightsStatus": "publishable",
-          "citation": "Newark Herald, June 11, 1938.",
-          "url": "https://archive.org/details/NewarkHerald19380611a"
-        },
-        {
-          "type": "full_issue",
-          "source": "ia",
-          "date": "1938-06-18T00:00:00Z",
-          "caption": "New Jersey Herald News issue preview NewarkHerald19380618a",
-          "file": "data/research/ia/clean/NewarkHerald19380618a.pdf",
-          "rightsStatus": "publishable",
-          "citation": "Newark Herald, June 18, 1938.",
-          "url": "https://archive.org/details/NewarkHerald19380618a"
-        },
-        {
-          "type": "full_issue",
-          "source": "ia",
-          "date": "1938-07-02T00:00:00Z",
-          "caption": "New Jersey Herald News issue preview NewarkHerald19380702a",
-          "file": "data/research/ia/clean/NewarkHerald19380702a.pdf",
-          "rightsStatus": "publishable",
-          "citation": "Newark Herald, July 2, 1938.",
-          "url": "https://archive.org/details/NewarkHerald19380702a"
-        },
-        {
-          "type": "full_issue",
-          "source": "ia",
-          "date": "1938-07-09T00:00:00Z",
-          "caption": "New Jersey Herald News issue preview NewarkHerald19380709a",
-          "file": "data/research/ia/clean/NewarkHerald19380709a.pdf",
-          "rightsStatus": "publishable",
-          "citation": "Newark Herald, July 9, 1938.",
-          "url": "https://archive.org/details/NewarkHerald19380709a"
-        },
-        {
-          "type": "full_issue",
-          "source": "ia",
-          "date": "1938-07-16T00:00:00Z",
-          "caption": "New Jersey Herald News issue preview NewarkHerald19380716a",
-          "file": "data/research/ia/clean/NewarkHerald19380716a.pdf",
-          "rightsStatus": "publishable",
-          "citation": "Newark Herald, July 16, 1938.",
-          "url": "https://archive.org/details/NewarkHerald19380716a"
-        },
-        {
-          "type": "full_issue",
-          "source": "ia",
-          "date": "1938-07-23T00:00:00Z",
-          "caption": "New Jersey Herald News issue preview NewarkHerald19380723a",
-          "file": "data/research/ia/clean/NewarkHerald19380723a.pdf",
-          "rightsStatus": "publishable",
-          "citation": "Newark Herald, July 23, 1938.",
-          "url": "https://archive.org/details/NewarkHerald19380723a"
-        },
-        {
-          "type": "full_issue",
-          "source": "ia",
-          "date": "1938-07-30T00:00:00Z",
-          "caption": "New Jersey Herald News issue preview NewarkHerald19380730a",
-          "file": "data/research/ia/clean/NewarkHerald19380730a.pdf",
-          "rightsStatus": "publishable",
-          "citation": "Newark Herald, July 30, 1938.",
-          "url": "https://archive.org/details/NewarkHerald19380730a"
-        },
-        {
-          "type": "full_issue_preview",
-          "source": "ia",
-          "date": "19390311",
-          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19390311",
-          "file": "data/research/ia/clean/NewJerseyHeraldNews19390311.pdf",
-          "rightsStatus": "publishable",
-          "citation": "New Jersey Herald News, March 11, 1939.",
-          "url": "https://archive.org/details/NewJerseyHeraldNews19390311"
-        },
-        {
-          "type": "full_issue_preview",
-          "source": "ia",
-          "date": "19420704",
-          "caption": "New Jersey Herald News issue preview NewJerseyHeraldNews19420704",
-          "file": "data/research/ia/clean/NewJerseyHeraldNews19420704.pdf",
-          "rightsStatus": "publishable",
-          "citation": "New Jersey Herald News, July 4, 1942.",
-          "url": "https://archive.org/details/NewJerseyHeraldNews19420704"
-        }
-      ]
-    },
-    {
       "id": 25,
       "name": "Atlantic City Focus",
       "alternateName": null,
@@ -1611,7 +1485,7 @@
       "alternateName": null,
       "city": "Saddle River",
       "publishers": "A. P. Smith",
-      "yearFounded": 1885,
+      "yearFounded": 1881,
       "yearCeased": 1901,
       "frequency": "Monthly",
       "format": "Newspaper",
@@ -1623,7 +1497,7 @@
       "medium": "Print",
       "missionStatement": null,
       "keyStaff": "Previous editor(s): A. P. Smith",
-      "historicalNotes": "A four-page monthly newspaper written, printed, and published by A.P. Smith from his home at 171 East Allendale Road (corner of Chestnut Ridge Road) in Saddle River, Bergen County, NJ. First published in 1881 (not 1885 as sometimes cited), it continued until Smith's death in 1901. Originally intended as 'A LETTER TO OUR FRIENDS on matters of interest,' it contained neighborhood news, political commentary, and local advertisements. Smith served as editor, printer, and publisher. The newspaper is considered a valuable resource for Saddle River Valley historical research. The history of A.P. Smith and The Landscape has been the subject of lectures by Arnold E. Brown, civil rights leader and founder of the Du Bois Book Center in Englewood, who was also the first African American from Bergen County elected to the NJ State Legislature.",
+      "historicalNotes": "A four-page monthly newspaper written, printed, and published by A.P. Smith from his home at 171 East Allendale Road (corner of Chestnut Ridge Road) in Saddle River, Bergen County, NJ. First published in 1881 (not 1885 as sometimes cited), it continued until Smith's death in 1901. Originally intended as 'A LETTER TO OUR FRIENDS on matters of interest,' it contained neighborhood news, political commentary, and local advertisements. Smith served as editor, printer, and publisher. The newspaper is considered a valuable resource for Saddle River Valley historical research. The history of A.P. Smith and The Landscape has been the subject of lectures by Arnold E. Brown, civil rights leader and founder of the Du Bois Book Center in Englewood, who was also the first African American from Bergen County elected to the NJ State Legislature. The 1987 Ridgewood News dates the run from May 1881 to July 1901 and the 1991 Record says Smith started the paper in 1881; the 1993 Sunday News dates the first issue to June 1882 and treats 'A. P. Smith's Paper' as an earlier predecessor title. No source gives 1885.",
       "isActive": false,
       "decade": "1880s",
       "isFeaturedHistoric": false,
@@ -2956,7 +2830,7 @@
       "historicalNotes": "No specific archival or historical records were found for the Deliverance Voice in online databases including the Library of Congress, Chronicling America, or the Wikipedia list of African American newspapers in New Jersey. The name suggests a possible connection to a religious organization or church community, as 'Deliverance' is a common term in African American church traditions. The publication appeared in 1967, the same year as the Newark Rebellion (July 12-17, 1967), which was a pivotal event that spurred significant community organizing and media production in Newark's African American community. Physical records may exist at the Newark Public Library's Charles F. Cummings New Jersey Information Center, the Rutgers University Libraries, or the New Jersey Historical Society. [March 2026 research (estimated): Quarterly publication of DEC Ministries, Inc. (Deliverance Evangelistic Center), Newark. Blog (deliverancevoice.blogspot.com) last copyrighted 2014.]",
       "isActive": false,
       "decade": "1960s",
-      "isFeaturedHistoric": false,
+      "isFeaturedHistoric": true,
       "isFeaturedContemporary": false,
       "evidence": [
         {
@@ -4056,7 +3930,7 @@
       "historicalNotes": "No digitized archive was found for Kuumba: The Black Voice Magazine from New Brunswick, NJ (1974-1975). 'Kuumba' is a Swahili word meaning 'creativity,' one of the seven principles of Kwanzaa (Nguzo Saba). The name was widely adopted by Black student organizations and cultural groups during the 1970s Black Arts and Black Power movements. During this period, Rutgers University-New Brunswick had an active Black student community; the Black Voice Carta Latina (BVCL) was a later Black/Hispanic student publication at Rutgers, suggesting a lineage of Black student media on campus. The Scarlet & Black Research Center at Rutgers documents Black voices at the university and may have records. Rutgers University Special Collections and University Archives would be the most likely repository for this student publication. Livingston College, established in 1969 as Rutgers' most diverse residential college, was a hub for Black student activism and publications during this era.",
       "isActive": false,
       "decade": "1970s",
-      "isFeaturedHistoric": true,
+      "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
       "evidence": [
         {
@@ -5022,7 +4896,7 @@
       "historicalNotes": "[March 2026 research: Organization (Black Women's United Front) founded by Amina Baraka 1974, dissipated by 1976. Archival materials span 1975-1976 only.]",
       "isActive": false,
       "decade": "1970s",
-      "isFeaturedHistoric": false,
+      "isFeaturedHistoric": true,
       "isFeaturedContemporary": false,
       "evidence": [
         {

@@ -1,1 +1,23 @@
-{"file": "C:/Users/Joe Amditis/Desktop/Crimes/playground/njblackpress/data/research/newspapers-com/downloads/evening-world_1888-12-11_p2_trumpet-negro-organ.jpg", "publication": "The Evening World (New York)", "date": "1888-12-11", "summary": "Page 2 'Squibs from the Squibs' column contains a short item headed 'A Roaring New Jersey Negro Editor,' apparently about a Black-edited newspaper (the filename slug suggests a paper called 'The Trumpet') in New Jersey; body text is too small and degraded in this scan to transcribe reliably. Rest of page is national political and gossip news (Cleveland administration, tariff, election disputes) unrelated to NJ Black press.", "people": [], "places": ["New Jersey (unspecified town)", "New York, NY"], "incidents": [], "connections": ["Squib headline 'A Roaring New Jersey Negro Editor' possibly refers to a Black-edited New Jersey newspaper (filename suggests 'The Trumpet'), but text could not be confirmed at this resolution"], "legibility": "partial"}
+{
+  "file": "C:/Users/Joe Amditis/Desktop/Crimes/playground/njblackpress/data/research/newspapers-com/downloads/evening-world_1888-12-11_p2_trumpet-negro-organ.jpg",
+  "publication": "The World (New York)",
+  "date": "1888-12-11",
+  "summary": "Page 2. The masthead flag reads \"The World\" with \"JOSEPH PULITZER\" beneath it and \"PUBLISHED EVERY DAY IN THE YEAR AT NOS. 31 AND 32 PARK ROW. / TUESDAY, DECEMBER 11, 1888\"; the running head reads \"THE WORLD: TUESDAY, DECEMBER 11, 1888.\" This is Pulitzer's morning paper, not The Evening World; the file slug is wrong. The page carries a standing column headed \"SQUIBS FROM THE SQUIBOBS\" of one-line exchanges credited to the Toledo Blade, Washington Post, Harper's Weekly, Pittsburg Chronicle, Boston Gazette, Merchant Traveller, Somerville Journal, Baltimore American and Terre Haute Express. Below that column, separated by a printer's rule, is a standalone item headed \"A Roaring Jersey Negro Editor\" (not \"A Roaring New Jersey Negro Editor\") and credited \"[From the New Jersey Trumpet-Negro Organ.]\" It is fully legible and reads: \"The Southern white man has the same contempt, hatred and enmity to the black man to-day as he had before the 'wah.' He would enslave us to-morrow had he the power. Again would he prostitute our mothers and our sisters, again would he sell our brothers and his own flesh and blood in the public squares as he did thirty years ago, if it were not for the ballots which we now cast. Better a thousand times we should be exterminated than surrender one single right so dearly purchased.\" The item is a reprint from the New Jersey Trumpet, not a report about an unidentified paper. Rest of page is national political and gossip news (Cleveland administration, tariff, election disputes) unrelated to the NJ Black press.",
+  "people": [],
+  "places": [
+    "New Jersey",
+    "New York, NY"
+  ],
+  "incidents": [
+    {
+      "date": "1888-12-11",
+      "what": "The World reprints an editorial from the New Jersey Trumpet under the head 'A Roaring Jersey Negro Editor', credited '[From the New Jersey Trumpet-Negro Organ.]'",
+      "who": []
+    }
+  ],
+  "connections": [
+    "The attribution to the New Jersey Trumpet is explicit in the printed credit line, not an inference from the filename. The Trumpet was being read and reprinted in the New York daily press in 1888.",
+    "The file slug 'evening-world' is wrong: the masthead and running head both read The World, Joseph Pulitzer's morning paper."
+  ],
+  "legibility": "full"
+}

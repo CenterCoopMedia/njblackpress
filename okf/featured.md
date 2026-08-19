@@ -17,17 +17,17 @@ Publications curated as featured records on the archive site.
 
 | Publication | City | Years |
 |---|---|---|
-| [The Sentinel](publications/010-the-sentinel.md) | Trenton | 1880–1882 |
+| [The Sentinel](publications/010-the-sentinel.md) | Trenton | 1880–1883 |
 | [New Jersey Trumpet](publications/038-new-jersey-trumpet.md) | Newark | 1887–1897 |
 | [The Echo](publications/031-the-echo.md) | Long Branch/Red Bank | 1904–1943 |
 | [The Newark Herald](publications/009-the-newark-herald.md) | Newark | 1928–1939 |
 | [The New Jersey Guardian](publications/037-the-new-jersey-guardian.md) | Newark | 1934–1942 |
-| [The Newark Herald](publications/024-the-newark-herald.md) | Newark | 1938–1999 |
 | [New Jersey Afro-American](publications/035-new-jersey-afro-american.md) | Newark | 1941–1991 |
+| [Deliverance Voice](publications/070-deliverance-voice.md) | Newark | 1967–2014 |
 | [Black Newark](publications/028-black-newark.md) | Newark | 1968–1974 |
 | [The Black Voice](publications/107-the-black-voice.md) | Newark | 1970–1975 |
 | [Unity and Struggle](publications/084-unity-and-struggle.md) | Newark | 1972–1978 |
-| [Kuumba: The Black Voice Magazine](publications/100-kuumba-the-black-voice-magazine.md) | New Brunswick | 1974–1975 |
+| [Black Women’s United Front Newsletter](publications/126-black-women-s-united-front-newsletter.md) | Newark | 1976–1976 |
 
 ## Contemporary (5)
 

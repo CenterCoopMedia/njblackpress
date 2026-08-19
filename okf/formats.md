@@ -11,11 +11,11 @@ count: 40
 
 # Formats index
 
-40 formats group the 137 publication records.
+40 formats group the 136 publication records.
 
-## Newspapers (45)
+## Newspapers (44)
 
-- [Newspaper](formats/newspaper.md) — 34
+- [Newspaper](formats/newspaper.md) — 33
 - [Newspaper/Periodicals](formats/newspaper-periodicals.md) — 9
 - [Digital Newspaper](formats/digital-newspaper.md) — 1
 - [Print Newspaper](formats/print-newspaper.md) — 1

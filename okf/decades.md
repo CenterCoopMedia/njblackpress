@@ -11,13 +11,13 @@ count: 14
 
 # Decades index
 
-14 decades group the 137 publication records.
+14 decades group the 136 publication records.
 
 - [1880s](decades/1880s.md) — 3
 - [1900s](decades/1900s.md) — 2
 - [1910s](decades/1910s.md) — 2
 - [1920s](decades/1920s.md) — 2
-- [1930s](decades/1930s.md) — 14
+- [1930s](decades/1930s.md) — 13
 - [1940s](decades/1940s.md) — 3
 - [1950s](decades/1950s.md) — 9
 - [1960s](decades/1960s.md) — 10

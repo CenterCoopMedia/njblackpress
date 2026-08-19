@@ -23,7 +23,7 @@ featured: false
 | Alternate name | Unknown |
 | City | [Saddle River](../cities/saddle-river.md) |
 | Publishers or owners | A. P. Smith |
-| Active years | 1885–1901 |
+| Active years | 1881–1901 |
 | Status | Ceased 1901 |
 | Decade | [1880s](../decades/1880s.md) |
 | Format | [Newspaper](../formats/newspaper.md) |
@@ -39,7 +39,7 @@ Previous editor(s): A. P. Smith.
 
 ## Historical notes
 
-A four-page monthly newspaper written, printed, and published by A.P. Smith from his home at 171 East Allendale Road (corner of Chestnut Ridge Road) in Saddle River, Bergen County, NJ. First published in 1881 (not 1885 as sometimes cited), it continued until Smith's death in 1901. Originally intended as 'A LETTER TO OUR FRIENDS on matters of interest,' it contained neighborhood news, political commentary, and local advertisements. Smith served as editor, printer, and publisher. The newspaper is considered a valuable resource for Saddle River Valley historical research. The history of A.P. Smith and The Landscape has been the subject of lectures by Arnold E. Brown, civil rights leader and founder of the Du Bois Book Center in Englewood, who was also the first African American from Bergen County elected to the NJ State Legislature.
+A four-page monthly newspaper written, printed, and published by A.P. Smith from his home at 171 East Allendale Road (corner of Chestnut Ridge Road) in Saddle River, Bergen County, NJ. First published in 1881 (not 1885 as sometimes cited), it continued until Smith's death in 1901. Originally intended as 'A LETTER TO OUR FRIENDS on matters of interest,' it contained neighborhood news, political commentary, and local advertisements. Smith served as editor, printer, and publisher. The newspaper is considered a valuable resource for Saddle River Valley historical research. The history of A.P. Smith and The Landscape has been the subject of lectures by Arnold E. Brown, civil rights leader and founder of the Du Bois Book Center in Englewood, who was also the first African American from Bergen County elected to the NJ State Legislature. The 1987 Ridgewood News dates the run from May 1881 to July 1901 and the 1991 Record says Smith started the paper in 1881; the 1993 Sunday News dates the first issue to June 1882 and treats 'A. P. Smith's Paper' as an earlier predecessor title. No source gives 1885.
 
 ## External links
 
@@ -49,7 +49,7 @@ A four-page monthly newspaper written, printed, and published by A.P. Smith from
 
 ### Also from the 1880s
 
-- [The Sentinel](010-the-sentinel.md) — 1880–1882
+- [The Sentinel](010-the-sentinel.md) — 1880–1883
 - [New Jersey Trumpet](038-new-jersey-trumpet.md) — 1887–1897
 
 ## Navigate

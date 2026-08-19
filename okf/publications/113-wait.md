@@ -49,7 +49,7 @@ OCLC no. 36179394.
 
 ### Also in Trenton
 
-- [The Sentinel](010-the-sentinel.md) — 1880–1882
+- [The Sentinel](010-the-sentinel.md) — 1880–1883
 - [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
 - [Black Racers Yearbook](064-black-racers-yearbook.md) — 1974–1974
 - [Fire II](080-fire-ii.md) — 1975–1978
