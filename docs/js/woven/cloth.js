@@ -196,13 +196,33 @@ export function createStateTexture(count) {
   };
 }
 
+// One pluck runs at a time across every cloth material, so all of them share
+// these three uniform objects. Writing the value once updates every mesh and
+// costs no extra draw call.
+export const pluckUniforms = {
+  uPluckIdx: { value: new THREE.Vector3(-1, -1, -1) },
+  uPluckAge: { value: 99 },
+  uPluckAmp: { value: 1 },
+  // World units per screen pixel when the pluck was struck, so the ripple is the
+  // same size on screen at every zoom. Written once per pluck.
+  uPluckScale: { value: 1 }
+};
+
+// The reveal edge is shared for the same reason: one edge crosses the whole
+// cloth, so one uniform object drives every mesh.
+export const weaveUniform = { value: 0 };
+
 export function createClothMaterial(state, opts = {}) {
   return new THREE.ShaderMaterial({
     vertexShader: CLOTH_VERT,
     fragmentShader: CLOTH_FRAG,
     uniforms: {
       uState: { value: state.texture },
-      uWeaveProgress: { value: 1 },
+      uWeaveProgress: weaveUniform,
+      uPluckIdx: pluckUniforms.uPluckIdx,
+      uPluckAge: pluckUniforms.uPluckAge,
+      uPluckAmp: pluckUniforms.uPluckAmp,
+      uPluckScale: pluckUniforms.uPluckScale,
       uFrayCut: { value: opts.frayCut ?? 0.22 },
       uGhostAlpha: { value: opts.ghostAlpha ?? 0.28 },
       uDimColor: { value: new THREE.Color('#2b2318') },

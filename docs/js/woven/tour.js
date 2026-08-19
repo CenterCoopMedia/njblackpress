@@ -19,6 +19,26 @@ export function createTour(app, three, model) {
   const overlay = document.getElementById('woven-overlay');
   const card = document.getElementById('woven-card');
 
+  // A phone gives the card about 250 pixels and a stop can run to 550. The card
+  // scrolls, but a phone draws no scrollbar until you touch it, so a long stop
+  // reads as a sentence cut in half. This button says there is more and takes
+  // you there. It is a real child of the card, stuck to its bottom edge, so it
+  // survives every innerHTML rewrite by being re-appended.
+  const moreEl = document.createElement('div');
+  moreEl.className = 'card-more';
+  moreEl.hidden = true;
+  moreEl.innerHTML = '<button type="button" class="woven-btn">More ↓</button>';
+  moreEl.querySelector('button').addEventListener('click', () => {
+    card.scrollBy({ top: card.clientHeight - 40, behavior: 'smooth' });
+  });
+  card.addEventListener('scroll', () => updateMore());
+
+  function updateMore() {
+    const room = card.scrollHeight - card.clientHeight;
+    const atEnd = card.scrollTop >= room - 4;
+    moreEl.hidden = room < 12 || atEnd;
+  }
+
   const cache = new Map(); // webPath -> THREE.Texture, LRU by insertion order
   let panelMesh = null;
   let panelSize = { w: 0, h: 0 };
@@ -133,7 +153,16 @@ export function createTour(app, three, model) {
     await showPanel(s);
     if (!playing) { disposePanel(); return; }
     announceStop(s);
-    if (!paused) schedule(DWELL);
+    // A stop with three paragraphs needs longer than a stop with one. The dwell
+    // grows with the copy so no stop is taken away half read.
+    if (!paused) schedule(dwellFor(s));
+  }
+
+  // 3.2 seconds, plus about a fifth of a second per ten words, capped at nine.
+  function dwellFor(s) {
+    const words = ((s.event && s.event.description) || '').split(/\s+/).length +
+      (index === 0 ? (tour.thread || '').split(/\s+/).length : 0);
+    return Math.min(9000, DWELL + words * 22);
   }
 
   function tourStopIndex() {
@@ -366,6 +395,11 @@ export function createTour(app, three, model) {
       ${tour.strength === 'weak' && index === 0 ? '<p class="flag">Thinly sourced. This thread rests on two cover artifacts and one dated clipping. Read it as a lead, not a finding.</p>' : ''}
       ${index === 0 ? `<p>${esc(tour.thread)}</p>` : ''}`;
     card.hidden = false;
+    // A long stop scrolls. Every stop starts at its own first line, never part
+    // way down where the last one was left.
+    card.scrollTop = 0;
+    card.appendChild(moreEl);
+    updateMore();
   }
 
   function renderClose() {
@@ -376,6 +410,9 @@ export function createTour(app, three, model) {
       <p><button type="button" class="woven-btn" data-act="ghost">Show what did not survive</button>
          <button type="button" class="woven-btn" data-act="exit">Exit this thread</button></p>`;
     card.hidden = false;
+    card.scrollTop = 0;
+    card.appendChild(moreEl);
+    updateMore();
     card.querySelector('[data-act="ghost"]').addEventListener('click', () => { exit(); app.showGhost(); });
     card.querySelector('[data-act="exit"]').addEventListener('click', exit);
     overlay.hidden = true;
@@ -403,7 +440,7 @@ export function createTour(app, three, model) {
         paused = !paused;
         clearTimer();
         renderBar('play');
-        if (!paused) schedule(DWELL);
+        if (!paused) schedule(dwellFor(stops[index]));
       });
     }
     bar.querySelector('[data-act="prev"]').addEventListener('click', prev);

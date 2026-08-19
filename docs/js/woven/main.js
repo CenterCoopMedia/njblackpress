@@ -8,6 +8,9 @@ import {
 
 const params = new URLSearchParams(location.search);
 
+const escapeHtml = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
 function hasWebGL() {
   try {
     const c = document.createElement('canvas');
@@ -66,7 +69,7 @@ async function boot() {
 async function startScene(model) {
   const THREE = await import('three');
   const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
-  const { buildWeft, buildWarp, createStateTexture, createClothMaterial } = await import('./cloth.js');
+  const { buildWeft, buildWarp, createStateTexture, createClothMaterial, pluckUniforms, weaveUniform } = await import('./cloth.js');
   const { buildLoom, buildLights } = await import('./loom.js');
   const { buildKnots } = await import('./knots.js');
   const { createPicker } = await import('./picking.js');
@@ -112,28 +115,46 @@ async function startScene(model) {
   const knots = buildKnots(model);
   knots.meshes.forEach((m) => scene.add(m));
 
+  // The camera never turns. Turning the cloth added no information and cost the
+  // reader their bearings, so the view is locked perpendicular to the cloth and
+  // the only moves are pan and zoom. The angle limits pin the orbit to the axis
+  // even if something else writes a camera position.
   const controls = new OrbitControls(camera, canvas);
   Object.assign(controls, {
     enableDamping: true, dampingFactor: 0.08,
-    minPolarAngle: 0.96, maxPolarAngle: 1.75,
-    minAzimuthAngle: -0.61, maxAzimuthAngle: 0.61,
-    minDistance: 8, maxDistance: 130,
+    enableRotate: false,
+    minPolarAngle: Math.PI / 2, maxPolarAngle: Math.PI / 2,
+    // A hair either side of zero, not zero twice: OrbitControls only clamps the
+    // azimuth when the minimum is strictly below the maximum.
+    minAzimuthAngle: -1e-4, maxAzimuthAngle: 1e-4,
+    // The far limit has to clear the whole cloth on a 375px window, where the
+    // frustum is narrow and fitting 146 years across takes a long lens.
+    minDistance: 8, maxDistance: 260,
     enablePan: true, screenSpacePanning: true,
-    rotateSpeed: 0.45, zoomSpeed: 0.7
+    zoomSpeed: 0.7
   });
+  // A drag pans, with one finger as well as two. Without this a phone would
+  // have no way to move across the cloth at all.
+  controls.mouseButtons = {
+    LEFT: THREE.MOUSE.PAN, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN
+  };
+  controls.touches = { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_PAN };
 
   const clothBox = model.layout.bounds;
-  // The default framing shows the whole loom, including the posts and the loose
-  // strands that run past the right post. Those crossings are the point.
+  // The default framing shows the whole loom, including the loose strands that
+  // run past the right post. It stops just under the last row rather than at the
+  // foot of the frame: three units of bare wood is three units of empty black.
   const loomBox = {
     minX: -3.2, maxX: 79.0,
-    minY: Math.min(clothBox.minY, -30.2), maxY: 1.6
+    minY: clothBox.minY - 0.5, maxY: 1.6
   };
   const centre = boxCenter(loomBox);
   app.loomBox = loomBox;
   app.fitDistance = (box, margin) => fitDistance(box, margin, camera);
   const padX = (clothBox.maxX - clothBox.minX) * 0.1;
-  const padY = (clothBox.maxY - clothBox.minY) * 0.1;
+  // Vertical slack has to cover the offset the default framing applies to clear
+  // the control bars, so it is generous rather than a tenth of the cloth.
+  const padY = (clothBox.maxY - clothBox.minY) * 0.1 + 8;
 
   controls.addEventListener('change', () => {
     const t = controls.target;
@@ -151,11 +172,40 @@ async function startScene(model) {
   };
   app.three = three;
 
-  // Two framings. The reading window is the default because every row across a
-  // 146-year axis cannot be legible at once; the whole loom is one click away.
+  // The keep-out bands: the control bars at the top and the year rail at the
+  // foot. Type and cloth share one canvas, so the cloth is fitted into what is
+  // left between them rather than into the whole rectangle.
+  function keepOut() {
+    const r = canvas.getBoundingClientRect();
+    const chromeEl = document.getElementById('woven-chrome');
+    const railEl = document.getElementById('woven-yearrail');
+    const top = (chromeEl ? chromeEl.getBoundingClientRect().height : 88) + 10;
+    const bottom = (railEl ? railEl.getBoundingClientRect().height : 26) + 10;
+    const height = Math.max(1, Math.round(r.height));
+    return { width: Math.max(1, Math.round(r.width)), height, top, bottom };
+  }
+
+  // The default framing. Every one of the publications is on screen at once,
+  // whole, inside the free band — that is the only view in which the shape of
+  // the archive is legible. Reading the names is what zooming in is for.
   function wholeLoomFraming() {
-    const d = fitDistance(loomBox, 0.06, camera);
-    return { target: [centre[0], centre[1], 0], position: [centre[0], centre[1] + d * 0.12, d] };
+    const k = keepOut();
+    const freeH = Math.max(60, k.height - k.top - k.bottom);
+    const w = (loomBox.maxX - loomBox.minX) * 1.06;
+    const h = (loomBox.maxY - loomBox.minY) * 1.06;
+    const vFov = (camera.fov * Math.PI) / 180;
+    const hFov = 2 * Math.atan(Math.tan(vFov / 2) * camera.aspect);
+    // Fitting the height into the free band, not the canvas, costs exactly the
+    // ratio between them.
+    const dV = ((h / 2) / Math.tan(vFov / 2)) * (k.height / freeH);
+    const dH = (w / 2) / Math.tan(hFov / 2);
+    const d = Math.max(controls.minDistance, Math.min(controls.maxDistance, Math.max(dV, dH)));
+    const worldPerPx = (2 * Math.tan(vFov / 2) * d) / k.height;
+    // The centre of the cloth is put at the centre of the free band, which sits
+    // below the centre of the canvas by however much taller the bars are.
+    const offsetPx = (k.top + freeH / 2) - k.height / 2;
+    const ty = centre[1] + offsetPx * worldPerPx;
+    return { target: [centre[0], ty, 0], position: [centre[0], ty, d] };
   }
 
   function readingFraming(bandKey) {
@@ -168,18 +218,31 @@ async function startScene(model) {
     return {
       band: band.key,
       target: [Math.min(66, x0 + 9), mid, 0],
-      position: [Math.min(66, x0 + 9), mid + d * 0.12, d]
+      position: [Math.min(66, x0 + 9), mid, d]
     };
   }
 
   let readingBand = 'C';
-  function defaultFraming() { return readingFraming(readingBand); }
+  // Declared up here because the first framing is applied long before the era
+  // chip's own section, and applying a framing rewrites the chip.
+  let eraNowText = '';
+  function defaultFraming() { return wholeLoomFraming(); }
 
+  // A camera move already in flight would overwrite whatever this sets on the
+  // next frame, so applying a view cancels it. This is what stopped "reset the
+  // view" from restoring the zoom: the tween from the last selection won.
   function applyView(view) {
+    app.tween = null;
     controls.target.set(view.target[0], view.target[1], view.target[2] ?? 0);
     camera.position.set(view.position[0], view.position[1], view.position[2]);
     controls.update();
+    // A second pass, because the target clamp on the change event can move the
+    // target after the first one and leave the distance off by that much.
+    camera.position.set(controls.target.x, controls.target.y, view.position[2]);
+    controls.update();
     app.needsRender = true;
+    if (app.labels) app.labels.update();
+    updateEraNow();
   }
 
   app.defaultFraming = defaultFraming;
@@ -192,7 +255,7 @@ async function startScene(model) {
     };
     const to = {
       tx: target[0], ty: target[1],
-      px: target[0], py: target[1] + distance * 0.12, pz: distance
+      px: target[0], py: target[1], pz: distance
     };
     if (reduceMotion.matches || ms === 0) {
       applyView({ target: [to.tx, to.ty, 0], position: [to.px, to.py, to.pz] });
@@ -244,14 +307,23 @@ async function startScene(model) {
   const labels = createLabels(app, three, model);
   app.labels = labels;
 
-  window.addEventListener('resize', resize);
+  // Until the reader moves the camera themselves, a resize re-fits the default
+  // framing. Turning a phone would otherwise leave the cloth half off screen.
+  let userMoved = false;
+  controls.addEventListener('start', () => { userMoved = true; });
+
+  window.addEventListener('resize', () => {
+    resize();
+    if (!userMoved) applyView(defaultFraming());
+    else updateEraNow();
+  });
   resize();
+  labels.update();
   applyView(defaultFraming());
-  setEraNow();
   labels.update();
 
   // ---- picking, hover, selection ----
-  const pick = createPicker(model, camera, knots);
+  const pick = createPicker(model, camera, knots, controls);
   const tip = document.getElementById('woven-tip');
   let pending = null;
   let hoverTarget = null;
@@ -263,19 +335,45 @@ async function startScene(model) {
     pending = null; hoverTarget = null; tip.hidden = true;
     state.hoverId = null; writeHover(null); syncTwin(state); app.needsRender = true;
   });
-  // A rotate ends with a click on the canvas. Without this the reader turns the
-  // cloth and lands on a publication panel they never asked for, which on a
+  // A pan ends with a click on the canvas. Without this the reader drags across
+  // the cloth and lands on a publication panel they never asked for, which on a
   // phone covers the whole stage.
   let downAt = null;
-  canvas.addEventListener('pointerdown', (e) => { downAt = { x: e.clientX, y: e.clientY }; });
+  // A click event does not always carry a pointer type, so the type is taken
+  // from the press that produced it. Getting this wrong costs a finger the
+  // larger hit slab, which is the whole reason a tap ever lands.
+  const coarsePointer = window.matchMedia('(pointer: coarse)');
+  let downCoarse = coarsePointer.matches;
+  canvas.addEventListener('pointerdown', (e) => {
+    downAt = { x: e.clientX, y: e.clientY };
+    downCoarse = e.pointerType === 'touch' || e.pointerType === 'pen' || coarsePointer.matches;
+  });
   canvas.addEventListener('click', (e) => {
-    if (downAt && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) > 5) return;
+    if (downAt && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) > 8) return;
     const r = canvas.getBoundingClientRect();
-    const h = pick(e.clientX, e.clientY, r, e.pointerType === 'touch');
+    const h = pick(e.clientX, e.clientY, r, downCoarse || e.pointerType === 'touch');
     if (!h) return;
+    // The tooltip has done its job the moment a panel opens. Left up, it hangs
+    // over the cloth with no pointer under it and no way to dismiss it.
+    hideTip();
     if (h.kind === 'knot') openKnot(h.knot);
     else app.select(h.thread.id, {});
   });
+
+  function hideTip() {
+    tip.hidden = true;
+    hoverTarget = null;
+    pending = null;
+    if (state.hoverId != null) {
+      state.hoverId = null;
+      stateTex.clear(3, 0);
+      paintBase(null);
+      stateTex.commit();
+      syncTwin(state);
+      app.needsRender = true;
+    }
+  }
+  app.hideTip = hideTip;
 
   function processHover() {
     if (!pending) return;
@@ -285,6 +383,9 @@ async function startScene(model) {
     if (key !== hoverTarget) {
       hoverTarget = key;
       state.hoverId = h && h.kind === 'thread' ? h.thread.id : null;
+      // Only a mouse plucks on hover. A finger has no hover, and a stylus
+      // sweeping the cloth would set every thread ringing at once.
+      if (h && h.kind === 'thread' && canHover.matches && !pending.touch) pluck(h.thread);
       writeHover(h);
       syncTwin(state);
       app.needsRender = true;
@@ -301,17 +402,34 @@ async function startScene(model) {
     pending = null;
   }
 
+  // How far the rest of the cloth is pushed back. Capped: the subject has to
+  // stand out, but the cloth behind it has to stay a cloth. Dimmed to nothing is
+  // the same picture as one thread on a black field, which is not the picture.
+  const HOVER_DIM = 110;
+  const SEARCH_DIM = 130;
+  let searchMatches = null;
+
+  // One place writes the highlight and dim channels, from selection, hover, and
+  // the search field together. Tours and the ghost sequence own these channels
+  // while they run, so this stands aside for them.
+  function paintBase(h) {
+    if ((app.tour && app.tour.isPlaying) || (app.ghost && app.ghost.isPlaying)) return;
+    const hoverId = h && h.kind === 'thread' ? h.thread.id : null;
+    for (const t of model.threads) {
+      let dim = 0;
+      if (hoverId !== null) dim = t.id === hoverId ? 0 : HOVER_DIM;
+      else if (searchMatches) dim = searchMatches.has(t.id) ? 0 : SEARCH_DIM;
+      stateTex.set(t.threadIndex, 1, dim);
+      let hi = 0;
+      if (state.selectedId === t.id) hi = 255;
+      else if (searchMatches && searchMatches.has(t.id)) hi = 165;
+      stateTex.set(t.threadIndex, 0, hi);
+    }
+  }
+
   function writeHover(h) {
     stateTex.clear(3, 0);
-    // Hover isolates: everything that is not the hovered thread dims, so one
-    // thread can be read out of the whole cloth. Selection does not dim; only
-    // hover and tours do.
-    if (!(app.tour && app.tour.isPlaying) && !(app.ghost && app.ghost.isPlaying)) {
-      const dimAll = h && h.kind === 'thread';
-      for (const t of model.threads) {
-        stateTex.set(t.threadIndex, 1, dimAll && t.id !== h.thread.id ? 208 : 0);
-      }
-    }
+    paintBase(h);
     if (!h) { stateTex.commit(); return; }
     if (h.kind === 'thread') {
       const t = h.thread;
@@ -345,13 +463,76 @@ async function startScene(model) {
     parent.appendChild(s);
   }
 
+  // ---- pluck ----
+  // Picking a thread plucks it. The wave runs in the vertex shader off three
+  // uniforms, so a pluck adds no draw call and no CPU work per frame beyond
+  // writing its age. Under reduced motion the amplitude is zero and the
+  // highlight lands at once instead.
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  let pluckStart = -1;
+
+  function applyMotionPref() {
+    pluckUniforms.uPluckAmp.value = reduceMotion.matches ? 0 : 1;
+    if (reduceMotion.matches) { pluckStart = -1; pluckUniforms.uPluckAge.value = 99; }
+  }
+  applyMotionPref();
+  reduceMotion.addEventListener('change', () => { applyMotionPref(); app.needsRender = true; });
+
+  function pluck(t) {
+    if (!t || reduceMotion.matches) return;
+    const slots = model.layout.slots;
+    const above = slots[t.globalIndex - 1];
+    const below = slots[t.globalIndex + 1];
+    pluckUniforms.uPluckIdx.value.set(
+      t.threadIndex,
+      above ? above.threadIndex : -1,
+      below ? below.threadIndex : -1
+    );
+    // The ripple is sized in screen pixels, so a thread moves about ten pixels
+    // whatever the zoom. It is capped, because at the widest view ten pixels of
+    // travel would be three decades of rows.
+    const rect = canvas.getBoundingClientRect();
+    const dist = camera.position.distanceTo(controls.target);
+    const worldPerPx = (2 * Math.tan((camera.fov * Math.PI) / 360) * dist) / Math.max(1, rect.height);
+    pluckUniforms.uPluckScale.value = Math.max(0.5, Math.min(2.5, worldPerPx * 50));
+    pluckUniforms.uPluckAge.value = 0;
+    pluckStart = performance.now();
+    app.needsRender = true;
+  }
+  app.pluck = pluck;
+
+  // ---- the growing edge ----
+  // The cloth draws itself in as the reader moves right. Panning left never
+  // undoes it: once a year has been seen it stays drawn for the session. Nothing
+  // rides the edge — the reveal is the effect, and it carries no data of its own.
+  const CLOTH_MAX_X = 73;
+  let weaveMax = 0;
+
+  function updateWeave() {
+    const dist = camera.position.distanceTo(controls.target);
+    const halfW = Math.tan((camera.fov * Math.PI) / 360) * camera.aspect * dist;
+    const lead = controls.target.x + halfW * 0.88;
+    const want = Math.max(0, Math.min(1, lead / CLOTH_MAX_X));
+    if (want > weaveMax) weaveMax = want;
+    const busy = (app.tour && app.tour.isPlaying) || (app.ghost && app.ghost.isPlaying);
+    const cur = weaveUniform.value;
+    if (cur < weaveMax) {
+      // A tour or the ghost sequence drives the camera itself. There the cloth
+      // is already there before the camera arrives; nobody is doing the weaving.
+      const snap = busy || reduceMotion.matches;
+      const next = snap ? weaveMax : cur + (weaveMax - cur) * 0.12;
+      weaveUniform.value = weaveMax - next < 0.0006 ? weaveMax : next;
+      app.needsRender = true;
+    }
+  }
+
   app.select = async function select(id, opts) {
     const t = model.byId.get(id);
     if (!t) return;
     state.selectedId = id;
     state.scrollTwin = !!opts.fromTwin;
-    stateTex.clear(0, 0);
-    stateTex.set(t.threadIndex, 0, 255);
+    hideTip();
+    paintBase(null);
     stateTex.commit();
     app.needsRender = true;
     syncTwin(state);
@@ -361,6 +542,9 @@ async function startScene(model) {
       minY: t.y - 1.2, maxY: t.y + 1.2
     };
     await app.easeTo([(box.minX + box.maxX) / 2, t.y], fitDistance(box, 0.2, camera), 700);
+    // Struck after the camera lands, so the ripple is sized for the zoom the
+    // reader ends up at rather than the one they started from.
+    pluck(t);
     if (!opts.silent) panel.openPublication(t, model, { playStory: (s) => app.playStory(s) });
     announce(`${t.name}. ${t.city || 'city unrecorded'}. ${t.yearFounded ?? 'founding year unrecorded'}.`);
   };
@@ -373,7 +557,25 @@ async function startScene(model) {
   panel.initPanel(() => { app.needsRender = true; });
 
   // ---- top bar ----
-  document.getElementById('btn-reset').addEventListener('click', () => applyView(defaultFraming()));
+  // Reset means reset: the framing, the zoom, any camera move still running, the
+  // search, the tooltip, and the panels. Half a reset is a bug report.
+  function resetView() {
+    if (app.tour && app.tour.isPlaying) app.tour.exit();
+    if (app.ghost && app.ghost.isPlaying) app.ghost.exit();
+    panel.closePanel();
+    hideCards();
+    clearSearch();
+    hideTip();
+    state.selectedId = null;
+    paintBase(null);
+    stateTex.clear(3, 0);
+    stateTex.commit();
+    syncTwin(state);
+    userMoved = false;
+    applyView(defaultFraming());
+    announce(`The whole loom. ${model.counts.total} publications, 1880 to 2026.`);
+  }
+  document.getElementById('btn-reset').addEventListener('click', resetView);
   document.getElementById('btn-whole').addEventListener('click', () => {
     applyView(wholeLoomFraming());
     announce(`The whole loom. ${model.counts.total} publications, 1880 to 2026.`);
@@ -381,13 +583,46 @@ async function startScene(model) {
   document.getElementById('btn-era-prev').addEventListener('click', () => stepReadingBand(-1));
   document.getElementById('btn-era-next').addEventListener('click', () => stepReadingBand(1));
 
-  // The era label is written from the band the reader is on. Nothing about the
-  // counts is typed into the page; the data says how many.
-  function setEraNow() {
-    const band = model.bands.find((b) => b.key === readingBand);
-    if (!band) return null;
-    document.getElementById('woven-era-now').textContent = `${band.label} · ${band.count}`;
-    return band;
+  // Which decades are actually on screen, top to bottom, measured against the
+  // free band between the control bars and the year rail.
+  function visibleBands() {
+    const k = keepOut();
+    const dist = camera.position.distanceTo(controls.target);
+    const worldPerPx = (2 * Math.tan((camera.fov * Math.PI) / 360) * dist) / k.height;
+    const yTop = controls.target.y + (k.height / 2 - k.top) * worldPerPx;
+    const yBot = controls.target.y - (k.height / 2 - k.bottom) * worldPerPx;
+    const live = model.bands.filter((b) => b.count);
+    const seen = live.filter((b) => b.top >= yBot && b.top - b.height <= yTop);
+    if (seen.length) return seen;
+    // Between two bands: report the nearest one rather than nothing.
+    const mid = controls.target.y;
+    let best = live[0];
+    for (const b of live) {
+      const c = b.top - b.height / 2;
+      if (Math.abs(c - mid) < Math.abs(best.top - best.height / 2 - mid)) best = b;
+    }
+    return [best];
+  }
+
+  // The chip says what the reader is looking at, so it is written from the
+  // camera, not from the last button anyone pressed. Nothing about the counts is
+  // typed into the page; the data says how many.
+  function updateEraNow() {
+    const seen = visibleBands();
+    const count = seen.reduce((s, b) => s + b.count, 0);
+    const dated = seen.filter((b) => b.from !== null);
+    let label;
+    if (!dated.length) label = seen[0].label;
+    else if (dated.length === seen.length && dated.length === 1) label = dated[0].label;
+    else label = `${dated[0].from} to ${dated[dated.length - 1].to}`;
+    if (seen.some((b) => b.from === null) && dated.length) label += ' and undated';
+    const text = `${label} · ${count}`;
+    // The reading band follows the view, so "earlier" and "later" step from
+    // where the reader is rather than from where they last were.
+    readingBand = seen[0].key;
+    if (text === eraNowText) return;
+    eraNowText = text;
+    document.getElementById('woven-era-now').textContent = text;
   }
 
   function stepReadingBand(d) {
@@ -396,15 +631,109 @@ async function startScene(model) {
     i = Math.min(keys.length - 1, Math.max(0, i + d));
     readingBand = keys[i];
     applyView(readingFraming(readingBand));
-    const band = setEraNow();
+    const band = model.bands.find((b) => b.key === readingBand);
     announce(`${band.label}. ${band.count} publications.`);
   }
   document.getElementById('btn-help').addEventListener('click', toggleHelp);
   document.getElementById('btn-ghost').addEventListener('click', () => app.showGhost());
-  document.getElementById('btn-tours').addEventListener('click', () => {
-    document.getElementById('woven-twin-tours').scrollIntoView({ block: 'start' });
-    const first = document.querySelector('#woven-twin-tours .t-play');
-    if (first) first.focus();
+
+  // ---- guided threads picker ----
+  // This used to send the reader to the list far below the stage. Scrolling
+  // eight thousand pixels away from the thing you just clicked reads as a crash,
+  // so the picker opens over the loom and the document never moves.
+  const tourPicker = document.getElementById('woven-tourpicker');
+  const btnTours = document.getElementById('btn-tours');
+
+  function renderTourPicker() {
+    tourPicker.innerHTML = `<div class="inner">
+      <h3>Guided threads</h3>
+      <p>Each one walks the loom through a run of documented events, stopping at the evidence.</p>
+      <ul>${model.tours.map((t) => `<li>
+        <span class="tp-title">${escapeHtml(t.title)}</span>
+        <span class="tp-meta">${escapeHtml(t.era)} · ${t.stops.length} stop${t.stops.length === 1 ? '' : 's'}${t.strength === 'weak' ? ' · thinly sourced' : ''}</span>
+        <button type="button" class="woven-btn" data-play="${escapeHtml(t.id)}">Play this thread</button>
+      </li>`).join('')}</ul>
+      <p><button type="button" class="woven-btn" data-close>Close</button></p>`;
+    tourPicker.querySelectorAll('[data-play]').forEach((b) => {
+      b.addEventListener('click', () => {
+        closeTourPicker();
+        app.playStory(b.dataset.play);
+      });
+    });
+    tourPicker.querySelector('[data-close]').addEventListener('click', closeTourPicker);
+  }
+
+  function closeTourPicker() {
+    tourPicker.hidden = true;
+    btnTours.setAttribute('aria-expanded', 'false');
+    btnTours.focus({ preventScroll: true });
+  }
+
+  btnTours.addEventListener('click', () => {
+    if (!tourPicker.hidden) { closeTourPicker(); return; }
+    if (!tourPicker.innerHTML) renderTourPicker();
+    hideCards();
+    tourPicker.hidden = false;
+    btnTours.setAttribute('aria-expanded', 'true');
+    const first = tourPicker.querySelector('[data-play]');
+    if (first) first.focus({ preventScroll: true });
+  });
+
+  // ---- search ----
+  // A contains match over the names the model already holds. Typing lights the
+  // matches and pushes the rest back; enter goes to the best one.
+  const searchInput = document.getElementById('woven-search');
+  const searchCount = document.getElementById('woven-search-count');
+  const searchForm = document.getElementById('woven-searchform');
+
+  function matchesFor(q) {
+    const needle = q.trim().toLowerCase();
+    if (needle.length < 2) return null;
+    return model.threads.filter((t) =>
+      String(t.name || '').toLowerCase().includes(needle) ||
+      String(t.alternateName || '').toLowerCase().includes(needle) ||
+      String(t.city || '').toLowerCase().includes(needle));
+  }
+
+  // Best is the shortest name that starts with what was typed, else the shortest
+  // name that contains it. No scoring anybody has to trust.
+  function bestMatch(list, q) {
+    const needle = q.trim().toLowerCase();
+    const starts = list.filter((t) => String(t.name || '').toLowerCase().startsWith(needle));
+    const pool = starts.length ? starts : list;
+    return pool.slice().sort((a, b) => a.name.length - b.name.length || a.name.localeCompare(b.name))[0];
+  }
+
+  function runSearch() {
+    const q = searchInput.value;
+    const list = matchesFor(q);
+    searchMatches = list && list.length ? new Set(list.map((t) => t.id)) : null;
+    if (!list) searchCount.textContent = '';
+    else if (!list.length) searchCount.textContent = 'no match';
+    else searchCount.textContent = `${list.length} found`;
+    stateTex.clear(3, 0);
+    paintBase(null);
+    stateTex.commit();
+    app.needsRender = true;
+    if (app.labels) app.labels.update();
+  }
+
+  function clearSearch() {
+    if (!searchInput) return;
+    searchInput.value = '';
+    searchMatches = null;
+    searchCount.textContent = '';
+  }
+
+  searchInput.addEventListener('input', runSearch);
+  searchInput.addEventListener('search', runSearch);
+  searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const list = matchesFor(searchInput.value);
+    if (!list || !list.length) { announce('No publication matches that.'); return; }
+    const t = bestMatch(list, searchInput.value);
+    app.select(t.id, { silent: true });
+    announce(`${t.name}. ${t.city || 'city unrecorded'}. ${list.length} match${list.length === 1 ? '' : 'es'}.`);
   });
 
   // ---- fullscreen ----
@@ -463,7 +792,8 @@ async function startScene(model) {
         break;
       case 'Escape':
         if (!panel.closePanel()) {
-          if (app.tour && app.tour.isPlaying) app.tour.exit();
+          if (!document.getElementById('woven-tourpicker').hidden) closeTourPicker();
+          else if (app.tour && app.tour.isPlaying) app.tour.exit();
           else if (app.ghost && app.ghost.isPlaying) app.ghost.exit();
           else hideCards();
         }
@@ -472,7 +802,7 @@ async function startScene(model) {
       case 'g': case 'G': app.showGhost(); break;
       case '+': case '=': dolly(1 / 1.3); break;
       case '-': case '_': dolly(1.3); break;
-      case '0': applyView(defaultFraming()); break;
+      case '0': resetView(); break;
       case '?': toggleHelp(); break;
       default: handled = false;
     }
@@ -579,6 +909,13 @@ async function startScene(model) {
     requestAnimationFrame(frame);
     processHover();
     if (app.tween) app.tween();
+    if (pluckStart >= 0) {
+      const age = (now - pluckStart) / 1000;
+      pluckUniforms.uPluckAge.value = age;
+      if (age > 1.25) { pluckStart = -1; pluckUniforms.uPluckAge.value = 99; }
+      app.needsRender = true;
+    }
+    updateWeave(now);
     const dist = camera.position.distanceTo(controls.target);
     const wantFull = dist < 45 && !app.forceCoarseWarp;
     if (warpFull.visible !== wantFull) {
@@ -592,6 +929,10 @@ async function startScene(model) {
     if (!app.needsRender && !active) { last = now; return; }
     renderer.render(scene, camera);
     if (app.labels) app.labels.update();
+    // The decade chip is written from the camera, so it is refreshed on every
+    // frame that actually changed something. It writes to the DOM only when the
+    // text differs.
+    updateEraNow();
     app.needsRender = false;
     sample(now - last);
     last = now;
@@ -613,19 +954,35 @@ async function startScene(model) {
   if (params.get('story')) app.playStory(params.get('story'));
   if (params.get('ghost') === '1') app.showGhost();
 
-  window.__woven = { app, renderer, scene, camera, model, controls };
+  // Debug handle. Nothing on the page reads it; it exists so the loom can be
+  // driven and measured from outside without a second copy of the maths.
+  window.__woven = { app, renderer, scene, camera, model, controls, THREE, pick };
 }
 
 function hideCards() {
   document.getElementById('woven-help-card').hidden = true;
   document.getElementById('woven-ghostcard').hidden = true;
+  const picker = document.getElementById('woven-tourpicker');
+  if (picker) picker.hidden = true;
 }
 
+// The button says "about this loom", so the panel answers that first and gives
+// the controls second. Instructions only; nothing here restates the metaphor.
 function toggleHelp() {
   const card = document.getElementById('woven-help-card');
   if (!card.innerHTML) {
     card.innerHTML = `<div class="inner">
-      <h3>Moving through the loom</h3>
+      <h3>About this loom</h3>
+      <p>This is every Black-owned and Black-focused publication we have found in New Jersey, drawn on one axis of time. Left to right is 1880 to 2026. Each horizontal thread is one publication, running from the year it was founded to the year it stopped, and the rows are grouped by the decade each paper began. A thicker thread means more surviving material we can show you. A faint, frayed one means the paper survives only as a line in a catalog.</p>
+      <h4>By pointer</h4>
+      <dl>
+        <dt>Drag</dt><dd>move across the cloth, left, right, up, or down</dd>
+        <dt>Scroll or pinch</dt><dd>zoom in to read names, out to see the whole span</dd>
+        <dt>Point at a thread</dt><dd>read its name, city, and dates</dd>
+        <dt>Click a thread</dt><dd>open that publication</dd>
+        <dt>Search field</dt><dd>type a name, press enter to go to it</dd>
+      </dl>
+      <h4>By keyboard</h4>
       <dl>
         <dt>Up and down</dt><dd>move between publications</dd>
         <dt>Left and right</dt><dd>move between events on this publication</dd>
@@ -639,5 +996,5 @@ function toggleHelp() {
     card.querySelector('[data-close]').addEventListener('click', () => { card.hidden = true; });
   }
   card.hidden = !card.hidden;
-  if (!card.hidden) card.querySelector('[data-close]').focus();
+  if (!card.hidden) card.querySelector('[data-close]').focus({ preventScroll: true });
 }

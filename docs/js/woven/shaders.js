@@ -11,6 +11,15 @@ attribute vec3 aColor;
 
 uniform sampler2D uState;
 
+// One pluck at a time. x is the picked thread, y and z are the two threads
+// beside it, all as state-texture indices. A negative index matches nothing.
+uniform vec3 uPluckIdx;
+uniform float uPluckAge;   // seconds since the pluck
+uniform float uPluckAmp;   // 0 under reduced motion
+// World units per screen pixel at the current camera distance. The ripple is
+// sized in pixels, so it stays as visible far out as it is close in.
+uniform float uPluckScale;
+
 varying float vRibbonV;
 varying float vYearNorm;
 varying float vFlags;
@@ -18,6 +27,16 @@ varying float vFraySeed;
 varying float vRamp;
 varying vec3 vColor;
 varying vec4 vState;
+
+// Amplitude for this vertex: full on the picked thread, a fifth on each
+// neighbour, nothing anywhere else.
+float pluckWeight(float idx) {
+  float w = 0.0;
+  w += step(abs(idx - uPluckIdx.x), 0.25) * 1.0;
+  w += step(abs(idx - uPluckIdx.y), 0.25) * 0.2;
+  w += step(abs(idx - uPluckIdx.z), 0.25) * 0.2;
+  return w;
+}
 
 void main() {
   vRibbonV = aRibbonV;
@@ -27,7 +46,21 @@ void main() {
   vRamp = aRamp;
   vColor = aColor;
   vState = texture2D(uState, vec2((aThreadIndex + 0.5) / 256.0, 0.5));
-  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+
+  vec3 p = position;
+  float w = uPluckAmp * pluckWeight(aThreadIndex);
+  if (w > 0.0 && uPluckAge < 1.25) {
+    // A struck string: a travelling wave, pinned at both ends, decaying to
+    // nothing in about 1.2 seconds. No CPU physics, one uniform set per pluck.
+    float envelope = exp(-uPluckAge * 2.6) * (1.0 - smoothstep(1.05, 1.25, uPluckAge));
+    float shape = sin(vRamp * 3.14159265);
+    float wave = sin(vRamp * 18.85 - uPluckAge * 27.0);
+    float d = w * envelope * shape * wave;
+    p.y += d * 0.20 * uPluckScale;
+    p.z += d * 0.10 * uPluckScale;
+  }
+
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
 }
 `;
 
@@ -77,6 +110,11 @@ void main() {
   vec3 col = vColor * shade;
   float alpha = revealFade;
 
+  // Raking light: the cloth catches the lamp just behind the growing edge, so
+  // the reader can see how far it has been drawn in. One exp, no branches.
+  float rake = exp(-max(0.0, uWeaveProgress - vYearNorm) * 42.0);
+  col += col * rake * 0.85;
+
   float ghost = mod(vFlags, 2.0);
   float unknownEnd = mod(floor(vFlags / 4.0), 2.0);
 
@@ -90,8 +128,10 @@ void main() {
     alpha *= mix(1.0, 0.55, smoothstep(0.75, 1.0, vRamp));
   }
 
-  col = mix(col, uDimColor, vState.g);
-  alpha *= mix(1.0, 0.15, vState.g);
+  // Dimming is capped. A dimmed thread must stay a visible thread, so it never
+  // reaches the dim colour outright and never falls below a sixth of its alpha.
+  col = mix(col, uDimColor, vState.g * 0.85);
+  alpha *= mix(1.0, 0.18, vState.g);
   col = mix(col, uHighlightColor, vState.r);
 
   gl_FragColor = vec4(col, alpha);

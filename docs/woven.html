@@ -87,7 +87,7 @@
                 <img src="njblackpress-icon.png" alt="" class="w-8 h-8">
                 <span class="font-display font-bold text-xl tracking-wide group-hover:text-stain transition-colors">NJ Black Press</span>
             </a>
-            <ul class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
+            <ul class="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-widest">
                 <li><a href="index.html#featured" class="hover:text-stain transition-colors">Historic</a></li>
                 <li><a href="index.html#timeline" class="hover:text-stain transition-colors">Timeline</a></li>
                 <li><a href="archive.html" class="hover:text-stain transition-colors">Archive</a></li>
@@ -95,16 +95,38 @@
                 <li><a href="era.html" class="hover:text-stain transition-colors">Eras</a></li>
                 <li><a href="wiki/index.html" class="hover:text-stain transition-colors">Wiki</a></li>
                 <li><a href="woven.html" aria-current="page" class="text-stain">Woven</a></li>
+                <li><a href="index.html#about" class="hover:text-stain transition-colors">About</a></li>
             </ul>
+
+            <button id="mobile-menu-btn" class="md:hidden p-[10px] text-linen-100 hover:text-stain"
+                    aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="w-6 h-6" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
         </div>
     </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-walnut-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
+        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-linen-300 hover:text-stain" aria-label="Close menu">
+            <svg class="w-8 h-8" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <ul class="space-y-6 text-center font-display text-2xl font-medium tracking-wide">
+            <li><a href="index.html#featured" class="inline-block py-2 hover:text-stain transition-colors">Historic</a></li>
+            <li><a href="index.html#timeline" class="inline-block py-2 hover:text-stain transition-colors">Timeline</a></li>
+            <li><a href="archive.html" class="inline-block py-2 hover:text-stain transition-colors">Archive</a></li>
+            <li><a href="story.html" class="inline-block py-2 hover:text-stain transition-colors">Stories</a></li>
+            <li><a href="era.html" class="inline-block py-2 hover:text-stain transition-colors">Eras</a></li>
+            <li><a href="wiki/index.html" class="inline-block py-2 hover:text-stain transition-colors">Wiki</a></li>
+            <li><a href="woven.html" aria-current="page" class="inline-block py-2 text-stain">Woven</a></li>
+            <li><a href="index.html#about" class="inline-block py-2 hover:text-stain transition-colors">About</a></li>
+        </ul>
+    </div>
 
     <main class="pt-20">
         <div id="woven-firstscreen">
         <section id="woven-intro" class="max-w-[1400px] mx-auto w-full px-4 md:px-8 py-5 md:py-6">
             <div class="intro-grid">
                 <div class="intro-head">
-                    <h1 class="font-display font-extrabold leading-[1.05] text-linen-50" style="font-size: clamp(1.6rem, 2.9vw, 2.55rem);">A hundred and forty-six years, woven once</h1>
+                    <h1 class="font-display font-extrabold leading-[1.05] text-linen-50" style="font-size: clamp(1.35rem, 2.9vw, 2.55rem);">A hundred and forty-six years, woven once</h1>
                     <hr class="rail-wood mt-4 max-w-md">
                 </div>
                 <p class="text-base leading-relaxed text-linen-200">Every cross thread here is one publication, starting the year it was founded and ending the year it stopped. The thicker the thread, the more of that paper we have actually found and can show you. The threads that run past the edge of the loom belong to the <span data-count="still">…</span> papers still publishing today. The thin, fraying ones belong to the <span data-count="ghost">…</span> we know only from a line in a librarian's catalog.</p>
@@ -117,20 +139,29 @@
 
             <div id="woven-chrome">
             <div id="woven-topbar">
-                <button type="button" class="woven-btn" id="btn-help">About this loom</button>
-                <button type="button" class="woven-btn" id="btn-tours">Guided threads</button>
-                <button type="button" class="woven-btn" id="btn-ghost">Show what did not survive</button>
-                <button type="button" class="woven-btn" id="btn-reset">Reset the view</button>
-                <button type="button" class="woven-btn" id="btn-fullscreen" aria-label="Enter fullscreen" hidden>Fullscreen</button>
-                <a class="woven-btn" href="#woven-twin">Read the archive as a list</a>
+                <div class="bar-scroll">
+                    <button type="button" class="woven-btn" id="btn-help">About this loom</button>
+                    <button type="button" class="woven-btn" id="btn-tours" aria-expanded="false" aria-controls="woven-tourpicker">Guided threads</button>
+                    <button type="button" class="woven-btn" id="btn-ghost">Show what did not survive</button>
+                    <button type="button" class="woven-btn" id="btn-reset">Reset the view</button>
+                    <button type="button" class="woven-btn" id="btn-fullscreen" aria-label="Enter fullscreen" hidden>Fullscreen</button>
+                    <a class="woven-btn" href="#woven-twin">Read the archive as a list</a>
+                </div>
+                <form id="woven-searchform" role="search" autocomplete="off">
+                    <label class="sr-only" for="woven-search">Find a publication</label>
+                    <input id="woven-search" type="search" placeholder="Find a publication" enterkeyhint="go">
+                    <span id="woven-search-count" role="status"></span>
+                </form>
             </div>
 
             <div id="woven-eranav">
-                <button type="button" class="woven-btn" id="btn-era-prev">Earlier decades</button>
-                <span id="woven-era-now"></span>
-                <button type="button" class="woven-btn" id="btn-era-next">Later decades</button>
-                <button type="button" class="woven-btn" id="btn-whole">Zoom out to all <span data-count="total">…</span></button>
-                <span id="woven-eranav-note">You start close in on one decade so the names can be read. Zoom out to see the whole cloth at once.</span>
+                <div class="bar-scroll">
+                    <button type="button" class="woven-btn" id="btn-era-prev">Earlier decades</button>
+                    <span id="woven-era-now"></span>
+                    <button type="button" class="woven-btn" id="btn-era-next">Later decades</button>
+                    <button type="button" class="woven-btn" id="btn-whole">Show all <span data-count="total">…</span></button>
+                </div>
+                <span id="woven-eranav-note">You start zoomed out on the whole cloth. Zoom in to read the names.</span>
             </div>
             </div>
 
@@ -143,6 +174,7 @@
             <div id="woven-ghostnames" hidden></div>
             <div id="woven-ghostcard" hidden></div>
             <div id="woven-help-card" hidden></div>
+            <div id="woven-tourpicker" role="dialog" aria-modal="false" aria-label="Guided threads" hidden></div>
 
             <aside id="woven-panel" role="dialog" aria-modal="false" aria-labelledby="woven-panel-title" hidden></aside>
 
@@ -181,6 +213,28 @@
     </main>
 
     <script type="module" src="js/woven/main.js"></script>
-    <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+    <script>
+        (function () {
+            const btn = document.getElementById('mobile-menu-btn');
+            const close = document.getElementById('mobile-menu-close');
+            const menu = document.getElementById('mobile-menu');
+
+            function setOpen(open) {
+                menu.classList.toggle('translate-x-full', !open);
+                document.body.classList.toggle('overflow-hidden', open);
+                btn.setAttribute('aria-expanded', String(open));
+                if (open) close.focus(); else btn.focus();
+            }
+
+            btn.addEventListener('click', () => setOpen(menu.classList.contains('translate-x-full')));
+            close.addEventListener('click', () => setOpen(false));
+            menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !menu.classList.contains('translate-x-full')) setOpen(false);
+            });
+
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        })();
+    </script>
 </body>
 </html>

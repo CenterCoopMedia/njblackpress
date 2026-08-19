@@ -103,10 +103,17 @@ export function createGhost(app, three, model) {
     timer = setTimeout(runGroups, GROUP_MS);
   }
 
+  // The list keeps a fixed head with a stop control. A sequence that plays itself
+  // must always show the reader how to end it, on the same screen, at all times.
   function renderNames(list, all) {
-    namesEl.innerHTML = `<ol>${list.map((t) => `<li><span class="g-name">${esc(t.name)}</span>
+    namesEl.innerHTML = `<div class="g-head"><span>What did not survive</span>
+      <button type="button" class="woven-btn" data-act="stop">Stop</button></div>
+      <div class="g-body"></div>`;
+    namesEl.querySelector('[data-act="stop"]').addEventListener('click', exit);
+    namesEl.querySelector('.g-body').innerHTML =
+      `<ol>${list.map((t) => `<li><span class="g-name">${esc(t.name)}</span>
       <span class="g-place">${esc(t.city || 'city unrecorded')}${t.yearFounded ? ` · ${t.yearFounded}` : ''}</span></li>`).join('')}</ol>`
-      + (all ? '' : `<p class="g-place">${(groupIndex + 1) * GROUP} of ${ghosts.length}</p>`);
+      + (all ? '' : `<p class="g-place">${Math.min((groupIndex + 1) * GROUP, ghosts.length)} of ${ghosts.length}</p>`);
   }
 
   function showCard(which) {

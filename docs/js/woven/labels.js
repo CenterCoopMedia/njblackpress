@@ -32,6 +32,7 @@ export function createLabels(app, three, model) {
       <li><span class="lg-swatch lg-knot"></span>Knot — a documented event, ${model.counts.events} in all</li>
     </ul>
     <p class="lg-rows">Rows are grouped by the decade each paper began. Names appear when you are close enough to read them.</p>
+    <p class="lg-rows">Drag to move across the cloth. Scroll or pinch to zoom. Type a name in the search field to find one title.</p>
     <button type="button" class="woven-btn lg-toggle" aria-expanded="true">Hide the key</button>`;
   stage.appendChild(legend);
 
@@ -78,14 +79,23 @@ export function createLabels(app, three, model) {
   // is read, never assumed.
   let guard = { top: 92, bottom: 44 };
 
+  // The bars wrap and the tour bar comes and goes, so every keep-out band is
+  // measured, never assumed. The measurements are also published on the stage as
+  // custom properties: the cards, the ghost list, and the notice are positioned
+  // from them in CSS, so nothing is ever printed under a control.
   function measureGuard() {
     const chrome = document.getElementById('woven-chrome');
     const rail = document.getElementById('woven-yearrail');
-    guard = {
-      top: (chrome ? chrome.getBoundingClientRect().height : 88) + 6,
-      bottom: (rail ? rail.getBoundingClientRect().height : 26) + 18
-    };
+    const tourbar = document.getElementById('woven-tourbar');
+    const chromeH = chrome ? chrome.getBoundingClientRect().height : 88;
+    const railH = rail ? rail.getBoundingClientRect().height : 26;
+    const tourH = tourbar && !tourbar.hidden ? tourbar.getBoundingClientRect().height : 0;
+    stage.style.setProperty('--woven-chrome-h', `${Math.round(chromeH)}px`);
+    stage.style.setProperty('--woven-rail-h', `${Math.round(railH)}px`);
+    stage.style.setProperty('--woven-tourbar-h', `${Math.round(tourH)}px`);
+    guard = { top: chromeH + 6, bottom: Math.max(railH, tourH) + 18 };
   }
+  app.measureChrome = measureGuard;
 
   function project(x, y) {
     v.set(x, y, 0).project(three.camera);
@@ -125,11 +135,17 @@ export function createLabels(app, three, model) {
 
   function drawEras() {
     const frag = document.createDocumentFragment();
+    // Zoomed right out the bands are closer together than a marker is tall, so
+    // markers are dropped rather than stacked on top of each other. A marker
+    // printed through another marker names neither decade.
+    const placedTops = [];
     for (const band of model.bands) {
       if (!band.count) continue;
       const mid = band.top - band.height / 2;
       const p = project(three.controls.target.x, mid);
       if (p.y < guard.top || p.y > rect.height - guard.bottom) continue;
+      if (placedTops.some((q) => Math.abs(q - p.y) < MIN_ROW_PX)) continue;
+      placedTops.push(p.y);
       const el = document.createElement('span');
       el.className = 'era-marker';
       el.textContent = `${band.label} · ${band.count}`;

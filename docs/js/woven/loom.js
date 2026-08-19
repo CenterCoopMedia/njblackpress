@@ -65,6 +65,9 @@ export function buildLoom(model) {
   return group;
 }
 
+// There was a shuttle mesh here. It encoded no data — it was a mascot — so it is
+// gone. The cloth still reveals itself from left to right; nothing rides it.
+
 export function buildLights() {
   const g = new THREE.Group();
   g.add(new THREE.HemisphereLight(0xa89179, 0x0b0806, 0.55));
