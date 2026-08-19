@@ -19,7 +19,7 @@ export function buildTwin(m, callbacks) {
 
   const c = m.counts;
   root.innerHTML = `
-    <h2 id="woven-twin-h">The weave, as a list</h2>
+    <h2 id="woven-twin-h">The loom, as a list</h2>
     <p id="woven-help">${c.total} publications, 1880 to 2026, grouped by the decade each one began. Open any title for its evidence and its events.</p>
     <ol class="era-bands">${m.bands.filter((b) => b.count).map(bandHTML).join('')}</ol>
     <section id="woven-twin-tours" aria-labelledby="tours-h">

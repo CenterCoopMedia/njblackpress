@@ -125,7 +125,7 @@ export function createGhost(app, three, model) {
       cardEl.innerHTML = `<div class="inner">
         <h3>That is what the record lost.</h3>
         <p>It is not the same as what happened.</p>
-        <p><button type="button" class="woven-btn" data-act="back">Return to the weave</button>
+        <p><button type="button" class="woven-btn" data-act="back">Return to the loom</button>
            <button type="button" class="woven-btn" data-act="list">Read the list again</button></p>
       </div>`;
       cardEl.hidden = false;

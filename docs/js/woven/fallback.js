@@ -2,7 +2,7 @@
 
 import { promoteTwin, announce, syncTwin } from './twin.js';
 
-const NO_WEBGL = 'Your browser cannot draw the weave, so here it is as a list.';
+const NO_WEBGL = 'Your browser cannot draw the loom, so here it is as a list.';
 const CONTEXT_LOST = 'The drawing stopped. Here is the same archive as a list.';
 
 export function startFallback(model, reason) {

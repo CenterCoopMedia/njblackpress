@@ -407,6 +407,36 @@ async function startScene(model) {
     if (first) first.focus();
   });
 
+  // ---- fullscreen ----
+  // The stage holds the canvas, the chrome, the key dock, and every panel, so
+  // fullscreening the stage keeps all of them usable instead of leaving them
+  // behind as siblings.
+  const btnFullscreen = document.getElementById('btn-fullscreen');
+  if (document.fullscreenEnabled || document.webkitFullscreenEnabled) {
+    btnFullscreen.hidden = false;
+    btnFullscreen.addEventListener('click', () => {
+      const fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+      if (fsEl) {
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      } else if (stage.requestFullscreen) {
+        stage.requestFullscreen();
+      } else if (stage.webkitRequestFullscreen) {
+        stage.webkitRequestFullscreen();
+      }
+    });
+    const onFullscreenChange = () => {
+      const isFull = (document.fullscreenElement || document.webkitFullscreenElement) === stage;
+      btnFullscreen.textContent = isFull ? 'Exit fullscreen' : 'Fullscreen';
+      btnFullscreen.setAttribute('aria-label', isFull ? 'Exit fullscreen' : 'Enter fullscreen');
+      // Escape exits fullscreen natively; this just keeps the renderer in sync
+      // with the size change that follows.
+      resize();
+    };
+    document.addEventListener('fullscreenchange', onFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', onFullscreenChange);
+  }
+
   // ---- keyboard ----
   canvas.addEventListener('keydown', onKey);
 
@@ -595,7 +625,7 @@ function toggleHelp() {
   const card = document.getElementById('woven-help-card');
   if (!card.innerHTML) {
     card.innerHTML = `<div class="inner">
-      <h3>Moving through the weave</h3>
+      <h3>Moving through the loom</h3>
       <dl>
         <dt>Up and down</dt><dd>move between publications</dd>
         <dt>Left and right</dt><dd>move between events on this publication</dd>

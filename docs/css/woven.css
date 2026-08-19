@@ -64,6 +64,11 @@ body.twin-primary #woven-firstscreen { min-height: 0; }
 #woven-stage { position: relative; flex: 1 1 auto; min-height: 440px; background: var(--walnut-950); border-top: 1px solid var(--walnut-600); border-bottom: 1px solid var(--walnut-600); }
 body.twin-primary #woven-stage { display: none; }
 
+/* Fullscreen renders the stage against the OS's black default backdrop unless
+   given its own background, so the walnut tone carries through instead. */
+#woven-stage:fullscreen { background: var(--walnut-900); width: 100%; height: 100%; }
+#woven-stage:-webkit-full-screen { background: var(--walnut-900); width: 100%; height: 100%; }
+
 /* Absolutely positioned so the drawing-buffer size can never feed back into
    page layout through the canvas's intrinsic aspect ratio. */
 #woven-canvas { display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
