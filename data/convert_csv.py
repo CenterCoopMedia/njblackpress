@@ -1,6 +1,30 @@
+"""Issue #35: Notion CSV -> publications.json, with evidence preserved.
+
+Pipeline: Notion -> CSV export (publications.csv) -> this script -> publications.json
+  -> add_evidence.py (re-run automatically below) -> docs/data/publications.json
+
+A fresh Notion export has no evidence data, so after building publications.json
+from the CSV this script re-runs add_evidence.py's logic to rebuild the
+per-publication "evidence" array from data/research/source-catalog.json and
+data/research/rights/rights-manifest.json, then copies the result to
+docs/data/publications.json. That keeps evidence in sync with publications by
+id instead of relying on hand-editing or copying old evidence forward.
+
+This script does NOT read or write data/events.json, data/stories.json, or
+their docs/data/ copies. Those are built separately by
+data/build_site_events_stories.py from data/research/editorial/*.json and are
+untouched by a CSV re-export.
+"""
+
 import csv
 import json
 import re
+import shutil
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import add_evidence  # noqa: E402  (local import, must follow sys.path insert)
 
 def parse_year(year_str):
     """Extract year as integer from various formats."""
@@ -172,3 +196,8 @@ with open('publications.json', 'w', encoding='utf-8') as f:
 print(f"Generated publications.json with {len(publications)} publications")
 print(f"Active: {active_count}, Ceased: {ceased_count}")
 print(f"Cities: {len(cities_list)}, Decades: {len(decades_list)}, Formats: {len(formats_list)}")
+
+# Re-attach the evidence array (issue #35): a fresh CSV export has no
+# evidence data, so rebuild it from the source catalog + rights manifest
+# and copy the result to docs/data/publications.json in one step.
+add_evidence.main()
