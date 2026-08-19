@@ -333,22 +333,18 @@
 
     function renderGridView(publications) {
         elements.resultsGrid.innerHTML = publications.map((pub, index) => {
-            const isActive = pub.isActive !== false && !pub.yearCeased;
-            const statusClass = isActive ? 'text-accent border-accent' : 'text-paper-300 border-paper-300';
-            const statusText = isActive ? 'ACTIVE' : 'ARCHIVED';
             const years = formatYears(pub);
             const oneLiner = getOneLiner(pub);
             const tags = pub.tags ? pub.tags.slice(0, 3) : [];
 
             return `
                 <article class="catalog-card bg-ink-800 border border-white/10 hover:border-accent transition-all p-6 fade-in" style="animation-delay: ${Math.min(index * 30, 300)}ms">
-                    <header class="flex justify-between items-start mb-3">
-                        <span class="font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 border ${statusClass}">${statusText}</span>
+                    <header class="mb-3">
                         <span class="font-mono text-xs text-paper-300 index-number">#${String(pub.id).padStart(3, '0')}</span>
                     </header>
 
                     <a href="publication.html?id=${pub.id}" class="block group">
-                        <h2 class="font-serif text-xl font-bold text-paper-100 mb-1 leading-tight group-hover:text-accent transition-colors">
+                        <h2 class="font-display text-xl font-bold text-paper-100 mb-1 leading-tight group-hover:text-accent transition-colors">
                             ${escapeHtml(pub.name)}
                         </h2>
                     </a>
@@ -357,7 +353,7 @@
                         ${escapeHtml(pub.city || 'NJ')} &middot; ${years}
                     </p>
 
-                    <p class="text-sm text-paper-200 leading-relaxed py-3 border-b border-white/10 italic">${escapeHtml(oneLiner)}</p>
+                    <p class="text-sm text-paper-200 leading-relaxed py-3 border-b border-white/10">${escapeHtml(oneLiner)}</p>
 
                     ${tags.length > 0 ? `
                         <div class="flex flex-wrap gap-1 pt-3">
@@ -383,8 +379,8 @@
     function renderListView(publications) {
         elements.listRows.innerHTML = publications.map((pub, index) => {
             const isActive = pub.isActive !== false && !pub.yearCeased;
-            const statusClass = isActive ? 'text-accent' : 'text-paper-300';
-            const statusText = isActive ? 'Active' : 'Archived';
+            const statusClass = isActive ? 'text-stain' : 'text-thread-400';
+            const statusText = isActive ? 'still publishing' : (pub.yearCeased ? `ceased ${pub.yearCeased}` : 'ceased');
             const years = formatYears(pub);
 
             return `
@@ -394,7 +390,7 @@
 
                     <div class="flex items-center gap-3">
                         <span class="font-mono text-xs text-paper-300 index-number hidden md:inline">#${String(pub.id).padStart(3, '0')}</span>
-                        <span class="font-serif text-lg font-bold text-paper-100 hover:text-accent transition-colors">${escapeHtml(pub.name)}</span>
+                        <span class="font-display text-lg font-bold text-paper-100 hover:text-accent transition-colors">${escapeHtml(pub.name)}</span>
                     </div>
 
                     <span class="text-sm text-paper-300 hidden md:block">${escapeHtml(pub.city || 'NJ')}</span>
@@ -505,7 +501,7 @@
     function formatYears(pub) {
         if (!pub.yearFounded) return 'Unknown';
         if (pub.yearCeased) return `${pub.yearFounded}–${pub.yearCeased}`;
-        return `${pub.yearFounded}–`;
+        return `${pub.yearFounded}–present`;
     }
 
     function getOneLiner(pub) {

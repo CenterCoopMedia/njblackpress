@@ -79,7 +79,7 @@
 
   function createHistoricalCard(pub) {
     const extended = getExtendedData(pub.id, 'historic');
-    const years = pub.yearFounded ? `${pub.yearFounded}${pub.yearCeased ? ' - ' + pub.yearCeased : ' - Present'}` : 'Unknown';
+    const years = pub.yearFounded ? `${pub.yearFounded}–${pub.yearCeased ? pub.yearCeased : 'present'}` : 'dates unknown';
     const cardId = `historic-${pub.id}`;
     const isExpanded = expandedCards.has(cardId);
 
@@ -98,22 +98,22 @@
     // Build archive links section
     let archiveSection = '';
     if (pub.archiveUrl || physicalArchive) {
-      archiveSection = '<div class="flex flex-wrap items-center gap-3 mt-4 pt-4 border-t border-stone-700/50">';
+      archiveSection = '<div class="flex flex-wrap items-center gap-3 mt-4 pt-4 border-t border-walnut-600">';
 
       if (pub.archiveUrl) {
         archiveSection += `
           <a href="${pub.archiveUrl}" target="_blank" rel="noopener"
-             class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 text-sm transition-colors">
+             class="inline-flex items-center gap-1.5 text-stain hover:text-stain-light text-sm transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
             </svg>
-            Digital Archive
+            Digital archive
           </a>`;
       }
 
       if (physicalArchive) {
         archiveSection += `
-          <span class="text-stone-500 text-xs flex items-center gap-1.5">
+          <span class="text-thread-400 text-xs flex items-center gap-1.5">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
             </svg>
@@ -130,43 +130,43 @@
       tagsSection = `
         <div class="flex flex-wrap gap-1.5 mt-3">
           ${tags.map(tag => `
-            <span class="px-2 py-0.5 bg-stone-700/60 text-stone-400 rounded text-xs">${escapeHtml(tag)}</span>
+            <span class="px-2 py-0.5 bg-walnut-800 text-linen-300 font-mono text-xs">${escapeHtml(tag)}</span>
           `).join('')}
         </div>`;
     }
 
     return `
-      <article class="featured-card group bg-gradient-to-br from-stone-800 to-stone-900 rounded-xl p-6 border border-stone-700/50 hover:border-amber-500/30 transition-all duration-300" data-card-id="${cardId}">
+      <article class="featured-card group surface-cloth p-6 border border-walnut-600 hover:border-oak-500 transition-colors" data-card-id="${cardId}">
         <div class="flex items-start justify-between mb-3">
-          <span class="px-2.5 py-1 bg-amber-500/20 text-amber-400 rounded text-xs font-semibold tracking-wide">${escapeHtml(pub.decade || 'Historic')}</span>
-          <span class="text-stone-500 text-sm">${escapeHtml(pub.city || 'NJ')}</span>
+          <span class="font-mono text-xs text-linen-300 tracking-widest">${escapeHtml(pub.decade || 'Historic')}</span>
+          <span class="text-thread-400 text-sm">${escapeHtml(pub.city || 'NJ')}</span>
         </div>
 
-        <h3 class="font-serif text-xl text-stone-100 mb-1 group-hover:text-amber-400 transition-colors leading-tight">
+        <h3 class="font-display text-xl text-linen-100 mb-1 group-hover:text-stain transition-colors leading-tight">
           ${escapeHtml(pub.name)}
         </h3>
 
-        <p class="text-stone-400 text-sm mb-3">${years}</p>
+        <p class="text-linen-300 text-sm mb-3">${years}</p>
 
         ${founders.length > 0 ? `
-          <p class="text-stone-300 text-sm mb-3">
-            <span class="text-stone-500">Founded by:</span> ${escapeHtml(founders.join(', '))}
+          <p class="text-linen-200 text-sm mb-3">
+            <span class="text-thread-400">Founded by:</span> ${escapeHtml(founders.join(', '))}
           </p>
         ` : ''}
 
         ${missionStatement ? `
-          <blockquote class="text-stone-300 text-sm italic border-l-2 border-amber-500/50 pl-3 mb-4">
+          <blockquote class="text-linen-200 text-sm italic border-l-2 border-stain pl-3 mb-4">
             "${escapeHtml(truncate(missionStatement, 120))}"
           </blockquote>
         ` : ''}
 
         ${historicalNotes ? `
           <div class="historical-notes">
-            <p class="text-stone-400 text-sm leading-relaxed ${isExpanded ? '' : 'line-clamp-4'}" data-full-text="${escapeAttr(historicalNotes)}">
+            <p class="text-linen-300 text-sm leading-relaxed ${isExpanded ? '' : 'line-clamp-4'}" data-full-text="${escapeAttr(historicalNotes)}">
               ${isExpanded ? escapeHtml(historicalNotes) : escapeHtml(condensedNotes)}
             </p>
             ${hasMoreContent ? `
-              <button class="read-more-btn text-amber-400 hover:text-amber-300 text-sm mt-2 flex items-center gap-1 transition-colors" data-card-id="${cardId}">
+              <button class="read-more-btn text-stain hover:text-stain-light text-sm mt-2 flex items-center gap-1 transition-colors" data-card-id="${cardId}">
                 ${isExpanded ? 'Show less' : 'Read more'}
                 <svg class="w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -199,43 +199,39 @@
       focusSection = `
         <div class="flex flex-wrap gap-1.5 mb-4">
           ${displayTags.map(tag => `
-            <span class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400/80 border border-emerald-500/20 rounded text-xs">${escapeHtml(tag)}</span>
+            <span class="px-2 py-0.5 bg-walnut-800 text-linen-300 font-mono text-xs">${escapeHtml(tag)}</span>
           `).join('')}
         </div>`;
     }
 
     const websiteLink = websiteUrl
       ? `<a href="${websiteUrl}" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 text-stone-900 rounded-lg hover:bg-emerald-400 transition-colors text-sm font-medium">
-           Visit Website
+           class="inline-flex items-center gap-2 px-4 py-2 border border-walnut-600 hover:border-oak-500 text-linen-200 hover:text-linen-50 transition-colors font-mono text-xs uppercase tracking-widest">
+           Visit website
            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
          </a>`
       : '';
 
     return `
-      <article class="featured-card group bg-gradient-to-br from-emerald-900/30 to-stone-900 rounded-xl p-6 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300">
+      <article class="featured-card group surface-cloth p-6 border border-walnut-600 hover:border-oak-500 transition-colors">
         <div class="flex items-start justify-between mb-3">
-          <span class="px-2.5 py-1 bg-emerald-500/20 text-emerald-400 rounded text-xs font-semibold tracking-wide flex items-center gap-1.5">
-            <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
-            Active
-          </span>
-          <span class="text-stone-500 text-sm">${escapeHtml(pub.city || 'NJ')}</span>
+          <span class="font-mono text-xs text-linen-300 tracking-widest">${pub.yearFounded ? `${pub.yearFounded}–present` : 'still publishing'}</span>
+          <span class="text-thread-400 text-sm">${escapeHtml(pub.city || 'NJ')}</span>
         </div>
 
-        <h3 class="font-serif text-xl text-stone-100 mb-1 group-hover:text-emerald-400 transition-colors leading-tight">
+        <h3 class="font-display text-xl text-linen-100 mb-1 group-hover:text-stain transition-colors leading-tight">
           ${escapeHtml(pub.name)}
         </h3>
 
-        <p class="text-stone-400 text-sm mb-3">Founded ${pub.yearFounded || 'Recently'}</p>
 
         ${founders.length > 0 ? `
-          <p class="text-stone-300 text-sm mb-3">
-            <span class="text-stone-500">By:</span> ${escapeHtml(founders.join(', '))}
+          <p class="text-linen-200 text-sm mb-3">
+            <span class="text-thread-400">By:</span> ${escapeHtml(founders.join(', '))}
           </p>
         ` : ''}
 
         ${missionStatement ? `
-          <blockquote class="text-stone-300 text-sm italic border-l-2 border-emerald-500/50 pl-3 mb-4">
+          <blockquote class="text-linen-200 text-sm italic border-l-2 border-oak-500 pl-3 mb-4">
             "${escapeHtml(truncate(missionStatement, 140))}"
           </blockquote>
         ` : ''}

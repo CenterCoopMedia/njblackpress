@@ -143,7 +143,7 @@
 
           <!-- Tooltip -->
           <div class="timeline-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-40 md:w-52 bg-walnut-900 border border-walnut-600 p-3 md:p-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-2xl">
-            <div class="font-serif text-base md:text-lg text-stain mb-1 font-bold">${decade.label}</div>
+            <div class="font-display text-base md:text-lg text-stain mb-1 font-bold">${decade.label}</div>
             <div class="text-xs font-mono text-linen-300 space-y-1 border-t border-walnut-600 pt-2">
               <p><span class="text-linen-50">${decade.foundedCount}</span> founded</p>
               <p><span class="text-linen-50">${decade.ceasedCount}</span> ceased</p>
@@ -297,8 +297,7 @@
     details.innerHTML = `
         <header class="flex justify-between items-start mb-6 border-b border-white/10 pb-4">
             <div>
-                <h4 class="font-serif text-3xl text-white font-bold mb-1">${resolved.label}</h4>
-                <p class="font-mono text-xs text-accent uppercase tracking-widest">Historical snapshot</p>
+                <h4 class="font-display text-3xl text-white font-bold mb-1">${resolved.label}</h4>
             </div>
             <div class="text-right font-mono text-xs text-paper-300">
                 <p><span class="text-white text-lg">${resolved.activeCount}</span> active</p>
@@ -313,10 +312,10 @@
               ${pubs.slice(0, 15).map(p => `
                 <span class="px-3 py-1 bg-white/5 border border-white/10 hover:border-accent hover:text-white text-paper-300 text-sm transition-colors cursor-default">${escapeHtml(p.name)}</span>
               `).join('')}
-              ${pubs.length > 15 ? `<span class="px-3 py-1 text-paper-300 text-sm italic">+${pubs.length - 15} more...</span>` : ''}
+              ${pubs.length > 15 ? `<span class="px-3 py-1 text-paper-300 text-sm">+${pubs.length - 15} more</span>` : ''}
             </div>
           </div>
-        ` : '<p class="text-paper-300 italic font-serif">No publications recorded for this decade.</p>'}
+        ` : '<p class="text-paper-300 font-sans">No publications recorded for this decade.</p>'}
 
         <div class="mt-8 pt-4 border-t border-white/10 text-center md:text-left">
             <button onclick="window.njbp.filterByDecade('${resolved.label}')"
@@ -344,9 +343,9 @@
         <li class="border-b border-walnut-600 py-4 first:pt-0 last:border-0">
           <div class="flex items-baseline gap-3 flex-wrap">
             <span class="font-mono text-xs text-stain">${escapeHtml(evt.date)}</span>
-            ${isMedium ? '<span class="font-mono text-[10px] uppercase tracking-widest text-linen-300 border border-dashed border-stain px-2 py-0.5">Medium confidence</span>' : ''}
+            ${isMedium ? '<span class="font-mono text-[10px] uppercase tracking-widest text-linen-300 border-b border-dashed border-stain pb-0.5">Medium confidence</span>' : ''}
           </div>
-          <h5 class="font-serif text-lg md:text-xl text-white font-bold mt-1 mb-1">${escapeHtml(evt.title)}</h5>
+          <h5 class="font-display text-lg md:text-xl text-white font-bold mt-1 mb-1">${escapeHtml(evt.title)}</h5>
           <p class="font-sans text-sm text-paper-300 leading-relaxed">${escapeHtml(evt.description || '')}</p>
         </li>
       `;
@@ -355,8 +354,7 @@
     details.innerHTML = `
         <header class="flex justify-between items-start mb-6 border-b border-white/10 pb-4">
             <div>
-                <h4 class="font-serif text-3xl text-white font-bold mb-1">${decade.label} events</h4>
-                <p class="font-mono text-xs text-accent uppercase tracking-widest">Recorded incidents</p>
+                <h4 class="font-display text-3xl text-white font-bold mb-1">${decade.label} events</h4>
             </div>
             <div class="text-right font-mono text-xs text-paper-300">
                 <p><span class="text-white text-lg">${decade.eventCount}</span> recorded</p>
@@ -366,7 +364,7 @@
 
         ${decade.events.length > 0
           ? `<ol class="divide-y divide-walnut-600">${listItems}</ol>`
-          : '<p class="text-paper-300 italic font-serif">No recorded events for this decade.</p>'}
+          : '<p class="text-paper-300 font-sans">No recorded events for this decade.</p>'}
     `;
 
     details.scrollIntoView({ behavior: 'smooth', block: 'start' });

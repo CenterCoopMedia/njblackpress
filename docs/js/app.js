@@ -270,9 +270,10 @@
   }
 
   function createPublicationCard(pub) {
-    const statusClass = pub.isActive ? 'text-accent border-accent' : 'text-paper-300 border-paper-300';
-    const statusText = pub.isActive ? 'ACTIVE' : 'ARCHIVED';
-    const years = pub.yearFounded ? `${pub.yearFounded}${pub.yearCeased ? ' — ' + pub.yearCeased : ' — Present'}` : 'Unknown';
+    // Status is carried by the lifespan line, never by a badge.
+    const years = pub.yearFounded
+      ? `${pub.yearFounded}–${pub.yearCeased ? pub.yearCeased : 'present'}`
+      : (pub.isActive ? 'still publishing' : 'dates unknown');
     const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="text-xs font-mono uppercase tracking-wider text-accent hover:text-white transition-colors border-b border-transparent hover:border-accent pb-1">Visit Site</a>` : '';
     // Only show archive link if it's an actual URL (starts with http)
     const hasValidArchiveUrl = pub.archiveUrl && pub.archiveUrl.startsWith('http');
@@ -283,22 +284,17 @@
 
     return `
       <article class="bg-ink-900 border border-white/10 hover:border-accent transition-colors p-6 flex flex-col h-full group">
-        <header class="flex justify-between items-start mb-4">
-            <span class="font-mono text-[10px] uppercase tracking-widest px-2 py-1 border ${statusClass}">${statusText}</span>
-            <span class="font-mono text-xs text-accent">${pub.city || 'NJ'}</span>
-        </header>
-
         <a href="publication.html?id=${pub.id}" class="block">
-            <h3 class="font-serif text-2xl font-bold text-paper-100 mb-2 leading-tight group-hover:text-accent transition-colors">
+            <h3 class="font-display text-2xl font-bold text-paper-100 mb-2 leading-tight group-hover:text-accent transition-colors">
                 ${escapeHtml(pub.name)}
             </h3>
         </a>
 
         <p class="font-mono text-xs text-paper-300 border-b border-white/10 pb-4">
-            ${years}
+            ${escapeHtml(pub.city || 'NJ')} &middot; ${years}
         </p>
 
-        <p class="text-sm text-paper-200 leading-relaxed py-4 border-b border-white/10 italic flex-grow">
+        <p class="text-sm text-paper-200 leading-relaxed py-4 border-b border-white/10 flex-grow">
             ${escapeHtml(oneLiner)}
         </p>
 
@@ -437,7 +433,7 @@
       elements.resultsGrid.innerHTML = `
         <div class="col-span-full text-center py-12 border border-accent/50 bg-accent/5">
           <p class="text-accent font-mono uppercase tracking-widest mb-4">System Error</p>
-          <p class="text-paper-300 mb-6 font-serif text-xl">${escapeHtml(message)}</p>
+          <p class="text-paper-300 mb-6 font-sans text-lg">${escapeHtml(message)}</p>
           <button onclick="location.reload()" class="px-6 py-3 bg-white text-ink-950 font-bold hover:bg-accent hover:text-white transition-colors">
             Reload System
           </button>

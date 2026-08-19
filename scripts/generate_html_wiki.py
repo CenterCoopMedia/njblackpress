@@ -4,7 +4,7 @@
 Pre-renders one styled HTML page per publication, city, decade, format, and
 medium (plus index, statistics, and featured pages) from
 ``data/publications.json``. Pages match the main site's look — ink/paper/accent
-palette, Fraunces + DM Sans, shared nav and footer — and use real relative URLs
+palette, the display face + DM Sans, shared nav and footer — and use real relative URLs
 so every record is a crawlable permalink at ``/njblackpress/wiki/``.
 
 Shares data-shaping helpers with ``generate_okf_wiki.py`` so the HTML and the
@@ -84,38 +84,47 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
     <link rel="icon" type="image/png" href="{a}favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&family=Libre+Franklin:wght@400..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {{
             darkMode: 'class',
             theme: {{ extend: {{
                 colors: {{
-                    ink: {{ 950: '#050505', 900: '#0a0a0a', 800: '#121212', 700: '#1a1a1a', 600: '#262626' }},
-                    paper: {{ 50: '#faf9f6', 100: '#f4f1ea', 200: '#e5e2db', 300: '#d1cdc5' }},
-                    accent: {{ DEFAULT: '#ff4d00', hover: '#cc3d00', light: '#ff7a40' }}
+                    // wood - structure, grounds, frames
+                    walnut: {{ 950: '#0b0806', 900: '#14100b', 800: '#1e1811', 700: '#2b2318', 600: '#3b3122' }},
+                    oak: {{ 500: '#6b563c', 400: '#8a7252', 300: '#a89179' }},
+                    // textile - surfaces and text
+                    linen: {{ 50: '#faf7f0', 100: '#f3eee2', 200: '#e3dccc', 300: '#cdc4b1' }},
+                    thread: {{ 400: '#a89c85', 500: '#7d7261' }},
+                    // stain - the accent
+                    stain: {{ DEFAULT: '#e2662b', light: '#f0854a', deep: '#8f3a14' }},
+                    // legacy aliases, repointed to warm tokens (issue #48 pass 1)
+                    ink: {{ 950: '#0b0806', 900: '#14100b', 800: '#1e1811', 700: '#2b2318', 600: '#3b3122' }},
+                    paper: {{ 50: '#faf7f0', 100: '#f3eee2', 200: '#e3dccc', 300: '#cdc4b1' }},
+                    accent: {{ DEFAULT: '#e2662b', hover: '#8f3a14', light: '#f0854a' }}
                 }},
                 fontFamily: {{
-                    'serif': ['Fraunces', 'serif'],
+                    'display': ['Libre Franklin', 'Helvetica Neue', 'Arial', 'sans-serif'],
                     'sans': ['DM Sans', 'sans-serif'],
                     'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
                 }},
                 backgroundImage: {{
-                    'noise': "url('data:image/svg+xml,%3Csvg viewBox=\\"0 0 200 200\\" xmlns=\\"http://www.w3.org/2000/svg\\"%3E%3Cfilter id=\\"noiseFilter\\"%3E%3CfeTurbulence type=\\"fractalNoise\\" baseFrequency=\\"0.65\\" numOctaves=\\"3\\" stitchTiles=\\"stitch\\"/%3E%3C/filter%3E%3Crect width=\\"100%25\\" height=\\"100%25\\" filter=\\"url(%23noiseFilter)\\" opacity=\\"0.05\\"/%3E%3C/svg%3E')",
+                    'noise': "url('data:image/svg+xml,%3Csvg viewBox=\\"0 0 200 200\\" xmlns=\\"http://www.w3.org/2000/svg\\"%3E%3Cfilter id=\\"noiseFilter\\"%3E%3CfeTurbulence type=\\"fractalNoise\\" baseFrequency=\\"0.9\\" numOctaves=\\"3\\" stitchTiles=\\"stitch\\"/%3E%3C/filter%3E%3Crect width=\\"100%25\\" height=\\"100%25\\" filter=\\"url(%23noiseFilter)\\" opacity=\\"0.05\\"/%3E%3C/svg%3E')",
                 }}
             }} }}
         }}
     </script>
     <link rel="stylesheet" href="{a}css/styles.css">
 </head>
-<body class="bg-ink-900 text-paper-100 font-sans selection:bg-accent selection:text-white antialiased">
-    <div class="fixed inset-0 bg-noise pointer-events-none z-50 opacity-20 mix-blend-overlay"></div>
+<body class="surface-woven bg-ink-900 text-paper-100 font-sans selection:bg-accent selection:text-white antialiased">
+    <div class="grain-overlay fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.07] mix-blend-soft-light"></div>
 
     <nav class="fixed top-0 w-full z-40 bg-ink-900/90 backdrop-blur-sm border-b border-white/10">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
             <a href="{w}index.html" class="flex items-center gap-2 group">
                 <img src="{a}njblackpress-icon.png" alt="NJ Black Press" class="w-8 h-8 transition-transform group-hover:rotate-12">
-                <span class="font-serif font-bold text-lg tracking-tight group-hover:text-accent transition-colors">NJ Black Press <span class="text-accent">Wiki</span></span>
+                <span class="font-display font-bold text-xl tracking-wide group-hover:text-accent transition-colors">NJ Black Press <span class="text-accent">Wiki</span></span>
             </a>
             <ul class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
                 <li><a href="{w}index.html" class="hover:text-accent transition-colors">Wiki home</a></li>
@@ -167,22 +176,21 @@ def crumbs(items: list[tuple[str, str | None]]) -> str:
     return f'<nav class="font-mono text-xs uppercase tracking-widest text-paper-300 flex flex-wrap items-center gap-3 mb-8">{sep.join(parts)}</nav>'
 
 
-def kicker(text: str) -> str:
-    return f'<p class="font-mono text-accent text-xs uppercase tracking-widest mb-4 border-l-2 border-accent pl-3">{esc(text)}</p>'
-
-
 def page_title(text: str) -> str:
-    return f'<h1 class="font-serif text-4xl md:text-6xl font-black tracking-tighter mb-6 leading-[0.95]">{esc(text)}</h1>'
+    return f'<h1 class="type-impression font-display text-4xl md:text-6xl font-extrabold tracking-normal mb-6 leading-[0.95]">{esc(text)}</h1>'
 
 
 def section_title(text: str) -> str:
-    return f'<h2 class="font-serif text-2xl md:text-3xl font-bold mb-6 mt-12">{esc(text)}</h2>'
+    return f'<h2 class="font-display text-2xl md:text-3xl font-bold mb-6 mt-12">{esc(text)}</h2>'
 
 
-def status_pill(pub: dict[str, Any]) -> str:
+def status_text(pub: dict[str, Any]) -> str:
+    """Status as plain text, never a badge. The lifespan line already carries it."""
     if pub.get("isActive"):
-        return '<span class="inline-block font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30">Active</span>'
-    return '<span class="inline-block font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full bg-white/5 text-paper-300 border border-white/10">Ceased</span>'
+        return '<span class="font-mono text-xs text-accent">still publishing</span>'
+    ceased = clean(pub.get("yearCeased"))
+    label = f"ceased {ceased}" if ceased else "ceased"
+    return f'<span class="font-mono text-xs text-thread-400">{esc(label)}</span>'
 
 
 def pub_card(pub: dict[str, Any], depth: int, wiki_root: str) -> str:
@@ -191,9 +199,7 @@ def pub_card(pub: dict[str, Any], depth: int, wiki_root: str) -> str:
     star = ' <span class="text-accent">&#9733;</span>' if featured_kind(pub) else ""
     return (
         f'<a href="{esc(href)}" class="group block border border-white/10 bg-ink-950 p-5 hover:border-accent/60 hover:bg-ink-800 transition-colors">'
-        f'<div class="flex items-start justify-between gap-3 mb-2">'
-        f'<h3 class="font-serif text-lg font-bold leading-snug group-hover:text-accent transition-colors">{esc(pub["name"])}{star}</h3>'
-        f'{status_pill(pub)}</div>'
+        f'<h3 class="font-display text-lg font-bold leading-snug mb-2 group-hover:text-accent transition-colors">{esc(pub["name"])}{star}</h3>'
         f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300">{city} &middot; {esc(life_span(pub))}</p>'
         f'</a>'
     )
@@ -207,7 +213,7 @@ def pub_grid(pubs: list[dict[str, Any]], depth: int, wiki_root: str) -> str:
 def browse_card(href: str, title: str, sub: str) -> str:
     return (
         f'<a href="{esc(href)}" class="group flex flex-col justify-between border border-white/10 bg-ink-950 p-6 hover:border-accent/60 hover:bg-ink-800 transition-colors min-h-[120px]">'
-        f'<span class="font-serif text-xl font-bold group-hover:text-accent transition-colors">{esc(title)}</span>'
+        f'<span class="font-display text-xl font-bold group-hover:text-accent transition-colors">{esc(title)}</span>'
         f'<span class="font-mono text-xs uppercase tracking-widest text-paper-300 mt-3">{esc(sub)} <span class="group-hover:translate-x-1 inline-block transition-transform">&rarr;</span></span>'
         f'</a>'
     )
@@ -218,8 +224,7 @@ def browse_card(href: str, title: str, sub: str) -> str:
 def landing_body(pubs, by_city, by_decade, by_format, by_medium, slugs, timestamp) -> str:
     active = sum(1 for p in pubs if p.get("isActive"))
     featured = [p for p in pubs if featured_kind(p)]
-    b = kicker("Open archive wiki")
-    b += page_title("The NJ Black Press archive, page by page")
+    b = page_title("The NJ Black Press archive, page by page")
     b += (
         '<p class="text-lg md:text-xl text-paper-300 font-light leading-relaxed max-w-2xl mb-10 border-l border-white/10 pl-5">'
         'A browsable companion to the database: one page per publication, cross-linked by city, decade, format, and medium, '
@@ -233,7 +238,7 @@ def landing_body(pubs, by_city, by_decade, by_format, by_medium, slugs, timestam
         ("Founding span", year_range(pubs)),
     ]
     cells = "".join(
-        f'<div class="border border-white/10 bg-ink-950 p-5"><div class="font-serif text-3xl text-accent">{esc(v)}</div>'
+        f'<div class="border border-white/10 bg-ink-950 p-5"><div class="font-display text-3xl font-bold text-accent">{esc(v)}</div>'
         f'<div class="font-mono text-[11px] uppercase tracking-widest text-paper-300 mt-1">{esc(k)}</div></div>'
         for k, v in stats
     )
@@ -273,12 +278,11 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
     feat = featured_kind(pub)
 
     b = crumbs([("Wiki", f"{wiki_root}index.html"), ("Publications", f"{wiki_root}publications.html"), (name, None)])
-    b += kicker(f"{city} · {decade}")
-    b += f'<h1 class="font-serif text-4xl md:text-6xl font-black tracking-tighter mb-4 leading-[0.95]">{esc(name)}</h1>'
-    b += f'<div class="flex flex-wrap items-center gap-3 mb-8">{status_pill(pub)}'
+    b += f'<h1 class="type-impression font-display text-4xl md:text-6xl font-extrabold tracking-normal mb-4 leading-[0.95]">{esc(name)}</h1>'
+    meta = f"{esc(city)} &middot; {esc(decade)} &middot; {esc(life_span(pub))}"
     if feat:
-        b += f'<span class="inline-block font-mono text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30">Featured {esc(feat)}</span>'
-    b += "</div>"
+        meta += f" &middot; featured {esc(feat)}"
+    b += f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-8">{meta}</p>'
 
     rows = [
         ("Alternate name", esc(clean(pub.get("alternateName")) or "—")),
@@ -348,10 +352,9 @@ def group_detail_body(kind, name, items, depth, wiki_root, slug) -> str:
     singular = GROUP_LABEL[kind]
     active = sum(1 for p in items if p.get("isActive"))
     b = crumbs([("Wiki", f"{wiki_root}index.html"), (f"{singular} index", f"{wiki_root}{kind}.html"), (name, None)])
-    b += kicker(f"{singular} grouping")
     b += page_title(name)
     if kind == "decades" and name in DECADE_CONTEXT:
-        b += f'<p class="text-lg text-paper-300 font-light italic mb-6 max-w-2xl">{esc(DECADE_CONTEXT[name])}</p>'
+        b += f'<p class="text-lg text-paper-200 font-light mb-6 max-w-2xl">{esc(DECADE_CONTEXT[name])}</p>'
     b += (f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-10">'
           f'{len(items)} publications &middot; {active} active &middot; founding years {esc(year_range(items))}</p>')
     ordered = sorted(items, key=lambda p: (p.get("yearFounded") or 9999, p.get("name") or ""))
@@ -363,7 +366,6 @@ def group_index_body(kind, groups, slugs, depth) -> str:
     singular = GROUP_LABEL[kind]
     total = sum(len(v) for v in groups.values())
     b = crumbs([("Wiki", "index.html"), (f"{singular} index", None)])
-    b += kicker("Browse")
     b += page_title(f"{singular} index")
     b += f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-10">{len(groups)} {kind} &middot; {total} records</p>'
 
@@ -383,7 +385,6 @@ def group_index_body(kind, groups, slugs, depth) -> str:
 
 def publications_index_body(pubs, depth) -> str:
     b = crumbs([("Wiki", "index.html"), ("Publications", None)])
-    b += kicker("Browse")
     b += page_title("All publications")
     b += f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-10">{len(pubs)} records, alphabetical</p>'
     rows = ""
@@ -392,10 +393,10 @@ def publications_index_body(pubs, depth) -> str:
         city = esc(clean(pub.get("city")) or "Unknown")
         rows += (
             f'<tr class="border-b border-white/10 hover:bg-ink-800 transition-colors">'
-            f'<td class="py-3 pr-4"><a href="publications/{pub_html_name(pub)}" class="font-serif text-base hover:text-accent transition-colors">{esc(pub["name"])}{star}</a></td>'
+            f'<td class="py-3 pr-4"><a href="publications/{pub_html_name(pub)}" class="font-display text-base font-semibold hover:text-accent transition-colors">{esc(pub["name"])}{star}</a></td>'
             f'<td class="py-3 pr-4 text-paper-300 text-sm">{city}</td>'
             f'<td class="py-3 pr-4 font-mono text-xs text-paper-300 whitespace-nowrap">{esc(life_span(pub))}</td>'
-            f'<td class="py-3 text-right">{status_pill(pub)}</td>'
+            f'<td class="py-3 text-right">{status_text(pub)}</td>'
             f'</tr>'
         )
     b += ('<div class="overflow-x-auto border border-white/10 bg-ink-950"><table class="w-full text-left">'
@@ -410,13 +411,12 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
     total = len(pubs)
     active = sum(1 for p in pubs if p.get("isActive"))
     b = crumbs([("Wiki", "index.html"), ("Statistics", None)])
-    b += kicker("By the numbers")
     b += page_title("Archive statistics")
 
     stats = [("Records", str(total)), ("Active", str(active)), ("Ceased", str(total - active)),
              ("Cities", str(len(by_city))), ("Formats", str(len(by_format))), ("Span", year_range(pubs))]
     cells = "".join(
-        f'<div class="border border-white/10 bg-ink-950 p-4"><div class="font-serif text-2xl text-accent">{esc(v)}</div>'
+        f'<div class="border border-white/10 bg-ink-950 p-4"><div class="font-display text-2xl font-bold text-accent">{esc(v)}</div>'
         f'<div class="font-mono text-[10px] uppercase tracking-widest text-paper-300 mt-1">{esc(k)}</div></div>'
         for k, v in stats
     )
@@ -499,7 +499,6 @@ def featured_body(pubs, depth) -> str:
     historic = [p for p in pubs if p.get("isFeaturedHistoric")]
     contemporary = [p for p in pubs if p.get("isFeaturedContemporary")]
     b = crumbs([("Wiki", "index.html"), ("Featured", None)])
-    b += kicker("Curated")
     b += page_title("Featured publications")
     b += '<p class="text-lg text-paper-300 font-light max-w-2xl mb-8">Publications highlighted on the archive site for their historical or contemporary significance.</p>'
     b += section_title(f"Historic ({len(historic)})")
@@ -511,16 +510,15 @@ def featured_body(pubs, depth) -> str:
 
 def data_model_body() -> str:
     b = crumbs([("Wiki", "index.html"), ("Data model", None)])
-    b += kicker("Reference")
     b += page_title("Data model")
     b += '<p class="text-lg text-paper-300 font-light max-w-2xl mb-8">Every publication page is generated from <code class="font-mono text-paper-100">data/publications.json</code>. Source values are preserved as written; empty values render as a dash.</p>'
     rows = ""
     for field, desc, origin in FIELD_DOCS:
-        pill = ('<span class="font-mono text-[10px] uppercase px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30">computed</span>'
-                if origin == "computed" else '<span class="font-mono text-[10px] uppercase px-2 py-0.5 rounded-full bg-white/5 text-paper-300 border border-white/10">source</span>')
+        origin_text = ('<span class="font-mono text-xs text-accent">computed</span>'
+                       if origin == "computed" else '<span class="font-mono text-xs text-thread-400">source</span>')
         rows += (f'<tr class="border-b border-white/10">'
                  f'<td class="py-3 pr-4 font-mono text-sm text-accent whitespace-nowrap">{esc(field)}</td>'
-                 f'<td class="py-3 pr-4">{pill}</td>'
+                 f'<td class="py-3 pr-4">{origin_text}</td>'
                  f'<td class="py-3 text-paper-200">{esc(desc)}</td></tr>')
     b += ('<div class="overflow-x-auto border border-white/10 bg-ink-950 p-2"><table class="w-full text-left">'
           f'<tbody>{rows}</tbody></table></div>')

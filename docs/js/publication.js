@@ -103,8 +103,6 @@
         const canonical = document.getElementById('canonical');
         if (canonical) canonical.setAttribute('href', canonicalUrl);
 
-        const statusClass = pub.isActive !== false && !pub.yearCeased ? 'text-accent border-accent' : 'text-paper-300 border-paper-300';
-        const statusText = pub.isActive !== false && !pub.yearCeased ? 'ACTIVE' : 'ARCHIVED';
         const years = formatYears(pub);
 
         // Build sections
@@ -125,14 +123,13 @@
                     <div class="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-accent/30 hidden lg:block"></div>
                     <div class="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-accent/30 hidden lg:block"></div>
 
+                    ${pub.alternateName ? `
                     <div class="animate-in delay-1">
-                        <div class="flex flex-wrap items-center gap-4 mb-6">
-                            <span class="font-mono text-xs uppercase tracking-widest px-3 py-1 border ${statusClass}">${statusText}</span>
-                            ${pub.alternateName ? `<span class="font-mono text-xs text-paper-300">Also known as: ${escapeHtml(pub.alternateName)}</span>` : ''}
-                        </div>
+                        <p class="font-mono text-xs text-paper-300 mb-6">Also known as ${escapeHtml(pub.alternateName)}</p>
                     </div>
+                    ` : ''}
 
-                    <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter text-paper-100 mb-6 animate-in delay-2">
+                    <h1 class="type-impression font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[0.88] tracking-normal text-paper-100 mb-6 animate-in delay-2">
                         ${escapeHtml(pub.name)}
                     </h1>
 
@@ -142,7 +139,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
-                            <span class="font-serif text-xl">${escapeHtml(pub.city || 'New Jersey')}</span>
+                            <span class="font-display text-xl">${escapeHtml(pub.city || 'New Jersey')}</span>
                         </div>
                         <span class="text-white/30">|</span>
                         <span class="font-mono text-sm tracking-wide">${years}</span>
@@ -181,8 +178,8 @@
         return `
             <section class="bg-ink-800 border-y border-white/10 py-12 md:py-16 px-4 md:px-8 animate-in delay-4">
                 <div class="max-w-[1000px] mx-auto">
-                    <p class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Mission Statement</p>
-                    <blockquote class="pull-quote font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl text-paper-100 leading-relaxed font-light italic">
+                    <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Mission statement</h2>
+                    <blockquote class="pull-quote font-sans text-xl sm:text-2xl md:text-3xl text-paper-100 leading-relaxed font-light italic">
                         ${escapeHtml(mission)}
                     </blockquote>
                 </div>
@@ -206,7 +203,7 @@
 
         return `
             <div class="animate-in delay-4">
-                <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-white/10">Publication Details</h2>
+                <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-white/10">Publication details</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     ${items.map(item => `
                         <div class="border-l-2 border-white/10 pl-4">
@@ -237,17 +234,17 @@
 
         return `
             <div class="animate-in delay-5">
-                <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-white/10">Historical Notes</h2>
+                <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-white/10">Historical notes</h2>
                 <div class="prose prose-invert max-w-none">
                     ${useColumns ? `
                         <div class="columns-1 md:columns-2 gap-8 column-rule space-y-4">
                             ${paragraphs.map((p, i) => `
-                                <p class="${i === 0 ? 'drop-cap' : ''} font-serif text-lg text-paper-200 leading-relaxed">${escapeHtml(p.trim())}</p>
+                                <p class="${i === 0 ? 'drop-cap' : ''} font-sans text-lg text-paper-200 leading-relaxed">${escapeHtml(p.trim())}</p>
                             `).join('')}
                         </div>
                     ` : `
                         ${paragraphs.map((p, i) => `
-                            <p class="${i === 0 ? 'drop-cap' : ''} font-serif text-lg text-paper-200 leading-relaxed">${escapeHtml(p.trim())}</p>
+                            <p class="${i === 0 ? 'drop-cap' : ''} font-sans text-lg text-paper-200 leading-relaxed">${escapeHtml(p.trim())}</p>
                         `).join('')}
                     `}
                 </div>
@@ -276,7 +273,7 @@
 
         return `
             <div class="bg-ink-800 border border-white/10 p-6 animate-in delay-5">
-                <h3 class="font-serif text-xl font-bold mb-6 text-center border-b border-white/10 pb-4">
+                <h3 class="font-display text-xl font-bold mb-6 text-center border-b border-white/10 pb-4">
                     <span class="ornament">Masthead</span>
                 </h3>
 
@@ -284,23 +281,23 @@
                     ${founders.length > 0 ? `
                         <div class="masthead-entry pb-4">
                             <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Founder${founders.length > 1 ? 's' : ''}</p>
-                            ${founders.map(f => `<p class="font-serif text-lg text-center text-paper-100">${escapeHtml(f)}</p>`).join('')}
+                            ${founders.map(f => `<p class="font-display text-lg text-center text-paper-100">${escapeHtml(f)}</p>`).join('')}
                         </div>
                     ` : ''}
 
                     ${publishers.length > 0 ? `
                         <div class="masthead-entry pb-4">
                             <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Publisher${publishers.length > 1 ? 's' : ''}</p>
-                            ${publishers.map(p => `<p class="font-serif text-lg text-center text-paper-100">${escapeHtml(p)}</p>`).join('')}
+                            ${publishers.map(p => `<p class="font-display text-lg text-center text-paper-100">${escapeHtml(p)}</p>`).join('')}
                         </div>
                     ` : ''}
 
                     ${staff.length > 0 ? `
                         <div class="space-y-3">
-                            <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Key Staff</p>
+                            <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Key staff</p>
                             ${staff.map(s => `
                                 <div class="text-center">
-                                    <p class="font-serif text-paper-100">${escapeHtml(s.name)}</p>
+                                    <p class="font-display text-paper-100">${escapeHtml(s.name)}</p>
                                     <p class="font-mono text-xs text-paper-300">${escapeHtml(s.role)}</p>
                                 </div>
                             `).join('')}
@@ -309,8 +306,8 @@
 
                     ${staffString ? `
                         <div class="masthead-entry pb-4">
-                            <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Key Staff</p>
-                            <p class="font-serif text-lg text-center text-paper-100">${escapeHtml(staffString)}</p>
+                            <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Key staff</p>
+                            <p class="font-display text-lg text-center text-paper-100">${escapeHtml(staffString)}</p>
                         </div>
                     ` : ''}
                 </div>
@@ -324,7 +321,7 @@
 
         return `
             <div class="animate-in delay-6">
-                <h3 class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Topics & Tags</h3>
+                <h3 class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Topics and tags</h3>
                 <div class="flex flex-wrap gap-2">
                     ${tags.map(tag => `
                         <a href="archive.html?search=${encodeURIComponent(tag)}"
@@ -348,7 +345,7 @@
 
         return `
             <div class="bg-ink-950 border border-accent/30 p-6 animate-in delay-6">
-                <h3 class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Access & Archives</h3>
+                <h3 class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Access and archives</h3>
                 <div class="space-y-4">
                     ${pub.websiteUrl ? `
                         <a href="${pub.websiteUrl}" target="_blank" rel="noopener"
@@ -356,7 +353,7 @@
                             <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
                             </svg>
-                            <span class="font-sans group-hover:underline">Visit Website</span>
+                            <span class="font-sans group-hover:underline">Visit website</span>
                             <span class="text-accent ml-auto">&rarr;</span>
                         </a>
                     ` : ''}
@@ -367,7 +364,7 @@
                             <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
                             </svg>
-                            <span class="font-sans group-hover:underline">Digital Archive</span>
+                            <span class="font-sans group-hover:underline">Digital archive</span>
                             <span class="text-accent ml-auto">&rarr;</span>
                         </a>
                     ` : ''}
@@ -378,7 +375,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                             </svg>
                             <div>
-                                <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-1">Catalog Reference</p>
+                                <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-1">Catalog reference</p>
                                 <p class="font-sans text-sm text-paper-200">${escapeHtml(pub.archiveUrl)}</p>
                             </div>
                         </div>
@@ -390,7 +387,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                             </svg>
                             <div>
-                                <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-1">Physical Archive</p>
+                                <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-1">Physical archive</p>
                                 <p class="font-sans text-sm text-paper-200">${escapeHtml(pub.physicalArchive)}</p>
                             </div>
                         </div>
@@ -416,13 +413,13 @@
         return `
             <section class="bg-ink-950 border-t border-white/10 py-16 px-4 md:px-8">
                 <div class="max-w-[1400px] mx-auto">
-                    <h2 class="font-serif text-2xl font-bold mb-8">Related Publications</h2>
+                    <h2 class="font-display text-2xl font-bold mb-8">Related publications</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         ${related.map(r => `
                             <a href="publication.html?id=${r.id}"
                                class="block bg-ink-900 border border-white/10 hover:border-accent p-6 transition-colors group">
                                 <p class="font-mono text-[10px] uppercase tracking-widest text-paper-300 mb-2">${escapeHtml(r.city || 'NJ')}</p>
-                                <h3 class="font-serif text-lg font-bold group-hover:text-accent transition-colors">${escapeHtml(r.name)}</h3>
+                                <h3 class="font-display text-lg font-bold group-hover:text-accent transition-colors">${escapeHtml(r.name)}</h3>
                                 <p class="font-mono text-xs text-paper-300 mt-2">${formatYears(r)}</p>
                             </a>
                         `).join('')}
@@ -433,10 +430,10 @@
     }
 
     function formatYears(pub) {
-        if (!pub.yearFounded) return 'Dates unknown';
-        if (pub.yearCeased) return `${pub.yearFounded} — ${pub.yearCeased}`;
-        if (pub.isActive === false) return `${pub.yearFounded} — Ceased`;
-        return `${pub.yearFounded} — Present`;
+        if (!pub.yearFounded) return pub.isActive === false ? 'ceased, dates unknown' : 'dates unknown';
+        if (pub.yearCeased) return `${pub.yearFounded}–${pub.yearCeased}`;
+        if (pub.isActive === false) return `founded ${pub.yearFounded}, ceased`;
+        return `${pub.yearFounded}–present`;
     }
 
     function showError() {
