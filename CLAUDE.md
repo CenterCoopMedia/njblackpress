@@ -8,11 +8,20 @@ NJ Black Press Database — a static site documenting ~140 Black-owned and Black
 
 ## Development
 
-**No build step.** The site is vanilla HTML/JS/CSS with Tailwind via CDN. To develop locally, serve the `docs/` folder with any static server:
+The site is vanilla HTML/JS/CSS, no framework and no bundler. To develop locally, serve the `docs/` folder with any static server:
 
 ```bash
 cd docs && python -m http.server 8000
 ```
+
+**Tailwind is compiled, not CDN.** Every page loads `docs/css/tailwind.css`. That file is generated — never hand-edit it. Rebuild it after you add or change any Tailwind class in HTML or JS:
+
+```bash
+npm install      # first time only
+npm run build:css
+```
+
+The build reads `tailwind.config.js` (palettes, fonts, `bg-noise`) and `src/input.css`, and scans `./docs/**/*.html` plus `./docs/js/**/*.js`. Classes built in JS must appear as complete literal strings, or Tailwind will not emit them; if you must concatenate a class name, add it to `safelist` in `tailwind.config.js`. `scripts/generate_html_wiki.py` runs the build for you at the end (pass `--skip-css` to opt out).
 
 **Data pipeline:** Notion → CSV export → Python conversion → JSON
 

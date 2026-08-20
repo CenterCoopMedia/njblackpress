@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import shutil
+import subprocess
 import sys
 from collections import Counter, defaultdict
 from datetime import date
@@ -85,36 +86,7 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..700&family=Libre+Franklin:wght@400..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {{
-            darkMode: 'class',
-            theme: {{ extend: {{
-                colors: {{
-                    // wood - structure, grounds, frames
-                    walnut: {{ 950: '#0b0806', 900: '#14100b', 800: '#1e1811', 700: '#2b2318', 600: '#3b3122' }},
-                    oak: {{ 500: '#6b563c', 400: '#8a7252', 300: '#a89179' }},
-                    // textile - surfaces and text
-                    linen: {{ 50: '#faf7f0', 100: '#f3eee2', 200: '#e3dccc', 300: '#cdc4b1' }},
-                    thread: {{ 400: '#a89c85', 500: '#7d7261' }},
-                    // stain - the accent
-                    stain: {{ DEFAULT: '#e2662b', light: '#f0854a', deep: '#8f3a14' }},
-                    // legacy aliases, repointed to warm tokens (issue #48 pass 1)
-                    ink: {{ 950: '#0b0806', 900: '#14100b', 800: '#1e1811', 700: '#2b2318', 600: '#3b3122' }},
-                    paper: {{ 50: '#faf7f0', 100: '#f3eee2', 200: '#e3dccc', 300: '#cdc4b1' }},
-                    accent: {{ DEFAULT: '#e2662b', hover: '#8f3a14', light: '#f0854a' }}
-                }},
-                fontFamily: {{
-                    'display': ['Libre Franklin', 'Helvetica Neue', 'Arial', 'sans-serif'],
-                    'sans': ['DM Sans', 'sans-serif'],
-                    'mono': ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
-                }},
-                backgroundImage: {{
-                    'noise': "url('data:image/svg+xml,%3Csvg viewBox=\\"0 0 200 200\\" xmlns=\\"http://www.w3.org/2000/svg\\"%3E%3Cfilter id=\\"noiseFilter\\"%3E%3CfeTurbulence type=\\"fractalNoise\\" baseFrequency=\\"0.9\\" numOctaves=\\"3\\" stitchTiles=\\"stitch\\"/%3E%3C/filter%3E%3Crect width=\\"100%25\\" height=\\"100%25\\" filter=\\"url(%23noiseFilter)\\" opacity=\\"0.05\\"/%3E%3C/svg%3E')",
-                }}
-            }} }}
-        }}
-    </script>
+    <link rel="stylesheet" href="{a}css/tailwind.css">
     <link rel="stylesheet" href="{a}css/styles.css">
 </head>
 <body class="surface-woven bg-ink-900 text-paper-100 font-sans selection:bg-accent selection:text-white antialiased">
@@ -613,15 +585,47 @@ def build(generated_at: str | None = None) -> None:
     print(f"generated {count} html wiki pages + sitemap in {OUT_DIR.relative_to(ROOT)}")
 
 
+def build_tailwind() -> bool:
+    """Recompile ``docs/css/tailwind.css`` from the classes used across ``docs/``.
+
+    The wiki pages load the compiled stylesheet, so new markup needs a fresh
+    build. Returns True on success, False if the build could not run.
+    """
+    npx = shutil.which("npx") or shutil.which("npx.cmd")
+    if not npx:
+        print(
+            "WARNING: npx not found — skipped the Tailwind build.\n"
+            "         Install Node.js, run 'npm install', then run 'npm run build:css'.\n"
+            "         docs/css/tailwind.css is now stale.",
+            file=sys.stderr,
+        )
+        return False
+    cmd = [npx, "tailwindcss", "-i", "src/input.css", "-o", "docs/css/tailwind.css", "--minify"]
+    result = subprocess.run(cmd, cwd=ROOT)
+    if result.returncode != 0:
+        print(
+            f"WARNING: the Tailwind build failed (exit {result.returncode}).\n"
+            "         Run 'npm install' then 'npm run build:css' and read the error.\n"
+            "         docs/css/tailwind.css is now stale.",
+            file=sys.stderr,
+        )
+        return False
+    print("rebuilt docs/css/tailwind.css")
+    return True
+
+
 def main() -> None:
     global SITE_BASE
     parser = argparse.ArgumentParser(description="Generate the public HTML wiki.")
     parser.add_argument("--generated-at", help="date string for reproducible output")
     parser.add_argument("--base-url", help="canonical/OG base URL (default: production domain)")
+    parser.add_argument("--skip-css", action="store_true", help="do not rebuild docs/css/tailwind.css")
     args = parser.parse_args()
     if args.base_url:
         SITE_BASE = args.base_url if args.base_url.endswith("/") else args.base_url + "/"
     build(args.generated_at)
+    if not args.skip_css:
+        build_tailwind()
 
 
 if __name__ == "__main__":

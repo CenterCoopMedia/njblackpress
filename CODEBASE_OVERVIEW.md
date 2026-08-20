@@ -102,7 +102,7 @@ Values currently come from hardcoded sources so this is safe in practice, but th
 
 ### 4. Tailwind CSS CDN loaded without Subresource Integrity (Low)
 
-All three HTML pages load `https://cdn.tailwindcss.com` without an `integrity` attribute. A CDN compromise would allow arbitrary script execution.
+**Resolved 2026-08-19:** the site now ships a compiled `docs/css/tailwind.css`; no page loads the Tailwind CDN.
 
 ## Inefficiencies
 
@@ -120,7 +120,7 @@ The homepage loads `app.js`, `timeline.js`, and (if included) `featured.js`, eac
 
 ### 4. Tailwind CSS JIT build in production
 
-All pages use `<script src="https://cdn.tailwindcss.com">` which is the JIT development build. Tailwind's docs explicitly warn against this for production. It loads ~300KB+ of JavaScript to generate CSS at runtime. A build step producing a purged CSS file would reduce this to a few KB.
+**Resolved 2026-08-19:** all pages now link a 32KB compiled, purged `docs/css/tailwind.css` built with the Tailwind CLI (issues #15, #17-#20).
 
 ### 5. Google Fonts loaded render-blocking
 
