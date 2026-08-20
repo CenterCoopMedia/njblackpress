@@ -11,6 +11,9 @@ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
 
 const DWELL = 3200;
 const TRANSIT_MS = 1600;
+// The era crossing is the first leg of the next stop's arrival, so it is kept
+// short: the reader pressed "next stop", not "watch the loom".
+const TRANSIT_TRAVEL_MS = 850;
 const MAX_TEXTURES = 4;
 
 export function createTour(app, three, model) {
@@ -49,6 +52,27 @@ export function createTour(app, three, model) {
     moreEl.hidden = room < 12 || atEnd;
   }
 
+  // An era change is not a stop. It is the opening of the stop that follows it:
+  // the camera crosses the gap while this banner names where it is going, and
+  // the stop lands at the end of the same move. Read as a stop of its own it was
+  // a blank screen with a bare box on it, and it broke the count.
+  const transitEl = document.createElement('div');
+  transitEl.id = 'woven-transit';
+  transitEl.hidden = true;
+  three.stage.appendChild(transitEl);
+
+  function showTransit(tr) {
+    // The bands group papers by the year they were founded, not by the year of
+    // the stop, so the banner says so. "Traveling to 1900 to 1929" over a stop
+    // dated 1938 reads as a wrong date.
+    const dated = /^\d/.test(tr.toBand);
+    transitEl.innerHTML =
+      `<span class="tr-eyebrow">${dated ? 'Traveling to papers founded' : 'Traveling to'}</span>` +
+      `<b>${esc(tr.toBand)}</b>`;
+    transitEl.hidden = false;
+  }
+  function hideTransit() { transitEl.hidden = true; }
+
   const cache = new Map(); // webPath -> THREE.Texture, LRU by insertion order
   let panelMesh = null;
   let panelSize = { w: 0, h: 0 };
@@ -60,6 +84,15 @@ export function createTour(app, three, model) {
   let paused = false;
   let timer = null;
   let preTourView = null;
+  // The bar reads "end of thread" only once the reader has walked off the last
+  // stop. Reading it off the last index instead meant the ninth stop of nine
+  // never showed its own number.
+  let closed = false;
+  // Every stop gets a number. A camera move, an image decode, and an unfurl all
+  // finish after the stop that asked for them, so each of them checks this
+  // number before it draws. Without it, stop 3's clipping and caption landed on
+  // screen while the reader was already at stop 5.
+  let run = 0;
 
   const api = {
     get isPlaying() { return playing; },
@@ -76,6 +109,7 @@ export function createTour(app, three, model) {
     tour = t;
     stops = withTransits(t);
     index = 0;
+    closed = false;
     playing = true;
     paused = reduced();
     preTourView = {
@@ -92,31 +126,30 @@ export function createTour(app, three, model) {
     goTo(0);
   }
 
-  // Insert a transit stop wherever consecutive stops change era band.
+  // Every entry here is a real stop. Where consecutive stops change era band the
+  // crossing is attached to the later stop as its opening move, so the count,
+  // the progress rail, and one press of "next stop" all mean the same thing.
   function withTransits(t) {
-    const out = [];
-    t.stops.forEach((s, i) => {
+    return t.stops.map((s, i) => {
       const prevStop = t.stops[i - 1];
-      if (prevStop && prevStop.band && s.band && prevStop.band !== s.band) {
-        const a = model.bands.find((b) => b.key === prevStop.band);
-        const b = model.bands.find((b2) => b2.key === s.band);
-        const box = {
-          minX: 0, maxX: 73,
-          minY: Math.min(a.top - a.height, b.top - b.height),
-          maxY: Math.max(a.top, b.top)
-        };
-        out.push({
-          kind: 'transit',
+      if (!prevStop || !prevStop.band || !s.band || prevStop.band === s.band) return s;
+      const a = model.bands.find((b) => b.key === prevStop.band);
+      const b = model.bands.find((b2) => b2.key === s.band);
+      if (!a || !b) return s;
+      const box = {
+        minX: 0, maxX: 73,
+        minY: Math.min(a.top - a.height, b.top - b.height),
+        maxY: Math.max(a.top, b.top)
+      };
+      return Object.assign({}, s, {
+        transit: {
           tx: (prevStop.tx + s.tx) / 2,
           ty: (prevStop.ty + s.ty) / 2,
           distance: app.fitDistance(box, 0.10),
-          fromBand: a.label, toBand: b.label,
-          dateLabel: s.dateLabel, band: s.band, event: null, clipping: null
-        });
-      }
-      out.push(s);
+          fromBand: a.label, toBand: b.label
+        }
+      });
     });
-    return out;
   }
 
   function dimForTour(t) {
@@ -140,32 +173,39 @@ export function createTour(app, three, model) {
 
   async function goTo(i) {
     if (!playing) return;
+    const my = ++run;
+    // Whatever the last stop had queued belongs to the last stop.
+    clearTimer();
+    const forward = i > index;
+    closed = false;
     index = Math.max(0, Math.min(stops.length - 1, i));
     const s = stops[index];
     // The previous stop's evidence goes before the next stop is drawn, never
     // after its camera move lands. Left up, an 1862 stop showed a 1991 citation
     // for the length of the transit, which reads as the wrong source.
     disposePanel();
+    hideTransit();
     overlay.hidden = true;
     app.state.stopIndex = tourStopIndex();
     syncTwin(app.state);
     renderBar();
     renderCard(s);
-    if (s.kind !== 'transit') {
-      knots.setTour(new Set(tour.stops.map((x) => x.eventId)), s.eventId);
-      app.needsRender = true;
+    knots.setTour(new Set(tour.stops.map((x) => x.eventId)), s.eventId);
+    app.needsRender = true;
+    if (s.transit && forward && !reduced()) {
+      showTransit(s.transit);
+      announce(`Moving from ${s.transit.fromBand}, to ${s.transit.toBand}.`);
+      await app.easeTo([s.transit.tx, s.transit.ty], s.transit.distance, TRANSIT_TRAVEL_MS);
+      if (!playing || my !== run) { hideTransit(); return; }
     }
     await app.easeTo([s.tx, s.ty], s.distance, reduced() ? 0 : TRANSIT_MS);
-    // The reader can leave while the camera is still moving or a clipping is
-    // still decoding. Once they have, this stop no longer has a tour to belong
-    // to, so it stops here rather than talking about one.
-    if (!playing) return;
-    if (s.kind === 'transit') {
-      announce(`Moving from ${s.fromBand}, to ${s.toBand}.`);
-      if (!paused) schedule(600 + 900);
-      return;
-    }
-    await showPanel(s);
+    hideTransit();
+    // The reader can leave, or move on, while the camera is still moving or a
+    // clipping is still decoding. Once they have, this stop no longer has a
+    // place on screen, so it stops here rather than drawing over the new one.
+    if (!playing || my !== run) return;
+    await showPanel(s, my);
+    if (my !== run) return;
     if (!playing) { disposePanel(); return; }
     announceStop(s);
     // A stop with three paragraphs needs longer than a stop with one. The dwell
@@ -180,11 +220,7 @@ export function createTour(app, three, model) {
     return Math.min(9000, DWELL + words * 22);
   }
 
-  function tourStopIndex() {
-    let n = -1;
-    for (let i = 0; i <= index; i++) if (stops[i].kind !== 'transit') n++;
-    return Math.max(0, n);
-  }
+  function tourStopIndex() { return index; }
 
   function announceStop(s) {
     const th = s.threadId != null ? model.byId.get(s.threadId) : null;
@@ -195,7 +231,12 @@ export function createTour(app, three, model) {
   function schedule(ms) {
     clearTimer();
     if (reduced()) return;
+    const my = run;
     timer = setTimeout(() => {
+      timer = null;
+      // The reader may have paused, moved on, or left in the milliseconds
+      // between this timer firing and this line running.
+      if (!playing || paused || my !== run) return;
       if (index >= stops.length - 1) { renderClose(); return; }
       goTo(index + 1);
     }, ms);
@@ -203,14 +244,24 @@ export function createTour(app, three, model) {
 
   function clearTimer() { if (timer) { clearTimeout(timer); timer = null; } }
 
-  function next() { paused = true; clearTimer(); if (index < stops.length - 1) goTo(index + 1); else renderClose(); }
-  function prev() { paused = true; clearTimer(); goTo(index - 1); }
+  // Any manual move stops the tour playing itself. Two taps on "next stop"
+  // used to land three or four stops on, because the autoplay timer was still
+  // counting alongside them.
+  function pauseForManual() {
+    paused = true;
+    clearTimer();
+    run++;
+  }
+  function next() { pauseForManual(); if (index < stops.length - 1) goTo(index + 1); else renderClose(); }
+  function prev() { pauseForManual(); goTo(index - 1); }
 
   function exit() {
     if (!playing) return;
     clearTimer();
     playing = false;
+    closed = false;
     tour = null;
+    hideTransit();
     bar.hidden = true;
     overlay.hidden = true;
     card.hidden = true;
@@ -228,16 +279,18 @@ export function createTour(app, three, model) {
 
   // ---- clipping panels ----
 
-  async function showPanel(s) {
+  async function showPanel(s, my) {
+    if (my !== run) return;
     disposePanel();
     const clip = s.clipping;
-    if (!clip || !clip.webPath || !clip.altText) { renderOverlay(s, null); return; }
+    if (!clip || !clip.webPath || !clip.altText) { renderOverlay(s, null, my); return; }
     let tex = cache.get(clip.webPath);
     if (!tex) {
       try {
         const img = new Image();
         img.src = clip.webPath;
         await img.decode();
+        if (my !== run) return;
         tex = new THREE.Texture(img);
         tex.colorSpace = THREE.SRGBColorSpace;
         tex.generateMipmaps = true;
@@ -245,7 +298,7 @@ export function createTour(app, three, model) {
         tex.anisotropy = Math.min(4, three.renderer.capabilities.getMaxAnisotropy());
         tex.needsUpdate = true;
       } catch {
-        renderOverlay(s, null);
+        renderOverlay(s, null, my);
         return;
       }
       while (cache.size >= MAX_TEXTURES) {
@@ -264,9 +317,14 @@ export function createTour(app, three, model) {
     const viewH = 2 * halfTan * Math.max(4, s.distance - 3.0);
     const viewW = viewH * camera.aspect;
     const ar = (clip.width || 3) / (clip.height || 4);
-    let h = Math.min(4.5, viewH * 0.62);
+    // On a phone the stage is a short strip and the story card already holds the
+    // foot of it. A clipping at desktop size covered the loom outright, so there
+    // was nothing left to place the evidence against. Here it is a thumbnail, and
+    // it sits high, so a band of cloth stays in view under it.
+    const narrow = three.canvas.getBoundingClientRect().width < 700;
+    let h = Math.min(narrow ? 2.6 : 4.5, viewH * (narrow ? 0.34 : 0.62));
     let w = h * ar;
-    const maxW = viewW * 0.36;
+    const maxW = viewW * (narrow ? 0.5 : 0.36);
     if (w > maxW) { w = maxW; h = w / ar; }
     const geo = new THREE.PlaneGeometry(w, h, 8, 6);
     const mat = new THREE.ShaderMaterial({
@@ -284,7 +342,7 @@ export function createTour(app, three, model) {
     const right = s.tx + viewW / 2 - w / 2 - pad;
     const px = Math.min(right, Math.max(left, s.tx + viewW * 0.25));
     const py = Math.min(s.ty + viewH / 2 - h / 2 - pad,
-      Math.max(s.ty - viewH / 2 + h / 2 + pad, s.ty));
+      Math.max(s.ty - viewH / 2 + h / 2 + pad, s.ty + (narrow ? viewH * 0.2 : 0)));
     panelMesh.position.set(px, py, 3.0);
     panelMesh.scale.y = reduced() ? 1 : 0.001;
     scene.add(panelMesh);
@@ -297,7 +355,8 @@ export function createTour(app, three, model) {
       scene.add(frameLines);
     }
     if (!reduced()) await unfurl(panelMesh);
-    renderOverlay(s, clip);
+    if (my !== run) { disposePanel(); return; }
+    renderOverlay(s, clip, my);
     app.needsRender = true;
   }
 
@@ -321,7 +380,8 @@ export function createTour(app, three, model) {
 
   // ---- DOM overlay and cards. All text lives here, never in the canvas. ----
 
-  function renderOverlay(s, clip) {
+  function renderOverlay(s, clip, my) {
+    if (my !== undefined && my !== run) return;
     if (!clip) {
       // Citation-only stop. The normal case, and it must look deliberate.
       // The description is already the body of the card on the left, so this
@@ -336,14 +396,14 @@ export function createTour(app, three, model) {
       const citationOnly = rights.length > 0 && rights.every((r) => r === 'metadata_only');
       overlay.innerHTML = `<figure class="cite-only">
         <hr class="rail-wood">
-        ${cites.map((c) => `<cite>${esc(c)}</cite>`).join('')}
+        ${cites.map((c) => `<cite>Source: ${esc(c)}</cite>`).join('')}
         ${citationOnly ? '<p class="rights">The source is a printed bibliography. We quote it; we do not reproduce the page.</p>' : ''}
       </figure>`;
     } else {
       overlay.innerHTML = `<figure>
         <img src="${esc(clip.webPath)}" alt="${esc(clip.altText)}" width="${clip.width || ''}" height="${clip.height || ''}" hidden>
         <figcaption>${esc(clip.caption)}</figcaption>
-        <cite>${esc(clip.citation)}</cite>
+        <cite>Source: ${esc(clip.citation)}</cite>
         ${clip.rightsStatus === 'crop_first' ? '<p class="rights">clip · Cropped detail. Full page not reproduced.</p>' : ''}
       </figure>`;
     }
@@ -382,9 +442,17 @@ export function createTour(app, three, model) {
     const pad = 16;
     const w = overlay.offsetWidth;
     const h = overlay.offsetHeight;
-    const minTop = 72;
+    // The keep-out bands are measured and published on the stage, so the caption
+    // is clamped to the loom itself. A fixed 72px guess was shorter than the two
+    // wrapped control rows, which let the card drift up onto the toolbar strip.
+    const px = (name, fallback) => {
+      const v = parseFloat(getComputedStyle(three.stage).getPropertyValue(name));
+      return Number.isFinite(v) ? v : fallback;
+    };
+    const minTop = px('--woven-chrome-h', 88) + pad;
+    const foot = Math.max(px('--woven-rail-h', 26), px('--woven-tourbar-h', 0)) + pad;
     const maxLeft = Math.max(pad, rect.width - w - pad);
-    const maxTop = Math.max(minTop, rect.height - h - 96);
+    const maxTop = Math.max(minTop, rect.height - h - foot);
     const clampL = (l) => Math.max(pad, Math.min(maxLeft, l));
     const clampT = (t) => Math.max(minTop, Math.min(maxTop, t));
 
@@ -421,13 +489,6 @@ export function createTour(app, three, model) {
   }
 
   function renderCard(s) {
-    if (s.kind === 'transit') {
-      cardBody.innerHTML = `<span class="band">${esc(s.fromBand)} → ${esc(s.toBand)}</span>`;
-      cardBody.scrollTop = 0;
-      card.hidden = false;
-      updateMore();
-      return;
-    }
     const th = s.threadId != null ? model.byId.get(s.threadId) : null;
     cardBody.innerHTML = `
       <h3>${esc(s.event.title)}</h3>
@@ -445,17 +506,23 @@ export function createTour(app, three, model) {
 
   function renderClose() {
     clearTimer();
+    // The way out of the end state is one control, in the bar, and it reads
+    // "back to the loom". A second button beside it doing the same thing under
+    // a different name is a choice the reader does not have.
+    run++;
+    closed = true;
+    disposePanel();
+    hideTransit();
     cardBody.innerHTML = `
       <h3>${esc(tour.title)}</h3>
       <p>${esc(tour.thread)}</p>
-      <p><button type="button" class="woven-btn" data-act="ghost">Show what did not survive</button>
-         <button type="button" class="woven-btn" data-act="exit">Exit this thread</button></p>`;
+      <p><button type="button" class="woven-btn" data-act="ghost">Show what did not survive</button></p>`;
     card.hidden = false;
     cardBody.scrollTop = 0;
     updateMore();
     cardBody.querySelector('[data-act="ghost"]').addEventListener('click', () => { exit(); app.showGhost(); });
-    cardBody.querySelector('[data-act="exit"]').addEventListener('click', exit);
     overlay.hidden = true;
+    renderBar();
   }
 
   function renderBar(focusAct) {
@@ -468,7 +535,7 @@ export function createTour(app, three, model) {
     // On the last stop there is nowhere further to go, so "next stop" is not
     // offered as a control that does nothing. The end of a thread is a place,
     // and it says so and gives the reader the way out.
-    const atEnd = index >= stops.length - 1;
+    const atEnd = closed;
     bar.innerHTML = `
       ${reduced() || atEnd ? '' : `<button type="button" class="woven-btn" data-act="play" aria-pressed="${paused ? 'true' : 'false'}">${paused ? 'Resume' : 'Pause'}</button>`}
       <button type="button" class="woven-btn" data-act="prev"${index === 0 ? ' disabled' : ''}>Previous stop</button>
@@ -478,7 +545,7 @@ export function createTour(app, three, model) {
       <span class="tour-title">${esc(tour.title)}${tour.strength === 'weak' ? ' · Thinly sourced' : ''}</span>
       <span class="tour-counter">${atEnd ? 'End of thread' : `Stop ${n} of ${total}`} · ${esc(stops[index].dateLabel || '')}</span>
       <span id="woven-rail" aria-hidden="true">${Array.from({ length: total }, (_, i) => `<i class="${i < n ? 'on' : ''}"></i>`).join('')}</span>
-      <button type="button" class="woven-btn" data-act="exit">Exit this thread</button>`;
+      ${atEnd ? '' : '<button type="button" class="woven-btn" data-act="exit" aria-label="Exit this thread"><span class="lbl-full">Exit this thread</span><span class="lbl-short">Exit</span></button>'}`;
     bar.hidden = false;
     const end = bar.querySelector('[data-act="end"]');
     if (end) end.addEventListener('click', exit);
@@ -494,7 +561,8 @@ export function createTour(app, three, model) {
       });
     }
     bar.querySelector('[data-act="prev"]').addEventListener('click', prev);
-    bar.querySelector('[data-act="exit"]').addEventListener('click', exit);
+    const exitBtn = bar.querySelector('[data-act="exit"]');
+    if (exitBtn) exitBtn.addEventListener('click', exit);
     if (focusAct) {
       const back = bar.querySelector(`[data-act="${focusAct}"]`);
       if (back) back.focus();

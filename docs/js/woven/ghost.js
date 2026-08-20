@@ -119,9 +119,11 @@ export function createGhost(app, three, model) {
   function showCard(which) {
     if (which === 'open') {
       cardEl.innerHTML = `<div class="inner">
+        <div class="card-scroll">
         <h3>What did not survive</h3>
         <p>${model.counts.ghost} of these papers exist now as a single line in a catalog — a title, a city, a range of years, recorded by a librarian who held the issue we cannot find. No page, no masthead, no photograph. They are woven into the same cloth as everything else, thin and unfinished, because an absence in the record is not an absence in the history. Their names follow.</p>
         <p><button type="button" class="woven-btn" data-act="skip">Skip to the list</button></p>
+        </div>
       </div>`;
       cardEl.hidden = false;
       cardEl.querySelector('[data-act="skip"]').addEventListener('click', () => {
@@ -130,10 +132,12 @@ export function createGhost(app, three, model) {
       });
     } else {
       cardEl.innerHTML = `<div class="inner">
+        <div class="card-scroll">
         <h3>That is what the record lost.</h3>
         <p>It is not the same as what happened.</p>
         <p><button type="button" class="woven-btn" data-act="back">Return to the loom</button>
            <button type="button" class="woven-btn" data-act="list">Read the list again</button></p>
+        </div>
       </div>`;
       cardEl.hidden = false;
       cardEl.querySelector('[data-act="back"]').addEventListener('click', exit);

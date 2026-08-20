@@ -272,6 +272,27 @@ body.twin-primary #woven-stage { display: none; }
 #woven-rail { display: flex; gap: 3px; }
 #woven-rail i { width: 10px; height: 3px; background: var(--walnut-600); display: block; }
 #woven-rail i.on { background: var(--stain); }
+#woven-tourbar [data-act="exit"] .lbl-short { display: none; }
+
+/* The era crossing, named. It sits top-centre, clear of the era markers on the
+   left edge, and it reads as a signpost rather than as a stray box. */
+#woven-transit {
+  position: absolute; z-index: 8; left: 50%; transform: translateX(-50%);
+  top: calc(var(--woven-chrome-h, 5.5rem) + 0.7rem);
+  display: flex; align-items: baseline; gap: 0.55rem; pointer-events: none;
+  background: var(--walnut-700); border: 1px solid var(--oak-500);
+  border-left: 3px solid var(--stain); padding: 0.45rem 0.85rem;
+  max-width: min(24rem, 86vw);
+}
+#woven-transit[hidden] { display: none; }
+#woven-transit .tr-eyebrow {
+  flex: none; font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.14em; color: var(--linen-300);
+}
+#woven-transit b {
+  font-family: var(--mono); font-size: 13px; letter-spacing: 0.06em;
+  color: var(--linen-50); white-space: nowrap;
+}
 
 #woven-overlay { position: absolute; z-index: 7; max-width: 26rem; pointer-events: auto; }
 #woven-overlay[hidden] { display: none; }
@@ -326,36 +347,50 @@ body.twin-primary #woven-stage { display: none; }
 #woven-ghostcard, #woven-help-card, #woven-tourpicker {
   position: absolute; left: 0; right: 0; bottom: 0; z-index: 10;
   top: var(--woven-chrome-h, 5.5rem);
-  display: grid; place-items: center; background: rgba(11, 8, 6, 0.9); padding: 1rem;
-  overflow-y: auto; overscroll-behavior: contain;
+  /* Flex, not grid, and centred the safe way. A grid item taller than its track
+     overflows off both ends, which put the heading and the way out above the top
+     edge of the stage where no pointer can reach them. */
+  display: flex; align-items: safe center; justify-content: center;
+  background: rgba(11, 8, 6, 0.9); padding: 1rem;
+  overflow: hidden; overscroll-behavior: contain;
 }
 #woven-ghostcard[hidden], #woven-help-card[hidden], #woven-tourpicker[hidden] { display: none; }
-/* Capped and scrolled inside itself. The about copy runs past the height of a
-   laptop window, which put the way out below the fold. */
+/* Capped against the box the reader can actually see — the stage between the
+   control bars and the foot — never against the window. A viewport cap measured
+   765px inside a 446px stage and put the way out off screen. */
 #woven-ghostcard .inner, #woven-help-card .inner, #woven-tourpicker .inner {
   max-width: 34rem; width: 100%; background: var(--walnut-800);
-  border: 1px solid var(--walnut-600); padding: 1.25rem;
-  max-height: 85vh; overflow-y: auto; overscroll-behavior: contain;
-  scrollbar-width: auto; scrollbar-color: var(--oak-400) var(--walnut-700);
+  border: 1px solid var(--walnut-600);
+  max-height: 100%; min-height: 0;
+  display: flex; flex-direction: column; overflow: hidden;
 }
-#woven-help-card .inner::-webkit-scrollbar,
-#woven-tourpicker .inner::-webkit-scrollbar,
-#woven-ghostcard .inner::-webkit-scrollbar { width: 10px; }
-#woven-help-card .inner::-webkit-scrollbar-track,
-#woven-tourpicker .inner::-webkit-scrollbar-track,
-#woven-ghostcard .inner::-webkit-scrollbar-track { background: var(--walnut-700); }
-#woven-help-card .inner::-webkit-scrollbar-thumb,
-#woven-tourpicker .inner::-webkit-scrollbar-thumb,
-#woven-ghostcard .inner::-webkit-scrollbar-thumb { background: var(--oak-400); }
-/* The title and the close control ride at the top of the scroll, so closing is
-   one reach away wherever the reader has got to. */
-#woven-help-card .card-head {
-  position: sticky; top: -1.25rem; z-index: 2;
+/* The head — title and Close — is a fixed row at the top of the card. Only the
+   body under it scrolls, so closing is always one reach away. */
+#woven-ghostcard .card-head, #woven-help-card .card-head, #woven-tourpicker .card-head {
+  flex: 0 0 auto;
   display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem;
-  margin: -1.25rem -1.25rem 0; padding: 1.25rem 1.25rem 0.6rem;
+  padding: 1rem 1.25rem 0.7rem;
   background: var(--walnut-800); border-bottom: 1px solid var(--walnut-600);
 }
-#woven-help-card .card-head .woven-btn { flex: 0 0 auto; }
+#woven-ghostcard .card-head .woven-btn,
+#woven-help-card .card-head .woven-btn,
+#woven-tourpicker .card-head .woven-btn { flex: 0 0 auto; }
+#woven-ghostcard .card-scroll, #woven-help-card .card-scroll, #woven-tourpicker .card-scroll {
+  flex: 1 1 auto; min-height: 0; padding: 1rem 1.25rem 1.25rem;
+  overflow-y: auto; overscroll-behavior: contain;
+  scrollbar-width: auto; scrollbar-color: var(--oak-400) var(--walnut-700);
+}
+#woven-help-card .card-scroll::-webkit-scrollbar,
+#woven-tourpicker .card-scroll::-webkit-scrollbar,
+#woven-ghostcard .card-scroll::-webkit-scrollbar { width: 10px; }
+#woven-help-card .card-scroll::-webkit-scrollbar-track,
+#woven-tourpicker .card-scroll::-webkit-scrollbar-track,
+#woven-ghostcard .card-scroll::-webkit-scrollbar-track { background: var(--walnut-700); }
+#woven-help-card .card-scroll::-webkit-scrollbar-thumb,
+#woven-tourpicker .card-scroll::-webkit-scrollbar-thumb,
+#woven-ghostcard .card-scroll::-webkit-scrollbar-thumb { background: var(--oak-400); }
+/* A card with no head of its own still gets its top padding back. */
+#woven-ghostcard .inner > .card-scroll:first-child { padding-top: 1.25rem; }
 #woven-ghostcard h3, #woven-help-card h3, #woven-tourpicker h3 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 800; font-size: 24px; color: var(--linen-50); }
 #woven-ghostcard p, #woven-help-card p, #woven-tourpicker p { margin-top: 0.75rem; line-height: 1.6; color: var(--linen-200); }
 #woven-help-card h4, #woven-tourpicker h4 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 700; font-size: 1rem; color: var(--linen-100); margin-top: 1.1rem; }
@@ -463,8 +498,29 @@ body.twin-primary #woven-stage { display: none; }
   #woven-tourbar > * { flex: 0 0 auto; white-space: nowrap; }
   #woven-tourbar .tour-title, #woven-tourbar #woven-rail { display: none; }
   #woven-tourbar .woven-btn { padding: 0.4rem 0.6rem; }
+  /* The way out comes first, then the way on. A row that scrolls sideways put
+     "exit this thread" past the right edge, where a reader stuck in a story
+     cannot find it. The counter is the one thing here that may be cut short. */
+  #woven-tourbar [data-act="exit"] { order: -3; }
+  #woven-tourbar [data-act="next"], #woven-tourbar [data-act="end"] { order: -2; }
+  /* Pause is a first-class control, not something to be found by scrolling: on a
+     phone it sits in the visible run of the bar beside "next stop". */
+  #woven-tourbar [data-act="play"] { order: -1; }
+  #woven-tourbar .tour-counter { order: -1; flex: 0 1 auto; min-width: 5rem; overflow: hidden; text-overflow: ellipsis; }
+  /* The way out keeps its meaning in one word here, so the stop number, the way
+     on, and the pause control all fit in the visible run of the bar. The full
+     label stays as the button's accessible name. */
+  #woven-tourbar [data-act="exit"] .lbl-full { display: none; }
+  #woven-tourbar [data-act="exit"] .lbl-short { display: inline; }
+  /* "Previous stop" is dropped here rather than parked off the right edge. The
+     card, the counter, and the browser's own back gesture all still work. */
+  #woven-tourbar [data-act="prev"] { display: none; }
   .thread-label { max-width: 58vw; }
   .thread-label b { font-size: 12px; }
+  /* The ghost roll takes the right of the stage from 10.5rem in. The longest
+     marker, the undated band, ran under it. It wraps here instead of reaching
+     across, so the band name and its count both stay readable. */
+  .era-marker { max-width: 8.5rem; white-space: normal; line-height: 1.3; }
   /* An opened key floats over the cloth here, so it never takes the whole
      stage: it stops short of the era controls and scrolls inside itself. It also
      sits above the year rail rather than on top of it. */
@@ -492,6 +548,18 @@ body.twin-primary #woven-stage { display: none; }
   #woven-card h3 { font-size: 18px; }
   #woven-card p { font-size: 14px; line-height: 1.5; margin-top: 0.45rem; }
   #woven-card .card-more { margin: 0 -0.75rem -0.7rem; padding: 0.45rem 0.75rem; }
+}
+
+@media (max-width: 700px) {
+  /* On a phone the stage is a short strip, so a backdrop drawn inside it covered
+     almost nothing: the heading and the toolbar behind the panel still took the
+     tap. These cards cover the window while they are open. The panel is still
+     held below the control bars, so it reads as belonging to the stage. */
+  #woven-ghostcard, #woven-help-card, #woven-tourpicker {
+    position: fixed; inset: 0; top: 0;
+    padding: calc(var(--woven-chrome-h, 5.5rem) + 0.75rem) 0.75rem 0.75rem;
+    background: rgba(11, 8, 6, 0.94);
+  }
 }
 
 @media (max-width: 640px) {

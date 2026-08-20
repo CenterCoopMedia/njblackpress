@@ -129,7 +129,10 @@ async function startScene(model) {
     minAzimuthAngle: -1e-4, maxAzimuthAngle: 1e-4,
     // The far limit has to clear the whole cloth on a 375px window, where the
     // frustum is narrow and fitting 146 years across takes a long lens.
-    minDistance: 8, maxDistance: 260,
+    // The near limit is where the wheel stops. At 8 it stopped one notch past the
+    // era framings, which reads as a dead scroll wheel rather than as a limit.
+    // At 4 a single thread and its knots fill the stage before it stops.
+    minDistance: 4, maxDistance: 260,
     enablePan: true, screenSpacePanning: true,
     zoomSpeed: 0.7
   });
@@ -691,15 +694,22 @@ async function startScene(model) {
   const btnTours = document.getElementById('btn-tours');
 
   function renderTourPicker() {
+    // The title and the way out are a fixed head. The thirteen stories scroll
+    // under it, so Close never sits at the foot of a list.
     tourPicker.innerHTML = `<div class="inner">
-      <h3>Guided threads</h3>
+      <div class="card-head">
+        <h3>Guided threads</h3>
+        <button type="button" class="woven-btn" data-close>Close</button>
+      </div>
+      <div class="card-scroll">
       <p>Each one walks the loom through a run of documented events, stopping at the evidence.</p>
       <ul>${model.tours.map((t) => `<li>
         <span class="tp-title">${escapeHtml(t.title)}</span>
         <span class="tp-meta">${escapeHtml(t.era)} · ${t.stops.length} stop${t.stops.length === 1 ? '' : 's'}${t.strength === 'weak' ? ' · thinly sourced' : ''}</span>
         <button type="button" class="woven-btn" data-play="${escapeHtml(t.id)}">Play this thread</button>
       </li>`).join('')}</ul>
-      <p><button type="button" class="woven-btn" data-close>Close</button></p>`;
+      </div>
+    </div>`;
     tourPicker.querySelectorAll('[data-play]').forEach((b) => {
       b.addEventListener('click', () => {
         closeTourPicker();
@@ -707,6 +717,8 @@ async function startScene(model) {
       });
     });
     tourPicker.querySelector('[data-close]').addEventListener('click', closeTourPicker);
+    // Touch has no Escape key, so a tap on the dark ground closes the picker.
+    tourPicker.addEventListener('click', (e) => { if (e.target === tourPicker) closeTourPicker(); });
   }
 
   function closeTourPicker() {
@@ -1050,6 +1062,7 @@ function toggleHelp() {
         <h3>About this loom</h3>
         <button type="button" class="woven-btn" data-close>Close</button>
       </div>
+      <div class="card-scroll">
       <p>This is every Black-owned and Black-focused publication we have found in New Jersey, drawn on one axis of time. Left to right is 1880 to 2026. Each horizontal thread is one publication, running from the year it was founded to the year it stopped, and the rows are grouped by the decade each paper began. A thicker thread means more surviving material we can show you. A faint, frayed one means the paper survives only as a line in a catalog.</p>
       <h4>By pointer</h4>
       <dl>
@@ -1069,11 +1082,33 @@ function toggleHelp() {
         <dt>T · G · 0</dt><dd>guided threads · what did not survive · reset the view</dd>
         <dt>Escape</dt><dd>close this panel</dd>
       </dl>
+      </div>
     </div>`;
     card.querySelector('[data-close]').addEventListener('click', () => { card.hidden = true; });
+    // Touch has no Escape key, so a tap on the dark ground behind the card
+    // closes it too. Taps inside the card are not the backdrop.
+    card.addEventListener('click', (e) => { if (e.target === card) card.hidden = true; });
   }
   card.hidden = !card.hidden;
   if (!card.hidden) card.querySelector('[data-close]').focus({ preventScroll: true });
+}
+
+// A tap on the backdrop closes the card it belongs to. The backdrop covers the
+// window, so a tap that misses the panel is a tap meant to dismiss it, not a tap
+// meant for the heading or a toolbar button behind it.
+for (const id of ['woven-help-card', 'woven-tourpicker', 'woven-ghostcard']) {
+  const el = document.getElementById(id);
+  if (!el) continue;
+  el.addEventListener('click', (e) => {
+    if (e.target !== el) return;
+    el.hidden = true;
+    if (id === 'woven-tourpicker') {
+      const btn = document.getElementById('btn-tours');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    }
+    const canvas = document.getElementById('woven-canvas');
+    if (canvas) canvas.focus({ preventScroll: true });
+  });
 }
 
 // Escape closes whatever is over the stage, wherever the focus happens to be.

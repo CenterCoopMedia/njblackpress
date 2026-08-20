@@ -129,64 +129,124 @@ export function createLabels(app, three, model) {
       // already dimmed; naming it would fight the story for attention.
       drawNames(dist, new Set(model.tours.find((t) => t.id === app.state.tourId)?.threadIds || []));
       layer.dataset.mode = 'tour';
+      cullEras();
       return;
     }
     if (dist > LABEL_DISTANCE) {
       layer.textContent = '';
       layer.dataset.mode = 'far';
+      cullEras();
       return;
     }
     layer.dataset.mode = 'near';
     drawNames(dist);
+    cullEras();
+  }
+
+  // A publication name carries a title, a city, and two dates; a group label
+  // carries a decade and a count. Where the two land on the same line the name
+  // wins and the group label is taken away for that frame.
+  function cullEras() {
+    const marks = Array.from(eraLayer.children);
+    if (!marks.length) return;
+    const names = Array.from(layer.children).map((el) => el.getBoundingClientRect());
+    for (const m of marks) {
+      let hidden = false;
+      if (names.length) {
+        const b = m.getBoundingClientRect();
+        hidden = names.some((l) =>
+          l.left < b.right + 6 && l.right > b.left - 6 &&
+          l.top < b.bottom + 2 && l.bottom > b.top - 2);
+      }
+      m.style.visibility = hidden ? 'hidden' : '';
+    }
+  }
+
+  // A marker's height depends on its own text, on the type size in force, and on
+  // how wide the stage is, because on a phone it wraps. It is measured once for
+  // each of those combinations and remembered, so a camera move does not remeasure
+  // the whole column every frame.
+  const markerH = new Map();
+  function measureMarker(text, compact) {
+    const key = `${compact ? 'c' : 'f'}|${Math.round(rect.width)}|${text}`;
+    let h = markerH.get(key);
+    if (h == null) {
+      const probe = document.createElement('span');
+      probe.className = compact ? 'era-marker is-compact' : 'era-marker';
+      probe.textContent = text;
+      probe.style.top = '-9999px';
+      probe.style.visibility = 'hidden';
+      eraLayer.appendChild(probe);
+      h = probe.offsetHeight || (compact ? MIN_COMPACT_PX : MIN_ROW_PX);
+      probe.remove();
+      markerH.set(key, h);
+    }
+    return h;
   }
 
   function drawEras() {
-    const frag = document.createDocumentFragment();
-    // Every era band that holds publications gets a label, at every zoom. A
-    // dropped marker made the counts on screen add up to less than the archive
-    // holds, which reads as missing data rather than as crowding. Zoomed right
-    // out the bands sit closer together than a marker is tall, so the markers
-    // shrink and are pushed apart into a legible column instead of being culled.
+    // Every era band that holds publications gets a label wherever there is room
+    // for it whole. A marker is not 23 pixels tall everywhere: on a phone it
+    // wraps to two or three lines, so the row pitch is measured from the markers
+    // that were actually drawn, never assumed. Where the column still will not
+    // fit, markers are dropped rather than printed through one another — a
+    // sliced count reads as broken, a missing one reads as crowding.
     const live = model.bands.filter((b) => b.count);
     if (!live.length) { eraLayer.textContent = ''; eraBoxes = []; return; }
 
     const top = guard.top;
-    // A marker is 23px tall at full size and 16px in its compact form. On a
-    // short window the compact stack is taller than the band between the control
-    // bars and the year rail, so it is allowed to run down over the rail rather
-    // than print each marker through the one above it.
     let bottom = rect.height - guard.bottom;
-    const compact = live.length * MIN_ROW_PX > bottom - top;
-    if (compact && live.length * MIN_COMPACT_PX > bottom - top) {
-      bottom = Math.max(bottom, rect.height - 4);
-    }
-    const freeH = Math.max(1, bottom - top);
-    const rowH = Math.min(compact ? MIN_COMPACT_PX : MIN_ROW_PX, freeH / live.length);
+    let freeH = Math.max(1, bottom - top);
 
-    const ys = live.map((band) => project(three.controls.target.x, band.top - band.height / 2).y);
+    const GAP = 3;
+    const label = (band) => `${band.label} · ${band.count}`;
+    const stackH = (bs, compact) =>
+      bs.reduce((sum, b) => sum + measureMarker(label(b), compact), 0) + GAP * (bs.length - 1);
+
+    let bands = live;
+    let compact = stackH(live, false) > freeH;
+    // A compact stack that still overflows is allowed to run down over the year
+    // rail before any band loses its name.
+    if (compact && stackH(live, true) > freeH) {
+      bottom = Math.max(bottom, rect.height - 4);
+      freeH = Math.max(1, bottom - top);
+    }
+    // Still too tall: thin the column out, keeping an even spread.
+    let loops = 0;
+    while (stackH(bands, compact) > freeH && bands.length > 1 && loops++ < 8) {
+      const keep = bands.filter((_, i) => i % 2 === 0);
+      bands = keep.length === bands.length ? bands.slice(0, -1) : keep;
+    }
+
+    const frag = document.createDocumentFragment();
+    const els = bands.map((band) => {
+      const el = document.createElement('span');
+      el.className = compact ? 'era-marker is-compact' : 'era-marker';
+      el.textContent = label(band);
+      frag.appendChild(el);
+      return el;
+    });
+    eraLayer.textContent = '';
+    eraLayer.appendChild(frag);
+
+    const heights = bands.map((b) => measureMarker(label(b), compact));
+    const ys = bands.map((band) => project(three.controls.target.x, band.top - band.height / 2).y);
     // Forward pass pushes each marker below the one above it, backward pass
     // pulls the stack back inside the free band. Order is never changed, so the
     // markers stay in the same sequence as the bands they name.
     let prev = -Infinity;
     for (let i = 0; i < ys.length; i++) {
-      ys[i] = Math.max(ys[i], prev + rowH, top + rowH / 2);
+      const need = prev === -Infinity ? -Infinity : prev + heights[i - 1] / 2 + GAP + heights[i] / 2;
+      ys[i] = Math.max(ys[i], need, top + heights[i] / 2);
       prev = ys[i];
     }
     let nextY = Infinity;
     for (let i = ys.length - 1; i >= 0; i--) {
-      ys[i] = Math.min(ys[i], nextY - rowH, bottom - rowH / 2);
+      const cap = nextY === Infinity ? Infinity : nextY - heights[i + 1] / 2 - GAP - heights[i] / 2;
+      ys[i] = Math.min(ys[i], cap, bottom - heights[i] / 2);
       nextY = ys[i];
     }
-
-    live.forEach((band, i) => {
-      const el = document.createElement('span');
-      el.className = compact ? 'era-marker is-compact' : 'era-marker';
-      el.textContent = `${band.label} · ${band.count}`;
-      el.style.top = `${Math.round(ys[i])}px`;
-      frag.appendChild(el);
-    });
-    eraLayer.textContent = '';
-    eraLayer.appendChild(frag);
+    els.forEach((el, i) => { el.style.top = `${Math.round(ys[i])}px`; });
 
     // Measured after layout so a thread label can be pushed clear of an era
     // marker instead of printing through it.
