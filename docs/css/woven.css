@@ -293,6 +293,11 @@ body.twin-primary #woven-stage { display: none; }
   font-family: var(--mono); font-size: 13px; letter-spacing: 0.06em;
   color: var(--linen-50); white-space: nowrap;
 }
+/* The lighter voice for a long move that stays inside one era band: no band
+   boundary crossed, so it says only where it is headed, and says it quietly. */
+#woven-transit.tr-light {
+  padding: 0.35rem 0.7rem; opacity: 0.88; border-left-color: var(--oak-400);
+}
 
 #woven-overlay { position: absolute; z-index: 7; max-width: 26rem; pointer-events: auto; }
 #woven-overlay[hidden] { display: none; }
@@ -420,6 +425,18 @@ body.twin-primary #woven-stage { display: none; }
 #woven-ghostnames .g-head span { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--linen-300); }
 
 #woven-notice { position: absolute; left: 0.9rem; top: calc(var(--woven-chrome-h, 5.5rem) + 0.6rem); z-index: 8; background: var(--walnut-700); border: 1px solid var(--walnut-600); padding: 0.6rem 0.8rem; font-family: var(--mono); font-size: 11px; color: var(--linen-200); }
+
+/* A deep wheel-zoom into a gap between threads is a blank stretch of cloth
+   with nothing on it. This says so, centred over that blank stretch, and it
+   is gone the moment a thread is back in view — it never blocks a click. */
+#woven-empty-hint {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  z-index: 6; pointer-events: none; text-align: center;
+  background: var(--walnut-700); border: 1px solid var(--walnut-600);
+  padding: 0.6rem 1rem; font-family: var(--mono); font-size: 12px;
+  letter-spacing: 0.03em; color: var(--linen-200);
+}
+#woven-empty-hint[hidden] { display: none; }
 #woven-notice[hidden] { display: none; }
 
 /* ---------- twin ---------- */

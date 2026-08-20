@@ -654,6 +654,14 @@ async function startScene(model) {
   // camera, not from the last button anyone pressed. Nothing about the counts is
   // typed into the page; the data says how many.
   function updateEraNow() {
+    // This reads which founding-decade rows are vertically on screen, which is
+    // not the same question as "what year is this stop": a tour holds the
+    // camera on one thread's row while its stops range freely over that
+    // thread's events, so the two can name different years — "In view: 1950
+    // to 1989" over a stop card already reading 1993. While a tour plays, the
+    // chip is written from the stop instead; see setEraNow, called from tour.js
+    // once each stop's camera move settles.
+    if (app.tour && app.tour.isPlaying) return;
     const seen = visibleBands();
     const count = seen.reduce((s, b) => s + b.count, 0);
     const dated = seen.filter((b) => b.from !== null);
@@ -671,6 +679,48 @@ async function startScene(model) {
     if (text === eraNowText) return;
     eraNowText = text;
     document.getElementById('woven-era-now').textContent = text;
+  }
+
+  // Called from tour.js once a stop's camera move settles, so the chip names
+  // the year the reader is actually looking at rather than the founding-decade
+  // row the camera happens to sit on.
+  app.setEraNow = function setEraNow(text) {
+    if (text === eraNowText) return;
+    eraNowText = text;
+    document.getElementById('woven-era-now').textContent = text;
+  };
+
+  // A publication row you can no longer see is not always a bug — a hard
+  // wheel zoom into the gap between two era bands, or off either end of a
+  // short thread, is a real empty patch of cloth. Left silent that reads as
+  // broken; this names it and says how to get back, and it is gone the
+  // instant a thread is back in the view.
+  const emptyHint = document.getElementById('woven-empty-hint');
+  let emptySince = 0;
+  function updateEmptyHint() {
+    if ((app.tour && app.tour.isPlaying) || (app.ghost && app.ghost.isPlaying)) {
+      emptySince = 0;
+      if (!emptyHint.hidden) emptyHint.hidden = true;
+      return;
+    }
+    const k = keepOut();
+    const dist = camera.position.distanceTo(controls.target);
+    const vFov = (camera.fov * Math.PI) / 180;
+    const hFov = 2 * Math.atan(Math.tan(vFov / 2) * camera.aspect);
+    const worldPerPxY = (2 * Math.tan(vFov / 2) * dist) / k.height;
+    const worldPerPxX = (2 * Math.tan(hFov / 2) * dist) / k.width;
+    const yTop = controls.target.y + (k.height / 2 - k.top) * worldPerPxY;
+    const yBot = controls.target.y - (k.height / 2 - k.bottom) * worldPerPxY;
+    const xLeft = controls.target.x - (k.width / 2) * worldPerPxX;
+    const xRight = controls.target.x + (k.width / 2) * worldPerPxX;
+    const any = model.threads.some((t) => t.y <= yTop && t.y >= yBot && t.x1 >= xLeft && t.x0 <= xRight);
+    if (any) {
+      emptySince = 0;
+      if (!emptyHint.hidden) emptyHint.hidden = true;
+      return;
+    }
+    if (!emptySince) emptySince = performance.now();
+    emptyHint.hidden = performance.now() - emptySince < 500;
   }
 
   function stepReadingBand(d) {
@@ -1009,6 +1059,10 @@ async function startScene(model) {
     const damping = controls.update();
     const active = damping || app.tween || (app.tour && app.tour.isAnimating) ||
       (app.ghost && app.ghost.isPlaying);
+    // Runs every animation frame, not only rendered ones — the 0.5s dwell it
+    // times has to keep counting while the camera sits still after a zoom,
+    // which is exactly the moment the render loop below stops doing anything.
+    updateEmptyHint();
     if (!app.needsRender && !active) { last = now; return; }
     renderer.render(scene, camera);
     if (app.labels) app.labels.update();

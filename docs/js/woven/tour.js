@@ -4,7 +4,7 @@
 import * as THREE from 'three';
 import { PANEL_VERT, PANEL_FRAG } from './shaders.js';
 import { announce, syncTwin } from './twin.js';
-import { easeInOutCubic } from './layout.js';
+import { easeInOutCubic, X_PER_YEAR } from './layout.js';
 
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -15,6 +15,13 @@ const TRANSIT_MS = 1600;
 // short: the reader pressed "next stop", not "watch the loom".
 const TRANSIT_TRAVEL_MS = 850;
 const MAX_TEXTURES = 4;
+// A local scene inside one thread usually moves in a matter of weeks to a
+// couple of years. A fixed reference beats measuring each tour against its
+// own average: a two-stop tour has no "average" but the one jump it makes,
+// and a tour with one big outlier just drags its own average up to meet it.
+// Either way the jump stops looking like one.
+const NORMAL_STOP_GAP_YEARS = 6;
+const LONG_MOVE_YEARS = NORMAL_STOP_GAP_YEARS * 1.5;
 
 export function createTour(app, three, model) {
   const { scene, camera, controls, stateTex, knots } = three;
@@ -66,17 +73,30 @@ export function createTour(app, three, model) {
     // the stop, so the banner says so. "Traveling to 1900 to 1929" over a stop
     // dated 1938 reads as a wrong date.
     const dated = /^\d/.test(tr.toBand);
+    transitEl.classList.remove('tr-light');
     transitEl.innerHTML =
       `<span class="tr-eyebrow">${dated ? 'Traveling to papers founded' : 'Traveling to'}</span>` +
       `<b>${esc(tr.toBand)}</b>`;
     transitEl.hidden = false;
   }
-  function hideTransit() { transitEl.hidden = true; }
+  // A move between two stops in the same era band can still be a jump of a
+  // decade or two along one thread — a camera crossing that much empty cloth
+  // with no signpost reads as nothing happening. This is the same banner, in
+  // a lighter voice, naming only the year it is headed to.
+  function showLightTransit(lm) {
+    transitEl.classList.add('tr-light');
+    transitEl.innerHTML =
+      `<span class="tr-eyebrow">Moving ahead to</span><b>${esc(lm.label)}</b>`;
+    transitEl.hidden = false;
+  }
+  function hideTransit() { transitEl.hidden = true; transitEl.classList.remove('tr-light'); }
 
   const cache = new Map(); // webPath -> THREE.Texture, LRU by insertion order
   let panelMesh = null;
   let panelSize = { w: 0, h: 0 };
   let frameLines = null;
+  let loadingFrame = null;
+  let loadingEdge = null;
   let tour = null;
   let stops = [];
   let index = 0;
@@ -111,7 +131,11 @@ export function createTour(app, three, model) {
     index = 0;
     closed = false;
     playing = true;
-    paused = reduced();
+    // A tour always opens paused. The reader drives with "next stop"; the
+    // Play button starts autoplay only if they ask for it. Autoplaying on
+    // open made a manual "next stop" feel like it had skipped a stop, because
+    // the timer was already mid-dwell when the reader pressed it.
+    paused = true;
     preTourView = {
       target: [controls.target.x, controls.target.y, 0],
       position: [camera.position.x, camera.position.y, camera.position.z]
@@ -132,23 +156,35 @@ export function createTour(app, three, model) {
   function withTransits(t) {
     return t.stops.map((s, i) => {
       const prevStop = t.stops[i - 1];
-      if (!prevStop || !prevStop.band || !s.band || prevStop.band === s.band) return s;
-      const a = model.bands.find((b) => b.key === prevStop.band);
-      const b = model.bands.find((b2) => b2.key === s.band);
-      if (!a || !b) return s;
-      const box = {
-        minX: 0, maxX: 73,
-        minY: Math.min(a.top - a.height, b.top - b.height),
-        maxY: Math.max(a.top, b.top)
-      };
-      return Object.assign({}, s, {
-        transit: {
-          tx: (prevStop.tx + s.tx) / 2,
-          ty: (prevStop.ty + s.ty) / 2,
-          distance: app.fitDistance(box, 0.10),
-          fromBand: a.label, toBand: b.label
-        }
-      });
+      if (!prevStop) return s;
+      if (prevStop.band && s.band && prevStop.band !== s.band) {
+        const a = model.bands.find((b) => b.key === prevStop.band);
+        const b = model.bands.find((b2) => b2.key === s.band);
+        if (!a || !b) return s;
+        const box = {
+          minX: 0, maxX: 73,
+          minY: Math.min(a.top - a.height, b.top - b.height),
+          maxY: Math.max(a.top, b.top)
+        };
+        return Object.assign({}, s, {
+          transit: {
+            tx: (prevStop.tx + s.tx) / 2,
+            ty: (prevStop.ty + s.ty) / 2,
+            distance: app.fitDistance(box, 0.10),
+            fromBand: a.label, toBand: b.label
+          }
+        });
+      }
+      // Same band, or one end undated: still flag a jump of years along one
+      // thread, so the camera crossing that empty stretch of cloth reads as a
+      // deliberate move to somewhere — the 1976 to 1993 jump inside one band
+      // showed nothing, because only band crossings got a banner.
+      const yearsGap = Math.abs(s.tx - prevStop.tx) / X_PER_YEAR;
+      if (yearsGap > LONG_MOVE_YEARS) {
+        const year = /^\d{4}/.exec(String(s.dateLabel || ''));
+        return Object.assign({}, s, { longMove: { label: year ? year[0] : s.dateLabel } });
+      }
+      return s;
     });
   }
 
@@ -197,6 +233,9 @@ export function createTour(app, three, model) {
       announce(`Moving from ${s.transit.fromBand}, to ${s.transit.toBand}.`);
       await app.easeTo([s.transit.tx, s.transit.ty], s.transit.distance, TRANSIT_TRAVEL_MS);
       if (!playing || my !== run) { hideTransit(); return; }
+    } else if (s.longMove && forward && !reduced()) {
+      showLightTransit(s.longMove);
+      announce(`Moving ahead to ${s.longMove.label}.`);
     }
     await app.easeTo([s.tx, s.ty], s.distance, reduced() ? 0 : TRANSIT_MS);
     hideTransit();
@@ -204,6 +243,12 @@ export function createTour(app, three, model) {
     // clipping is still decoding. Once they have, this stop no longer has a
     // place on screen, so it stops here rather than drawing over the new one.
     if (!playing || my !== run) return;
+    // The "in view" chip is normally read from the camera's vertical position,
+    // which answers "which founding-decade row is this" rather than "what year
+    // is this stop" — the two can disagree for a thread whose events range
+    // over decades. Now that the camera has landed, the chip is written from
+    // the stop itself, so it always names the year the stop card does.
+    if (app.setEraNow) app.setEraNow(`In view: ${s.dateLabel || tour.era} · ${tour.stops.length} stop${tour.stops.length === 1 ? '' : 's'} in this thread`);
     await showPanel(s, my);
     if (my !== run) return;
     if (!playing) { disposePanel(); return; }
@@ -284,33 +329,12 @@ export function createTour(app, three, model) {
     disposePanel();
     const clip = s.clipping;
     if (!clip || !clip.webPath || !clip.altText) { renderOverlay(s, null, my); return; }
-    let tex = cache.get(clip.webPath);
-    if (!tex) {
-      try {
-        const img = new Image();
-        img.src = clip.webPath;
-        await img.decode();
-        if (my !== run) return;
-        tex = new THREE.Texture(img);
-        tex.colorSpace = THREE.SRGBColorSpace;
-        tex.generateMipmaps = true;
-        tex.minFilter = THREE.LinearMipmapLinearFilter;
-        tex.anisotropy = Math.min(4, three.renderer.capabilities.getMaxAnisotropy());
-        tex.needsUpdate = true;
-      } catch {
-        renderOverlay(s, null, my);
-        return;
-      }
-      while (cache.size >= MAX_TEXTURES) {
-        const oldest = cache.keys().next().value;
-        cache.get(oldest).dispose();
-        cache.delete(oldest);
-      }
-      cache.set(clip.webPath, tex);
-    }
+
     // The clipping is sized and placed to fit the view this stop ends at, not to
     // a fixed offset. On the last stop the fixed offset put the page off the
-    // right edge, where it is evidence nobody can read.
+    // right edge, where it is evidence nobody can read. All of this comes from
+    // the clipping's own recorded width and height, so it does not wait on the
+    // image itself to decode.
     const halfTan = Math.tan((camera.fov * Math.PI) / 360);
     // Measured on the plane the clipping actually sits on, three units in front
     // of the cloth, where it looks bigger than the cloth behind it.
@@ -326,14 +350,6 @@ export function createTour(app, three, model) {
     let w = h * ar;
     const maxW = viewW * (narrow ? 0.5 : 0.36);
     if (w > maxW) { w = maxW; h = w / ar; }
-    const geo = new THREE.PlaneGeometry(w, h, 8, 6);
-    const mat = new THREE.ShaderMaterial({
-      vertexShader: PANEL_VERT, fragmentShader: PANEL_FRAG,
-      uniforms: { uMap: { value: tex }, uTime: { value: 0 }, uOpacity: { value: 1 } },
-      transparent: true, side: THREE.DoubleSide
-    });
-    panelMesh = new THREE.Mesh(geo, mat);
-    panelSize = { w, h };
     // Always in the right half of the view, and always whole. The story card is
     // anchored to the left edge, so a clipping placed on the left is a clipping
     // behind the card; and a fixed offset ran the last stop off the right edge.
@@ -343,6 +359,46 @@ export function createTour(app, three, model) {
     const px = Math.min(right, Math.max(left, s.tx + viewW * 0.25));
     const py = Math.min(s.ty + viewH / 2 - h / 2 - pad,
       Math.max(s.ty - viewH / 2 + h / 2 + pad, s.ty + (narrow ? viewH * 0.2 : 0)));
+
+    let tex = cache.get(clip.webPath);
+    if (!tex) {
+      // A full-size scan can take a couple of seconds to fetch and decode. An
+      // outlined, dimmed frame at the clipping's own size and place says the
+      // evidence is coming and where — a blank stretch of loom for those two
+      // seconds read as broken instead.
+      showLoadingFrame(w, h, px, py);
+      try {
+        const img = new Image();
+        img.src = clip.webPath;
+        await img.decode();
+        if (my !== run) { hideLoadingFrame(); return; }
+        tex = new THREE.Texture(img);
+        tex.colorSpace = THREE.SRGBColorSpace;
+        tex.generateMipmaps = true;
+        tex.minFilter = THREE.LinearMipmapLinearFilter;
+        tex.anisotropy = Math.min(4, three.renderer.capabilities.getMaxAnisotropy());
+        tex.needsUpdate = true;
+      } catch {
+        hideLoadingFrame();
+        renderOverlay(s, null, my);
+        return;
+      }
+      while (cache.size >= MAX_TEXTURES) {
+        const oldest = cache.keys().next().value;
+        cache.get(oldest).dispose();
+        cache.delete(oldest);
+      }
+      cache.set(clip.webPath, tex);
+    }
+    hideLoadingFrame();
+    const geo = new THREE.PlaneGeometry(w, h, 8, 6);
+    const mat = new THREE.ShaderMaterial({
+      vertexShader: PANEL_VERT, fragmentShader: PANEL_FRAG,
+      uniforms: { uMap: { value: tex }, uTime: { value: 0 }, uOpacity: { value: 1 } },
+      transparent: true, side: THREE.DoubleSide
+    });
+    panelMesh = new THREE.Mesh(geo, mat);
+    panelSize = { w, h };
     panelMesh.position.set(px, py, 3.0);
     panelMesh.scale.y = reduced() ? 1 : 0.001;
     scene.add(panelMesh);
@@ -376,6 +432,32 @@ export function createTour(app, three, model) {
   function disposePanel() {
     if (panelMesh) { scene.remove(panelMesh); panelMesh.geometry.dispose(); panelMesh.material.dispose(); panelMesh = null; panelSize = { w: 0, h: 0 }; }
     if (frameLines) { scene.remove(frameLines); frameLines.geometry.dispose(); frameLines.material.dispose(); frameLines = null; }
+    hideLoadingFrame();
+  }
+
+  // A dimmed fill and an orange outline, sized and placed exactly where the
+  // clipping will land. Shown only while a scan not already in the texture
+  // cache is being fetched and decoded, so a repeat visit to the same stop
+  // never shows it.
+  function showLoadingFrame(w, h, px, py) {
+    const geo = new THREE.PlaneGeometry(w, h);
+    const mat = new THREE.MeshBasicMaterial({ color: 0x2b2318, transparent: true, opacity: 0.55, side: THREE.DoubleSide });
+    loadingFrame = new THREE.Mesh(geo, mat);
+    loadingFrame.position.set(px, py, 3.0);
+    scene.add(loadingFrame);
+    loadingEdge = new THREE.LineSegments(
+      new THREE.EdgesGeometry(geo),
+      new THREE.LineBasicMaterial({ color: 0xe2662b, transparent: true, opacity: 0.7 })
+    );
+    loadingEdge.position.copy(loadingFrame.position);
+    scene.add(loadingEdge);
+    app.needsRender = true;
+  }
+
+  function hideLoadingFrame() {
+    if (loadingFrame) { scene.remove(loadingFrame); loadingFrame.geometry.dispose(); loadingFrame.material.dispose(); loadingFrame = null; }
+    if (loadingEdge) { scene.remove(loadingEdge); loadingEdge.geometry.dispose(); loadingEdge.material.dispose(); loadingEdge = null; }
+    app.needsRender = true;
   }
 
   // ---- DOM overlay and cards. All text lives here, never in the canvas. ----
@@ -463,6 +545,15 @@ export function createTour(app, three, model) {
       cardBox = { left: c.left - rect.left, right: c.right - rect.left, top: c.top - rect.top, bottom: c.bottom - rect.top };
     }
 
+    // A visible publication name is a keep-out too. Without it, a slot picked
+    // for being clear of the panel and the card could still land squarely on
+    // "The Newark Herald" — clear of the two boxes this code knew about, and
+    // reading as a caption that had drifted off its own clipping.
+    const labelBoxes = Array.from(three.stage.querySelectorAll('.thread-label')).map((el) => {
+      const r = el.getBoundingClientRect();
+      return { left: r.left - rect.left, right: r.right - rect.left, top: r.top - rect.top, bottom: r.bottom - rect.top };
+    });
+
     const slots = [];
     if (panel) {
       slots.push([panel.right + pad, clampT(panel.top)]);
@@ -472,13 +563,20 @@ export function createTour(app, three, model) {
     }
     slots.push([maxLeft, maxTop], [maxLeft, minTop]);
 
-    for (const [l, t] of slots) {
-      if (l < pad || l > maxLeft || t < minTop || t > maxTop) continue;
-      const box = { left: l, right: l + w, top: t, bottom: t + h };
-      if (panel && overlaps(box, panel)) continue;
-      if (cardBox && overlaps(box, cardBox)) continue;
-      place(l, t);
-      return;
+    // First pass keeps clear of the panel, the card, and every name on screen.
+    // The second pass drops the name check: a caption anchored beside its own
+    // clipping but over a name is still legible and still attached to its
+    // evidence, which beats the absolute fallback below losing both.
+    for (const strict of [true, false]) {
+      for (const [l, t] of slots) {
+        if (l < pad || l > maxLeft || t < minTop || t > maxTop) continue;
+        const box = { left: l, right: l + w, top: t, bottom: t + h };
+        if (panel && overlaps(box, panel)) continue;
+        if (cardBox && overlaps(box, cardBox)) continue;
+        if (strict && labelBoxes.some((lb) => overlaps(box, lb))) continue;
+        place(l, t);
+        return;
+      }
     }
     place(maxLeft, maxTop);
 
@@ -530,14 +628,17 @@ export function createTour(app, three, model) {
     const n = tourStopIndex() + 1;
     // Under reduced motion nothing plays itself, so there is no play control at
     // all — the reader advances with "next stop". Otherwise the one control
-    // reads "pause" while it runs and "resume" once it is stopped. Never two
-    // buttons with the same label.
+    // names the action it is about to take, not the state it happens to be
+    // in: "Play" starts autoplay, "Pause" stops it, and the label switches
+    // the instant the state does. A tour opens paused, so this is the first
+    // thing the reader sees, and it must say "Play" — a button that says
+    // "Pause" on a tour that never started playing is a false signal.
     // On the last stop there is nowhere further to go, so "next stop" is not
     // offered as a control that does nothing. The end of a thread is a place,
     // and it says so and gives the reader the way out.
     const atEnd = closed;
     bar.innerHTML = `
-      ${reduced() || atEnd ? '' : `<button type="button" class="woven-btn" data-act="play" aria-pressed="${paused ? 'true' : 'false'}">${paused ? 'Resume' : 'Pause'}</button>`}
+      ${reduced() || atEnd ? '' : `<button type="button" class="woven-btn" data-act="play" aria-pressed="${paused ? 'false' : 'true'}">${paused ? 'Play' : 'Pause'}</button>`}
       <button type="button" class="woven-btn" data-act="prev"${index === 0 ? ' disabled' : ''}>Previous stop</button>
       ${atEnd
         ? '<button type="button" class="woven-btn" data-act="end">Back to the loom</button>'
