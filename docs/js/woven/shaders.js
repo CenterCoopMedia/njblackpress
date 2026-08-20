@@ -8,8 +8,17 @@ attribute float aFlags;
 attribute float aFraySeed;
 attribute float aRamp;
 attribute vec3 aColor;
+// Half the ribbon's own width, in world units. Zero on the warp, which is
+// background rule work and is left alone.
+attribute float aHalfW;
 
 uniform sampler2D uState;
+
+// The floor on how thin a thread may be drawn, as a half-width in world units at
+// the current zoom. Zoomed right out a real thread is a fifth of a pixel wide
+// and simply misses the raster, so a band holding three papers drew as empty
+// black. Sparse must read as sparse, never as nothing.
+uniform float uMinHalfW;
 
 // One pluck at a time. x is the picked thread, y and z are the two threads
 // beside it, all as state-texture indices. A negative index matches nothing.
@@ -48,6 +57,9 @@ void main() {
   vState = texture2D(uState, vec2((aThreadIndex + 0.5) / 256.0, 0.5));
 
   vec3 p = position;
+  // Widen outward from the thread's own centre line, never move the centre.
+  p.y += aRibbonV * max(0.0, uMinHalfW - aHalfW);
+
   float w = uPluckAmp * pluckWeight(aThreadIndex);
   if (w > 0.0 && uPluckAge < 1.25) {
     // A struck string: a travelling wave, pinned at both ends, decaying to

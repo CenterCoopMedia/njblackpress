@@ -70,6 +70,20 @@ export async function loadModel() {
   }
   const citeSource = (file) => citationFor(file, citationByStem);
 
+  // The same index, keyed to what we are allowed to show of each source. A note
+  // about a source is a claim about that source, so it is made from this rather
+  // than printed on every stop that happens to have no picture.
+  const rightsByStem = new Map();
+  for (const c of clippings) {
+    const status = c.rightsStatus || c.status;
+    if (!status) continue;
+    for (const path of [c.webPath, c.sourcePath]) {
+      const stem = fileStem(path);
+      if (stem && !rightsByStem.has(stem)) rightsByStem.set(stem, status);
+    }
+  }
+  const sourceRights = (file) => rightsByStem.get(fileStem(file)) || null;
+
   const knots = buildKnots(events, byId, layout);
   const eventById = new Map(events.map((e) => [e.id, e]));
   const tours = stories.map((s) => buildTour(s, eventById, byId, clipsByPub));
@@ -101,7 +115,7 @@ export async function loadModel() {
 
   return {
     threads, order, solidCount, byId, layout, knots, tours, counts,
-    bands: layout.bands, clipsByPub, rawEvents: events, citeSource
+    bands: layout.bands, clipsByPub, rawEvents: events, citeSource, sourceRights
   };
 
   function buildThread(p) {

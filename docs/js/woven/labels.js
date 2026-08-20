@@ -7,6 +7,7 @@ import { x as xOf, YEAR_MIN, YEAR_MAX } from './layout.js';
 const MAX_LABELS = 26;
 const LABEL_DISTANCE = 26;   // beyond this the cloth is a shape, not a list
 const MIN_ROW_PX = 24;       // a label is 23px tall, so anything less overlaps
+const MIN_COMPACT_PX = 17;   // the compact era marker is 16px tall
 
 export function createLabels(app, three, model) {
   const stage = document.getElementById('woven-stage');
@@ -23,17 +24,22 @@ export function createLabels(app, three, model) {
 
   const legend = document.createElement('div');
   legend.id = 'woven-legend';
+  // The toggle is the first child, so on a narrow window — where the key floats
+  // over the cloth and the copy runs longer than the panel is tall — the way to
+  // close it is at the top rather than under a scroll nobody can see.
   legend.innerHTML = `
-    <p class="lg-lede">Each horizontal thread is one publication. It starts the year the paper was founded and ends the year it stopped. Left to right is 1880 to 2026.</p>
-    <ul>
-      <li><span class="lg-swatch lg-thick"></span>Thicker thread — more surviving material we can show you</li>
-      <li><span class="lg-swatch lg-ghost"></span>Faint and frayed — ${model.counts.ghost} titles we know only from a catalog line</li>
-      <li><span class="lg-swatch lg-loose"></span>Runs past the right post — the ${model.counts.stillPublishing} papers still publishing</li>
-      <li><span class="lg-swatch lg-knot"></span>Knot — a documented event, ${model.counts.events} in all</li>
-    </ul>
-    <p class="lg-rows">Rows are grouped by the decade each paper began. Names appear when you are close enough to read them.</p>
-    <p class="lg-rows">Drag to move across the cloth. Scroll or pinch to zoom. Type a name in the search field to find one title.</p>
-    <button type="button" class="woven-btn lg-toggle" aria-expanded="true">Hide the key</button>`;
+    <button type="button" class="woven-btn lg-toggle" aria-expanded="true">Hide the key</button>
+    <div class="lg-body">
+      <p class="lg-lede">Each horizontal thread is one publication. It starts the year the paper was founded and ends the year it stopped. Left to right is 1880 to 2026.</p>
+      <ul>
+        <li><span class="lg-swatch lg-thick"></span>Thicker thread — more surviving material we can show you</li>
+        <li><span class="lg-swatch lg-ghost"></span>Faint and frayed — ${model.counts.ghost} titles we know only from a catalog line</li>
+        <li><span class="lg-swatch lg-loose"></span>Runs past the right post — the ${model.counts.stillPublishing} papers still publishing</li>
+        <li><span class="lg-swatch lg-knot"></span>Knot — a documented event, ${model.counts.events} in all</li>
+      </ul>
+      <p class="lg-rows">Rows are grouped by the decade each paper began. Names appear when you are close enough to read them.</p>
+      <p class="lg-rows">Drag to move across the cloth. Scroll or pinch to zoom. Type a name in the search field and the loom goes to the closest match; press enter to go there at once.</p>
+    </div>`;
   stage.appendChild(legend);
 
   // Above 900px the key is docked in its own column beside the canvas and is
@@ -113,8 +119,9 @@ export function createLabels(app, three, model) {
     const busy = !!(app.tour && app.tour.isPlaying) || !!(app.ghost && app.ghost.isPlaying);
     legend.hidden = busy;
     const ghosting = !!(app.ghost && app.ghost.isPlaying);
-    eraLayer.hidden = ghosting;
-    if (ghosting) { layer.textContent = ''; eraBoxes = []; drawYears(); return; }
+    // The era markers stay through the ghost roll. They are the only thing
+    // saying which decade each name belongs to, and the roll is a list of names.
+    if (ghosting) { layer.textContent = ''; eraBoxes = []; drawEras(); drawYears(); return; }
     drawEras();
     drawYears();
     if (busy && app.tour && app.tour.isPlaying) {
@@ -135,23 +142,49 @@ export function createLabels(app, three, model) {
 
   function drawEras() {
     const frag = document.createDocumentFragment();
-    // Zoomed right out the bands are closer together than a marker is tall, so
-    // markers are dropped rather than stacked on top of each other. A marker
-    // printed through another marker names neither decade.
-    const placedTops = [];
-    for (const band of model.bands) {
-      if (!band.count) continue;
-      const mid = band.top - band.height / 2;
-      const p = project(three.controls.target.x, mid);
-      if (p.y < guard.top || p.y > rect.height - guard.bottom) continue;
-      if (placedTops.some((q) => Math.abs(q - p.y) < MIN_ROW_PX)) continue;
-      placedTops.push(p.y);
-      const el = document.createElement('span');
-      el.className = 'era-marker';
-      el.textContent = `${band.label} · ${band.count}`;
-      el.style.top = `${p.y}px`;
-      frag.appendChild(el);
+    // Every era band that holds publications gets a label, at every zoom. A
+    // dropped marker made the counts on screen add up to less than the archive
+    // holds, which reads as missing data rather than as crowding. Zoomed right
+    // out the bands sit closer together than a marker is tall, so the markers
+    // shrink and are pushed apart into a legible column instead of being culled.
+    const live = model.bands.filter((b) => b.count);
+    if (!live.length) { eraLayer.textContent = ''; eraBoxes = []; return; }
+
+    const top = guard.top;
+    // A marker is 23px tall at full size and 16px in its compact form. On a
+    // short window the compact stack is taller than the band between the control
+    // bars and the year rail, so it is allowed to run down over the rail rather
+    // than print each marker through the one above it.
+    let bottom = rect.height - guard.bottom;
+    const compact = live.length * MIN_ROW_PX > bottom - top;
+    if (compact && live.length * MIN_COMPACT_PX > bottom - top) {
+      bottom = Math.max(bottom, rect.height - 4);
     }
+    const freeH = Math.max(1, bottom - top);
+    const rowH = Math.min(compact ? MIN_COMPACT_PX : MIN_ROW_PX, freeH / live.length);
+
+    const ys = live.map((band) => project(three.controls.target.x, band.top - band.height / 2).y);
+    // Forward pass pushes each marker below the one above it, backward pass
+    // pulls the stack back inside the free band. Order is never changed, so the
+    // markers stay in the same sequence as the bands they name.
+    let prev = -Infinity;
+    for (let i = 0; i < ys.length; i++) {
+      ys[i] = Math.max(ys[i], prev + rowH, top + rowH / 2);
+      prev = ys[i];
+    }
+    let nextY = Infinity;
+    for (let i = ys.length - 1; i >= 0; i--) {
+      ys[i] = Math.min(ys[i], nextY - rowH, bottom - rowH / 2);
+      nextY = ys[i];
+    }
+
+    live.forEach((band, i) => {
+      const el = document.createElement('span');
+      el.className = compact ? 'era-marker is-compact' : 'era-marker';
+      el.textContent = `${band.label} · ${band.count}`;
+      el.style.top = `${Math.round(ys[i])}px`;
+      frag.appendChild(el);
+    });
     eraLayer.textContent = '';
     eraLayer.appendChild(frag);
 

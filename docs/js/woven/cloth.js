@@ -11,7 +11,7 @@ const OAK_500 = new THREE.Color('#6b563c');
 class RibbonBuilder {
   constructor() {
     this.pos = []; this.idx = []; this.rv = []; this.yn = [];
-    this.flags = []; this.seed = []; this.ramp = []; this.col = [];
+    this.flags = []; this.seed = []; this.ramp = []; this.col = []; this.hw = [];
     this.count = 0;
   }
 
@@ -27,6 +27,7 @@ class RibbonBuilder {
       for (const [c, v] of quad) {
         this.pos.push(c.x, c.y + (v * c.w) / 2, c.z);
         this.rv.push(v);
+        this.hw.push(c.w / 2);
         this.yn.push(c.yearNorm);
         this.ramp.push(c.ramp);
         this.idx.push(meta.threadIndex);
@@ -42,6 +43,7 @@ class RibbonBuilder {
     const g = new THREE.BufferGeometry();
     g.setAttribute('position', new THREE.Float32BufferAttribute(this.pos, 3));
     g.setAttribute('aRibbonV', new THREE.Float32BufferAttribute(this.rv, 1));
+    g.setAttribute('aHalfW', new THREE.Float32BufferAttribute(this.hw, 1));
     g.setAttribute('aYearNorm', new THREE.Float32BufferAttribute(this.yn, 1));
     g.setAttribute('aRamp', new THREE.Float32BufferAttribute(this.ramp, 1));
     g.setAttribute('aThreadIndex', new THREE.Float32BufferAttribute(this.idx, 1));
@@ -168,7 +170,9 @@ export function buildWarp(model, every, slotEvery) {
       const quad = [[a, -1], [c, -1], [c, 1], [a, -1], [c, 1], [a, 1]];
       for (const [p, v] of quad) {
         b.pos.push(p.x + (v * p.w) / 2, p.y, p.z);
-        b.rv.push(v); b.yn.push(0); b.ramp.push(1);
+        // Zero half-width: the minimum-thickness floor is for publications, not
+        // for the warp rules behind them.
+        b.rv.push(v); b.hw.push(0); b.yn.push(0); b.ramp.push(1);
         b.idx.push(255); b.flags.push(0); b.seed.push(0.5);
         b.col.push(meta.color[0], meta.color[1], meta.color[2]);
         b.count++;
@@ -212,6 +216,10 @@ export const pluckUniforms = {
 // cloth, so one uniform object drives every mesh.
 export const weaveUniform = { value: 0 };
 
+// The on-screen floor for thread thickness, written once per frame from the
+// camera distance. One object, so every cloth mesh reads the same number.
+export const minHalfWidth = { value: 0 };
+
 export function createClothMaterial(state, opts = {}) {
   return new THREE.ShaderMaterial({
     vertexShader: CLOTH_VERT,
@@ -219,6 +227,7 @@ export function createClothMaterial(state, opts = {}) {
     uniforms: {
       uState: { value: state.texture },
       uWeaveProgress: weaveUniform,
+      uMinHalfW: minHalfWidth,
       uPluckIdx: pluckUniforms.uPluckIdx,
       uPluckAge: pluckUniforms.uPluckAge,
       uPluckAmp: pluckUniforms.uPluckAmp,

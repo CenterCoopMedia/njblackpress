@@ -139,6 +139,10 @@ body.twin-primary #woven-stage { display: none; }
    buttons. */
 #woven-eranav-note { display: none; font-family: var(--mono); font-size: 11px; line-height: 1.5; color: var(--linen-300); }
 @media (min-width: 700px) { #woven-eranav-note { display: inline; } }
+/* It is a starting instruction, not a status: once the reader has zoomed or
+   panned it is false, and it is taken away. This rule has to beat the one
+   above it, which sets display on the same element. */
+#woven-eranav-note[hidden] { display: none; }
 
 /* Labels are DOM, sized in real pixels, always on an opaque plate so they never
    sit unreadably over geometry. */
@@ -168,6 +172,14 @@ body.twin-primary #woven-stage { display: none; }
   font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em;
   color: var(--linen-100); background: rgba(11, 8, 6, 0.92);
   border-left: 3px solid var(--oak-500); padding: 3px 8px;
+  white-space: nowrap;
+}
+/* Zoomed right out the bands sit closer together than a full-size marker is
+   tall. The marker shrinks so every band still gets named; a decade with no
+   label reads as a decade with no papers. */
+.era-marker.is-compact {
+  font-size: 10px; line-height: 1.2; letter-spacing: 0.04em; padding: 1px 5px;
+  border-left-width: 2px;
 }
 
 #woven-legend {
@@ -178,10 +190,8 @@ body.twin-primary #woven-stage { display: none; }
 #woven-legend ul { list-style: none; padding: 0; margin: 0; }
 #woven-legend li { display: flex; align-items: center; gap: 0.55rem; font-size: 13px; line-height: 1.45; color: var(--linen-200); padding: 2px 0; }
 #woven-legend .lg-rows { font-size: 12px; color: var(--linen-300); margin-top: 0.55rem; }
-#woven-legend .lg-toggle { margin-top: 0.6rem; }
-#woven-legend[data-collapsed="true"] .lg-lede,
-#woven-legend[data-collapsed="true"] ul,
-#woven-legend[data-collapsed="true"] .lg-rows { display: none; }
+#woven-legend .lg-toggle { margin-bottom: 0.6rem; }
+#woven-legend[data-collapsed="true"] .lg-body { display: none; }
 #woven-legend[data-collapsed="true"] { width: auto; }
 
 /* Docked key. Above 900px the key is a column beside the canvas, never a panel
@@ -195,9 +205,7 @@ body.twin-primary #woven-stage { display: none; }
     border: 0; border-left: 1px solid var(--walnut-600); padding: 1rem;
   }
   #woven-legend .lg-toggle { display: none; }
-  #woven-legend[data-collapsed="true"] .lg-lede,
-  #woven-legend[data-collapsed="true"] ul,
-  #woven-legend[data-collapsed="true"] .lg-rows { display: revert; }
+  #woven-legend[data-collapsed="true"] .lg-body { display: revert; }
   #woven-legend[data-collapsed="true"] { width: 19rem; }
   /* The chrome stops at the dock edge. The tour bar is not in this list: the
      key is hidden while a tour runs, so the bar takes the full stage width. */
@@ -280,16 +288,22 @@ body.twin-primary #woven-stage { display: none; }
   position: absolute; left: 0.9rem; z-index: 7; max-width: 30rem;
   bottom: calc(var(--woven-tourbar-h, 0px) + var(--woven-rail-h, 2.2rem) + 0.6rem);
   max-height: calc(100% - var(--woven-chrome-h, 5.5rem) - var(--woven-tourbar-h, 0px) - var(--woven-rail-h, 2.2rem) - 1.6rem);
+  /* The card is the frame; the copy inside it is what scrolls, so the "more"
+     control can sit below the copy instead of over it. */
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--walnut-800); border: 1px solid var(--walnut-600); padding: 1rem;
+}
+#woven-card .card-body {
+  flex: 1 1 auto; min-height: 0;
   overflow-y: auto; overscroll-behavior: contain;
   /* A wide, coloured, always-reserved bar. A thin overlay bar is invisible on a
      dark card, and an invisible bar is how a scrolling card reads as a cut one. */
   scrollbar-width: auto; scrollbar-color: var(--oak-400) var(--walnut-700);
   scrollbar-gutter: stable;
-  background: var(--walnut-800); border: 1px solid var(--walnut-600); padding: 1rem;
 }
-#woven-card::-webkit-scrollbar { width: 10px; }
-#woven-card::-webkit-scrollbar-track { background: var(--walnut-700); }
-#woven-card::-webkit-scrollbar-thumb { background: var(--oak-400); }
+#woven-card .card-body::-webkit-scrollbar { width: 10px; }
+#woven-card .card-body::-webkit-scrollbar-track { background: var(--walnut-700); }
+#woven-card .card-body::-webkit-scrollbar-thumb { background: var(--oak-400); }
 #woven-card[hidden] { display: none; }
 #woven-card h3 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 800; font-size: 24px; color: var(--linen-50); line-height: 1.15; }
 #woven-card p { font-size: 16px; line-height: 1.6; color: var(--linen-200); margin-top: 0.6rem; }
@@ -297,14 +311,15 @@ body.twin-primary #woven-stage { display: none; }
 #woven-card .band { font-family: var(--mono); font-size: 11px; color: var(--thread-400); }
 /* Stuck to the bottom edge of the card while there is copy below it. The
    gradient tells the eye the text continues; the button moves it down. */
+/* A footer under the copy, outside the box that scrolls, so it never covers a
+   line of type. */
 #woven-card .card-more {
-  position: sticky; bottom: -1rem; z-index: 2;
-  margin: 0.5rem -1rem -1rem; padding: 0.9rem 1rem 0.5rem; text-align: right;
-  background: linear-gradient(to top, var(--walnut-800) 55%, rgba(24, 17, 12, 0));
-  pointer-events: none;
+  flex: 0 0 auto;
+  margin: 0 -1rem -1rem; padding: 0.6rem 1rem; text-align: right;
+  background: var(--walnut-800); border-top: 1px solid var(--walnut-600);
 }
 #woven-card .card-more[hidden] { display: none; }
-#woven-card .card-more button { pointer-events: auto; padding: 0.3rem 0.6rem; font-size: 11px; }
+#woven-card .card-more button { padding: 0.3rem 0.6rem; font-size: 11px; }
 
 /* Cards that cover the stage. They start below the control bars so the bars stay
    reachable, and they scroll inside themselves rather than run off the stage. */
@@ -315,10 +330,32 @@ body.twin-primary #woven-stage { display: none; }
   overflow-y: auto; overscroll-behavior: contain;
 }
 #woven-ghostcard[hidden], #woven-help-card[hidden], #woven-tourpicker[hidden] { display: none; }
+/* Capped and scrolled inside itself. The about copy runs past the height of a
+   laptop window, which put the way out below the fold. */
 #woven-ghostcard .inner, #woven-help-card .inner, #woven-tourpicker .inner {
   max-width: 34rem; width: 100%; background: var(--walnut-800);
   border: 1px solid var(--walnut-600); padding: 1.25rem;
+  max-height: 85vh; overflow-y: auto; overscroll-behavior: contain;
+  scrollbar-width: auto; scrollbar-color: var(--oak-400) var(--walnut-700);
 }
+#woven-help-card .inner::-webkit-scrollbar,
+#woven-tourpicker .inner::-webkit-scrollbar,
+#woven-ghostcard .inner::-webkit-scrollbar { width: 10px; }
+#woven-help-card .inner::-webkit-scrollbar-track,
+#woven-tourpicker .inner::-webkit-scrollbar-track,
+#woven-ghostcard .inner::-webkit-scrollbar-track { background: var(--walnut-700); }
+#woven-help-card .inner::-webkit-scrollbar-thumb,
+#woven-tourpicker .inner::-webkit-scrollbar-thumb,
+#woven-ghostcard .inner::-webkit-scrollbar-thumb { background: var(--oak-400); }
+/* The title and the close control ride at the top of the scroll, so closing is
+   one reach away wherever the reader has got to. */
+#woven-help-card .card-head {
+  position: sticky; top: -1.25rem; z-index: 2;
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem;
+  margin: -1.25rem -1.25rem 0; padding: 1.25rem 1.25rem 0.6rem;
+  background: var(--walnut-800); border-bottom: 1px solid var(--walnut-600);
+}
+#woven-help-card .card-head .woven-btn { flex: 0 0 auto; }
 #woven-ghostcard h3, #woven-help-card h3, #woven-tourpicker h3 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 800; font-size: 24px; color: var(--linen-50); }
 #woven-ghostcard p, #woven-help-card p, #woven-tourpicker p { margin-top: 0.75rem; line-height: 1.6; color: var(--linen-200); }
 #woven-help-card h4, #woven-tourpicker h4 { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 700; font-size: 1rem; color: var(--linen-100); margin-top: 1.1rem; }
@@ -330,8 +367,12 @@ body.twin-primary #woven-stage { display: none; }
 #woven-tourpicker .tp-title { display: block; font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 700; font-size: 1rem; color: var(--linen-50); }
 #woven-tourpicker .tp-meta { display: block; font-family: var(--mono); font-size: 11px; color: var(--linen-300); margin: 0.2rem 0 0.5rem; }
 
+/* On the right, because the left edge of the stage belongs to the era markers.
+   The roll used to sit on top of them, so a reader watching names go past had no
+   way to tell which decade they were in. The key is hidden while the roll runs,
+   so this column is free. */
 #woven-ghostnames {
-  position: absolute; left: 0.9rem; z-index: 8;
+  position: absolute; right: 0.9rem; left: auto; z-index: 8;
   top: calc(var(--woven-chrome-h, 5.5rem) + 0.6rem);
   bottom: calc(var(--woven-rail-h, 2.2rem) + 0.8rem);
   width: min(22rem, 60vw); overflow-y: auto; overscroll-behavior: contain;
@@ -389,7 +430,12 @@ body.twin-primary #woven-stage { display: none; }
   /* One scrolling row each, so the controls never eat half the stage. The row
      scrolls; the buttons keep their full width, so no label is cut. The bar is
      given a visible track and a fade at the right edge to say there is more. */
-  #woven-topbar, #woven-eranav { flex-wrap: nowrap; align-items: stretch; }
+  #woven-eranav { flex-wrap: nowrap; align-items: stretch; }
+  /* The search gets its own row here. Sharing the row with the button scroller
+     left the field printed over the last button in it. */
+  #woven-topbar { flex-wrap: wrap; align-items: stretch; row-gap: 0.45rem; }
+  #woven-topbar .bar-scroll { flex: 1 1 100%; }
+  #woven-topbar #woven-searchform { flex: 1 1 100%; }
   #woven-topbar .bar-scroll, #woven-eranav .bar-scroll {
     flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden;
     overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch;
@@ -402,14 +448,10 @@ body.twin-primary #woven-stage { display: none; }
   .bar-scroll::-webkit-scrollbar-track { background: var(--walnut-700); }
   .bar-scroll::-webkit-scrollbar-thumb { background: var(--oak-400); }
   #woven-topbar .woven-btn, #woven-eranav .woven-btn { padding: 0.4rem 0.6rem; }
-  #woven-searchform { flex: 0 0 auto; }
-  #woven-search { width: 9rem; min-width: 9rem; }
-  /* No room for a count beside the field at this width. The cloth itself is the
-     answer: matches light, everything else dims. Screen readers still hear it. */
-  #woven-search-count {
-    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
-  }
+  #woven-search { flex: 1 1 auto; width: auto; min-width: 0; }
+  /* The count fits now that the row is its own. It carries the enter hint, which
+     is the only place the shortcut is written on a phone. */
+  #woven-search-count { flex: 0 0 auto; font-size: 10px; }
   #woven-era-now { white-space: nowrap; }
   /* A wrapped tour bar took 175 of the 378 pixels the stage has on a phone and
      squeezed the story card down to a line and a half. One scrolling row of
@@ -427,10 +469,15 @@ body.twin-primary #woven-stage { display: none; }
      stage: it stops short of the era controls and scrolls inside itself. It also
      sits above the year rail rather than on top of it. */
   #woven-legend {
-    width: auto; max-width: 92vw; overflow-y: auto;
+    width: auto; max-width: 92vw; overflow: hidden;
+    display: flex; flex-direction: column; align-items: flex-start;
     bottom: calc(var(--woven-rail-h, 2.2rem) + 0.5rem);
     max-height: calc(100% - var(--woven-chrome-h, 5.5rem) - var(--woven-rail-h, 2.2rem) - 1.2rem);
   }
+  /* The panel keeps its close control and scrolls the copy beneath it, so the
+     last line of the key is never the last line a reader can reach. */
+  #woven-legend .lg-toggle { flex: 0 0 auto; }
+  #woven-legend .lg-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
   /* The intro gives back space so the whole loom lands on the first screen of a
      phone. Below the fold, a zoomed-out overview is an overview of nothing. */
   #woven-intro { padding-top: 0.7rem; padding-bottom: 0.7rem; }
@@ -444,14 +491,17 @@ body.twin-primary #woven-stage { display: none; }
   #woven-card { padding: 0.7rem 0.75rem; left: 0.6rem; }
   #woven-card h3 { font-size: 18px; }
   #woven-card p { font-size: 14px; line-height: 1.5; margin-top: 0.45rem; }
-  #woven-card .card-more { margin: 0.4rem -0.75rem -0.7rem; padding: 0.8rem 0.75rem 0.4rem; bottom: -0.7rem; }
+  #woven-card .card-more { margin: 0 -0.75rem -0.7rem; padding: 0.45rem 0.75rem; }
 }
 
 @media (max-width: 640px) {
   #woven-stage { min-height: 380px; }
   #woven-twin .t-open { grid-template-columns: 1fr; gap: 0.15rem; }
   #woven-panel { width: 100%; }
-  #woven-ghostnames { width: calc(100% - 1.8rem); }
+  /* Still a right-hand column, never the full stage width: the roll starts clear
+     of the era markers on the left edge, which have to stay legible while it
+     plays. Only the longest of them, the undated band, reaches under it. */
+  #woven-ghostnames { left: 10.5rem; right: 0.7rem; width: auto; max-width: none; }
   #woven-card { max-width: calc(100% - 1.8rem); }
 }
 
@@ -470,6 +520,17 @@ body.twin-primary #woven-stage { display: none; }
   #woven-intro p { font-size: 0.8125rem; line-height: 1.45; }
   #woven-stage { min-height: 285px; }
 }
+/* A short phone. The control bars take three rows here, and three rows of
+   chrome over a 300-pixel stage leaves no loom. They give back their padding so
+   the cloth and the era column keep the room they need. */
+@media (max-width: 700px) and (max-height: 700px) {
+  #woven-topbar { padding: 0.4rem 0.6rem; row-gap: 0.3rem; }
+  #woven-eranav { padding: 0.3rem 0.6rem; }
+  #woven-topbar .bar-scroll, #woven-eranav .bar-scroll { padding-bottom: 3px; }
+  #woven-topbar .woven-btn, #woven-eranav .woven-btn { padding: 0.3rem 0.5rem; }
+  #woven-search { padding: 0.3rem 0.5rem; }
+}
+
 @media (max-height: 520px) {
   #woven-stage { min-height: 260px; }
   #woven-legend { max-height: calc(100% - 6rem); overflow-y: auto; }

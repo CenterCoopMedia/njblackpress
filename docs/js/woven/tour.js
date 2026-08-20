@@ -19,23 +19,33 @@ export function createTour(app, three, model) {
   const overlay = document.getElementById('woven-overlay');
   const card = document.getElementById('woven-card');
 
-  // A phone gives the card about 250 pixels and a stop can run to 550. The card
+  // A phone gives the card about 250 pixels and a stop can run to 550. The copy
   // scrolls, but a phone draws no scrollbar until you touch it, so a long stop
   // reads as a sentence cut in half. This button says there is more and takes
-  // you there. It is a real child of the card, stuck to its bottom edge, so it
-  // survives every innerHTML rewrite by being re-appended.
+  // you there.
+  //
+  // The copy and the button are separate boxes: the copy scrolls, the button
+  // does not. A button laid over the scrolling copy cut whatever line happened
+  // to be behind it in half, which is the thing it was there to prevent. Both
+  // are permanent children of the card, so a stop rewrites the copy and nothing
+  // else.
+  const cardBody = document.createElement('div');
+  cardBody.className = 'card-body';
+  card.appendChild(cardBody);
+
   const moreEl = document.createElement('div');
   moreEl.className = 'card-more';
   moreEl.hidden = true;
   moreEl.innerHTML = '<button type="button" class="woven-btn">More ↓</button>';
   moreEl.querySelector('button').addEventListener('click', () => {
-    card.scrollBy({ top: card.clientHeight - 40, behavior: 'smooth' });
+    cardBody.scrollBy({ top: cardBody.clientHeight - 40, behavior: 'smooth' });
   });
-  card.addEventListener('scroll', () => updateMore());
+  card.appendChild(moreEl);
+  cardBody.addEventListener('scroll', () => updateMore());
 
   function updateMore() {
-    const room = card.scrollHeight - card.clientHeight;
-    const atEnd = card.scrollTop >= room - 4;
+    const room = cardBody.scrollHeight - cardBody.clientHeight;
+    const atEnd = cardBody.scrollTop >= room - 4;
     moreEl.hidden = room < 12 || atEnd;
   }
 
@@ -132,6 +142,11 @@ export function createTour(app, three, model) {
     if (!playing) return;
     index = Math.max(0, Math.min(stops.length - 1, i));
     const s = stops[index];
+    // The previous stop's evidence goes before the next stop is drawn, never
+    // after its camera move lands. Left up, an 1862 stop showed a 1991 citation
+    // for the length of the transit, which reads as the wrong source.
+    disposePanel();
+    overlay.hidden = true;
     app.state.stopIndex = tourStopIndex();
     syncTwin(app.state);
     renderBar();
@@ -240,8 +255,19 @@ export function createTour(app, three, model) {
       }
       cache.set(clip.webPath, tex);
     }
-    const h = 4.5;
-    const w = h * ((clip.width || 3) / (clip.height || 4));
+    // The clipping is sized and placed to fit the view this stop ends at, not to
+    // a fixed offset. On the last stop the fixed offset put the page off the
+    // right edge, where it is evidence nobody can read.
+    const halfTan = Math.tan((camera.fov * Math.PI) / 360);
+    // Measured on the plane the clipping actually sits on, three units in front
+    // of the cloth, where it looks bigger than the cloth behind it.
+    const viewH = 2 * halfTan * Math.max(4, s.distance - 3.0);
+    const viewW = viewH * camera.aspect;
+    const ar = (clip.width || 3) / (clip.height || 4);
+    let h = Math.min(4.5, viewH * 0.62);
+    let w = h * ar;
+    const maxW = viewW * 0.36;
+    if (w > maxW) { w = maxW; h = w / ar; }
     const geo = new THREE.PlaneGeometry(w, h, 8, 6);
     const mat = new THREE.ShaderMaterial({
       vertexShader: PANEL_VERT, fragmentShader: PANEL_FRAG,
@@ -250,7 +276,16 @@ export function createTour(app, three, model) {
     });
     panelMesh = new THREE.Mesh(geo, mat);
     panelSize = { w, h };
-    panelMesh.position.set(s.tx + 5, s.ty, 3.0);
+    // Always in the right half of the view, and always whole. The story card is
+    // anchored to the left edge, so a clipping placed on the left is a clipping
+    // behind the card; and a fixed offset ran the last stop off the right edge.
+    const pad = 0.35;
+    const left = s.tx - viewW / 2 + w / 2 + pad;
+    const right = s.tx + viewW / 2 - w / 2 - pad;
+    const px = Math.min(right, Math.max(left, s.tx + viewW * 0.25));
+    const py = Math.min(s.ty + viewH / 2 - h / 2 - pad,
+      Math.max(s.ty - viewH / 2 + h / 2 + pad, s.ty));
+    panelMesh.position.set(px, py, 3.0);
     panelMesh.scale.y = reduced() ? 1 : 0.001;
     scene.add(panelMesh);
     if (s.clipping.rightsStatus === 'crop_first') {
@@ -291,13 +326,18 @@ export function createTour(app, three, model) {
       // Citation-only stop. The normal case, and it must look deliberate.
       // The description is already the body of the card on the left, so this
       // block carries the citations and nothing else.
-      const cites = [...new Set((s.event.sourceFiles || [])
-        .map((f) => model.citeSource(f))
-        .filter(Boolean))];
+      const files = s.event.sourceFiles || [];
+      const cites = [...new Set(files.map((f) => model.citeSource(f)).filter(Boolean))];
+      // "A printed bibliography" is a claim about the source, so it is made only
+      // where the source says so. Most of these stops cite a newspaper page we
+      // hold and simply have no picture attached; telling the reader we hold no
+      // page for them was false.
+      const rights = files.map((f) => model.sourceRights(f));
+      const citationOnly = rights.length > 0 && rights.every((r) => r === 'metadata_only');
       overlay.innerHTML = `<figure class="cite-only">
         <hr class="rail-wood">
         ${cites.map((c) => `<cite>${esc(c)}</cite>`).join('')}
-        <p class="rights">The source is a printed bibliography. We quote it; we do not reproduce the page.</p>
+        ${citationOnly ? '<p class="rights">The source is a printed bibliography. We quote it; we do not reproduce the page.</p>' : ''}
       </figure>`;
     } else {
       overlay.innerHTML = `<figure>
@@ -382,12 +422,14 @@ export function createTour(app, three, model) {
 
   function renderCard(s) {
     if (s.kind === 'transit') {
-      card.innerHTML = `<span class="band">${esc(s.fromBand)} → ${esc(s.toBand)}</span>`;
+      cardBody.innerHTML = `<span class="band">${esc(s.fromBand)} → ${esc(s.toBand)}</span>`;
+      cardBody.scrollTop = 0;
       card.hidden = false;
+      updateMore();
       return;
     }
     const th = s.threadId != null ? model.byId.get(s.threadId) : null;
-    card.innerHTML = `
+    cardBody.innerHTML = `
       <h3>${esc(s.event.title)}</h3>
       <p>${esc(s.event.description)}</p>
       ${th ? `<p class="band">${esc(th.name)} · ${esc(th.city || 'city unrecorded')}</p>` : '<p class="band">Context — not tied to a specific publication.</p>'}
@@ -397,24 +439,22 @@ export function createTour(app, three, model) {
     card.hidden = false;
     // A long stop scrolls. Every stop starts at its own first line, never part
     // way down where the last one was left.
-    card.scrollTop = 0;
-    card.appendChild(moreEl);
+    cardBody.scrollTop = 0;
     updateMore();
   }
 
   function renderClose() {
     clearTimer();
-    card.innerHTML = `
+    cardBody.innerHTML = `
       <h3>${esc(tour.title)}</h3>
       <p>${esc(tour.thread)}</p>
       <p><button type="button" class="woven-btn" data-act="ghost">Show what did not survive</button>
          <button type="button" class="woven-btn" data-act="exit">Exit this thread</button></p>`;
     card.hidden = false;
-    card.scrollTop = 0;
-    card.appendChild(moreEl);
+    cardBody.scrollTop = 0;
     updateMore();
-    card.querySelector('[data-act="ghost"]').addEventListener('click', () => { exit(); app.showGhost(); });
-    card.querySelector('[data-act="exit"]').addEventListener('click', exit);
+    cardBody.querySelector('[data-act="ghost"]').addEventListener('click', () => { exit(); app.showGhost(); });
+    cardBody.querySelector('[data-act="exit"]').addEventListener('click', exit);
     overlay.hidden = true;
   }
 
@@ -425,15 +465,25 @@ export function createTour(app, three, model) {
     // all — the reader advances with "next stop". Otherwise the one control
     // reads "pause" while it runs and "resume" once it is stopped. Never two
     // buttons with the same label.
+    // On the last stop there is nowhere further to go, so "next stop" is not
+    // offered as a control that does nothing. The end of a thread is a place,
+    // and it says so and gives the reader the way out.
+    const atEnd = index >= stops.length - 1;
     bar.innerHTML = `
-      ${reduced() ? '' : `<button type="button" class="woven-btn" data-act="play" aria-pressed="${paused ? 'true' : 'false'}">${paused ? 'Resume' : 'Pause'}</button>`}
-      <button type="button" class="woven-btn" data-act="prev">Previous stop</button>
-      <button type="button" class="woven-btn" data-act="next">Next stop</button>
+      ${reduced() || atEnd ? '' : `<button type="button" class="woven-btn" data-act="play" aria-pressed="${paused ? 'true' : 'false'}">${paused ? 'Resume' : 'Pause'}</button>`}
+      <button type="button" class="woven-btn" data-act="prev"${index === 0 ? ' disabled' : ''}>Previous stop</button>
+      ${atEnd
+        ? '<button type="button" class="woven-btn" data-act="end">Back to the loom</button>'
+        : '<button type="button" class="woven-btn" data-act="next">Next stop</button>'}
       <span class="tour-title">${esc(tour.title)}${tour.strength === 'weak' ? ' · Thinly sourced' : ''}</span>
-      <span class="tour-counter">Stop ${n} of ${total} · ${esc(stops[index].dateLabel || '')}</span>
+      <span class="tour-counter">${atEnd ? 'End of thread' : `Stop ${n} of ${total}`} · ${esc(stops[index].dateLabel || '')}</span>
       <span id="woven-rail" aria-hidden="true">${Array.from({ length: total }, (_, i) => `<i class="${i < n ? 'on' : ''}"></i>`).join('')}</span>
       <button type="button" class="woven-btn" data-act="exit">Exit this thread</button>`;
     bar.hidden = false;
+    const end = bar.querySelector('[data-act="end"]');
+    if (end) end.addEventListener('click', exit);
+    const nextBtn = bar.querySelector('[data-act="next"]');
+    if (nextBtn) nextBtn.addEventListener('click', next);
     const play = bar.querySelector('[data-act="play"]');
     if (play) {
       play.addEventListener('click', () => {
@@ -444,7 +494,6 @@ export function createTour(app, three, model) {
       });
     }
     bar.querySelector('[data-act="prev"]').addEventListener('click', prev);
-    bar.querySelector('[data-act="next"]').addEventListener('click', next);
     bar.querySelector('[data-act="exit"]').addEventListener('click', exit);
     if (focusAct) {
       const back = bar.querySelector(`[data-act="${focusAct}"]`);

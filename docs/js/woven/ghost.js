@@ -161,6 +161,9 @@ export function createGhost(app, three, model) {
     history.replaceState(null, '', location.pathname);
     if (preView) app.applyView(preView);
     app.needsRender = true;
+    // The key is hidden for the length of the roll. Putting it back is part of
+    // stopping, not something to wait for the next frame that happens to draw.
+    if (app.labels) app.labels.update();
   }
 
   return api;

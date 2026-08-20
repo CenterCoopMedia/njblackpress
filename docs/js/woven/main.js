@@ -69,7 +69,7 @@ async function boot() {
 async function startScene(model) {
   const THREE = await import('three');
   const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
-  const { buildWeft, buildWarp, createStateTexture, createClothMaterial, pluckUniforms, weaveUniform } = await import('./cloth.js');
+  const { buildWeft, buildWarp, createStateTexture, createClothMaterial, pluckUniforms, weaveUniform, minHalfWidth } = await import('./cloth.js');
   const { buildLoom, buildLights } = await import('./loom.js');
   const { buildKnots } = await import('./knots.js');
   const { createPicker } = await import('./picking.js');
@@ -287,6 +287,7 @@ async function startScene(model) {
     let px = Math.min(window.devicePixelRatio, 2);
     if (w * h * px * px > 2.2e6) px = 1.5;
     pixelRatio = px;
+    canvasCssHeight = h;
     renderer.setPixelRatio(px);
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
@@ -302,6 +303,26 @@ async function startScene(model) {
     if (app.labels) app.labels.update();
   }
   let coarseFromDegrade = false;
+  let canvasCssHeight = 1;
+
+  // How thin a thread is allowed to get. At the default framing a real thread is
+  // about a fifth of a pixel wide, which the rasteriser drops outright, so a band
+  // of three papers drew as empty black. The floor is 1.9 screen pixels, capped
+  // well under the 0.16-unit row pitch so a crowded band still reads as separate
+  // threads rather than as a slab.
+  const MIN_THREAD_PX = 1.9;
+  // Four fifths of the 0.16-unit row pitch. At the default framing the rows are
+  // only about 1.4 pixels apart, so this is as wide as a thread can be drawn and
+  // still leave a gap to the next one.
+  const MAX_MIN_HALF_W = 0.064;
+  function updateThreadFloor(dist) {
+    const worldPerPx = (2 * Math.tan((camera.fov * Math.PI) / 360) * dist) / Math.max(1, canvasCssHeight);
+    const want = Math.min(MAX_MIN_HALF_W, (worldPerPx * MIN_THREAD_PX) / 2);
+    if (Math.abs(minHalfWidth.value - want) > 1e-5) {
+      minHalfWidth.value = want;
+      app.needsRender = true;
+    }
+  }
 
   const { createLabels } = await import('./labels.js');
   const labels = createLabels(app, three, model);
@@ -310,7 +331,20 @@ async function startScene(model) {
   // Until the reader moves the camera themselves, a resize re-fits the default
   // framing. Turning a phone would otherwise leave the cloth half off screen.
   let userMoved = false;
-  controls.addEventListener('start', () => { userMoved = true; });
+  // "You start zoomed out" stops being true the moment the reader zooms, so the
+  // line is shown until they do and never after. It is a starting instruction,
+  // not a status.
+  const eranavNote = document.getElementById('woven-eranav-note');
+  function markInteracted() {
+    userMoved = true;
+    if (eranavNote && !eranavNote.hidden) {
+      eranavNote.hidden = true;
+      if (app.labels) app.labels.update();
+    }
+  }
+  app.markInteracted = markInteracted;
+  controls.addEventListener('start', markInteracted);
+  canvas.addEventListener('wheel', markInteracted, { passive: true });
 
   window.addEventListener('resize', () => {
     resize();
@@ -529,6 +563,15 @@ async function startScene(model) {
   app.select = async function select(id, opts) {
     const t = model.byId.get(id);
     if (!t) return;
+    // Already the selected thread, already framed. The reader clicking it again
+    // wants the record back, not a camera move that goes nowhere — which is what
+    // clicking the thread a search had just jumped to used to do.
+    if (state.selectedId === id && !opts.silent && !panel.isOpen()) {
+      hideTip();
+      panel.openPublication(t, model, { playStory: (s) => app.playStory(s) });
+      return;
+    }
+    markInteracted();
     state.selectedId = id;
     state.scrollTwin = !!opts.fromTwin;
     hideTip();
@@ -616,7 +659,9 @@ async function startScene(model) {
     else if (dated.length === seen.length && dated.length === 1) label = dated[0].label;
     else label = `${dated[0].from} to ${dated[dated.length - 1].to}`;
     if (seen.some((b) => b.from === null) && dated.length) label += ' and undated';
-    const text = `${label} · ${count}`;
+    // Named, because beside the era buttons and the search count a bare range
+    // and a bare number read as one more total rather than as what is on screen.
+    const text = `In view: ${label} · ${count} of ${model.counts.total}`;
     // The reading band follows the view, so "earlier" and "later" step from
     // where the reader is rather than from where they last were.
     readingBand = seen[0].key;
@@ -626,6 +671,7 @@ async function startScene(model) {
   }
 
   function stepReadingBand(d) {
+    markInteracted();
     const keys = model.bands.filter((b) => b.count).map((b) => b.key);
     let i = keys.indexOf(readingBand);
     i = Math.min(keys.length - 1, Math.max(0, i + d));
@@ -704,36 +750,59 @@ async function startScene(model) {
     return pool.slice().sort((a, b) => a.name.length - b.name.length || a.name.localeCompare(b.name))[0];
   }
 
-  function runSearch() {
+  // Lighting the matches and saying how many is not an answer if the reader is
+  // looking at a different part of the cloth. Typing moves the view to the best
+  // match on its own; enter is the same move without the wait.
+  function runSearch(jump) {
     const q = searchInput.value;
     const list = matchesFor(q);
     searchMatches = list && list.length ? new Set(list.map((t) => t.id)) : null;
     if (!list) searchCount.textContent = '';
     else if (!list.length) searchCount.textContent = 'no match';
-    else searchCount.textContent = `${list.length} found`;
+    else searchCount.textContent = `${list.length} found · enter to jump`;
     stateTex.clear(3, 0);
     paintBase(null);
     stateTex.commit();
     app.needsRender = true;
     if (app.labels) app.labels.update();
+    if (jump && list && list.length) goToMatch(list, q);
+  }
+
+  function goToMatch(list, q) {
+    const t = bestMatch(list, q);
+    // Selected, so the thread is highlighted and named, but the record panel is
+    // not thrown over the cloth while the reader is still typing.
+    app.select(t.id, { silent: true });
+    announce(`${t.name}. ${t.city || 'city unrecorded'}. ${list.length} match${list.length === 1 ? '' : 'es'}.`);
+  }
+
+  let searchTimer = null;
+  function onSearchInput() {
+    runSearch(false);
+    if (searchTimer) clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      searchTimer = null;
+      const list = matchesFor(searchInput.value);
+      if (list && list.length) goToMatch(list, searchInput.value);
+    }, 250);
   }
 
   function clearSearch() {
+    if (searchTimer) { clearTimeout(searchTimer); searchTimer = null; }
     if (!searchInput) return;
     searchInput.value = '';
     searchMatches = null;
     searchCount.textContent = '';
   }
 
-  searchInput.addEventListener('input', runSearch);
-  searchInput.addEventListener('search', runSearch);
+  searchInput.addEventListener('input', onSearchInput);
+  searchInput.addEventListener('search', onSearchInput);
   searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (searchTimer) { clearTimeout(searchTimer); searchTimer = null; }
     const list = matchesFor(searchInput.value);
     if (!list || !list.length) { announce('No publication matches that.'); return; }
-    const t = bestMatch(list, searchInput.value);
-    app.select(t.id, { silent: true });
-    announce(`${t.name}. ${t.city || 'city unrecorded'}. ${list.length} match${list.length === 1 ? '' : 'es'}.`);
+    goToMatch(list, searchInput.value);
   });
 
   // ---- fullscreen ----
@@ -837,6 +906,7 @@ async function startScene(model) {
   }
 
   function dolly(f) {
+    markInteracted();
     const dir = camera.position.clone().sub(controls.target);
     const d = Math.min(130, Math.max(8, dir.length() * f));
     camera.position.copy(controls.target).add(dir.setLength(d));
@@ -917,6 +987,7 @@ async function startScene(model) {
     }
     updateWeave(now);
     const dist = camera.position.distanceTo(controls.target);
+    updateThreadFloor(dist);
     const wantFull = dist < 45 && !app.forceCoarseWarp;
     if (warpFull.visible !== wantFull) {
       warpFull.visible = wantFull;
@@ -971,8 +1042,14 @@ function hideCards() {
 function toggleHelp() {
   const card = document.getElementById('woven-help-card');
   if (!card.innerHTML) {
+    // Close sits at the top, above the copy, because the copy is longer than a
+    // phone screen and a way out that is below the fold is not a way out. The
+    // panel scrolls inside itself rather than growing past the stage.
     card.innerHTML = `<div class="inner">
-      <h3>About this loom</h3>
+      <div class="card-head">
+        <h3>About this loom</h3>
+        <button type="button" class="woven-btn" data-close>Close</button>
+      </div>
       <p>This is every Black-owned and Black-focused publication we have found in New Jersey, drawn on one axis of time. Left to right is 1880 to 2026. Each horizontal thread is one publication, running from the year it was founded to the year it stopped, and the rows are grouped by the decade each paper began. A thicker thread means more surviving material we can show you. A faint, frayed one means the paper survives only as a line in a catalog.</p>
       <h4>By pointer</h4>
       <dl>
@@ -990,11 +1067,35 @@ function toggleHelp() {
         <dt>Enter</dt><dd>open this publication</dd>
         <dt>Escape</dt><dd>go back</dd>
         <dt>T · G · 0</dt><dd>guided threads · what did not survive · reset the view</dd>
+        <dt>Escape</dt><dd>close this panel</dd>
       </dl>
-      <p><button type="button" class="woven-btn" data-close>Close</button></p>
     </div>`;
     card.querySelector('[data-close]').addEventListener('click', () => { card.hidden = true; });
   }
   card.hidden = !card.hidden;
   if (!card.hidden) card.querySelector('[data-close]').focus({ preventScroll: true });
 }
+
+// Escape closes whatever is over the stage, wherever the focus happens to be.
+// Bound to the document because these panels take focus off the canvas, and the
+// canvas was the only thing listening.
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  const help = document.getElementById('woven-help-card');
+  const picker = document.getElementById('woven-tourpicker');
+  const ghostCard = document.getElementById('woven-ghostcard');
+  let closed = false;
+  if (help && !help.hidden) { help.hidden = true; closed = true; }
+  if (picker && !picker.hidden) {
+    picker.hidden = true;
+    closed = true;
+    const btn = document.getElementById('btn-tours');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  }
+  if (ghostCard && !ghostCard.hidden) { ghostCard.hidden = true; closed = true; }
+  if (closed) {
+    e.stopPropagation();
+    const canvas = document.getElementById('woven-canvas');
+    if (canvas) canvas.focus({ preventScroll: true });
+  }
+});
