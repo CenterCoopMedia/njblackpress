@@ -92,6 +92,7 @@ export function createTour(app, three, model) {
   function hideTransit() { transitEl.hidden = true; transitEl.classList.remove('tr-light'); }
 
   const cache = new Map(); // webPath -> THREE.Texture, LRU by insertion order
+  const pending = new Map(); // webPath -> Promise<THREE.Texture>, in-flight decodes
   let panelMesh = null;
   let panelSize = { w: 0, h: 0 };
   let frameLines = null;
@@ -228,6 +229,11 @@ export function createTour(app, three, model) {
     renderCard(s);
     knots.setTour(new Set(tour.stops.map((x) => x.eventId)), s.eventId);
     app.needsRender = true;
+    // Started here rather than in showPanel: the camera still has a transit
+    // and an ease-to move ahead of it below, and both take the better part of
+    // a second or two. The scan decodes alongside that travel instead of
+    // waiting for it to finish, which is when the old code started fetching.
+    preloadStop(index);
     if (s.transit && forward && !reduced()) {
       showTransit(s.transit);
       announce(`Moving from ${s.transit.fromBand}, to ${s.transit.toBand}.`);
@@ -253,6 +259,10 @@ export function createTour(app, three, model) {
     if (my !== run) return;
     if (!playing) { disposePanel(); return; }
     announceStop(s);
+    // The reader is dwelling on this stop now, so the next one's scan gets
+    // the rest of that time to decode — the same reasoning as the preload
+    // above, aimed one stop further ahead.
+    preloadStop(index + 1);
     // A stop with three paragraphs needs longer than a stop with one. The dwell
     // grows with the copy so no stop is taken away half read.
     if (!paused) schedule(dwellFor(s));
@@ -324,6 +334,48 @@ export function createTour(app, three, model) {
 
   // ---- clipping panels ----
 
+  // Fetches and decodes one clipping into a texture, or returns the copy
+  // already sitting in the cache. Two callers can ask for the same scan at
+  // once — a stop landing while its own preload is still mid-decode — so an
+  // in-flight decode is shared rather than started twice.
+  function loadTexture(webPath) {
+    if (cache.has(webPath)) return Promise.resolve(cache.get(webPath));
+    if (pending.has(webPath)) return pending.get(webPath);
+    const p = (async () => {
+      const img = new Image();
+      img.src = webPath;
+      await img.decode();
+      const tex = new THREE.Texture(img);
+      tex.colorSpace = THREE.SRGBColorSpace;
+      tex.generateMipmaps = true;
+      tex.minFilter = THREE.LinearMipmapLinearFilter;
+      tex.anisotropy = Math.min(4, three.renderer.capabilities.getMaxAnisotropy());
+      tex.needsUpdate = true;
+      while (cache.size >= MAX_TEXTURES) {
+        const oldest = cache.keys().next().value;
+        cache.get(oldest).dispose();
+        cache.delete(oldest);
+      }
+      cache.set(webPath, tex);
+      return tex;
+    })();
+    pending.set(webPath, p);
+    p.finally(() => pending.delete(webPath));
+    return p;
+  }
+
+  // Starts the decode for one stop's scan without waiting on it or touching
+  // the scene. Called for the stop the reader is arriving at (so the fetch
+  // runs alongside the camera move instead of after it lands) and for the
+  // stop after it (so the reader never watches the loading frame for a scan
+  // that could have been decoding since the previous stop).
+  function preloadStop(i) {
+    const s = stops[i];
+    const clip = s && s.clipping;
+    if (!clip || !clip.webPath || !clip.altText) return;
+    loadTexture(clip.webPath).catch(() => {});
+  }
+
   async function showPanel(s, my) {
     if (my !== run) return;
     disposePanel();
@@ -365,30 +417,18 @@ export function createTour(app, three, model) {
       // A full-size scan can take a couple of seconds to fetch and decode. An
       // outlined, dimmed frame at the clipping's own size and place says the
       // evidence is coming and where — a blank stretch of loom for those two
-      // seconds read as broken instead.
+      // seconds read as broken instead. Most of the time this decode was
+      // already started by goTo when the camera began moving toward this
+      // stop, so the frame shows only for whatever is left of that wait.
       showLoadingFrame(w, h, px, py);
       try {
-        const img = new Image();
-        img.src = clip.webPath;
-        await img.decode();
-        if (my !== run) { hideLoadingFrame(); return; }
-        tex = new THREE.Texture(img);
-        tex.colorSpace = THREE.SRGBColorSpace;
-        tex.generateMipmaps = true;
-        tex.minFilter = THREE.LinearMipmapLinearFilter;
-        tex.anisotropy = Math.min(4, three.renderer.capabilities.getMaxAnisotropy());
-        tex.needsUpdate = true;
+        tex = await loadTexture(clip.webPath);
       } catch {
         hideLoadingFrame();
         renderOverlay(s, null, my);
         return;
       }
-      while (cache.size >= MAX_TEXTURES) {
-        const oldest = cache.keys().next().value;
-        cache.get(oldest).dispose();
-        cache.delete(oldest);
-      }
-      cache.set(clip.webPath, tex);
+      if (my !== run) { hideLoadingFrame(); return; }
     }
     hideLoadingFrame();
     const geo = new THREE.PlaneGeometry(w, h, 8, 6);

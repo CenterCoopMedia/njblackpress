@@ -1165,6 +1165,37 @@ for (const id of ['woven-help-card', 'woven-tourpicker', 'woven-ghostcard']) {
   });
 }
 
+// On a phone (max-width: 700px in woven.css) the about panel, the guided
+// threads picker, and the ghost card become a fixed backdrop covering the
+// whole window. The fixed site header still sits above that backdrop, so a
+// tap on the hamburger opened the full-screen site nav on top of the panel
+// that was still open. While any of the three is open on a narrow screen, the
+// header is made inert: a tap there lands on the overlay's own backdrop and
+// closes it instead, and the header comes back the moment the overlay closes.
+(function guardHeaderBehindOverlays() {
+  const header = document.getElementById('site-header');
+  const overlayIds = ['woven-help-card', 'woven-tourpicker', 'woven-ghostcard'];
+  if (!header) return;
+  const narrow = window.matchMedia('(max-width: 700px)');
+
+  function update() {
+    const anyOpen = narrow.matches && overlayIds.some((id) => {
+      const el = document.getElementById(id);
+      return el && !el.hidden;
+    });
+    header.inert = anyOpen;
+    header.setAttribute('aria-hidden', String(anyOpen));
+  }
+
+  const observer = new MutationObserver(update);
+  for (const id of overlayIds) {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el, { attributes: true, attributeFilter: ['hidden'] });
+  }
+  narrow.addEventListener('change', update);
+  update();
+})();
+
 // Escape closes whatever is over the stage, wherever the focus happens to be.
 // Bound to the document because these panels take focus off the canvas, and the
 // canvas was the only thing listening.
