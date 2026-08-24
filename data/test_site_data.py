@@ -5,6 +5,7 @@ Run:
 """
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -14,6 +15,9 @@ DATA_STORIES = ROOT / "data" / "stories.json"
 DOCS_EVENTS = ROOT / "docs" / "data" / "events.json"
 DOCS_STORIES = ROOT / "docs" / "data" / "stories.json"
 PUBLICATIONS_PATH = ROOT / "data" / "publications.json"
+DOCS_PUBLICATIONS_PATH = ROOT / "docs" / "data" / "publications.json"
+MALFORMED_WAYBACK_URL = re.compile(r"^https://web\.archive\.org/web/\d{8,14}https?://")
+LOWERCASE_AFTER_COLON = re.compile(r":\s+[a-z]")
 
 
 def load():
@@ -83,6 +87,39 @@ def test_data_and_docs_copies_identical():
     print("PASS: data/ and docs/data/ copies of events.json and stories.json are identical")
 
 
+def test_wayback_urls_include_snapshot_separator():
+    bad = []
+    for path in (PUBLICATIONS_PATH, DOCS_PUBLICATIONS_PATH):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        for publication in data["publications"]:
+            for evidence in publication.get("evidence", []):
+                url = evidence.get("url") or ""
+                if MALFORMED_WAYBACK_URL.match(url):
+                    bad.append((str(path.relative_to(ROOT)), publication["id"], url))
+    assert not bad, f"Wayback URLs missing the snapshot separator: {bad}"
+    print("PASS: Wayback URLs include the separator after the snapshot timestamp")
+
+
+def test_visible_text_uses_capital_after_colon():
+    visible_fields = {"title", "description", "thread", "historicalNotes", "missionStatement", "caption"}
+    sources = (
+        ("publications", PUBLICATIONS_PATH),
+        ("events", DATA_EVENTS),
+        ("stories", DATA_STORIES),
+    )
+    bad = []
+    for collection, path in sources:
+        rows = json.loads(path.read_text(encoding="utf-8"))[collection]
+        for row in rows:
+            for key, value in row.items():
+                if key in visible_fields and isinstance(value, str):
+                    prose = re.sub(r"\b(?:LCCN|OCLC):\s*\w+", "", value)
+                    if LOWERCASE_AFTER_COLON.search(prose):
+                        bad.append((collection, row.get("id"), key))
+    assert not bad, f"Visible text has lowercase text after a colon: {bad}"
+    print("PASS: visible text uses a capital letter after each colon")
+
+
 def main():
     test_events_parse_and_count_match()
     test_stories_parse_and_count_match()
@@ -91,6 +128,8 @@ def main():
     test_story_event_ids_exist(stories, events)
     test_story_publication_ids_exist(stories, publications)
     test_data_and_docs_copies_identical()
+    test_wayback_urls_include_snapshot_separator()
+    test_visible_text_uses_capital_after_colon()
     print("ALL TESTS PASSED")
 
 

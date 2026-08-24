@@ -1,0 +1,1502 @@
+{
+  "metadata": {
+    "asOfYear": 2026,
+    "coordinateSystem": "WGS84",
+    "coordinateSource": "Nominatim / OpenStreetMap search results, checked 2026-08-24",
+    "firstDecade": 1880,
+    "lastDecade": 2020,
+    "publicationCount": 136,
+    "mappedPublicationCount": 134,
+    "unmappedPublicationCount": 2
+  },
+  "locations": [
+    {
+      "id": "atlantic-city-nj",
+      "label": "Atlantic City",
+      "latitude": 39.3642852,
+      "longitude": -74.4229351,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 45,
+          "name": "Apex News",
+          "city": "Atlantic City",
+          "yearFounded": 1929,
+          "yearCeased": 1940,
+          "isActive": false
+        },
+        {
+          "id": 119,
+          "name": "Black Atlantic City Magazine",
+          "city": "Atlantic City",
+          "yearFounded": 1978,
+          "yearCeased": 1986,
+          "isActive": false
+        },
+        {
+          "id": 77,
+          "name": "Black New Jersey Magazine",
+          "city": "Atlantic City",
+          "yearFounded": 1988,
+          "yearCeased": 1990,
+          "isActive": false
+        },
+        {
+          "id": 6,
+          "name": "Front Runner New Jersey",
+          "city": "Atlantic City",
+          "yearFounded": 2017,
+          "yearCeased": null,
+          "isActive": true
+        },
+        {
+          "id": 25,
+          "name": "Atlantic City Focus",
+          "city": "Atlantic City",
+          "yearFounded": 2022,
+          "yearCeased": null,
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "id": "berlin-nj",
+      "label": "Berlin",
+      "latitude": 39.7912262,
+      "longitude": -74.9290536,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 102,
+          "name": "Camp Berlin Broadcast",
+          "city": "Berlin",
+          "yearFounded": 1934,
+          "yearCeased": 1935,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "bordentown-nj",
+      "label": "Bordentown",
+      "latitude": 40.1462685,
+      "longitude": -74.7114508,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 57,
+          "name": "The Ironsides Echo",
+          "city": "Bordentown",
+          "yearFounded": 1917,
+          "yearCeased": 1955,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "camden-nj",
+      "label": "Camden",
+      "latitude": 39.9440874,
+      "longitude": -75.1191932,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 3,
+          "name": "The Camden News",
+          "city": "Camden",
+          "yearFounded": 1915,
+          "yearCeased": 1918,
+          "isActive": false
+        },
+        {
+          "id": 33,
+          "name": "The Black Observer",
+          "city": "Camden",
+          "yearFounded": 1968,
+          "yearCeased": 1970,
+          "isActive": false
+        },
+        {
+          "id": 46,
+          "name": "The African Voice",
+          "city": "Camden",
+          "yearFounded": 1972,
+          "yearCeased": 1975,
+          "isActive": false
+        },
+        {
+          "id": 56,
+          "name": "The Union Messenger",
+          "city": "Camden",
+          "yearFounded": 1979,
+          "yearCeased": 1985,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "cape-may-nj",
+      "label": "Cape May",
+      "latitude": 38.933431,
+      "longitude": -74.9214226,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 94,
+          "name": "Dias Creek Echo",
+          "city": "Cape May",
+          "yearFounded": 1938,
+          "yearCeased": 1938,
+          "isActive": false
+        },
+        {
+          "id": 55,
+          "name": "Point Breeze Rugcuttings",
+          "city": "Cape May",
+          "yearFounded": 1938,
+          "yearCeased": 1938,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "chatsworth-nj",
+      "label": "Chatsworth",
+      "latitude": 39.8176178,
+      "longitude": -74.5348749,
+      "precision": "locality_center",
+      "publications": [
+        {
+          "id": 48,
+          "name": "Ash Can",
+          "city": "Chatsworth",
+          "yearFounded": 1935,
+          "yearCeased": 1935,
+          "isActive": false
+        },
+        {
+          "id": 136,
+          "name": "Penn Crusader",
+          "city": "Chatsworth",
+          "yearFounded": 1936,
+          "yearCeased": 1940,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "cherry-hill-nj",
+      "label": "Cherry Hill",
+      "latitude": 39.9348351,
+      "longitude": -75.0307264,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 108,
+          "name": "Educational Perspectives",
+          "city": "Cherry Hill",
+          "yearFounded": 1978,
+          "yearCeased": 1985,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "chicago-il",
+      "label": "Chicago / National",
+      "latitude": 41.8755616,
+      "longitude": -87.6244212,
+      "precision": "city_center",
+      "publications": [
+        {
+          "id": 99,
+          "name": "Black Caucus of ALA Newsletter",
+          "city": "Chicago/National",
+          "yearFounded": 1974,
+          "yearCeased": null,
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "id": "cresskill-nj",
+      "label": "Cresskill",
+      "latitude": 40.9414874,
+      "longitude": -73.9593041,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 95,
+          "name": "Right On!",
+          "city": "Cresskill",
+          "yearFounded": 1971,
+          "yearCeased": 2014,
+          "isActive": false
+        },
+        {
+          "id": 83,
+          "name": "Right On! Focus",
+          "city": "Cresskill",
+          "yearFounded": 1982,
+          "yearCeased": 1985,
+          "isActive": false
+        },
+        {
+          "id": 96,
+          "name": "Right On! Presents Class",
+          "city": "Cresskill",
+          "yearFounded": 1983,
+          "yearCeased": 1985,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "dover-nj",
+      "label": "Dover",
+      "latitude": 40.883988,
+      "longitude": -74.5621025,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 67,
+          "name": "Bronze Thrills",
+          "city": "Dover",
+          "yearFounded": 1952,
+          "yearCeased": 1981,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "east-orange-nj",
+      "label": "East Orange",
+      "latitude": 40.7642404,
+      "longitude": -74.215011,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 129,
+          "name": "Club World: Newsmagazine",
+          "city": "East Orange",
+          "yearFounded": 1955,
+          "yearCeased": 1959,
+          "isActive": false
+        },
+        {
+          "id": 42,
+          "name": "Essex Forum",
+          "city": "East Orange",
+          "yearFounded": 1972,
+          "yearCeased": 1985,
+          "isActive": false
+        },
+        {
+          "id": 105,
+          "name": "Primer",
+          "city": "East Orange",
+          "yearFounded": 1973,
+          "yearCeased": 1978,
+          "isActive": false
+        },
+        {
+          "id": 130,
+          "name": "Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women",
+          "city": "East Orange",
+          "yearFounded": 1983,
+          "yearCeased": 1988,
+          "isActive": false
+        },
+        {
+          "id": 110,
+          "name": "Perspectus News Magazine",
+          "city": "East Orange",
+          "yearFounded": 1989,
+          "yearCeased": 1992,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "edison-nj",
+      "label": "Edison",
+      "latitude": 40.5005351,
+      "longitude": -74.3983939,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 109,
+          "name": "The Liberator",
+          "city": "Edison",
+          "yearFounded": 1970,
+          "yearCeased": 1971,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "fort-dix-nj",
+      "label": "Fort Dix",
+      "latitude": 40.0105355,
+      "longitude": -74.6247972,
+      "precision": "locality_center",
+      "publications": [
+        {
+          "id": 97,
+          "name": "Rifle Ranger",
+          "city": "Fort Dix",
+          "yearFounded": 1938,
+          "yearCeased": 1938,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "fort-lee-nj",
+      "label": "Fort Lee",
+      "latitude": 40.8509333,
+      "longitude": -73.9701382,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 118,
+          "name": "Gospel Today Magazine",
+          "city": "Fort Lee",
+          "yearFounded": 1989,
+          "yearCeased": 2013,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "fort-wayne-in",
+      "label": "Fort Wayne, Indiana",
+      "latitude": 41.0799898,
+      "longitude": -85.1386015,
+      "precision": "city_center",
+      "publications": [
+        {
+          "id": 91,
+          "name": "The Literary Griot",
+          "city": "Fort Wayne",
+          "yearFounded": 1988,
+          "yearCeased": 2002,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "glassboro-nj",
+      "label": "Glassboro",
+      "latitude": 39.7027677,
+      "longitude": -75.1119434,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 90,
+          "name": "The Little Ease Echo",
+          "city": "Glassboro",
+          "yearFounded": 1938,
+          "yearCeased": 1939,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "glen-ridge-nj",
+      "label": "Glen Ridge",
+      "latitude": 40.805378,
+      "longitude": -74.2037566,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 87,
+          "name": "Camp Cooper Chats",
+          "city": "Glen Ridge",
+          "yearFounded": 1935,
+          "yearCeased": 1937,
+          "isActive": false
+        },
+        {
+          "id": 112,
+          "name": "Captain Africa",
+          "city": "Glen Ridge",
+          "yearFounded": 1992,
+          "yearCeased": 1994,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "hillside-nj",
+      "label": "Hillside",
+      "latitude": 40.701213,
+      "longitude": -74.2301459,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 15,
+          "name": "African World",
+          "city": "Hillside",
+          "yearFounded": 1994,
+          "yearCeased": 1998,
+          "isActive": false
+        },
+        {
+          "id": 29,
+          "name": "Faithfully Magazine",
+          "city": "Hillside",
+          "yearFounded": 2016,
+          "yearCeased": null,
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "id": "jersey-city-nj",
+      "label": "Jersey City",
+      "latitude": 40.7215682,
+      "longitude": -74.047455,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 52,
+          "name": "Black Journal",
+          "city": "Jersey City",
+          "yearFounded": 1979,
+          "yearCeased": 1985,
+          "isActive": false
+        },
+        {
+          "id": 106,
+          "name": "NJ-AAHGS Newsletter",
+          "city": "Jersey City",
+          "yearFounded": 1989,
+          "yearCeased": 2000,
+          "isActive": false
+        },
+        {
+          "id": 116,
+          "name": "The Jersey Heritage",
+          "city": "Jersey City",
+          "yearFounded": 1992,
+          "yearCeased": 1996,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "leonia-nj",
+      "label": "Leonia",
+      "latitude": 40.8617353,
+      "longitude": -73.9880495,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 19,
+          "name": "NJ in Color",
+          "city": "Leonia",
+          "yearFounded": 2019,
+          "yearCeased": null,
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "id": "long-branch-red-bank-nj",
+      "label": "Long Branch / Red Bank",
+      "latitude": 40.3256662,
+      "longitude": -74.0283331,
+      "precision": "composite_midpoint",
+      "publications": [
+        {
+          "id": 31,
+          "name": "The Echo",
+          "city": "Long Branch/Red Bank",
+          "yearFounded": 1904,
+          "yearCeased": 1943,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "montclair-nj",
+      "label": "Montclair",
+      "latitude": 40.8164458,
+      "longitude": -74.2210643,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 2,
+          "name": "The Jersey Express",
+          "city": "Montclair",
+          "yearFounded": 1932,
+          "yearCeased": 1940,
+          "isActive": false
+        },
+        {
+          "id": 121,
+          "name": "Testimony: A Journal of African-American Poetry",
+          "city": "Montclair",
+          "yearFounded": 1987,
+          "yearCeased": 1990,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "new-brunswick-nj",
+      "label": "New Brunswick",
+      "latitude": 40.4936119,
+      "longitude": -74.4436416,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 123,
+          "name": "The Black Sociologist",
+          "city": "New Brunswick",
+          "yearFounded": 1972,
+          "yearCeased": 1982,
+          "isActive": false
+        },
+        {
+          "id": 100,
+          "name": "Kuumba: The Black Voice Magazine",
+          "city": "New Brunswick",
+          "yearFounded": 1974,
+          "yearCeased": 1975,
+          "isActive": false
+        },
+        {
+          "id": 61,
+          "name": "The National Political Science Review",
+          "city": "New Brunswick",
+          "yearFounded": 1989,
+          "yearCeased": 2019,
+          "isActive": false
+        },
+        {
+          "id": 54,
+          "name": "Journal of African American Men",
+          "city": "New Brunswick",
+          "yearFounded": 1995,
+          "yearCeased": 2002,
+          "isActive": false
+        },
+        {
+          "id": 49,
+          "name": "At the Crossroads",
+          "city": "New Brunswick",
+          "yearFounded": 1997,
+          "yearCeased": 2000,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "new-lisbon-nj",
+      "label": "New Lisbon",
+      "latitude": 39.9581699,
+      "longitude": -74.6279344,
+      "precision": "locality_center",
+      "publications": [
+        {
+          "id": 137,
+          "name": "Pine Needle",
+          "city": "New Lisbon",
+          "yearFounded": 1936,
+          "yearCeased": 1940,
+          "isActive": false
+        },
+        {
+          "id": 89,
+          "name": "Sixty Niner",
+          "city": "New Lisbon",
+          "yearFounded": 1936,
+          "yearCeased": 1941,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "newark-nj",
+      "label": "Newark",
+      "latitude": 40.735657,
+      "longitude": -74.1723667,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 38,
+          "name": "New Jersey Trumpet",
+          "city": "Newark",
+          "yearFounded": 1887,
+          "yearCeased": 1897,
+          "isActive": false
+        },
+        {
+          "id": 9,
+          "name": "The Newark Herald",
+          "city": "Newark",
+          "yearFounded": 1928,
+          "yearCeased": 1939,
+          "isActive": false
+        },
+        {
+          "id": 37,
+          "name": "The New Jersey Guardian",
+          "city": "Newark",
+          "yearFounded": 1934,
+          "yearCeased": 1942,
+          "isActive": false
+        },
+        {
+          "id": 16,
+          "name": "New Jersey Herald News",
+          "city": "Newark",
+          "yearFounded": 1938,
+          "yearCeased": 1966,
+          "isActive": false
+        },
+        {
+          "id": 35,
+          "name": "New Jersey Afro-American",
+          "city": "Newark",
+          "yearFounded": 1941,
+          "yearCeased": 1991,
+          "isActive": false
+        },
+        {
+          "id": 101,
+          "name": "New Jersey After Hours",
+          "city": "Newark",
+          "yearFounded": 1949,
+          "yearCeased": 1980,
+          "isActive": false
+        },
+        {
+          "id": 72,
+          "name": "Hours After",
+          "city": "Newark",
+          "yearFounded": 1951,
+          "yearCeased": 1955,
+          "isActive": false
+        },
+        {
+          "id": 66,
+          "name": "Jersey Camera",
+          "city": "Newark",
+          "yearFounded": 1951,
+          "yearCeased": 1955,
+          "isActive": false
+        },
+        {
+          "id": 21,
+          "name": "Nite Lite",
+          "city": "Newark",
+          "yearFounded": 1959,
+          "yearCeased": 1965,
+          "isActive": false
+        },
+        {
+          "id": 76,
+          "name": "Newark Community Union Project News",
+          "city": "Newark",
+          "yearFounded": 1963,
+          "yearCeased": 1965,
+          "isActive": false
+        },
+        {
+          "id": 62,
+          "name": "Afro-American Festival of the Arts Magazine",
+          "city": "Newark",
+          "yearFounded": 1966,
+          "yearCeased": 1966,
+          "isActive": false
+        },
+        {
+          "id": 133,
+          "name": "Freedom Reports",
+          "city": "Newark",
+          "yearFounded": 1966,
+          "yearCeased": 1970,
+          "isActive": false
+        },
+        {
+          "id": 70,
+          "name": "Deliverance Voice",
+          "city": "Newark",
+          "yearFounded": 1967,
+          "yearCeased": 2014,
+          "isActive": false
+        },
+        {
+          "id": 28,
+          "name": "Black Newark",
+          "city": "Newark",
+          "yearFounded": 1968,
+          "yearCeased": 1974,
+          "isActive": false
+        },
+        {
+          "id": 69,
+          "name": "The Cricket: Black Music in Evolution",
+          "city": "Newark",
+          "yearFounded": 1969,
+          "yearCeased": 1969,
+          "isActive": false
+        },
+        {
+          "id": 51,
+          "name": "CFUN News",
+          "city": "Newark",
+          "yearFounded": 1970,
+          "yearCeased": 1971,
+          "isActive": false
+        },
+        {
+          "id": 107,
+          "name": "The Black Voice",
+          "city": "Newark",
+          "yearFounded": 1970,
+          "yearCeased": 1975,
+          "isActive": false
+        },
+        {
+          "id": 39,
+          "name": "The Forum",
+          "city": "Newark",
+          "yearFounded": 1970,
+          "yearCeased": 1980,
+          "isActive": false
+        },
+        {
+          "id": 68,
+          "name": "MEDIC News",
+          "city": "Newark",
+          "yearFounded": 1971,
+          "yearCeased": 1975,
+          "isActive": false
+        },
+        {
+          "id": 111,
+          "name": "Ngoma",
+          "city": "Newark",
+          "yearFounded": 1971,
+          "yearCeased": 1976,
+          "isActive": false
+        },
+        {
+          "id": 59,
+          "name": "En Avant",
+          "city": "Newark",
+          "yearFounded": 1972,
+          "yearCeased": 1975,
+          "isActive": false
+        },
+        {
+          "id": 134,
+          "name": "En Avant: Bulletin pour le development de la mobilisation patriotique",
+          "city": "Newark",
+          "yearFounded": 1972,
+          "yearCeased": 1975,
+          "isActive": false
+        },
+        {
+          "id": 122,
+          "name": "The Hart Fund",
+          "city": "Newark",
+          "yearFounded": 1972,
+          "yearCeased": 1978,
+          "isActive": false
+        },
+        {
+          "id": 84,
+          "name": "Unity and Struggle",
+          "city": "Newark",
+          "yearFounded": 1972,
+          "yearCeased": 1978,
+          "isActive": false
+        },
+        {
+          "id": 115,
+          "name": "Monthly Black Periodicals Selection Review",
+          "city": "Newark",
+          "yearFounded": 1973,
+          "yearCeased": 1980,
+          "isActive": false
+        },
+        {
+          "id": 126,
+          "name": "Black Women’s United Front Newsletter",
+          "city": "Newark",
+          "yearFounded": 1976,
+          "yearCeased": 1976,
+          "isActive": false
+        },
+        {
+          "id": 27,
+          "name": "Greater News",
+          "city": "Newark",
+          "yearFounded": 1979,
+          "yearCeased": 1985,
+          "isActive": false
+        },
+        {
+          "id": 74,
+          "name": "Bootstrap",
+          "city": "Newark",
+          "yearFounded": 1981,
+          "yearCeased": 1983,
+          "isActive": false
+        },
+        {
+          "id": 104,
+          "name": "Update",
+          "city": "Newark",
+          "yearFounded": 1983,
+          "yearCeased": 1988,
+          "isActive": false
+        },
+        {
+          "id": 81,
+          "name": "ONI",
+          "city": "Newark",
+          "yearFounded": 1988,
+          "yearCeased": 1992,
+          "isActive": false
+        },
+        {
+          "id": 75,
+          "name": "The Network: The Newsletter of the African-American Institute of Islamic Research",
+          "city": "Newark",
+          "yearFounded": 1991,
+          "yearCeased": 1995,
+          "isActive": false
+        },
+        {
+          "id": 23,
+          "name": "The Newark Times",
+          "city": "Newark",
+          "yearFounded": 2014,
+          "yearCeased": null,
+          "isActive": true
+        },
+        {
+          "id": 22,
+          "name": "Ark Republic",
+          "city": "Newark",
+          "yearFounded": 2017,
+          "yearCeased": null,
+          "isActive": true
+        },
+        {
+          "id": 20,
+          "name": "New Jersey Urban News",
+          "city": "Newark",
+          "yearFounded": 2018,
+          "yearCeased": null,
+          "isActive": true
+        },
+        {
+          "id": 12,
+          "name": "Five Wards Media",
+          "city": "Newark",
+          "yearFounded": 2021,
+          "yearCeased": null,
+          "isActive": true
+        },
+        {
+          "id": 43,
+          "name": "Public Square Amplified",
+          "city": "Newark",
+          "yearFounded": 2021,
+          "yearCeased": null,
+          "isActive": true
+        },
+        {
+          "id": 50,
+          "name": "New Jersey Deadline",
+          "city": "Newark",
+          "yearFounded": null,
+          "yearCeased": null,
+          "isActive": true
+        },
+        {
+          "id": 14,
+          "name": "New Jersey Record",
+          "city": "Newark",
+          "yearFounded": null,
+          "yearCeased": null,
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "id": "orange-nj",
+      "label": "Orange",
+      "latitude": 40.7709499,
+      "longitude": -74.2264601,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 26,
+          "name": "Harambee",
+          "city": "Orange",
+          "yearFounded": 1990,
+          "yearCeased": 1995,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "paramus-nj",
+      "label": "Paramus",
+      "latitude": 40.9452911,
+      "longitude": -74.0735899,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 86,
+          "name": "Starline",
+          "city": "Paramus",
+          "yearFounded": 1987,
+          "yearCeased": 2005,
+          "isActive": false
+        },
+        {
+          "id": 124,
+          "name": "The Best of Rap & R&B",
+          "city": "Paramus",
+          "yearFounded": 1988,
+          "yearCeased": 2001,
+          "isActive": false
+        },
+        {
+          "id": 135,
+          "name": "Rap Masters: Reader’s Choice",
+          "city": "Paramus",
+          "yearFounded": 1990,
+          "yearCeased": 2001,
+          "isActive": false
+        },
+        {
+          "id": 114,
+          "name": "Word Up!",
+          "city": "Paramus",
+          "yearFounded": 1990,
+          "yearCeased": 2012,
+          "isActive": false
+        },
+        {
+          "id": 82,
+          "name": "Hype Hair",
+          "city": "Paramus",
+          "yearFounded": 1993,
+          "yearCeased": null,
+          "isActive": true
+        },
+        {
+          "id": 93,
+          "name": "Try It Yourself Hair!",
+          "city": "Paramus",
+          "yearFounded": 1993,
+          "yearCeased": 1996,
+          "isActive": false
+        },
+        {
+          "id": 92,
+          "name": "Braids & Beauty",
+          "city": "Paramus",
+          "yearFounded": 1994,
+          "yearCeased": 1995,
+          "isActive": false
+        },
+        {
+          "id": 63,
+          "name": "Today's Black Woman",
+          "city": "Paramus",
+          "yearFounded": 1994,
+          "yearCeased": 2012,
+          "isActive": false
+        },
+        {
+          "id": 138,
+          "name": "Today’s Black Woman",
+          "city": "Paramus",
+          "yearFounded": 1995,
+          "yearCeased": 2012,
+          "isActive": false
+        },
+        {
+          "id": 88,
+          "name": "Just for Black Men",
+          "city": "Paramus",
+          "yearFounded": 1996,
+          "yearCeased": 2009,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "paterson-nj",
+      "label": "Paterson",
+      "latitude": 40.9167654,
+      "longitude": -74.171811,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 30,
+          "name": "North Jersey Independent",
+          "city": "Paterson",
+          "yearFounded": 1950,
+          "yearCeased": 1955,
+          "isActive": false
+        },
+        {
+          "id": 18,
+          "name": "The Liberator",
+          "city": "Paterson",
+          "yearFounded": 1950,
+          "yearCeased": 1955,
+          "isActive": false
+        },
+        {
+          "id": 11,
+          "name": "The Northern New Jersey Informer",
+          "city": "Paterson",
+          "yearFounded": 1950,
+          "yearCeased": 1955,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "piscataway-nj",
+      "label": "Piscataway",
+      "latitude": 40.5464326,
+      "longitude": -74.4660542,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 98,
+          "name": "Black Voice/Carta Boricua",
+          "city": "Piscataway",
+          "yearFounded": 1970,
+          "yearCeased": 2015,
+          "isActive": false
+        },
+        {
+          "id": 117,
+          "name": "Inner City Products",
+          "city": "Piscataway",
+          "yearFounded": 1991,
+          "yearCeased": 1995,
+          "isActive": false
+        },
+        {
+          "id": 53,
+          "name": "MC Squared",
+          "city": "Piscataway",
+          "yearFounded": 1991,
+          "yearCeased": 1995,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "plainfield-nj",
+      "label": "Plainfield",
+      "latitude": 40.6201412,
+      "longitude": -74.4222416,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 41,
+          "name": "The Voice",
+          "city": "Plainfield",
+          "yearFounded": 1968,
+          "yearCeased": 1974,
+          "isActive": false
+        },
+        {
+          "id": 13,
+          "name": "City News",
+          "city": "Plainfield",
+          "yearFounded": 1983,
+          "yearCeased": 2003,
+          "isActive": false
+        },
+        {
+          "id": 47,
+          "name": "Artz",
+          "city": "Plainfield",
+          "yearFounded": 1991,
+          "yearCeased": 1993,
+          "isActive": false
+        },
+        {
+          "id": 58,
+          "name": "Yes: Youth Excited About Success",
+          "city": "Plainfield",
+          "yearFounded": 1994,
+          "yearCeased": 1998,
+          "isActive": false
+        },
+        {
+          "id": 65,
+          "name": "Spirit: The Guide to the Soul",
+          "city": "Plainfield",
+          "yearFounded": 1996,
+          "yearCeased": 2000,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "pleasantville-nj",
+      "label": "Pleasantville",
+      "latitude": 39.3898388,
+      "longitude": -74.5240422,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 71,
+          "name": "The Missionary Magazine",
+          "city": "Pleasantville",
+          "yearFounded": 1952,
+          "yearCeased": 1960,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "princeton-nj",
+      "label": "Princeton",
+      "latitude": 40.3496953,
+      "longitude": -74.6597376,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 7,
+          "name": "The Citizen",
+          "city": "Princeton",
+          "yearFounded": 1909,
+          "yearCeased": 1915,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "river-edge-nj",
+      "label": "River Edge",
+      "latitude": 40.9287098,
+      "longitude": -74.0398622,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 1,
+          "name": "Hype",
+          "city": "River Edge",
+          "yearFounded": 1990,
+          "yearCeased": 1993,
+          "isActive": false
+        },
+        {
+          "id": 125,
+          "name": "Black Hair Digest",
+          "city": "River Edge",
+          "yearFounded": 1993,
+          "yearCeased": 1996,
+          "isActive": false
+        },
+        {
+          "id": 78,
+          "name": "Fotorama",
+          "city": "River Edge",
+          "yearFounded": 1993,
+          "yearCeased": 1995,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "saddle-brook-nj",
+      "label": "Saddle Brook",
+      "latitude": 40.898988,
+      "longitude": -74.0926418,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 120,
+          "name": "Write On Newsletter",
+          "city": "Saddle Brook",
+          "yearFounded": 1985,
+          "yearCeased": 1990,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "saddle-river-nj",
+      "label": "Saddle River",
+      "latitude": 41.0317637,
+      "longitude": -74.1020866,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 34,
+          "name": "The Landscape",
+          "city": "Saddle River",
+          "yearFounded": 1881,
+          "yearCeased": 1901,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "somerset-nj",
+      "label": "Somerset",
+      "latitude": 40.511589,
+      "longitude": -74.5048662,
+      "precision": "locality_center",
+      "publications": [
+        {
+          "id": 44,
+          "name": "The Franklin Voice",
+          "city": "Somerset",
+          "yearFounded": 1996,
+          "yearCeased": 2000,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "new-jersey-statewide",
+      "label": "Statewide (New Jersey)",
+      "latitude": 40.0757384,
+      "longitude": -74.4041622,
+      "precision": "state_center",
+      "publications": [
+        {
+          "id": 36,
+          "name": "More Jersey",
+          "city": "Statewide (New Jersey)",
+          "yearFounded": 2022,
+          "yearCeased": null,
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "id": "swedesboro-nj",
+      "label": "Swedesboro",
+      "latitude": 39.7476136,
+      "longitude": -75.3104654,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 8,
+          "name": "South Jersey Journal",
+          "city": "Swedesboro",
+          "yearFounded": 2011,
+          "yearCeased": 2018,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "teaneck-nj",
+      "label": "Teaneck",
+      "latitude": 40.8860164,
+      "longitude": -74.0072568,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 5,
+          "name": "The Connection / North Jersey Connection",
+          "city": "Teaneck",
+          "yearFounded": 1982,
+          "yearCeased": 1991,
+          "isActive": false
+        },
+        {
+          "id": 131,
+          "name": "The Connection Newspaper",
+          "city": "Teaneck",
+          "yearFounded": 1982,
+          "yearCeased": 1991,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "trenton-nj",
+      "label": "Trenton",
+      "latitude": 40.2203074,
+      "longitude": -74.7659,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 10,
+          "name": "The Sentinel",
+          "city": "Trenton",
+          "yearFounded": 1880,
+          "yearCeased": 1883,
+          "isActive": false
+        },
+        {
+          "id": 113,
+          "name": "Wait",
+          "city": "Trenton",
+          "yearFounded": 1961,
+          "yearCeased": 1965,
+          "isActive": false
+        },
+        {
+          "id": 73,
+          "name": "Utimme Umana/La Voz Oculta",
+          "city": "Trenton",
+          "yearFounded": 1968,
+          "yearCeased": 1990,
+          "isActive": false
+        },
+        {
+          "id": 64,
+          "name": "Black Racers Yearbook",
+          "city": "Trenton",
+          "yearFounded": 1974,
+          "yearCeased": 1974,
+          "isActive": false
+        },
+        {
+          "id": 80,
+          "name": "Fire II",
+          "city": "Trenton",
+          "yearFounded": 1975,
+          "yearCeased": 1978,
+          "isActive": false
+        },
+        {
+          "id": 40,
+          "name": "The Nubian News",
+          "city": "Trenton",
+          "yearFounded": 1989,
+          "yearCeased": null,
+          "isActive": true
+        },
+        {
+          "id": 32,
+          "name": "Trenton365 Stream with Jacque Howard",
+          "city": "Trenton",
+          "yearFounded": 2016,
+          "yearCeased": 2024,
+          "isActive": false
+        },
+        {
+          "id": 4,
+          "name": "Black In Jersey",
+          "city": "Trenton",
+          "yearFounded": 2021,
+          "yearCeased": null,
+          "isActive": true
+        },
+        {
+          "id": 17,
+          "name": "Trenton Journal",
+          "city": "Trenton",
+          "yearFounded": 2021,
+          "yearCeased": null,
+          "isActive": true
+        }
+      ]
+    },
+    {
+      "id": "vauxhall-nj",
+      "label": "Vauxhall",
+      "latitude": 40.7181355,
+      "longitude": -74.2831959,
+      "precision": "locality_center",
+      "publications": [
+        {
+          "id": 79,
+          "name": "The Hiram Star-News",
+          "city": "Vauxhall",
+          "yearFounded": 1947,
+          "yearCeased": 1955,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "wayne-nj",
+      "label": "Wayne",
+      "latitude": 40.9491723,
+      "longitude": -74.2376802,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 103,
+          "name": "Ujamaa: Journal of the Black Students Union",
+          "city": "Wayne",
+          "yearFounded": 1971,
+          "yearCeased": 1975,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "west-orange-nj",
+      "label": "West Orange",
+      "latitude": 40.7987113,
+      "longitude": -74.2390353,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 85,
+          "name": "Black Book Connection, Inc. Newsletter",
+          "city": "West Orange",
+          "yearFounded": 1992,
+          "yearCeased": 1995,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "id": "westfield-nj",
+      "label": "Westfield",
+      "latitude": 40.651726,
+      "longitude": -74.3483059,
+      "precision": "municipality_center",
+      "publications": [
+        {
+          "id": 132,
+          "name": "Corporate Headquarters",
+          "city": "Westfield",
+          "yearFounded": 1985,
+          "yearCeased": 1991,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "unmapped": [
+    {
+      "id": 127,
+      "name": "Black Truth Bulletin",
+      "city": "Unknown",
+      "yearFounded": 1978,
+      "yearCeased": 1982,
+      "isActive": false,
+      "reason": "The source does not record a municipality."
+    },
+    {
+      "id": 128,
+      "name": "Newark Black Newspapers Collection | Digital Collections",
+      "city": null,
+      "yearFounded": null,
+      "yearCeased": 1979,
+      "isActive": false,
+      "reason": "The source does not record a municipality."
+    }
+  ]
+}

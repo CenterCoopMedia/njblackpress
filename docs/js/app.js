@@ -30,7 +30,23 @@
     cacheElements();
     setupEventListeners();
     await loadData();
+    restoreInitialFragment();
     hideLoadingOverlay();
+  }
+
+  function restoreInitialFragment() {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    requestAnimationFrame(() => {
+      const root = document.documentElement;
+      const inlineBehavior = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      target.scrollIntoView({ block: 'start' });
+      root.style.scrollBehavior = inlineBehavior;
+    });
   }
 
   function cacheElements() {

@@ -9,6 +9,8 @@
     let allPublications = [];
     let featuredPublications = { historic: [], contemporary: [] };
     let clippingsBySourcePath = {};
+    let recentStoriesByPublication = {};
+    let currentHomepageByPublication = {};
     let currentPublication = null;
 
     async function init() {
@@ -40,10 +42,12 @@
     async function loadData() {
         try {
             // Load all three data sources in parallel
-            const [pubResponse, featuredResponse, clippingsResponse] = await Promise.all([
+            const [pubResponse, featuredResponse, clippingsResponse, recentResponse, homepageResponse] = await Promise.all([
                 fetch('data/publications.json'),
                 fetch('data/featured-publications.json'),
-                fetch('data/clippings.json').catch(() => null)
+                fetch('data/clippings.json').catch(() => null),
+                fetch('data/recent-stories.json').catch(() => null),
+                fetch('data/current-homepages.json').catch(() => null)
             ]);
 
             if (pubResponse.ok) {
@@ -64,6 +68,20 @@
                 const clipData = await clippingsResponse.json();
                 (clipData.clippings || []).forEach(c => {
                     if (c.sourcePath && c.webPath) clippingsBySourcePath[c.sourcePath] = c;
+                });
+            }
+
+            if (recentResponse && recentResponse.ok) {
+                const recentData = await recentResponse.json();
+                (recentData.publications || []).forEach(row => {
+                    recentStoriesByPublication[row.publicationId] = row;
+                });
+            }
+
+            if (homepageResponse && homepageResponse.ok) {
+                const homepageData = await homepageResponse.json();
+                (homepageData.homepages || []).forEach(row => {
+                    currentHomepageByPublication[row.publicationId] = row;
                 });
             }
         } catch (error) {
@@ -140,6 +158,8 @@
         const missionSection = pub.missionStatement ? buildMissionSection(pub.missionStatement) : '';
         const metadataSection = buildMetadataSection(pub);
         const historicalSection = buildHistoricalSection(pub);
+        const currentHomepageSection = buildCurrentHomepageSection(pub);
+        const recentStoriesSection = buildRecentStoriesSection(pub);
         const evidenceSection = buildEvidenceSection(pub);
         const peopleSection = buildPeopleSection(pub);
         const tagsSection = buildTagsSection(pub);
@@ -198,6 +218,8 @@
                     <div class="lg:col-span-8 space-y-12">
                         ${metadataSection}
                         ${historicalSection}
+                        ${currentHomepageSection}
+                        ${recentStoriesSection}
                         ${evidenceSection}
                     </div>
 
@@ -326,6 +348,62 @@
                     `}
                 </div>
             </div>
+        `;
+    }
+
+    function buildRecentStoriesSection(pub) {
+        if (!pub.isActive) return '';
+        const source = recentStoriesByPublication[pub.id];
+        const items = source && Array.isArray(source.items) ? source.items.slice(0, 5) : [];
+        if (items.length === 0) return '';
+
+        const dateLabel = value => {
+            const date = new Date(`${value}T00:00:00Z`);
+            return Number.isNaN(date.getTime())
+                ? value
+                : new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(date);
+        };
+
+        return `
+            <div class="animate-in delay-5">
+                <div class="flex flex-wrap items-end justify-between gap-3 mb-6 pb-2 border-b border-walnut-600">
+                    <h2 class="font-mono text-xs text-accent uppercase tracking-widest">Recent stories</h2>
+                    <a href="${escapeHtml(source.feedUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] uppercase tracking-widest text-paper-300 hover:text-accent">Official feed <span aria-hidden="true">&nearr;</span></a>
+                </div>
+                <ol class="divide-y divide-walnut-600 border-y border-walnut-600">
+                    ${items.map(item => `
+                        <li>
+                            <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="group grid gap-2 py-5 sm:grid-cols-[8rem_1fr] sm:items-baseline">
+                                <time datetime="${escapeHtml(item.published)}" class="font-mono text-xs text-paper-300">${escapeHtml(dateLabel(item.published))}</time>
+                                <span class="font-display text-lg font-semibold leading-snug text-paper-100 group-hover:text-accent transition-colors">${escapeHtml(item.title)}</span>
+                            </a>
+                        </li>
+                    `).join('')}
+                </ol>
+            </div>
+        `;
+    }
+
+    function buildCurrentHomepageSection(pub) {
+        if (!pub.isActive) return '';
+        const capture = currentHomepageByPublication[pub.id];
+        if (!capture || !capture.screenshotPath || !capture.sourceUrl) return '';
+
+        const date = new Date(`${capture.captureDate}T00:00:00Z`);
+        const dateLabel = Number.isNaN(date.getTime())
+            ? capture.captureDate
+            : new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(date);
+
+        return `
+            <figure class="animate-in delay-5 border border-walnut-600 bg-ink-950 overflow-hidden">
+                <a href="${escapeHtml(capture.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="block group">
+                    <img src="${escapeHtml(capture.screenshotPath)}" alt="${escapeHtml(pub.name)} homepage captured on ${escapeHtml(dateLabel)}" loading="lazy" decoding="async" class="block w-full h-auto group-hover:opacity-90 transition-opacity">
+                </a>
+                <figcaption class="flex flex-wrap items-center justify-between gap-3 p-4 border-t border-walnut-600">
+                    <span class="font-mono text-[10px] uppercase tracking-widest text-paper-300">Homepage captured ${escapeHtml(dateLabel)}</span>
+                    <a href="${escapeHtml(capture.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] uppercase tracking-widest text-accent hover:text-paper-100">Visit current site <span aria-hidden="true">&nearr;</span></a>
+                </figcaption>
+            </figure>
         `;
     }
 
