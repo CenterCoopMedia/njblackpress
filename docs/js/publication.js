@@ -387,12 +387,26 @@
     function buildCurrentHomepageSection(pub) {
         if (!pub.isActive) return '';
         const capture = currentHomepageByPublication[pub.id];
-        if (!capture || !capture.screenshotPath || !capture.sourceUrl) return '';
+        if (!capture || !capture.sourceUrl) return '';
+        const publishableCaptureStatuses = new Set(['publishable', 'publishable_with_credit']);
+        const canPublishImage = capture.screenshotPath
+            && publishableCaptureStatuses.has(capture.rights && capture.rights.status);
 
         const date = new Date(`${capture.captureDate}T00:00:00Z`);
         const dateLabel = Number.isNaN(date.getTime())
             ? capture.captureDate
             : new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(date);
+
+        if (!canPublishImage) {
+            return `
+                <div class="animate-in delay-5 border border-walnut-600 bg-ink-950 p-5">
+                    <div class="flex flex-wrap items-center justify-between gap-3">
+                        <span class="font-mono text-[10px] uppercase tracking-widest text-paper-300">Homepage archived for research ${escapeHtml(dateLabel)}</span>
+                        <a href="${escapeHtml(capture.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] uppercase tracking-widest text-accent hover:text-paper-100">Visit current site <span aria-hidden="true">&nearr;</span></a>
+                    </div>
+                </div>
+            `;
+        }
 
         return `
             <figure class="animate-in delay-5 border border-walnut-600 bg-ink-950 overflow-hidden">

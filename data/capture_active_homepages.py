@@ -6,8 +6,8 @@ The job is deliberately bounded:
   current publication data.
 * It processes one source at a time.
 * It writes SingleFile HTML only to ``data/research/live-sites``.
-* It writes viewport screenshots and their PNG metadata to
-  ``docs/images/current-sites``.
+* It writes rights-restricted viewport screenshots and their PNG metadata to
+  ``data/research/current-sites``.
 
 Run from the repository root:
 
@@ -41,7 +41,7 @@ SOURCES_PATH = ROOT / "data" / "active-homepage-sources.json"
 CURRENT_HOMEpages_PATH = ROOT / "data" / "current-homepages.json"
 DOCS_CURRENT_HOMEpages_PATH = ROOT / "docs" / "data" / "current-homepages.json"
 LIVE_SITES_DIR = ROOT / "data" / "research" / "live-sites"
-CURRENT_SITES_DIR = ROOT / "docs" / "images" / "current-sites"
+CURRENT_SITES_DIR = ROOT / "data" / "research" / "current-sites"
 
 DEFAULT_WIDTH = 1440
 DEFAULT_HEIGHT = 900
@@ -487,8 +487,8 @@ def capture_all(args: argparse.Namespace) -> dict[str, Any]:
                         stale_path.unlink()
                 print(f"capture {source['publicationId']}: {source['sourceUrl']}", flush=True)
 
-                # Probe and save the viewport first. This prevents a 404 or
-                # blocked page from entering the public screenshot directory.
+                # Probe and save the viewport first. Rights-restricted source
+                # captures stay outside the public docs directory.
                 browser_result: dict[str, Any] | None = None
                 try:
                     browser_result = capture_screenshot(
@@ -531,7 +531,7 @@ def capture_all(args: argparse.Namespace) -> dict[str, Any]:
                         "httpStatus": browser_result["httpStatus"],
                         "finalUrl": browser_result["finalUrl"],
                         "pageTitle": browser_result["pageTitle"],
-                        "screenshotPath": f"images/current-sites/{stem}.png",
+                        "screenshotPath": f"data/research/current-sites/{stem}.png",
                         "viewport": {"width": args.width, "height": args.height},
                         "rights": {
                             "status": "crop_first",

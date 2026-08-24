@@ -25,7 +25,7 @@
       "httpStatus": 200,
       "finalUrl": "https://www.blackinjersey.com/",
       "pageTitle": "Home - Black In Jersey",
-      "screenshotPath": "images/current-sites/004-black-in-jersey.png",
+      "screenshotPath": "data/research/current-sites/004-black-in-jersey.png",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -46,7 +46,7 @@
       "httpStatus": 200,
       "finalUrl": "https://frontrunnernewjersey.com/",
       "pageTitle": "Welcome to Front Runner New Jersey! - Front Runner New Jersey",
-      "screenshotPath": "images/current-sites/006-front-runner-new-jersey.png",
+      "screenshotPath": "data/research/current-sites/006-front-runner-new-jersey.png",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -67,7 +67,7 @@
       "httpStatus": 200,
       "finalUrl": "https://www.fivewardsmedia.com/",
       "pageTitle": "Five Wards Media",
-      "screenshotPath": "images/current-sites/012-five-wards-media.png",
+      "screenshotPath": "data/research/current-sites/012-five-wards-media.png",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -88,7 +88,7 @@
       "httpStatus": 200,
       "finalUrl": "https://trentonjournal.com/",
       "pageTitle": "The Trenton Journal",
-      "screenshotPath": "images/current-sites/017-trenton-journal.png",
+      "screenshotPath": "data/research/current-sites/017-trenton-journal.png",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -109,7 +109,7 @@
       "httpStatus": 200,
       "finalUrl": "https://njincolor.com/",
       "pageTitle": "NJ IN COLOR",
-      "screenshotPath": "images/current-sites/019-nj-in-color.png",
+      "screenshotPath": "data/research/current-sites/019-nj-in-color.png",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -130,7 +130,7 @@
       "httpStatus": 200,
       "finalUrl": "https://njurbannews.com/",
       "pageTitle": "Home – NJ Urban News",
-      "screenshotPath": "images/current-sites/020-new-jersey-urban-news.png",
+      "screenshotPath": "data/research/current-sites/020-new-jersey-urban-news.png",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -151,7 +151,7 @@
       "httpStatus": 200,
       "finalUrl": "https://www.arkrepublic.com/",
       "pageTitle": "Ark Republic - TELLING STORIES, CHANGING THE CONVERSATION",
-      "screenshotPath": "images/current-sites/022-ark-republic.png",
+      "screenshotPath": "data/research/current-sites/022-ark-republic.png",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -172,7 +172,7 @@
       "httpStatus": 200,
       "finalUrl": "https://thenewarktimes.com/",
       "pageTitle": "The Newark Times",
-      "screenshotPath": "images/current-sites/023-the-newark-times.png",
+      "screenshotPath": "data/research/current-sites/023-the-newark-times.png",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -193,7 +193,7 @@
       "httpStatus": 200,
       "finalUrl": "https://www.atlanticcityfocus.com/",
       "pageTitle": "Atlantic City Focus",
-      "screenshotPath": "images/current-sites/025-atlantic-city-focus.png",
+      "screenshotPath": "data/research/current-sites/025-atlantic-city-focus.png",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -214,7 +214,7 @@
       "httpStatus": 200,
       "finalUrl": "https://faithfullymagazine.com/",
       "pageTitle": "Faithfully Magazine - News, Culture, and Christianity...for the Times",
-      "screenshotPath": "images/current-sites/029-faithfully-magazine.png",
+      "screenshotPath": "data/research/current-sites/029-faithfully-magazine.png",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -235,7 +235,7 @@
       "httpStatus": 200,
       "finalUrl": "https://www.publicsq.org/",
       "pageTitle": "PUBLIC SQUARE",
-      "screenshotPath": "images/current-sites/043-public-square-amplified.png",
+      "screenshotPath": "data/research/current-sites/043-public-square-amplified.png",
       "viewport": {
         "width": 1440,
         "height": 900

@@ -1,7 +1,8 @@
 {
   "metadata": {
     "updated": "2026-08-24",
-    "publicationCount": 8
+    "publicationCount": 9,
+    "retainedPublicationIds": []
   },
   "publications": [
     {
@@ -138,6 +139,11 @@
       "feedUrl": "https://njurbannews.com/feed/",
       "items": [
         {
+          "title": "Long Justice: Pennsylvania Man’s Fight For Exoneration Continues After Spending 37 Years In NJ Prison",
+          "url": "https://njurbannews.com/2026/08/24/long-justice-pennsylvania-mans-fight-for-exoneration-continues-after-spending-37-years-in-nj-prison/",
+          "published": "2026-08-24"
+        },
+        {
           "title": "Is New Jersey Using Its Cannabis Tax Revenue As Promised?",
           "url": "https://njurbannews.com/2026/08/24/is-new-jersey-using-its-cannabis-tax-revenue-as-promised/",
           "published": "2026-08-24"
@@ -156,11 +162,38 @@
           "title": "Sherrill Signs Reproductive And Gender-Affirming Care Protections Into Law",
           "url": "https://njurbannews.com/2026/08/21/sherrill-signs-reproductive-and-gender-affirming-care-protections-into-law/",
           "published": "2026-08-21"
+        }
+      ]
+    },
+    {
+      "publicationId": 22,
+      "publication": "Ark Republic",
+      "feedUrl": "https://www.arkrepublic.com/feed/",
+      "items": [
+        {
+          "title": "A seat at Stablecon. The world is going through a financial restructuring. A cryptocurrency conference focuses on regulation and public trust",
+          "url": "https://www.arkrepublic.com/2026/05/27/a-seat-at-stablecon/",
+          "published": "2026-05-27"
         },
         {
-          "title": "Helping Families Get Ready For School Takes More Than A Backpack",
-          "url": "https://njurbannews.com/2026/08/21/helping-families-get-ready-for-school-takes-more-than-a-backpack/",
-          "published": "2026-08-21"
+          "title": "The fight is on. Redistricting in Louisiana, Tennessee and Virginia",
+          "url": "https://www.arkrepublic.com/2026/05/19/the-fight-is-on-redistricting-in-louisiana-tennessee-and-virginia/",
+          "published": "2026-05-19"
+        },
+        {
+          "title": "Amazon’s Jeff Bezos riding coattails, the Carters’ are tone deaf in sponsoring 2026 MET Gala",
+          "url": "https://www.arkrepublic.com/2026/05/19/amazons-jeff-bezos-riding-coattails-the-carters-are-tone-deaf-in-sponsoring-2026-met-gala/",
+          "published": "2026-05-19"
+        },
+        {
+          "title": "Mamdani Administration continues to push a tenant-first affordable housing agenda",
+          "url": "https://www.arkrepublic.com/2026/05/19/mamdani-administration-continues-to-push-a-tenant-first-agenda/",
+          "published": "2026-05-19"
+        },
+        {
+          "title": "AIPAC versus A.I. PAC",
+          "url": "https://www.arkrepublic.com/2026/05/13/aipac-versus-a-i-pac/",
+          "published": "2026-05-13"
         }
       ]
     },
@@ -256,7 +289,5 @@
       ]
     }
   ],
-  "errors": [
-    "22: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1033)>"
-  ]
+  "errors": []
 }

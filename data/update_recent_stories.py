@@ -76,12 +76,36 @@ def parse_feed(raw: bytes) -> list[dict[str, str]]:
     return results
 
 
+def load_previous_rows() -> dict[int, dict]:
+    if not OUTPUT.is_file():
+        return {}
+    try:
+        payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return {
+        row["publicationId"]: row
+        for row in payload.get("publications", [])
+        if isinstance(row, dict) and isinstance(row.get("publicationId"), int)
+    }
+
+
+def retain_previous(rows: list[dict], previous: dict[int, dict], publication_id: int) -> bool:
+    row = previous.get(publication_id)
+    if not row:
+        return False
+    rows.append(row)
+    return True
+
+
 def main() -> None:
     feeds = json.loads(FEEDS.read_text(encoding="utf-8"))
     publications = json.loads(PUBLICATIONS.read_text(encoding="utf-8"))["publications"]
     by_id = {publication["id"]: publication for publication in publications}
+    previous = load_previous_rows()
     rows = []
     errors = []
+    retained = []
 
     for raw_id, feed_url in feeds.items():
         publication_id = int(raw_id)
@@ -93,9 +117,13 @@ def main() -> None:
             items = parse_feed(fetch(feed_url))
         except Exception as error:
             errors.append(f"{publication_id}: {error}")
+            if retain_previous(rows, previous, publication_id):
+                retained.append(publication_id)
             continue
         if not items:
             errors.append(f"{publication_id}: feed returned no dated items")
+            if retain_previous(rows, previous, publication_id):
+                retained.append(publication_id)
             continue
         rows.append({
             "publicationId": publication_id,
@@ -104,8 +132,13 @@ def main() -> None:
             "items": items,
         })
 
+    rows.sort(key=lambda row: row["publicationId"])
     payload = {
-        "metadata": {"updated": date.today().isoformat(), "publicationCount": len(rows)},
+        "metadata": {
+            "updated": date.today().isoformat(),
+            "publicationCount": len(rows),
+            "retainedPublicationIds": retained,
+        },
         "publications": rows,
         "errors": errors,
     }

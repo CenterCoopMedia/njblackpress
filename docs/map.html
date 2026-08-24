@@ -40,6 +40,8 @@
             font-family: "DM Sans", sans-serif;
         }
 
+        body.overflow-hidden { overflow: hidden; }
+
         a { color: inherit; }
 
         a:focus-visible,
@@ -148,6 +150,54 @@
             padding: 0;
             list-style: none;
             white-space: nowrap;
+        }
+
+        .mobile-menu-btn { display: none; }
+
+        #mobile-menu {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--ink);
+            transform: translateX(0);
+            transition: transform 220ms ease;
+        }
+
+        #mobile-menu.translate-x-full { transform: translateX(100%); }
+
+        #mobile-menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            font: 600 1.35rem/1.8 "DM Mono", monospace;
+            text-transform: uppercase;
+        }
+
+        #mobile-menu a { color: var(--paper); text-decoration: none; }
+
+        #mobile-menu a:hover,
+        #mobile-menu a[aria-current="page"] { color: var(--stain-light); }
+
+        #mobile-menu-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+        }
+
+        .mobile-menu-btn,
+        #mobile-menu-close {
+            border: 1px solid var(--line);
+            padding: 0.65rem 0.8rem;
+            background: transparent;
+            color: var(--paper);
+            font: 500 0.7rem/1 "DM Mono", monospace;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
         }
 
         .hero {
@@ -474,7 +524,8 @@
             .map-frame,
             #publication-map { min-height: 31rem; }
             .location-list { max-height: 24rem; }
-            .site-header__inner { overflow-x: auto; }
+            .global-nav { display: none; }
+            .mobile-menu-btn { display: inline-flex; }
         }
 
         @media (max-width: 520px) {
@@ -509,9 +560,14 @@
                     <li><a href="woven.html">Woven</a></li>
                     <li><a href="index.html#about">About</a></li>
                 </ul>
+                <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
             </nav>
         </div>
     </header>
+    <div id="mobile-menu" class="translate-x-full" aria-hidden="true">
+        <button id="mobile-menu-close" type="button" aria-label="Close menu">Close</button>
+        <ul></ul>
+    </div>
 
     <main class="page-shell">
         <header class="hero">
@@ -567,5 +623,24 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="js/map.js" defer></script>
     <script src="js/site-nav.js"></script>
+    <script>
+        (() => {
+            const menu = document.getElementById('mobile-menu');
+            const open = document.getElementById('mobile-menu-btn');
+            const close = document.getElementById('mobile-menu-close');
+            const setOpen = value => {
+                menu.classList.toggle('translate-x-full', !value);
+                menu.setAttribute('aria-hidden', String(!value));
+                open.setAttribute('aria-expanded', String(value));
+                document.body.classList.toggle('overflow-hidden', value);
+            };
+            open.addEventListener('click', () => setOpen(true));
+            close.addEventListener('click', () => setOpen(false));
+            menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape') setOpen(false);
+            });
+        })();
+    </script>
 </body>
 </html>

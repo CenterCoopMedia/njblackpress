@@ -16,7 +16,7 @@ PUBLICATIONS = ROOT / "data" / "publications.json"
 SCRIPT = ROOT / "data" / "capture_active_homepages.py"
 PUBLICATION_JS = ROOT / "docs" / "js" / "publication.js"
 LIVE_SITES = ROOT / "data" / "research" / "live-sites"
-CURRENT_SITES = ROOT / "docs" / "images" / "current-sites"
+CURRENT_SITES = ROOT / "data" / "research" / "current-sites"
 
 
 def load(path: Path):
@@ -112,12 +112,12 @@ def test_data_copies_match_and_schema_is_valid() -> None:
         seen.add(publication_id)
         assert capture["status"] == "captured"
         assert valid_http_url(capture["sourceUrl"])
-        assert capture["screenshotPath"].startswith("images/current-sites/")
+        assert capture["screenshotPath"].startswith("data/research/current-sites/")
         assert capture["singleFilePath"] is None or capture["singleFilePath"].startswith(
             "data/research/live-sites/"
         )
         assert capture["rights"]["status"] == "crop_first"
-        screenshot = ROOT / "docs" / capture["screenshotPath"]
+        screenshot = ROOT / capture["screenshotPath"]
         assert screenshot.is_file() and screenshot.stat().st_size > 100
         assert png_dimensions(screenshot) == (1440, 900)
         text = png_text(screenshot)
@@ -131,21 +131,23 @@ def test_data_copies_match_and_schema_is_valid() -> None:
     print(f"PASS: {len(captures)} homepage captures have HTML and screenshot records")
 
 
-def test_publication_page_uses_capture_manifest() -> None:
+def test_publication_page_withholds_restricted_captures() -> None:
     source = PUBLICATION_JS.read_text(encoding="utf-8")
     assert "data/current-homepages.json" in source
     assert "buildCurrentHomepageSection(pub)" in source
-    assert "capture.screenshotPath" in source
     assert "capture.sourceUrl" in source
+    assert "publishableCaptureStatuses" in source
+    assert "capture.screenshotPath" in source
     assert "singleFilePath" not in source, "research-only SingleFile paths must not be published"
-    print("PASS: active publication pages use screenshots without exposing SingleFile files")
+    assert "crop_first" not in source.split("publishableCaptureStatuses", 1)[1].split(";", 1)[0]
+    print("PASS: active publication pages withhold crop-first screenshots and SingleFile files")
 
 
 def main() -> None:
     test_manifest_matches_active_valid_urls()
     test_pipeline_is_bounded_and_keeps_single_file_out_of_docs()
     test_data_copies_match_and_schema_is_valid()
-    test_publication_page_uses_capture_manifest()
+    test_publication_page_withholds_restricted_captures()
     print("ALL TESTS PASSED")
 
 

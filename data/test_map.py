@@ -92,6 +92,8 @@ def test_map_page_contract() -> None:
     assert "sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" in html
     assert 'id="decade-slider"' in html and 'type="range"' in html
     assert 'id="map-summary"' in html and 'aria-live="polite"' in html
+    assert 'id="mobile-menu-btn"' in html
+    assert 'id="mobile-menu"' in html
     assert "tile.openstreetmap.org" in javascript
     assert "data/map-publications.json" in javascript
     assert "${count} ${countLabel(count)}" not in javascript
