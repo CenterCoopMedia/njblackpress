@@ -130,6 +130,7 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
             </div>
         </div>
     </footer>
+    <script src="{a}js/site-nav.js"></script>
 </body>
 </html>
 """
@@ -369,21 +370,30 @@ def publications_index_body(pubs, depth) -> str:
     rows = ""
     for pub in sorted(pubs, key=lambda p: (p.get("name") or "").lower()):
         star = ' <span class="text-accent">&#9733;</span>' if featured_kind(pub) else ""
-        city = esc(clean(pub.get("city")) or "Unknown")
+        city_value = clean(pub.get("city")) or "Unknown"
+        city = esc(city_value)
+        founded = pub.get("yearFounded") or 9999
+        ceased = pub.get("yearCeased") or 9999
+        years_order = f"{founded:04d}-{ceased:04d}" if isinstance(founded, int) and isinstance(ceased, int) else f"{founded}-{ceased}"
+        status_order = 0 if pub.get("isActive") else 1
         rows += (
             f'<tr class="border-b border-white/10 hover:bg-ink-800 transition-colors">'
-            f'<td class="py-3 pr-4"><a href="publications/{pub_html_name(pub)}" class="font-display text-base font-semibold hover:text-accent transition-colors">{esc(pub["name"])}{star}</a></td>'
-            f'<td class="py-3 pr-4 text-paper-300 text-sm">{city}</td>'
-            f'<td class="py-3 pr-4 font-mono text-xs text-paper-300 whitespace-nowrap">{esc(life_span(pub))}</td>'
-            f'<td class="py-3 text-right">{status_text(pub)}</td>'
+            f'<td class="py-3 pl-5 pr-4" data-sort-value="{esc(pub["name"])}"><a href="publications/{pub_html_name(pub)}" class="font-display text-base font-semibold hover:text-accent transition-colors">{esc(pub["name"])}{star}</a></td>'
+            f'<td class="py-3 pr-4 text-paper-300 text-sm" data-sort-value="{city}">{city}</td>'
+            f'<td class="py-3 pr-4 font-mono text-xs text-paper-300 whitespace-nowrap" data-sort-value="{years_order}">{esc(life_span(pub))}</td>'
+            f'<td class="py-3 pl-4 pr-5 text-right whitespace-nowrap" data-sort-value="{status_order}">{status_text(pub)}</td>'
             f'</tr>'
         )
-    b += ('<div class="overflow-x-auto border border-white/10 bg-ink-950"><table class="w-full text-left">'
+    b += ('<div class="overflow-x-auto border border-white/10 bg-ink-950"><table class="w-full text-left" id="publication-index">'
           '<thead><tr class="font-mono text-[10px] uppercase tracking-widest text-paper-300 border-b border-white/15">'
-          '<th class="py-3 px-4">Publication</th><th class="py-3 pr-4">City</th><th class="py-3 pr-4">Years</th><th class="py-3 px-4 text-right">Status</th></tr></thead>'
-          f'<tbody class="px-4">{rows}</tbody></table></div>')
-    # offset table cell padding (thead has px-4, body uses py-3 pr-4) — wrap in padded container
-    return b.replace('<tbody class="px-4">', '<tbody>')
+          '<th class="py-2 pl-5 pr-4" aria-sort="ascending"><button type="button" aria-label="Sort by publication" class="group inline-flex min-h-11 items-center gap-2 text-left hover:text-accent focus-visible:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-sort-key="publication">Publication <span aria-hidden="true" class="text-accent">&#8593;</span></button></th>'
+          '<th class="py-2 pr-4"><button type="button" aria-label="Sort by city" class="group inline-flex min-h-11 items-center gap-2 text-left hover:text-accent focus-visible:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-sort-key="city">City <span aria-hidden="true" class="opacity-40">&#8597;</span></button></th>'
+          '<th class="py-2 pr-4"><button type="button" aria-label="Sort by years" class="group inline-flex min-h-11 items-center gap-2 text-left hover:text-accent focus-visible:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-sort-key="years">Years <span aria-hidden="true" class="opacity-40">&#8597;</span></button></th>'
+          '<th class="py-2 pl-4 pr-5 text-right"><button type="button" aria-label="Sort by status" class="ml-auto inline-flex min-h-11 items-center gap-2 text-right hover:text-accent focus-visible:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-sort-key="status">Status <span aria-hidden="true" class="opacity-40">&#8597;</span></button></th></tr></thead>'
+          f'<tbody>{rows}</tbody></table></div>'
+          '<p class="sr-only" aria-live="polite" id="publication-sort-status"></p>'
+          '<script src="../js/wiki-publications.js"></script>')
+    return b
 
 
 def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, timestamp) -> str:

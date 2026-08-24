@@ -199,6 +199,7 @@ body.twin-primary #woven-stage { display: none; }
    stop at the dock edge so they line up with the canvas they belong to. */
 @media (min-width: 900px) {
   #woven-canvas { width: calc(100% - 19rem); }
+  #woven-stage.woven-legend-hidden #woven-canvas { width: 100%; }
   #woven-legend {
     right: 0; top: 0; bottom: 0; left: auto; width: 19rem; z-index: 7;
     overflow-y: auto; background: var(--walnut-900);
@@ -210,6 +211,8 @@ body.twin-primary #woven-stage { display: none; }
   /* The chrome stops at the dock edge. The tour bar is not in this list: the
      key is hidden while a tour runs, so the bar takes the full stage width. */
   #woven-chrome, #woven-yearrail { right: 19rem; }
+  #woven-stage.woven-legend-hidden #woven-chrome,
+  #woven-stage.woven-legend-hidden #woven-yearrail { right: 0; }
 }
 .lg-swatch { flex: none; width: 34px; height: 12px; display: block; }
 .lg-thick { background: linear-gradient(90deg, #cdc4b1 0 60%, transparent 60%); height: 7px; }

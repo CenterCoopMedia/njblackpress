@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore New Jersey Black Press publications by reported municipality and decade.">
+    <title>Publication map | NJ Black Press Archive</title>
+    <link rel="canonical" href="https://centercoopmedia.github.io/njblackpress/map.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <style>
+        :root {
+            color-scheme: dark;
+            --ink: #0c0a08;
+            --ink-soft: #18130f;
+            --ink-raised: #241c16;
+            --line: #58453a;
+            --paper: #f1eadf;
+            --muted: #c5b9ab;
+            --stain: #ca3553;
+            --stain-light: #f16b7e;
+            --gold: #d5a84a;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { background: var(--ink); }
+
+        body {
+            min-width: 320px;
+            margin: 0;
+            background:
+                radial-gradient(circle at 7% 0%, rgba(202, 53, 83, 0.16), transparent 28rem),
+                linear-gradient(155deg, #1b1510 0%, var(--ink) 56rem);
+            color: var(--paper);
+            font-family: "DM Sans", sans-serif;
+        }
+
+        body.overflow-hidden { overflow: hidden; }
+
+        a { color: inherit; }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .skip-link {
+            position: fixed;
+            z-index: 1000;
+            top: 0.5rem;
+            left: 0.5rem;
+            transform: translateY(-180%);
+            padding: 0.75rem 1rem;
+            background: var(--paper);
+            color: var(--ink);
+            font: 600 0.75rem/1 "DM Mono", monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .skip-link:focus { transform: translateY(0); }
+
+        .site-header {
+            border-bottom: 1px solid var(--line);
+            background: rgba(12, 10, 8, 0.92);
+            backdrop-filter: blur(10px);
+        }
+
+        .site-header__inner,
+        .page-shell {
+            width: min(100% - 2rem, 1400px);
+            margin: 0 auto;
+        }
+
+        .site-header__inner {
+            min-height: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand,
+        .header-link,
+        .eyebrow,
+        .map-note,
+        .location-count,
+        .record-years,
+        .location-list__meta,
+        .attribution-note {
+            font-family: "DM Mono", monospace;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            color: var(--paper);
+            text-decoration: none;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .brand::before {
+            width: 0.7rem;
+            height: 0.7rem;
+            border: 2px solid var(--stain-light);
+            content: "";
+            transform: rotate(45deg);
+        }
+
+        .header-link,
+        .global-nav a {
+            color: var(--muted);
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .header-link:hover,
+        .global-nav a:hover,
+        .global-nav a[aria-current="page"] { color: var(--stain-light); }
+
+        .global-nav {
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            white-space: nowrap;
+        }
+
+        .mobile-menu-btn { display: none; }
+
+        #mobile-menu {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--ink);
+            transform: translateX(0);
+            transition: transform 220ms ease;
+        }
+
+        #mobile-menu.translate-x-full { transform: translateX(100%); }
+
+        #mobile-menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            font: 600 1.35rem/1.8 "DM Mono", monospace;
+            text-transform: uppercase;
+        }
+
+        #mobile-menu a { color: var(--paper); text-decoration: none; }
+
+        #mobile-menu a:hover,
+        #mobile-menu a[aria-current="page"] { color: var(--stain-light); }
+
+        #mobile-menu-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+        }
+
+        .mobile-menu-btn,
+        #mobile-menu-close {
+            border: 1px solid var(--line);
+            padding: 0.65rem 0.8rem;
+            background: transparent;
+            color: var(--paper);
+            font: 500 0.7rem/1 "DM Mono", monospace;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 2rem;
+            align-items: end;
+            padding: clamp(3.5rem, 8vw, 7rem) 0 2.5rem;
+        }
+
+        .eyebrow {
+            margin: 0 0 0.9rem;
+            color: var(--stain-light);
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3,
+        p { margin-top: 0; }
+
+        h1 {
+            max-width: 12ch;
+            margin-bottom: 1.2rem;
+            font-family: Fraunces, serif;
+            font-size: clamp(3rem, 7vw, 6.7rem);
+            font-weight: 800;
+            letter-spacing: -0.07em;
+            line-height: 0.88;
+        }
+
+        .hero__lede {
+            max-width: 45rem;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: clamp(1rem, 1.8vw, 1.3rem);
+            line-height: 1.6;
+        }
+
+        .hero__number {
+            min-width: 10.5rem;
+            padding: 1.15rem 1.3rem;
+            border: 1px solid var(--line);
+            border-bottom: 3px solid var(--stain);
+            background: rgba(36, 28, 22, 0.82);
+        }
+
+        .hero__number strong {
+            display: block;
+            color: var(--paper);
+            font-family: Fraunces, serif;
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .hero__number span {
+            display: block;
+            margin-top: 0.4rem;
+            color: var(--muted);
+            font: 0.65rem/1.35 "DM Mono", monospace;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .control-panel {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 1.5rem 2rem;
+            align-items: end;
+            padding: clamp(1.3rem, 3vw, 2rem);
+            border: 1px solid var(--line);
+            background: linear-gradient(120deg, rgba(36, 28, 22, 0.96), rgba(24, 19, 15, 0.96));
+        }
+
+        .control-panel h2,
+        .map-list h2,
+        .unmapped h2 {
+            margin-bottom: 0.4rem;
+            font-family: Fraunces, serif;
+            font-size: clamp(1.55rem, 2.6vw, 2.1rem);
+            letter-spacing: -0.04em;
+        }
+
+        .control-description,
+        .map-note,
+        .attribution-note {
+            color: var(--muted);
+            font-size: 0.78rem;
+            line-height: 1.55;
+        }
+
+        .control-description { margin-bottom: 1rem; }
+
+        .slider-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--stain-light);
+            cursor: pointer;
+        }
+
+        output {
+            min-width: 9rem;
+            color: var(--paper);
+            font: 600 0.78rem/1.35 "DM Mono", monospace;
+            text-align: right;
+        }
+
+        .slider-ticks {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.45rem;
+            color: #a69383;
+            font: 0.62rem/1 "DM Mono", monospace;
+        }
+
+        .all-years {
+            min-height: 2.8rem;
+            padding: 0.7rem 1rem;
+            border: 1px solid var(--stain);
+            background: transparent;
+            color: var(--paper);
+            cursor: pointer;
+            font: 500 0.7rem/1 "DM Mono", monospace;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+        }
+
+        .all-years:hover,
+        .all-years[aria-pressed="true"] {
+            background: var(--stain);
+            color: #fff8f5;
+        }
+
+        .map-summary {
+            grid-column: 1 / -1;
+            margin: 0;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--line);
+            color: var(--paper);
+            font: 0.78rem/1.5 "DM Mono", monospace;
+        }
+
+        .map-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.7fr) minmax(19rem, 0.8fr);
+            gap: 1rem;
+            margin: 1rem 0 4rem;
+        }
+
+        .map-frame,
+        .map-list,
+        .unmapped {
+            border: 1px solid var(--line);
+            background: var(--ink-soft);
+        }
+
+        .map-frame { min-height: 42rem; }
+
+        #publication-map {
+            width: 100%;
+            height: 100%;
+            min-height: 42rem;
+            background: #2a241d;
+        }
+
+        .map-list {
+            min-height: 0;
+            padding: 1.35rem;
+        }
+
+        .map-list h2 { margin-bottom: 0.2rem; }
+
+        .map-note { margin-bottom: 1.1rem; }
+
+        .location-list {
+            display: grid;
+            gap: 0.55rem;
+            max-height: 35rem;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+            list-style: none;
+        }
+
+        .location-list button {
+            width: 100%;
+            min-height: 3.25rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 0.8rem;
+            align-items: center;
+            padding: 0.7rem 0.8rem;
+            border: 1px solid #42352c;
+            background: var(--ink-raised);
+            color: var(--paper);
+            cursor: pointer;
+            font: inherit;
+            text-align: left;
+        }
+
+        .location-list button:hover,
+        .location-list button[aria-pressed="true"] {
+            border-color: var(--stain-light);
+            background: #34221e;
+        }
+
+        .location-list__name {
+            font-size: 0.94rem;
+            font-weight: 600;
+        }
+
+        .location-count {
+            color: var(--gold);
+            font-size: 0.72rem;
+            white-space: nowrap;
+        }
+
+        .empty-state {
+            margin: 0;
+            padding: 1rem;
+            border-left: 3px solid var(--stain);
+            background: rgba(202, 53, 83, 0.09);
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .unmapped {
+            margin: 0 0 4rem;
+            padding: clamp(1.35rem, 3vw, 2rem);
+        }
+
+        .unmapped h2 { margin-bottom: 0.45rem; }
+
+        .unmapped > p { color: var(--muted); line-height: 1.55; }
+
+        .unmapped-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            gap: 0.7rem;
+            margin: 1.2rem 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .unmapped-list li {
+            padding: 0.9rem;
+            border-left: 2px solid var(--line);
+            background: rgba(36, 28, 22, 0.7);
+        }
+
+        .unmapped-list a {
+            display: block;
+            color: var(--paper);
+            font-weight: 600;
+            text-decoration-color: var(--stain);
+            text-underline-offset: 0.18em;
+        }
+
+        .unmapped-list span {
+            display: block;
+            margin-top: 0.4rem;
+            color: var(--muted);
+            font: 0.68rem/1.45 "DM Mono", monospace;
+        }
+
+        .leaflet-container {
+            background: #2a241d;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .leaflet-control-zoom a,
+        .leaflet-control-attribution {
+            border-color: var(--line) !important;
+            background: rgba(12, 10, 8, 0.92) !important;
+            color: var(--paper) !important;
+        }
+
+        .leaflet-control-attribution a { color: var(--stain-light) !important; }
+
+        .leaflet-popup-content-wrapper,
+        .leaflet-popup-tip {
+            background: var(--ink-soft);
+            color: var(--paper);
+        }
+
+        .leaflet-popup-content { margin: 1rem 1.1rem; }
+
+        .leaflet-popup-close-button { color: var(--paper) !important; }
+
+        .map-popup h3 {
+            margin-bottom: 0.2rem;
+            font-family: Fraunces, serif;
+            font-size: 1.35rem;
+        }
+
+        .map-popup p { margin-bottom: 0.75rem; color: var(--muted); font-size: 0.82rem; }
+
+        .map-popup ul { max-height: 13rem; margin: 0; padding-left: 1.1rem; overflow: auto; }
+
+        .map-popup li { margin: 0.45rem 0; }
+
+        .map-popup a { color: var(--paper); text-decoration-color: var(--stain); text-underline-offset: 0.15em; }
+
+        .map-popup .record-years { display: block; margin-top: 0.08rem; color: var(--muted); font-size: 0.67rem; }
+
+        .attribution-note { margin: 0 0 2rem; }
+
+        .attribution-note a { color: var(--stain-light); }
+
+        @media (max-width: 860px) {
+            .hero,
+            .control-panel,
+            .map-layout { grid-template-columns: 1fr; }
+            .hero { padding-top: 3.5rem; }
+            .hero__number { width: fit-content; }
+            .map-frame,
+            #publication-map { min-height: 31rem; }
+            .location-list { max-height: 24rem; }
+            .global-nav { display: none; }
+            .mobile-menu-btn { display: inline-flex; }
+        }
+
+        @media (max-width: 520px) {
+            .site-header__inner,
+            .page-shell { width: min(100% - 1.25rem, 1400px); }
+            .header-link { font-size: 0.62rem; }
+            .slider-row { grid-template-columns: 1fr; }
+            output { min-width: 0; text-align: left; }
+            .map-frame,
+            #publication-map { min-height: 25rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#map-controls">Skip to map controls</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="brand" href="index.html">NJ Black Press Archive</a>
+            <nav aria-label="Main navigation">
+                <ul class="global-nav hidden">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#timeline">Timeline</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                    <li><a href="story.html">Stories</a></li>
+                    <li><a href="era.html">Eras</a></li>
+                    <li><a href="map.html" aria-current="page">Map</a></li>
+                    <li><a href="wiki/index.html">Wiki</a></li>
+                    <li><a href="woven.html">Woven</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+                <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+            </nav>
+        </div>
+    </header>
+    <div id="mobile-menu" class="translate-x-full" aria-hidden="true">
+        <button id="mobile-menu-close" type="button" aria-label="Close menu">Close</button>
+        <ul></ul>
+    </div>
+
+    <main class="page-shell">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">Place the record</p>
+                <h1>Press geography over time.</h1>
+                <p class="hero__lede">Each point groups publications by a reported place of coverage, base, or founding. Use the decade control to see titles that published during any part of that decade.</p>
+            </div>
+            <div class="hero__number" aria-label="Archive map coverage">
+                <strong id="mapped-total">—</strong>
+                <span>records with saved map positions</span>
+            </div>
+        </header>
+
+        <section id="map-controls" class="control-panel" aria-labelledby="map-controls-heading">
+            <div>
+                <h2 id="map-controls-heading">Select a decade</h2>
+                <p class="control-description">Arrow keys move one decade. A publication appears when its recorded life overlaps the selected decade.</p>
+                <div class="slider-row">
+                    <label class="sr-only" for="decade-slider">Publication decade</label>
+                    <input id="decade-slider" type="range" min="1880" max="2020" step="10" value="2020" aria-describedby="decade-help map-summary">
+                    <output id="decade-output" for="decade-slider" aria-live="polite">2020s</output>
+                </div>
+                <div id="decade-help" class="slider-ticks" aria-hidden="true"><span>1880s</span><span>1950s</span><span>2020s</span></div>
+            </div>
+            <button id="all-years" class="all-years" type="button" aria-pressed="false">All recorded years</button>
+            <p id="map-summary" class="map-summary" aria-live="polite">Loading the map records.</p>
+        </section>
+
+        <section class="map-layout" aria-label="Publication map and location list">
+            <div class="map-frame">
+                <div id="publication-map" role="region" aria-label="Map of publication locations"></div>
+            </div>
+            <section class="map-list" aria-labelledby="location-list-heading">
+                <h2 id="location-list-heading">Locations in view</h2>
+                <p class="map-note">Select a location to center the map and read its publication list.</p>
+                <ol id="location-list" class="location-list"></ol>
+            </section>
+        </section>
+
+        <section class="unmapped" aria-labelledby="unmapped-heading">
+            <h2 id="unmapped-heading">Records without a map point</h2>
+            <p>These records stay in the archive. The source does not give a mappable location.</p>
+            <ul id="unmapped-list" class="unmapped-list"></ul>
+        </section>
+
+        <p class="attribution-note">Map tiles © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Saved publication positions are used for grouping. They do not identify a publisher address.</p>
+    </main>
+
+    <noscript>
+        <p style="margin: 1rem; color: #f1eadf;">This map needs JavaScript. You can still <a href="archive.html" style="color: #f16b7e;">browse the full archive</a>.</p>
+    </noscript>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/site-nav.js"></script>
+    <script>
+        (() => {
+            const menu = document.getElementById('mobile-menu');
+            const open = document.getElementById('mobile-menu-btn');
+            const close = document.getElementById('mobile-menu-close');
+            const setOpen = value => {
+                menu.classList.toggle('translate-x-full', !value);
+                menu.setAttribute('aria-hidden', String(!value));
+                open.setAttribute('aria-expanded', String(value));
+                document.body.classList.toggle('overflow-hidden', value);
+            };
+            open.addEventListener('click', () => setOpen(true));
+            close.addEventListener('click', () => setOpen(false));
+            menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+            document.addEventListener('keydown', event => {
+                if (event.key === 'Escape') setOpen(false);
+            });
+        })();
+    </script>
+</body>
+</html>

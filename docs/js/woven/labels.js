@@ -117,7 +117,10 @@ export function createLabels(app, three, model) {
     measureGuard();
     const dist = three.camera.position.distanceTo(three.controls.target);
     const busy = !!(app.tour && app.tour.isPlaying) || !!(app.ghost && app.ghost.isPlaying);
+    const widthChanged = stage.classList.contains('woven-legend-hidden') !== busy;
+    stage.classList.toggle('woven-legend-hidden', busy);
     legend.hidden = busy;
+    if (widthChanged && app.resize) requestAnimationFrame(() => app.resize());
     const ghosting = !!(app.ghost && app.ghost.isPlaying);
     // The era markers stay through the ghost roll. They are the only thing
     // saying which decade each name belongs to, and the roll is a list of names.

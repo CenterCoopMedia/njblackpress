@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "updated": "2026-08-24",
+    "source": "data/publications.json",
+    "policy": "Capture current homepages only for active publications with valid HTTP URLs.",
+    "concurrency": 1,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "rights": {
+      "status": "crop_first",
+      "cropPlan": "Crop a representative masthead or story area before public reuse."
+    }
+  },
+  "sources": [
+    {
+      "publicationId": 4,
+      "name": "Black In Jersey",
+      "url": "https://www.blackinjersey.com/"
+    },
+    {
+      "publicationId": 6,
+      "name": "Front Runner New Jersey",
+      "url": "https://frontrunnernewjersey.com/"
+    },
+    {
+      "publicationId": 12,
+      "name": "Five Wards Media",
+      "url": "https://www.fivewardsmedia.com/"
+    },
+    {
+      "publicationId": 17,
+      "name": "Trenton Journal",
+      "url": "https://trentonjournal.com/"
+    },
+    {
+      "publicationId": 19,
+      "name": "NJ in Color",
+      "url": "https://njincolor.com/"
+    },
+    {
+      "publicationId": 20,
+      "name": "New Jersey Urban News",
+      "url": "https://njurbannews.com/"
+    },
+    {
+      "publicationId": 22,
+      "name": "Ark Republic",
+      "url": "https://www.arkrepublic.com/"
+    },
+    {
+      "publicationId": 23,
+      "name": "The Newark Times",
+      "url": "http://thenewarktimes.com/"
+    },
+    {
+      "publicationId": 25,
+      "name": "Atlantic City Focus",
+      "url": "https://www.atlanticcityfocus.com/"
+    },
+    {
+      "publicationId": 29,
+      "name": "Faithfully Magazine",
+      "url": "https://faithfullymagazine.com/"
+    },
+    {
+      "publicationId": 43,
+      "name": "Public Square Amplified",
+      "url": "https://www.publicsq.org/"
+    }
+  ]
+}

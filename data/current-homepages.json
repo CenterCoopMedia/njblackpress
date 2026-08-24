@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "updated": "2026-08-24",
+    "attemptedCount": 11,
+    "captureCount": 11,
+    "failureCount": 1,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "concurrency": 1,
+    "tool": "SingleFile CLI and Chromium",
+    "rights": {
+      "status": "crop_first",
+      "cropPlan": "Crop a representative masthead or story area before public reuse."
+    }
+  },
+  "homepages": [
+    {
+      "publicationId": 4,
+      "publication": "Black In Jersey",
+      "sourceUrl": "https://www.blackinjersey.com/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://www.blackinjersey.com/",
+      "pageTitle": "Home - Black In Jersey",
+      "screenshotPath": "data/research/current-sites/004-black-in-jersey.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": true,
+      "singleFilePath": "data/research/live-sites/004-black-in-jersey.html"
+    },
+    {
+      "publicationId": 6,
+      "publication": "Front Runner New Jersey",
+      "sourceUrl": "https://frontrunnernewjersey.com/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://frontrunnernewjersey.com/",
+      "pageTitle": "Welcome to Front Runner New Jersey! - Front Runner New Jersey",
+      "screenshotPath": "data/research/current-sites/006-front-runner-new-jersey.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": true,
+      "singleFilePath": "data/research/live-sites/006-front-runner-new-jersey.html"
+    },
+    {
+      "publicationId": 12,
+      "publication": "Five Wards Media",
+      "sourceUrl": "https://www.fivewardsmedia.com/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://www.fivewardsmedia.com/",
+      "pageTitle": "Five Wards Media",
+      "screenshotPath": "data/research/current-sites/012-five-wards-media.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": true,
+      "singleFilePath": "data/research/live-sites/012-five-wards-media.html"
+    },
+    {
+      "publicationId": 17,
+      "publication": "Trenton Journal",
+      "sourceUrl": "https://trentonjournal.com/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://trentonjournal.com/",
+      "pageTitle": "The Trenton Journal",
+      "screenshotPath": "data/research/current-sites/017-trenton-journal.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": true,
+      "singleFilePath": "data/research/live-sites/017-trenton-journal.html"
+    },
+    {
+      "publicationId": 19,
+      "publication": "NJ in Color",
+      "sourceUrl": "https://njincolor.com/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://njincolor.com/",
+      "pageTitle": "NJ IN COLOR",
+      "screenshotPath": "data/research/current-sites/019-nj-in-color.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": true,
+      "singleFilePath": "data/research/live-sites/019-nj-in-color.html"
+    },
+    {
+      "publicationId": 20,
+      "publication": "New Jersey Urban News",
+      "sourceUrl": "https://njurbannews.com/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://njurbannews.com/",
+      "pageTitle": "Home – NJ Urban News",
+      "screenshotPath": "data/research/current-sites/020-new-jersey-urban-news.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": true,
+      "singleFilePath": "data/research/live-sites/020-new-jersey-urban-news.html"
+    },
+    {
+      "publicationId": 22,
+      "publication": "Ark Republic",
+      "sourceUrl": "https://www.arkrepublic.com/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://www.arkrepublic.com/",
+      "pageTitle": "Ark Republic - TELLING STORIES, CHANGING THE CONVERSATION",
+      "screenshotPath": "data/research/current-sites/022-ark-republic.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": true,
+      "singleFilePath": "data/research/live-sites/022-ark-republic.html"
+    },
+    {
+      "publicationId": 23,
+      "publication": "The Newark Times",
+      "sourceUrl": "http://thenewarktimes.com/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://thenewarktimes.com/",
+      "pageTitle": "The Newark Times",
+      "screenshotPath": "data/research/current-sites/023-the-newark-times.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": true,
+      "singleFilePath": "data/research/live-sites/023-the-newark-times.html"
+    },
+    {
+      "publicationId": 25,
+      "publication": "Atlantic City Focus",
+      "sourceUrl": "https://www.atlanticcityfocus.com/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://www.atlanticcityfocus.com/",
+      "pageTitle": "Atlantic City Focus",
+      "screenshotPath": "data/research/current-sites/025-atlantic-city-focus.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": true,
+      "singleFilePath": "data/research/live-sites/025-atlantic-city-focus.html"
+    },
+    {
+      "publicationId": 29,
+      "publication": "Faithfully Magazine",
+      "sourceUrl": "https://faithfullymagazine.com/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://faithfullymagazine.com/",
+      "pageTitle": "Faithfully Magazine - News, Culture, and Christianity...for the Times",
+      "screenshotPath": "data/research/current-sites/029-faithfully-magazine.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": false,
+      "singleFilePath": null
+    },
+    {
+      "publicationId": 43,
+      "publication": "Public Square Amplified",
+      "sourceUrl": "https://www.publicsq.org/",
+      "captureDate": "2026-08-24",
+      "status": "captured",
+      "httpStatus": 200,
+      "finalUrl": "https://www.publicsq.org/",
+      "pageTitle": "PUBLIC SQUARE",
+      "screenshotPath": "data/research/current-sites/043-public-square-amplified.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "rights": {
+        "status": "crop_first",
+        "cropPlan": "Crop a representative masthead or story area before public reuse."
+      },
+      "singleFileCaptured": true,
+      "singleFilePath": "data/research/live-sites/043-public-square-amplified.html"
+    }
+  ],
+  "failures": [
+    {
+      "publicationId": 29,
+      "publication": "Faithfully Magazine",
+      "sourceUrl": "https://faithfullymagazine.com/",
+      "captureDate": "2026-08-24",
+      "stages": [
+        {
+          "stage": "single-file",
+          "error": "single-file produced no usable HTML file"
+        }
+      ]
+    }
+  ]
+}

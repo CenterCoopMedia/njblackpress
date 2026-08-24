@@ -305,6 +305,7 @@ async function startScene(model) {
     // are re-placed against the new rect before the next frame is drawn.
     if (app.labels) app.labels.update();
   }
+  app.resize = resize;
   let coarseFromDegrade = false;
   let canvasCssHeight = 1;
 
@@ -569,14 +570,14 @@ async function startScene(model) {
     // Already the selected thread, already framed. The reader clicking it again
     // wants the record back, not a camera move that goes nowhere — which is what
     // clicking the thread a search had just jumped to used to do.
-    if (state.selectedId === id && !opts.silent && !panel.isOpen()) {
+    if (state.selectedId === id && !opts.silent && !opts.fromTwin && !panel.isOpen()) {
       hideTip();
       panel.openPublication(t, model, { playStory: (s) => app.playStory(s) });
       return;
     }
     markInteracted();
     state.selectedId = id;
-    state.scrollTwin = !!opts.fromTwin;
+    state.scrollTwin = !!opts.scrollTwin;
     hideTip();
     paintBase(null);
     stateTex.commit();
@@ -591,7 +592,7 @@ async function startScene(model) {
     // Struck after the camera lands, so the ripple is sized for the zoom the
     // reader ends up at rather than the one they started from.
     pluck(t);
-    if (!opts.silent) panel.openPublication(t, model, { playStory: (s) => app.playStory(s) });
+    if (!opts.silent && !opts.fromTwin) panel.openPublication(t, model, { playStory: (s) => app.playStory(s) });
     announce(`${t.name}. ${t.city || 'city unrecorded'}. ${t.yearFounded ?? 'founding year unrecorded'}.`);
   };
 
