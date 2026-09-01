@@ -1,0 +1,390 @@
+/* Woven — first-visit guidance and progressive disclosure.
+   This layer changes the interface around the loom, not the archive drawing. */
+/* ---------- a clearer introduction ---------- */
+#woven-intro .intro-grid { align-items: start; }
+.woven-intro-kicker,
+.woven-guide-kicker {
+  margin: 0 0 0.45rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stain-light);
+}
+.woven-intro-copy { max-width: 52ch; }
+.woven-intro-copy p { margin: 0; }
+.woven-intro-lede {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--linen-100);
+}
+.woven-intro-detail {
+  margin-top: 0.45rem !important;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--linen-300);
+}
+.woven-intro-prompt {
+  margin-top: 0.55rem !important;
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--linen-200);
+}
+/* ---------- the primary toolbar ---------- */
+#woven-topbar { align-items: center; gap: 0.65rem; }
+.woven-primary-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+.woven-primary-btn {
+  border-color: var(--oak-500);
+  color: var(--linen-50);
+}
+#btn-start { background: var(--walnut-700); }
+#btn-tours { color: var(--stain-light); }
+#woven-searchform {
+  position: relative;
+  display: block;
+  flex: 1 1 23rem;
+  max-width: 34rem;
+  min-width: 13rem;
+}
+.woven-search-row { display: flex; align-items: stretch; }
+#woven-search {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
+  min-height: 2.2rem;
+  border-right: 0;
+}
+.woven-search-submit {
+  flex: 0 0 auto;
+  min-height: 2.2rem;
+  padding-inline: 0.75rem;
+  border-color: var(--oak-500);
+}
+#woven-search-count {
+  display: block;
+  margin-top: 0.25rem;
+  line-height: 1.35;
+}
+#woven-search-count:empty { display: none; }
+#woven-search-results {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  right: 0;
+  z-index: 30;
+  max-height: min(25rem, 62vh);
+  overflow-y: auto;
+  background: var(--walnut-800);
+  border: 1px solid var(--oak-500);
+}
+#woven-search-results[hidden] { display: none; }
+.woven-search-option {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--walnut-600);
+  color: var(--linen-100);
+  cursor: pointer;
+}
+.woven-search-option:last-of-type { border-bottom: 0; }
+.woven-search-option:hover,
+.woven-search-option[aria-selected="true"] {
+  background: var(--walnut-700);
+  border-left: 3px solid var(--stain);
+  padding-left: calc(0.8rem - 3px);
+}
+.woven-search-option:focus-visible {
+  outline: 2px solid var(--stain);
+  outline-offset: -3px;
+}
+.woven-result-name {
+  display: block;
+  font-weight: 700;
+  color: var(--linen-50);
+}
+.woven-result-meta {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--linen-300);
+}
+.woven-search-overflow {
+  padding: 0.55rem 0.8rem;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--linen-300);
+  border-top: 1px solid var(--walnut-600);
+}
+#woven-more-tools {
+  position: relative;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+#woven-more-tools summary { list-style: none; white-space: nowrap; }
+#woven-more-tools summary::-webkit-details-marker { display: none; }
+#woven-more-tools summary::before {
+  content: '+ ';
+  color: var(--stain-light);
+}
+#woven-more-tools[open] summary::before { content: '− '; }
+.woven-more-panel {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  z-index: 29;
+  display: grid;
+  gap: 0.4rem;
+  width: 18rem;
+  padding: 0.65rem;
+  background: var(--walnut-800);
+  border: 1px solid var(--oak-500);
+}
+.woven-more-panel .woven-btn { width: 100%; text-align: left; }
+/* ---------- first-visit chooser ---------- */
+#woven-start-card {
+  position: absolute;
+  top: var(--woven-chrome-h, 5.5rem);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 12;
+  display: flex;
+  align-items: safe center;
+  justify-content: center;
+  padding: 1rem;
+  overflow-y: auto;
+  background: rgba(11, 8, 6, 0.91);
+}
+#woven-start-card[hidden] { display: none; }
+.woven-guide-inner {
+  width: min(58rem, 100%);
+  max-height: 100%;
+  overflow-y: auto;
+  background: var(--walnut-800);
+  border: 1px solid var(--oak-500);
+}
+.woven-guide-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--walnut-600);
+}
+.woven-guide-head h2 {
+  font-family: 'Libre Franklin', Arial, sans-serif;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--linen-50);
+}
+.woven-guide-body { padding: 1rem 1.2rem 1.2rem; }
+.woven-guide-body > p {
+  max-width: 64ch;
+  line-height: 1.55;
+  color: var(--linen-200);
+}
+.woven-start-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+.woven-guide-action {
+  min-height: 9rem;
+  padding: 1rem;
+  text-align: left;
+  background: var(--walnut-700);
+  border: 1px solid var(--walnut-600);
+  color: inherit;
+  cursor: pointer;
+}
+.woven-guide-action:hover { border-color: var(--stain); }
+.woven-guide-action:focus-visible {
+  outline: 2px solid var(--stain);
+  outline-offset: 2px;
+}
+.woven-guide-action-title {
+  display: block;
+  font-family: 'Libre Franklin', Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--linen-50);
+}
+.woven-guide-action-copy {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--linen-300);
+}
+.woven-quick-guide {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--walnut-600);
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--linen-300);
+}
+.woven-quick-guide b {
+  display: inline-grid;
+  width: 1.35rem;
+  height: 1.35rem;
+  place-items: center;
+  margin-right: 0.25rem;
+  border: 1px solid var(--oak-500);
+  color: var(--linen-50);
+}
+.woven-guide-list-link { margin-top: 0.9rem; font-size: 0.85rem; }
+/* ---------- lightweight in-canvas coaching ---------- */
+#woven-coach {
+  position: absolute;
+  left: 0.75rem;
+  bottom: calc(var(--woven-rail-h, 2.2rem) + 0.65rem);
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: min(38rem, calc(100% - 1.5rem));
+  padding: 0.55rem 0.7rem;
+  background: var(--walnut-700);
+  border: 1px solid var(--oak-500);
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--linen-200);
+}
+#woven-coach[hidden] { display: none; }
+#woven-coach strong { color: var(--linen-50); }
+#woven-coach button {
+  flex: 0 0 auto;
+  padding: 0.25rem 0.45rem;
+  background: transparent;
+  border: 1px solid var(--walnut-600);
+  color: var(--linen-100);
+  cursor: pointer;
+}
+#woven-coach button:focus-visible { outline: 2px solid var(--stain); }
+/* The docked key starts with the answer, then the visual distinctions. */
+#woven-legend .lg-title {
+  margin-bottom: 0.45rem;
+  font-family: 'Libre Franklin', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--linen-50);
+}
+#woven-legend .lg-cta { width: 100%; margin-top: 0.75rem; }
+/* ---------- small-screen story balance ---------- */
+@media (max-width: 700px) {
+  #woven-topbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+  .woven-primary-actions {
+    grid-column: 1 / -1;
+    min-width: 0;
+    overflow-x: auto;
+    padding-bottom: 3px;
+    scrollbar-width: thin;
+  }
+  #woven-searchform { grid-column: 1; width: 100%; max-width: none; min-width: 0; }
+  #woven-more-tools { grid-column: 2; margin-left: 0; }
+  .woven-more-panel { width: min(19rem, calc(100vw - 1.2rem)); }
+  .woven-search-submit { padding-inline: 0.6rem; }
+  #woven-search-results { max-height: 50vh; }
+  #woven-start-card {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    padding: 0.75rem;
+  }
+  body.woven-guide-open { overflow: hidden; }
+  .woven-guide-inner { max-height: 100%; }
+  .woven-start-actions { grid-template-columns: 1fr; }
+  .woven-guide-action { min-height: 0; }
+  .woven-quick-guide { display: grid; }
+  #woven-coach {
+    right: 0.6rem;
+    left: 0.6rem;
+    max-width: none;
+  }
+  body.woven-mobile-tour #woven-tourbar [data-guide-story-toggle] {
+    order: -2;
+    border-color: var(--stain);
+    color: var(--linen-50);
+  }
+  body.woven-mobile-tour:not(.woven-story-expanded) #woven-card:not([hidden]) {
+    max-width: min(22rem, calc(100% - 1.2rem));
+    max-height: 9.5rem;
+    padding: 0.65rem 0.7rem;
+  }
+  body.woven-mobile-tour:not(.woven-story-expanded) #woven-card .card-body {
+    overflow: hidden;
+    scrollbar-width: none;
+  }
+  body.woven-mobile-tour:not(.woven-story-expanded) #woven-card .card-body::-webkit-scrollbar {
+    display: none;
+  }
+  body.woven-mobile-tour:not(.woven-story-expanded) #woven-card h3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 17px;
+  }
+  body.woven-mobile-tour:not(.woven-story-expanded) #woven-card .card-body > p {
+    display: none;
+  }
+  body.woven-mobile-tour:not(.woven-story-expanded) #woven-card .card-body > p:first-of-type {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-top: 0.35rem;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  body.woven-mobile-tour:not(.woven-story-expanded) #woven-card .card-body > p.band,
+  body.woven-mobile-tour:not(.woven-story-expanded) #woven-card .card-body > p.flag {
+    display: block;
+    overflow: hidden;
+    margin-top: 0.3rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  body.woven-mobile-tour:not(.woven-story-expanded) #woven-card .card-more {
+    display: none !important;
+  }
+}
+@media (max-width: 430px) {
+  .woven-primary-actions { gap: 0.35rem; }
+  .woven-primary-actions .woven-btn { padding-inline: 0.6rem; }
+  .woven-search-submit { font-size: 0; }
+  .woven-search-submit::before { content: 'Go'; font-size: 11px; }
+  .woven-guide-head, .woven-guide-body { padding-inline: 0.9rem; }
+}
+@media (prefers-contrast: more), (forced-colors: active) {
+  #woven-start-card,
+  #woven-search-results,
+  .woven-more-panel { background: Canvas; border-color: CanvasText; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .woven-guide-action { scroll-behavior: auto; }
+}

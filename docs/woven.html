@@ -32,9 +32,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..700&family=Libre+Franklin:wght@400..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/tailwind.css">
-
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/woven.css">
+    <link rel="stylesheet" href="css/woven-guide.css">
 
     <script type="importmap">
     {
@@ -99,56 +99,117 @@
         <section id="woven-intro" class="max-w-[1400px] mx-auto w-full px-4 md:px-8 py-5 md:py-6">
             <div class="intro-grid">
                 <div class="intro-head">
+                    <p class="woven-intro-kicker">An interactive timeline of New Jersey's Black press</p>
                     <h1 class="font-display font-extrabold leading-[1.05] text-linen-50" style="font-size: clamp(1.35rem, 2.9vw, 2.55rem);">A hundred and forty-six years, woven once</h1>
                     <hr class="rail-wood mt-4 max-w-md">
                 </div>
-                <p class="text-base leading-relaxed text-linen-200">Every cross thread here is one publication, starting the year it was founded and ending the year it stopped. The thicker the thread, the more of that paper we have actually found and can show you. The threads that run past the edge of the loom belong to the <span data-count="still">…</span> papers still publishing today. The thin, fraying ones belong to the <span data-count="ghost">…</span> we know only from a line in a librarian's catalog.</p>
+                <div class="woven-intro-copy">
+                    <p class="woven-intro-lede">Each horizontal thread is one publication. Left to right is time. Thread thickness shows how much evidence survives.</p>
+                    <p class="woven-intro-detail"><span data-count="still">…</span> currently publishing titles end in loose strands. <span data-count="ghost">…</span> titles known only from a catalog line appear faint and frayed.</p>
+                    <p class="woven-intro-prompt">Choose a guided story, search for a publication, or explore the whole loom.</p>
+                </div>
             </div>
         </section>
 
         <div id="woven-stage">
+            <p id="woven-canvas-help" class="sr-only">Drag to move across the timeline. Scroll or pinch to zoom. Select a thread to open its publication record. Use the arrow keys to move between publications and events.</p>
             <canvas id="woven-canvas" role="application" tabindex="0"
-                    aria-label="The loom. Every horizontal thread is one New Jersey Black publication, drawn from the year it was founded to the year it stopped. Use the arrow keys to move between publications and decades, or read the same records as a list below."></canvas>
+                    aria-label="Interactive timeline of New Jersey Black publications"
+                    aria-describedby="woven-canvas-help"></canvas>
 
             <div id="woven-chrome">
             <div id="woven-topbar">
-                <div class="bar-scroll">
-                    <button type="button" class="woven-btn" id="btn-help">About this loom</button>
-                    <button type="button" class="woven-btn" id="btn-tours" aria-expanded="false" aria-controls="woven-tourpicker">Guided threads</button>
-                    <button type="button" class="woven-btn" id="btn-ghost">Show what did not survive</button>
-                    <button type="button" class="woven-btn" id="btn-reset">Reset the view</button>
-                    <button type="button" class="woven-btn" id="btn-fullscreen" aria-label="Enter fullscreen" hidden>Fullscreen</button>
-                    <a class="woven-btn" href="#woven-twin">Read the archive as a list</a>
+                <div class="woven-primary-actions" aria-label="Ways to explore the loom">
+                    <button type="button" class="woven-btn woven-primary-btn" id="btn-start">Start here</button>
+                    <button type="button" class="woven-btn woven-primary-btn" id="btn-tours" aria-expanded="false" aria-controls="woven-tourpicker">Guided stories</button>
                 </div>
+
                 <form id="woven-searchform" role="search" autocomplete="off">
-                    <label class="sr-only" for="woven-search">Find a publication</label>
-                    <input id="woven-search" type="search" placeholder="Find a publication" enterkeyhint="go">
-                    <span id="woven-search-count" role="status"></span>
+                    <label class="sr-only" for="woven-search">Search for a publication or city</label>
+                    <div class="woven-search-row">
+                        <input id="woven-search" type="search" placeholder="Search a publication or city" enterkeyhint="search"
+                               role="combobox" aria-autocomplete="list" aria-expanded="false"
+                               aria-controls="woven-search-results">
+                        <button type="submit" class="woven-btn woven-search-submit">Search</button>
+                    </div>
+                    <span id="woven-search-count" role="status" aria-live="polite"></span>
+                    <div id="woven-search-results" role="listbox" aria-label="Publication search results" hidden></div>
                 </form>
+
+                <details id="woven-more-tools">
+                    <summary class="woven-btn">More tools</summary>
+                    <div class="woven-more-panel" aria-label="More loom tools">
+                        <button type="button" class="woven-btn" id="btn-help">How this works</button>
+                        <button type="button" class="woven-btn" id="btn-ghost">What did not survive</button>
+                        <button type="button" class="woven-btn" id="btn-reset">Reset the view</button>
+                        <button type="button" class="woven-btn" id="btn-fullscreen" aria-label="Enter fullscreen" hidden>Fullscreen</button>
+                        <a class="woven-btn" href="#woven-twin">Read as a list</a>
+                    </div>
+                </details>
             </div>
 
             <div id="woven-eranav">
                 <div class="bar-scroll">
-                    <button type="button" class="woven-btn" id="btn-era-prev">Earlier decades</button>
+                    <button type="button" class="woven-btn" id="btn-era-prev" aria-label="Move to earlier founding decades">Previous era</button>
                     <span id="woven-era-now"></span>
-                    <button type="button" class="woven-btn" id="btn-era-next">Later decades</button>
-                    <button type="button" class="woven-btn" id="btn-whole">Show all <span data-count="total">…</span></button>
+                    <button type="button" class="woven-btn" id="btn-era-next" aria-label="Move to later founding decades">Next era</button>
+                    <button type="button" class="woven-btn" id="btn-whole">Whole timeline · <span data-count="total">…</span> titles</button>
                 </div>
-                <span id="woven-eranav-note">You start zoomed out on the whole cloth. Zoom in to read the names.</span>
+                <span id="woven-eranav-note">Names appear when you zoom in. Select a thread to open its record.</span>
             </div>
             </div>
 
             <div id="woven-yearrail" aria-hidden="true"></div>
             <div id="woven-tip" role="presentation" hidden></div>
             <div id="woven-notice" role="status" hidden></div>
-            <div id="woven-empty-hint" role="status" hidden>Nothing here — scroll out or press Reset the view</div>
+            <div id="woven-empty-hint" role="status" hidden>Nothing here — zoom out or reset the view</div>
 
             <div id="woven-overlay" hidden></div>
             <div id="woven-card" hidden></div>
             <div id="woven-ghostnames" hidden></div>
             <div id="woven-ghostcard" hidden></div>
             <div id="woven-help-card" hidden></div>
-            <div id="woven-tourpicker" role="dialog" aria-modal="false" aria-label="Guided threads" hidden></div>
+            <div id="woven-tourpicker" role="dialog" aria-modal="false" aria-label="Guided stories" hidden></div>
+
+            <div id="woven-start-card" role="dialog" aria-modal="false" aria-labelledby="woven-start-title" aria-describedby="woven-start-description" hidden>
+                <div class="woven-guide-inner">
+                    <div class="woven-guide-head">
+                        <div>
+                            <p class="woven-guide-kicker">Start here</p>
+                            <h2 id="woven-start-title">Choose how to explore</h2>
+                        </div>
+                        <button type="button" class="woven-btn" data-guide-close>Close</button>
+                    </div>
+                    <div class="woven-guide-body">
+                        <p id="woven-start-description">The loom holds every publication on one timeline. Pick the route that makes the most sense for what you want to learn.</p>
+                        <div class="woven-start-actions">
+                            <button type="button" class="woven-guide-action" data-guide-action="story">
+                                <span class="woven-guide-action-title">Follow a guided story</span>
+                                <span class="woven-guide-action-copy">Best for a first visit. Move through a short sequence of documented events.</span>
+                            </button>
+                            <button type="button" class="woven-guide-action" data-guide-action="search">
+                                <span class="woven-guide-action-title">Find a publication</span>
+                                <span class="woven-guide-action-copy">Search by title or city, then choose an exact result.</span>
+                            </button>
+                            <button type="button" class="woven-guide-action" data-guide-action="explore">
+                                <span class="woven-guide-action-title">Explore the whole loom</span>
+                                <span class="woven-guide-action-copy">Drag to move, scroll or pinch to zoom, then select a thread.</span>
+                            </button>
+                        </div>
+                        <div class="woven-quick-guide" aria-label="How to explore on your own">
+                            <span><b>1</b> Drag to move</span>
+                            <span><b>2</b> Zoom until names appear</span>
+                            <span><b>3</b> Select a thread for its record</span>
+                        </div>
+                        <p class="woven-guide-list-link">Prefer a conventional index? <a class="link-thread" href="archive.html">Open the full archive</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="woven-coach" role="status" hidden>
+                <span><strong>Explore:</strong> drag to move · scroll or pinch to zoom · select a thread</span>
+                <button type="button" aria-label="Hide exploration instructions">Got it</button>
+            </div>
 
             <aside id="woven-panel" role="dialog" aria-modal="false" aria-labelledby="woven-panel-title" hidden></aside>
 
@@ -186,6 +247,7 @@
         </footer>
     </main>
 
+    <script type="module" src="js/woven/guide.js"></script>
     <script type="module" src="js/woven/main.js"></script>
     <script>
         (function () {
