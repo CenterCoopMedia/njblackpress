@@ -1,171 +1,156 @@
 # NJ Black Press Archive
 
-<img width="1549" height="680" alt="image" src="https://github.com/user-attachments/assets/6a8dcb8d-192f-44f6-9043-cddd5f8219c0" />
+Historical archive of Black-owned and Black-focused publications in New Jersey
+from 1880 to the present.
 
-**[→ View the live archive](https://centercoopmedia.github.io/njblackpress/)**
+[View the live archive](https://centercoopmedia.github.io/njblackpress/)
 
-A historical database documenting Black publications in New Jersey from 1880 to present day. Built and maintained by the [Center for Cooperative Media](https://centerforcooperativemedia.org/) at Montclair State University.
+![NJ Black Press Archive](docs/og-image.png)
 
-## Overview
+The [Center for Cooperative Media](https://centerforcooperativemedia.org/) at
+Montclair State University maintains the archive. The current dataset contains
+more than 130 newspapers, magazines, newsletters, journals, and digital
+publications.
 
-The database catalogs 137 Black-owned and Black-focused publications that have operated in New Jersey — newspapers, magazines, newsletters, and digital outlets. The data spans 145 years of Black press history across 45+ cities statewide.
+## Explore the archive
 
-**Project lead:** Cassandra Etienne, Associate Director of Programming and Membership
-**Data curator:** Amanda Alicea
-**Project owner:** [Center for Cooperative Media](https://centerforcooperativemedia.org/)
+| Section | Purpose |
+|---|---|
+| [Home](https://centercoopmedia.github.io/njblackpress/) | Featured publications, archive introduction, timeline, and search |
+| [Archive](https://centercoopmedia.github.io/njblackpress/archive.html) | Filterable and sortable publication directory |
+| [Stories](https://centercoopmedia.github.io/njblackpress/story.html) | Sourced narratives that connect publications and events |
+| [Eras](https://centercoopmedia.github.io/njblackpress/era.html) | Historical periods and their publication activity |
+| [Map](https://centercoopmedia.github.io/njblackpress/map.html) | Publication activity by place and decade |
+| [Woven](https://centercoopmedia.github.io/njblackpress/woven.html) | Interactive loom view of the full publication timeline |
+| [Wiki](https://centercoopmedia.github.io/njblackpress/wiki/) | Pre-rendered publication and browse pages |
 
-## The website
+Each publication record includes known dates, locations, publishers, formats,
+archive links, historical notes, and supporting evidence when available.
 
-The archive is a static site deployed via GitHub Pages from the `/docs` directory. It includes:
+## Technology
 
-- **Home** (`/`) — featured historic and contemporary publications, decade timeline, and search preview
-- **Archive** (`/archive.html`) — full directory with filtering by city, decade, format, and status
-- **Publication** (`/publication.html?id=N`) — individual record pages with full historical detail
+- Static HTML, CSS, and JavaScript
+- Tailwind CSS 3, compiled into `docs/css/tailwind.css`
+- Python data builders, generators, and checks
+- Vendored Three.js modules for Woven
+- GitHub Pages from `master` and the `docs/` directory
 
-No build step. Vanilla JavaScript, Tailwind CSS via CDN.
+The project has no backend service, database server, or JavaScript framework.
 
-## Data structure
+## Repository map
 
-### Source files
-
-| Path | Contents |
-|------|----------|
-| `data/publications.csv` | Primary dataset (exported from Notion) |
-| `data/publications.json` | Generated JSON (used by the site) |
-| `data/featured-publications.json` | Curated records with richer detail |
-| `data/convert_csv.py` | CSV → JSON converter |
-| `data/merge_research.py` | Merges research findings into JSON |
-| `docs/data/` | Deployed copies of the above JSON files |
-
-### Publication record schema
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `id` | int | Unique identifier |
-| `name` | string | Publication name |
-| `alternateName` | string\|null | Other names used |
-| `city` | string\|null | Primary city of operation |
-| `publishers` | string\|null | Publishing entity or individuals |
-| `yearFounded` | int\|null | Start year |
-| `yearCeased` | int\|null | End year (null if still active) |
-| `frequency` | string\|null | Weekly, monthly, daily, etc. |
-| `format` | string\|null | Newspaper, periodical, digital |
-| `languages` | string | Primary language(s), defaults to "English" |
-| `archiveUrl` | string\|null | Library of Congress, WorldCat, Internet Archive links |
-| `websiteUrl` | string\|null | Current website URL |
-| `targetAudience` | string\|null | Intended readership |
-| `primaryFocus` | string\|null | Subject matter coverage |
-| `medium` | string | "Print", "Digital", or "Print/Digital" |
-| `missionStatement` | string\|null | Editorial philosophy |
-| `keyStaff` | string\|null | Notable editors/publishers |
-| `historicalNotes` | string\|null | Context and significance |
-| `isActive` | bool | Whether the publication is still operating |
-| `decade` | string | Decade of founding (e.g. "1880s") |
-
-### Data pipeline
-
-```
-Notion → data/publications.csv
-              ↓
-         convert_csv.py  →  data/publications.json
-              ↓
-         merge_research.py (enriches from data/research/*.json)
-              ↓
-         Copy to docs/data/ (manual step)
+```text
+docs/                         Published GitHub Pages site
+  data/                       Browser-ready data copies
+  js/                         Site scripts and Woven modules
+  wiki/                       Generated public HTML wiki
+data/                         Source data, research, builders, and checks
+  research/source-catalog.json
+  research/rights/rights-manifest.json
+okf/                          Generated portable markdown wiki
+scripts/                      HTML and open knowledge format generators
+src/input.css                 Tailwind input stylesheet
+tailwind.config.js            Tailwind content paths and design tokens
 ```
 
-## Notable publications
+Read [CODEBASE_OVERVIEW.md](CODEBASE_OVERVIEW.md) for the architecture and
+[data/DATA_DICTIONARY.md](data/DATA_DICTIONARY.md) for the data contracts.
 
-### Historical (pre-1950)
-- **The Sentinel** (1880, Trenton) — one of NJ's earliest Black newspapers
-- **New Jersey Trumpet** (1887–1897, Jersey City / Newark)
-- **The Echo** (1904–1943, Long Branch/Red Bank) — "Oldest colored paper in New Jersey"
-- **NJ Afro-American** (1941–present, Newark) — the longest-running Black newspaper in NJ
+## Local development
 
-### Civil rights era (1950–1980)
-- **Black Newark** (1968–1974) — published by the Committee for Unified Newark following the 1967 uprising
-- **Unity and Struggle** (1972, Newark) — connected to the Congress of Afrikan People
+Requirements:
 
-### Contemporary digital outlets (2010s–present)
-- **Black In Jersey** (2021, Trenton) — "Our Voices, Our Perspectives"
-- **NJ Urban News** (2018, Newark) — "A Voice for the Voiceless"
-- **Trenton Journal** (2021) — solutions-based journalism
-- **Ark Republic** (2017, Newark) — multimedia journalism
+- Node.js and npm
+- Python 3
 
-## Geographic coverage
+Install the locked Tailwind dependency and build the stylesheet:
 
-Publications span all regions of New Jersey:
-- **North Jersey:** Newark, Paterson, East Orange, Teaneck, Montclair, Jersey City
-- **Central Jersey:** Trenton, Princeton, Plainfield, Somerset, New Brunswick
-- **South Jersey:** Camden, Atlantic City, Swedesboro, Pleasantville
-
-## Working with the data
-
-The full dataset is available as JSON at:
-```
-https://centercoopmedia.github.io/njblackpress/data/publications.json
-```
-
-To regenerate from source:
 ```bash
-cd data/
-python3 convert_csv.py          # Regenerate publications.json from CSV
-python3 merge_research.py       # Merge research findings
-cp publications.json ../docs/data/publications.json
+npm ci
+npm run build:css
 ```
 
-External archives referenced in the data:
-- [Library of Congress](https://loc.gov)
-- [WorldCat](https://search.worldcat.org)
-- [Internet Archive](https://archive.org)
+Serve the published directory:
+
+```bash
+cd docs
+python3 -m http.server 8000
+```
+
+Open `http://localhost:8000/`.
+
+## Data and generated files
+
+The repository keeps pipeline data under `data/` and browser copies under
+`docs/data/`. Do not edit a browser copy without updating its source.
+
+Important generated files include:
+
+- `docs/css/tailwind.css`
+- `docs/data/publications.json`
+- `docs/data/featured-publications.json`
+- `docs/data/events.json`
+- `docs/data/stories.json`
+- `docs/data/map-publications.json`
+- `docs/data/clippings.json`
+- `docs/images/evidence/`
+- `docs/wiki/`
+- `okf/`
+
+Publication evidence comes from
+`data/research/source-catalog.json`. Publication rights decisions come from
+`data/research/rights/rights-manifest.json`. Do not publish an evidence file
+unless its rights status permits that use.
+
+Use the documented builder for each generated surface:
+
+```bash
+python3 data/add_evidence.py
+cp data/featured-publications.json docs/data/featured-publications.json
+cmp data/featured-publications.json docs/data/featured-publications.json
+python3 data/build_site_events_stories.py
+python3 data/build_map_data.py
+python3 scripts/generate_html_wiki.py --base-url https://centercoopmedia.github.io/njblackpress/
+python3 scripts/generate_okf_wiki.py
+```
+
+Run only the builders needed for the changed source. Review generated diffs
+before you commit them.
+
+The checked-in CSV is not a safe input for a routine publication change. Do
+not run `data/convert_csv.py` unless you have a fresh Notion export and will
+review the full dataset diff for lost editorial enrichment.
+
+## Validation
+
+Run the checks that match the changed area. Common checks include:
+
+```bash
+npm run build:css
+python3 data/test_site_data.py
+python3 data/test_source_catalog.py
+python3 data/test_map.py
+python3 data/test_navigation.py
+python3 data/test_wiki_publications.py
+python3 data/test_woven_layout.py
+python3 data/test_woven_usability.py
+python3 scripts/generate_okf_wiki.py --check
+```
+
+The evidence and source-catalog checks require the local evidence corpus under
+`data/research/`. Git ignores most of those large research files. Run those
+checks only in a checkout that has the corpus.
+
+Visible changes also need browser checks at desktop and mobile sizes.
 
 ## Contributing
 
-If you have information about NJ Black publications not in the database, or corrections to existing records, open an issue or submit a pull request.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before you change data or generated
+files. Use the data correction issue form when you have a source for a missing
+or incorrect fact.
 
-## License
+## Citation and reuse
 
-This dataset is made available for research and educational purposes. Please cite the Center for Cooperative Media when using this data.
-
-## The wiki
-
-The archive is also published as a cross-linked wiki, in two forms generated
-from the same `data/publications.json` source.
-
-### Public HTML wiki (`/wiki/`)
-
-A browsable, pre-rendered HTML wiki lives in `docs/wiki/` and ships with the
-site at **[`/njblackpress/wiki/`](https://centercoopmedia.github.io/njblackpress/wiki/)**
-(linked from the main nav). It matches the site's look (ink/paper/accent
-palette, Fraunces + DM Sans) and gives every record a crawlable permalink:
-
-- `wiki/index.html` — landing page with snapshot stats and browse links
-- `wiki/publications.html` — sortable index of all records (city, years, status)
-- `wiki/statistics.html` — counts, a founding-decade timeline, top cities, longest-running titles
-- `wiki/featured.html` — curated historic and contemporary publications
-- `wiki/publications/` — one page per publication, cross-linked to related records
-- `wiki/cities/`, `wiki/decades/`, `wiki/formats/`, `wiki/mediums/` — browse-by pages
-- `wiki/sitemap.xml` — sitemap covering every wiki page (referenced from `robots.txt`)
-
-Regenerate it after updating the data:
-
-```bash
-python3 scripts/generate_html_wiki.py
-```
-
-### Open knowledge format wiki (`okf/`)
-
-A portable [open knowledge format](https://cloud.google.com/blog/products/ai-machine-learning/introducing-the-open-knowledge-format)
-bundle in `okf/` — a directory of markdown files with YAML frontmatter and
-standard links, so people and agents can read the archive without running the
-site JavaScript. The bundle contains 250 markdown files (137 publication pages,
-grouped browse pages for cities/decades/formats/mediums, plus index, overview,
-statistics, featured, data-model, and change-log pages).
-
-```bash
-python3 scripts/generate_okf_wiki.py          # regenerate
-python3 scripts/generate_okf_wiki.py --check  # validate counts and frontmatter
-```
-
-Both generators accept `--generated-at YYYY-MM-DD` for reproducible timestamps,
-and share their data-shaping helpers so the HTML and markdown stay in lockstep.
+Credit the Center for Cooperative Media when you use archive data. This
+repository does not currently include a software or data license file. Contact
+the Center before you redistribute the dataset or evidence files.

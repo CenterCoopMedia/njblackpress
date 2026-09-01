@@ -1,131 +1,126 @@
-# NJ Black Press Database — Codebase Overview
+# NJ Black Press Archive: Codebase overview
 
-## What It Does
+## System boundary
 
-A static website cataloging **138+ Black publications in New Jersey from 1880 to present**. It provides a searchable/filterable archive, featured publication showcases, an interactive decade-by-decade timeline, and individual publication detail pages. Built for the **Center for Cooperative Media** at Montclair State University.
+The project is a static site. Browsers load HTML, CSS, JavaScript, and JSON from
+GitHub Pages. There is no application server, database server, authentication,
+or write API.
 
-## Tech Stack
+Python scripts build data and pre-rendered pages before publication. GitHub
+Pages serves the committed results from `docs/`.
 
-| Layer | Technology |
-|---|---|
-| Markup | Static HTML5 (3 pages) |
-| Styling | Tailwind CSS 3 (CDN) + custom CSS |
-| JavaScript | Vanilla ES6+ (~2,000 LOC across 5 IIFE modules, no framework) |
-| Data | Static JSON files (no database, no backend server) |
-| Data pipeline | Python 3 scripts (CSV → JSON conversion) |
-| Hosting | GitHub Pages (served from `docs/` folder) |
-| Fonts | Google Fonts (Fraunces serif, DM Sans sans-serif) |
+## Public surfaces
 
-## Main Entry Points
+| Surface | Entry point | Main data |
+|---|---|---|
+| Home and timeline | `docs/index.html` | Publications and featured records |
+| Archive | `docs/archive.html` | Publications |
+| Publication detail | `docs/publication.html?id=` | Publications, evidence, and recent stories |
+| Stories | `docs/story.html?id=` | Stories, events, and publications |
+| Eras | `docs/era.html?decade=` | Events, stories, and publications |
+| Map | `docs/map.html` | Generated map publication data |
+| Woven | `docs/woven.html` | Publications, stories, events, and evidence |
+| Public wiki | `docs/wiki/` | Pre-rendered publication and browse pages |
+| Portable wiki | `okf/` | Markdown pages with YAML frontmatter |
 
-### Pages
+## Frontend organization
 
-- **`docs/index.html`** — Homepage with hero stats, hardcoded featured publications, interactive timeline, and database search section
-- **`docs/archive.html`** — Full searchable/filterable directory with grid and list views, URL state persistence
-- **`docs/publication.html`** — Individual publication detail page (loaded via `?id=` query parameter)
+The main site scripts live in `docs/js/`:
 
-### JavaScript Modules
+- `app.js`: Home data loading, filters, cards, and counters.
+- `archive.js`: Archive filters, sorting, URL state, and pagination.
+- `publication.js`: Publication details, evidence, and related records.
+- `featured.js`: Featured record sections.
+- `timeline.js`: Decade timeline.
+- `story.js`: Story detail rendering.
+- `era.js`: Era detail rendering.
+- `map.js`: Map rendering and decade filtering.
+- `site-nav.js`: Shared navigation.
 
-All modules use the IIFE pattern and are loaded per-page:
+Woven uses ES modules under `docs/js/woven/`. Its modules separate data,
+layout, rendering, labels, selection, story tours, evidence panels, fallback
+behavior, and first-visit guidance. Three.js is vendored under `docs/vendor/`.
 
-- **`docs/js/app.js`** (~490 lines) — Homepage: data loading, filtering, search, card rendering, counter animation
-- **`docs/js/archive.js`** (~607 lines) — Archive page: advanced filters, URL state sync, grid/list views, pagination
-- **`docs/js/publication.js`** (~440 lines) — Detail page: multi-source data loading, rich content rendering, related publications
-- **`docs/js/featured.js`** (~299 lines) — Featured publications rendering with expand/collapse
-- **`docs/js/timeline.js`** (~231 lines) — Interactive bar chart timeline with decade navigation
+## Styling
 
-### Data Pipeline
+`src/input.css` is the Tailwind input. `tailwind.config.js` defines scan paths,
+fonts, colors, and the noise texture. `npm run build:css` writes the minified
+stylesheet to `docs/css/tailwind.css`.
 
-- **`data/publications.csv`** — Master source data (exported from Notion)
-- **`data/convert_csv.py`** — Converts CSV → `publications.json` with derived fields (decade, isActive, medium)
-- **`data/merge_research.py`** — Merges enriched research data into publication records
-- **`data/publications.json`** — Runtime data file (138 publications with full metadata)
-- **`data/featured-publications.json`** — Enriched data for highlighted publications
-- **`data/research/`** — 6 batch JSON files of historical research findings
-- **`data/publications/`** — 130+ individual Markdown files per publication
+Custom styles live in:
 
-## Project Structure
+- `docs/css/styles.css`: Shared site styles.
+- `docs/css/woven.css`: Woven layout and rendering interface.
+- `docs/css/woven-guide.css`: Woven guidance and progressive controls.
 
+## Data flow
+
+```text
+Current publication record
+  -> data/publications.json
+
+Source catalog + rights manifest
+  -> data/add_evidence.py
+  -> data/publications.json
+  -> docs/data/publications.json
+
+Hand-curated featured records
+  -> data/featured-publications.json
+  -> explicit copy and comparison
+  -> docs/data/featured-publications.json
+
+Rights manifest + local evidence corpus
+  -> data/make_clippings.py
+  -> docs/data/clippings.json and docs/images/evidence/
+
+Editorial events and stories
+  -> data/build_site_events_stories.py
+  -> data/events.json and data/stories.json
+  -> docs/data/events.json and docs/data/stories.json
+
+Publications + municipality rules
+  -> data/build_map_data.py
+  -> data/map-publications.json
+  -> docs/data/map-publications.json
+
+Publication data
+  -> scripts/generate_html_wiki.py
+  -> docs/wiki/
+  -> scripts/generate_okf_wiki.py
+  -> okf/
 ```
-njblackpress/
-├── docs/                          # Static website (GitHub Pages root)
-│   ├── index.html                 # Homepage
-│   ├── archive.html               # Full archive directory
-│   ├── publication.html           # Publication detail template
-│   ├── css/styles.css             # Custom CSS (scrollbars, animations, responsive)
-│   ├── js/                        # JavaScript modules
-│   │   ├── app.js
-│   │   ├── archive.js
-│   │   ├── featured.js
-│   │   ├── timeline.js
-│   │   └── publication.js
-│   ├── data/                      # Runtime data files
-│   │   ├── publications.json
-│   │   └── featured-publications.json
-│   └── images/
-├── data/                          # Data layer (source of truth)
-│   ├── publications.csv           # Master CSV from Notion
-│   ├── publications.json          # Generated JSON
-│   ├── featured-publications.json
-│   ├── convert_csv.py             # CSV → JSON converter
-│   ├── merge_research.py          # Research data merger
-│   ├── publications/              # Individual markdown records (130+)
-│   └── research/                  # Batch research JSON files
-└── README.md
-```
 
-## Security Vulnerabilities
+The `data/` copies are pipeline data. The `docs/data/` copies are browser data.
+Builders keep the paired files equal.
 
-### 1. XSS via unescaped URLs in `href` attributes (Medium)
+`data/convert_csv.py` is for a controlled full refresh from a new Notion CSV.
+The checked-in CSV does not reproduce the current curated publication record.
+Do not use the converter for a routine correction.
 
-Multiple files interpolate `pub.websiteUrl` and `pub.archiveUrl` directly into HTML `href` attributes without escaping. While text content is properly escaped via `escapeHtml()`, URLs are not. A value like `javascript:alert(1)` in the JSON data would execute.
+## Generated boundaries
 
-**Affected locations:**
-- `app.js:276-279` — `websiteLink` and `archiveLink`
-- `archive.js:373-376` — `pub.websiteUrl` in grid cards
-- `publication.js:324,335` — `pub.websiteUrl` and `pub.archiveUrl`
-- `featured.js:104,207` — `pub.archiveUrl` and `websiteUrl`
+Do not hand-edit compiled CSS, browser data copies, or generated wiki files.
+Change the source and run its builder.
 
-The `archiveUrl.startsWith('http')` check in some places partially mitigates this, but `websiteUrl` has no such guard.
+The public HTML wiki generator removes and rebuilds `docs/wiki/`. The open
+knowledge format generator removes and rebuilds `okf/`. Review the full
+generated diff before commit.
 
-### 2. Inline `onclick` handlers with string interpolation (Low)
+The clipping builder rewrites the clipping index but does not remove every old
+image. A rights downgrade must also remove any public image that the new index
+does not list.
 
-- `app.js:365` — `onclick="window.njbp.removeFilter('${f.type}')"`
-- `archive.js:437-443` — Same pattern with `chip.type`
-- `timeline.js:209` — `onclick="window.njbp.filterByDecade('${decade.label}')"`
+## Validation model
 
-Values currently come from hardcoded sources so this is safe in practice, but the pattern is fragile and invites injection if data sources change.
+The repository uses small Python checks in `data/test_*.py`. Each check covers
+a stable data, navigation, map, wiki, or Woven contract. Run the checks that
+match the changed surface.
 
-### 3. URL parameters used without validation (Low)
+Browser checks remain necessary for layout, keyboard interaction, focus,
+responsive behavior, WebGL, and reduced motion.
 
-`archive.js:63-71` reads `sort` and `view` from URL params and sets them directly into state without validating against allowed values. This doesn't lead to XSS but crafted URLs could produce unexpected UI behavior.
+## Publication
 
-### 4. Tailwind CSS CDN loaded without Subresource Integrity (Low)
-
-**Resolved 2026-08-19:** the site now ships a compiled `docs/css/tailwind.css`; no page loads the Tailwind CDN.
-
-## Inefficiencies
-
-### 1. Triple-loading `publications.json` on the homepage
-
-The homepage loads `app.js`, `timeline.js`, and (if included) `featured.js`, each of which independently `fetch('data/publications.json')`. That's up to 3 identical HTTP requests on every homepage load. Browser caching helps on repeat visits but the first load is wasteful. A shared data loader would fix this.
-
-### 2. Full DOM re-render on every filter/sort change
-
-`app.js:260` and `archive.js:335` reconstruct the entire results grid via `innerHTML = ...map(...).join('')` on every interaction. For 138 records this is fast enough, but it discards and recreates all DOM nodes unnecessarily.
-
-### 3. Duplicated utility functions across all 5 JS files
-
-`escapeHtml()`, `truncate()`, `debounce()`, `animateCounter()`, `getOneLiner()`, and `hideLoadingOverlay()` are copy-pasted across multiple files. Bug fixes must be applied in 3-5 places.
-
-### 4. Tailwind CSS JIT build in production
-
-**Resolved 2026-08-19:** all pages now link a 32KB compiled, purged `docs/css/tailwind.css` built with the Tailwind CLI (issues #15, #17-#20).
-
-### 5. Google Fonts loaded render-blocking
-
-Font `<link>` tags are render-blocking. Using `media="print" onload="this.media='all'"` or `font-display: optional` would improve Largest Contentful Paint (LCP).
-
-### 6. Fixed grain overlay at z-50
-
-A full-viewport `<div>` with `z-50` is rendered permanently for a noise texture effect. While `pointer-events-none` prevents interaction issues, it forces a compositing layer on every frame.
+GitHub Pages serves `docs/` from `master` at
+`https://centercoopmedia.github.io/njblackpress/`. A merge can publish the site
+without a separate deploy command.
