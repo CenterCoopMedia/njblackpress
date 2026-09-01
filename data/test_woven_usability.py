@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parent.parent
 HTML_PATH = ROOT / "docs" / "woven.html"
 CSS_PATH = ROOT / "docs" / "css" / "woven-guide.css"
 JS_PATH = ROOT / "docs" / "js" / "woven" / "guide.js"
+DIALOG_PATH = ROOT / "docs" / "js" / "woven" / "guide-dialog.js"
+STAGE_PATH = ROOT / "docs" / "js" / "woven" / "guide-stage.js"
 
 
 class WovenParser(HTMLParser):
@@ -32,6 +34,8 @@ def main() -> None:
     html = HTML_PATH.read_text(encoding="utf-8")
     css = CSS_PATH.read_text(encoding="utf-8")
     js = JS_PATH.read_text(encoding="utf-8")
+    dialog_js = DIALOG_PATH.read_text(encoding="utf-8")
+    stage_js = STAGE_PATH.read_text(encoding="utf-8")
     parser = WovenParser()
     parser.feed(html)
 
@@ -71,6 +75,7 @@ def main() -> None:
     assert "Previous era" in html and "Next era" in html and "Whole timeline" in html
 
     assert "sessionStorage" in js
+    assert "createStartDialog" in js and "createStageCoordinator" in js
     assert "stopImmediatePropagation" in js
     assert "fetch('data/publications.json')" in js
     assert "window.njbpWoven?.open" in js
@@ -78,6 +83,15 @@ def main() -> None:
     assert "woven-mobile-tour" in js
     assert "woven-story-expanded" in js
     assert "Read story" in js and "More loom" in js
+    assert "closeSearchResults(true)" in js
+
+    assert "aria-modal" in dialog_js
+    assert "document.addEventListener('keydown', containFocus, true)" in dialog_js
+    assert "event.key !== 'Tab' || !media.matches" in dialog_js
+    assert "window.njbpWoven?.exit?.()" in stage_js
+    assert "woven-help-card" in stage_js and "woven-tourpicker" in stage_js
+    assert "MutationObserver(refreshChrome)" in stage_js
+    assert "app?.labels?.update" in stage_js
 
     assert "#woven-search-results" in css
     assert "#woven-start-card" in css
@@ -87,6 +101,8 @@ def main() -> None:
 
     assert len(css.splitlines()) <= 400, "split the guidance stylesheet before it exceeds 400 lines"
     assert len(js.splitlines()) <= 400, "split the guidance module before it exceeds 400 lines"
+    assert len(dialog_js.splitlines()) <= 400
+    assert len(stage_js.splitlines()) <= 400
     print("PASS: Woven has guided entry, explicit search, progressive tools, and mobile story balance")
 
 
