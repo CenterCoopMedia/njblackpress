@@ -35,7 +35,9 @@ Open `http://localhost:8000/`.
 |---|---|
 | Shared page content | HTML under `docs/` |
 | Shared navigation | `docs/js/site-nav.js` |
-| Publication fields | `data/publications.csv` or the applicable research source |
+| Publication fields | `data/publications.json` or the applicable research source |
+| Controlled full refresh | A fresh `data/publications.csv` Notion export |
+| Featured records | `data/featured-publications.json` |
 | Publication evidence | `data/research/source-catalog.json` |
 | Evidence rights | `data/research/rights/rights-manifest.json` |
 | Events and stories | `data/research/editorial/` |
@@ -52,11 +54,9 @@ shapes. Do not hand-edit generated files.
 Run only the builders needed for the change:
 
 ```bash
-cd data
-python3 convert_csv.py
-python3 merge_research.py
-python3 add_evidence.py
-cd ..
+python3 data/add_evidence.py
+cp data/featured-publications.json docs/data/featured-publications.json
+cmp data/featured-publications.json docs/data/featured-publications.json
 python3 data/build_site_events_stories.py
 python3 data/build_map_data.py
 python3 scripts/generate_html_wiki.py --base-url https://centercoopmedia.github.io/njblackpress/
@@ -64,6 +64,21 @@ python3 scripts/generate_okf_wiki.py
 ```
 
 Commit the source and its generated outputs together.
+
+The checked-in CSV is stale relative to the current publication record. Do not
+run `data/convert_csv.py` for a routine correction. Use it only after you add a
+fresh Notion export. Review the full dataset diff for lost enrichment, changed
+IDs, changed cessation years, changed active status, and an unexpected count.
+
+For a routine publication correction, edit `data/publications.json` and run
+`data/add_evidence.py`. For a featured-record change, copy its source to the
+browser data path and use `cmp` to prove that both files match.
+
+For a rights change, use a checkout with the full evidence corpus. Record each
+affected clipping output, run `python3 data/make_clippings.py`, and remove any
+old file under `docs/images/evidence/` that the new clipping index does not
+list. Confirm that downgraded source paths are absent from
+`docs/data/clippings.json` and that their old public files no longer exist.
 
 ## Validate the change
 

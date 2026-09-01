@@ -61,8 +61,13 @@ large research files are ignored by Git and are not present in a normal clone.
 
 - Read `data/DATA_DICTIONARY.md` before changing a data contract.
 - Keep pipeline data and browser data copies equal.
+- Treat `data/publications.json` as the current publication record.
+- Do not run `data/convert_csv.py` for a routine correction.
+- Copy and compare featured data after you change its source file.
 - Do not hand-edit publication evidence arrays.
 - Do not publish evidence without a permitted rights status.
+- Rebuild the clipping index after a rights change.
+- Remove an old public evidence image after its rights status is downgraded.
 - Preserve publication IDs and verify all cross-file references.
 - Regenerate the map and both wikis after applicable publication changes.
 

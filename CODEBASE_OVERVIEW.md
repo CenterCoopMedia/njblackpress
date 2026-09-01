@@ -17,7 +17,7 @@ Pages serves the committed results from `docs/`.
 | Archive | `docs/archive.html` | Publications |
 | Publication detail | `docs/publication.html?id=` | Publications, evidence, and recent stories |
 | Stories | `docs/story.html?id=` | Stories, events, and publications |
-| Eras | `docs/era.html?id=` | Events, stories, and publications |
+| Eras | `docs/era.html?decade=` | Events, stories, and publications |
 | Map | `docs/map.html` | Generated map publication data |
 | Woven | `docs/woven.html` | Publications, stories, events, and evidence |
 | Public wiki | `docs/wiki/` | Pre-rendered publication and browse pages |
@@ -56,18 +56,22 @@ Custom styles live in:
 ## Data flow
 
 ```text
-Notion CSV
-  -> data/convert_csv.py
-  -> data/publications.json
-
-Research batches
-  -> data/merge_research.py
+Current publication record
   -> data/publications.json
 
 Source catalog + rights manifest
   -> data/add_evidence.py
   -> data/publications.json
   -> docs/data/publications.json
+
+Hand-curated featured records
+  -> data/featured-publications.json
+  -> explicit copy and comparison
+  -> docs/data/featured-publications.json
+
+Rights manifest + local evidence corpus
+  -> data/make_clippings.py
+  -> docs/data/clippings.json and docs/images/evidence/
 
 Editorial events and stories
   -> data/build_site_events_stories.py
@@ -89,6 +93,10 @@ Publication data
 The `data/` copies are pipeline data. The `docs/data/` copies are browser data.
 Builders keep the paired files equal.
 
+`data/convert_csv.py` is for a controlled full refresh from a new Notion CSV.
+The checked-in CSV does not reproduce the current curated publication record.
+Do not use the converter for a routine correction.
+
 ## Generated boundaries
 
 Do not hand-edit compiled CSS, browser data copies, or generated wiki files.
@@ -97,6 +105,10 @@ Change the source and run its builder.
 The public HTML wiki generator removes and rebuilds `docs/wiki/`. The open
 knowledge format generator removes and rebuilds `okf/`. Review the full
 generated diff before commit.
+
+The clipping builder rewrites the clipping index but does not remove every old
+image. A rights downgrade must also remove any public image that the new index
+does not list.
 
 ## Validation model
 

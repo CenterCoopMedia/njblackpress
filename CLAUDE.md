@@ -38,7 +38,7 @@ Main pages:
 - `docs/archive.html`: Filterable publication directory.
 - `docs/publication.html`: Publication detail selected with `?id=`.
 - `docs/story.html`: Sourced narrative selected with `?id=`.
-- `docs/era.html`: Historical era selected with `?id=`.
+- `docs/era.html`: Historical era selected with `?decade=`.
 - `docs/map.html`: Publication map and decade filter.
 - `docs/woven.html`: Interactive timeline loom.
 - `docs/wiki/`: Generated public HTML wiki.
@@ -52,8 +52,8 @@ check when you change the global navigation.
 
 ## Data sources
 
-- `data/publications.csv`: Notion export for base publication fields.
-- `data/publications.json`: Pipeline publication data.
+- `data/publications.json`: Current publication record.
+- `data/publications.csv`: Notion export for a controlled full refresh only.
 - `data/research/source-catalog.json`: Source searches and retained evidence.
 - `data/research/rights/rights-manifest.json`: Rights decisions for evidence.
 - `data/research/editorial/events.json`: Editorial event source.
@@ -69,8 +69,11 @@ Do not hand-edit these outputs:
 
 - `docs/css/tailwind.css`
 - `docs/data/publications.json`
+- `docs/data/featured-publications.json`
 - `docs/data/events.json`
 - `docs/data/stories.json`
+- `docs/data/clippings.json`
+- `docs/images/evidence/`
 - `data/map-publications.json`
 - `docs/data/map-publications.json`
 - `docs/wiki/`
@@ -79,11 +82,9 @@ Do not hand-edit these outputs:
 Run the smallest builder that covers the source change:
 
 ```bash
-cd data
-python3 convert_csv.py
-python3 merge_research.py
-python3 add_evidence.py
-cd ..
+python3 data/add_evidence.py
+cp data/featured-publications.json docs/data/featured-publications.json
+cmp data/featured-publications.json docs/data/featured-publications.json
 python3 data/build_site_events_stories.py
 python3 data/build_map_data.py
 python3 scripts/generate_html_wiki.py --base-url https://centercoopmedia.github.io/njblackpress/
@@ -91,9 +92,15 @@ python3 scripts/generate_okf_wiki.py
 python3 scripts/generate_okf_wiki.py --check
 ```
 
-`convert_csv.py` rebuilds publication data from the CSV and reattaches evidence.
-Run `merge_research.py` and `add_evidence.py` after it when research enrichment
-must also be applied and copied to the browser data.
+The checked-in CSV is stale relative to the current publication record. Do not
+run `data/convert_csv.py` for a routine correction. Use it only for a controlled
+full refresh after you replace the CSV with a fresh Notion export. Review the
+full diff and prove that the refresh preserves curated fields, record count,
+publication IDs, cessation years, and active status.
+
+For a routine publication correction, update `data/publications.json`, run
+`data/add_evidence.py`, and review both publication JSON files. Use
+`data/merge_research.py` only for a reviewed research-enrichment batch.
 
 The HTML wiki generator also rebuilds Tailwind unless `--skip-css` is present.
 Always pass the live Pages URL through `--base-url`.
@@ -108,6 +115,13 @@ rights manifest, then run `data/add_evidence.py`.
 
 Do not publish a file marked `metadata_only` or `unlisted`. Follow the citation
 and crop requirements for `publishable_with_credit` and `crop_first` files.
+
+A rights change also affects the public clipping index and its image files. In
+a checkout with the full evidence corpus, record the affected clipping output,
+then run `python3 data/make_clippings.py`. Remove each old file under
+`docs/images/evidence/` that the new `docs/data/clippings.json` no longer lists.
+Confirm that a downgraded source path is absent from the clipping index and its
+old public image no longer exists. Review both paths before commit.
 
 ## Validation
 
@@ -154,6 +168,6 @@ comes next. Do not include file paths or engineering jargon.
 - Use sentence case for headings and interface text.
 - Open external links in a new tab with `target="_blank"` and
   `rel="noopener noreferrer"`.
-- Use query parameters for publication, story, and era detail routes.
+- Use `?id=` for publication and story details. Use `?decade=` for era details.
 - Keep changes focused. Do not edit generated files without their source.
 - Preserve unrelated worktree changes.

@@ -88,9 +88,12 @@ Important generated files include:
 
 - `docs/css/tailwind.css`
 - `docs/data/publications.json`
+- `docs/data/featured-publications.json`
 - `docs/data/events.json`
 - `docs/data/stories.json`
 - `docs/data/map-publications.json`
+- `docs/data/clippings.json`
+- `docs/images/evidence/`
 - `docs/wiki/`
 - `okf/`
 
@@ -102,11 +105,9 @@ unless its rights status permits that use.
 Use the documented builder for each generated surface:
 
 ```bash
-cd data
-python3 convert_csv.py
-python3 merge_research.py
-python3 add_evidence.py
-cd ..
+python3 data/add_evidence.py
+cp data/featured-publications.json docs/data/featured-publications.json
+cmp data/featured-publications.json docs/data/featured-publications.json
 python3 data/build_site_events_stories.py
 python3 data/build_map_data.py
 python3 scripts/generate_html_wiki.py --base-url https://centercoopmedia.github.io/njblackpress/
@@ -115,6 +116,10 @@ python3 scripts/generate_okf_wiki.py
 
 Run only the builders needed for the changed source. Review generated diffs
 before you commit them.
+
+The checked-in CSV is not a safe input for a routine publication change. Do
+not run `data/convert_csv.py` unless you have a fresh Notion export and will
+review the full dataset diff for lost editorial enrichment.
 
 ## Validation
 
