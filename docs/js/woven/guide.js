@@ -1,3 +1,6 @@
+import { createStartDialog } from './guide-dialog.js';
+import { createStageCoordinator } from './guide-stage.js';
+
 // Woven — first-visit guidance, explicit search results, and mobile story balance.
 const stage = document.getElementById('woven-stage');
 const canvas = document.getElementById('woven-canvas');
@@ -27,34 +30,26 @@ function readSession(key) {
 function writeSession(key) {
   try { sessionStorage.setItem(key, '1'); } catch { /* storage can be blocked */ }
 }
-function openStartCard() {
-  if (!startCard || !startCard.hidden) return;
-  if (moreTools) moreTools.open = false;
-  closeSearchResults();
-  hideCoach(false);
-  startCard.hidden = false;
-  document.body.classList.add('woven-guide-open');
-  requestAnimationFrame(() => startCard.querySelector('[data-guide-action]')?.focus({ preventScroll: true }));
-}
-function closeStartCard({ showCoach = true, restoreFocus = true } = {}) {
-  if (!startCard || startCard.hidden) return;
-  startCard.hidden = true;
-  document.body.classList.remove('woven-guide-open');
-  writeSession(START_KEY);
-  if (showCoach) maybeShowCoach();
-  if (restoreFocus) startButton?.focus({ preventScroll: true });
-}
+const stageCoordinator = createStageCoordinator({ tourbar, toursButton, moreTools, searchCount });
+const startDialog = createStartDialog({
+  dialog: startCard,
+  trigger: startButton,
+  media: narrow,
+  beforeOpen: () => {
+    stageCoordinator.closeOverlays();
+    if (moreTools) moreTools.open = false;
+    closeSearchResults(true);
+    hideCoach(false);
+  },
+  afterClose: ({ showCoach = true } = {}) => {
+    writeSession(START_KEY);
+    if (showCoach) maybeShowCoach();
+  }
+});
+function openStartCard() { startDialog.open(); }
+function closeStartCard(options = {}) { startDialog.close(options); }
 startButton?.addEventListener('click', openStartCard);
 startCard?.querySelector('[data-guide-close]')?.addEventListener('click', () => closeStartCard());
-startCard?.addEventListener('click', (event) => {
-  if (event.target === startCard) closeStartCard();
-});
-startCard?.addEventListener('keydown', (event) => {
-  if (event.key !== 'Escape') return;
-  event.preventDefault();
-  event.stopPropagation();
-  closeStartCard();
-});
 startCard?.querySelectorAll('[data-guide-action]').forEach((button) => {
   button.addEventListener('click', () => {
     const action = button.dataset.guideAction;
@@ -181,6 +176,7 @@ function renderSearchResults() {
     closeSearchResults(false);
     return;
   }
+  stageCoordinator.prepareSearch();
   if (recordsFailed) {
     closeSearchResults(false);
     searchCount.textContent = 'Search is unavailable. Open the full archive instead.';
@@ -282,6 +278,9 @@ function openRecordWhenReady(id, name, attempt) {
   }
   location.assign(`${location.pathname}?pub=${encodeURIComponent(id)}`);
 }
+searchInput?.addEventListener('focus', () => {
+  if ((searchInput.value || '').trim().length >= 2) renderSearchResults();
+});
 searchInput?.addEventListener('input', (event) => {
   event.stopImmediatePropagation();
   renderSearchResults();
@@ -324,7 +323,7 @@ searchResults?.addEventListener('click', (event) => {
   if (option) chooseResult(matches[Number(option.dataset.resultIndex)]);
 });
 document.addEventListener('pointerdown', (event) => {
-  if (searchForm && !searchForm.contains(event.target)) closeSearchResults();
+  if (searchForm && !searchForm.contains(event.target)) closeSearchResults(true);
   if (moreTools?.open && !moreTools.contains(event.target)) moreTools.open = false;
 });
 document.getElementById('btn-reset')?.addEventListener('click', () => {
