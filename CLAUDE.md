@@ -1,116 +1,159 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+# NJ Black Press Archive: Repository instructions
 
 ## Project overview
 
-NJ Black Press Database — a static site documenting ~140 Black-owned and Black-focused publications in New Jersey from 1880 to present. Built for the Center for Cooperative Media at Montclair State University. Hosted on GitHub Pages from the `docs/` folder.
+This repository contains a static historical archive of Black-owned and
+Black-focused publications in New Jersey from 1880 to the present. The Center
+for Cooperative Media at Montclair State University maintains it.
+
+GitHub Pages publishes the `docs/` directory from `master`. The live site is
+`https://centercoopmedia.github.io/njblackpress/`.
+
+The project has no backend, database server, or JavaScript framework.
 
 ## Development
 
-The site is vanilla HTML/JS/CSS, no framework and no bundler. To develop locally, serve the `docs/` folder with any static server:
+The site uses static HTML, CSS, and JavaScript. Tailwind CSS is compiled, not
+loaded from a CDN.
 
 ```bash
-cd docs && python -m http.server 8000
-```
-
-**Tailwind is compiled, not CDN.** Every page loads `docs/css/tailwind.css`. That file is generated — never hand-edit it. Rebuild it after you add or change any Tailwind class in HTML or JS:
-
-```bash
-npm install      # first time only
+npm ci
 npm run build:css
+cd docs
+python3 -m http.server 8000
 ```
 
-The build reads `tailwind.config.js` (palettes, fonts, `bg-noise`) and `src/input.css`, and scans `./docs/**/*.html` plus `./docs/js/**/*.js`. Classes built in JS must appear as complete literal strings, or Tailwind will not emit them; if you must concatenate a class name, add it to `safelist` in `tailwind.config.js`. `scripts/generate_html_wiki.py` runs the build for you at the end (pass `--skip-css` to opt out).
+`docs/css/tailwind.css` is generated. Never edit it by hand. Rebuild it after
+you add or change a Tailwind class in HTML or JavaScript.
 
-**Data pipeline:** Notion → CSV export → Python conversion → JSON
+Tailwind scans `docs/**/*.html` and `docs/js/**/*.js`. JavaScript class names
+must use complete literal strings. Add a dynamic class to the safelist in
+`tailwind.config.js` when a literal is not possible.
+
+## Site architecture
+
+Main pages:
+
+- `docs/index.html`: Home, featured records, timeline, and search.
+- `docs/archive.html`: Filterable publication directory.
+- `docs/publication.html`: Publication detail selected with `?id=`.
+- `docs/story.html`: Sourced narrative selected with `?id=`.
+- `docs/era.html`: Historical era selected with `?id=`.
+- `docs/map.html`: Publication map and decade filter.
+- `docs/woven.html`: Interactive timeline loom.
+- `docs/wiki/`: Generated public HTML wiki.
+
+The scripts in `docs/js/` support the main site. Most older scripts use the
+IIFE pattern. Woven uses ES modules under `docs/js/woven/` and vendored Three.js
+files under `docs/vendor/`.
+
+`docs/js/site-nav.js` defines the shared site navigation. Update its regression
+check when you change the global navigation.
+
+## Data sources
+
+- `data/publications.csv`: Notion export for base publication fields.
+- `data/publications.json`: Pipeline publication data.
+- `data/research/source-catalog.json`: Source searches and retained evidence.
+- `data/research/rights/rights-manifest.json`: Rights decisions for evidence.
+- `data/research/editorial/events.json`: Editorial event source.
+- `data/research/editorial/stories.json`: Editorial story source.
+- `data/municipality-centers.json`: Map grouping and coordinate rules.
+- `data/featured-publications.json`: Hand-curated featured records.
+
+Read `data/DATA_DICTIONARY.md` before you change a data contract.
+
+## Generated files
+
+Do not hand-edit these outputs:
+
+- `docs/css/tailwind.css`
+- `docs/data/publications.json`
+- `docs/data/events.json`
+- `docs/data/stories.json`
+- `data/map-publications.json`
+- `docs/data/map-publications.json`
+- `docs/wiki/`
+- `okf/`
+
+Run the smallest builder that covers the source change:
 
 ```bash
-cd data && python convert_csv.py
+cd data
+python3 convert_csv.py
+python3 merge_research.py
+python3 add_evidence.py
+cd ..
+python3 data/build_site_events_stories.py
+python3 data/build_map_data.py
+python3 scripts/generate_html_wiki.py --base-url https://centercoopmedia.github.io/njblackpress/
+python3 scripts/generate_okf_wiki.py
+python3 scripts/generate_okf_wiki.py --check
 ```
 
-This reads `data/publications.csv` and outputs `data/publications.json`. The generated JSON must then be copied to `docs/data/publications.json` for the frontend. `docs/data/featured-publications.json` is hand-curated and edited directly.
+`convert_csv.py` rebuilds publication data from the CSV and reattaches evidence.
+Run `merge_research.py` and `add_evidence.py` after it when research enrichment
+must also be applied and copied to the browser data.
 
-## Architecture
+The HTML wiki generator also rebuilds Tailwind unless `--skip-css` is present.
+Always pass the live Pages URL through `--base-url`.
 
-Static site with three HTML pages, no framework, no bundler:
+## Evidence and rights
 
-- **`docs/index.html`** — Landing page (hero, featured sections, timeline, searchable database, about)
-- **`docs/archive.html`** — Full archive with list/grid toggle, filters, sorting, pagination
-- **`docs/publication.html`** — Individual publication detail (loaded via `?id=X` query param)
-- **`docs/wiki/`** — Pre-rendered public wiki (one HTML page per publication/city/decade/format/medium, plus statistics and featured pages). Generated by `scripts/generate_html_wiki.py`; do NOT hand-edit. Served at `/njblackpress/wiki/` and linked from the main nav.
+Evidence is traceable by publication ID through the source catalog. The rights
+manifest controls whether each evidence file can be published.
 
-### JavaScript modules (IIFE pattern, no imports)
+Do not hand-edit a publication's `evidence` array. Update the source catalog or
+rights manifest, then run `data/add_evidence.py`.
 
-- **`docs/js/app.js`** — Core state management, filtering, search, pagination, card rendering. Exposes `window.njbp` for cross-module communication (`removeFilter`, `resetFilters`, `getState`, `filterByDecade`).
-- **`docs/js/timeline.js`** — Interactive decade timeline with bar chart visualization. Calls `window.njbp.filterByDecade()`.
-- **`docs/js/featured.js`** — Loads and merges `featured-publications.json` with main data for rich featured sections.
-- **`docs/js/archive.js`** — Archive page filtering and display logic.
-- **`docs/js/publication.js`** — Detail page rendering from query param ID.
+Do not publish a file marked `metadata_only` or `unlisted`. Follow the citation
+and crop requirements for `publishable_with_credit` and `crop_first` files.
 
-### State management
+## Validation
 
-`app.js` uses a single `state` object with `publications`, `filteredPublications`, `filters` (search, city, decade, status, format), `sortBy`, `currentPage`, and `perPage` (24). Filters are applied sequentially; search is debounced at 300ms.
+Run the focused checks for the changed area. Useful checks include:
 
-## Data model
+```bash
+npm run build:css
+python3 data/test_site_data.py
+python3 data/test_source_catalog.py
+python3 data/test_map.py
+python3 data/test_navigation.py
+python3 data/test_wiki_publications.py
+python3 data/test_woven_layout.py
+python3 data/test_woven_usability.py
+python3 scripts/generate_okf_wiki.py --check
+```
 
-**`publications.json`** contains an array of publication objects and a `metadata` block (totalCount, cities, decades, formats, activeCount, ceasedCount). Each publication has: `id`, `name`, `alternateName`, `city`, `publishers`, `yearFounded`, `yearCeased`, `frequency`, `format`, `medium` (computed: Print/Digital/Print+Digital), `languages`, `primaryFocus`, `missionStatement`, `historicalNotes`, `archiveUrl`, `websiteUrl`, `targetAudience`, `keyStaff`, `isActive` (computed: true if yearCeased is null), `decade` (computed from yearFounded).
+`test_evidence.py` and `test_source_catalog.py` require the local evidence
+corpus. Git ignores most large research files, so those checks fail in a normal
+clone without the corpus.
 
-**`featured-publications.json`** has `featuredHistoric` (11 entries) and `featuredContemporary` (5 entries) with expanded fields: `founders`, `keyStaff` as objects (`{name, role}`), `tags`, `physicalArchive`.
-
-## Styling
-
-Tailwind CSS via CDN with inline config extending colors and fonts:
-
-- **Colors:** ink-950 through ink-700 (dark backgrounds), paper-50 through paper-300 (light text), accent #ff4d00 (orange)
-- **Fonts:** Fraunces (serif headings), DM Sans (body), system monospace (labels/filters)
-- **Custom CSS** in `docs/css/styles.css`: scrollbar styling, noise grain overlay, timeline bars
+Data changes must keep source and browser copies equal. Generated wiki changes
+must include their generated outputs. Visible changes need desktop and mobile
+browser checks.
 
 ## Deployment
 
-**GitHub Pages is the live site (as of 2026-08-19).** Pages serves the latest push from the `docs/` folder, so **push = deploy**. Live URL: `https://centercoopmedia.github.io/njblackpress/`.
+GitHub Pages uses the `master` branch and the `docs/` directory. A merge that
+changes `docs/` publishes those changes. Verify the Pages build and the live
+route after merge.
 
-The former production host at `centerforcooperativemedia.org/njblackpress/` is dead — the CCM WordPress server migrated off 37.27.121.163 and the SFTP endpoint no longer exists. Joe confirmed the GitHub Pages URL is the home for now. The SFTP instructions below are retained only for the day CCM hosting returns; do NOT attempt them without a new endpoint from the Nestify dashboard.
+Do not use the retired SFTP deployment instructions or the former WordPress
+host without a new, verified deployment decision.
 
-**SFTP deploy (from officejawn or houseofjawn):**
-```bash
-# Credentials in pass store
-HOST=37.27.121.163
-PORT=4377
-USER=$(~/.claude/pass-get claude/services/ccm-ftp-user)
-PASS=$(~/.claude/pass-get claude/services/ccm-ftp-pass)
+## Project updates
 
-# Upload all static files
-sshpass -p "$PASS" scp -P $PORT -o StrictHostKeyChecking=no docs/*.html docs/*.xml docs/*.txt docs/*.png docs/*.svg $USER@$HOST:public_html/njblackpress/
-sshpass -p "$PASS" scp -P $PORT -o StrictHostKeyChecking=no docs/css/* $USER@$HOST:public_html/njblackpress/css/
-sshpass -p "$PASS" scp -P $PORT -o StrictHostKeyChecking=no docs/js/* $USER@$HOST:public_html/njblackpress/js/
-sshpass -p "$PASS" scp -P $PORT -o StrictHostKeyChecking=no docs/data/* $USER@$HOST:public_html/njblackpress/data/
-
-# Upload the pre-rendered wiki (recursive — it has cities/, decades/, formats/, mediums/, publications/ subdirs)
-sshpass -p "$PASS" scp -rP $PORT -o StrictHostKeyChecking=no docs/wiki $USER@$HOST:public_html/njblackpress/
-```
-
-**Live URLs:**
-- Production (live): `https://centercoopmedia.github.io/njblackpress/` (GitHub Pages, serves the latest push)
-- Former production (dead): `https://centerforcooperativemedia.org/njblackpress/` (CCM server migrated; may return later)
-
-**Data pipeline caveat:** The JSON has been enriched with fields (`historicalNotes`, `missionStatement`, etc.) that don't exist in the CSV. Do NOT re-run `convert_csv.py` to regenerate the JSON — it will wipe those fields. Edit the JSON directly for metadata changes.
-
-**Regenerate the wikis after any data change** so they stay in sync with `data/publications.json`:
-```bash
-python3 scripts/generate_html_wiki.py            # public HTML wiki under docs/wiki/
-python3 scripts/generate_okf_wiki.py             # portable markdown bundle under okf/
-python3 scripts/generate_okf_wiki.py --check     # validate the markdown bundle
-```
-Both accept `--generated-at YYYY-MM-DD` for reproducible timestamps. The HTML generator reuses helpers from the OKF generator, so keep them together.
-
-## Project updates (mandatory)
-
-After every achievement or merged PR, post a plain-English update as a comment on the "Road to launch" GitHub discussion (https://github.com/CenterCoopMedia/njblackpress/discussions/47) so nontechnical colleagues (Cassandra Etienne) can follow along. No jargon, no file paths, 3–6 sentences: what happened, why it matters for the archive, what comes next. An achievement is not done until its update is posted.
+After a merged achievement, post a plain-language update to the
+[Road to launch discussion](https://github.com/CenterCoopMedia/njblackpress/discussions/47).
+Use three to six sentences. Explain what changed, why it matters, and what
+comes next. Do not include file paths or engineering jargon.
 
 ## Conventions
 
-- Sentence case for all headings and UI text (never Title Case)
-- CCM brand colors: #000000 (black) and #CA3553 (red) for organizational branding; site uses its own palette (ink/paper/accent)
-- External links open in new tabs with `target="_blank" rel="noopener noreferrer"`
-- Publication detail pages use client-side routing via query params, not separate HTML files per publication
+- Use sentence case for headings and interface text.
+- Open external links in a new tab with `target="_blank"` and
+  `rel="noopener noreferrer"`.
+- Use query parameters for publication, story, and era detail routes.
+- Keep changes focused. Do not edit generated files without their source.
+- Preserve unrelated worktree changes.
