@@ -50,7 +50,14 @@ try:
         check('Every publication has a native index button', page.locator('#woven-publications button').count()==count)
         check('No horizontal page overflow on desktop', page.evaluate('document.documentElement.scrollWidth <= innerWidth'))
         check('Full text archive starts collapsed', not page.locator('#woven-list-disclosure').evaluate('(el)=>el.open'))
-        check('Sculpture has no misleading year axis', page.locator('#woven-exhibit-axis').count()==0)
+        check('3D weave shows the recorded year range', page.locator('#woven-exhibit-axis').inner_text().startswith('1880') and '2026' in page.locator('#woven-exhibit-axis').inner_text())
+        check('Short-lived title uses only its recorded span', page.evaluate('''() => {
+          const exhibit = window.__woven.app.exhibit;
+          const node = exhibit.nodes.find(n => n.thread.name === 'New Jersey Trumpet');
+          const curve = node.curves[0];
+          return Math.abs(curve[0].x - ((1887-1880)/146-.5)*80) < .001
+            && Math.abs(curve.at(-1).x - ((1897-1880)/146-.5)*80) < .001;
+        }'''))
         shot(page, 'desktop-woven', True)
         page.locator('#woven-motion').click()
         check('Motion is opt-in under reduced motion', page.evaluate('window.__woven.app.exhibit.motion'))

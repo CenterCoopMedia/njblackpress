@@ -41,6 +41,8 @@ Main pages:
 - `docs/era.html`: Historical era selected with `?decade=`.
 - `docs/map.html`: Publication map and decade filter.
 - `docs/woven.html`: A 3D textile overview with a separate publication timeline.
+  Both views use recorded publication spans. Never extend a known lifespan to fill
+  the cloth. Distinguish unknown dates from active status.
   Both views share an era index, publication browser, records, and guided stories.
   Browsers without WebGL use an interactive Canvas 2D timeline.
   `?nogl=1` opens the complete text archive. See `WOVEN_REVIEW.md` for checks.

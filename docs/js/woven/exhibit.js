@@ -5,7 +5,7 @@ import { mountExplorer } from './explorer.js';
 import { announce, syncTwin } from './twin.js';
 
 // Two scenes share ONE renderer and the existing data adapter, record panel,
-// stories, and accessible twin. The timeline remains the precise reading view.
+// stories, accessible twin, and recorded publication spans.
 export function mountExhibit(app, params) {
   const { model, three } = app;
   const { renderer, canvas, stage, controls, panel } = three;
@@ -22,6 +22,13 @@ export function mountExhibit(app, params) {
   const nodes = [];
   const resources = [];
   const caption = document.getElementById('woven-exhibit-caption');
+  const axis = document.getElementById('woven-exhibit-axis');
+  const years = [YEAR_MIN, 1920, 1960, 2000, YEAR_MAX].map((year) => {
+    const label = document.createElement('span');
+    label.textContent = String(year);
+    axis.append(label);
+    return { year, label };
+  });
   const motionButton = document.getElementById('woven-motion');
   const tip = document.getElementById('woven-tip');
   const modeButtons = [...document.querySelectorAll('[data-woven-view]')];
@@ -78,7 +85,8 @@ export function mountExhibit(app, params) {
     return curve.getPoints(24);
   }
   for (const thread of flat ? [] : model.threads) {
-    const mat = material(threadColor(thread), thread.ghost, false, 70);
+    const mat = material(threadColor(thread), thread.ghost, thread.endState === 'unrecorded',
+      Math.max(2, ((thread.yearCeased ?? YEAR_MAX) - (thread.yearFounded ?? YEAR_MIN)) / 2));
     const curves = [];
     for (const [start, end] of threadSpans(thread)) {
       const steps = Math.min(180, Math.max(24, Math.ceil((end - start) * 1.15)));
@@ -94,7 +102,7 @@ export function mountExhibit(app, params) {
     nodes.push({ thread, material: mat, curves, projected: [] });
   }
   // The warp makes a cloth, rather than an arbitrary network diagram. These
-  // quiet vertical strands are texture, not years or publication relationships.
+  // quiet vertical strands follow the year scale; crossings do not imply relationships.
   const warp = material('#8a7252');
   warp.uniforms.alpha.value = 0.35;
   warp.depthWrite = false;
@@ -124,7 +132,7 @@ export function mountExhibit(app, params) {
     camera.aspect = Math.max(0.2, rect.width / Math.max(1, rect.height));
     const usable = Math.max(0.32, (rect.height - 150) / Math.max(1, rect.height));
     const distance = Math.max(41 / (2 * Math.tan(Math.PI * 35 / 360)) / usable,
-      93 / (2 * Math.tan(Math.PI * 35 / 360) * camera.aspect));
+      110 / (2 * Math.tan(Math.PI * 35 / 360) * camera.aspect));
     camera.position.set(0, 2.5, distance);
     camera.lookAt(0, 2.5, 0);
     camera.updateProjectionMatrix();
@@ -144,7 +152,7 @@ export function mountExhibit(app, params) {
     pending = null;
     canvas.setAttribute('aria-label', active ? 'Three-dimensional weave of New Jersey Black publications' : 'Interactive timeline of New Jersey Black publications');
     caption.textContent = active
-      ? 'Drag sideways to turn. Select a thread or title to read. Switch to Timeline for dates.'
+      ? 'Left to right is time. Drag sideways to turn. Select a thread or title to read its dates.'
       : 'Left to right is time. Drag to move; scroll or pinch to zoom. Select a thread to read its record.';
     if (updateURL) {
       const url = new URL(location.href);
@@ -306,6 +314,12 @@ export function mountExhibit(app, params) {
       cloth.rotation.set(0.18, yaw + Math.sin(elapsed * 0.25) * 0.035, -0.06);
       cloth.updateMatrixWorld(true);
       camera.updateMatrixWorld(true);
+      for (const { year, label } of years) {
+        const point = project(new THREE.Vector3(...clothPoint(year, 1.4, bottom)));
+        label.hidden = rect.width < 600 && (year === 1920 || year === 2000);
+        label.style.left = `${Math.max(24, Math.min(rect.width - 24, point.x))}px`;
+        label.style.top = `${point.y - 20}px`;
+      }
       for (const node of nodes) node.projected = node.curves.map((curve) => curve.map(project));
       renderer.render(scene, camera);
       dirty = false;
@@ -330,6 +344,7 @@ export function mountExhibit(app, params) {
       disposed = true; active = false;
       aborter.abort(); observer.disconnect(); sizeObserver.disconnect(); explorer.dispose();
       resources.forEach((resource) => resource.dispose());
+      axis.replaceChildren();
       scene.clear();
     }
   };
