@@ -7,8 +7,8 @@ import {
 
 const CLEARED = new Set(['publishable', 'publishable_with_credit', 'crop_first']);
 
-// Era dye, band A (oldest, wood-toned) through band G (linen). Band U is thread-400.
-const ERA_DYE = ['#a89179', '#b09a80', '#bda98e', '#c9b89e', '#d8cbb2', '#e8dfca', '#f3eee2'];
+// Color identifies the founding era; it does not rate a publication's importance.
+const ERA_DYE = ['#cb7857', '#d59c59', '#cfb37c', '#b1a0b8', '#83a69b', '#91b7c2', '#ead5af'];
 const DYE_U = '#a89c85';
 
 function hexToRgb(hex) {
@@ -107,6 +107,7 @@ export async function loadModel() {
     total: threads.length,
     stillPublishing: threads.filter((t) => t.endState === 'still').length,
     ceased: threads.filter((t) => t.endState === 'ceased').length,
+    unknownEnd: threads.filter((t) => t.endState === 'unrecorded').length,
     ghost: threads.filter((t) => t.ghost).length,
     events: events.length,
     tours: tours.length,
@@ -127,13 +128,13 @@ export async function loadModel() {
     // One definition of "still publishing" across the whole site: the dataset's
     // own isActive flag, the same one the archive and the wiki count. Woven had
     // a second, narrower rule; two answers to one question is worse than either.
-    const endState = p.isActive ? 'still' : 'ceased';
+    const endState = p.isActive ? 'still' : p.yearCeased != null ? 'ceased' : 'unrecorded';
 
     const bandKey = bandKeyFor(yearFounded);
     const bandIdx = BAND_DEFS.findIndex((b) => b.key === bandKey);
     const dye = bandKey === 'U' ? DYE_U : ERA_DYE[Math.min(bandIdx, ERA_DYE.length - 1)];
 
-    const endYear = p.yearCeased ?? 2026;
+    const endYear = p.isActive ? 2026 : p.yearCeased ?? 2026;
     return {
       id: p.id,
       name: p.name,

@@ -59,7 +59,8 @@ const yearNorm = (xx) => Math.max(0, Math.min(1, xx / (YEAR_SPAN * X_PER_YEAR)))
 
 function threadColumns(t) {
   const cols = [];
-  const flags = (t.ghost ? 1 : 0) | (t.endState === 'still' ? 2 : 0) | (t.endState === 'unrecorded' ? 4 : 0);
+  const unknownEnd = t.endState !== 'still' && t.yearCeased == null;
+  const flags = (t.ghost ? 1 : 0) | (t.endState === 'still' ? 2 : 0) | (unknownEnd ? 4 : 0);
   const meta = { threadIndex: t.threadIndex, flags, fraySeed: t.fraySeed, color: t.dyeRgb };
 
   if (t.unknownFounding) {
@@ -73,6 +74,7 @@ function threadColumns(t) {
         colAt(x0 + 3.5, t, 0.03, 1, 1)
       ]);
     }
+    appendActiveEnd(pieces, t, colAt(x(2026), t, t.width, 1, 0));
     return { pieces, meta };
   }
 
@@ -85,7 +87,7 @@ function threadColumns(t) {
   for (let y = first; y <= last; y++, k++) {
     const xx = Math.min(endX, Math.max(startX, x(y)));
     let w = t.width;
-    if (t.endState === 'unrecorded') {
+    if (unknownEnd) {
       const d = endX - xx;
       if (d < 1.0) w *= 0.4 + 0.6 * d;
     }
@@ -93,9 +95,12 @@ function threadColumns(t) {
     cols.push({ x: xx, y: t.y, w, z, yearNorm: yearNorm(xx), ramp: (xx - startX) / span });
   }
 
+  // A same-year record still needs a selectable mark, not zero triangles.
+  if (cols.length === 1) cols.push({ ...cols[0], x: cols[0].x + 0.25, ramp: 1 });
+
   const pieces = [cols];
 
-  if (t.endState === 'ceased') {
+  if (t.endState === 'ceased' && !unknownEnd) {
     // Clean selvedge: a 0.10-unit tuck folding the end back on itself.
     const e = cols[cols.length - 1];
     pieces.push([
@@ -104,9 +109,14 @@ function threadColumns(t) {
     ]);
   }
 
+  appendActiveEnd(pieces, t, cols[cols.length - 1]);
+  return { pieces, meta };
+}
+
+// Keep the active-status cue separate from the recorded date span.
+function appendActiveEnd(pieces, t, last2) {
   if (t.endState === 'still') {
     // Past the right post, into three loose strands that taper to nothing.
-    const last2 = cols[cols.length - 1];
     for (const dy of [-0.06, 0, 0.06]) {
       const strand = [];
       for (let s = 0; s <= 8; s++) {
@@ -125,8 +135,6 @@ function threadColumns(t) {
       { ...last2, x: SPLIT_X, yearNorm: 1, ramp: 1 }
     ]);
   }
-
-  return { pieces, meta };
 }
 
 function colAt(xx, t, w, ramp, k) {
@@ -151,7 +159,7 @@ export function buildWarp(model, every, slotEvery) {
   ys.push(0.9);
   model.layout.slots.forEach((t, i) => { if (i % slotEvery === 0) ys.push(t.y); });
   for (const band of model.bands) if (band.count) ys.push(band.top - band.height - 0.35);
-  ys.push(-28.6);
+  ys.push(model.layout.bounds.minY - 0.5);
   ys.sort((a, c) => c - a);
 
   for (let year = YEAR_MIN; year <= YEAR_MIN + YEAR_SPAN; year += every) {
@@ -233,7 +241,7 @@ export function createClothMaterial(state, opts = {}) {
       uPluckAmp: pluckUniforms.uPluckAmp,
       uPluckScale: pluckUniforms.uPluckScale,
       uFrayCut: { value: opts.frayCut ?? 0.22 },
-      uGhostAlpha: { value: opts.ghostAlpha ?? 0.28 },
+      uGhostAlpha: { value: opts.ghostAlpha ?? 0.58 },
       uDimColor: { value: new THREE.Color('#2b2318') },
       uHighlightColor: { value: new THREE.Color('#f0854a') }
     },

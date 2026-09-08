@@ -137,6 +137,7 @@ void main() {
   }
 
   if (unknownEnd > 0.5) {
+    if (vRamp > 0.035 && fract(vYearNorm * 73.0) > 0.60) discard;
     alpha *= mix(1.0, 0.55, smoothstep(0.75, 1.0, vRamp));
   }
 
