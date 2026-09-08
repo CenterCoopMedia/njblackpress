@@ -1,40 +1,40 @@
 name: Woven review
 
 on:
+  pull_request:
+    paths:
+      - 'docs/woven.html'
+      - 'docs/js/woven/**'
+      - 'docs/css/woven*.css'
+      - 'docs/css/styles.css'
+      - 'docs/css/tailwind.css'
+      - 'docs/js/site-nav.js'
+      - 'docs/data/**'
+      - 'docs/vendor/**'
+      - 'data/test_woven*.py'
+      - 'data/test_site_data.py'
+      - 'data/test_navigation.py'
+      - 'scripts/*woven*'
+      - 'package*.json'
+      - 'tailwind.config.js'
+      - 'src/input.css'
+      - '.github/workflows/woven-review.yml'
   push:
     branches: [codex/woven-reimagined]
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: woven-review-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   review:
-    if: github.repository == 'CenterCoopMedia/njblackpress' && github.ref == 'refs/heads/codex/woven-reimagined'
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: codex/woven-reimagined
-      - name: Apply the verified visual refinement on this review branch only
-        if: hashFiles('.github/woven-import/part-1.b64') != ''
-        run: |
-          test "$GITHUB_REF" = refs/heads/codex/woven-reimagined
-          python3 - <<'PY'
-          import base64, gzip, hashlib
-          from pathlib import Path
-          patch = gzip.decompress(base64.b64decode(Path('.github/woven-import/part-1.b64').read_text(), validate=True))
-          assert hashlib.sha256(patch).hexdigest() == 'acd6507ca89c3a777964486276b8d6d96392e430e47a75df64c4704cc046252d'
-          Path('/tmp/woven-import.patch').write_bytes(patch)
-          PY
-          git apply --check /tmp/woven-import.patch
-          git apply /tmp/woven-import.patch
-          git rm -r .github/woven-import
-          git add docs/woven.html docs/css/woven-exhibit.css docs/js/woven scripts/review_woven.py scripts/test-woven-exhibit.mjs
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'feat: shape the full textile and refine reading controls'
-          git push origin HEAD:refs/heads/codex/woven-reimagined
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
