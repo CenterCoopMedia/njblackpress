@@ -254,7 +254,7 @@ export function createTour(app, three, model) {
     // is this stop" — the two can disagree for a thread whose events range
     // over decades. Now that the camera has landed, the chip is written from
     // the stop itself, so it always names the year the stop card does.
-    if (app.setEraNow) app.setEraNow(`In view: ${s.dateLabel || tour.era} · ${tour.stops.length} stop${tour.stops.length === 1 ? '' : 's'} in this thread`);
+    if (app.setEraNow) app.setEraNow(`In view: ${s.dateLabel || tour.era} · ${tour.stops.length} stop${tour.stops.length === 1 ? '' : 's'} in this story`);
     await showPanel(s, my);
     if (my !== run) return;
     if (!playing) { disposePanel(); return; }

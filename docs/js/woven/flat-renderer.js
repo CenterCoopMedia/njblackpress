@@ -60,8 +60,8 @@ export function createFlatRenderer(canvas, model) {
           if (start > edge || end < start) return;
           end = Math.min(end, edge);
           ctx.beginPath();
-          ctx.moveTo(px(start), py(t.y));
-          ctx.lineTo(px(end), py(t.y + offset));
+          ctx.moveTo(px(start), py(t.y + offset));
+          ctx.lineTo(px(end), py(t.y));
           ctx.stroke();
         };
         if (t.unknownFounding) {
