@@ -105,7 +105,7 @@ export function createTour(app, three, model) {
   let paused = false;
   let timer = null;
   let preTourView = null;
-  // The bar reads "end of thread" only once the reader has walked off the last
+  // The bar reads "end of story" only once the reader has walked off the last
   // stop. Reading it off the last index instead meant the ninth stop of nine
   // never showed its own number.
   let closed = false;
@@ -146,7 +146,7 @@ export function createTour(app, three, model) {
     app.state.tourId = t.id;
     app.state.stopIndex = 0;
     syncTwin(app.state);
-    announce(`Guided thread: ${t.title}. ${t.stops.length} stops, ${t.era}.`);
+    announce(`Guided story: ${t.title}. ${t.stops.length} stops, ${t.era}.`);
     renderBar();
     goTo(0);
   }
@@ -633,7 +633,7 @@ export function createTour(app, three, model) {
       <p>${esc(s.event.description)}</p>
       ${th ? `<p class="band">${esc(th.name)} · ${esc(th.city || 'city unrecorded')}</p>` : '<p class="band">Context — not tied to a specific publication.</p>'}
       ${s.confidence === 'medium' ? '<p class="flag">Medium confidence</p>' : ''}
-      ${tour.strength === 'weak' && index === 0 ? '<p class="flag">Thinly sourced. This thread rests on two cover artifacts and one dated clipping. Read it as a lead, not a finding.</p>' : ''}
+      ${tour.strength === 'weak' && index === 0 ? '<p class="flag">Thinly sourced. This story rests on two cover artifacts and one dated clipping. Read it as a lead, not a finding.</p>' : ''}
       ${index === 0 ? `<p>${esc(tour.thread)}</p>` : ''}`;
     card.hidden = false;
     // A long stop scrolls. Every stop starts at its own first line, never part
@@ -654,7 +654,7 @@ export function createTour(app, three, model) {
     cardBody.innerHTML = `
       <h3>${esc(tour.title)}</h3>
       <p>${esc(tour.thread)}</p>
-      <p><button type="button" class="woven-btn" data-act="ghost">Show what did not survive</button></p>`;
+      <p><button type="button" class="woven-btn" data-act="ghost">Show gaps in the evidence</button></p>`;
     card.hidden = false;
     cardBody.scrollTop = 0;
     updateMore();
@@ -681,12 +681,12 @@ export function createTour(app, three, model) {
       ${reduced() || atEnd ? '' : `<button type="button" class="woven-btn" data-act="play" aria-pressed="${paused ? 'false' : 'true'}">${paused ? 'Play' : 'Pause'}</button>`}
       <button type="button" class="woven-btn" data-act="prev"${index === 0 ? ' disabled' : ''}>Previous stop</button>
       ${atEnd
-        ? '<button type="button" class="woven-btn" data-act="end">Back to the loom</button>'
+        ? '<button type="button" class="woven-btn" data-act="end">Back to the timeline</button>'
         : '<button type="button" class="woven-btn" data-act="next">Next stop</button>'}
       <span class="tour-title">${esc(tour.title)}${tour.strength === 'weak' ? ' · Thinly sourced' : ''}</span>
-      <span class="tour-counter">${atEnd ? 'End of thread' : `Stop ${n} of ${total}`} · ${esc(stops[index].dateLabel || '')}</span>
+      <span class="tour-counter">${atEnd ? 'End of story' : `Stop ${n} of ${total}`} · ${esc(stops[index].dateLabel || '')}</span>
       <span id="woven-rail" aria-hidden="true">${Array.from({ length: total }, (_, i) => `<i class="${i < n ? 'on' : ''}"></i>`).join('')}</span>
-      ${atEnd ? '' : '<button type="button" class="woven-btn" data-act="exit" aria-label="Exit this thread"><span class="lbl-full">Exit this thread</span><span class="lbl-short">Exit</span></button>'}`;
+      ${atEnd ? '' : '<button type="button" class="woven-btn" data-act="exit" aria-label="Exit this story"><span class="lbl-full">Exit this story</span><span class="lbl-short">Exit</span></button>'}`;
     bar.hidden = false;
     const end = bar.querySelector('[data-act="end"]');
     if (end) end.addEventListener('click', exit);

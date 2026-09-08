@@ -74,7 +74,7 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
   function changed() {
     app.three.panel.closePanel();
     render();
-    announce(`${status.textContent}. Other threads are dimmed, not removed.`);
+    announce(`${status.textContent}. Other publications are dimmed.`);
   }
   city.addEventListener('change', changed);
   evidence.addEventListener('change', changed);
@@ -129,7 +129,7 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
     const title = document.createElement('strong');
     title.textContent = tour.title;
     const meta = document.createElement('span');
-    meta.textContent = `${tour.era} · ${tour.stops.length} stops${tour.strength === 'weak' ? ' · thinly sourced' : ''}`;
+    meta.textContent = `${tour.era} · ${tour.stops.length} stop${tour.stops.length === 1 ? '' : 's'}${tour.strength === 'weak' ? ' · thinly sourced' : ''}`;
     button.append(title, meta);
     button.addEventListener('click', () => {
       app.playStory(tour.id);

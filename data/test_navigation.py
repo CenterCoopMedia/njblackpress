@@ -14,9 +14,9 @@ def main() -> None:
     assert "function restoreInitialFragment()" in APP
     assert "await loadData();\n    restoreInitialFragment();" in APP
     nav = NAV.read_text(encoding="utf-8")
-    for label in ("Home", "Timeline", "Archive", "Stories", "Eras", "Map", "Wiki", "Woven", "About"):
+    for label in ("Home", "Timeline", "Archive", "Stories", "Eras", "Map", "Wiki", "Historical notes", "About"):
         assert f"label: '{label}'" in nav, f"global navigation lacks {label}"
-    for page in ("index.html", "archive.html", "publication.html", "story.html", "era.html", "map.html", "woven.html"):
+    for page in ("index.html", "archive.html", "publication.html", "story.html", "era.html", "map.html", "historical-notes.html"):
         html = (ROOT / "docs" / page).read_text(encoding="utf-8")
         assert 'js/site-nav.js' in html, f"{page} lacks the global navigation script"
     print("PASS: initial fragments are restored after publication cards render")

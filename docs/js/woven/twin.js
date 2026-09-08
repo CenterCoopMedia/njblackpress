@@ -19,16 +19,16 @@ export function buildTwin(m, callbacks) {
 
   const c = m.counts;
   root.innerHTML = `
-    <h2 id="woven-twin-h">The loom, as a list</h2>
+    <h2 id="woven-twin-h">The archive, as a list</h2>
     <p id="woven-help">${c.total} publications, 1880 to 2026, grouped by the decade each one began. Open any title for its evidence and its events.</p>
     <ol class="era-bands">${m.bands.filter((b) => b.count).map(bandHTML).join('')}</ol>
     <section id="woven-twin-tours" aria-labelledby="tours-h">
-      <h3 id="tours-h">Guided threads</h3>
+      <h3 id="tours-h">Guided stories</h3>
       <ol class="tour-list">${m.tours.map(tourHTML).join('')}</ol>
     </section>
     <section id="woven-twin-ghost" aria-labelledby="ghost-h">
       <h3 id="ghost-h">Titles without cleared evidence</h3>
-      <p>${c.ghost} publications have no evidence cleared for display in this archive. Some records have catalog citations or other restricted evidence; others have no attached evidence. This does not establish whether copies survive elsewhere. Their threads remain in the same cloth. Their names follow.</p>
+      <p>${c.ghost} publications have no evidence cleared for display in this archive. Some records have catalog citations or other restricted evidence; others have no attached evidence. This does not establish whether copies survive elsewhere. Their publication records remain in the archive. Their names follow.</p>
       <ol class="ghost-list">${ghostHTML()}</ol>
     </section>`;
 
@@ -116,7 +116,7 @@ function eventsHTML(t) {
 
 function storiesHTML(t) {
   if (!t.stories || !t.stories.length) return '';
-  return `<h4>Part of these threads</h4><ul class="stories">${t.stories.map((s) => `
+  return `<h4>Related stories</h4><ul class="stories">${t.stories.map((s) => `
     <li><button type="button" class="t-play" data-story="${esc(s.id)}">${esc(s.title)}</button></li>`).join('')}</ul>`;
 }
 
@@ -125,11 +125,11 @@ function tourHTML(tour) {
   return `<li id="tour-${esc(tour.id)}" data-story="${esc(tour.id)}">
     <h4>${esc(tour.title)}</h4>
     <p class="tour-meta">${esc(tour.era)} · ${tour.stops.length} stop${tour.stops.length === 1 ? '' : 's'}${weak ? ' · Thinly sourced' : ''}</p>
-    <button type="button" class="t-play" data-story="${esc(tour.id)}">Play the thread</button>
-    <details><summary>Read this thread as text</summary>
+    <button type="button" class="t-play" data-story="${esc(tour.id)}">Start the story</button>
+    <details><summary>Read this story as text</summary>
       <p>${esc(tour.thread)}</p>
-      ${weak ? '<p class="warn">This thread rests on two cover artifacts and one dated clipping. Read it as a lead, not a finding.</p>' : ''}
-      <h5>Publications in this thread</h5>
+      ${weak ? '<p class="warn">This story rests on two cover artifacts and one dated clipping. Read it as a lead, not a finding.</p>' : ''}
+      <h5>Publications in this story</h5>
       <ul>${tour.threadIds.map((id) => `<li><a class="link-thread" href="?pub=${id}">${esc(model.byId.get(id).name)}</a></li>`).join('')}</ul>
       <h5>Stops</h5>
       <ol>${tour.stops.map((s) => `<li><span class="e-date">${esc(s.dateLabel)}</span> ${esc(s.event.title)}<br><span class="e-desc">${esc(s.event.description)}</span>${s.clipping ? `<br><cite>${esc(s.clipping.citation)}</cite>` : ''}</li>`).join('')}</ol>

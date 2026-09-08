@@ -1,4 +1,4 @@
-"""Real Chromium smoke checks and visual evidence for both Woven views.
+"""Real Chromium smoke checks and visual evidence for both historical notes views.
 
 Run: python scripts/review_woven.py --output /tmp/woven-review
 Requires Playwright and its Chromium browser. Does not change archive data.
@@ -20,7 +20,7 @@ output = Path(args.output)
 output.mkdir(parents=True, exist_ok=True)
 server = ThreadingHTTPServer(('127.0.0.1', 0), partial(SimpleHTTPRequestHandler, directory=str(ROOT/'docs')))
 threading.Thread(target=server.serve_forever, daemon=True).start()
-base = f'http://127.0.0.1:{server.server_port}/woven.html'
+base = f'http://127.0.0.1:{server.server_port}/historical-notes.html'
 results = []
 errors = []
 
@@ -50,7 +50,7 @@ try:
         check('Every publication has a native index button', page.locator('#woven-publications button').count()==count)
         check('No horizontal page overflow on desktop', page.evaluate('document.documentElement.scrollWidth <= innerWidth'))
         check('Full text archive starts collapsed', not page.locator('#woven-list-disclosure').evaluate('(el)=>el.open'))
-        check('3D weave shows the recorded year range', page.locator('#woven-exhibit-axis').inner_text().startswith('1880') and '2026' in page.locator('#woven-exhibit-axis').inner_text())
+        check('3D timeline shows the recorded year range', page.locator('#woven-exhibit-axis').inner_text().startswith('1880') and '2026' in page.locator('#woven-exhibit-axis').inner_text())
         check('Short-lived title uses only its recorded span', page.evaluate('''() => {
           const exhibit = window.__woven.app.exhibit;
           const node = exhibit.nodes.find(n => n.thread.name === 'New Jersey Trumpet');
@@ -96,7 +96,7 @@ try:
         check('Record dock leaves the art visible', page.locator('#woven-canvas').is_visible())
         check('Index is inert while its record dock is open', page.locator('#woven-browser').evaluate('(el)=>el.inert'))
         check('Selection has a shareable URL', f'pub={publication}' in page.url)
-        check('Default 3D selection keeps its mode in shared links', 'view=woven' in page.url)
+        check('Default 3D selection keeps its mode in shared links', 'view=3d' in page.url)
         shot(page,'desktop-record')
         page.locator('#woven-panel .p-close').click()
         page.wait_for_timeout(80)
@@ -104,7 +104,7 @@ try:
         check('Record close returns keyboard focus to the publication', page.evaluate('document.activeElement.dataset.pub') == str(publication))
         page.mouse.move(1,1)
         page.evaluate('window.scrollTo(0,120)')
-        point=page.evaluate('''()=>{const n=window.__woven.app.exhibit.nodes.find(n=>!n.thread.ghost);const p=n.projected[0][12];const r=document.getElementById('woven-canvas').getBoundingClientRect();return {x:r.left+p.x,y:r.top+p.y};}''')
+        point=page.evaluate('''()=>{const n=window.__woven.app.exhibit.nodes.find(n=>!n.thread.ghost);const a=n.projected[0][0], b=n.projected[0].at(-1);const p={x:(a.x+b.x)/2,y:(a.y+b.y)/2};const r=document.getElementById('woven-canvas').getBoundingClientRect();return {x:r.left+p.x,y:r.top+p.y};}''')
         page.mouse.click(point['x'],point['y'])
         expect(page.locator('#woven-panel')).to_be_visible()
         check('Canvas hit testing works after the page scrolls', True)
@@ -126,7 +126,7 @@ try:
         if page.locator('#woven-more-tools').evaluate('(el)=>el.open'):
             page.locator('#woven-more-tools summary').click()
         shot(page,'desktop-timeline')
-        page.locator('[data-woven-view="woven"]').click()
+        page.locator('[data-woven-view="3d"]').click()
         page.locator('#woven-canvas').focus()
         page.keyboard.press('ArrowDown')
         page.keyboard.press('Enter')
@@ -140,7 +140,7 @@ try:
         shot(page,'desktop-story')
         page.evaluate('window.njbpWoven.exit()')
         # Explicit sculptural links and old publication links both remain valid.
-        ready(page,f'?view=woven&pub={publication}')
+        ready(page,f'?view=3d&pub={publication}')
         check('Sculptural record deep link preserves its view', page.evaluate('window.__woven.app.exhibit.active'))
         expect(page.locator('#woven-panel-title')).to_have_text(title)
         ready(page,'?twin=1')
@@ -168,7 +168,7 @@ try:
           };""")
         ready(flat)
         check('Unavailable WebGL opens the interactive flat timeline', flat.locator('#woven-stage').get_attribute('data-renderer')=='flat')
-        check('Flat mode explains the unavailable 3D view', flat.locator('#woven-renderer-note').is_visible() and flat.locator('[data-woven-view="woven"]').is_disabled())
+        check('Flat mode explains the unavailable 3D view', flat.locator('#woven-renderer-note').is_visible() and flat.locator('[data-woven-view="3d"]').is_disabled())
         flat.locator('[data-era="C"]').click()
         check('Flat timeline retains era browsing', flat.locator('#woven-publications button').count()==era_count)
         flat.locator('#woven-publications button').first.click()

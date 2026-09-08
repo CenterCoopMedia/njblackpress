@@ -19,7 +19,7 @@ Pages serves the committed results from `docs/`.
 | Stories | `docs/story.html?id=` | Stories, events, and publications |
 | Eras | `docs/era.html?decade=` | Events, stories, and publications |
 | Map | `docs/map.html` | Generated map publication data |
-| Woven | `docs/woven.html` | Publications, stories, events, and evidence |
+| Historical notes | `docs/historical-notes.html` | Publications, stories, events, and evidence |
 | Public wiki | `docs/wiki/` | Pre-rendered publication and browse pages |
 | Portable wiki | `okf/` | Markdown pages with YAML frontmatter |
 
@@ -37,7 +37,7 @@ The main site scripts live in `docs/js/`:
 - `map.js`: Map rendering and decade filtering.
 - `site-nav.js`: Shared navigation.
 
-Woven uses ES modules under `docs/js/woven/`. Its modules separate data,
+Historical notes uses ES modules under `docs/js/woven/`. Its modules separate data,
 layout, rendering, labels, selection, story tours, evidence panels, fallback
 behavior, and first-visit guidance. Three.js is vendored under `docs/vendor/`.
 
@@ -50,8 +50,8 @@ stylesheet to `docs/css/tailwind.css`.
 Custom styles live in:
 
 - `docs/css/styles.css`: Shared site styles.
-- `docs/css/woven.css`: Woven layout and rendering interface.
-- `docs/css/woven-guide.css`: Woven guidance and progressive controls.
+- `docs/css/woven.css`: Historical notes layout and rendering interface.
+- `docs/css/woven-guide.css`: Historical notes guidance and progressive controls.
 
 ## Data flow
 
@@ -113,7 +113,7 @@ does not list.
 ## Validation model
 
 The repository uses small Python checks in `data/test_*.py`. Each check covers
-a stable data, navigation, map, wiki, or Woven contract. Run the checks that
+a stable data, navigation, map, wiki, or Historical notes contract. Run the checks that
 match the changed surface.
 
 Browser checks remain necessary for layout, keyboard interaction, focus,

@@ -13,7 +13,7 @@ The project has no backend, database server, authentication, or write API.
 ## Important paths
 
 - `docs/`: Published site and browser data.
-- `docs/js/woven/`: Woven ES modules.
+- `docs/js/woven/`: Historical notes ES modules.
 - `data/`: Pipeline data, research inputs, builders, and checks.
 - `data/research/source-catalog.json`: Evidence provenance.
 - `data/research/rights/rights-manifest.json`: Evidence rights decisions.

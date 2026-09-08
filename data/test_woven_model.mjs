@@ -92,14 +92,14 @@ assert.equal(loadingFrames, 1, 'Hidden loading frames must not draw');
 
 // The flat fallback must retain the same active cue for undated records.
 const flatScale = 700 / (2 * Math.tan(camera.fov * Math.PI / 360) * camera.position.z);
-const clothEdge = 512 + (74.5 - camera.position.x) * flatScale;
+const timelineEdge = 512 + (73 - camera.position.x) * flatScale;
 for (const t of model.threads.filter((thread) => thread.unknownFounding)) {
   const oneTitle = createFlatRenderer(canvas, { ...model, order: [t], knots: [] });
   oneTitle.setSize(1024, 700);
   camera.position.y = t.y;
   drawnXs = [];
   oneTitle.render(scene, camera);
-  assert.equal(drawnXs.some((xx) => xx > clothEdge), t.endState === 'still', `${t.name}: flat loose ends must match active status`);
+  assert.equal(drawnXs.some((xx) => xx > timelineEdge), t.endState === 'still', `${t.name}: flat arrows must match active status`);
 }
 
 // Missing dates and rights are separate questions. Exercise cases absent today.

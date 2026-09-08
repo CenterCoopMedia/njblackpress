@@ -109,18 +109,18 @@ function handleLoomReady() {
 function enhanceLegend(legend) {
   if (legend.dataset.guideEnhanced === 'true') return;
   legend.dataset.guideEnhanced = 'true';
-  legend.setAttribute('aria-label', 'How to read the loom');
+  legend.setAttribute('aria-label', 'How to read the timeline');
   const body = legend.querySelector('.lg-body');
   if (!body) return;
   const title = document.createElement('h2');
   title.className = 'lg-title';
-  title.textContent = 'How to read the loom';
+  title.textContent = 'How to read the timeline';
   body.prepend(title);
   const lede = body.querySelector('.lg-lede');
-  if (lede) lede.textContent = 'One horizontal thread equals one publication. Left to right is 1880 to 2026.';
+  if (lede) lede.textContent = 'One horizontal line shows one publication. Left to right is 1880 to 2026.';
   const rows = body.querySelectorAll('.lg-rows');
   if (rows[0]) rows[0].textContent = 'Rows are grouped by founding decade. Names appear as you zoom in.';
-  if (rows[1]) rows[1].textContent = 'Drag to move, scroll or pinch to zoom, then select a thread to open the record.';
+  if (rows[1]) rows[1].textContent = 'Drag to move, scroll or pinch to zoom, then select a publication to open the record.';
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'woven-btn lg-cta';
@@ -385,7 +385,7 @@ function updateStoryToggle() {
   const toggle = tourbar?.querySelector('[data-guide-story-toggle]');
   if (!toggle) return;
   const expanded = document.body.classList.contains('woven-story-expanded');
-  toggle.textContent = expanded ? 'More loom' : 'Read story';
+  toggle.textContent = expanded ? 'More timeline' : 'Read story';
   toggle.setAttribute('aria-expanded', String(expanded));
 }
 if (tourbar) {
