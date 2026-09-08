@@ -40,12 +40,19 @@ Main pages:
 - `docs/story.html`: Sourced narrative selected with `?id=`.
 - `docs/era.html`: Historical era selected with `?decade=`.
 - `docs/map.html`: Publication map and decade filter.
-- `docs/woven.html`: Interactive timeline loom.
+- `docs/woven.html`: Interactive publication tapestry with era browsing.
 - `docs/wiki/`: Generated public HTML wiki.
 
 The scripts in `docs/js/` support the main site. Most older scripts use the
 IIFE pattern. Woven uses ES modules under `docs/js/woven/` and vendored Three.js
-files under `docs/vendor/`.
+files under `docs/vendor/`. Its main drawing uses WebGL, with a Canvas 2D
+renderer that retains the same controls when WebGL is unavailable. `?nogl=1`
+opens the complete text alternative directly.
+
+`npm run dev` serves `docs/` for development with Vite. Vendored modules are
+served without transforms to preserve their import-map integrity checksum.
+GitHub Pages still serves the static files directly; no JavaScript build is
+needed for deployment.
 
 `docs/js/site-nav.js` defines the shared site navigation. Update its regression
 check when you change the global navigation.
@@ -136,6 +143,7 @@ python3 data/test_navigation.py
 python3 data/test_wiki_publications.py
 python3 data/test_woven_layout.py
 python3 data/test_woven_usability.py
+node data/test_woven_model.mjs
 python3 scripts/generate_okf_wiki.py --check
 ```
 

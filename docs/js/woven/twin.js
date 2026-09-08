@@ -20,15 +20,15 @@ export function buildTwin(m, callbacks) {
   const c = m.counts;
   root.innerHTML = `
     <h2 id="woven-twin-h">The loom, as a list</h2>
-    <p id="woven-help">${c.total} publications, 1880 to 2026, grouped by the decade each one began. Open any title for its evidence and its events.</p>
+    <p id="woven-help">${c.total} publications, 1880 to 2026, grouped by the era each one began. Open any title for its evidence and its events.</p>
     <ol class="era-bands">${m.bands.filter((b) => b.count).map(bandHTML).join('')}</ol>
     <section id="woven-twin-tours" aria-labelledby="tours-h">
       <h3 id="tours-h">Guided threads</h3>
       <ol class="tour-list">${m.tours.map(tourHTML).join('')}</ol>
     </section>
     <section id="woven-twin-ghost" aria-labelledby="ghost-h">
-      <h3 id="ghost-h">Titles that survive only as a catalog entry</h3>
-      <p>${c.ghost} of these papers exist now as a single line in a catalog — a title, a city, a range of years, recorded by a librarian who held the issue we cannot find. No page, no masthead, no photograph. They are woven into the same cloth as everything else, thin and unfinished, because an absence in the record is not an absence in the history. Their names follow.</p>
+      <h3 id="ghost-h">Gaps in the evidence</h3>
+      <p>${c.ghost} publications have no evidence cleared for display in this archive. Some have catalog references or material that we cannot reproduce. A faint thread marks a gap in what we can show, not proof that no copies survive.</p>
       <ol class="ghost-list">${ghostHTML()}</ol>
     </section>`;
 
@@ -58,7 +58,7 @@ function yearsLine(t) {
 
 function threadHTML(t) {
   const ev = t.evidenceCount === 1 ? '1 item of evidence' : `${t.evidenceCount} items of evidence`;
-  const evidenceLine = t.ghost ? 'catalog entry only' : ev;
+  const evidenceLine = t.ghost ? 'No evidence cleared for display' : ev;
   return `<li id="thread-${t.id}" data-pub="${t.id}" data-state="${t.endState}"${t.ghost ? ' data-ghost="true"' : ''}>
     <button type="button" class="t-open" data-pub="${t.id}" aria-expanded="false" aria-controls="thread-${t.id}-detail">
       <span class="t-name">${esc(t.name)}</span>

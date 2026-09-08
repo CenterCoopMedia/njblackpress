@@ -23,7 +23,8 @@ export function closePanel() {
   if (!el || el.hidden) return false;
   el.hidden = true;
   el.innerHTML = '';
-  if (lastFocus && document.contains(lastFocus)) lastFocus.focus();
+  if (lastFocus && document.contains(lastFocus) && lastFocus.getClientRects().length) lastFocus.focus({ preventScroll: true });
+  else document.getElementById('woven-canvas')?.focus({ preventScroll: true });
   lastFocus = null;
   if (onClose) onClose();
   return true;
@@ -38,7 +39,7 @@ function endLine(t) {
 }
 
 function evidenceCard(e) {
-  const rights = esc(e.rightsStatus.replace(/_/g, ' '));
+  const rights = esc((e.rightsStatus || 'unlisted').replace(/_/g, ' '));
   if (e.rightsStatus === 'metadata_only') {
     return `<div class="evidence-card" data-rights="metadata_only">
       <span class="ev-rights">${rights}</span>
@@ -59,25 +60,25 @@ function evidenceCard(e) {
 
 export function openPublication(t, model, hooks) {
   lastFocus = document.activeElement;
-  const years = t.yearFounded ? `${t.yearFounded}${t.yearCeased ? `–${t.yearCeased}` : '–'}` : 'founding year unrecorded';
+  const years = t.yearFounded == null ? 'Founding year unrecorded'
+    : `${t.yearFounded}–${t.endState === 'still' ? 'present' : t.yearCeased ?? '?'}`;
   el.innerHTML = `
     <button type="button" class="woven-btn p-close">Close</button>
     <h2 id="woven-panel-title" tabindex="-1">${esc(t.name)}</h2>
     ${t.alternateName ? `<p class="p-meta">Also known as ${esc(t.alternateName)}</p>` : ''}
     <p class="p-meta">${esc(t.city || 'city unrecorded')} · ${esc(years)}</p>
     <p class="p-meta">${esc(endLine(t))}</p>
+    <p><a class="woven-btn p-record-link" href="publication.html?id=${Number(t.id)}">Open the full record</a></p>
     ${t.publishers ? `<p>Publisher: ${esc(t.publishers)}</p>` : ''}
     ${[t.format, t.frequency, t.medium, t.languages].some(Boolean) ? `<p class="p-meta">${esc([t.format, t.frequency, t.medium, t.languages].filter(Boolean).join(' · '))}</p>` : ''}
     ${t.missionStatement ? `<p><em>${esc(t.missionStatement)}</em></p>` : ''}
     ${t.historicalNotes ? `<p>${esc(t.historicalNotes)}</p>` : ''}
     <h3>Evidence we hold</h3>
-    ${t.evidence.length ? t.evidence.map(evidenceCard).join('') : '<p>Nothing survives but the catalog entry.</p>'}
-    ${t.stories && t.stories.length ? `<h3>Part of these threads</h3>${t.stories.map((s) => `<p><button type="button" class="woven-btn t-play" data-story="${esc(s.id)}">${esc(s.title)}</button></p>`).join('')}` : ''}
-    <h3>Full record</h3>
-    <p><a class="link-thread" href="publication.html?id=${Number(t.id)}">Open the full record</a></p>`;
+    ${t.evidence.length ? t.evidence.map(evidenceCard).join('') : '<p>No evidence records have been attached to this publication.</p>'}
+    ${t.stories && t.stories.length ? `<h3>Related stories</h3>${t.stories.map((s) => `<p><button type="button" class="woven-btn t-play" data-story="${esc(s.id)}">${esc(s.title)}</button></p>`).join('')}` : ''}`;
   el.hidden = false;
   el.querySelectorAll('.t-play').forEach((b) => {
-    b.addEventListener('click', () => hooks.playStory(b.dataset.story));
+    b.addEventListener('click', () => { closePanel(); hooks.playStory(b.dataset.story); });
   });
   el.querySelector('#woven-panel-title').focus();
 }

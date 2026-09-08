@@ -118,7 +118,7 @@ void main() {
   float ny = sqrt(max(0.0, 1.0 - r * r));
   float lambert = clamp(dot(normalize(vec3(0.32, 0.64, 0.70)),
                            normalize(vec3(0.0, vRibbonV, ny))), 0.0, 1.0);
-  float shade = 0.42 + 0.58 * lambert;
+  float shade = 0.65 + 0.35 * lambert;
   vec3 col = vColor * shade;
   float alpha = revealFade;
 
@@ -137,7 +137,9 @@ void main() {
   }
 
   if (unknownEnd > 0.5) {
-    alpha *= mix(1.0, 0.55, smoothstep(0.75, 1.0, vRamp));
+    // Dashes mark an unknown end, not a claim of continuous publication.
+    if (fract(vYearNorm * 146.0) > 0.48 && vRamp > 0.015) discard;
+    alpha *= 0.72;
   }
 
   // Dimming is capped. A dimmed thread must stay a visible thread, so it never

@@ -21,7 +21,7 @@ publications.
 | [Stories](https://centercoopmedia.github.io/njblackpress/story.html) | Sourced narratives that connect publications and events |
 | [Eras](https://centercoopmedia.github.io/njblackpress/era.html) | Historical periods and their publication activity |
 | [Map](https://centercoopmedia.github.io/njblackpress/map.html) | Publication activity by place and decade |
-| [Woven](https://centercoopmedia.github.io/njblackpress/woven.html) | Interactive loom view of the full publication timeline |
+| [Woven](https://centercoopmedia.github.io/njblackpress/woven.html) | Interactive tapestry with era and publication browsing |
 | [Wiki](https://centercoopmedia.github.io/njblackpress/wiki/) | Pre-rendered publication and browse pages |
 
 Each publication record includes known dates, locations, publishers, formats,
@@ -70,7 +70,11 @@ npm ci
 npm run build:css
 ```
 
-Serve the published directory:
+For a live development preview, run `npm run dev`. This uses Vite only during
+development and serves vendored Three.js modules without changing their
+integrity-checked bytes. GitHub Pages does not need a JavaScript build.
+
+You can also serve the published directory:
 
 ```bash
 cd docs

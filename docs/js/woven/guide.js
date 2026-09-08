@@ -102,31 +102,8 @@ function handleLoomReady() {
   const legend = document.getElementById('woven-legend');
   if (!legend) return;
   loomReadyHandled = true;
-  enhanceLegend(legend);
-  if (!hasDeepLink && !readSession(START_KEY)) openStartCard();
-  else if (!hasDeepLink) maybeShowCoach();
-}
-function enhanceLegend(legend) {
-  if (legend.dataset.guideEnhanced === 'true') return;
-  legend.dataset.guideEnhanced = 'true';
-  legend.setAttribute('aria-label', 'How to read the loom');
-  const body = legend.querySelector('.lg-body');
-  if (!body) return;
-  const title = document.createElement('h2');
-  title.className = 'lg-title';
-  title.textContent = 'How to read the loom';
-  body.prepend(title);
-  const lede = body.querySelector('.lg-lede');
-  if (lede) lede.textContent = 'One horizontal thread equals one publication. Left to right is 1880 to 2026.';
-  const rows = body.querySelectorAll('.lg-rows');
-  if (rows[0]) rows[0].textContent = 'Rows are grouped by founding decade. Names appear as you zoom in.';
-  if (rows[1]) rows[1].textContent = 'Drag to move, scroll or pinch to zoom, then select a thread to open the record.';
-  const button = document.createElement('button');
-  button.type = 'button';
-  button.className = 'woven-btn lg-cta';
-  button.textContent = 'Start a guided story';
-  button.addEventListener('click', () => toursButton?.click());
-  body.appendChild(button);
+  // Exploration starts on the tapestry. Guidance remains available on request.
+  legend.setAttribute('aria-label', 'Browse publications by founding era');
 }
 if (stage) {
   const legendObserver = new MutationObserver(() => handleLoomReady());
@@ -322,7 +299,9 @@ searchResults?.addEventListener('click', (event) => {
   const option = event.target.closest('[data-result-index]');
   if (option) chooseResult(matches[Number(option.dataset.resultIndex)]);
 });
-document.addEventListener('pointerdown', (event) => {
+// Dismiss after the target's click. Clearing status on pointerdown changed the
+// toolbar height and moved mobile buttons out from under the pointer mid-click.
+document.addEventListener('click', (event) => {
   if (searchForm && !searchForm.contains(event.target)) closeSearchResults(true);
   if (moreTools?.open && !moreTools.contains(event.target)) moreTools.open = false;
 });

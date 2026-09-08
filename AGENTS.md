@@ -13,7 +13,7 @@ The project has no backend, database server, authentication, or write API.
 ## Important paths
 
 - `docs/`: Published site and browser data.
-- `docs/js/woven/`: Woven ES modules.
+- `docs/js/woven/`: Woven ES modules, including the flat renderer.
 - `data/`: Pipeline data, research inputs, builders, and checks.
 - `data/research/source-catalog.json`: Evidence provenance.
 - `data/research/rights/rights-manifest.json`: Evidence rights decisions.
@@ -38,6 +38,7 @@ Update the source and run its builder. Review generated diffs before commit.
 ```bash
 npm ci
 npm run build:css
+npm run dev
 cd docs && python3 -m http.server 8000
 ```
 
@@ -51,6 +52,7 @@ python3 data/test_navigation.py
 python3 data/test_wiki_publications.py
 python3 data/test_woven_layout.py
 python3 data/test_woven_usability.py
+node data/test_woven_model.mjs
 python3 scripts/generate_okf_wiki.py --check
 ```
 

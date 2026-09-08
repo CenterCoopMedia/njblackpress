@@ -6,7 +6,7 @@ import { WEAVE_AMP, X_PER_YEAR, YEAR_MIN, YEAR_SPAN, x } from './layout.js';
 
 const SPLIT_X = 74.5;
 const OFF_LOOM_X = 78.5;
-const OAK_500 = new THREE.Color('#6b563c');
+const WARP_COLOR = new THREE.Color('#364353');
 
 class RibbonBuilder {
   constructor() {
@@ -93,6 +93,9 @@ function threadColumns(t) {
     cols.push({ x: xx, y: t.y, w, z, yearNorm: yearNorm(xx), ramp: (xx - startX) / span });
   }
 
+  // A title recorded for a single year still has a visible, selectable mark.
+  if (cols.length === 1) cols.push({ ...cols[0], x: cols[0].x + 0.18, ramp: 1 });
+
   const pieces = [cols];
 
   if (t.endState === 'ceased') {
@@ -146,12 +149,12 @@ export function buildWeft(model) {
 
 export function buildWarp(model, every, slotEvery) {
   const b = new RibbonBuilder();
-  const meta = { threadIndex: 255, flags: 0, fraySeed: 0.5, color: [OAK_500.r, OAK_500.g, OAK_500.b] };
+  const meta = { threadIndex: 255, flags: 0, fraySeed: 0.5, color: [WARP_COLOR.r, WARP_COLOR.g, WARP_COLOR.b] };
   const ys = [];
   ys.push(0.9);
   model.layout.slots.forEach((t, i) => { if (i % slotEvery === 0) ys.push(t.y); });
   for (const band of model.bands) if (band.count) ys.push(band.top - band.height - 0.35);
-  ys.push(-28.6);
+  ys.push(model.layout.bounds.minY - 0.5);
   ys.sort((a, c) => c - a);
 
   for (let year = YEAR_MIN; year <= YEAR_MIN + YEAR_SPAN; year += every) {
@@ -233,9 +236,9 @@ export function createClothMaterial(state, opts = {}) {
       uPluckAmp: pluckUniforms.uPluckAmp,
       uPluckScale: pluckUniforms.uPluckScale,
       uFrayCut: { value: opts.frayCut ?? 0.22 },
-      uGhostAlpha: { value: opts.ghostAlpha ?? 0.28 },
-      uDimColor: { value: new THREE.Color('#2b2318') },
-      uHighlightColor: { value: new THREE.Color('#f0854a') }
+      uGhostAlpha: { value: opts.ghostAlpha ?? 0.58 },
+      uDimColor: { value: new THREE.Color('#202b3b') },
+      uHighlightColor: { value: new THREE.Color('#ffffff') }
     },
     transparent: true,
     depthWrite: opts.depthWrite !== false,

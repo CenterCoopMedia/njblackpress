@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Woven — one hundred and forty-six years of the New Jersey Black press, drawn as a single cloth on a loom. Every cross thread is a publication.">
+    <meta name="description" content="Explore New Jersey’s Black press through an interactive tapestry of publications, dates, evidence, and guided stories from 1880 to 2026.">
     <meta name="author" content="Center for Cooperative Media">
 
     <meta property="og:title" content="Woven | NJ Black Press Archive">
@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/woven.css">
     <link rel="stylesheet" href="css/woven-guide.css">
+    <link rel="stylesheet" href="css/woven-explorer.css">
 
     <script type="importmap">
     {
@@ -99,15 +100,14 @@
         <section id="woven-intro" class="max-w-[1400px] mx-auto w-full px-4 md:px-8 py-5 md:py-6">
             <div class="intro-grid">
                 <div class="intro-head">
-                    <p class="woven-intro-kicker">An interactive timeline of New Jersey's Black press</p>
-                    <h1 class="font-display font-extrabold leading-[1.05] text-linen-50" style="font-size: clamp(1.35rem, 2.9vw, 2.55rem);">A hundred and forty-six years, woven once</h1>
-                    <hr class="rail-wood mt-4 max-w-md">
+                    <h1>Woven</h1>
+                    <p>New Jersey’s Black press,<br>thread by thread.</p>
                 </div>
-                <div class="woven-intro-copy">
-                    <p class="woven-intro-lede">Each horizontal thread is one publication. Left to right is time. Thread thickness shows how much evidence survives.</p>
-                    <p class="woven-intro-detail"><span data-count="still">…</span> currently publishing titles end in loose strands. <span data-count="ghost">…</span> titles known only from a catalog line appear faint and frayed.</p>
-                    <p class="woven-intro-prompt">Choose a guided story, search for a publication, or explore the whole loom.</p>
-                </div>
+                <dl class="woven-stats" aria-label="Archive at a glance">
+                    <div><dt>Years</dt><dd>1880–2026</dd></div>
+                    <div><dt>Publications</dt><dd data-count="total">…</dd></div>
+                    <div><dt>Still publishing</dt><dd data-count="still">…</dd></div>
+                </dl>
             </div>
         </section>
 
@@ -120,14 +120,14 @@
             <div id="woven-chrome">
             <div id="woven-topbar">
                 <div class="woven-primary-actions" aria-label="Ways to explore the loom">
-                    <button type="button" class="woven-btn woven-primary-btn" id="btn-start">Start here</button>
+                    <button type="button" class="woven-btn" id="btn-start">Start here</button>
                     <button type="button" class="woven-btn woven-primary-btn" id="btn-tours" aria-expanded="false" aria-controls="woven-tourpicker">Guided stories</button>
                 </div>
 
                 <form id="woven-searchform" role="search" autocomplete="off">
                     <label class="sr-only" for="woven-search">Search for a publication or city</label>
                     <div class="woven-search-row">
-                        <input id="woven-search" type="search" placeholder="Search a publication or city" enterkeyhint="search"
+                        <input id="woven-search" type="search" placeholder="Publication or city" enterkeyhint="search"
                                role="combobox" aria-autocomplete="list" aria-expanded="false"
                                aria-controls="woven-search-results">
                         <button type="submit" class="woven-btn woven-search-submit">Search</button>
@@ -136,11 +136,17 @@
                     <div id="woven-search-results" role="listbox" aria-label="Publication search results" hidden></div>
                 </form>
 
+                <div class="woven-zoom" role="group" aria-label="Timeline zoom">
+                    <button type="button" class="woven-btn" id="btn-zoom-out" aria-label="Zoom out">−</button>
+                    <button type="button" class="woven-btn" id="btn-zoom-in" aria-label="Zoom in">+</button>
+                </div>
+                <button type="button" class="woven-btn" id="btn-browse" aria-expanded="false" aria-controls="woven-legend">Browse titles</button>
+
                 <details id="woven-more-tools">
                     <summary class="woven-btn">More tools</summary>
                     <div class="woven-more-panel" aria-label="More loom tools">
                         <button type="button" class="woven-btn" id="btn-help">How this works</button>
-                        <button type="button" class="woven-btn" id="btn-ghost">What did not survive</button>
+                        <button type="button" class="woven-btn" id="btn-ghost">Gaps in the evidence</button>
                         <button type="button" class="woven-btn" id="btn-reset">Reset the view</button>
                         <button type="button" class="woven-btn" id="btn-fullscreen" aria-label="Enter fullscreen" hidden>Fullscreen</button>
                         <a class="woven-btn" href="#woven-twin">Read as a list</a>
@@ -153,9 +159,9 @@
                     <button type="button" class="woven-btn" id="btn-era-prev" aria-label="Move to earlier founding decades">Previous era</button>
                     <span id="woven-era-now"></span>
                     <button type="button" class="woven-btn" id="btn-era-next" aria-label="Move to later founding decades">Next era</button>
-                    <button type="button" class="woven-btn" id="btn-whole">Whole timeline · <span data-count="total">…</span> titles</button>
+                    <button type="button" class="woven-btn" id="btn-whole">Whole timeline<span class="whole-count"> · <span data-count="total">…</span> titles</span></button>
                 </div>
-                <span id="woven-eranav-note">Names appear when you zoom in. Select a thread to open its record.</span>
+                <span id="woven-eranav-note">Drag to move · Scroll or pinch to zoom</span>
             </div>
             </div>
 
@@ -163,6 +169,7 @@
             <div id="woven-tip" role="presentation" hidden></div>
             <div id="woven-notice" role="status" hidden></div>
             <div id="woven-empty-hint" role="status" hidden>Nothing here — zoom out or reset the view</div>
+            <div id="woven-loading" role="status">Loading the archive…</div>
 
             <div id="woven-overlay" hidden></div>
             <div id="woven-card" hidden></div>
@@ -257,10 +264,21 @@
 
             function setOpen(open) {
                 menu.classList.toggle('translate-x-full', !open);
+                menu.inert = !open;
+                menu.setAttribute('aria-hidden', String(!open));
                 document.body.classList.toggle('overflow-hidden', open);
                 btn.setAttribute('aria-expanded', String(open));
                 if (open) close.focus(); else btn.focus();
             }
+
+            menu.inert = true;
+            menu.setAttribute('aria-hidden', 'true');
+            // Shared navigation replaces the links and can close the menu too.
+            new MutationObserver(() => {
+                const closed = menu.classList.contains('translate-x-full');
+                menu.inert = closed;
+                menu.setAttribute('aria-hidden', String(closed));
+            }).observe(menu, { attributes: true, attributeFilter: ['class'] });
 
             btn.addEventListener('click', () => setOpen(menu.classList.contains('translate-x-full')));
             close.addEventListener('click', () => setOpen(false));

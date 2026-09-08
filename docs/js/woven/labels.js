@@ -2,6 +2,7 @@
 // All type is HTML. Nothing is ever drawn into the canvas.
 
 import * as THREE from 'three';
+import { createExplorer } from './explorer.js';
 import { x as xOf, YEAR_MIN, YEAR_MAX } from './layout.js';
 
 const MAX_LABELS = 26;
@@ -22,60 +23,9 @@ export function createLabels(app, three, model) {
   eraLayer.setAttribute('aria-hidden', 'true');
   stage.appendChild(eraLayer);
 
-  const legend = document.createElement('div');
-  legend.id = 'woven-legend';
-  // The toggle is the first child, so on a narrow window — where the key floats
-  // over the cloth and the copy runs longer than the panel is tall — the way to
-  // close it is at the top rather than under a scroll nobody can see.
-  legend.innerHTML = `
-    <button type="button" class="woven-btn lg-toggle" aria-expanded="true">Hide the key</button>
-    <div class="lg-body">
-      <p class="lg-lede">Each horizontal thread is one publication. It starts the year the paper was founded and ends the year it stopped. Left to right is 1880 to 2026.</p>
-      <ul>
-        <li><span class="lg-swatch lg-thick"></span>Thicker thread — more surviving material we can show you</li>
-        <li><span class="lg-swatch lg-ghost"></span>Faint and frayed — ${model.counts.ghost} titles we know only from a catalog line</li>
-        <li><span class="lg-swatch lg-loose"></span>Runs past the right post — the ${model.counts.stillPublishing} papers still publishing</li>
-        <li><span class="lg-swatch lg-knot"></span>Knot — a documented event, ${model.counts.events} in all</li>
-      </ul>
-      <p class="lg-rows">Rows are grouped by the decade each paper began. Names appear when you are close enough to read them.</p>
-      <p class="lg-rows">Drag to move across the cloth. Scroll or pinch to zoom. Type a name in the search field and the loom goes to the closest match; press enter to go there at once.</p>
-    </div>`;
-  stage.appendChild(legend);
-
-  // Above 900px the key is docked in its own column beside the canvas and is
-  // always open. Below that it floats over the cloth, so it starts closed and
-  // the toggle reports the state it is actually in. The window can cross that
-  // line at any moment, so the state follows the media query, not the width the
-  // page happened to load at.
-  const toggle = legend.querySelector('.lg-toggle');
-  const dock = window.matchMedia('(min-width: 900px)');
-  let openedByReader = false;
-
-  function setCollapsed(collapsed) {
-    legend.dataset.collapsed = String(collapsed);
-    toggle.textContent = collapsed ? 'Show the key' : 'Hide the key';
-    toggle.setAttribute('aria-expanded', String(!collapsed));
-  }
-
-  function applyDock() {
-    // Docked: always open, and the toggle is hidden. Floating: closed unless the
-    // reader opened it at this width, because an open key covers the cloth.
-    setCollapsed(dock.matches ? false : !openedByReader);
-  }
-
-  toggle.addEventListener('click', () => {
-    const nowCollapsed = legend.dataset.collapsed !== 'true';
-    openedByReader = !nowCollapsed;
-    setCollapsed(nowCollapsed);
-    update();
-  });
-
-  dock.addEventListener('change', () => {
-    openedByReader = false;
-    applyDock();
-    update();
-  });
-  applyDock();
+  const explorer = createExplorer(app, model);
+  const legend = explorer.element;
+  app.explorer = explorer;
 
   const v = new THREE.Vector3();
   let rect = null;
@@ -116,6 +66,7 @@ export function createLabels(app, three, model) {
     rect = three.canvas.getBoundingClientRect();
     measureGuard();
     const dist = three.camera.position.distanceTo(three.controls.target);
+    explorer.sync();
     const busy = !!(app.tour && app.tour.isPlaying) || !!(app.ghost && app.ghost.isPlaying);
     const widthChanged = stage.classList.contains('woven-legend-hidden') !== busy;
     stage.classList.toggle('woven-legend-hidden', busy);
@@ -136,7 +87,8 @@ export function createLabels(app, three, model) {
       return;
     }
     if (dist > LABEL_DISTANCE) {
-      layer.textContent = '';
+      drawNames(dist, new Set(model.bands.filter((b) => b.count).map((b) =>
+        b.threads.slice().sort((a, c) => c.evidenceCount - a.evidenceCount)[0].id)));
       layer.dataset.mode = 'far';
       cullEras();
       return;
@@ -194,7 +146,9 @@ export function createLabels(app, three, model) {
     // that were actually drawn, never assumed. Where the column still will not
     // fit, markers are dropped rather than printed through one another — a
     // sliced count reads as broken, a missing one reads as crowding.
-    const live = model.bands.filter((b) => b.count);
+    const live = model.bands.filter((b) => b.count &&
+      project(0, b.top).y <= rect.height - guard.bottom &&
+      project(0, b.top - b.height).y >= guard.top);
     if (!live.length) { eraLayer.textContent = ''; eraBoxes = []; return; }
 
     const top = guard.top;
@@ -202,7 +156,7 @@ export function createLabels(app, three, model) {
     let freeH = Math.max(1, bottom - top);
 
     const GAP = 3;
-    const label = (band) => `${band.label} · ${band.count}`;
+    const label = (band) => band.from == null ? 'Undated' : `${band.from}–${band.to}`;
     const stackH = (bs, compact) =>
       bs.reduce((sum, b) => sum + measureMarker(label(b), compact), 0) + GAP * (bs.length - 1);
 
@@ -226,6 +180,7 @@ export function createLabels(app, three, model) {
       const el = document.createElement('span');
       el.className = compact ? 'era-marker is-compact' : 'era-marker';
       el.textContent = label(band);
+      el.style.color = band.threads[0].dye;
       frag.appendChild(el);
       return el;
     });
@@ -266,15 +221,20 @@ export function createLabels(app, three, model) {
     const spanPx = Math.abs(project(xOf(YEAR_MAX), 0).x - project(xOf(YEAR_MIN), 0).x);
     const stepYears = spanPx > 2600 ? 10 : spanPx > 1100 ? 20 : 40;
     let lastX = -999;
-    for (let y = YEAR_MIN; y <= YEAR_MAX; y += stepYears) {
+    const years = [];
+    for (let y = YEAR_MIN; y < YEAR_MAX; y += stepYears) years.push(y);
+    years.push(YEAR_MAX);
+    const end = project(xOf(YEAR_MAX), three.controls.target.y);
+    for (const y of years) {
       const p = project(xOf(y), three.controls.target.y);
-      if (p.x < 8 || p.x > rect.width - 46) continue;
+      if (p.x < 8 || p.x > rect.width - 8) continue;
+      if (y !== YEAR_MAX && end.x < rect.width - 8 && end.x - p.x < 54) continue;
       if (p.x - lastX < 54) continue;
       lastX = p.x;
       const el = document.createElement('span');
       el.textContent = String(y);
       el.style.position = 'absolute';
-      el.style.left = `${p.x}px`;
+      el.style.left = `${Math.max(4, Math.min(rect.width - 38, p.x - 15))}px`;
       frag.appendChild(el);
     }
     rail.textContent = '';
@@ -288,7 +248,7 @@ export function createLabels(app, three, model) {
     const candidates = model.layout.slots
       .filter((t) => !only || only.has(t.id))
       .map((t) => ({ t, d: Math.abs(t.y - ty) }))
-      .sort((a, b) => a.d - b.d)
+      .sort((a, b) => Number(b.t.id === app.state.selectedId) - Number(a.t.id === app.state.selectedId) || a.d - b.d)
       .slice(0, MAX_LABELS * 2);
 
     // Never place a name under the key; a label half-covered is worse than no
@@ -307,7 +267,10 @@ export function createLabels(app, three, model) {
       if (placed.length >= MAX_LABELS) break;
       const startX = t.unknownFounding ? 4 : t.x0;
       const p = project(startX, t.y);
-      if (!p.onScreen || p.y < guard.top || p.y > rect.height - guard.bottom) continue;
+      const end = project(t.x1, t.y);
+      if (end.x < 0 || p.x > rect.width) continue;
+      p.x = Math.max(0, p.x);
+      if (p.y < 0 || p.y > rect.height || p.y < guard.top || p.y > rect.height - guard.bottom) continue;
       if (p.y > keep.top && p.x + 214 > keep.left) continue;
       if (placed.some((q) => Math.abs(q - p.y) < MIN_ROW_PX)) continue;
 
@@ -321,7 +284,7 @@ export function createLabels(app, three, model) {
       }
       const room = rect.width - minLeft - 6;
       if (room < 96) continue;
-      const maxLabel = Math.min(220, rect.width * 0.6, room);
+      const maxLabel = Math.min(260, rect.width * 0.6, room);
       placed.push(p.y);
 
       const el = document.createElement('span');
@@ -338,6 +301,7 @@ export function createLabels(app, three, model) {
       const y = document.createElement('i');
       y.textContent = years;
       el.append(n, y);
+      el.style.setProperty('--thread-color', t.dye);
       el.style.top = `${p.y}px`;
       el.style.maxWidth = `${maxLabel}px`;
       el.style.left = `${Math.max(minLeft, p.x + 8)}px`;
@@ -360,7 +324,7 @@ export function createLabels(app, three, model) {
 
   function setDensityNote(text) {
     const note = legend.querySelector('.lg-rows');
-    note.textContent = text;
+    if (note) note.textContent = text;
   }
 
   return { update, setDensityNote, legend };

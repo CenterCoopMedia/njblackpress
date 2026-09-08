@@ -654,7 +654,7 @@ export function createTour(app, three, model) {
     cardBody.innerHTML = `
       <h3>${esc(tour.title)}</h3>
       <p>${esc(tour.thread)}</p>
-      <p><button type="button" class="woven-btn" data-act="ghost">Show what did not survive</button></p>`;
+      <p><button type="button" class="woven-btn" data-act="ghost">Explore gaps in the evidence</button></p>`;
     card.hidden = false;
     cardBody.scrollTop = 0;
     updateMore();

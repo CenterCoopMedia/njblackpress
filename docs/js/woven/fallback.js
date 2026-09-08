@@ -56,5 +56,5 @@ function showGhostInTwin(model) {
   section.scrollIntoView({ block: 'start' });
   const h = document.getElementById('ghost-h');
   if (h) { h.setAttribute('tabindex', '-1'); h.focus(); }
-  announce(`${model.counts.ghost} titles survive only as a catalog entry. Their names follow.`);
+  announce(`${model.counts.ghost} titles have no evidence cleared for display. Their names follow.`);
 }

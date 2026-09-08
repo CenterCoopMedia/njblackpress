@@ -38,6 +38,7 @@ async function boot() {
     model = await loadModel();
   } catch (e) {
     console.error('Woven: data load failed', e);
+    document.getElementById('woven-loading').innerHTML = 'The archive could not load. <a class="link-thread" href="archive.html">Open the archive</a> or reload this page.';
     return;
   }
   app.model = model;
@@ -53,7 +54,7 @@ async function boot() {
 
   console.info('[woven] counts', model.counts);
 
-  if (params.get('nogl') === '1' || !hasWebGL()) {
+  if (params.get('nogl') === '1') {
     const { startFallback } = await import('./fallback.js');
     const api = startFallback(model, 'nogl');
     app.select = (id) => api.open(id);
@@ -63,10 +64,20 @@ async function boot() {
   }
   if (params.get('twin') === '1') document.getElementById('woven-twin').classList.add('twin-visible');
 
-  await startScene(model);
+  try {
+    await startScene(model, !hasWebGL());
+    document.getElementById('woven-loading').hidden = true;
+  } catch (error) {
+    console.error('Woven: drawing unavailable', error);
+    const { startFallback } = await import('./fallback.js');
+    const api = startFallback(model, 'nogl');
+    app.select = (id) => api.open(id);
+    app.playStory = (id) => api.playStory(id);
+    app.showGhost = () => api.showGhost();
+  }
 }
 
-async function startScene(model) {
+async function startScene(model, flat = false) {
   const THREE = await import('three');
   const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
   const { buildWeft, buildWarp, createStateTexture, createClothMaterial, pluckUniforms, weaveUniform, minHalfWidth } = await import('./cloth.js');
@@ -78,14 +89,19 @@ async function startScene(model) {
   const canvas = document.getElementById('woven-canvas');
   const stage = document.getElementById('woven-stage');
 
-  const renderer = new THREE.WebGLRenderer({
-    canvas, antialias: window.devicePixelRatio < 2,
-    powerPreference: 'high-performance', alpha: false, stencil: false, depth: true
-  });
+  const renderer = flat
+    ? (await import('./flat-renderer.js')).createFlatRenderer(canvas, model)
+    : new THREE.WebGLRenderer({
+      canvas, antialias: window.devicePixelRatio < 2,
+      powerPreference: 'high-performance', alpha: false, stencil: false, depth: true
+    });
+  stage.dataset.renderer = flat ? 'flat' : 'webgl';
+  // A compatibility renderer should show the complete archive immediately.
+  if (flat) weaveUniform.value = 1;
   let pixelRatio = Math.min(window.devicePixelRatio, 2);
   renderer.setPixelRatio(pixelRatio);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.setClearColor(0x0b0806, 1);
+  renderer.setClearColor(0x0b121c, 1);
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, 1, 0.5, 400);
@@ -144,9 +160,7 @@ async function startScene(model) {
   controls.touches = { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_PAN };
 
   const clothBox = model.layout.bounds;
-  // The default framing shows the whole loom, including the loose strands that
-  // run past the right post. It stops just under the last row rather than at the
-  // foot of the frame: three units of bare wood is three units of empty black.
+  // The overview includes every row and the loose ends of active publications.
   const loomBox = {
     minX: -3.2, maxX: 79.0,
     minY: clothBox.minY - 0.5, maxY: 1.6
@@ -214,14 +228,23 @@ async function startScene(model) {
   function readingFraming(bandKey) {
     const bands = model.bands.filter((b) => b.count);
     const band = bands.find((b) => b.key === (bandKey || 'C')) || bands[0];
-    const mid = band.top - band.height / 2;
-    const spans = band.threads.map((t) => t.x0);
-    const x0 = Math.min(...spans);
-    const d = 15;
+    const box = {
+      minX: band.key === 'U' ? 0 : Math.min(...band.threads.map((t) => t.x0)) - 1,
+      maxX: band.key === 'U' ? 73 : Math.max(...band.threads.map((t) => t.endState === 'still' ? 79 : t.x1)) + 1,
+      minY: band.top - band.height - 0.45, maxY: band.top + 0.45
+    };
+    const k = keepOut();
+    const freeH = Math.max(60, k.height - k.top - k.bottom);
+    const d = Math.min(controls.maxDistance, Math.max(12,
+      fitDistance(box, 0.05, camera),
+      (box.maxY - box.minY) * 1.1 / (2 * Math.tan(camera.fov * Math.PI / 360)) * k.height / freeH));
+    const worldPerPx = 2 * Math.tan(camera.fov * Math.PI / 360) * d / k.height;
+    const tx = (box.minX + box.maxX) / 2;
+    const ty = (box.minY + box.maxY) / 2 + (k.top - k.bottom) / 2 * worldPerPx;
     return {
       band: band.key,
-      target: [Math.min(66, x0 + 9), mid, 0],
-      position: [Math.min(66, x0 + 9), mid, d]
+      target: [tx, ty, 0],
+      position: [tx, ty, d]
     };
   }
 
@@ -315,10 +338,8 @@ async function startScene(model) {
   // well under the 0.16-unit row pitch so a crowded band still reads as separate
   // threads rather than as a slab.
   const MIN_THREAD_PX = 1.9;
-  // Four fifths of the 0.16-unit row pitch. At the default framing the rows are
-  // only about 1.4 pixels apart, so this is as wide as a thread can be drawn and
-  // still leave a gap to the next one.
-  const MAX_MIN_HALF_W = 0.064;
+  // Cap the floor at four fifths of the row pitch so adjacent threads stay apart.
+  const MAX_MIN_HALF_W = 0.092;
   function updateThreadFloor(dist) {
     const worldPerPx = (2 * Math.tan((camera.fov * Math.PI) / 360) * dist) / Math.max(1, canvasCssHeight);
     const want = Math.min(MAX_MIN_HALF_W, (worldPerPx * MIN_THREAD_PX) / 2);
@@ -474,7 +495,7 @@ async function startScene(model) {
       const years = t.yearFounded
         ? `${t.yearFounded}–${t.yearCeased ?? (t.endState === 'still' ? 'now' : '?')}`
         : 'founding year unrecorded';
-      const third = t.ghost ? 'catalog entry only'
+      const third = t.ghost ? 'No evidence cleared for display'
         : `${t.evidenceCount} item${t.evidenceCount === 1 ? '' : 's'} of evidence`;
       tip.innerHTML = '';
       addLine(tip, 'tip-name', t.name);
@@ -545,8 +566,11 @@ async function startScene(model) {
   // rides the edge — the reveal is the effect, and it carries no data of its own.
   const CLOTH_MAX_X = 73;
   let weaveMax = 0;
+  let weaveTime = performance.now();
 
-  function updateWeave() {
+  function updateWeave(now) {
+    const elapsed = Math.max(0, now - weaveTime);
+    weaveTime = now;
     const dist = camera.position.distanceTo(controls.target);
     const halfW = Math.tan((camera.fov * Math.PI) / 360) * camera.aspect * dist;
     const lead = controls.target.x + halfW * 0.88;
@@ -558,7 +582,7 @@ async function startScene(model) {
       // A tour or the ghost sequence drives the camera itself. There the cloth
       // is already there before the camera arrives; nobody is doing the weaving.
       const snap = busy || reduceMotion.matches;
-      const next = snap ? weaveMax : cur + (weaveMax - cur) * 0.12;
+      const next = snap ? weaveMax : cur + (weaveMax - cur) * (1 - Math.exp(-elapsed / 90));
       weaveUniform.value = weaveMax - next < 0.0006 ? weaveMax : next;
       app.needsRender = true;
     }
@@ -619,14 +643,16 @@ async function startScene(model) {
     stateTex.commit();
     syncTwin(state);
     userMoved = false;
+    app.explorer?.scope('all');
+    history.replaceState(null, '', location.pathname);
     applyView(defaultFraming());
     announce(`The whole loom. ${model.counts.total} publications, 1880 to 2026.`);
   }
+  app.resetView = resetView;
   document.getElementById('btn-reset').addEventListener('click', resetView);
-  document.getElementById('btn-whole').addEventListener('click', () => {
-    applyView(wholeLoomFraming());
-    announce(`The whole loom. ${model.counts.total} publications, 1880 to 2026.`);
-  });
+  document.getElementById('btn-whole').addEventListener('click', resetView);
+  document.getElementById('btn-zoom-in').addEventListener('click', () => dolly(1 / 1.3));
+  document.getElementById('btn-zoom-out').addEventListener('click', () => dolly(1.3));
   document.getElementById('btn-era-prev').addEventListener('click', () => stepReadingBand(-1));
   document.getElementById('btn-era-next').addEventListener('click', () => stepReadingBand(1));
 
@@ -729,11 +755,28 @@ async function startScene(model) {
     const keys = model.bands.filter((b) => b.count).map((b) => b.key);
     let i = keys.indexOf(readingBand);
     i = Math.min(keys.length - 1, Math.max(0, i + d));
-    readingBand = keys[i];
-    applyView(readingFraming(readingBand));
-    const band = model.bands.find((b) => b.key === readingBand);
-    announce(`${band.label}. ${band.count} publications.`);
+    app.focusBand(keys[i]);
   }
+  app.focusBand = function focusBand(key) {
+    const band = model.bands.find((b) => b.key === key && b.count);
+    if (!band) return;
+    if (app.tour?.isPlaying) app.tour.exit();
+    if (app.ghost?.isPlaying) app.ghost.exit();
+    panel.closePanel();
+    hideCards();
+    hideTip();
+    clearSearch();
+    state.selectedId = null;
+    paintBase(null);
+    stateTex.commit();
+    syncTwin(state);
+    history.replaceState(null, '', location.pathname);
+    markInteracted();
+    readingBand = key;
+    app.explorer.scope(key);
+    applyView(readingFraming(key));
+    announce(`${band.label}. ${band.count} publications.`);
+  };
   document.getElementById('btn-help').addEventListener('click', toggleHelp);
   document.getElementById('btn-ghost').addEventListener('click', () => app.showGhost());
 
@@ -970,8 +1013,9 @@ async function startScene(model) {
 
   function dolly(f) {
     markInteracted();
+    app.tween = null;
     const dir = camera.position.clone().sub(controls.target);
-    const d = Math.min(130, Math.max(8, dir.length() * f));
+    const d = Math.min(controls.maxDistance, Math.max(controls.minDistance, dir.length() * f));
     camera.position.copy(controls.target).add(dir.setLength(d));
     controls.update();
     app.needsRender = true;
@@ -1038,8 +1082,11 @@ async function startScene(model) {
 
   // ---- render loop ----
   let last = performance.now();
+  let renderingStopped = false;
   function frame(now) {
+    if (renderingStopped) return;
     requestAnimationFrame(frame);
+    if (document.hidden) { last = now; return; }
     processHover();
     if (app.tween) app.tween();
     if (pluckStart >= 0) {
@@ -1078,6 +1125,7 @@ async function startScene(model) {
   requestAnimationFrame(frame);
 
   canvas.addEventListener('webglcontextlost', async () => {
+    renderingStopped = true;
     if (app.tour && app.tour.isPlaying) app.tour.exit();
     const { startFallback } = await import('./fallback.js');
     const api = startFallback(model, 'lost');
@@ -1118,7 +1166,7 @@ function toggleHelp() {
         <button type="button" class="woven-btn" data-close>Close</button>
       </div>
       <div class="card-scroll">
-      <p>This is every Black-owned and Black-focused publication we have found in New Jersey, drawn on one axis of time. Left to right is 1880 to 2026. Each horizontal thread is one publication, running from the year it was founded to the year it stopped, and the rows are grouped by the decade each paper began. A thicker thread means more surviving material we can show you. A faint, frayed one means the paper survives only as a line in a catalog.</p>
+      <p>This is every Black-owned and Black-focused publication we have found in New Jersey, drawn on one axis of time. Left to right is 1880 to 2026. Each horizontal thread is one publication, running from the year it was founded to the year it stopped, and the rows are grouped by the era each paper began. Color identifies the founding era. Thickness shows how many evidence records are attached. Faint threads have no evidence cleared for display; they do not mean that no copies survive. Dashed spans have unknown end dates and do not establish continuous publication.</p>
       <h4>By pointer</h4>
       <dl>
         <dt>Drag</dt><dd>move across the cloth, left, right, up, or down</dd>
@@ -1134,7 +1182,7 @@ function toggleHelp() {
         <dt>Page up and page down</dt><dd>move between decades</dd>
         <dt>Enter</dt><dd>open this publication</dd>
         <dt>Escape</dt><dd>go back</dd>
-        <dt>T · G · 0</dt><dd>guided threads · what did not survive · reset the view</dd>
+        <dt>T · G · 0</dt><dd>guided threads · gaps in the evidence · reset the view</dd>
         <dt>Escape</dt><dd>close this panel</dd>
       </dl>
       </div>

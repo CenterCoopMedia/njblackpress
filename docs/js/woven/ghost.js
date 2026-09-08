@@ -43,7 +43,7 @@ export function createGhost(app, three, model) {
     history.replaceState(null, '', '?ghost=1');
 
     showCard('open');
-    announce(`${model.counts.ghost} of these papers exist now as a single line in a catalog. Their names follow.`);
+    announce(`${model.counts.ghost} publications have no evidence cleared for display. Their names follow.`);
 
     // Dim everything that is not a ghost.
     for (const t of model.threads) {
@@ -106,7 +106,7 @@ export function createGhost(app, three, model) {
   // The list keeps a fixed head with a stop control. A sequence that plays itself
   // must always show the reader how to end it, on the same screen, at all times.
   function renderNames(list, all) {
-    namesEl.innerHTML = `<div class="g-head"><span>What did not survive</span>
+    namesEl.innerHTML = `<div class="g-head"><span>Gaps in the evidence</span>
       <button type="button" class="woven-btn" data-act="stop">Stop</button></div>
       <div class="g-body"></div>`;
     namesEl.querySelector('[data-act="stop"]').addEventListener('click', exit);
@@ -120,8 +120,8 @@ export function createGhost(app, three, model) {
     if (which === 'open') {
       cardEl.innerHTML = `<div class="inner">
         <div class="card-scroll">
-        <h3>What did not survive</h3>
-        <p>${model.counts.ghost} of these papers exist now as a single line in a catalog — a title, a city, a range of years, recorded by a librarian who held the issue we cannot find. No page, no masthead, no photograph. They are woven into the same cloth as everything else, thin and unfinished, because an absence in the record is not an absence in the history. Their names follow.</p>
+        <h3>Gaps in the evidence</h3>
+        <p>${model.counts.ghost} publications have no evidence cleared for display in this archive. Some have catalog references or material that we cannot reproduce. A faint thread marks a gap in what we can show, not proof that no copies survive.</p>
         <p><button type="button" class="woven-btn" data-act="skip">Skip to the list</button></p>
         </div>
       </div>`;
@@ -133,8 +133,8 @@ export function createGhost(app, three, model) {
     } else {
       cardEl.innerHTML = `<div class="inner">
         <div class="card-scroll">
-        <h3>That is what the record lost.</h3>
-        <p>It is not the same as what happened.</p>
+        <h3>The archive is still incomplete.</h3>
+        <p>These titles remain part of the history. Open their records to see the sources we have.</p>
         <p><button type="button" class="woven-btn" data-act="back">Return to the loom</button>
            <button type="button" class="woven-btn" data-act="list">Read the list again</button></p>
         </div>

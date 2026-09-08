@@ -5,10 +5,10 @@ export const YEAR_MIN = 1880;
 export const YEAR_MAX = 2026;
 export const YEAR_SPAN = YEAR_MAX - YEAR_MIN; // 146
 export const X_PER_YEAR = 0.5;
-export const PITCH = 0.16;
-export const BAND_GAP = 0.7;
+export const PITCH = 0.23;
+export const BAND_GAP = 0.9;
 export const BAND_TOP_A = -0.6;
-export const WEAVE_AMP = 0.035;
+export const WEAVE_AMP = 0.05;
 
 export const BAND_DEFS = [
   { key: 'A', from: 1880, to: 1899, label: '1880 to 1899' },
@@ -63,8 +63,8 @@ export function seededRandom(seed) {
 }
 
 /**
- * Assign every publication a band and a Y slot. Mutates nothing; returns a
- * layout object holding the band table, the slot table, and the cloth bounds.
+ * Assign every publication a band and a Y slot, then return the band table,
+ * sorted slots, and cloth bounds.
  */
 export function buildLayout(threads) {
   const byBand = new Map(BAND_DEFS.map((b) => [b.key, []]));
