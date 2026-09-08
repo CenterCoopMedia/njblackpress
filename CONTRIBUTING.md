@@ -42,6 +42,7 @@ Open `http://localhost:8000/`.
 | Evidence rights | `data/research/rights/rights-manifest.json` |
 | Events and stories | `data/research/editorial/` |
 | Map locations | `data/municipality-centers.json` |
+| Historical notes behavior | `docs/js/notes/` and `docs/css/notes.css` |
 | Tailwind styles | `src/input.css`, HTML classes, or JavaScript class strings |
 | Public wiki | `scripts/generate_html_wiki.py` and its source data |
 | Portable wiki | `scripts/generate_okf_wiki.py` and its source data |
@@ -93,7 +94,7 @@ Use the smallest checks that cover the changed area:
 | Navigation | `python3 data/test_navigation.py` |
 | Public wiki | `python3 data/test_wiki_publications.py` |
 | Portable wiki | `python3 scripts/generate_okf_wiki.py --check` |
-| Historical notes | `python3 data/test_woven_layout.py` and `python3 data/test_woven_usability.py` |
+| Historical notes | `node data/test_notes_model.mjs`, `python3 scripts/review_notes.py --output /tmp/notes-review`, and browser checks |
 
 Check visible changes in a browser at desktop and mobile sizes. Check keyboard
 navigation when the change affects controls, dialogs, or focus.

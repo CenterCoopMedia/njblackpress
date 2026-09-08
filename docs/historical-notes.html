@@ -3,40 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the history of New Jersey’s Black press through publication timelines, guided stories, and source evidence.">
+    <meta name="description" content="Explore New Jersey’s Black press by recorded place and date, with guided stories and source evidence.">
     <meta name="author" content="Center for Cooperative Media">
-
+    <meta name="theme-color" content="#14100b">
     <meta property="og:title" content="Historical notes | NJ Black Press Archive">
-    <meta property="og:description" content="Publication histories, guided stories, and source evidence from New Jersey’s Black press.">
+    <meta property="og:description" content="Explore New Jersey’s Black press by recorded place and date, with guided stories and source evidence.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://centercoopmedia.github.io/njblackpress/historical-notes.html">
     <meta property="og:image" content="https://centercoopmedia.github.io/njblackpress/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="NJ Black Press Archive">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Historical notes | NJ Black Press Archive">
-    <meta name="twitter:description" content="Publication histories, guided stories, and source evidence from New Jersey’s Black press.">
+    <meta name="twitter:description" content="Explore New Jersey’s Black press by recorded place and date, with guided stories and source evidence.">
     <meta name="twitter:image" content="https://centercoopmedia.github.io/njblackpress/og-image.png">
-
     <title>Historical notes | NJ Black Press Archive</title>
-
     <link rel="canonical" href="https://centercoopmedia.github.io/njblackpress/historical-notes.html">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" href="favicon.png">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..700&family=Libre+Franklin:wght@400..900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/woven.css">
-    <link rel="stylesheet" href="css/woven-guide.css">
-    <link rel="stylesheet" href="css/woven-exhibit.css">
-
+    <link rel="stylesheet" href="css/notes.css">
     <script type="importmap">
     {
       "imports": {
@@ -50,286 +41,62 @@
     </script>
 </head>
 <body class="surface-notes bg-walnut-900 text-linen-100 font-sans antialiased">
-
-    <a id="woven-skip" href="#woven-twin">Skip the timeline, read the archive as a list</a>
-
+    <a class="notes-skip-link" href="#notes-twin">Skip the time map and read the archive as a list</a>
     <div class="grain-overlay fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.07] mix-blend-soft-light"></div>
-
     <nav id="site-header" class="fixed top-0 w-full z-40 bg-walnut-900 border-b border-walnut-600">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <img src="njblackpress-icon.png" alt="" class="w-8 h-8">
-                <span class="font-display font-bold text-xl tracking-wide group-hover:text-stain transition-colors">NJ Black Press</span>
-            </a>
+            <a href="index.html" class="flex items-center gap-2 group"><img src="njblackpress-icon.png" alt="" class="w-8 h-8"><span class="font-display font-bold text-xl tracking-wide group-hover:text-stain transition-colors">NJ Black Press</span></a>
             <ul class="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-widest">
-                <li><a href="index.html#featured" class="hover:text-stain transition-colors">Historic</a></li>
-                <li><a href="index.html#timeline" class="hover:text-stain transition-colors">Timeline</a></li>
-                <li><a href="archive.html" class="hover:text-stain transition-colors">Archive</a></li>
-                <li><a href="story.html" class="hover:text-stain transition-colors">Stories</a></li>
-                <li><a href="era.html" class="hover:text-stain transition-colors">Eras</a></li>
-                <li><a href="wiki/index.html" class="hover:text-stain transition-colors">Wiki</a></li>
-                <li><a href="historical-notes.html" aria-current="page" class="text-stain">Historical notes</a></li>
-                <li><a href="index.html#about" class="hover:text-stain transition-colors">About</a></li>
+                <li><a href="index.html#featured" class="hover:text-stain transition-colors">Historic</a></li><li><a href="index.html#timeline" class="hover:text-stain transition-colors">Timeline</a></li><li><a href="archive.html" class="hover:text-stain transition-colors">Archive</a></li><li><a href="story.html" class="hover:text-stain transition-colors">Stories</a></li><li><a href="era.html" class="hover:text-stain transition-colors">Eras</a></li><li><a href="wiki/index.html" class="hover:text-stain transition-colors">Wiki</a></li><li><a href="historical-notes.html" aria-current="page" class="text-stain">Historical notes</a></li><li><a href="index.html#about" class="hover:text-stain transition-colors">About</a></li>
             </ul>
-
-            <button id="mobile-menu-btn" class="md:hidden p-[10px] text-linen-100 hover:text-stain"
-                    aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                <svg class="w-6 h-6" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
+            <button id="mobile-menu-btn" class="md:hidden p-[10px] text-linen-100 hover:text-stain" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg class="w-6 h-6" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
         </div>
     </nav>
-
     <div id="mobile-menu" class="fixed inset-0 bg-walnut-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
-        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-linen-300 hover:text-stain" aria-label="Close menu">
-            <svg class="w-8 h-8" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
+        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-linen-300 hover:text-stain" aria-label="Close menu"><svg class="w-8 h-8" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
         <ul class="space-y-6 text-center font-display text-2xl font-medium tracking-wide">
-            <li><a href="index.html#featured" class="inline-block py-2 hover:text-stain transition-colors">Historic</a></li>
-            <li><a href="index.html#timeline" class="inline-block py-2 hover:text-stain transition-colors">Timeline</a></li>
-            <li><a href="archive.html" class="inline-block py-2 hover:text-stain transition-colors">Archive</a></li>
-            <li><a href="story.html" class="inline-block py-2 hover:text-stain transition-colors">Stories</a></li>
-            <li><a href="era.html" class="inline-block py-2 hover:text-stain transition-colors">Eras</a></li>
-            <li><a href="wiki/index.html" class="inline-block py-2 hover:text-stain transition-colors">Wiki</a></li>
-            <li><a href="historical-notes.html" aria-current="page" class="inline-block py-2 text-stain">Historical notes</a></li>
-            <li><a href="index.html#about" class="inline-block py-2 hover:text-stain transition-colors">About</a></li>
+            <li><a href="index.html#featured" class="inline-block py-2 hover:text-stain transition-colors">Historic</a></li><li><a href="index.html#timeline" class="inline-block py-2 hover:text-stain transition-colors">Timeline</a></li><li><a href="archive.html" class="inline-block py-2 hover:text-stain transition-colors">Archive</a></li><li><a href="story.html" class="inline-block py-2 hover:text-stain transition-colors">Stories</a></li><li><a href="era.html" class="inline-block py-2 hover:text-stain transition-colors">Eras</a></li><li><a href="wiki/index.html" class="inline-block py-2 hover:text-stain transition-colors">Wiki</a></li><li><a href="historical-notes.html" aria-current="page" class="inline-block py-2 text-stain">Historical notes</a></li><li><a href="index.html#about" class="inline-block py-2 hover:text-stain transition-colors">About</a></li>
         </ul>
     </div>
-
-    <main class="pt-20">
-        <div id="woven-firstscreen">
-        <section id="woven-intro" class="woven-masthead">
-            <div class="woven-title-block">
-                <h1>Historical notes</h1>
-                <p>Explore the people, publications,<br>and events behind the archive.</p>
+    <main class="notes-page pt-20">
+        <header class="notes-heading">
+            <div><p class="notes-kicker">New Jersey’s Black press</p><h1>Historical notes</h1><p class="notes-deck">Place on the ground. Years in the air. Explore New Jersey’s Black press.</p></div>
+            <div class="notes-heading-actions"><div class="notes-view-switch" role="group" aria-label="Visualization view"><button type="button" class="notes-view-button" data-notes-view="map" aria-pressed="true">Time map</button><button type="button" class="notes-view-button" data-notes-view="flat" aria-pressed="false">Flat timeline</button></div><button type="button" class="notes-text-button" id="btn-stories">Stories</button><button type="button" class="notes-text-button" id="btn-find">Find a title</button></div>
+        </header>
+        <section class="notes-map-layout" aria-label="Time map of New Jersey Black publications">
+            <div id="notes-stage" data-state="intro" data-view="map">
+                <p id="notes-canvas-help" class="sr-only">Use arrow keys to move between publications. Press Enter to open a record, S to start a story, Y to move the year plane, and Escape to close a panel.</p>
+                <canvas id="notes-canvas" role="application" tabindex="0" aria-label="Interactive time map of New Jersey Black publications" aria-describedby="notes-canvas-help"></canvas>
+                <div id="notes-labels" aria-hidden="true"></div><div id="notes-tooltip" role="tooltip" hidden></div><p id="notes-loading" role="status">Loading the archive…</p><p id="notes-renderer-note" role="status" hidden>The flat timeline is available. The time map needs WebGL.</p>
+                <div class="notes-stage-tools"><button type="button" class="notes-icon-button" id="btn-reset" aria-label="Reset the time map">Reset view</button></div>
+                <details id="notes-legend" open><summary class="notes-legend-title">Read the map</summary><dl><div><dt><span class="notes-legend-mark notes-legend-ground" aria-hidden="true"></span>Ground</dt><dd>Recorded publication place</dd></div><div><dt><span class="notes-legend-mark notes-legend-post" aria-hidden="true"></span>Post</dt><dd>Recorded publication dates</dd></div><div><dt><span class="notes-legend-mark notes-legend-ring" aria-hidden="true"></span>Ring</dt><dd>Documented event date</dd></div></dl><p>Color marks a founding era. Faded posts have no cleared visual evidence.</p><p>Shelves hold titles without one recorded town. They do not show an exact place.</p><p>Faded ends mark missing dates. Their size does not establish a duration.</p></details>
+                <p id="notes-explore-hint">Drag to turn · Scroll to zoom</p>
+                <article id="notes-intro-card" aria-labelledby="notes-intro-card-title"><p class="notes-card-kicker">Start a story</p><h2 id="notes-intro-card-title">Follow a documented path through the archive.</h2><div id="notes-featured-stories" class="notes-featured-stories" aria-live="polite"><p>Loading stories…</p></div><div class="notes-intro-actions"><button type="button" class="notes-primary-button" data-open-stories>All stories</button><button type="button" class="notes-secondary-button" id="btn-look">Look around</button></div></article>
+                <div id="notes-story-bar" aria-label="Story controls" hidden><div><p id="notes-stop-label">Story</p><h2 id="notes-story-title">Loading story</h2></div><div class="notes-story-actions" role="group" aria-label="Move through the story"><button type="button" class="notes-secondary-button" id="btn-prev">Previous</button><button type="button" class="notes-primary-button" id="btn-next">Next</button><button type="button" class="notes-text-button" id="btn-leave">Leave story</button></div></div>
+                <section id="notes-flat" aria-label="Flat publication timeline" hidden></section>
             </div>
-            <div class="woven-intro-summary">
-                <p>Explore publication histories and the evidence behind them.</p>
-                <dl class="woven-totals">
-                    <div><dt>Publications</dt><dd data-count="total">…</dd></div>
-                    <div><dt>Still publishing</dt><dd data-count="still">…</dd></div>
-                    <div><dt>Years in view</dt><dd>1880–2026</dd></div>
-                </dl>
-            </div>
+            <aside id="notes-panel" aria-label="Publication or story record" hidden><div class="notes-panel-topline"><p>Archive record</p><button type="button" class="notes-icon-button" id="btn-close-panel">Close</button></div><div id="notes-panel-content"></div></aside>
         </section>
-
-
-
-        <nav class="woven-era-index" aria-label="Browse by founding era">
-            <p>Follow a founding era</p>
-            <div id="woven-era-choices" role="group" aria-label="Founding era"></div>
-            <p id="woven-renderer-note" hidden>The flat timeline is available. The 3D timeline needs WebGL.</p>
-        </nav>
-
-        <div id="woven-stage" data-view="loading">
-            <p id="woven-canvas-help" class="sr-only">In the 3D timeline, use up and down to choose a publication, Enter to read it, and left and right to turn. In the flat timeline, drag to move and scroll or pinch to zoom. The publication index and Read as a list offer the same records.</p>
-            <canvas id="woven-canvas" role="application" tabindex="0"
-                    aria-label="Interactive timeline of New Jersey Black publications"
-                    aria-describedby="woven-canvas-help"></canvas>
-
-            <div id="woven-chrome">
-            <div id="woven-topbar">
-                <div class="woven-view-switch" role="group" aria-label="Visualization view">
-                    <button type="button" class="woven-btn" data-woven-view="3d" aria-pressed="true">3D timeline</button>
-                    <button type="button" class="woven-btn" data-woven-view="timeline" aria-pressed="false">Flat timeline</button>
-                </div>
-                <button type="button" class="woven-btn woven-primary-btn" id="btn-tours" aria-expanded="false" aria-controls="woven-tourpicker">Guided stories</button>
-                <button type="button" class="woven-btn" id="woven-find-title">Find a title</button>
-
-                <details id="woven-more-tools">
-                    <summary class="woven-btn">More tools</summary>
-                    <div class="woven-more-panel" aria-label="More timeline tools">
-                        <button type="button" class="woven-btn" id="btn-start">How to explore</button>
-                        <button type="button" class="woven-btn" id="btn-help">How this works</button>
-                        <button type="button" class="woven-btn" id="btn-ghost">Gaps in the record</button>
-                        <button type="button" class="woven-btn" id="btn-reset">Reset the view</button>
-                        <button type="button" class="woven-btn" id="btn-fullscreen" aria-label="Enter fullscreen" hidden>Fullscreen</button>
-                        <a class="woven-btn" href="#woven-twin">Read as a list</a>
-                    </div>
-                </details>
-            </div>
-
-            <div id="woven-eranav">
-                <div class="bar-scroll">
-                    <button type="button" class="woven-btn" id="btn-era-prev" aria-label="Move to earlier founding decades">Previous era</button>
-                    <span id="woven-era-now"></span>
-                    <button type="button" class="woven-btn" id="btn-era-next" aria-label="Move to later founding decades">Next era</button>
-                    <button type="button" class="woven-btn" id="btn-whole">Whole timeline · <span data-count="total">…</span> titles</button>
-                </div>
-                <span id="woven-eranav-note">Zoom to read labels, or choose a title from the publication index.</span>
-            </div>
-            </div>
-
-            <div id="woven-loading" role="status">Loading the archive…</div>
-            <div id="woven-exhibit-axis" aria-label="Publication years"></div>
-            <div id="woven-turn-controls" role="group" aria-label="Turn the 3D timeline" hidden>
-                <button type="button" class="woven-btn" data-woven-turn="-1" aria-label="Turn timeline left">←</button>
-                <button type="button" class="woven-btn" data-woven-turn="1" aria-label="Turn timeline right">→</button>
-                <button type="button" class="woven-btn" id="woven-motion" aria-pressed="false">Play motion</button>
-            </div>
-            <p id="woven-exhibit-caption">Select a publication to read its history and sources.</p>
-            <aside id="woven-browser" aria-labelledby="woven-browser-title">
-                <div class="woven-browser-head">
-                    <h2 id="woven-browser-title">Publications</h2>
-                <form id="woven-searchform" role="search" autocomplete="off">
-                    <label class="sr-only" for="woven-search">Search for a publication or city</label>
-                    <div class="woven-search-row">
-                        <input id="woven-search" type="search" placeholder="Search a publication or city" enterkeyhint="search"
-                               role="combobox" aria-autocomplete="list" aria-expanded="false"
-                               aria-controls="woven-search-results">
-                        <button type="submit" class="woven-btn woven-search-submit">Search</button>
-                    </div>
-                    <span id="woven-search-count" role="status" aria-live="polite"></span>
-                    <div id="woven-search-results" role="listbox" aria-label="Publication search results" hidden></div>
-                </form>
-                    <div class="woven-filter-fields">
-                        <label for="woven-city">City<select id="woven-city"><option value="">All cities</option></select></label>
-                        <label for="woven-evidence">Show<select id="woven-evidence">
-                            <option value="all">All publications</option>
-                            <option value="active">Still publishing</option>
-                            <option value="evidence">Cleared evidence</option>
-                            <option value="unillustrated">No cleared evidence</option>
-                        </select></label>
-                    </div>
-                    <div class="woven-browser-count"><p id="woven-browser-status" role="status">Loading publications…</p><button type="button" id="woven-clear-filters" disabled>Clear filters</button></div>
-                </div>
-                <p id="woven-browser-empty" hidden>No publications match these filters. Clear the filters to see all titles.</p>
-                <ol id="woven-publications" aria-label="Publications by founding year"></ol>
-                <a class="woven-index-link" href="#woven-twin">Read the archive as a list ↓</a>
-            </aside>
-
-            <div id="woven-timeline-controls" role="group" aria-label="Timeline zoom">
-                <button type="button" class="woven-btn" id="btn-zoom-in" aria-label="Zoom in">+</button>
-                <button type="button" class="woven-btn" id="btn-zoom-out" aria-label="Zoom out">−</button>
-            </div>
-            <div id="woven-yearrail" aria-hidden="true"></div>
-            <div id="woven-tip" role="presentation" hidden></div>
-            <div id="woven-notice" role="status" hidden></div>
-            <div id="woven-empty-hint" role="status" hidden>Nothing here — zoom out or reset the view</div>
-
-            <div id="woven-overlay" hidden></div>
-            <div id="woven-card" hidden></div>
-            <div id="woven-ghostnames" hidden></div>
-            <div id="woven-ghostcard" hidden></div>
-            <div id="woven-help-card" hidden></div>
-            <div id="woven-tourpicker" role="dialog" aria-modal="false" aria-label="Guided stories" hidden></div>
-
-            <div id="woven-start-card" role="dialog" aria-modal="false" aria-labelledby="woven-start-title" aria-describedby="woven-start-description" hidden>
-                <div class="woven-guide-inner">
-                    <div class="woven-guide-head">
-                        <div>
-                            <p class="woven-guide-kicker">Start here</p>
-                            <h2 id="woven-start-title">Choose how to explore</h2>
-                        </div>
-                        <button type="button" class="woven-btn" data-guide-close>Close</button>
-                    </div>
-                    <div class="woven-guide-body">
-                        <p id="woven-start-description">Follow a guided story, find a publication, or explore the timeline. Both timeline views and the stories use the same documented records.</p>
-                        <div class="woven-start-actions">
-                            <button type="button" class="woven-guide-action" data-guide-action="story">
-                                <span class="woven-guide-action-title">Follow a guided story</span>
-                                <span class="woven-guide-action-copy">Best for a first visit. Move through a short sequence of documented events.</span>
-                            </button>
-                            <button type="button" class="woven-guide-action" data-guide-action="search">
-                                <span class="woven-guide-action-title">Find a publication</span>
-                                <span class="woven-guide-action-copy">Search by title or city, then choose an exact result.</span>
-                            </button>
-                            <button type="button" class="woven-guide-action" data-guide-action="explore">
-                                <span class="woven-guide-action-title">Explore the timeline</span>
-                                <span class="woven-guide-action-copy">Choose a publication to read its dates, historical notes, and sources.</span>
-                            </button>
-                        </div>
-                        <div class="woven-quick-guide" aria-label="How to explore on your own">
-                            <span><b>1</b> Drag to move</span>
-                            <span><b>2</b> Choose a title or zoom</span>
-                            <span><b>3</b> Select a publication for its record</span>
-                        </div>
-                        <p class="woven-guide-list-link">Prefer a conventional index? <a class="link-thread" href="archive.html">Open the full archive</a>.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="woven-coach" role="status" hidden>
-                <span><strong>Explore:</strong> drag to move · scroll or pinch to zoom · select a publication</span>
-                <button type="button" aria-label="Hide exploration instructions">Got it</button>
-            </div>
-
-            <aside id="woven-panel" role="dialog" aria-modal="false" aria-labelledby="woven-panel-title" hidden></aside>
-
-            <div id="woven-tourbar" hidden></div>
-        </div>
-        </div>
-
-        <section id="woven-stories" class="woven-story-shelf" aria-labelledby="woven-stories-title" hidden>
-            <div class="woven-section-heading"><h2 id="woven-stories-title">Follow a story</h2><button type="button" class="woven-btn" id="woven-all-stories">All <span data-count="tours">…</span> stories →</button></div>
-            <ul id="woven-story-list"></ul>
-        </section>
-
-        <section class="woven-reading-key" aria-labelledby="woven-key-title">
-            <h2 id="woven-key-title">Reading the timeline</h2>
-            <div class="woven-key-lines">
-                <p><span class="woven-key-thread" aria-hidden="true"></span><strong>One bar, one publication.</strong> Color groups founding eras. Bar width reflects the number of evidence records.</p>
-                <p><span class="woven-key-thread is-dashed" aria-hidden="true"></span><strong>Gaps in the evidence.</strong> Faint bars identify titles without evidence cleared for display here. Copies may survive elsewhere.</p>
-                <p><span class="woven-key-thread is-open" aria-hidden="true"></span><strong>Dates need care.</strong> Bars show recorded publication spans. Dashed bars mark unrecorded end dates. Arrows mark active titles. Undated titles appear in a separate group.</p>
-            </div>
-            <p class="woven-key-note">An unrecorded end date does not establish that a title survived to the present. Colors group titles by founding era; gray marks undated titles.</p>
-        </section>
-
-
-        <div id="woven-live" aria-live="polite" aria-atomic="true" class="sr-only"></div>
-        <div id="woven-live-assertive" aria-live="assertive" class="sr-only"></div>
-
-        <div class="max-w-[68rem] mx-auto px-4 pt-8">
-            <div id="woven-banner" role="status" hidden>
-                <p class="banner-text"></p>
-                <p class="mt-2"><a class="link-thread" href="archive.html">Open the full archive</a> · <a class="link-thread" href="index.html#timeline">Open the decade timeline</a></p>
-            </div>
-        </div>
-
-        <details id="woven-list-disclosure">
-            <summary>Read all <span data-count="total">…</span> publications as a list</summary>
-            <div id="woven-twin" role="region" aria-labelledby="woven-twin-h"></div>
-        </details>
-
-        <noscript>
-            <div class="max-w-[68rem] mx-auto px-4 py-12">
-                <p>The interactive views use JavaScript. The same publications, their dates, and their evidence are on the archive page.</p>
-                <p class="mt-3"><a class="link-thread" href="archive.html">Open the full archive</a> · <a class="link-thread" href="index.html#timeline">Open the decade timeline</a></p>
-            </div>
-        </noscript>
-
-        <footer class="bg-walnut-900 border-t border-walnut-600 pt-12 pb-10 px-4 md:px-8">
-            <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start gap-4 text-xs font-mono text-linen-300 uppercase tracking-wider">
-                <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
-                <div class="flex gap-6">
-                    <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener noreferrer" class="hover:text-stain">CCM</a>
-                    <a href="https://github.com/CenterCoopMedia" target="_blank" rel="noopener noreferrer" class="hover:text-stain">GitHub</a>
-                </div>
-            </div>
-        </footer>
+        <section class="notes-year-control" aria-labelledby="notes-year-heading"><div class="notes-year-copy"><p class="notes-kicker" id="notes-year-heading">Year plane</p><label class="notes-checkbox-label" for="notes-year-enabled"><input type="checkbox" id="notes-year-enabled"> Show the press as of</label></div><div class="notes-year-range-wrap"><input type="range" id="notes-year" min="1880" max="2026" value="2026" step="1" aria-label="Year shown on the time map" disabled><div class="notes-year-ends" aria-hidden="true"><span>1880</span><span>Now</span></div></div><p class="notes-year-readout"><strong id="notes-year-label">Now</strong><span id="notes-year-count">Choose a year to see recorded publishing spans.</span></p></section>
+        <section class="notes-explainer" aria-labelledby="notes-explainer-title"><div><p class="notes-kicker">About this view</p><h2 id="notes-explainer-title">Place and time, together.</h2></div><div class="notes-explainer-copy"><p>Each publication stands at its recorded town. Its vertical span uses recorded dates only.</p><p>Titles without recorded dates or a recorded town remain visible without a guessed position or span.</p><p class="notes-geography-note">* Crowded town groups move apart. Lines lead back to saved town centres; these do not identify an address.</p><p class="notes-geography-note">State outline: <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html" target="_blank" rel="noopener noreferrer">U.S. Census Bureau</a>, 2023.</p></div><p id="notes-totals" class="notes-totals" aria-label="Archive totals"></p></section>
+        <details id="notes-list-disclosure"><summary>Read the archive as a list</summary><div id="notes-twin" role="region" aria-labelledby="notes-list-disclosure"></div></details>
+        <noscript><div class="notes-noscript"><p>The time map uses JavaScript. The archive page contains the same publication records.</p><a href="archive.html">Open the full archive</a></div></noscript>
     </main>
-
-    <script type="module" src="js/woven/guide.js"></script>
-    <script type="module" src="js/woven/main.js"></script>
+    <dialog id="notes-stories" aria-labelledby="notes-stories-title"><div class="notes-dialog-head"><div><p class="notes-kicker">Guided stories</p><h2 id="notes-stories-title">Follow a documented path.</h2></div><button type="button" class="notes-icon-button" id="btn-close-stories">Close</button></div><ol id="notes-story-list" class="notes-story-list"></ol></dialog>
+    <dialog id="notes-find" aria-labelledby="notes-find-title"><div class="notes-dialog-head"><div><p class="notes-kicker">Archive search</p><h2 id="notes-find-title">Find a title</h2></div><button type="button" class="notes-icon-button" id="btn-close-find">Close</button></div><div class="notes-find-fields"><label for="notes-search">Title or town<input id="notes-search" type="search" placeholder="Search a publication or town" autocomplete="off"></label><label for="notes-city">Town<select id="notes-city"><option value="">All towns</option></select></label><label for="notes-evidence">Records<select id="notes-evidence"><option value="all">All publications</option><option value="active">Still publishing</option><option value="evidence">Cleared evidence</option><option value="missing">No cleared evidence</option></select></label></div><div class="notes-find-status"><p id="notes-find-count" role="status">Loading publications…</p><button type="button" class="notes-text-button" id="notes-clear">Clear filters</button></div><ul id="notes-publications" class="notes-publications" aria-label="Publication results"></ul></dialog>
+    <div id="notes-live" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div><div id="notes-live-assertive" aria-live="assertive" aria-atomic="true" class="sr-only"></div>
+    <footer class="bg-walnut-900 border-t border-walnut-600 pt-12 pb-10 px-4 md:px-8"><div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start gap-4 text-xs font-mono text-linen-300 uppercase tracking-wider"><p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p><div class="flex gap-6"><a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener noreferrer" class="hover:text-stain">CCM</a><a href="https://github.com/CenterCoopMedia" target="_blank" rel="noopener noreferrer" class="hover:text-stain">GitHub</a></div></div></footer>
+    <script type="module" src="js/notes/main.js"></script>
     <script>
         (function () {
             const btn = document.getElementById('mobile-menu-btn');
             const close = document.getElementById('mobile-menu-close');
             const menu = document.getElementById('mobile-menu');
-
-            function setOpen(open) {
-                menu.classList.toggle('translate-x-full', !open);
-                document.body.classList.toggle('overflow-hidden', open);
-                btn.setAttribute('aria-expanded', String(open));
-                if (open) close.focus(); else btn.focus();
-            }
-
+            function setOpen(open) { menu.classList.toggle('translate-x-full', !open); document.body.classList.toggle('overflow-hidden', open); btn.setAttribute('aria-expanded', String(open)); if (open) close.focus(); else btn.focus(); }
             btn.addEventListener('click', () => setOpen(menu.classList.contains('translate-x-full')));
             close.addEventListener('click', () => setOpen(false));
-            menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && !menu.classList.contains('translate-x-full')) setOpen(false);
-            });
-
+            menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+            document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !menu.classList.contains('translate-x-full')) setOpen(false); });
             document.getElementById('copyright-year').textContent = new Date().getFullYear();
         })();
     </script>

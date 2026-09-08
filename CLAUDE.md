@@ -40,18 +40,20 @@ Main pages:
 - `docs/story.html`: Sourced narrative selected with `?id=`.
 - `docs/era.html`: Historical era selected with `?decade=`.
 - `docs/map.html`: Publication map and decade filter.
-- `docs/historical-notes.html`: Guided stories, a plain publication timeline,
-  an era index, and a publication browser. Lines use recorded publication spans.
-  Distinguish unknown dates from active status. Three.js renders a 3D timeline
-  of separate publication bars. A flat timeline provides precise date comparison.
-  Canvas 2D supports browsers without WebGL.
-  `?nogl=1` opens the complete text archive. See `WOVEN_REVIEW.md` for checks.
-  `docs/woven.html` forwards old links and preserves their query and fragment.
+- `docs/historical-notes.html`: A time map and a flat timeline of the same
+  publication records. The time map places each title at its recorded town and
+  uses height only for recorded publication years. It uses the existing map
+  centers and a Census 2023 New Jersey outline. Displaced town clusters are
+  approximate and never identify an address. Unknown dates and places remain
+  explicit and are never guessed. The year plane reports the count from
+  recorded spans and the count with unrecorded years. `?nogl=1` opens the
+  complete text archive.
+  See `NOTES_REVIEW.md` for checks. `docs/woven.html` forwards legacy links.
 - `docs/wiki/`: Generated public HTML wiki.
 
 The scripts in `docs/js/` support the main site. Most older scripts use the
-IIFE pattern. Historical notes uses ES modules under `docs/js/woven/` and vendored Three.js
-files under `docs/vendor/`.
+IIFE pattern. Historical notes uses ES modules under `docs/js/notes/` and
+vendored Three.js files under `docs/vendor/`.
 
 `docs/js/site-nav.js` defines the shared site navigation. Update its regression
 check when you change the global navigation.
@@ -140,8 +142,8 @@ python3 data/test_source_catalog.py
 python3 data/test_map.py
 python3 data/test_navigation.py
 python3 data/test_wiki_publications.py
-python3 data/test_woven_layout.py
-python3 data/test_woven_usability.py
+node data/test_notes_model.mjs
+python3 scripts/review_notes.py --output /tmp/notes-review
 python3 scripts/generate_okf_wiki.py --check
 ```
 
@@ -175,5 +177,8 @@ comes next. Do not include file paths or engineering jargon.
 - Open external links in a new tab with `target="_blank"` and
   `rel="noopener noreferrer"`.
 - Use `?id=` for publication and story details. Use `?decade=` for era details.
+  Historical notes accepts `?pub=ID` or `?id=ID`, `?story=ID&stop=N`,
+  `?year=YYYY`, `?view=map|flat`, and `?nogl=1`. Legacy `woven` and `3d`
+  view values resolve to `map`; `timeline` resolves to `flat`.
 - Keep changes focused. Do not edit generated files without their source.
 - Preserve unrelated worktree changes.

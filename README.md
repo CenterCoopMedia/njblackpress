@@ -21,7 +21,7 @@ publications.
 | [Stories](https://centercoopmedia.github.io/njblackpress/story.html) | Sourced narratives that connect publications and events |
 | [Eras](https://centercoopmedia.github.io/njblackpress/era.html) | Historical periods and their publication activity |
 | [Map](https://centercoopmedia.github.io/njblackpress/map.html) | Publication activity by place and decade |
-| [Historical notes](https://centercoopmedia.github.io/njblackpress/historical-notes.html) | Guided stories, publication timeline, historical notes, and source evidence |
+| [Historical notes](https://centercoopmedia.github.io/njblackpress/historical-notes.html) | Time map, flat timeline, guided stories, and source evidence |
 | [Wiki](https://centercoopmedia.github.io/njblackpress/wiki/) | Pre-rendered publication and browse pages |
 
 Each publication record includes known dates, locations, publishers, formats,
@@ -42,7 +42,7 @@ The project has no backend service, database server, or JavaScript framework.
 ```text
 docs/                         Published GitHub Pages site
   data/                       Browser-ready data copies
-  js/                         Site scripts and Historical notes modules
+  js/notes/                   Historical notes modules
   wiki/                       Generated public HTML wiki
 data/                         Source data, research, builders, and checks
   research/source-catalog.json
@@ -132,8 +132,8 @@ python3 data/test_source_catalog.py
 python3 data/test_map.py
 python3 data/test_navigation.py
 python3 data/test_wiki_publications.py
-python3 data/test_woven_layout.py
-python3 data/test_woven_usability.py
+node data/test_notes_model.mjs
+python3 scripts/review_notes.py --output /tmp/notes-review
 python3 scripts/generate_okf_wiki.py --check
 ```
 

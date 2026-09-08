@@ -37,9 +37,24 @@ The main site scripts live in `docs/js/`:
 - `map.js`: Map rendering and decade filtering.
 - `site-nav.js`: Shared navigation.
 
-Historical notes uses ES modules under `docs/js/woven/`. Its modules separate data,
-layout, rendering, labels, selection, story tours, evidence panels, fallback
-behavior, and first-visit guidance. Three.js is vendored under `docs/vendor/`.
+Historical notes uses ES modules under `docs/js/notes/`:
+
+- `data.js` derives the shared publication, event, story, clipping, and cluster
+  model from browser data.
+- `geo.js` projects the existing map centers and converts recorded years to
+  vertical positions.
+- `scene.js` renders the WebGL time map and its single publication-post mesh.
+- `flat.js` renders the date-comparison fallback view.
+- `content.js` renders publication records, stories, filters, and the complete
+  accessible list.
+- `main.js` owns state, dialogs, routes, keyboard controls, and WebGL fallback.
+
+The time map uses the Census 2023 New Jersey outline and the existing map
+centers. A post's height means recorded years only. A displaced cluster is an
+approximate display position, never a publisher address. Unknown dates and
+places remain visible without inferred values. The year plane reports titles
+with recorded spans separately from titles with unrecorded years. Three.js is
+vendored under `docs/vendor/`.
 
 ## Styling
 
@@ -50,8 +65,7 @@ stylesheet to `docs/css/tailwind.css`.
 Custom styles live in:
 
 - `docs/css/styles.css`: Shared site styles.
-- `docs/css/woven.css`: Historical notes layout and rendering interface.
-- `docs/css/woven-guide.css`: Historical notes guidance and progressive controls.
+- `docs/css/notes.css`: Historical notes layout and rendering interface.
 
 ## Data flow
 

@@ -5,28 +5,29 @@ on:
     paths:
       - 'docs/woven.html'
       - 'docs/historical-notes.html'
-      - 'docs/js/woven/**'
-      - 'docs/css/woven*.css'
+      - 'docs/js/notes/**'
+      - 'docs/css/notes.css'
       - 'docs/css/styles.css'
       - 'docs/css/tailwind.css'
       - 'docs/js/site-nav.js'
       - 'docs/data/**'
+      - 'docs/data/nj-outline.json'
       - 'docs/vendor/**'
-      - 'data/test_woven*.py'
-      - 'data/test_woven*.mjs'
+      - 'data/test_notes_model.mjs'
       - 'data/test_site_data.py'
       - 'data/test_navigation.py'
-      - 'scripts/*woven*'
+      - 'scripts/build_nj_outline.py'
+      - 'scripts/review_notes.py'
       - 'package*.json'
       - 'tailwind.config.js'
       - 'src/input.css'
-      - '.github/workflows/woven-review.yml'
+      - '.github/workflows/notes-review.yml'
 
 permissions:
   contents: read
 
 concurrency:
-  group: woven-review-${{ github.ref }}
+  group: notes-review-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -42,26 +43,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Check static data and layout
+      - name: Check static data and time map model
         run: |
           npm ci
           npm run build:css
           python3 data/test_site_data.py
-          python3 data/test_woven_layout.py
-          python3 data/test_woven_usability.py
           python3 data/test_navigation.py
-          node scripts/test-woven-exhibit.mjs
-          node data/test_woven_model.mjs
+          node --experimental-default-type=module data/test_notes_model.mjs
       - name: Install browser checks
         run: |
           python -m pip install playwright==1.55.0
           python -m playwright install --with-deps chromium
-      - name: Check desktop, touch, keyboard, motion, and fallback behavior
-        run: python scripts/review_woven.py --output /tmp/woven-review
+      - name: Check time map browser behavior
+        run: python3 scripts/review_notes.py --output /tmp/notes-review
       - name: Save visual review evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: woven-visual-review
-          path: /tmp/woven-review
+          name: notes-visual-review
+          path: /tmp/notes-review
           retention-days: 14
