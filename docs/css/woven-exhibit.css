@@ -1,16 +1,16 @@
-/* Woven exhibition: ink, dyed threads, and an index that stays readable.
+/* Historical notes: publication bars and a readable record index.
    Scoped to this page. No framework, new fonts, images, or generated CSS. */
-.surface-woven .grain-overlay { opacity: 0.025; }
+.surface-notes .grain-overlay { opacity: 0.025; }
 #woven-firstscreen { display: block; height: auto; min-height: 0; }
 #woven-intro.woven-masthead {
   display: flex; justify-content: space-between; align-items: end; gap: 2rem;
   max-width: 1600px; margin: auto; padding: 2.1rem 2.5rem 1.8rem;
 }
-.woven-title-block { display: flex; align-items: center; gap: 2rem; }
+.woven-title-block { display: block; max-width: 48rem; }
 .woven-title-block h1 {
   margin: 0; font-family: 'Libre Franklin', Arial, sans-serif;
-  font-size: clamp(4rem, 7.7vw, 8rem); font-weight: 900;
-  letter-spacing: -0.075em; line-height: 0.98; color: var(--linen-50);
+  font-size: clamp(2.8rem, 4.8vw, 5rem); font-weight: 900;
+  letter-spacing: -0.045em; line-height: 0.98; color: var(--linen-50);
 }
 .woven-title-block > p { margin: 0; font-size: clamp(1.05rem, 1.4vw, 1.4rem); line-height: 1.4; }
 .woven-intro-summary { max-width: 26rem; }
@@ -36,13 +36,13 @@
 #woven-stage.woven-legend-hidden #woven-yearrail { right: 0; }
 #woven-stage.woven-legend-hidden #woven-browser { display: none; }
 #woven-stage.woven-legend-hidden #woven-exhibit-caption { display: none; }
-#woven-stage[data-view="woven"] #woven-eranav,
-#woven-stage[data-view="woven"] #woven-labels,
-#woven-stage[data-view="woven"] #woven-eras,
-#woven-stage[data-view="woven"] #woven-yearrail,
-#woven-stage[data-view="woven"] #woven-empty-hint,
-#woven-stage[data-view="woven"] #woven-coach { display: none; }
-#woven-stage:not([data-view="woven"]) #woven-exhibit-axis { display: none; }
+#woven-stage[data-view="3d"] #woven-eranav,
+#woven-stage[data-view="3d"] #woven-labels,
+#woven-stage[data-view="3d"] #woven-eras,
+#woven-stage[data-view="3d"] #woven-yearrail,
+#woven-stage[data-view="3d"] #woven-empty-hint,
+#woven-stage[data-view="3d"] #woven-coach { display: none; }
+#woven-stage:not([data-view="3d"]) #woven-exhibit-axis { display: none; }
 #woven-topbar { padding: 0.75rem; gap: 0.5rem; background: var(--walnut-900); align-items: stretch; }
 #woven-topbar .woven-btn, #woven-turn-controls .woven-btn {
   min-height: 40px; font-size: 0.81rem; padding: 0.5rem 0.7rem;
@@ -65,7 +65,7 @@
 #woven-turn-controls [data-woven-turn] { width: 44px; font-size: 1.2rem; }
 #woven-exhibit-caption { position: absolute; left: 1.2rem; right: calc(var(--exhibit-dock) + 1.2rem); bottom: 1rem; margin: 0; color: var(--linen-300); font-size: 0.82rem; line-height: 1.45; pointer-events: none; }
 #woven-stage[data-view="timeline"] #woven-exhibit-caption { display: none; }
-#woven-stage[data-view="woven"] #woven-canvas { touch-action: pan-y; }
+#woven-stage[data-view="3d"] #woven-canvas { touch-action: pan-y; }
 #woven-browser {
   position: absolute; inset: 0 0 0 auto; width: var(--exhibit-dock); z-index: 5;
   display: flex; flex-direction: column; background: var(--walnut-800);
@@ -119,7 +119,7 @@
 #woven-story-list strong { display: block; font-size: 1.2rem; line-height: 1.4; font-weight: 650; }
 #woven-story-list span { display: block; font-size: 0.85rem; line-height: 1.4; color: var(--linen-300); margin-top: 0.6rem; }
 #woven-story-list button:hover strong { color: var(--stain-light); }
-.surface-woven :is(button, a, input, select, summary):focus-visible { outline: 2px solid var(--stain-light); outline-offset: 3px; }
+.surface-notes :is(button, a, input, select, summary):focus-visible { outline: 2px solid var(--stain-light); outline-offset: 3px; }
 body.twin-primary #woven-firstscreen { height: auto; }
 body.twin-primary .woven-reading-key { display: none; }
 #woven-stage:fullscreen { width: 100%; max-width: none; height: 100%; margin: 0; }
@@ -167,7 +167,7 @@ body.twin-primary .woven-reading-key { display: none; }
 }
 @media (max-width: 480px) {
   .woven-title-block { gap: 0.8rem; }
-  .woven-title-block h1 { font-size: 3.8rem; }
+  .woven-title-block h1 { font-size: 2.7rem; }
   .woven-title-block > p { font-size: 0.86rem; }
   #woven-stage { width: 100%; border-inline: 0; --plot-height: 475px; }
   #woven-topbar { padding: 0.6rem; gap: 0.4rem; }
@@ -180,7 +180,7 @@ body.twin-primary .woven-reading-key { display: none; }
   .woven-totals dd { font-size: 1.15rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .surface-woven *, .surface-woven *::before, .surface-woven *::after { scroll-behavior: auto !important; transition-duration: 0s !important; animation-duration: 0s !important; }
+  .surface-notes *, .surface-notes *::before, .surface-notes *::after { scroll-behavior: auto !important; transition-duration: 0s !important; animation-duration: 0s !important; }
 }
 @media (forced-colors: active) {
   #woven-stage, #woven-browser, #woven-panel, .woven-publication { border-color: CanvasText; }
@@ -196,8 +196,8 @@ body.twin-primary .woven-reading-key { display: none; }
 #woven-browser .woven-search-submit::before { content: none; }
 @media (max-width: 899px) { #woven-list-disclosure { width: calc(100% - 2rem); } }
 
-#woven-stage[data-view="woven"] #woven-canvas { touch-action: pan-y; cursor: grab; }
-#woven-stage[data-view="woven"] #woven-canvas:active { cursor: grabbing; }
+#woven-stage[data-view="3d"] #woven-canvas { touch-action: pan-y; cursor: grab; }
+#woven-stage[data-view="3d"] #woven-canvas:active { cursor: grabbing; }
 
 /* Era choices share the thread colors in both views. */
 .woven-era-index { width: calc(100% - 5rem); max-width: 1520px; margin: 0 auto 1rem; }
@@ -222,3 +222,10 @@ body.twin-primary .woven-reading-key { display: none; }
   .woven-era-choice { flex-shrink: 0; }
   #woven-timeline-controls { top: calc(var(--plot-height) - 80px); bottom: auto; }
 }
+
+/* Plain archive surfaces replace the textile treatments on this page. */
+.surface-notes { background: #14100b; }
+.surface-notes .surface-cloth { background-image: none; }
+.surface-notes .link-thread { text-decoration-style: solid; }
+.surface-notes .divider-stitched { border-top-style: solid; }
+.woven-title-block > p { margin-top: 0.8rem; }

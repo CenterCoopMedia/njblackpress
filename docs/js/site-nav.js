@@ -11,10 +11,10 @@
     { label: 'Eras', path: 'era.html' },
     { label: 'Map', path: 'map.html' },
     { label: 'Wiki', path: 'wiki/index.html' },
-    { label: 'Woven', path: 'woven.html' },
+    { label: 'Historical notes', path: 'historical-notes.html' },
     { label: 'About', path: 'index.html#about' }
   ];
-  const stain = location.pathname.endsWith('/woven.html');
+  const stain = location.pathname.endsWith('/historical-notes.html');
   const accent = stain ? 'stain' : 'accent';
   const activePath = location.pathname.split('/').pop() || 'index.html';
 

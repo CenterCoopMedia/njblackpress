@@ -121,7 +121,7 @@ export function createGhost(app, three, model) {
       cardEl.innerHTML = `<div class="inner">
         <div class="card-scroll">
         <h3>Gaps in the record</h3>
-        <p>${model.counts.ghost} publications have no evidence cleared for display in this archive. Some records have catalog citations or other restricted evidence; others have no attached evidence. This does not establish whether copies survive elsewhere. Their threads remain in the same cloth. Their names follow.</p>
+        <p>${model.counts.ghost} publications have no evidence cleared for display in this archive. Some records have catalog citations or other restricted evidence; others have no attached evidence. This does not establish whether copies survive elsewhere. Their publication records remain in the archive. Their names follow.</p>
         <p><button type="button" class="woven-btn" data-act="skip">Skip to the list</button></p>
         </div>
       </div>`;
@@ -133,9 +133,9 @@ export function createGhost(app, three, model) {
     } else {
       cardEl.innerHTML = `<div class="inner">
         <div class="card-scroll">
-        <h3>That is what the record lost.</h3>
-        <p>It is not the same as what happened.</p>
-        <p><button type="button" class="woven-btn" data-act="back">Return to the loom</button>
+        <h3>The evidence remains incomplete.</h3>
+        <p>These gaps do not establish whether copies survive elsewhere.</p>
+        <p><button type="button" class="woven-btn" data-act="back">Return to the timeline</button>
            <button type="button" class="woven-btn" data-act="list">Read the list again</button></p>
         </div>
       </div>`;

@@ -40,16 +40,17 @@ Main pages:
 - `docs/story.html`: Sourced narrative selected with `?id=`.
 - `docs/era.html`: Historical era selected with `?decade=`.
 - `docs/map.html`: Publication map and decade filter.
-- `docs/woven.html`: A 3D textile overview with a separate publication timeline.
-  Both views use recorded publication spans. Never extend a known lifespan to fill
-  the cloth. Distinguish unknown dates from active status.
-  Both views share an era index, publication browser, records, and guided stories.
-  Browsers without WebGL use an interactive Canvas 2D timeline.
+- `docs/historical-notes.html`: Guided stories, a plain publication timeline,
+  an era index, and a publication browser. Lines use recorded publication spans.
+  Distinguish unknown dates from active status. Three.js renders a 3D timeline
+  of separate publication bars. A flat timeline provides precise date comparison.
+  Canvas 2D supports browsers without WebGL.
   `?nogl=1` opens the complete text archive. See `WOVEN_REVIEW.md` for checks.
+  `docs/woven.html` forwards old links and preserves their query and fragment.
 - `docs/wiki/`: Generated public HTML wiki.
 
 The scripts in `docs/js/` support the main site. Most older scripts use the
-IIFE pattern. Woven uses ES modules under `docs/js/woven/` and vendored Three.js
+IIFE pattern. Historical notes uses ES modules under `docs/js/woven/` and vendored Three.js
 files under `docs/vendor/`.
 
 `docs/js/site-nav.js` defines the shared site navigation. Update its regression

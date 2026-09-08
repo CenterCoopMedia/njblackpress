@@ -93,7 +93,7 @@ Use the smallest checks that cover the changed area:
 | Navigation | `python3 data/test_navigation.py` |
 | Public wiki | `python3 data/test_wiki_publications.py` |
 | Portable wiki | `python3 scripts/generate_okf_wiki.py --check` |
-| Woven | `python3 data/test_woven_layout.py` and `python3 data/test_woven_usability.py` |
+| Historical notes | `python3 data/test_woven_layout.py` and `python3 data/test_woven_usability.py` |
 
 Check visible changes in a browser at desktop and mobile sizes. Check keyboard
 navigation when the change affects controls, dialogs, or focus.

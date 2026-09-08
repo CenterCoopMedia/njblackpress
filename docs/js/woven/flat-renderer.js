@@ -60,18 +60,8 @@ export function createFlatRenderer(canvas, model) {
           if (start > edge || end < start) return;
           end = Math.min(end, edge);
           ctx.beginPath();
-          const steps = Math.max(2, Math.ceil((end - start) * 3));
-          for (let i = 0; i <= steps; i++) {
-            const part = i / steps;
-            let wave = 0;
-            const age = uniforms.uPluckAge.value;
-            if (uniforms.uPluckAmp.value && age < 1.25 && uniforms.uPluckIdx.value.x === t.threadIndex) {
-              wave = Math.exp(-age * 2.6) * Math.sin(part * Math.PI) * Math.sin(part * 18.85 - age * 27) * 0.20 * uniforms.uPluckScale.value;
-            }
-            const sx = px(start + (end - start) * part);
-            const sy = py(t.y + wave + offset * part);
-            if (i === 0) ctx.moveTo(sx, sy); else ctx.lineTo(sx, sy);
-          }
+          ctx.moveTo(px(start), py(t.y + offset));
+          ctx.lineTo(px(end), py(t.y));
           ctx.stroke();
         };
         if (t.unknownFounding) {
@@ -86,7 +76,8 @@ export function createFlatRenderer(canvas, model) {
         }
         if (t.endState === 'still') {
           stroke(x(YEAR_MAX), 74.5);
-          for (const offset of [-0.06, 0, 0.06]) stroke(74.5, 78.5, offset);
+          stroke(73.5, 74.5, 0.3);
+          stroke(73.5, 74.5, -0.3);
         }
       }
       ctx.setLineDash([]);

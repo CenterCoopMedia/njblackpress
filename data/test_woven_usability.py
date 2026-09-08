@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-HTML_PATH = ROOT / "docs" / "woven.html"
+HTML_PATH = ROOT / "docs" / "historical-notes.html"
 CSS_PATH = ROOT / "docs" / "css" / "woven-guide.css"
 JS_PATH = ROOT / "docs" / "js" / "woven" / "guide.js"
 DIALOG_PATH = ROOT / "docs" / "js" / "woven" / "guide-dialog.js"
@@ -82,7 +82,7 @@ def main() -> None:
     assert "aria-activedescendant" in js
     assert "woven-mobile-tour" in js
     assert "woven-story-expanded" in js
-    assert "Read story" in js and "More loom" in js
+    assert "Read story" in js and "More timeline" in js
     assert "closeSearchResults(true)" in js
 
     assert "aria-modal" in dialog_js

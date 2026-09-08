@@ -60,18 +60,6 @@ void main() {
   // Widen outward from the thread's own centre line, never move the centre.
   p.y += aRibbonV * max(0.0, uMinHalfW - aHalfW);
 
-  float w = uPluckAmp * pluckWeight(aThreadIndex);
-  if (w > 0.0 && uPluckAge < 1.25) {
-    // A struck string: a travelling wave, pinned at both ends, decaying to
-    // nothing in about 1.2 seconds. No CPU physics, one uniform set per pluck.
-    float envelope = exp(-uPluckAge * 2.6) * (1.0 - smoothstep(1.05, 1.25, uPluckAge));
-    float shape = sin(vRamp * 3.14159265);
-    float wave = sin(vRamp * 18.85 - uPluckAge * 27.0);
-    float d = w * envelope * shape * wave;
-    p.y += d * 0.20 * uPluckScale;
-    p.z += d * 0.10 * uPluckScale;
-  }
-
   gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
 }
 `;
@@ -113,27 +101,15 @@ void main() {
   if (vYearNorm > uWeaveProgress + 0.004) discard;
   float revealFade = clamp((uWeaveProgress + 0.004 - vYearNorm) / 0.004, 0.0, 1.0);
 
-  // Round-thread fake: a flat ribbon shaded like a cylinder.
-  float r = clamp(abs(vRibbonV), 0.0, 1.0);
-  float ny = sqrt(max(0.0, 1.0 - r * r));
-  float lambert = clamp(dot(normalize(vec3(0.32, 0.64, 0.70)),
-                           normalize(vec3(0.0, vRibbonV, ny))), 0.0, 1.0);
-  float shade = 0.42 + 0.58 * lambert;
-  vec3 col = vColor * shade;
+  vec3 col = vColor;
   float alpha = revealFade;
-
-  // Raking light: the cloth catches the lamp just behind the growing edge, so
-  // the reader can see how far it has been drawn in. One exp, no branches.
-  float rake = exp(-max(0.0, uWeaveProgress - vYearNorm) * 42.0);
-  col += col * rake * 0.85;
 
   float ghost = mod(vFlags, 2.0);
   float unknownEnd = mod(floor(vFlags / 4.0), 2.0);
 
   if (ghost > 0.5) {
     alpha *= uGhostAlpha + vState.b * (0.62 - 0.28);
-    float fray = valueNoise(vec2(vYearNorm * 34.0, vFraySeed * 91.0));
-    if (fray < uFrayCut * vRamp) discard;
+
   }
 
   if (unknownEnd > 0.5) {

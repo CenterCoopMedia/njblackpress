@@ -5,7 +5,6 @@ import { CLOTH_VERT, CLOTH_FRAG } from './shaders.js';
 import { WEAVE_AMP, X_PER_YEAR, YEAR_MIN, YEAR_SPAN, x } from './layout.js';
 
 const SPLIT_X = 74.5;
-const OFF_LOOM_X = 78.5;
 const OAK_500 = new THREE.Color('#6b563c');
 
 class RibbonBuilder {
@@ -91,7 +90,7 @@ function threadColumns(t) {
       const d = endX - xx;
       if (d < 1.0) w *= 0.4 + 0.6 * d;
     }
-    const z = WEAVE_AMP * (((t.threadIndex + k) % 2) ? 1 : -1);
+    const z = 0;
     cols.push({ x: xx, y: t.y, w, z, yearNorm: yearNorm(xx), ramp: (xx - startX) / span });
   }
 
@@ -100,15 +99,6 @@ function threadColumns(t) {
 
   const pieces = [cols];
 
-  if (t.endState === 'ceased' && !unknownEnd) {
-    // Clean selvedge: a 0.10-unit tuck folding the end back on itself.
-    const e = cols[cols.length - 1];
-    pieces.push([
-      { ...e, w: t.width, z: e.z },
-      { ...e, x: e.x - 0.10, w: t.width * 0.55, z: e.z - 0.05, ramp: 1 }
-    ]);
-  }
-
   appendActiveEnd(pieces, t, cols[cols.length - 1]);
   return { pieces, meta };
 }
@@ -116,29 +106,20 @@ function threadColumns(t) {
 // Keep the active-status cue separate from the recorded date span.
 function appendActiveEnd(pieces, t, last2) {
   if (t.endState === 'still') {
-    // Past the right post, into three loose strands that taper to nothing.
-    for (const dy of [-0.06, 0, 0.06]) {
-      const strand = [];
-      for (let s = 0; s <= 8; s++) {
-        const xx = SPLIT_X + ((OFF_LOOM_X - SPLIT_X) * s) / 8;
-        const taper = 1 - s / 8;
-        strand.push({
-          x: xx, y: t.y + dy * (s / 8), w: t.width * taper, z: last2.z,
-          yearNorm: 1, ramp: 1
-        });
-      }
-      pieces.push(strand);
-    }
-    // Bridge from the cloth edge to the split point.
     pieces.push([
       { ...last2, x: x(2026), yearNorm: 1, ramp: 1 },
       { ...last2, x: SPLIT_X, yearNorm: 1, ramp: 1 }
+    ]);
+    // A triangular arrow marks active status beyond the date axis.
+    pieces.push([
+      { ...last2, x: SPLIT_X, w: Math.max(t.width * 3, 0.18), yearNorm: 1, ramp: 1 },
+      { ...last2, x: SPLIT_X + 0.7, w: 0, yearNorm: 1, ramp: 1 }
     ]);
   }
 }
 
 function colAt(xx, t, w, ramp, k) {
-  return { x: xx, y: t.y, w, z: WEAVE_AMP * ((k % 2) ? 1 : -1), yearNorm: yearNorm(xx), ramp };
+  return { x: xx, y: t.y, w, z: 0, yearNorm: yearNorm(xx), ramp };
 }
 
 export function buildWeft(model) {

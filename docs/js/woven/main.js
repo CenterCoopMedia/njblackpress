@@ -37,7 +37,7 @@ async function boot() {
   try {
     model = await loadModel();
   } catch (e) {
-    console.error('Woven: data load failed', e);
+    console.error('Historical notes: data load failed', e);
     const loading = document.getElementById('woven-loading');
     loading.textContent = 'The archive could not load. Reload this page or open the full archive.';
     document.getElementById('woven-browser-status').textContent = 'Publication data is unavailable.';
@@ -54,7 +54,7 @@ async function boot() {
     playStory: (id) => app.playStory && app.playStory(id)
   });
 
-  console.info('[woven] counts', model.counts);
+  console.info('[historical notes] counts', model.counts);
 
   if (params.get('nogl') === '1') {
     const { startFallback } = await import('./fallback.js');
@@ -69,7 +69,7 @@ async function boot() {
   try {
     await startScene(model, !hasWebGL());
   } catch (error) {
-    console.error('Woven: drawing failed', error);
+    console.error('Historical notes: drawing failed', error);
     app.contextLost = true;
     app.exhibit?.dispose();
     app.three?.renderer.dispose();
@@ -129,7 +129,7 @@ async function startScene(model, flat = false) {
   warpFull.renderOrder = 1;
   warpCoarse.renderOrder = 1;
   warpFull.visible = false;
-  scene.add(warpFull, warpCoarse);
+  // The decade grid provides scale; the publication bars have no crossing texture.
 
   const knots = buildKnots(model);
   knots.meshes.forEach((m) => scene.add(m));
@@ -156,7 +156,7 @@ async function startScene(model, flat = false) {
     zoomSpeed: 0.7
   });
   // A drag pans, with one finger as well as two. Without this a phone would
-  // have no way to move across the cloth at all.
+  // have no way to move across the timeline at all.
   controls.mouseButtons = {
     LEFT: THREE.MOUSE.PAN, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN
   };
@@ -659,13 +659,13 @@ async function startScene(model, flat = false) {
     syncTwin(state);
     userMoved = false;
     applyView(defaultFraming());
-    announce(`The whole loom. ${model.counts.total} publications, 1880 to 2026.`);
+    announce(`The whole timeline. ${model.counts.total} publications, 1880 to 2026.`);
   }
   document.getElementById('btn-reset').addEventListener('click', resetView);
   document.getElementById('btn-whole').addEventListener('click', () => {
     app.explorer?.scope('all');
     applyView(wholeLoomFraming());
-    announce(`The whole loom. ${model.counts.total} publications, 1880 to 2026.`);
+    announce(`The whole timeline. ${model.counts.total} publications, 1880 to 2026.`);
   });
   document.getElementById('btn-zoom-in').addEventListener('click', () => dolly(1 / 1.3));
   document.getElementById('btn-zoom-out').addEventListener('click', () => dolly(1.3));
@@ -785,7 +785,7 @@ async function startScene(model, flat = false) {
   document.getElementById('btn-help').addEventListener('click', toggleHelp);
   document.getElementById('btn-ghost').addEventListener('click', () => app.showGhost());
 
-  // ---- guided threads picker ----
+  // ---- guided stories picker ----
   // This used to send the reader to the list far below the stage. Scrolling
   // eight thousand pixels away from the thing you just clicked reads as a crash,
   // so the picker opens over the loom and the document never moves.
@@ -797,15 +797,15 @@ async function startScene(model, flat = false) {
     // under it, so Close never sits at the foot of a list.
     tourPicker.innerHTML = `<div class="inner">
       <div class="card-head">
-        <h3>Guided threads</h3>
+        <h3>Guided stories</h3>
         <button type="button" class="woven-btn" data-close>Close</button>
       </div>
       <div class="card-scroll">
-      <p>Each one walks the loom through a run of documented events, stopping at the evidence.</p>
+      <p>Each story follows documented events and their source evidence.</p>
       <ul>${model.tours.map((t) => `<li>
         <span class="tp-title">${escapeHtml(t.title)}</span>
         <span class="tp-meta">${escapeHtml(t.era)} · ${t.stops.length} stop${t.stops.length === 1 ? '' : 's'}${t.strength === 'weak' ? ' · thinly sourced' : ''}</span>
-        <button type="button" class="woven-btn" data-play="${escapeHtml(t.id)}">Play this thread</button>
+        <button type="button" class="woven-btn" data-play="${escapeHtml(t.id)}">Start this story</button>
       </li>`).join('')}</ul>
       </div>
     </div>`;
@@ -1168,17 +1168,17 @@ function toggleHelp() {
     // panel scrolls inside itself rather than growing past the stage.
     card.innerHTML = `<div class="inner">
       <div class="card-head">
-        <h3>About this loom</h3>
+        <h3>About this timeline</h3>
         <button type="button" class="woven-btn" data-close>Close</button>
       </div>
       <div class="card-scroll">
-      <p>This is every Black-owned and Black-focused publication we have found in New Jersey, drawn on one axis of time. Left to right is 1880 to 2026. Each horizontal thread is one publication, running from the year it was founded to the year it stopped, and the rows are grouped by the decade each paper began. A thicker thread means more evidence records in this archive. A faint, frayed thread has no cleared evidence here; copies may survive elsewhere. An unrecorded end date is not proof that a paper continued to the present.</p>
+      <p>This is every Black-owned and Black-focused publication we have found in New Jersey, drawn on one axis of time. Left to right is 1880 to 2026. Each horizontal line is one publication, running from the year it was founded to the year it stopped, and the rows are grouped by the decade each paper began. A thicker line means more evidence records in this archive. A faint line has no cleared evidence here; copies may survive elsewhere. An unrecorded end date is not proof that a paper continued to the present.</p>
       <h4>By pointer</h4>
       <dl>
-        <dt>Drag</dt><dd>move across the cloth, left, right, up, or down</dd>
+        <dt>Drag</dt><dd>move across the timeline, left, right, up, or down</dd>
         <dt>Scroll or pinch</dt><dd>zoom in to read names, out to see the whole span</dd>
-        <dt>Point at a thread</dt><dd>read its name, city, and dates</dd>
-        <dt>Click a thread</dt><dd>open that publication</dd>
+        <dt>Point at a line</dt><dd>read its name, city, and dates</dd>
+        <dt>Click a line</dt><dd>open that publication</dd>
         <dt>Search field</dt><dd>type a name, press enter to go to it</dd>
       </dl>
       <h4>By keyboard</h4>
@@ -1188,7 +1188,7 @@ function toggleHelp() {
         <dt>Page up and page down</dt><dd>move between decades</dd>
         <dt>Enter</dt><dd>open this publication</dd>
         <dt>Escape</dt><dd>go back</dd>
-        <dt>T · G · 0</dt><dd>guided threads · gaps in the record · reset the view</dd>
+        <dt>T · G · 0</dt><dd>guided stories · gaps in the record · reset the view</dd>
         <dt>Escape</dt><dd>close this panel</dd>
       </dl>
       </div>

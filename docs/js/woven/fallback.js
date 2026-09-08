@@ -2,7 +2,7 @@
 
 import { promoteTwin, announce, syncTwin } from './twin.js';
 
-const NO_WEBGL = 'Your browser cannot draw the loom, so here it is as a list.';
+const NO_WEBGL = 'Your browser cannot draw the timeline, so here it is as a list.';
 const CONTEXT_LOST = 'The drawing stopped. Here is the same archive as a list.';
 
 export function startFallback(model, reason) {
@@ -44,7 +44,7 @@ function playInTwin(model, storyId) {
   const tour = model.tours.find((t) => t.id === storyId);
   if (tour) {
     syncTwin({ tourId: storyId, stopIndex: 0 });
-    announce(`Guided thread: ${tour.title}. ${tour.stops.length} stops, ${tour.era}.`);
+    announce(`Guided story: ${tour.title}. ${tour.stops.length} stops, ${tour.era}.`);
   }
   const summary = li.querySelector('summary');
   if (summary) summary.focus();

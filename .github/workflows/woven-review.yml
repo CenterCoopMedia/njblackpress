@@ -1,9 +1,10 @@
-name: Woven review
+name: Historical notes review
 
 on:
   pull_request:
     paths:
       - 'docs/woven.html'
+      - 'docs/historical-notes.html'
       - 'docs/js/woven/**'
       - 'docs/css/woven*.css'
       - 'docs/css/styles.css'

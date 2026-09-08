@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { clothPoint, distanceToSegment, matchesFilters, publicationYears, threadColor, threadSpans } from '../docs/js/woven/exhibit-geometry.js';
+import { timelinePoint, distanceToSegment, matchesFilters, publicationYears, threadColor, threadSpans } from '../docs/js/woven/exhibit-geometry.js';
 import { buildLayout, bandKeyFor } from '../docs/js/woven/layout.js';
 
 const doc = JSON.parse(fs.readFileSync(new URL('../docs/data/publications.json', import.meta.url)));
@@ -17,7 +17,7 @@ for (const t of threads) {
   assert(publicationYears(t).length > 0);
   for (const [a,b] of threadSpans(t)) {
     assert(Number.isFinite(a) && Number.isFinite(b) && b > a, `Invalid span for ${t.id}`);
-    const point = clothPoint(a, t.y, -30);
+    const point = timelinePoint(a, t.y, -30);
     assert(point.every(Number.isFinite));
   }
   assert.equal(matchesFilters(t), true);
@@ -32,7 +32,7 @@ for (const t of threads) {
   }
   if (t.unknownFounding) {
     assert.equal(threadSpans(t).length, t.isActive ? 6 : 5);
-    assert.equal(threadSpans(t).some(([, end]) => end > 2026), t.isActive, `${t.name}: loose ends must match active status`);
+    assert.equal(threadSpans(t).some(([, end]) => end > 2026), t.isActive, `${t.name}: arrows must match active status`);
     if (t.isActive) assert(publicationYears(t).includes('still publishing'));
     else if (t.yearCeased != null) assert(publicationYears(t).includes(`ceased ${t.yearCeased}`));
   }

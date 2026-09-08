@@ -1,24 +1,25 @@
 import * as THREE from 'three';
 import { YEAR_MIN, YEAR_MAX } from './layout.js';
-import { clothPoint, distanceToSegment, publicationYears, threadColor, threadSpans } from './exhibit-geometry.js';
+import { timelinePoint, distanceToSegment, publicationYears, threadColor, threadSpans } from './exhibit-geometry.js';
 import { mountExplorer } from './explorer.js';
 import { announce, syncTwin } from './twin.js';
 
-// Two scenes share ONE renderer and the existing data adapter, record panel,
+// Two views share the renderer, data adapter, record panel,
 // stories, accessible twin, and recorded publication spans.
 export function mountExhibit(app, params) {
+  if (params.get('view') === 'woven') params.set('view', '3d');
   const { model, three } = app;
   const { renderer, canvas, stage, controls, panel } = three;
   const scene = new THREE.Scene();
   scene.background = new THREE.Color('#14100b');
   const flat = stage.dataset.renderer === 'flat';
   if (flat) {
-    document.querySelector('[data-woven-view="woven"]').disabled = true;
+    document.querySelector('[data-woven-view="3d"]').disabled = true;
     document.getElementById('woven-renderer-note').hidden = false;
   }
   const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 500);
-  const cloth = new THREE.Group();
-  scene.add(cloth);
+  const gallery = new THREE.Group();
+  scene.add(gallery);
   const nodes = [];
   const resources = [];
   const caption = document.getElementById('woven-exhibit-caption');
@@ -53,12 +54,11 @@ export function mountExhibit(app, params) {
     varying vec3 n; varying vec2 tex;
     void main(){
       float dash=fract(tex.x*segments);
-      if(ghost>0.5 && dash>0.82) discard;
+
       if(unknown>0.5 && tex.x>0.035 && dash>0.60) discard;
       float light=0.38+0.62*max(0.0,dot(normalize(n),normalize(vec3(-0.4,0.8,1.0))));
       float sheen=pow(max(0.0,dot(normalize(n),normalize(vec3(0.3,0.7,1.0)))),12.0)*0.32;
-      float fiber=0.94+0.06*sin(tex.y*25.1327+tex.x*80.0);
-      vec3 color=dye*(light*fiber+sheen);
+      vec3 color=dye*(light+sheen);
       color=mix(color,vec3(1.0,0.91,0.70),emphasis*0.75);
       gl_FragColor=vec4(color,alpha);
       #include <colorspace_fragment>
@@ -77,38 +77,29 @@ export function mountExhibit(app, params) {
     resources.push(value);
     return value;
   }
-  function tube(points, radius, mat, steps) {
-    const curve = new THREE.CatmullRomCurve3(points.map((p) => new THREE.Vector3(...p)));
-    const geometry = new THREE.TubeGeometry(curve, steps, radius, 5, false);
-    resources.push(geometry);
-    cloth.add(new THREE.Mesh(geometry, mat));
-    return curve.getPoints(24);
-  }
   for (const thread of flat ? [] : model.threads) {
     const mat = material(threadColor(thread), thread.ghost, thread.endState === 'unrecorded',
       Math.max(2, ((thread.yearCeased ?? YEAR_MAX) - (thread.yearFounded ?? YEAR_MIN)) / 2));
     const curves = [];
     for (const [start, end] of threadSpans(thread)) {
-      const steps = Math.min(180, Math.max(24, Math.ceil((end - start) * 1.15)));
-      const points = Array.from({ length: steps + 1 }, (_, index) => {
-        const year = start + (end - start) * index / steps;
-        const point = clothPoint(year, thread.y, bottom);
-        // Alternating crossings are surface texture, not connections.
-        point[2] += Math.sin((year - YEAR_MIN) * Math.PI / 4 + thread.globalIndex * Math.PI) * 0.11;
-        return point;
-      });
-      curves.push(tube(points, Math.max(0.064, thread.width * 1.35), mat, steps));
+      const from = new THREE.Vector3(...timelinePoint(start, thread.y, bottom));
+      const to = new THREE.Vector3(...timelinePoint(end, thread.y, bottom));
+      const geometry = new THREE.BoxGeometry(to.x - from.x, Math.max(0.20, thread.width * 3), 0.65);
+      resources.push(geometry);
+      const bar = new THREE.Mesh(geometry, mat);
+      bar.position.copy(from).lerp(to, 0.5);
+      gallery.add(bar);
+      curves.push([from, to]);
+    }
+    if (thread.endState === 'still') {
+      const geometry = new THREE.ConeGeometry(0.25, 0.65, 3);
+      resources.push(geometry);
+      const arrow = new THREE.Mesh(geometry, mat);
+      arrow.rotation.z = -Math.PI / 2;
+      arrow.position.set(...timelinePoint(YEAR_MAX + 7, thread.y, bottom));
+      gallery.add(arrow);
     }
     nodes.push({ thread, material: mat, curves, projected: [] });
-  }
-  // The warp makes a cloth, rather than an arbitrary network diagram. These
-  // quiet vertical strands follow the year scale; crossings do not imply relationships.
-  const warp = material('#8a7252');
-  warp.uniforms.alpha.value = 0.35;
-  warp.depthWrite = false;
-  for (let year = YEAR_MIN; !flat && year <= YEAR_MAX; year += 2) {
-    const points = Array.from({ length: 32 }, (_, i) => clothPoint(year, bottom * i / 31, bottom));
-    tube(points, 0.025, warp, 32);
   }
 
   function updateHighlights() {
@@ -141,8 +132,8 @@ export function mountExhibit(app, params) {
 
   function setMode(next, { updateURL = true } = {}) {
     if (flat) next = 'timeline';
-    active = next === 'woven';
-    stage.dataset.view = active ? 'woven' : 'timeline';
+    active = next === '3d';
+    stage.dataset.view = active ? '3d' : 'timeline';
     controls.enabled = !active;
     modeButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.wovenView === next)));
     motionButton.hidden = !active;
@@ -150,10 +141,10 @@ export function mountExhibit(app, params) {
     tip.hidden = true;
     hovered = null;
     pending = null;
-    canvas.setAttribute('aria-label', active ? 'Three-dimensional weave of New Jersey Black publications' : 'Interactive timeline of New Jersey Black publications');
+    canvas.setAttribute('aria-label', active ? 'Three-dimensional timeline of New Jersey Black publications' : 'Interactive timeline of New Jersey Black publications');
     caption.textContent = active
-      ? 'Left to right is time. Drag sideways to turn. Select a thread or title to read its dates.'
-      : 'Left to right is time. Drag to move; scroll or pinch to zoom. Select a thread to read its record.';
+      ? 'Left to right is time. Drag sideways to turn. Select a publication or title to read its dates.'
+      : 'Left to right is time. Drag to move; scroll or pinch to zoom. Select a publication to read its record.';
     if (updateURL) {
       const url = new URL(location.href);
       url.searchParams.set('view', next);
@@ -180,7 +171,7 @@ export function mountExhibit(app, params) {
     pending = null;
     updateHighlights();
     const url = new URL(location.href);
-    url.searchParams.set('view', 'woven');
+    url.searchParams.set('view', '3d');
     url.searchParams.set('pub', String(id));
     url.searchParams.delete('story');
     url.searchParams.delete('ghost');
@@ -222,7 +213,7 @@ export function mountExhibit(app, params) {
     const url = new URL(location.href);
     for (const key of ['pub', 'story', 'ghost']) url.searchParams.delete(key);
     history.replaceState(null, '', url);
-    setMode(active ? 'woven' : 'timeline');
+    setMode(active ? '3d' : 'timeline');
   });
   function pointerPoint(event, radius) {
     const current = canvas.getBoundingClientRect();
@@ -273,7 +264,7 @@ export function mountExhibit(app, params) {
   }, { capture: true });
 
   function project(point) {
-    vector.copy(point).applyMatrix4(cloth.matrixWorld).project(camera);
+    vector.copy(point).applyMatrix4(gallery.matrixWorld).project(camera);
     return { x: (vector.x + 1) * rect.width / 2, y: (1 - vector.y) * rect.height / 2 };
   }
   function pick(x, y, radius) {
@@ -311,11 +302,11 @@ export function mountExhibit(app, params) {
     last = now;
     if (motion && !panel.isOpen() && hovered == null) { elapsed += delta; dirty = true; }
     if (dirty) {
-      cloth.rotation.set(0.18, yaw + Math.sin(elapsed * 0.25) * 0.035, -0.06);
-      cloth.updateMatrixWorld(true);
+      gallery.rotation.set(0.18, yaw + Math.sin(elapsed * 0.25) * 0.035, -0.06);
+      gallery.updateMatrixWorld(true);
       camera.updateMatrixWorld(true);
       for (const { year, label } of years) {
-        const point = project(new THREE.Vector3(...clothPoint(year, 1.4, bottom)));
+        const point = project(new THREE.Vector3(...timelinePoint(year, 1.4, bottom)));
         label.hidden = rect.width < 600 && (year === 1920 || year === 2000);
         label.style.left = `${Math.max(24, Math.min(rect.width - 24, point.x))}px`;
         label.style.top = `${point.y - 20}px`;
@@ -333,8 +324,8 @@ export function mountExhibit(app, params) {
   }
   syncMotion();
   const narrative = params.has('story') || params.has('ghost');
-  const legacyPublication = params.has('pub') && params.get('view') !== 'woven';
-  setMode(params.get('view') === 'timeline' || narrative || legacyPublication ? 'timeline' : 'woven', { updateURL: false });
+  const legacyPublication = params.has('pub') && params.get('view') !== '3d';
+  setMode(params.get('view') === 'timeline' || narrative || legacyPublication ? 'timeline' : '3d', { updateURL: false });
   document.getElementById('woven-loading').hidden = true;
   return {
     get active() { return active; }, get motion() { return motion; },

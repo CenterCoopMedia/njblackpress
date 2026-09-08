@@ -1,5 +1,4 @@
-// Both views place publication spans on the same recorded year range.
-// The folded surface changes the shape, not the dates.
+// Both views preserve publication dates. Bars sit on separate rows in a curved gallery.
 import { YEAR_MIN, YEAR_MAX } from './layout.js';
 
 export const THREAD_COLORS = ['#cb7857', '#d59c59', '#cfb37c', '#b1a0b8', '#83a69b', '#91b7c2', '#ead5af'];
@@ -28,14 +27,11 @@ export function matchesFilters(thread, { city = '', evidence = 'all' } = {}) {
   return true;
 }
 
-export function clothPoint(year, row, bottom) {
+export function timelinePoint(year, row, bottom) {
   const u = (year - YEAR_MIN) / (YEAR_MAX - YEAR_MIN);
   const v = row - bottom / 2;
-  return [
-    (u - 0.5) * 80,
-    v * 1.18 + Math.sin(u * Math.PI * 1.8 - 0.6) * 4.5,
-    Math.sin(u * Math.PI * 2 + v * 0.055) * 10 + Math.cos(v * 0.2 + u * 4) * 1.6
-  ];
+  // Depth varies only by row. Each publication stays straight along the year axis.
+  return [(u - 0.5) * 80, v * 1.18, Math.cos(v * 0.065) * 8 - 4];
 }
 
 // Undated fragments are status marks in the separate undated band, not dates.

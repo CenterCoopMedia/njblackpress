@@ -21,7 +21,7 @@ publications.
 | [Stories](https://centercoopmedia.github.io/njblackpress/story.html) | Sourced narratives that connect publications and events |
 | [Eras](https://centercoopmedia.github.io/njblackpress/era.html) | Historical periods and their publication activity |
 | [Map](https://centercoopmedia.github.io/njblackpress/map.html) | Publication activity by place and decade |
-| [Woven](https://centercoopmedia.github.io/njblackpress/woven.html) | 3D textile overview, dated timeline, era index, and publication browser |
+| [Historical notes](https://centercoopmedia.github.io/njblackpress/historical-notes.html) | Guided stories, publication timeline, historical notes, and source evidence |
 | [Wiki](https://centercoopmedia.github.io/njblackpress/wiki/) | Pre-rendered publication and browse pages |
 
 Each publication record includes known dates, locations, publishers, formats,
@@ -32,7 +32,7 @@ archive links, historical notes, and supporting evidence when available.
 - Static HTML, CSS, and JavaScript
 - Tailwind CSS 3, compiled into `docs/css/tailwind.css`
 - Python data builders, generators, and checks
-- Vendored Three.js modules for Woven
+- Vendored Three.js modules for Historical notes
 - GitHub Pages from `master` and the `docs/` directory
 
 The project has no backend service, database server, or JavaScript framework.
@@ -42,7 +42,7 @@ The project has no backend service, database server, or JavaScript framework.
 ```text
 docs/                         Published GitHub Pages site
   data/                       Browser-ready data copies
-  js/                         Site scripts and Woven modules
+  js/                         Site scripts and Historical notes modules
   wiki/                       Generated public HTML wiki
 data/                         Source data, research, builders, and checks
   research/source-catalog.json
