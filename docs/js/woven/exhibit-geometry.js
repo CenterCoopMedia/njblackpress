@@ -1,9 +1,8 @@
-// A sculptural view of the existing timeline. Depth is an artistic treatment,
-// not a claim about relationships, circulation, or a publication's influence.
+// Sculpture coordinates are artistic, not dates or publication relationships.
+// The separate timeline preserves the archive's recorded publication spans.
 import { YEAR_MIN, YEAR_MAX } from './layout.js';
 
 export const THREAD_COLORS = ['#cb7857', '#d59c59', '#cfb37c', '#b1a0b8', '#83a69b', '#91b7c2', '#ead5af'];
-export const EVIDENCE_FILTERS = new Set(['all', 'active', 'evidence', 'unillustrated']);
 
 export function threadColor(thread) {
   const index = 'ABCDEFG'.indexOf(thread.bandKey);
@@ -30,22 +29,20 @@ export function clothPoint(year, row, bottom) {
   const v = row - bottom / 2;
   return [
     (u - 0.5) * 80,
-    v * 0.94 + Math.sin(u * Math.PI * 1.5 - 0.6) * 5.5,
-    Math.sin(u * Math.PI * 1.5 + v * 0.065) * 7 + Math.cos(v * 0.2 + u * 4) * 1.2
+    v * 1.18 + Math.sin(u * Math.PI * 1.8 - 0.6) * 4.5,
+    Math.sin(u * Math.PI * 2 + v * 0.055) * 10 + Math.cos(v * 0.2 + u * 4) * 1.6
   ];
 }
 
-// Undated publications are stitched fragments, not invented lifespans.
-// An unknown end is drawn as a dashed continuation, never a present-day claim.
+// Every title crosses the sculpture. Length is not a lifespan: only the
+// separate Timeline view encodes dates. The year constants are parameters for
+// the surface function, not an axis in this scene. Undated titles use fragments
+// and active titles have loose ends; neither implies an invented chronology.
 export function threadSpans(thread) {
   if (thread.unknownFounding) {
-    return [1890, 1920, 1950, 1980, 2010].map((year) => [year, year + 5]);
+    return [1880, 1910, 1940, 1970, 2000].map((position) => [position, position + 20]);
   }
-  const start = Math.max(YEAR_MIN, Math.min(YEAR_MAX, thread.yearFounded));
-  const end = thread.endState === 'still' ? YEAR_MAX + 7 : (thread.yearCeased ?? YEAR_MAX);
-  // A one-year record needs a visible mark. This half-year width is a glyph,
-  // not an assertion that it published for another year.
-  return [[start, Math.max(start + 0.5, Math.min(YEAR_MAX + 7, end))]];
+  return [[YEAR_MIN, YEAR_MAX + (thread.endState === 'still' ? 7 : 0)]];
 }
 
 export function distanceToSegment(px, py, ax, ay, bx, by) {

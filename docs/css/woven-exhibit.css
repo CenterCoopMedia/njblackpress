@@ -106,7 +106,7 @@ body.surface-woven {
 #woven-browser-empty { padding: 1rem; font-size: 0.9rem; line-height: 1.5; }
 #woven-stage #woven-panel { position: absolute; top: 0; right: 0; bottom: 0; width: var(--exhibit-dock); max-height: none; max-width: none; margin: 0; box-sizing: border-box; border: 0; border-left: 1px solid #727667; padding: 1.15rem; background: #191d1b; z-index: 8; overflow-y: auto; }
 #woven-panel .p-close { position: sticky; top: 0; margin-left: auto; display: block; background: #252b27; min-height: 40px; }
-#woven-panel h2 { font-size: 1.65rem; line-height: 1.15; letter-spacing: -0.035em; margin-top: 1rem; }
+#woven-panel h2 { padding-right: 0; font-size: 1.65rem; line-height: 1.15; letter-spacing: -0.035em; margin-top: 1rem; }
 #woven-panel p, #woven-panel cite { font-size: 0.9rem; line-height: 1.55; }
 #woven-panel .p-meta { color: #bcbfb3; font-size: 0.8rem; line-height: 1.5; }
 .woven-reading-key, .woven-story-shelf { width: calc(100% - 5rem); max-width: 1520px; margin: 2rem auto; }
@@ -194,3 +194,15 @@ body.twin-primary .woven-reading-key { display: none; }
   #woven-stage, #woven-browser, #woven-panel, .woven-publication { border-color: CanvasText; }
   .woven-view-switch [aria-pressed="true"], .woven-publication[aria-pressed="true"] { outline: 2px solid Highlight; }
 }
+
+/* Keep the complete text archive available without forcing a very long page. */
+#woven-list-disclosure { width: calc(100% - 5rem); max-width: 1520px; margin: 2rem auto 3rem; border-block: 1px solid var(--walnut-600); }
+#woven-list-disclosure > summary { padding: 1.4rem 0; color: var(--linen-100); font-size: 1.15rem; font-weight: 700; cursor: pointer; }
+#woven-list-disclosure[open] > summary { border-bottom: 1px solid var(--walnut-600); }
+#woven-list-disclosure #woven-twin { margin-top: 0; }
+.twin-primary #woven-list-disclosure > summary { display: none; }
+#woven-browser .woven-search-submit::before { content: none; }
+@media (max-width: 899px) { #woven-list-disclosure { width: calc(100% - 2rem); } }
+
+#woven-stage[data-view="woven"] #woven-canvas { touch-action: pan-y; cursor: grab; }
+#woven-stage[data-view="woven"] #woven-canvas:active { cursor: grabbing; }

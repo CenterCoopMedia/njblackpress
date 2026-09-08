@@ -94,7 +94,9 @@ export function mountExplorer(app, { highlight, filter, open }) {
   render();
 
   const stories = document.getElementById('woven-story-list');
-  for (const tour of model.tours.filter((tour) => tour.stops.length).slice(0, 3)) {
+  const available = model.tours.filter((tour) => tour.stops.length);
+  const featured = [...new Set([available[0], available[Math.floor(available.length / 2)], available.at(-1)])].filter(Boolean);
+  for (const tour of featured) {
     const item = document.createElement('li');
     const button = document.createElement('button');
     button.type = 'button';

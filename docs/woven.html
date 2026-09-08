@@ -152,7 +152,6 @@
             </div>
 
             <div id="woven-loading" role="status">Loading the archive…</div>
-            <div id="woven-exhibit-axis" aria-hidden="true"></div>
             <div id="woven-turn-controls" role="group" aria-label="Turn the 3D weave" hidden>
                 <button type="button" class="woven-btn" data-woven-turn="-1" aria-label="Turn weave left">←</button>
                 <button type="button" class="woven-btn" data-woven-turn="1" aria-label="Turn weave right">→</button>
@@ -251,10 +250,10 @@
             <h2 id="woven-key-title">Reading the weave</h2>
             <div class="woven-key-lines">
                 <p><span class="woven-key-thread" aria-hidden="true"></span><strong>One thread, one publication.</strong> Color groups founding eras; thickness reflects the number of evidence records.</p>
-                <p><span class="woven-key-thread is-dashed" aria-hidden="true"></span><strong>Gaps need care.</strong> Faint threads have no cleared evidence in this archive. A dashed continuation marks an unknown end date.</p>
-                <p><span class="woven-key-thread is-open" aria-hidden="true"></span><strong>The record continues.</strong> Active titles extend beyond 2026. Undated titles appear as separate fragments, not invented lifespans.</p>
+                <p><span class="woven-key-thread is-dashed" aria-hidden="true"></span><strong>Gaps need care.</strong> Faint, interrupted threads have no evidence cleared for display here. This does not mean no copies survive elsewhere.</p>
+                <p><span class="woven-key-thread is-open" aria-hidden="true"></span><strong>Two ways to look.</strong> The 3D weave presents the collection. Timeline shows dates, including unknown end dates. Loose ends mark active titles; fragments mark undated titles.</p>
             </div>
-            <p class="woven-key-note">The folds are an artistic treatment, not evidence of links between publications. Switch to Timeline for precise positions. Missing evidence here does not mean no copies survive elsewhere.</p>
+            <p class="woven-key-note">Thread length and folds in 3D are artistic, not publication lifespans or evidence of links between titles. Switch to Timeline to read dates. Colors group titles by founding era, from copper for the earliest to cream for the most recent; gray marks undated titles.</p>
         </section>
         <section id="woven-stories" class="woven-story-shelf" aria-labelledby="woven-stories-title" hidden>
             <div class="woven-section-heading"><h2 id="woven-stories-title">Follow a story</h2><button type="button" class="woven-btn" id="woven-all-stories">All <span data-count="tours">…</span> stories →</button></div>
@@ -271,7 +270,10 @@
             </div>
         </div>
 
-        <div id="woven-twin" role="region" aria-labelledby="woven-twin-h"></div>
+        <details id="woven-list-disclosure">
+            <summary>Read all <span data-count="total">…</span> publications as a list</summary>
+            <div id="woven-twin" role="region" aria-labelledby="woven-twin-h"></div>
+        </details>
 
         <noscript>
             <div class="max-w-[68rem] mx-auto px-4 py-12">

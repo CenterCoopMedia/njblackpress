@@ -16,7 +16,6 @@ export function mountExhibit(app, params) {
   scene.add(cloth);
   const nodes = [];
   const resources = [];
-  const axis = document.getElementById('woven-exhibit-axis');
   const caption = document.getElementById('woven-exhibit-caption');
   const motionButton = document.getElementById('woven-motion');
   const tip = document.getElementById('woven-tip');
@@ -42,7 +41,7 @@ export function mountExhibit(app, params) {
     varying vec3 n; varying vec2 tex;
     void main(){
       float dash=fract(tex.x*segments);
-      if(ghost>0.5 && dash>0.66) discard;
+      if(ghost>0.5 && dash>0.82) discard;
       if(unknown>0.5 && tex.x>0.035 && dash>0.60) discard;
       float light=0.38+0.62*max(0.0,dot(normalize(n),normalize(vec3(-0.4,0.8,1.0))));
       float sheen=pow(max(0.0,dot(normalize(n),normalize(vec3(0.3,0.7,1.0)))),12.0)*0.32;
@@ -57,7 +56,7 @@ export function mountExhibit(app, params) {
     const value = new THREE.ShaderMaterial({
       vertexShader, fragmentShader,
       uniforms: {
-        dye: { value: new THREE.Color(color) }, alpha: { value: ghost ? 0.38 : 1 },
+        dye: { value: new THREE.Color(color) }, alpha: { value: ghost ? 0.58 : 1 },
         emphasis: { value: 0 }, ghost: { value: Number(ghost) },
         unknown: { value: Number(unknown) }, segments: { value: segments }
       },
@@ -74,12 +73,10 @@ export function mountExhibit(app, params) {
     return curve.getPoints(24);
   }
   for (const thread of model.threads) {
-    const mat = material(threadColor(thread), thread.ghost,
-      !thread.unknownFounding && thread.endState !== 'still' && thread.yearCeased == null,
-      Math.max(8, (thread.endYear - thread.startYear) / 2));
+    const mat = material(threadColor(thread), thread.ghost, false, 70);
     const curves = [];
     for (const [start, end] of threadSpans(thread)) {
-      const steps = Math.min(100, Math.max(8, Math.ceil((end - start) * 0.8)));
+      const steps = Math.min(180, Math.max(24, Math.ceil((end - start) * 1.15)));
       const points = Array.from({ length: steps + 1 }, (_, index) => {
         const year = start + (end - start) * index / steps;
         const point = clothPoint(year, thread.y, bottom);
@@ -87,25 +84,19 @@ export function mountExhibit(app, params) {
         point[2] += Math.sin((year - YEAR_MIN) * Math.PI / 4 + thread.globalIndex * Math.PI) * 0.11;
         return point;
       });
-      curves.push(tube(points, Math.max(0.045, thread.width * 1.1), mat, steps));
+      curves.push(tube(points, Math.max(0.064, thread.width * 1.35), mat, steps));
     }
     nodes.push({ thread, material: mat, curves, projected: [] });
   }
   // The warp makes a cloth, rather than an arbitrary network diagram. These
-  // quiet vertical strands are year guides and have no publication identity.
+  // quiet vertical strands are texture, not years or publication relationships.
   const warp = material('#6e7468');
-  warp.uniforms.alpha.value = 0.22;
+  warp.uniforms.alpha.value = 0.35;
   warp.depthWrite = false;
-  for (let year = YEAR_MIN; year <= YEAR_MAX; year += 4) {
+  for (let year = YEAR_MIN; year <= YEAR_MAX; year += 2) {
     const points = Array.from({ length: 32 }, (_, i) => clothPoint(year, bottom * i / 31, bottom));
-    tube(points, year % 20 === 0 ? 0.024 : 0.013, warp, 32);
+    tube(points, 0.025, warp, 32);
   }
-  const yearMarks = [1880, 1920, 1960, 2000, YEAR_MAX].map((year) => {
-    const mark = document.createElement('span');
-    mark.textContent = String(year);
-    axis.append(mark);
-    return { year, mark };
-  });
 
   function updateHighlights() {
     const focus = hovered ?? app.state.selectedId;
@@ -113,7 +104,7 @@ export function mountExhibit(app, params) {
       const isMatch = !matches || matches.has(node.thread.id);
       const selected = node.thread.id === focus;
       node.material.uniforms.emphasis.value = selected ? 1 : 0;
-      node.material.uniforms.alpha.value = (node.thread.ghost ? 0.38 : 1) *
+      node.material.uniforms.alpha.value = (node.thread.ghost ? 0.58 : 1) *
         (isMatch ? 1 : 0.13) * (focus != null && !selected ? 0.48 : 1);
       if (selected) node.material.uniforms.alpha.value = isMatch ? 1 : 0.28;
     }
@@ -127,7 +118,7 @@ export function mountExhibit(app, params) {
     rect = canvas.getBoundingClientRect();
     camera.aspect = Math.max(0.2, rect.width / Math.max(1, rect.height));
     const usable = Math.max(0.32, (rect.height - 150) / Math.max(1, rect.height));
-    const distance = Math.max(31 / (2 * Math.tan(Math.PI * 35 / 360)) / usable,
+    const distance = Math.max(41 / (2 * Math.tan(Math.PI * 35 / 360)) / usable,
       93 / (2 * Math.tan(Math.PI * 35 / 360) * camera.aspect));
     camera.position.set(0, 2.5, distance);
     camera.lookAt(0, 2.5, 0);
@@ -147,7 +138,7 @@ export function mountExhibit(app, params) {
     pending = null;
     canvas.setAttribute('aria-label', active ? 'Three-dimensional weave of New Jersey Black publications' : 'Interactive timeline of New Jersey Black publications');
     caption.textContent = active
-      ? 'Each thread is a publication. Color groups founding eras. Select a thread or a title to read its record.'
+      ? 'Drag sideways to turn. Select a thread or title to read. Switch to Timeline for dates.'
       : 'Left to right is time. Drag to move; scroll or pinch to zoom. Select a thread to read its record.';
     if (updateURL) {
       const url = new URL(location.href);
@@ -214,22 +205,41 @@ export function mountExhibit(app, params) {
     history.replaceState(null, '', url);
     setMode('woven');
   });
+  function pointerPoint(event, radius) {
+    const current = canvas.getBoundingClientRect();
+    return { x: event.clientX - current.left, y: event.clientY - current.top, radius };
+  }
   listen(canvas, 'pointermove', (event) => {
-    if (!active || event.pointerType === 'touch') return;
-    pending = { x: event.clientX - rect.left, y: event.clientY - rect.top, radius: 11 };
+    if (!active) return;
+    if (down && event.buttons) {
+      const dx = event.clientX - down.x;
+      if (Math.abs(dx) > 7) {
+        yaw = Math.max(-0.7, Math.min(0.7, down.yaw + dx / Math.max(1, rect.width) * 1.4));
+        dirty = true; pending = null; tip.hidden = true;
+      }
+      return;
+    }
+    if (event.pointerType !== 'touch') pending = pointerPoint(event, 11);
   });
   listen(canvas, 'pointerleave', () => { if (active) { pending = null; tip.hidden = true; highlight(null); } });
-  listen(canvas, 'pointerdown', (event) => { down = { x: event.clientX, y: event.clientY }; });
+  listen(canvas, 'pointerdown', (event) => { down = { x: event.clientX, y: event.clientY, yaw }; });
+  listen(canvas, 'pointercancel', () => { down = null; });
   listen(canvas, 'click', (event) => {
     if (!active || (down && Math.hypot(event.clientX - down.x, event.clientY - down.y) > 8)) return;
-    const id = pick(event.clientX - rect.left, event.clientY - rect.top, event.pointerType === 'touch' ? 22 : 11);
+    const point = pointerPoint(event, event.pointerType === 'touch' ? 22 : 11);
+    const id = pick(point.x, point.y, point.radius);
     if (id != null) open(id);
   });
   listen(canvas, 'keydown', (event) => {
     if (!active || !['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter', 'Home', 'Escape'].includes(event.key)) return;
     event.preventDefault(); event.stopImmediatePropagation();
     if (event.key === 'Home') resetPose();
-    else if (event.key === 'Escape') { panel.closePanel(); hovered = null; app.state.selectedId = null; updateHighlights(); }
+    else if (event.key === 'Escape') {
+      panel.closePanel(); hovered = null; app.state.selectedId = null;
+      const url = new URL(location.href); url.searchParams.delete('pub');
+      history.replaceState(null, '', url);
+      syncTwin(app.state); explorer.syncSelected(); updateHighlights();
+    }
     else if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       yaw = Math.max(-0.7, Math.min(0.7, yaw + (event.key === 'ArrowRight' ? 0.12 : -0.12))); dirty = true;
     } else if (event.key === 'Enter') { if (hovered != null) open(hovered); }
@@ -286,11 +296,6 @@ export function mountExhibit(app, params) {
       cloth.updateMatrixWorld(true);
       camera.updateMatrixWorld(true);
       for (const node of nodes) node.projected = node.curves.map((curve) => curve.map(project));
-      for (const { year, mark } of yearMarks) {
-        const point = project(new THREE.Vector3(...clothPoint(year, bottom - 2.8, bottom)));
-        mark.style.left = `${Math.max(22, Math.min(rect.width - 22, point.x))}px`;
-        mark.style.top = `${Math.max(90, Math.min(rect.height - 55, point.y))}px`;
-      }
       renderer.render(scene, camera);
       dirty = false;
     }
@@ -314,7 +319,7 @@ export function mountExhibit(app, params) {
       disposed = true; active = false;
       aborter.abort(); observer.disconnect(); sizeObserver.disconnect(); explorer.dispose();
       resources.forEach((resource) => resource.dispose());
-      scene.clear(); axis.replaceChildren();
+      scene.clear();
     }
   };
 }

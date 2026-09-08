@@ -35,6 +35,8 @@ for (const t of threads) {
 assert.equal(distanceToSegment(5,3,0,0,10,0),3);
 assert.equal(distanceToSegment(4,3,0,0,0,0),5);
 assert.equal(distanceToSegment(15,0,0,0,10,0),5);
-assert.deepEqual(threadSpans({yearFounded:1900,yearCeased:1900}), [[1900,1900.5]]);
+assert.deepEqual(threadSpans({yearFounded:1900,yearCeased:1900}), [[1880,2026]]);
+assert.deepEqual(threadSpans({yearFounded:2000,endState:'still'}), [[1880,2033]]);
+assert.deepEqual(threadSpans({yearFounded:1880,yearCeased:1883}), threadSpans({yearFounded:2000,yearCeased:2020}));
 assert.equal(threads.filter(t => matchesFilters(t,{evidence:'active'})).length, threads.filter(t=>t.isActive).length);
 console.log(`PASS: ${threads.length} publication spans, dates, colors, combined filters, and hit-distance geometry`);

@@ -32,6 +32,19 @@ export function buildTwin(m, callbacks) {
       <ol class="ghost-list">${ghostHTML()}</ol>
     </section>`;
 
+  const disclosure = document.getElementById('woven-list-disclosure');
+  if (disclosure) {
+    const reveal = () => { disclosure.open = true; };
+    document.querySelectorAll('a[href="#woven-twin"]').forEach((link) => link.addEventListener('click', reveal));
+    const revealHash = () => {
+      let id;
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+      if (id && (id === 'woven-twin' || root.contains(document.getElementById(id)))) reveal();
+    };
+    window.addEventListener('hashchange', revealHash);
+    revealHash();
+  }
+
   root.addEventListener('click', onClick);
   return root;
 }
@@ -209,6 +222,8 @@ export function announceAssertive(text) {
 }
 
 export function promoteTwin(message) {
+  const disclosure = document.getElementById('woven-list-disclosure');
+  if (disclosure) disclosure.open = true;
   const stage = document.getElementById('woven-stage');
   if (stage && stage.parentNode) stage.parentNode.removeChild(stage);
   document.body.classList.add('twin-primary');

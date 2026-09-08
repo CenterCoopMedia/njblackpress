@@ -23,8 +23,12 @@ export function closePanel() {
   if (!el || el.hidden) return false;
   el.hidden = true;
   el.innerHTML = '';
-  if (lastFocus && document.contains(lastFocus)) lastFocus.focus();
+  const restoreFocus = lastFocus;
   lastFocus = null;
+  // Let the index observer remove inert before returning focus to its button.
+  queueMicrotask(() => {
+    if (el.hidden && restoreFocus && document.contains(restoreFocus)) restoreFocus.focus();
+  });
   if (onClose) onClose();
   return true;
 }
