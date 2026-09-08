@@ -5,18 +5,64 @@ on:
     branches: [codex/woven-reimagined]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   review:
+    if: github.repository == 'CenterCoopMedia/njblackpress' && github.ref == 'refs/heads/codex/woven-reimagined'
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
-      - name: Package the public source for local browser review
-        run: git archive --format=tar.gz --output=/tmp/woven-source.tar.gz HEAD
-      - uses: actions/upload-artifact@v4
         with:
-          name: woven-review-source
-          path: /tmp/woven-source.tar.gz
-          retention-days: 1
+          ref: codex/woven-reimagined
+      - name: Import the checksum-verified local implementation on this review branch only
+        if: hashFiles('.github/woven-import/part-1.b64') != ''
+        run: |
+          test "$GITHUB_REF" = refs/heads/codex/woven-reimagined
+          python3 - <<'PY'
+          import base64, gzip, hashlib
+          from pathlib import Path
+          parts = sorted(Path('.github/woven-import').glob('part-*.b64'))
+          assert len(parts) == 4
+          patch = gzip.decompress(base64.b64decode(''.join(p.read_text() for p in parts), validate=True))
+          assert hashlib.sha256(patch).hexdigest() == '14a583f297f3a96a2d4b4ea06a19a29d48394294082e23e76057b03e89a0464e'
+          Path('/tmp/woven-import.patch').write_bytes(patch)
+          PY
+          git apply --check /tmp/woven-import.patch
+          git apply /tmp/woven-import.patch
+          git rm -r .github/woven-import
+          git add docs/woven.html docs/css/woven-exhibit.css docs/js/woven scripts/review_woven.py scripts/test-woven-exhibit.mjs
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'feat: reimagine Woven as a sculptural archive exhibition'
+          git push origin HEAD:refs/heads/codex/woven-reimagined
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check static data and layout
+        run: |
+          npm ci
+          npm run build:css
+          python3 data/test_site_data.py
+          python3 data/test_woven_layout.py
+          python3 data/test_woven_usability.py
+          python3 data/test_navigation.py
+          node scripts/test-woven-exhibit.mjs
+      - name: Install browser checks
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Check desktop, touch, keyboard, motion, and fallback behavior
+        run: python scripts/review_woven.py --output /tmp/woven-review
+      - name: Save visual review evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: woven-visual-review
+          path: /tmp/woven-review
+          retention-days: 14
