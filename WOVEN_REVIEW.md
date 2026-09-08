@@ -6,7 +6,7 @@ Woven has two views of the same publication records. The default 3D weave presen
 
 Each colored strand represents one publication. Color groups founding eras. Thickness reflects the number of evidence records, not circulation or influence. Faint, interrupted strands mean that no evidence is cleared for display here; they do not establish that no copies survive elsewhere. Undated titles use fragments. Active titles have loose ends.
 
-**Thread length and folds in 3D are artistic, not publication lifespans or relationships.** Use Timeline for dates. Missing end dates are distinguished from active titles. Publication records, IDs, citations, rights, events, and stories are unchanged.
+**Both views use recorded publication spans.** New Jersey Trumpet runs from 1887 to 1897. Same-year titles have a small selectable mark. Dashed continuations show unrecorded end dates, not confirmed survival to the present. Undated fragments stay in the separate undated band without an inferred founding year. Only active titles have loose ends. Year labels follow the folded surface; folds and crossings do not imply relationships. Publication records, IDs, citations, rights, events, and stories are unchanged.
 
 ## Interaction
 

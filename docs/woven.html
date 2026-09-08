@@ -158,6 +158,7 @@
             </div>
 
             <div id="woven-loading" role="status">Loading the archive…</div>
+            <div id="woven-exhibit-axis" aria-label="Publication years"></div>
             <div id="woven-turn-controls" role="group" aria-label="Turn the 3D weave" hidden>
                 <button type="button" class="woven-btn" data-woven-turn="-1" aria-label="Turn weave left">←</button>
                 <button type="button" class="woven-btn" data-woven-turn="1" aria-label="Turn weave right">→</button>
@@ -232,7 +233,7 @@
                             </button>
                             <button type="button" class="woven-guide-action" data-guide-action="explore">
                                 <span class="woven-guide-action-title">Explore the whole loom</span>
-                                <span class="woven-guide-action-copy">Choose a thread in the 3D weave, or switch to Timeline for precise dates.</span>
+                                <span class="woven-guide-action-copy">Choose a thread in either view to read its publication dates and record.</span>
                             </button>
                         </div>
                         <div class="woven-quick-guide" aria-label="How to explore on your own">
@@ -261,9 +262,9 @@
             <div class="woven-key-lines">
                 <p><span class="woven-key-thread" aria-hidden="true"></span><strong>One thread, one publication.</strong> Color groups founding eras; thickness reflects the number of evidence records.</p>
                 <p><span class="woven-key-thread is-dashed" aria-hidden="true"></span><strong>Gaps need care.</strong> Faint, interrupted threads have no evidence cleared for display here. This does not mean no copies survive elsewhere.</p>
-                <p><span class="woven-key-thread is-open" aria-hidden="true"></span><strong>Two ways to look.</strong> The 3D weave presents the collection. Timeline shows dates, including unknown end dates. Loose ends mark active titles; fragments mark undated titles.</p>
+                <p><span class="woven-key-thread is-open" aria-hidden="true"></span><strong>Two ways to look.</strong> Both views run from founding year to recorded end year. Dashed continuations mark unrecorded end dates; loose ends mark active titles. Fragments in the undated band have no known starting position in time.</p>
             </div>
-            <p class="woven-key-note">Thread length and folds in 3D are artistic, not publication lifespans or evidence of links between titles. Switch to Timeline to read dates. Colors group titles by founding era, from copper for the earliest to cream for the most recent; gray marks undated titles.</p>
+            <p class="woven-key-note">Thread length follows recorded dates in both views. A dashed continuation does not mean a title survived to the present. Folds and crossings do not show links between titles. Colors group titles by founding era, from copper for the earliest to cream for the most recent; gray marks undated titles.</p>
         </section>
         <section id="woven-stories" class="woven-story-shelf" aria-labelledby="woven-stories-title" hidden>
             <div class="woven-section-heading"><h2 id="woven-stories-title">Follow a story</h2><button type="button" class="woven-btn" id="woven-all-stories">All <span data-count="tours">…</span> stories →</button></div>

@@ -40,8 +40,14 @@ for (const t of threads) {
 assert.equal(distanceToSegment(5,3,0,0,10,0),3);
 assert.equal(distanceToSegment(4,3,0,0,0,0),5);
 assert.equal(distanceToSegment(15,0,0,0,10,0),5);
-assert.deepEqual(threadSpans({yearFounded:1900,yearCeased:1900}), [[1880,2026]]);
-assert.deepEqual(threadSpans({yearFounded:2000,endState:'still'}), [[1880,2033]]);
-assert.deepEqual(threadSpans({yearFounded:1880,yearCeased:1883}), threadSpans({yearFounded:2000,yearCeased:2020}));
+assert.deepEqual(threadSpans({yearFounded:1900,yearCeased:1900}), [[1900,1900.25]]);
+assert.deepEqual(threadSpans({yearFounded:2000,endState:'still'}), [[2000,2033]]);
+assert.deepEqual(threadSpans({yearFounded:1887,yearCeased:1897}), [[1887,1897]]);
+assert.deepEqual(threadSpans({yearFounded:1900,yearCeased:null,endState:'unrecorded'}), [[1900,2026]]);
+for (const t of threads.filter(t => !t.unknownFounding)) {
+  const [[start, end]] = threadSpans(t);
+  assert.equal(start, t.yearFounded, `${t.name}: preserve founding year`);
+  assert.equal(end, Math.max(start + 0.25, t.isActive ? 2033 : t.yearCeased ?? 2026), `${t.name}: preserve end year and status`);
+}
 assert.equal(threads.filter(t => matchesFilters(t,{evidence:'active'})).length, threads.filter(t=>t.isActive).length);
 console.log(`PASS: ${threads.length} publication spans, dates, colors, combined filters, and hit-distance geometry`);

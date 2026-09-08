@@ -1,5 +1,5 @@
-// Sculpture coordinates are artistic, not dates or publication relationships.
-// The separate timeline preserves the archive's recorded publication spans.
+// Both views place publication spans on the same recorded year range.
+// The folded surface changes the shape, not the dates.
 import { YEAR_MIN, YEAR_MAX } from './layout.js';
 
 export const THREAD_COLORS = ['#cb7857', '#d59c59', '#cfb37c', '#b1a0b8', '#83a69b', '#91b7c2', '#ead5af'];
@@ -38,17 +38,17 @@ export function clothPoint(year, row, bottom) {
   ];
 }
 
-// Every title crosses the sculpture. Length is not a lifespan: only the
-// separate Timeline view encodes dates. The year constants are parameters for
-// the surface function, not an axis in this scene. Undated titles use fragments
-// and active titles have loose ends; neither implies an invented chronology.
+// Undated fragments are status marks in the separate undated band, not dates.
+// A same-year record gets a small mark so it remains visible and selectable.
 export function threadSpans(thread) {
   if (thread.unknownFounding) {
     const fragments = [1880, 1910, 1940, 1970, 2000].map((position) => [position, position + 20]);
     if (thread.endState === 'still') fragments.push([YEAR_MAX, YEAR_MAX + 7]);
     return fragments;
   }
-  return [[YEAR_MIN, YEAR_MAX + (thread.endState === 'still' ? 7 : 0)]];
+  const start = thread.yearFounded;
+  const end = thread.endState === 'still' ? YEAR_MAX + 7 : thread.yearCeased ?? YEAR_MAX;
+  return [[start, Math.max(start + 0.25, end)]];
 }
 
 export function distanceToSegment(px, py, ax, ay, bx, by) {
