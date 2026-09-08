@@ -59,7 +59,8 @@ const yearNorm = (xx) => Math.max(0, Math.min(1, xx / (YEAR_SPAN * X_PER_YEAR)))
 
 function threadColumns(t) {
   const cols = [];
-  const flags = (t.ghost ? 1 : 0) | (t.endState === 'still' ? 2 : 0) | (t.endState === 'unrecorded' ? 4 : 0);
+  const unknownEnd = t.endState !== 'still' && t.yearCeased == null;
+  const flags = (t.ghost ? 1 : 0) | (t.endState === 'still' ? 2 : 0) | (unknownEnd ? 4 : 0);
   const meta = { threadIndex: t.threadIndex, flags, fraySeed: t.fraySeed, color: t.dyeRgb };
 
   if (t.unknownFounding) {
@@ -85,7 +86,7 @@ function threadColumns(t) {
   for (let y = first; y <= last; y++, k++) {
     const xx = Math.min(endX, Math.max(startX, x(y)));
     let w = t.width;
-    if (t.endState === 'unrecorded') {
+    if (unknownEnd) {
       const d = endX - xx;
       if (d < 1.0) w *= 0.4 + 0.6 * d;
     }
@@ -93,9 +94,12 @@ function threadColumns(t) {
     cols.push({ x: xx, y: t.y, w, z, yearNorm: yearNorm(xx), ramp: (xx - startX) / span });
   }
 
+  // A same-year record still needs a selectable mark, not zero triangles.
+  if (cols.length === 1) cols.push({ ...cols[0], x: cols[0].x + 0.25, ramp: 1 });
+
   const pieces = [cols];
 
-  if (t.endState === 'ceased') {
+  if (t.endState === 'ceased' && !unknownEnd) {
     // Clean selvedge: a 0.10-unit tuck folding the end back on itself.
     const e = cols[cols.length - 1];
     pieces.push([
@@ -151,7 +155,7 @@ export function buildWarp(model, every, slotEvery) {
   ys.push(0.9);
   model.layout.slots.forEach((t, i) => { if (i % slotEvery === 0) ys.push(t.y); });
   for (const band of model.bands) if (band.count) ys.push(band.top - band.height - 0.35);
-  ys.push(-28.6);
+  ys.push(model.layout.bounds.minY - 0.5);
   ys.sort((a, c) => c - a);
 
   for (let year = YEAR_MIN; year <= YEAR_MIN + YEAR_SPAN; year += every) {
@@ -233,7 +237,7 @@ export function createClothMaterial(state, opts = {}) {
       uPluckAmp: pluckUniforms.uPluckAmp,
       uPluckScale: pluckUniforms.uPluckScale,
       uFrayCut: { value: opts.frayCut ?? 0.22 },
-      uGhostAlpha: { value: opts.ghostAlpha ?? 0.28 },
+      uGhostAlpha: { value: opts.ghostAlpha ?? 0.58 },
       uDimColor: { value: new THREE.Color('#2b2318') },
       uHighlightColor: { value: new THREE.Color('#f0854a') }
     },

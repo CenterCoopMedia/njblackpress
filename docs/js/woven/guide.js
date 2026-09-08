@@ -103,8 +103,8 @@ function handleLoomReady() {
   if (!legend) return;
   loomReadyHandled = true;
   enhanceLegend(legend);
-  if (!hasDeepLink && !readSession(START_KEY)) openStartCard();
-  else if (!hasDeepLink) maybeShowCoach();
+  // Guidance is available on request. Never cover the exhibit on first load.
+  if (!hasDeepLink && readSession(START_KEY)) writeSession(COACH_KEY);
 }
 function enhanceLegend(legend) {
   if (legend.dataset.guideEnhanced === 'true') return;

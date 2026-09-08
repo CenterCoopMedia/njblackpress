@@ -21,7 +21,7 @@ publications.
 | [Stories](https://centercoopmedia.github.io/njblackpress/story.html) | Sourced narratives that connect publications and events |
 | [Eras](https://centercoopmedia.github.io/njblackpress/era.html) | Historical periods and their publication activity |
 | [Map](https://centercoopmedia.github.io/njblackpress/map.html) | Publication activity by place and decade |
-| [Woven](https://centercoopmedia.github.io/njblackpress/woven.html) | Interactive loom view of the full publication timeline |
+| [Woven](https://centercoopmedia.github.io/njblackpress/woven.html) | 3D textile overview, dated timeline, era index, and publication browser |
 | [Wiki](https://centercoopmedia.github.io/njblackpress/wiki/) | Pre-rendered publication and browse pages |
 
 Each publication record includes known dates, locations, publishers, formats,

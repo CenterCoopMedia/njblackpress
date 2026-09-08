@@ -1,78 +1,47 @@
-// Woven — the loom frame and the lights. Wood is structure, nothing else.
-
+// Woven — a timeline scaffold measured from the archive, with no fixed frame.
 import * as THREE from 'three';
-
-const OAK_500 = 0x6b563c;
-const OAK_400 = 0x8a7252;
-
-// Local merge, so the only vendored addon is OrbitControls.
-// All parts carry position and normal after toNonIndexed().
-function mergeParts(parts) {
-  const flat = parts.map((g) => (g.index ? g.toNonIndexed() : g));
-  let n = 0;
-  for (const g of flat) n += g.attributes.position.count;
-  const pos = new Float32Array(n * 3);
-  const nor = new Float32Array(n * 3);
-  let o = 0;
-  for (const g of flat) {
-    pos.set(g.attributes.position.array, o * 3);
-    nor.set(g.attributes.normal.array, o * 3);
-    o += g.attributes.position.count;
-  }
-  const out = new THREE.BufferGeometry();
-  out.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  out.setAttribute('normal', new THREE.BufferAttribute(nor, 3));
-  out.computeBoundingSphere();
-  return out;
-}
-
-function placed(geo, x, y, z, rotZ) {
-  const g = geo.clone();
-  if (rotZ) g.rotateZ(rotZ);
-  g.translate(x, y, z);
-  return g;
-}
+import { x, YEAR_MIN, YEAR_MAX } from './layout.js';
 
 export function buildLoom(model) {
   const group = new THREE.Group();
-  const frameParts = [
-    placed(new THREE.BoxGeometry(1.2, 31, 1.0), -2.5, -14.3, 0),
-    placed(new THREE.BoxGeometry(1.2, 31, 1.0), 75.5, -14.3, 0),
-    placed(new THREE.CylinderGeometry(0.55, 0.55, 79, 12), 36.5, 0.9, 0, Math.PI / 2),
-    placed(new THREE.CylinderGeometry(0.70, 0.70, 79, 12), 36.5, -28.6, 0, Math.PI / 2),
-    placed(new THREE.BoxGeometry(79, 0.28, 0.28), 36.5, -29.9, 0.9)
-  ];
-  const frame = new THREE.Mesh(
-    mergeParts(frameParts),
-    new THREE.MeshLambertMaterial({ color: OAK_400 })
-  );
-  frame.name = 'loom-frame';
-  group.add(frame);
-
-  const ruleParts = [];
+  const points = [];
+  const bottom = model.layout.bounds.minY - 0.5;
+  for (let year = YEAR_MIN; year <= YEAR_MAX; year += 10) {
+    points.push(x(year), 0.9, -0.12, x(year), bottom, -0.12);
+  }
   for (const band of model.bands) {
     if (!band.count) continue;
-    ruleParts.push(placed(new THREE.BoxGeometry(76, 0.05, 0.06), 36.5, band.top - band.height - 0.35, 0));
+    const y = band.top - band.height - 0.45;
+    points.push(0, y, -0.12, x(YEAR_MAX), y, -0.12);
   }
-  if (ruleParts.length) {
-    const rules = new THREE.Mesh(
-      mergeParts(ruleParts),
-      new THREE.MeshLambertMaterial({ color: OAK_500, transparent: true, opacity: 0.5 })
-    );
-    rules.name = 'band-rules';
-    group.add(rules);
-  }
+  const grid = new THREE.BufferGeometry();
+  grid.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
+  const rules = new THREE.LineSegments(grid,
+    new THREE.LineBasicMaterial({ color: 0x6b563c, transparent: true, opacity: 0.42 }));
+  rules.name = 'timeline-rules';
+  group.add(rules);
+
+  // Each circular stitch marks a known founding year, including one-year titles.
+  const dated = model.threads.filter((t) => !t.unknownFounding);
+  const starts = new THREE.InstancedMesh(new THREE.SphereGeometry(0.10, 8, 6),
+    new THREE.MeshBasicMaterial(), Math.max(1, dated.length));
+  starts.count = dated.length;
+  const matrix = new THREE.Matrix4();
+  dated.forEach((t, i) => {
+    matrix.makeTranslation(t.x0, t.y, 0.10);
+    starts.setMatrixAt(i, matrix);
+    starts.setColorAt(i, new THREE.Color(t.dye));
+  });
+  starts.name = 'founding-stitches';
+  group.add(starts);
   return group;
 }
 
-// There was a shuttle mesh here. It encoded no data — it was a mascot — so it is
-// gone. The cloth still reveals itself from left to right; nothing rides it.
-
 export function buildLights() {
-  const g = new THREE.Group();
-  g.add(new THREE.HemisphereLight(0xa89179, 0x0b0806, 0.55));
-  const dir = new THREE.DirectionalLight(0xf3eee2, 0.75);
-  dir.position.set(0.4, 0.8, 1.0).normalize();
-  g.add(dir);
-  return g;
+  const group = new THREE.Group();
+  group.add(new THREE.HemisphereLight(0xf4f7ff, 0x142134, 1.2));
+  const light = new THREE.DirectionalLight(0xffffff, 1.1);
+  light.position.set(0.4, 0.8, 1);
+  group.add(light);
+  return group;
 }

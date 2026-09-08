@@ -40,7 +40,10 @@ Main pages:
 - `docs/story.html`: Sourced narrative selected with `?id=`.
 - `docs/era.html`: Historical era selected with `?decade=`.
 - `docs/map.html`: Publication map and decade filter.
-- `docs/woven.html`: Interactive timeline loom.
+- `docs/woven.html`: A 3D textile overview with a separate publication timeline.
+  Both views share an era index, publication browser, records, and guided stories.
+  Browsers without WebGL use an interactive Canvas 2D timeline.
+  `?nogl=1` opens the complete text archive. See `WOVEN_REVIEW.md` for checks.
 - `docs/wiki/`: Generated public HTML wiki.
 
 The scripts in `docs/js/` support the main site. Most older scripts use the
