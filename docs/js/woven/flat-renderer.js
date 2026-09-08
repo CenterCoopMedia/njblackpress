@@ -83,10 +83,10 @@ export function createFlatRenderer(canvas, model) {
             ctx.arc(px(t.x0), py(t.y), Math.max(1.3, 0.1 * scale), 0, Math.PI * 2);
             ctx.fill();
           }
-          if (t.endState === 'still') {
-            stroke(t.x1, 74.5);
-            for (const offset of [-0.06, 0, 0.06]) stroke(74.5, 78.5, offset);
-          }
+        }
+        if (t.endState === 'still') {
+          stroke(x(YEAR_MAX), 74.5);
+          for (const offset of [-0.06, 0, 0.06]) stroke(74.5, 78.5, offset);
         }
       }
       ctx.setLineDash([]);

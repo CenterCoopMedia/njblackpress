@@ -44,7 +44,9 @@ export function clothPoint(year, row, bottom) {
 // and active titles have loose ends; neither implies an invented chronology.
 export function threadSpans(thread) {
   if (thread.unknownFounding) {
-    return [1880, 1910, 1940, 1970, 2000].map((position) => [position, position + 20]);
+    const fragments = [1880, 1910, 1940, 1970, 2000].map((position) => [position, position + 20]);
+    if (thread.endState === 'still') fragments.push([YEAR_MAX, YEAR_MAX + 7]);
+    return fragments;
   }
   return [[YEAR_MIN, YEAR_MAX + (thread.endState === 'still' ? 7 : 0)]];
 }

@@ -74,6 +74,7 @@ function threadColumns(t) {
         colAt(x0 + 3.5, t, 0.03, 1, 1)
       ]);
     }
+    appendActiveEnd(pieces, t, colAt(x(2026), t, t.width, 1, 0));
     return { pieces, meta };
   }
 
@@ -108,9 +109,14 @@ function threadColumns(t) {
     ]);
   }
 
+  appendActiveEnd(pieces, t, cols[cols.length - 1]);
+  return { pieces, meta };
+}
+
+// Keep the active-status cue separate from the recorded date span.
+function appendActiveEnd(pieces, t, last2) {
   if (t.endState === 'still') {
     // Past the right post, into three loose strands that taper to nothing.
-    const last2 = cols[cols.length - 1];
     for (const dy of [-0.06, 0, 0.06]) {
       const strand = [];
       for (let s = 0; s <= 8; s++) {
@@ -129,8 +135,6 @@ function threadColumns(t) {
       { ...last2, x: SPLIT_X, yearNorm: 1, ramp: 1 }
     ]);
   }
-
-  return { pieces, meta };
 }
 
 function colAt(xx, t, w, ramp, k) {

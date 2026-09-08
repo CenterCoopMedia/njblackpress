@@ -38,11 +38,16 @@ for (const t of model.threads) {
 }
 const geometry = buildWeft(model);
 const represented = new Set();
+const looseEnds = new Set();
 for (const geo of Object.values(geometry)) {
   assert.ok([...geo.attributes.position.array].every(Number.isFinite));
-  for (const index of geo.attributes.aThreadIndex.array) represented.add(index);
+  for (const [i, index] of geo.attributes.aThreadIndex.array.entries()) {
+    represented.add(index);
+    if (geo.attributes.position.array[i * 3] > 74.5) looseEnds.add(index);
+  }
 }
 for (const t of model.threads) assert.ok(represented.has(t.threadIndex), `${t.name} must produce a visible ribbon`);
+for (const t of model.threads) assert.equal(looseEnds.has(t.threadIndex), t.endState === 'still', `${t.name}: timeline loose ends must match active status`);
 const warp = buildWarp(model, 4, 4);
 assert.ok(Math.min(...warp.attributes.position.array.filter((_, i) => i % 3 === 1)) < model.layout.bounds.minY);
 assert.equal(buildLoom(model).getObjectByName('founding-stitches').count, source.filter((p) => p.yearFounded != null).length);
@@ -50,7 +55,9 @@ assert.equal(buildLoom(model).getObjectByName('founding-stitches').count, source
 // Render the real data through the flat renderer; fail on invalid coordinates.
 let segments = 0;
 let loadingFrames = 0;
+let drawnXs = [];
 const ctx = new Proxy({}, { get: (_, key) => (...args) => {
+  if (key === 'lineTo') drawnXs.push(args[0]);
   if (key === 'strokeRect') { assert.ok(args.every(Number.isFinite)); loadingFrames++; }
   if (['moveTo', 'lineTo', 'arc', 'fillRect'].includes(key)) {
     assert.ok(args.every(Number.isFinite), `${key} has invalid coordinates`);
@@ -82,6 +89,18 @@ assert.equal(loadingFrames, 1, 'A pending evidence image must show its loading f
 placeholder.visible = false;
 renderer.render(scene, camera);
 assert.equal(loadingFrames, 1, 'Hidden loading frames must not draw');
+
+// The flat fallback must retain the same active cue for undated records.
+const flatScale = 700 / (2 * Math.tan(camera.fov * Math.PI / 360) * camera.position.z);
+const clothEdge = 512 + (74.5 - camera.position.x) * flatScale;
+for (const t of model.threads.filter((thread) => thread.unknownFounding)) {
+  const oneTitle = createFlatRenderer(canvas, { ...model, order: [t], knots: [] });
+  oneTitle.setSize(1024, 700);
+  camera.position.y = t.y;
+  drawnXs = [];
+  oneTitle.render(scene, camera);
+  assert.equal(drawnXs.some((xx) => xx > clothEdge), t.endState === 'still', `${t.name}: flat loose ends must match active status`);
+}
 
 // Missing dates and rights are separate questions. Exercise cases absent today.
 documents.set('data/publications.json', { publications: [

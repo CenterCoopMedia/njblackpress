@@ -31,7 +31,8 @@ for (const t of threads) {
     assert(!publicationYears(t).includes('present'));
   }
   if (t.unknownFounding) {
-    assert.equal(threadSpans(t).length, 5);
+    assert.equal(threadSpans(t).length, t.isActive ? 6 : 5);
+    assert.equal(threadSpans(t).some(([, end]) => end > 2026), t.isActive, `${t.name}: loose ends must match active status`);
     if (t.isActive) assert(publicationYears(t).includes('still publishing'));
     else if (t.yearCeased != null) assert(publicationYears(t).includes(`ceased ${t.yearCeased}`));
   }
