@@ -32,8 +32,8 @@ export function createLabels(app, three, model) {
     <div class="lg-body">
       <p class="lg-lede">Each horizontal thread is one publication. It starts the year the paper was founded and ends the year it stopped. Left to right is 1880 to 2026.</p>
       <ul>
-        <li><span class="lg-swatch lg-thick"></span>Thicker thread — more surviving material we can show you</li>
-        <li><span class="lg-swatch lg-ghost"></span>Faint and frayed — ${model.counts.ghost} titles we know only from a catalog line</li>
+        <li><span class="lg-swatch lg-thick"></span>Thicker thread — more evidence records in this archive</li>
+        <li><span class="lg-swatch lg-ghost"></span>Faint and frayed — ${model.counts.ghost} titles without cleared evidence in this archive</li>
         <li><span class="lg-swatch lg-loose"></span>Runs past the right post — the ${model.counts.stillPublishing} papers still publishing</li>
         <li><span class="lg-swatch lg-knot"></span>Knot — a documented event, ${model.counts.events} in all</li>
       </ul>

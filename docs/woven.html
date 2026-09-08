@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Woven — one hundred and forty-six years of the New Jersey Black press, drawn as a single cloth on a loom. Every cross thread is a publication.">
+    <meta name="description" content="Explore New Jersey’s Black press as a three-dimensional weave or a precise timeline. Every thread leads to a publication and its evidence.">
     <meta name="author" content="Center for Cooperative Media">
 
     <meta property="og:title" content="Woven | NJ Black Press Archive">
-    <meta property="og:description" content="One hundred and forty-six years of the New Jersey Black press, woven once.">
+    <meta property="og:description" content="New Jersey’s Black press, one thread at a time.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://centercoopmedia.github.io/njblackpress/woven.html">
     <meta property="og:image" content="https://centercoopmedia.github.io/njblackpress/og-woven.png">
@@ -18,7 +18,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Woven | NJ Black Press Archive">
-    <meta name="twitter:description" content="One hundred and forty-six years of the New Jersey Black press, woven once.">
+    <meta name="twitter:description" content="New Jersey’s Black press, one thread at a time.">
     <meta name="twitter:image" content="https://centercoopmedia.github.io/njblackpress/og-woven.png">
 
     <title>Woven | NJ Black Press Archive</title>
@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/woven.css">
     <link rel="stylesheet" href="css/woven-guide.css">
+    <link rel="stylesheet" href="css/woven-exhibit.css">
 
     <script type="importmap">
     {
@@ -96,51 +97,42 @@
 
     <main class="pt-20">
         <div id="woven-firstscreen">
-        <section id="woven-intro" class="max-w-[1400px] mx-auto w-full px-4 md:px-8 py-5 md:py-6">
-            <div class="intro-grid">
-                <div class="intro-head">
-                    <p class="woven-intro-kicker">An interactive timeline of New Jersey's Black press</p>
-                    <h1 class="font-display font-extrabold leading-[1.05] text-linen-50" style="font-size: clamp(1.35rem, 2.9vw, 2.55rem);">A hundred and forty-six years, woven once</h1>
-                    <hr class="rail-wood mt-4 max-w-md">
-                </div>
-                <div class="woven-intro-copy">
-                    <p class="woven-intro-lede">Each horizontal thread is one publication. Left to right is time. Thread thickness shows how much evidence survives.</p>
-                    <p class="woven-intro-detail"><span data-count="still">…</span> currently publishing titles end in loose strands. <span data-count="ghost">…</span> titles known only from a catalog line appear faint and frayed.</p>
-                    <p class="woven-intro-prompt">Choose a guided story, search for a publication, or explore the whole loom.</p>
-                </div>
+        <section id="woven-intro" class="woven-masthead">
+            <div class="woven-title-block">
+                <h1>Woven</h1>
+                <p>New Jersey’s Black press,<br>one thread at a time.</p>
+            </div>
+            <div class="woven-intro-summary">
+                <p>Explore publication histories and the evidence behind them.</p>
+                <dl class="woven-totals">
+                    <div><dt>Publications</dt><dd data-count="total">…</dd></div>
+                    <div><dt>Still publishing</dt><dd data-count="still">…</dd></div>
+                    <div><dt>Years in view</dt><dd>1880–2026</dd></div>
+                </dl>
             </div>
         </section>
 
-        <div id="woven-stage">
-            <p id="woven-canvas-help" class="sr-only">Drag to move across the timeline. Scroll or pinch to zoom. Select a thread to open its publication record. Use the arrow keys to move between publications and events.</p>
+        <div id="woven-stage" data-view="loading">
+            <p id="woven-canvas-help" class="sr-only">In the 3D weave, use up and down to choose a publication, Enter to read it, and left and right to turn the view. In Timeline, drag to move and scroll or pinch to zoom. The publication index and Read as a list offer the same records without pointing at a thread.</p>
             <canvas id="woven-canvas" role="application" tabindex="0"
                     aria-label="Interactive timeline of New Jersey Black publications"
                     aria-describedby="woven-canvas-help"></canvas>
 
             <div id="woven-chrome">
             <div id="woven-topbar">
-                <div class="woven-primary-actions" aria-label="Ways to explore the loom">
-                    <button type="button" class="woven-btn woven-primary-btn" id="btn-start">Start here</button>
-                    <button type="button" class="woven-btn woven-primary-btn" id="btn-tours" aria-expanded="false" aria-controls="woven-tourpicker">Guided stories</button>
+                <div class="woven-view-switch" role="group" aria-label="Visualization view">
+                    <button type="button" class="woven-btn" data-woven-view="woven" aria-pressed="true">3D weave</button>
+                    <button type="button" class="woven-btn" data-woven-view="timeline" aria-pressed="false">Timeline</button>
                 </div>
-
-                <form id="woven-searchform" role="search" autocomplete="off">
-                    <label class="sr-only" for="woven-search">Search for a publication or city</label>
-                    <div class="woven-search-row">
-                        <input id="woven-search" type="search" placeholder="Search a publication or city" enterkeyhint="search"
-                               role="combobox" aria-autocomplete="list" aria-expanded="false"
-                               aria-controls="woven-search-results">
-                        <button type="submit" class="woven-btn woven-search-submit">Search</button>
-                    </div>
-                    <span id="woven-search-count" role="status" aria-live="polite"></span>
-                    <div id="woven-search-results" role="listbox" aria-label="Publication search results" hidden></div>
-                </form>
+                <button type="button" class="woven-btn woven-primary-btn" id="btn-tours" aria-expanded="false" aria-controls="woven-tourpicker">Guided stories</button>
+                <button type="button" class="woven-btn" id="woven-find-title">Find a title</button>
 
                 <details id="woven-more-tools">
                     <summary class="woven-btn">More tools</summary>
                     <div class="woven-more-panel" aria-label="More loom tools">
+                        <button type="button" class="woven-btn" id="btn-start">How to explore</button>
                         <button type="button" class="woven-btn" id="btn-help">How this works</button>
-                        <button type="button" class="woven-btn" id="btn-ghost">What did not survive</button>
+                        <button type="button" class="woven-btn" id="btn-ghost">Gaps in the record</button>
                         <button type="button" class="woven-btn" id="btn-reset">Reset the view</button>
                         <button type="button" class="woven-btn" id="btn-fullscreen" aria-label="Enter fullscreen" hidden>Fullscreen</button>
                         <a class="woven-btn" href="#woven-twin">Read as a list</a>
@@ -155,9 +147,47 @@
                     <button type="button" class="woven-btn" id="btn-era-next" aria-label="Move to later founding decades">Next era</button>
                     <button type="button" class="woven-btn" id="btn-whole">Whole timeline · <span data-count="total">…</span> titles</button>
                 </div>
-                <span id="woven-eranav-note">Names appear when you zoom in. Select a thread to open its record.</span>
+                <span id="woven-eranav-note">Zoom to read labels, or choose a title from the publication index.</span>
             </div>
             </div>
+
+            <div id="woven-loading" role="status">Loading the archive…</div>
+            <div id="woven-exhibit-axis" aria-hidden="true"></div>
+            <div id="woven-turn-controls" role="group" aria-label="Turn the 3D weave" hidden>
+                <button type="button" class="woven-btn" data-woven-turn="-1" aria-label="Turn weave left">←</button>
+                <button type="button" class="woven-btn" data-woven-turn="1" aria-label="Turn weave right">→</button>
+                <button type="button" class="woven-btn" id="woven-motion" aria-pressed="false">Play motion</button>
+            </div>
+            <p id="woven-exhibit-caption">Every thread leads to a publication record.</p>
+            <aside id="woven-browser" aria-labelledby="woven-browser-title">
+                <div class="woven-browser-head">
+                    <h2 id="woven-browser-title">Publications</h2>
+                <form id="woven-searchform" role="search" autocomplete="off">
+                    <label class="sr-only" for="woven-search">Search for a publication or city</label>
+                    <div class="woven-search-row">
+                        <input id="woven-search" type="search" placeholder="Search a publication or city" enterkeyhint="search"
+                               role="combobox" aria-autocomplete="list" aria-expanded="false"
+                               aria-controls="woven-search-results">
+                        <button type="submit" class="woven-btn woven-search-submit">Search</button>
+                    </div>
+                    <span id="woven-search-count" role="status" aria-live="polite"></span>
+                    <div id="woven-search-results" role="listbox" aria-label="Publication search results" hidden></div>
+                </form>
+                    <div class="woven-filter-fields">
+                        <label for="woven-city">City<select id="woven-city"><option value="">All cities</option></select></label>
+                        <label for="woven-evidence">Show<select id="woven-evidence">
+                            <option value="all">All publications</option>
+                            <option value="active">Still publishing</option>
+                            <option value="evidence">Cleared evidence</option>
+                            <option value="unillustrated">No cleared evidence</option>
+                        </select></label>
+                    </div>
+                    <div class="woven-browser-count"><p id="woven-browser-status" role="status">Loading publications…</p><button type="button" id="woven-clear-filters" disabled>Clear filters</button></div>
+                </div>
+                <p id="woven-browser-empty" hidden>No publications match these filters. Clear the filters to see all titles.</p>
+                <ol id="woven-publications" aria-label="Publications by founding year"></ol>
+                <a class="woven-index-link" href="#woven-twin">Read the archive as a list ↓</a>
+            </aside>
 
             <div id="woven-yearrail" aria-hidden="true"></div>
             <div id="woven-tip" role="presentation" hidden></div>
@@ -181,7 +211,7 @@
                         <button type="button" class="woven-btn" data-guide-close>Close</button>
                     </div>
                     <div class="woven-guide-body">
-                        <p id="woven-start-description">The loom holds every publication on one timeline. Pick the route that makes the most sense for what you want to learn.</p>
+                        <p id="woven-start-description">The 3D weave and Timeline use the same publication records. Pick the route that makes the most sense for what you want to learn.</p>
                         <div class="woven-start-actions">
                             <button type="button" class="woven-guide-action" data-guide-action="story">
                                 <span class="woven-guide-action-title">Follow a guided story</span>
@@ -193,12 +223,12 @@
                             </button>
                             <button type="button" class="woven-guide-action" data-guide-action="explore">
                                 <span class="woven-guide-action-title">Explore the whole loom</span>
-                                <span class="woven-guide-action-copy">Drag to move, scroll or pinch to zoom, then select a thread.</span>
+                                <span class="woven-guide-action-copy">Choose a thread in the 3D weave, or switch to Timeline for precise dates.</span>
                             </button>
                         </div>
                         <div class="woven-quick-guide" aria-label="How to explore on your own">
                             <span><b>1</b> Drag to move</span>
-                            <span><b>2</b> Zoom until names appear</span>
+                            <span><b>2</b> Choose a title or zoom</span>
                             <span><b>3</b> Select a thread for its record</span>
                         </div>
                         <p class="woven-guide-list-link">Prefer a conventional index? <a class="link-thread" href="archive.html">Open the full archive</a>.</p>
@@ -216,6 +246,20 @@
             <div id="woven-tourbar" hidden></div>
         </div>
         </div>
+
+        <section class="woven-reading-key" aria-labelledby="woven-key-title">
+            <h2 id="woven-key-title">Reading the weave</h2>
+            <div class="woven-key-lines">
+                <p><span class="woven-key-thread" aria-hidden="true"></span><strong>One thread, one publication.</strong> Color groups founding eras; thickness reflects the number of evidence records.</p>
+                <p><span class="woven-key-thread is-dashed" aria-hidden="true"></span><strong>Gaps need care.</strong> Faint threads have no cleared evidence in this archive. A dashed continuation marks an unknown end date.</p>
+                <p><span class="woven-key-thread is-open" aria-hidden="true"></span><strong>The record continues.</strong> Active titles extend beyond 2026. Undated titles appear as separate fragments, not invented lifespans.</p>
+            </div>
+            <p class="woven-key-note">The folds are an artistic treatment, not evidence of links between publications. Switch to Timeline for precise positions. Missing evidence here does not mean no copies survive elsewhere.</p>
+        </section>
+        <section id="woven-stories" class="woven-story-shelf" aria-labelledby="woven-stories-title" hidden>
+            <div class="woven-section-heading"><h2 id="woven-stories-title">Follow a story</h2><button type="button" class="woven-btn" id="woven-all-stories">All <span data-count="tours">…</span> stories →</button></div>
+            <ul id="woven-story-list"></ul>
+        </section>
 
         <div id="woven-live" aria-live="polite" aria-atomic="true" class="sr-only"></div>
         <div id="woven-live-assertive" aria-live="assertive" class="sr-only"></div>

@@ -38,6 +38,9 @@ async function boot() {
     model = await loadModel();
   } catch (e) {
     console.error('Woven: data load failed', e);
+    const loading = document.getElementById('woven-loading');
+    loading.textContent = 'The archive could not load. Reload this page or open the full archive.';
+    document.getElementById('woven-browser-status').textContent = 'Publication data is unavailable.';
     return;
   }
   app.model = model;
@@ -63,7 +66,19 @@ async function boot() {
   }
   if (params.get('twin') === '1') document.getElementById('woven-twin').classList.add('twin-visible');
 
-  await startScene(model);
+  try {
+    await startScene(model);
+  } catch (error) {
+    console.error('Woven: drawing failed', error);
+    app.contextLost = true;
+    app.exhibit?.dispose();
+    app.three?.renderer.dispose();
+    const { startFallback } = await import('./fallback.js');
+    const api = startFallback(model, 'nogl');
+    app.select = (id) => api.open(id);
+    app.playStory = (id) => api.playStory(id);
+    app.showGhost = () => api.showGhost();
+  }
 }
 
 async function startScene(model) {
@@ -85,7 +100,7 @@ async function startScene(model) {
   let pixelRatio = Math.min(window.devicePixelRatio, 2);
   renderer.setPixelRatio(pixelRatio);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
-  renderer.setClearColor(0x0b0806, 1);
+  renderer.setClearColor(0x111413, 1);
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(45, 1, 0.5, 400);
@@ -295,6 +310,7 @@ async function startScene(model) {
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
+    app.exhibit?.resize();
     // The fine warp is 40k triangles of detail nobody can see on a 375px screen,
     // so a narrow window gets the coarse warp. A window can be narrowed after
     // load, so this is decided on every resize, not once. Once the frame timer
@@ -367,9 +383,11 @@ async function startScene(model) {
   let hoverTarget = null;
 
   canvas.addEventListener('pointermove', (e) => {
+    if (app.exhibit?.active) return;
     pending = { x: e.clientX, y: e.clientY, touch: e.pointerType === 'touch' };
   });
   canvas.addEventListener('pointerleave', () => {
+    if (app.exhibit?.active) return;
     pending = null; hoverTarget = null; tip.hidden = true;
     state.hoverId = null; writeHover(null); syncTwin(state); app.needsRender = true;
   });
@@ -387,6 +405,7 @@ async function startScene(model) {
     downCoarse = e.pointerType === 'touch' || e.pointerType === 'pen' || coarsePointer.matches;
   });
   canvas.addEventListener('click', (e) => {
+    if (app.exhibit?.active) return;
     if (downAt && Math.hypot(e.clientX - downAt.x, e.clientY - downAt.y) > 8) return;
     const r = canvas.getBoundingClientRect();
     const h = pick(e.clientX, e.clientY, r, downCoarse || e.pointerType === 'touch');
@@ -465,6 +484,13 @@ async function startScene(model) {
     }
   }
 
+  app.setExploreMatches = (ids) => {
+    searchMatches = ids;
+    paintBase(null);
+    stateTex.commit();
+    app.needsRender = true;
+  };
+
   function writeHover(h) {
     stateTex.clear(3, 0);
     paintBase(h);
@@ -474,13 +500,13 @@ async function startScene(model) {
       const years = t.yearFounded
         ? `${t.yearFounded}–${t.yearCeased ?? (t.endState === 'still' ? 'now' : '?')}`
         : 'founding year unrecorded';
-      const third = t.ghost ? 'catalog entry only'
+      const third = t.ghost ? 'no cleared evidence in this archive'
         : `${t.evidenceCount} item${t.evidenceCount === 1 ? '' : 's'} of evidence`;
       tip.innerHTML = '';
       addLine(tip, 'tip-name', t.name);
       addLine(tip, 'tip-meta', `${t.city || 'city unrecorded'} · ${years}`);
       addLine(tip, 'tip-ev', third);
-      if (t.endState === 'unrecorded') addLine(tip, 'tip-ev', 'end date unrecorded');
+      if (t.endState !== 'still' && t.yearCeased == null) addLine(tip, 'tip-ev', 'end date unrecorded');
       if (t.endState === 'still') addLine(tip, 'tip-ev', 'still publishing');
       stateTex.set(t.threadIndex, 3, 2);
     } else {
@@ -1040,6 +1066,8 @@ async function startScene(model) {
   let last = performance.now();
   function frame(now) {
     requestAnimationFrame(frame);
+    if (app.contextLost || document.hidden) { last = now; return; }
+    if (app.exhibit?.active) { app.exhibit.frame(now); last = now; return; }
     processHover();
     if (app.tween) app.tween();
     if (pluckStart >= 0) {
@@ -1078,6 +1106,8 @@ async function startScene(model) {
   requestAnimationFrame(frame);
 
   canvas.addEventListener('webglcontextlost', async () => {
+    app.contextLost = true;
+    app.exhibit?.dispose();
     if (app.tour && app.tour.isPlaying) app.tour.exit();
     const { startFallback } = await import('./fallback.js');
     const api = startFallback(model, 'lost');
@@ -1087,14 +1117,15 @@ async function startScene(model) {
     if (state.selectedId != null) api.open(state.selectedId);
   });
 
+  window.__woven = { app, renderer, scene, camera, model, controls, THREE, pick };
+  const { mountExhibit } = await import('./exhibit.js');
+  app.exhibit = mountExhibit(app, params);
+
   // ---- deep links ----
   if (params.get('pub')) app.select(+params.get('pub'), {});
   if (params.get('story')) app.playStory(params.get('story'));
   if (params.get('ghost') === '1') app.showGhost();
 
-  // Debug handle. Nothing on the page reads it; it exists so the loom can be
-  // driven and measured from outside without a second copy of the maths.
-  window.__woven = { app, renderer, scene, camera, model, controls, THREE, pick };
 }
 
 function hideCards() {
@@ -1118,7 +1149,7 @@ function toggleHelp() {
         <button type="button" class="woven-btn" data-close>Close</button>
       </div>
       <div class="card-scroll">
-      <p>This is every Black-owned and Black-focused publication we have found in New Jersey, drawn on one axis of time. Left to right is 1880 to 2026. Each horizontal thread is one publication, running from the year it was founded to the year it stopped, and the rows are grouped by the decade each paper began. A thicker thread means more surviving material we can show you. A faint, frayed one means the paper survives only as a line in a catalog.</p>
+      <p>This is every Black-owned and Black-focused publication we have found in New Jersey, drawn on one axis of time. Left to right is 1880 to 2026. Each horizontal thread is one publication, running from the year it was founded to the year it stopped, and the rows are grouped by the decade each paper began. A thicker thread means more evidence records in this archive. A faint, frayed thread has no cleared evidence here; copies may survive elsewhere. An unrecorded end date is not proof that a paper continued to the present.</p>
       <h4>By pointer</h4>
       <dl>
         <dt>Drag</dt><dd>move across the cloth, left, right, up, or down</dd>
@@ -1134,7 +1165,7 @@ function toggleHelp() {
         <dt>Page up and page down</dt><dd>move between decades</dd>
         <dt>Enter</dt><dd>open this publication</dd>
         <dt>Escape</dt><dd>go back</dd>
-        <dt>T · G · 0</dt><dd>guided threads · what did not survive · reset the view</dd>
+        <dt>T · G · 0</dt><dd>guided threads · gaps in the record · reset the view</dd>
         <dt>Escape</dt><dd>close this panel</dd>
       </dl>
       </div>

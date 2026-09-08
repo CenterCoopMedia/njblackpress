@@ -27,8 +27,8 @@ export function buildTwin(m, callbacks) {
       <ol class="tour-list">${m.tours.map(tourHTML).join('')}</ol>
     </section>
     <section id="woven-twin-ghost" aria-labelledby="ghost-h">
-      <h3 id="ghost-h">Titles that survive only as a catalog entry</h3>
-      <p>${c.ghost} of these papers exist now as a single line in a catalog — a title, a city, a range of years, recorded by a librarian who held the issue we cannot find. No page, no masthead, no photograph. They are woven into the same cloth as everything else, thin and unfinished, because an absence in the record is not an absence in the history. Their names follow.</p>
+      <h3 id="ghost-h">Titles without cleared evidence</h3>
+      <p>${c.ghost} publications have no evidence cleared for display in this archive. Some records have catalog citations or other restricted evidence; others have no attached evidence. This does not establish whether copies survive elsewhere. Their threads remain in the same cloth. Their names follow.</p>
       <ol class="ghost-list">${ghostHTML()}</ol>
     </section>`;
 
@@ -45,7 +45,7 @@ function bandHTML(band) {
 
 function stateLine(t) {
   if (t.endState === 'still') return 'still publishing';
-  if (t.endState === 'ceased') return `ceased ${t.yearCeased ?? 'date unknown'}`;
+  if (t.endState === 'ceased' && t.yearCeased != null) return `ceased ${t.yearCeased}`;
   return 'end date unrecorded';
 }
 
@@ -58,7 +58,7 @@ function yearsLine(t) {
 
 function threadHTML(t) {
   const ev = t.evidenceCount === 1 ? '1 item of evidence' : `${t.evidenceCount} items of evidence`;
-  const evidenceLine = t.ghost ? 'catalog entry only' : ev;
+  const evidenceLine = t.ghost ? `${ev}; none cleared for display` : ev;
   return `<li id="thread-${t.id}" data-pub="${t.id}" data-state="${t.endState}"${t.ghost ? ' data-ghost="true"' : ''}>
     <button type="button" class="t-open" data-pub="${t.id}" aria-expanded="false" aria-controls="thread-${t.id}-detail">
       <span class="t-name">${esc(t.name)}</span>

@@ -33,7 +33,7 @@ export function isOpen() { return el && !el.hidden; }
 
 function endLine(t) {
   if (t.endState === 'still') return 'Still publishing';
-  if (t.endState === 'ceased') return `Ceased ${t.yearCeased ?? 'date unknown'}`;
+  if (t.endState === 'ceased' && t.yearCeased != null) return `Ceased ${t.yearCeased}`;
   return 'End date unrecorded';
 }
 
@@ -71,7 +71,7 @@ export function openPublication(t, model, hooks) {
     ${t.missionStatement ? `<p><em>${esc(t.missionStatement)}</em></p>` : ''}
     ${t.historicalNotes ? `<p>${esc(t.historicalNotes)}</p>` : ''}
     <h3>Evidence we hold</h3>
-    ${t.evidence.length ? t.evidence.map(evidenceCard).join('') : '<p>Nothing survives but the catalog entry.</p>'}
+    ${t.evidence.length ? t.evidence.map(evidenceCard).join('') : '<p>No evidence records are attached to this publication in the archive.</p>'}
     ${t.stories && t.stories.length ? `<h3>Part of these threads</h3>${t.stories.map((s) => `<p><button type="button" class="woven-btn t-play" data-story="${esc(s.id)}">${esc(s.title)}</button></p>`).join('')}` : ''}
     <h3>Full record</h3>
     <p><a class="link-thread" href="publication.html?id=${Number(t.id)}">Open the full record</a></p>`;
