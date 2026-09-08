@@ -88,6 +88,10 @@ try:
         expect(page.locator('#woven-panel')).to_be_visible()
         check('Canvas hit testing works after the page scrolls', True)
         page.locator('#woven-panel .p-close').click()
+        page.locator('#woven-publications button').first.click()
+        page.locator('#woven-find-title').click()
+        expect(page.locator('#woven-search')).to_be_focused()
+        check('Find a title restores search focus from an open record', True)
         page.locator('[data-woven-view="timeline"]').click()
         page.wait_for_timeout(600)
         check('Precise timeline is available', not page.evaluate('window.__woven.app.exhibit.active'))
@@ -109,6 +113,8 @@ try:
         ready(page,f'?view=woven&pub={publication}')
         check('Sculptural record deep link preserves its view', page.evaluate('window.__woven.app.exhibit.active'))
         expect(page.locator('#woven-panel-title')).to_have_text(title)
+        ready(page,'?twin=1')
+        check('Explicit text-view link opens the list',page.locator('#woven-list-disclosure').evaluate('(el)=>el.open'))
         ready(page,f'?pub={publication}')
         check('Existing publication deep link preserves timeline behavior', not page.evaluate('window.__woven.app.exhibit.active'))
         # Reuse no framework and no GPU code on the fallback path.
@@ -137,6 +143,7 @@ try:
         page.evaluate('window.__woven.renderer.getContext().getExtension("WEBGL_lose_context").loseContext()')
         expect(page.locator('body')).to_have_class(__import__('re').compile('twin-primary'))
         check('Lost WebGL context promotes the same archive list', page.locator('#woven-twin .t-open').count()==count)
+        check('Context loss removes unusable visual story controls',page.locator('#woven-stories').is_hidden())
         context.close()
         # Separate touch contexts: drawing and index stack without overlaying.
         for width,height in [(390,844),(375,812),(768,1024)]:

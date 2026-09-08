@@ -19,8 +19,6 @@ on:
       - 'tailwind.config.js'
       - 'src/input.css'
       - '.github/workflows/woven-review.yml'
-  push:
-    branches: [codex/woven-reimagined]
 
 permissions:
   contents: read

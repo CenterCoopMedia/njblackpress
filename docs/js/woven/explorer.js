@@ -5,6 +5,9 @@ import { announce } from './twin.js';
 // no synthetic stories, and no canvas-only route to a publication.
 export function mountExplorer(app, { highlight, filter, open }) {
   const model = app.model;
+  if (new URLSearchParams(location.search).get('twin') === '1') {
+    document.getElementById('woven-list-disclosure').open = true;
+  }
   const root = document.getElementById('woven-browser');
   const city = document.getElementById('woven-city');
   const evidence = document.getElementById('woven-evidence');
@@ -70,7 +73,7 @@ export function mountExplorer(app, { highlight, filter, open }) {
   list.addEventListener('focusout', (event) => { if (!list.contains(event.relatedTarget)) highlight(null); });
   document.getElementById('woven-find-title').addEventListener('click', () => {
     app.three.panel.closePanel();
-    document.getElementById('woven-search').focus();
+    queueMicrotask(() => document.getElementById('woven-search')?.focus());
   });
   // The record occupies the index dock, never the drawing. Hide the underlying
   // index from both pointer and keyboard users until the record is closed.
@@ -107,7 +110,7 @@ export function mountExplorer(app, { highlight, filter, open }) {
     button.append(title, meta);
     button.addEventListener('click', () => {
       app.playStory(tour.id);
-      document.getElementById('woven-stage').scrollIntoView({ block: 'start', behavior: 'instant' });
+      document.getElementById('woven-stage')?.scrollIntoView({ block: 'start', behavior: 'instant' });
     });
     item.append(button);
     stories.append(item);
@@ -117,5 +120,5 @@ export function mountExplorer(app, { highlight, filter, open }) {
     document.getElementById('btn-tours').click();
   });
   document.getElementById('woven-stories').hidden = !model.tours.some((tour) => tour.stops.length);
-  return { reset, syncSelected, records: () => current, dispose: () => panelObserver.disconnect() };
+  return { reset, syncSelected, records: () => current, dispose: () => { panelObserver.disconnect(); document.getElementById('woven-stories').hidden = true; } };
 }
