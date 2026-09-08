@@ -16,17 +16,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: codex/woven-reimagined
-      - name: Import the checksum-verified local implementation on this review branch only
+      - name: Apply the verified visual refinement on this review branch only
         if: hashFiles('.github/woven-import/part-1.b64') != ''
         run: |
           test "$GITHUB_REF" = refs/heads/codex/woven-reimagined
           python3 - <<'PY'
           import base64, gzip, hashlib
           from pathlib import Path
-          parts = sorted(Path('.github/woven-import').glob('part-*.b64'))
-          assert len(parts) == 4
-          patch = gzip.decompress(base64.b64decode(''.join(p.read_text() for p in parts), validate=True))
-          assert hashlib.sha256(patch).hexdigest() == '14a583f297f3a96a2d4b4ea06a19a29d48394294082e23e76057b03e89a0464e'
+          patch = gzip.decompress(base64.b64decode(Path('.github/woven-import/part-1.b64').read_text(), validate=True))
+          assert hashlib.sha256(patch).hexdigest() == 'acd6507ca89c3a777964486276b8d6d96392e430e47a75df64c4704cc046252d'
           Path('/tmp/woven-import.patch').write_bytes(patch)
           PY
           git apply --check /tmp/woven-import.patch
@@ -35,7 +33,7 @@ jobs:
           git add docs/woven.html docs/css/woven-exhibit.css docs/js/woven scripts/review_woven.py scripts/test-woven-exhibit.mjs
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'feat: reimagine Woven as a sculptural archive exhibition'
+          git commit -m 'feat: shape the full textile and refine reading controls'
           git push origin HEAD:refs/heads/codex/woven-reimagined
       - uses: actions/setup-node@v4
         with:
