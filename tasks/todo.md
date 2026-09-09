@@ -1,12 +1,23 @@
-# wiki build plan
+# Session plan: the hall
 
-- [x] Verify open knowledge format basics from Google Cloud's announcement and public repo references.
-- [x] Inspect the archive dataset and publication schema.
-- [x] Add a generator that writes an open knowledge format wiki from `data/publications.json`.
-- [x] Generate wiki pages for the repo, archive, publication records, cities, decades, formats, and data model.
-- [x] Document how to regenerate the wiki.
-- [x] Run validation and review the generated output.
+Goal: replace the 3D timeline on historical notes with the hall. See
+`tasks/hall-spec.md`.
+
+## Plan
+
+- [x] Confirm the milestone and the concept with Joe.
+- [x] Survey the current code, data, tests, and tooling.
+- [ ] Review the specification with Joe.
+- [ ] Create the milestone and one issue per work package.
+- [ ] Work package 1: wall copies builder and generated images.
+- [ ] Work package 2: hall space, sheets, rail, picking, deep links.
+- [ ] Work package 3: volumes, page turn, reader panel, small screens.
+- [ ] Work package 4: remove the exhibit modules and unused rendering state.
+- [ ] Work package 5: tests and browser review.
+- [ ] Work package 6: docs.
+- [ ] Independent review of the diff. Fix findings.
+- [ ] Commit, push, open the pull request.
 
 ## Review notes
 
-Validated that all 244 markdown pages include YAML frontmatter with a `type` field, regenerated the wiki from source data, ran `git diff --check`, and attempted external review with `claude -p`; the command is not installed in this environment. Follow-up review fixed slug collisions, safer YAML quoting, markdown table escaping, and deterministic timestamps.
+Pending.
