@@ -16,8 +16,8 @@ section 15 addendum).
 - [x] Package 2 (#75): vertical slice. Commit 5569588. Joe approved the screenshots.
 - [x] Package 3 (#76): full collection, resources, filters, history, fallbacks. Commit 095a2b6.
 - [x] Package 4 (#77): browser review matrix, obsolete code removal, docs.
-- [ ] Package 5: independent review of the diff. Fix findings.
-- [ ] Push and open the pull request. Joe runs the human checks after.
+- [x] Package 5: independent Opus review found nine defects; all fixed in 38627c2.
+- [x] Push and open the pull request. Joe runs the human checks after.
 
 ## Rules for this session
 
@@ -105,3 +105,10 @@ instruction to leave `docs/js/hall/` untouched, nothing there was edited
 here). `node scripts/test-hall.mjs` failed once mid-session on a signature
 mismatch in `matchingOrder` and passed again once that settled; the final
 run above is the current state.
+
+### Final run after the review fixes
+
+`python3 scripts/review_hall.py` on 38627c2: 144 checks passed, 0 errors.
+All static checks in CLAUDE.md pass. Google Fonts requests fail through the
+remote proxy at times, which slows each page load past the 10 minute Bash
+limit; run the review without a timeout when that happens.
