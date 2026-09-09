@@ -1,32 +1,6 @@
 // Both views preserve publication dates. Bars sit on separate rows in a curved gallery.
 import { YEAR_MIN, YEAR_MAX } from './layout.js';
 
-export const THREAD_COLORS = ['#cb7857', '#d59c59', '#cfb37c', '#b1a0b8', '#83a69b', '#91b7c2', '#ead5af'];
-
-export function threadColor(thread) {
-  const index = 'ABCDEFG'.indexOf(thread.bandKey);
-  return index < 0 ? '#a89c85' : THREAD_COLORS[index];
-}
-
-export function publicationYears(thread) {
-  if (thread.yearFounded == null) {
-    const end = thread.endState === 'still' ? 'still publishing'
-      : thread.yearCeased != null ? `ceased ${thread.yearCeased}` : 'end date unrecorded';
-    return `Founding year unrecorded · ${end}`;
-  }
-  if (thread.endState === 'still') return `${thread.yearFounded}–present`;
-  if (thread.yearCeased != null) return `${thread.yearFounded}–${thread.yearCeased}`;
-  return `${thread.yearFounded} · end date unrecorded`;
-}
-
-export function matchesFilters(thread, { city = '', evidence = 'all' } = {}) {
-  if (city && String(thread.city || '') !== city) return false;
-  if (evidence === 'active') return thread.endState === 'still';
-  if (evidence === 'evidence') return !thread.ghost;
-  if (evidence === 'unillustrated') return thread.ghost;
-  return true;
-}
-
 export function timelinePoint(year, row, bottom) {
   const u = (year - YEAR_MIN) / (YEAR_MAX - YEAR_MIN);
   const v = row - bottom / 2;

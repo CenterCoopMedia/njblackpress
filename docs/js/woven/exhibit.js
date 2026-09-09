@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { YEAR_MIN, YEAR_MAX } from './layout.js';
-import { timelinePoint, distanceToSegment, publicationYears, threadColor, threadSpans } from './exhibit-geometry.js';
+import { timelinePoint, distanceToSegment, threadSpans } from './exhibit-geometry.js';
+import { publicationYears, eraColor } from './records.js';
 import { mountExplorer } from './explorer.js';
 import { announce, syncTwin } from './twin.js';
 
@@ -78,7 +79,7 @@ export function mountExhibit(app, params) {
     return value;
   }
   for (const thread of flat ? [] : model.threads) {
-    const mat = material(threadColor(thread), thread.ghost, thread.endState === 'unrecorded',
+    const mat = material(eraColor(thread), thread.ghost, thread.endState === 'unrecorded',
       Math.max(2, ((thread.yearCeased ?? YEAR_MAX) - (thread.yearFounded ?? YEAR_MIN)) / 2));
     const curves = [];
     for (const [start, end] of threadSpans(thread)) {

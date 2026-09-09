@@ -1,4 +1,4 @@
-import { matchesFilters, publicationYears, threadColor } from './exhibit-geometry.js';
+import { matchesFilters, publicationYears, eraColor } from './records.js';
 import { announce } from './twin.js';
 
 // A real, keyboard-accessible index alongside either drawing. No second fetch,
@@ -26,7 +26,7 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
     button.type = 'button';
     button.className = 'woven-era-choice';
     button.dataset.era = band.key;
-    if (band.threads?.length) button.style.setProperty('--thread-color', threadColor(band.threads[0]));
+    if (band.threads?.length) button.style.setProperty('--thread-color', eraColor(band.threads[0]));
     button.append(band.key === 'all' ? 'All years' : band.from == null ? 'Undated' : `${band.from}–${band.to}`);
     const count = document.createElement('span');
     count.textContent = band.count;
@@ -51,7 +51,7 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
       button.type = 'button';
       button.className = 'woven-publication';
       button.dataset.pub = String(thread.id);
-      button.style.setProperty('--thread-color', threadColor(thread));
+      button.style.setProperty('--thread-color', eraColor(thread));
       button.setAttribute('aria-pressed', String(app.state.selectedId === thread.id));
       const name = document.createElement('strong');
       name.textContent = thread.name;

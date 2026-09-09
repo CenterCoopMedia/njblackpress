@@ -79,7 +79,9 @@ Do not hand-edit these outputs:
 - `docs/data/events.json`
 - `docs/data/stories.json`
 - `docs/data/clippings.json`
+- `docs/data/wall-copies.json`
 - `docs/images/evidence/`
+- `docs/images/evidence/wall/`
 - `data/map-publications.json`
 - `docs/data/map-publications.json`
 - `docs/wiki/`
@@ -93,6 +95,7 @@ cp data/featured-publications.json docs/data/featured-publications.json
 cmp data/featured-publications.json docs/data/featured-publications.json
 python3 data/build_site_events_stories.py
 python3 data/build_map_data.py
+python3 data/make_wall_copies.py
 python3 scripts/generate_html_wiki.py --base-url https://centercoopmedia.github.io/njblackpress/
 python3 scripts/generate_okf_wiki.py
 python3 scripts/generate_okf_wiki.py --check
@@ -142,6 +145,8 @@ python3 data/test_navigation.py
 python3 data/test_wiki_publications.py
 python3 data/test_woven_layout.py
 python3 data/test_woven_usability.py
+python3 data/test_hall_assets.py
+node scripts/test-hall.mjs
 python3 scripts/generate_okf_wiki.py --check
 ```
 

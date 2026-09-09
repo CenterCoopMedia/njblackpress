@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { timelinePoint, distanceToSegment, matchesFilters, publicationYears, threadColor, threadSpans } from '../docs/js/woven/exhibit-geometry.js';
+import { timelinePoint, distanceToSegment, threadSpans } from '../docs/js/woven/exhibit-geometry.js';
+import { matchesFilters, publicationYears, eraColor } from '../docs/js/woven/records.js';
 import { buildLayout, bandKeyFor } from '../docs/js/woven/layout.js';
 
 const doc = JSON.parse(fs.readFileSync(new URL('../docs/data/publications.json', import.meta.url)));
@@ -13,7 +14,7 @@ const threads = (doc.publications || doc).map(p => ({
 buildLayout(threads);
 assert(threads.length > 100);
 for (const t of threads) {
-  assert.match(threadColor(t), /^#[a-f0-9]{6}$/);
+  assert.match(eraColor(t), /^#[a-f0-9]{6}$/);
   assert(publicationYears(t).length > 0);
   for (const [a,b] of threadSpans(t)) {
     assert(Number.isFinite(a) && Number.isFinite(b) && b > a, `Invalid span for ${t.id}`);
