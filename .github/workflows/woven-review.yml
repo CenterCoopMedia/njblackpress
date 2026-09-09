@@ -62,8 +62,9 @@ jobs:
           node data/test_woven_model.mjs
       - name: Install browser checks
         run: |
-          # Remove the Google Chrome apt source: this workflow never uses it, and it can fail with a hash mismatch, which would fail the job before any check runs.
-          sudo rm -f /etc/apt/sources.list.d/google-chrome*.list /etc/apt/sources.list.d/google.list
+          # Remove any Google source file: this workflow never uses it, and it can fail with a hash mismatch, which would fail the job before any check runs.
+          sudo rm -f /etc/apt/sources.list.d/google*
+          sudo grep -l 'dl.google.com' /etc/apt/sources.list.d/* 2>/dev/null | xargs -r sudo rm -f
           python -m pip install playwright==1.56.0
           python -m playwright install --with-deps chromium
       - name: Check the hall, the flat timeline, and their fallbacks
