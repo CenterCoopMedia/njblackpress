@@ -29,3 +29,15 @@ Run the data, navigation, layout, and usability Python checks. Run `node scripts
 The browser review covers WebGL, filters, records, focus, pointer selection after scrolling, keyboard access, both views, stories, deep links, reduced motion, idle drawing, failed data, Canvas 2D, context loss, and mobile layouts. Review the desktop and mobile screenshots before merge.
 
 GitHub Pages publishes `docs/` from `master`. Verify the Pages build and the public route after merge. Git history provides rollback. No data migration or dependency change is required.
+
+## History hall: texture budget (work package 2)
+
+The hall paints a bounded pool of 24 sheet faces. A face is 512 by 704 RGBA8,
+about 1.83 MiB with its mip chain, so the painted faces hold about 44 MiB. With
+their 24 brass plates (about 8 MiB), the 16 decade markers (about 11 MiB), the
+13 book covers (about 6 MiB), and the open volume's pages and clipping (about
+11 MiB), the hall's own resident textures come to roughly 80 MiB, inside the
+128 MiB standard budget. Painting all 136 faces at that size would take about
+249 MiB, which is why the pool exists. Sheets outside the pool share one low
+detail paper material with an era accent and no type. The simplified tier and
+its own pool size arrive with the adaptive work in the next package.

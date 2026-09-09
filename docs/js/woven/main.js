@@ -1073,6 +1073,11 @@ async function startScene(model, flat = false) {
     if (median > 22) badWindows++; else badWindows = 0;
     if (badWindows >= 2 && degradeStep < 4) { badWindows = 0; degrade(++degradeStep); }
   }
+  // The hall draws its own frames, so it reports the intervals it actually
+  // drew to this sampler. Without that the adaptive tier would never move while
+  // the hall has the frame.
+  app.sampleFrameInterval = sample;
+
   function degrade(stepN) {
     if (stepN === 1) { coarseFromDegrade = true; app.forceCoarseWarp = true; }
     if (stepN === 2) { renderer.setPixelRatio(1.25); }
@@ -1141,8 +1146,8 @@ async function startScene(model, flat = false) {
   });
 
   window.__woven = { app, renderer, scene, camera, model, controls, THREE, pick };
-  const { mountExhibit } = await import('./exhibit.js');
-  app.exhibit = mountExhibit(app, params);
+  const { mountHall } = await import('../hall/hall.js');
+  app.exhibit = await mountHall(app, params);
 
   // ---- deep links ----
   if (params.get('pub')) app.select(+params.get('pub'), {});

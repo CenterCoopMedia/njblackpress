@@ -1,0 +1,299 @@
+// History hall — the story reader. Plain DOM, no drawing code.
+//
+// The reader is the story. It opens with the full text of the stop, its
+// citation, its confidence wording, its rights note, and any required credit,
+// and none of that waits for a camera move or a page turn to finish. On a small
+// screen it becomes a full height reading sheet with an ordinary vertical flow.
+
+const FOCUSABLE = 'a[href], button:not([disabled]), select, input, [tabindex]:not([tabindex="-1"])';
+
+function trapFocus(container) {
+  function onKey(event) {
+    if (event.key !== 'Tab') return;
+    const items = [...container.querySelectorAll(FOCUSABLE)].filter((el) => el.offsetParent !== null);
+    if (!items.length) return;
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  }
+  container.addEventListener('keydown', onKey);
+  return () => container.removeEventListener('keydown', onKey);
+}
+
+/**
+ * @param {object} options
+ * @param {HTMLElement} options.root the reader region already in the page
+ * @param {HTMLElement} options.inspector the image inspector's own element
+ */
+export function createReader(options) {
+  const {
+    root, inspector, narrow,
+    onPrevious = () => {}, onNext = () => {}, onClose = () => {},
+    onGotoStop = () => {}, onSelectPublication = () => {}, copyLink = () => ''
+  } = options;
+
+  root.innerHTML = `
+    <div class="hall-reader-head">
+      <div>
+        <p class="hall-reader-kicker" data-reader-era></p>
+        <h2 id="hall-reader-title" tabindex="-1"></h2>
+      </div>
+      <button type="button" class="woven-btn" data-reader="close">Close</button>
+    </div>
+    <div class="hall-reader-controls">
+      <button type="button" class="woven-btn" data-reader="previous">Previous</button>
+      <button type="button" class="woven-btn" data-reader="next">Next</button>
+      <p class="hall-reader-count" data-reader-count role="status"></p>
+    </div>
+    <label class="hall-reader-jump">Go to stop
+      <select data-reader="stops"></select>
+    </label>
+    <figure class="hall-reader-plate" data-reader-plate hidden>
+      <img alt="" data-reader-image>
+      <figcaption data-reader-figcaption></figcaption>
+    </figure>
+    <div class="hall-reader-body" data-reader-body></div>
+    <div class="hall-reader-actions">
+      <button type="button" class="woven-btn" data-reader="clipping" hidden>View clipping</button>
+      <button type="button" class="woven-btn" data-reader="copy">Copy link</button>
+      <span class="hall-reader-note" data-reader-status role="status"></span>
+    </div>`;
+
+  const parts = {
+    era: root.querySelector('[data-reader-era]'),
+    title: root.querySelector('#hall-reader-title'),
+    count: root.querySelector('[data-reader-count]'),
+    body: root.querySelector('[data-reader-body]'),
+    stopList: root.querySelector('[data-reader="stops"]'),
+    plate: root.querySelector('[data-reader-plate]'),
+    image: root.querySelector('[data-reader-image]'),
+    figcaption: root.querySelector('[data-reader-figcaption]'),
+    previous: root.querySelector('[data-reader="previous"]'),
+    next: root.querySelector('[data-reader="next"]'),
+    close: root.querySelector('[data-reader="close"]'),
+    clipping: root.querySelector('[data-reader="clipping"]'),
+    copy: root.querySelector('[data-reader="copy"]'),
+    status: root.querySelector('[data-reader-status]')
+  };
+
+  let story = null;
+  let stop = null;
+  let opened = false;
+  let releaseTrap = null;
+  let returnFocus = null;
+
+  parts.previous.addEventListener('click', () => onPrevious());
+  parts.next.addEventListener('click', () => onNext());
+  parts.close.addEventListener('click', () => onClose());
+  parts.stopList.addEventListener('change', () => onGotoStop(parts.stopList.value));
+  parts.clipping.addEventListener('click', () => openInspector());
+  parts.copy.addEventListener('click', async () => {
+    const url = copyLink();
+    try {
+      await navigator.clipboard.writeText(url);
+      parts.status.textContent = 'Link copied.';
+    } catch {
+      parts.status.textContent = url;
+    }
+  });
+  root.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-reader-pub]');
+    if (button) onSelectPublication(Number(button.dataset.readerPub));
+  });
+  root.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && opened) { event.stopPropagation(); onClose(); }
+  });
+
+  function paragraph(text, className) {
+    const p = document.createElement('p');
+    if (className) p.className = className;
+    p.textContent = text;
+    return p;
+  }
+
+  function render() {
+    parts.era.textContent = story.note ? `${story.era} · ${story.note}` : story.era;
+    parts.title.textContent = story.title;
+    parts.count.textContent = `Stop ${stop.index + 1} of ${story.stopCount}`;
+    parts.previous.disabled = stop.index === 0;
+    parts.next.disabled = stop.index === story.stopCount - 1;
+
+    parts.stopList.replaceChildren(...story.stops.map((item, index) => {
+      const option = document.createElement('option');
+      option.value = item.key;
+      option.textContent = `${index + 1}. ${item.title}`;
+      option.selected = item.key === stop.key;
+      return option;
+    }));
+
+    const body = document.createDocumentFragment();
+    body.append(paragraph(stop.date, 'hall-reader-date'));
+    const heading = document.createElement('h3');
+    heading.textContent = stop.title;
+    body.append(heading);
+    if (stop.description) body.append(paragraph(stop.description));
+    // The story's own summary opens the reading, once, at its first stop.
+    if (stop.index === 0 && story.summary) body.append(paragraph(story.summary));
+    if (story.thinlySourced) body.append(paragraph('Thinly sourced. Read this story as a lead, not a finding.', 'hall-reader-flag'));
+    // Anything the archive did not record as high confidence is said in words.
+    if (stop.confidence && stop.confidence !== 'high') {
+      body.append(paragraph(`Confidence: ${stop.confidence}.`, 'hall-reader-flag'));
+    }
+
+    if (stop.publications.length) {
+      const heading2 = document.createElement('h4');
+      heading2.textContent = 'Publications in this stop';
+      body.append(heading2);
+      const list = document.createElement('ul');
+      list.className = 'hall-reader-pubs';
+      for (const publication of stop.publications) {
+        const item = document.createElement('li');
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'woven-btn';
+        button.dataset.readerPub = String(publication.id);
+        button.textContent = publication.name;
+        item.append(button);
+        list.append(item);
+      }
+      body.append(list);
+    }
+
+    const sources = document.createElement('div');
+    sources.className = 'hall-reader-sources';
+    const sourceHeading = document.createElement('h4');
+    sourceHeading.textContent = 'Source';
+    sources.append(sourceHeading);
+    for (const citation of stop.citations) {
+      const cite = document.createElement('cite');
+      cite.textContent = citation;
+      sources.append(cite);
+    }
+    if (!stop.citations.length) sources.append(paragraph('No source citation is recorded for this stop.'));
+    if (stop.rightsNote) sources.append(paragraph(stop.rightsNote, 'hall-reader-rights'));
+    body.append(sources);
+    parts.body.replaceChildren(body);
+
+    const clip = stop.clipping;
+    parts.clipping.hidden = !clip;
+    if (clip) {
+      parts.plate.hidden = false;
+      parts.image.src = clip.path;
+      parts.image.alt = clip.alt;
+      parts.figcaption.textContent = clip.caption || '';
+    } else {
+      parts.plate.hidden = true;
+      parts.image.removeAttribute('src');
+    }
+    parts.status.textContent = '';
+  }
+
+  // ---- image inspector ----------------------------------------------------
+  let inspectorOpen = false;
+  let inspectorReturn = null;
+  let releaseInspectorTrap = null;
+  let zoom = 1;
+
+  inspector.innerHTML = `
+    <div class="hall-inspector-inner" role="dialog" aria-modal="true" aria-labelledby="hall-inspector-title">
+      <div class="hall-inspector-bar">
+        <h2 id="hall-inspector-title">Clipping</h2>
+        <button type="button" class="woven-btn" data-inspect="out" aria-label="Zoom out">−</button>
+        <button type="button" class="woven-btn" data-inspect="in" aria-label="Zoom in">+</button>
+        <button type="button" class="woven-btn" data-inspect="reset">Reset</button>
+        <button type="button" class="woven-btn" data-inspect="close">Close</button>
+      </div>
+      <div class="hall-inspector-scroll"><img alt="" data-inspect-image></div>
+      <figcaption class="hall-inspector-credit" data-inspect-credit></figcaption>
+    </div>`;
+  const inspectorImage = inspector.querySelector('[data-inspect-image]');
+  const inspectorCredit = inspector.querySelector('[data-inspect-credit]');
+  const inspectorInner = inspector.querySelector('.hall-inspector-inner');
+
+  function applyZoom() {
+    inspectorImage.style.width = `${Math.round(zoom * 100)}%`;
+  }
+  inspector.querySelector('[data-inspect="in"]').addEventListener('click', () => { zoom = Math.min(4, zoom * 1.4); applyZoom(); });
+  inspector.querySelector('[data-inspect="out"]').addEventListener('click', () => { zoom = Math.max(0.5, zoom / 1.4); applyZoom(); });
+  inspector.querySelector('[data-inspect="reset"]').addEventListener('click', () => { zoom = 1; applyZoom(); });
+  inspector.querySelector('[data-inspect="close"]').addEventListener('click', () => closeInspector());
+  inspector.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') { event.stopPropagation(); closeInspector(); }
+  });
+  inspector.addEventListener('click', (event) => { if (event.target === inspector) closeInspector(); });
+
+  function openInspector() {
+    const clip = stop && stop.clipping;
+    if (!clip) return;
+    inspectorReturn = document.activeElement;
+    inspectorImage.src = clip.fullPath || clip.path;
+    inspectorImage.alt = clip.alt;
+    inspectorCredit.textContent = [clip.caption, clip.citation, clip.rightsNote].filter(Boolean).join(' · ');
+    zoom = 1;
+    applyZoom();
+    inspector.hidden = false;
+    inspectorOpen = true;
+    releaseInspectorTrap = trapFocus(inspectorInner);
+    inspector.querySelector('[data-inspect="close"]').focus();
+  }
+
+  function closeInspector() {
+    if (!inspectorOpen) return;
+    inspector.hidden = true;
+    inspectorOpen = false;
+    releaseInspectorTrap?.();
+    releaseInspectorTrap = null;
+    if (inspectorReturn && document.contains(inspectorReturn)) inspectorReturn.focus();
+  }
+
+  return {
+    get isOpen() { return opened; },
+    get inspectorOpen() { return inspectorOpen; },
+    openInspector,
+    closeInspector,
+    open(storyView, stopView) {
+      story = storyView;
+      stop = stopView;
+      returnFocus = document.activeElement;
+      root.hidden = false;
+      opened = true;
+      render();
+      // On a small screen the sheet covers the page, so it behaves as a dialog:
+      // named, focused, escapable, and it gives focus back when it closes.
+      if (narrow.matches) {
+        root.setAttribute('role', 'dialog');
+        root.setAttribute('aria-modal', 'true');
+        releaseTrap = trapFocus(root);
+      } else {
+        root.setAttribute('role', 'region');
+        root.removeAttribute('aria-modal');
+      }
+      parts.title.focus({ preventScroll: true });
+    },
+    setStop(stopView) {
+      if (!opened) return;
+      stop = stopView;
+      render();
+    },
+    close() {
+      if (!opened) return;
+      closeInspector();
+      opened = false;
+      root.hidden = true;
+      releaseTrap?.();
+      releaseTrap = null;
+      root.setAttribute('role', 'region');
+      root.removeAttribute('aria-modal');
+      if (returnFocus && document.contains(returnFocus)) returnFocus.focus({ preventScroll: true });
+      returnFocus = null;
+    },
+    dispose() {
+      closeInspector();
+      releaseTrap?.();
+      root.hidden = true;
+      root.replaceChildren();
+      inspector.replaceChildren();
+    }
+  };
+}

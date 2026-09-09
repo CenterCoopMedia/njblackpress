@@ -1,0 +1,174 @@
+/* History hall — the controls beside the room, the story reader, and the image
+   inspector. This file replaces woven-exhibit.css for the hall view; the flat
+   timeline keeps its own rules until that file is retired.
+   No framework, no new fonts, no generated CSS. */
+
+/* ---------- what the hall hides ---------- */
+#woven-stage[data-view="hall"] #woven-eranav,
+#woven-stage[data-view="hall"] #woven-labels,
+#woven-stage[data-view="hall"] #woven-eras,
+#woven-stage[data-view="hall"] #woven-yearrail,
+#woven-stage[data-view="hall"] #woven-empty-hint,
+#woven-stage[data-view="hall"] #woven-coach,
+#woven-stage[data-view="hall"] #woven-exhibit-axis,
+#woven-stage[data-view="hall"] #woven-exhibit-caption,
+#woven-stage[data-view="hall"] #woven-turn-controls,
+#woven-stage[data-view="hall"] #woven-timeline-controls { display: none; }
+
+/* A horizontal drag moves along the hall; a vertical drag still scrolls the page. */
+#woven-stage[data-view="hall"] #woven-canvas { touch-action: pan-y; cursor: grab; }
+#woven-stage[data-view="hall"] #woven-canvas:active { cursor: grabbing; }
+
+/* ---------- the hall's own controls ---------- */
+#woven-hall-controls {
+  position: absolute; z-index: 5;
+  top: var(--woven-chrome-h, 5.5rem); left: 0; right: var(--exhibit-dock, 0px);
+  padding: 0.6rem 0.75rem 0.7rem;
+  background: var(--walnut-900); border-bottom: 1px solid var(--walnut-600);
+}
+#woven-hall-controls[hidden] { display: none; }
+#woven-hall-controls .bar-scroll { gap: 0.4rem; }
+#woven-hall-controls .woven-btn {
+  min-height: 40px; font-size: 0.78rem; padding: 0.45rem 0.65rem;
+  letter-spacing: 0; text-transform: none; border-color: var(--walnut-600);
+}
+.hall-decade-field {
+  display: flex; align-items: center; gap: 0.4rem;
+  font-family: var(--mono); font-size: 11px; color: var(--linen-300);
+  text-transform: none; letter-spacing: 0.04em;
+}
+.hall-decade-field select {
+  min-height: 40px; padding: 0.35rem 0.4rem; border: 1px solid var(--oak-400);
+  background: var(--walnut-800); color: var(--linen-100); font: inherit; border-radius: 0;
+}
+#hall-where {
+  margin: 0.5rem 0 0; font-family: var(--mono); font-size: 12px;
+  letter-spacing: 0.05em; color: var(--linen-100);
+}
+#hall-hint {
+  margin: 0.25rem 0 0; font-size: 0.8rem; line-height: 1.5; color: var(--linen-300);
+  max-width: 62ch;
+}
+
+/* ---------- the story reader ---------- */
+#hall-reader {
+  position: absolute; inset: 0 0 0 auto; width: var(--exhibit-dock); z-index: 9;
+  display: flex; flex-direction: column; gap: 0.7rem;
+  padding: 1rem 1.1rem calc(1rem + env(safe-area-inset-bottom, 0px));
+  background: var(--walnut-800); border-left: 1px solid var(--oak-400);
+  overflow-y: auto; overscroll-behavior: contain;
+}
+#hall-reader[hidden] { display: none; }
+.hall-reader-head { display: flex; align-items: start; justify-content: space-between; gap: 0.6rem; }
+.hall-reader-kicker {
+  margin: 0; font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--linen-300);
+}
+#hall-reader h2 {
+  margin: 0.3rem 0 0; font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 800;
+  font-size: 1.45rem; line-height: 1.15; letter-spacing: -0.03em; color: var(--linen-50);
+}
+#hall-reader h3 {
+  margin: 0.5rem 0 0; font-family: 'Libre Franklin', Arial, sans-serif;
+  font-weight: 700; font-size: 1.05rem; line-height: 1.3; color: var(--linen-50);
+}
+#hall-reader h4 {
+  margin: 1rem 0 0.3rem; font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--linen-300);
+}
+#hall-reader p { margin: 0.55rem 0 0; font-size: 0.92rem; line-height: 1.6; color: var(--linen-100); }
+.hall-reader-date { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; color: var(--linen-300); }
+.hall-reader-flag { color: var(--stain-light); font-size: 0.84rem; }
+.hall-reader-rights { color: var(--linen-300); font-size: 0.82rem; }
+.hall-reader-controls { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
+.hall-reader-count { margin: 0 !important; font-family: var(--mono); font-size: 11px; color: var(--linen-300); }
+.hall-reader-jump {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-family: var(--mono); font-size: 11px; color: var(--linen-300);
+}
+.hall-reader-jump select {
+  flex: 1; min-width: 0; min-height: 40px; padding: 0.35rem;
+  background: var(--walnut-900); color: var(--linen-100);
+  border: 1px solid var(--oak-400); border-radius: 0; font: inherit;
+}
+.hall-reader-plate { margin: 0; background: var(--walnut-900); border: 1px solid var(--walnut-600); padding: 0.6rem; }
+.hall-reader-plate img { display: block; width: 100%; height: auto; max-height: 34vh; object-fit: contain; }
+.hall-reader-plate figcaption { margin-top: 0.5rem; font-size: 0.82rem; line-height: 1.5; color: var(--linen-300); }
+.hall-reader-sources { margin-top: 0.9rem; border-top: 1px solid var(--walnut-600); padding-top: 0.5rem; }
+.hall-reader-sources cite {
+  display: block; margin-top: 0.4rem; font-family: var(--mono); font-size: 11px;
+  font-style: normal; line-height: 1.6; color: var(--linen-200); user-select: text;
+}
+.hall-reader-pubs { list-style: none; margin: 0.4rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.hall-reader-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-top: auto; padding-top: 0.6rem; }
+.hall-reader-note { font-family: var(--mono); font-size: 11px; color: var(--linen-300); }
+#hall-reader .woven-btn { min-height: 42px; font-size: 0.8rem; text-transform: none; letter-spacing: 0; }
+#hall-reader .woven-btn:disabled { opacity: 0.45; cursor: default; }
+
+/* ---------- the image inspector ---------- */
+#hall-inspector {
+  position: fixed; inset: 0; z-index: 80; display: flex; align-items: center; justify-content: center;
+  padding: 1rem; background: rgba(11, 8, 6, 0.94);
+}
+#hall-inspector[hidden] { display: none; }
+.hall-inspector-inner {
+  display: flex; flex-direction: column; width: min(1100px, 96vw); max-height: 92vh;
+  background: var(--walnut-800); border: 1px solid var(--oak-400);
+}
+.hall-inspector-bar {
+  display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;
+  padding: 0.6rem 0.7rem; border-bottom: 1px solid var(--walnut-600);
+}
+.hall-inspector-bar h2 {
+  margin: 0 auto 0 0; font-family: 'Libre Franklin', Arial, sans-serif;
+  font-size: 1.05rem; font-weight: 700; color: var(--linen-50);
+}
+.hall-inspector-bar .woven-btn { min-height: 44px; min-width: 44px; text-transform: none; letter-spacing: 0; }
+.hall-inspector-scroll { flex: 1; overflow: auto; background: var(--walnut-950); padding: 0.6rem; }
+.hall-inspector-scroll img { display: block; margin: 0 auto; height: auto; }
+.hall-inspector-credit {
+  padding: 0.6rem 0.7rem calc(0.6rem + env(safe-area-inset-bottom, 0px));
+  border-top: 1px solid var(--walnut-600);
+  font-family: var(--mono); font-size: 11px; line-height: 1.6; color: var(--linen-200);
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 899px) {
+  /* The stage height follows the viewport rather than a fixed pixel count, with
+     a plain vh value first for browsers that do not know svh. */
+  #woven-stage[data-view="hall"] { --plot-height: clamp(320px, 62vh, 560px); }
+  #woven-stage[data-view="hall"] { --plot-height: clamp(320px, 62svh, 560px); }
+  #woven-hall-controls { right: 0; padding: 0.45rem 0.6rem 0.5rem; }
+  /* One scrolling row rather than four stacked ones: the controls must not eat
+     the drawing they are there to move through. */
+  #woven-hall-controls .bar-scroll {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; padding-bottom: 0.2rem;
+  }
+  #hall-where { margin-top: 0.35rem; font-size: 11px; }
+  #hall-hint { margin-top: 0.15rem; font-size: 0.72rem; line-height: 1.4; }
+  /* A full height reading sheet with an ordinary vertical flow: the stop's
+     picture first, where it can scroll away, then the text. */
+  /* Below the site header, not behind it: the stage is its own stacking
+     context, so a sheet at the very top of the window would be covered. */
+  #hall-reader {
+    position: fixed; inset: 5rem 0 0; width: auto; z-index: 60;
+    border-left: 0; border-top: 1px solid var(--oak-400); padding-top: 0.75rem;
+  }
+  /* The actions stay in reach at the foot, so the text ends above them. */
+  .hall-reader-body { padding-bottom: 3.25rem; }
+  .hall-reader-head {
+    position: sticky; top: -0.75rem; z-index: 2;
+    margin: -0.75rem -1.1rem 0; padding: 0.75rem 1.1rem;
+    background: var(--walnut-800); border-bottom: 1px solid var(--walnut-600);
+  }
+  .hall-reader-plate img { max-height: 40vh; }
+  .hall-reader-actions { position: sticky; bottom: 0; background: var(--walnut-800); }
+}
+
+@media (max-width: 480px) {
+  #woven-hall-controls .woven-btn { font-size: 0.75rem; padding: 0.4rem 0.55rem; }
+}
+
+@media (forced-colors: active) {
+  #woven-hall-controls, #hall-reader, .hall-inspector-inner { border-color: CanvasText; }
+}

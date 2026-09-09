@@ -1,3 +1,4 @@
+import { DEEP_LINK_PARAMS } from '../hall/links.js';
 import { createStartDialog } from './guide-dialog.js';
 import { createStageCoordinator } from './guide-stage.js';
 
@@ -18,7 +19,7 @@ const params = new URLSearchParams(location.search);
 const narrow = window.matchMedia('(max-width: 700px)');
 const START_KEY = 'njbp.woven.start.v2';
 const COACH_KEY = 'njbp.woven.coach.v2';
-const hasDeepLink = ['pub', 'story', 'ghost', 'nogl', 'twin'].some((key) => params.has(key));
+const hasDeepLink = DEEP_LINK_PARAMS.some((key) => params.has(key));
 let records = [];
 let recordsReady = false;
 let recordsFailed = false;
