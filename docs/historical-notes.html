@@ -122,7 +122,7 @@
         </nav>
 
         <div id="woven-stage" data-view="loading">
-            <p id="woven-canvas-help" class="sr-only">In the history hall, use the decade controls, the publication index, and the guided stories to move and to open a record; the drawing itself needs no keyboard. In the flat timeline, use up and down to choose a publication, Enter to read it, and drag or scroll to move. The publication index and Read as a list offer the same records.</p>
+            <p id="woven-canvas-help" class="sr-only">In the history hall, use the decade controls, the publication index, and the guided stories to move and to open a record; the drawing itself needs no keyboard. With the focus inside the hall controls, left and right move between publications and shift with them moves between decades. Inside an open story, left and right turn the pages. In the flat timeline, use up and down to choose a publication, Enter to read it, and drag or scroll to move. The publication index and Read as a list offer the same records.</p>
             <canvas id="woven-canvas" role="application" tabindex="0"
                     aria-label="Interactive timeline of New Jersey Black publications"
                     aria-describedby="woven-canvas-help"></canvas>
@@ -163,6 +163,8 @@
             <div id="woven-loading" role="status">Loading the archive…</div>
             <div id="woven-hall-controls" role="group" aria-label="Move through the history hall" hidden>
                 <div class="bar-scroll">
+                    <button type="button" class="woven-btn" id="hall-previous-pub">Previous publication</button>
+                    <button type="button" class="woven-btn" id="hall-next-pub">Next publication</button>
                     <button type="button" class="woven-btn" id="hall-previous-decade">Previous decade</button>
                     <label class="hall-decade-field" for="hall-decade">Decade
                         <select id="hall-decade"></select>
@@ -170,9 +172,10 @@
                     <button type="button" class="woven-btn" id="hall-next-decade">Next decade</button>
                     <button type="button" class="woven-btn" id="hall-entrance">Back to entrance</button>
                     <button type="button" class="woven-btn" id="hall-scroll-toggle" aria-pressed="false">Use scroll to move</button>
+                    <button type="button" class="woven-btn" id="hall-tier" aria-pressed="false" aria-describedby="hall-tier-note">Simplified view</button>
                 </div>
                 <p id="hall-where" role="status"></p>
-                <p id="hall-hint">Choose a publication, open a guided story, or move to another decade. Arranged by founding date. Gallery spacing varies.</p>
+                <p id="hall-hint">Choose a publication, open a guided story, or move to another decade. Arranged by founding date; gallery spacing varies. <span id="hall-tier-note">Standard view. Full detail.</span></p>
             </div>
             <div id="woven-exhibit-axis" aria-label="Publication years"></div>
             <div id="woven-turn-controls" role="group" aria-label="Turn the 3D timeline" hidden>
@@ -217,7 +220,7 @@
             </div>
             <div id="woven-yearrail" aria-hidden="true"></div>
             <div id="woven-tip" role="presentation" hidden></div>
-            <div id="woven-notice" role="status" hidden></div>
+            <div id="woven-notice" role="status" hidden><span id="hall-notice-text"></span><button type="button" class="woven-btn" id="hall-notice-action" hidden></button></div>
             <div id="woven-empty-hint" role="status" hidden>Nothing here — zoom out or reset the view</div>
 
             <div id="woven-overlay" hidden></div>

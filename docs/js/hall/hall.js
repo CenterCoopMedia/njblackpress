@@ -7,15 +7,16 @@
 // change here, never the owner of what the visitor selected.
 
 import * as THREE from 'three';
-import { buildHallLayout } from './layout.js';
+import { buildHallLayout, matchingOrder } from './layout.js';
 import { createHallState } from './state.js';
 import * as links from './links.js';
 import { createAssets } from './assets.js';
 import { buildSpace } from './space.js';
-import { buildSheets } from './sheets.js';
+import { buildSheets, FACE_POOL_SIZES } from './sheets.js';
 import { buildVolumes } from './volumes.js';
 import { createRail, attachRailInput } from './rail.js';
 import { createReader } from './reader.js';
+import { createTiers, TIERS } from './tiers.js';
 import { whenFontsReady } from './paint.js';
 import { buildPublicationViews, buildStoryViews } from './views.js';
 import { publicationYears } from '../woven/records.js';
@@ -28,8 +29,14 @@ export async function mountHall(app, params) {
   const flat = stage.dataset.renderer === 'flat';
   const original = { select: app.select, playStory: app.playStory, showGhost: app.showGhost };
   const aborter = new AbortController();
-  const listen = (target, type, handler, options = {}) =>
+  // Every listener the hall registers is counted, so the review can show that a
+  // repeated cycle of views and stories registers no more of them.
+  let listeners = 0;
+  const listen = (target, type, handler, options = {}) => {
+    if (!target) return;
+    listeners += 1;
     target.addEventListener(type, handler, { ...options, signal: aborter.signal });
+  };
 
   // Read before anything can rewrite the address bar: the hall replaces the
   // current entry as soon as it settles at the entrance, and the visitor's own
@@ -41,7 +48,11 @@ export async function mountHall(app, params) {
   const decadeSelect = document.getElementById('hall-decade');
   const whereEl = document.getElementById('hall-where');
   const noticeEl = document.getElementById('woven-notice');
+  const noticeText = document.getElementById('hall-notice-text');
+  const noticeAction = document.getElementById('hall-notice-action');
   const scrollToggle = document.getElementById('hall-scroll-toggle');
+  const tierToggle = document.getElementById('hall-tier');
+  const tierNote = document.getElementById('hall-tier-note');
   const readerRoot = document.getElementById('hall-reader');
   const inspectorRoot = document.getElementById('hall-inspector');
   const canvasLabel = {
@@ -65,6 +76,10 @@ export async function mountHall(app, params) {
   let input = null;
   let reader = null;
   let space = null;
+  // What the filters currently match, and how the visitor was told about it.
+  let matchIds = null;
+  let matchCount = model.threads.length;
+  let revealedId = null;
 
   // ---- the archive as the hall reads it -----------------------------------
   const layout = buildHallLayout(model);
@@ -83,9 +98,14 @@ export async function mountHall(app, params) {
   // says why it is unavailable.
   const explorer = mountExplorer(app, {
     highlight: (id) => { if (sheets) sheets.setHover(id); },
-    filter: (ids) => {
+    filter: (ids, info = {}) => {
+      matchIds = ids;
+      matchCount = info.matchCount ?? (ids ? ids.size : model.threads.length);
+      revealedId = info.revealed ?? null;
       if (sheets) sheets.setMatches(ids);
       app.setExploreMatches?.(ids);
+      updatePool(true);
+      describeFilters();
     },
     focusEra: (key) => {
       if (!active) { app.focusBand(key); return; }
@@ -128,19 +148,24 @@ export async function mountHall(app, params) {
   const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 320);
   const anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
   const invalidate = () => { dirty = true; };
+  const generation = () => state.generation();
   space = buildSpace(layout, { anisotropy });
-  sheets = buildSheets(layout, views, assets, { anisotropy, invalidate });
+  sheets = buildSheets(layout, views, assets, { anisotropy, invalidate, generation });
   volumes = buildVolumes(layout, storyViews, assets, {
-    anisotropy, invalidate, reduceMotion: app.reduceMotion
+    anisotropy, invalidate, generation, reduceMotion: app.reduceMotion
   });
   scene.add(space.group, sheets.group, volumes.group);
 
   // Decision 6: the first settled view stands in the 1880s bay looking down the
-  // hall, with that section's sheets on both walls at reading distance.
+  // hall. Decision 10: a portrait window turns instead to the wall on the left
+  // of the picture, which is the wall at positive x when you face down the hall,
+  // so its first sheet fills the view and the hall recedes to the right.
   const firstSlot = layout.slots[0];
+  const portraitEntranceSlot = layout.slots.find((slot) => slot.wall === 'right') || firstSlot;
   rail = createRail(camera, layout, {
     keepOut, invalidate, reduceMotion: app.reduceMotion, onSettle: settled,
-    entranceTarget: firstSlot ? firstSlot.z : null
+    entranceTarget: firstSlot ? firstSlot.z : null,
+    portraitEntranceSlot
   });
   input = attachRailInput(canvas, rail, {
     signal: aborter.signal,
@@ -154,6 +179,7 @@ export async function mountHall(app, params) {
     root: readerRoot,
     inspector: inspectorRoot,
     narrow,
+    listen,
     onPrevious: () => state.prevStop(),
     onNext: () => state.nextStop(),
     onClose: () => closeTop(),
@@ -199,6 +225,10 @@ export async function mountHall(app, params) {
       app.focusBand(explorer.era() || 'all');
       const selected = state.getState().selectedPublicationId;
       if (selected != null) original.select(selected, { silent: true });
+    } else {
+      // Coming back to the hall reasserts the tier: the page's own resize may
+      // have raised the pixel ratio while the flat timeline had the canvas.
+      tiers.reapply();
     }
     app.resize();
     dirty = true;
@@ -231,14 +261,27 @@ export async function mountHall(app, params) {
     state.moveTo({ kind: 'section', id: section.id, z: section.entryAnchor.position.z });
   }
 
+  /** The where-am-I line: the section, and what the filters have done to it. */
+  function describeFilters() {
+    if (!whereEl || !rail) return;
+    const section = rail.section;
+    const place = section.empty
+      ? `${section.label}. No titles recorded.`
+      : `${section.label}. ${section.count} publication${section.count === 1 ? '' : 's'}.`;
+    let filterLine = '';
+    if (matchIds && matchCount === 0) {
+      filterLine = ' No publications match these filters. Every sheet is dimmed. Clear filters to see the whole hall.';
+    } else if (matchIds) {
+      const here = section.publicationIds.filter((id) => matchIds.has(id)).length;
+      filterLine = ` ${matchCount} publication${matchCount === 1 ? '' : 's'} match these filters, ${here} in this section. The rest are dimmed.`;
+    }
+    whereEl.textContent = place + filterLine;
+  }
+
   function settled() {
     updatePool(false);
     const section = rail.section;
-    if (whereEl) {
-      whereEl.textContent = section.empty
-        ? `${section.label}. No titles recorded.`
-        : `${section.label}. ${section.count} publication${section.count === 1 ? '' : 's'}.`;
-    }
+    describeFilters();
     if (decadeSelect && decadeSelect.value !== section.id && document.activeElement !== decadeSelect) {
       decadeSelect.value = section.id;
     }
@@ -254,11 +297,34 @@ export async function mountHall(app, params) {
   // the visitor has actually moved or chosen something, not on every pointer
   // event during a drag.
   function updatePool(force) {
+    if (!sheets || !rail) return;
     const selected = state.getState().selectedPublicationId ?? null;
     if (!force && selected === poolSelected && Math.abs(rail.z - poolZ) < 1.2) return;
     poolZ = rail.z;
     poolSelected = selected;
     sheets.updatePool(rail.z, selected);
+    evictImages();
+  }
+
+  /**
+   * The working set: the wall copies the painted pool is showing, and the open
+   * spread with the stop either side of it. Everything else the hall decoded is
+   * released here rather than kept for a visitor who may never come back to it.
+   */
+  function evictImages() {
+    const keep = new Set([...sheets.workingPaths(), ...volumes.workingPaths()]);
+    assets.evict(keep);
+  }
+
+  /** Preload only the stops either side of this one, and nothing further. */
+  function preloadAdjacent(story, stop) {
+    const token = state.generation();
+    for (const index of [stop.index - 1, stop.index + 1]) {
+      const neighbour = story.stops[index];
+      if (neighbour && neighbour.left.path) {
+        assets.loadImage(neighbour.left.path, { priority: 'low', token });
+      }
+    }
   }
 
   function hover(event) {
@@ -335,6 +401,9 @@ export async function mountHall(app, params) {
       const previous = story.stops.find((item) => item.key === before.stopId) || null;
       volumes.showStop(stop, { previous });
       reader.setStop(stop);
+      sheets.setRelated(stop.publications.map((item) => item.id));
+      preloadAdjacent(story, stop);
+      evictImages();
       announce(`Stop ${stop.index + 1} of ${story.stopCount}. ${stop.date}. ${stop.title}.`);
       replaceRoute();
       return;
@@ -345,17 +414,21 @@ export async function mountHall(app, params) {
         volumes.closeVolume();
         panel.closePanel();
         sheets.setSelected(next.selectedPublicationId);
+        sheets.setRelated([]);
         app.state.selectedId = next.selectedPublicationId ?? null;
         app.state.tourId = null;
         syncTwin(app.state);
         explorer.syncSelected();
+        evictImages();
         replaceRoute();
       } else if (next.mode === 'publication') {
         reader.close();
         volumes.closeVolume();
+        sheets.setRelated([]);
         const slot = layout.slotByPublicationId.get(next.selectedPublicationId);
         if (slot) rail.focusSlot(slot);
         sheets.setSelected(next.selectedPublicationId);
+        evictImages();
       } else if (next.mode === 'story') {
         openStoryScene(next.storyId, next.stopId);
       }
@@ -374,6 +447,11 @@ export async function mountHall(app, params) {
     const slot = layout.bookSlotByStoryId.get(storyId);
     if (slot) rail.focusBook(slot);
     volumes.openVolume(storyId, stop);
+    // The quiet cue in the room: the sheets this stop names, from the stop's own
+    // publication links and nothing else. No camera move, no lines.
+    sheets.setRelated(stop.publications.map((item) => item.id));
+    updatePool(true);
+    preloadAdjacent(story, stop);
     app.state.tourId = storyId;
     app.state.stopIndex = stop.index;
     syncTwin(app.state);
@@ -384,10 +462,19 @@ export async function mountHall(app, params) {
     dirty = true;
   }
 
-  function notice(message) {
+  /**
+   * The one explanation line over the scene. An action can be offered with it —
+   * Clear filters, when a record was revealed past the visitor's own filters.
+   */
+  function notice(message, action = null) {
     if (!noticeEl) return;
     noticeEl.hidden = !message;
-    noticeEl.textContent = message || '';
+    if (noticeText) noticeText.textContent = message || '';
+    else noticeEl.textContent = message || '';
+    if (!noticeAction) return;
+    noticeAction.hidden = !action;
+    noticeAction.textContent = action ? action.label : '';
+    noticeAction.onclick = action ? action.run : null;
   }
 
   state.subscribe(react);
@@ -415,41 +502,58 @@ export async function mountHall(app, params) {
     history.replaceState(null, '', routeUrl());
   }
 
+  /**
+   * Apply a route. Reading a link never creates a history entry: the entry the
+   * visitor arrived on is rewritten into its canonical form instead, so Back
+   * still leaves the page rather than landing on the same view twice.
+   */
   function applyRoute(search, { initial = false } = {}) {
     const parsed = links.parse(search);
     const checked = links.validate(parsed, model, layout);
     const view = links.resolveView(parsed, { canRenderHall: true });
+    // An unreadable id, decade, or stop is explained rather than thrown away.
+    // The publication index below the stage is the way on from here.
     notice(checked.issues.length ? checked.issues[0].message : '');
     routing = true;
-    if (view === 'text') {
-      applyView('timeline');
-      state.setView('timeline');
+    try {
+      if (view === 'text') {
+        applyView('timeline');
+        state.setView('timeline');
+        return;
+      }
+      applyView(view === 'timeline' ? 'timeline' : 'hall');
+      state.setView(view === 'timeline' ? 'timeline' : 'hall');
+      if (view === 'timeline') return;
+      const target = checked.target;
+      if (target.kind === 'story') state.openStory(target.id, target.stop);
+      else if (target.kind === 'publication') app.select(target.id, {});
+      else if (target.kind === 'decade') moveToSection(layout.sectionById.get(target.id), { immediate: true });
+      else if (initial) rail.toEntrance({ immediate: true });
+    } finally {
       routing = false;
-      return;
     }
-    applyView(view === 'timeline' ? 'timeline' : 'hall');
-    state.setView(view === 'timeline' ? 'timeline' : 'hall');
-    routing = false;
-    if (view === 'timeline') return;
-    const target = checked.target;
-    if (target.kind === 'story') state.openStory(target.id, target.stop);
-    else if (target.kind === 'publication') app.select(target.id, {});
-    else if (target.kind === 'decade') moveToSection(layout.sectionById.get(target.id), { immediate: true });
-    else if (initial) rail.toEntrance({ immediate: true });
+    history.replaceState(null, '', routeUrl());
   }
 
   listen(window, 'popstate', () => {
-    // Back and forward restore the state; they never create a new entry.
+    // Back and forward restore the state; they never create a new entry, and
+    // they never rewrite the entry they land on.
     routing = true;
-    const parsed = links.parse(location.search);
-    const checked = links.validate(parsed, model, layout);
-    const view = links.resolveView(parsed, { canRenderHall: true });
-    if (view !== state.getState().view) { applyView(view === 'hall' ? 'hall' : 'timeline'); state.setView(view === 'hall' ? 'hall' : 'timeline'); }
-    if (checked.target.kind === 'story') state.openStory(checked.target.id, checked.target.stop);
-    else if (checked.target.kind === 'publication') state.selectPublication(checked.target.id);
-    else if (checked.target.kind === 'decade') moveToSection(layout.sectionById.get(checked.target.id), { immediate: true });
-    else state.close();
-    routing = false;
+    try {
+      const parsed = links.parse(location.search);
+      const checked = links.validate(parsed, model, layout);
+      const view = links.resolveView(parsed, { canRenderHall: true });
+      if (view !== state.getState().view) {
+        applyView(view === 'hall' ? 'hall' : 'timeline');
+        state.setView(view === 'hall' ? 'hall' : 'timeline');
+      }
+      if (checked.target.kind === 'story') state.openStory(checked.target.id, checked.target.stop);
+      else if (checked.target.kind === 'publication') app.select(checked.target.id, {});
+      else if (checked.target.kind === 'decade') moveToSection(layout.sectionById.get(checked.target.id), { immediate: true });
+      else state.close();
+    } finally {
+      routing = false;
+    }
   });
 
   // ---- controls -------------------------------------------------------------
@@ -476,13 +580,58 @@ export async function mountHall(app, params) {
     const next = layout.sections[Math.min(layout.sections.length - 1, Math.max(0, index + direction))];
     moveToSection(next, { immediate: Math.abs(direction) > 1 });
   }
+
+  function stepPublication(direction) {
+    // The gallery's own order, narrowed to the matches. See matchingOrder.
+    const order = matchingOrder(layout, matchIds, revealedId);
+    if (!order.length) {
+      announce('No publications match these filters.');
+      return;
+    }
+    const selected = state.getState().selectedPublicationId;
+    let index = selected == null ? -1 : order.indexOf(selected);
+    if (index < 0) {
+      // Nothing selected, or the selection is not in this order: start from the
+      // publication nearest where the visitor is standing.
+      let nearest = 0;
+      let best = Infinity;
+      order.forEach((id, i) => {
+        const slot = layout.slotByPublicationId.get(id);
+        const distance = Math.abs(slot.z - rail.z);
+        if (distance < best) { best = distance; nearest = i; }
+      });
+      index = direction > 0 ? nearest - 1 : nearest + 1;
+    }
+    const next = Math.min(order.length - 1, Math.max(0, index + direction));
+    // Opening a record moves the focus into the record panel. A visitor stepping
+    // from these controls wants to keep stepping, so the focus comes back to the
+    // control they pressed.
+    const from = document.activeElement;
+    app.select(order[next], {});
+    if (from && hallControls.contains(from)) from.focus({ preventScroll: true });
+  }
+
   listen(document.getElementById('hall-previous-decade'), 'click', () => stepDecade(-1));
   listen(document.getElementById('hall-next-decade'), 'click', () => stepDecade(1));
+  listen(document.getElementById('hall-previous-pub'), 'click', () => stepPublication(-1));
+  listen(document.getElementById('hall-next-pub'), 'click', () => stepPublication(1));
   listen(document.getElementById('hall-entrance'), 'click', () => {
     panel.closePanel();
     state.close();
     rail.toEntrance({ immediate: true });
     announce('Back at the entrance of the hall.');
+  });
+
+  // Left and right step publications, and with Shift they step decades. They
+  // apply only while the focus is inside this group of controls, and never
+  // inside the decade menu, which owns those keys itself.
+  listen(hallControls, 'keydown', (event) => {
+    if (!active || event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    if (event.altKey || event.metaKey || event.ctrlKey) return;
+    if (event.target.closest('select, input, textarea, [contenteditable="true"]')) return;
+    event.preventDefault();
+    const direction = event.key === 'ArrowLeft' ? -1 : 1;
+    if (event.shiftKey) stepDecade(direction); else stepPublication(direction);
   });
 
   function syncScrollToggle() {
@@ -498,6 +647,32 @@ export async function mountHall(app, params) {
     syncScrollToggle();
   }
 
+  // ---- quality tiers --------------------------------------------------------
+  // The policy lives in tiers.js; everything the policy changes lives here.
+  const tiers = createTiers({
+    toggle: tierToggle,
+    note: tierNote,
+    listen,
+    announce,
+    apply(settings, next) {
+      applyPixelRatio(settings);
+      if (sheets.setPoolLimit(FACE_POOL_SIZES[next])) updatePool(true);
+      space.setFill(settings.fill);
+      volumes.setBend(settings.bend);
+      state.setTier(next);
+      dirty = true;
+    }
+  });
+
+  // The page's own resize sets the device pixel ratio from the screen, so the
+  // tier reasserts its ceiling after every one of them rather than once.
+  function applyPixelRatio(settings = TIERS[tiers.tier]) {
+    if (!active) return;
+    const rect = canvas.getBoundingClientRect();
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, settings.pixelRatio));
+    renderer.setSize(Math.max(1, Math.round(rect.width)), Math.max(1, Math.round(rect.height)), false);
+  }
+
   listen(document, 'keydown', (event) => {
     if (!active || event.key !== 'Escape') return;
     if (reader.inspectorOpen || reader.isOpen || panel.isOpen() || state.getState().mode !== 'browse') {
@@ -510,7 +685,17 @@ export async function mountHall(app, params) {
   app.select = async function open(id, opts = {}) {
     const publication = model.byId.get(id);
     if (!publication) return;
-    explorer.reveal(id);
+    // A record outside the visitor's filters is revealed, never filtered in
+    // behind their back. The notice says why it is here and offers the change.
+    const outside = explorer.reveal(id);
+    if (outside) {
+      notice(
+        `${publication.name} is outside the filters you set, so it is shown on its own. The other filtered sheets stay dimmed.`,
+        { label: 'Clear filters', run: () => { explorer.clearFilters({ move: false }); notice(''); } }
+      );
+    } else if (noticeAction && !noticeAction.hidden) {
+      notice('');
+    }
     if (!active) return original.select(id, opts);
     panel.closePanel();
     state.selectPublication(id, {});
@@ -553,6 +738,7 @@ export async function mountHall(app, params) {
     // so a portrait screen gets a wider lens and can stand closer to the sheets.
     camera.fov = camera.aspect < 1 ? 71 : 50;
     camera.updateProjectionMatrix();
+    applyPixelRatio();
     const current = state.getState();
     if (current.mode === 'publication' && current.selectedPublicationId != null) {
       const slot = layout.slotByPublicationId.get(current.selectedPublicationId);
@@ -560,13 +746,26 @@ export async function mountHall(app, params) {
     } else if (current.mode === 'story' && current.storyId) {
       const slot = layout.bookSlotByStoryId.get(current.storyId);
       if (slot) rail.refocus(rail.poseForBook(slot));
+    } else if (rail.atEntrance) {
+      // The entrance is the one pose that depends on the shape of the window, so
+      // turning a phone re-decides between looking down the hall and turning to
+      // the first sheet.
+      rail.toEntrance({ immediate: true });
     } else {
       rail.apply();
     }
     dirty = true;
   }
-  const sizeObserver = new ResizeObserver(() => resize());
+  // The controls row wraps differently at every width, and the notice below it
+  // has to know how tall it ended up, so its measured height is published to
+  // the stylesheet rather than guessed there.
+  const sizeObserver = new ResizeObserver(() => {
+    const height = hallControls.hidden ? 0 : hallControls.getBoundingClientRect().height;
+    stage.style.setProperty('--hall-controls-h', `${Math.round(height)}px`);
+    resize();
+  });
   sizeObserver.observe(canvas);
+  sizeObserver.observe(hallControls);
 
   function frame(now) {
     if (!active || disposed || !visible || document.hidden) { last = 0; return; }
@@ -576,9 +775,11 @@ export async function mountHall(app, params) {
     if (!dirty && !busy) { last = now; return; }
     renderer.render(scene, camera);
     dirty = false;
-    // The page's adaptive sampler only sees frames the hall actually drew, so
-    // an idle hall never counts as a slow one.
-    if (last) app.sampleFrameInterval?.(now - last);
+    // Only the frames drawn while something was actually moving are judged. A
+    // settled hall draws nothing, so the interval across a pause is not a
+    // measurement of anything. The page's own ladder governs the flat timeline;
+    // the hall's tier is the hall's own.
+    if (last && busy) tiers.sample(now - last);
     last = now;
   }
 
@@ -604,6 +805,28 @@ export async function mountHall(app, params) {
     volumes,
     reader,
     assets,
+    explorer,
+    get tier() { return tiers.tier; },
+    get pinnedTier() { return tiers.pinned; },
+    setTier(next) { tiers.set(next === 'simplified' ? 'simplified' : 'standard', { say: false }); },
+    /**
+     * What the hall owns right now. The review runs its cycles and reads these
+     * back: none of them may climb across repeated views and stories.
+     */
+    stats() {
+      return {
+        residentBytes: assets.residentBytes() + sheets.residentBytes()
+          + volumes.residentBytes() + space.residentBytes(),
+        decodedImages: assets.decodedImages,
+        pendingImages: assets.pendingImages,
+        paintedFaces: sheets.paintedCount,
+        pendingPaints: sheets.pending,
+        listeners,
+        textures: renderer.info.memory.textures,
+        geometries: renderer.info.memory.geometries,
+        tier: tiers.tier
+      };
+    },
     dispose() {
       if (disposed) return;
       disposed = true;

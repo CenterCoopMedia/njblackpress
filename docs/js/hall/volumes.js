@@ -9,7 +9,7 @@
 // evidence that a matching physical book exists, and the reader says so.
 
 import * as THREE from 'three';
-import { paintCover, paintPage, textureFrom } from './paint.js';
+import { paintCover, paintPage, textureFrom, textureBytes, PAGE_SIZE, COVER_SIZE } from './paint.js';
 
 const TURN_MS = 520;
 const OPEN_MS = 340;
@@ -63,7 +63,8 @@ export function buildVolumes(layout, storyViews, assets, options = {}) {
   // ---- the open volume ----------------------------------------------------
   // Two groups: the outer one turns the volume to face the corridor, so the
   // spread runs along the table rather than hanging over its edge, and the
-  // inner one gives it a small lectern tilt.
+  // inner one carries the boards, the block, and the pages. The spread lies
+  // flat on the table and is read from directly above it.
   const facing = new THREE.Group();
   facing.visible = false;
   const open = new THREE.Group();
@@ -170,18 +171,42 @@ export function buildVolumes(layout, storyViews, assets, options = {}) {
     // walking side, and the spread lies along the length of the table.
     facing.rotation.set(0, sign * Math.PI / 2, 0);
     open.position.set(0, 0, -pageHeight / 2);
-    // A small lectern tilt, so the spread faces the visitor rather than the
-    // ceiling. The near edge stays on the table; nothing floats.
-    open.rotation.set(-0.30, 0, 0);
+    // Flat on the table. The lectern tilt is gone: the reading pose looks
+    // straight down at the spread, and a tilt under that camera only skews the
+    // page and throws its far edge out of focus range.
+    open.rotation.set(0, 0, 0);
     leftPivot.position.set(0, 0.004, pageHeight / 2);
     rightPivot.position.set(0, 0.004, pageHeight / 2);
     leaf.position.set(0, 0.008, pageHeight / 2);
   }
 
-  const sided = (page, gutter) => ({ ...page, gutter });
+  // A page carries its gutter side, and a clipping page carries what to say
+  // when there is no picture to draw: still arriving, or not available at all.
+  function sided(page, gutter) {
+    if (page.kind !== 'clipping') return { ...page, gutter };
+    const failed = assets.hasFailed(page.path);
+    return {
+      ...page,
+      gutter,
+      message: failed
+        ? 'Image unavailable. This clipping could not be loaded; its citation and rights note are in the reader.'
+        : 'Loading this clipping…'
+    };
+  }
+
+  /**
+   * What a page is showing right now, so the texture key changes when the page
+   * changes. Without it a page that said "loading" would keep saying so after
+   * the image arrived or failed, because the stop had not changed.
+   */
+  function pageState(page, image) {
+    if (page.kind !== 'clipping') return 'text';
+    if (image) return 'image';
+    return assets.hasFailed(page.path) ? 'unavailable' : 'loading';
+  }
 
   function paintSpread(stop, image) {
-    setPageTexture(leftPage, `left:${stop.key}`, paintPage(sided(stop.left, 'right'), image));
+    setPageTexture(leftPage, `left:${stop.key}:${pageState(stop.left, image)}`, paintPage(sided(stop.left, 'right'), image));
     setPageTexture(rightPage, `right:${stop.key}`, paintPage(sided(stop.right, 'left'), null));
   }
 
@@ -200,14 +225,17 @@ export function buildVolumes(layout, storyViews, assets, options = {}) {
       distance > 0 && distance <= MAX_SIMULATED_SKIP;
 
     const image = stop.left.path ? assets.peek(stop.left.path) : null;
-    if (stop.left.path && !image) {
-      assets.loadImage(stop.left.path, { priority: 'high', token: null }).then((loaded) => {
-        // A late image only lands if the visitor is still on the stop that
-        // asked for it.
-        if (loaded && token === requestToken && currentStop === stop) {
-          paintSpread(stop, loaded);
-          invalidate();
-        }
+    if (stop.left.path && !image && !assets.hasFailed(stop.left.path)) {
+      const generation = options.generation ? options.generation() : null;
+      assets.loadImage(stop.left.path, { priority: 'high', token: generation }).then((loaded) => {
+        // Two gates, because either can move on while an image decodes: the
+        // generation token says the visitor is still in this story and stop,
+        // and the request token says no newer stop has been asked for since.
+        if (token !== requestToken || currentStop !== stop) return;
+        // A failure repaints too, so the page says the image is unavailable
+        // instead of sitting on "loading" for ever.
+        paintSpread(stop, loaded);
+        invalidate();
       });
     }
 
@@ -221,16 +249,16 @@ export function buildVolumes(layout, storyViews, assets, options = {}) {
 
     const previousImage = previous.left.path ? assets.peek(previous.left.path) : null;
     if (forward) {
-      setPageTexture(leftPage, `left:${previous.key}`, paintPage(sided(previous.left, 'right'), previousImage));
+      setPageTexture(leftPage, `left:${previous.key}:${pageState(previous.left, previousImage)}`, paintPage(sided(previous.left, 'right'), previousImage));
       setPageTexture(rightPage, `right:${stop.key}`, paintPage(sided(stop.right, 'left'), null));
       setPageTexture(leafFront, `front:${previous.key}`, paintPage(sided(previous.right, 'left'), null));
-      setPageTexture(leafBack, `back:${stop.key}`, paintPage(sided(stop.left, 'right'), image));
+      setPageTexture(leafBack, `back:${stop.key}:${pageState(stop.left, image)}`, paintPage(sided(stop.left, 'right'), image));
       turning = { started: performance.now(), from: 0, to: -Math.PI, stop };
     } else {
-      setPageTexture(leftPage, `left:${stop.key}`, paintPage(sided(stop.left, 'right'), image));
+      setPageTexture(leftPage, `left:${stop.key}:${pageState(stop.left, image)}`, paintPage(sided(stop.left, 'right'), image));
       setPageTexture(rightPage, `right:${previous.key}`, paintPage(sided(previous.right, 'left'), null));
       setPageTexture(leafFront, `front:${stop.key}`, paintPage(sided(stop.right, 'left'), null));
-      setPageTexture(leafBack, `back:${previous.key}`, paintPage(sided(previous.left, 'right'), previousImage));
+      setPageTexture(leafBack, `back:${previous.key}:${pageState(previous.left, previousImage)}`, paintPage(sided(previous.left, 'right'), previousImage));
       turning = { started: performance.now(), from: -Math.PI, to: 0, stop };
     }
     leaf.visible = true;
@@ -238,7 +266,12 @@ export function buildVolumes(layout, storyViews, assets, options = {}) {
     invalidate();
   }
 
+  // The page bend is optional detail: it rewrites two vertex buffers on every
+  // frame of a turn, so the simplified tier turns a flat leaf instead.
+  let bendEnabled = true;
+
   function bend(amount) {
+    if (!bendEnabled) return;
     for (const [mesh, base] of [[leafFront, baseFront], [leafBack, baseBack]]) {
       const attribute = mesh.geometry.attributes.position;
       const array = attribute.array;
@@ -338,6 +371,40 @@ export function buildVolumes(layout, storyViews, assets, options = {}) {
     closeVolume,
     showStop,
     pickables,
+    /** Off in the simplified tier; a flat leaf still turns correctly. */
+    setBend(enabled) {
+      if (bendEnabled === enabled) return false;
+      bendEnabled = enabled;
+      if (!enabled) {
+        // Put the leaf back to flat, or it keeps whatever curve it had when the
+        // tier changed mid-turn.
+        bendEnabled = true;
+        bend(0);
+        bendEnabled = false;
+      }
+      return true;
+    },
+    get bendEnabled() { return bendEnabled; },
+    /**
+     * The images this spread needs: the open stop and the stops either side of
+     * it. Nothing further ahead is preloaded, and nothing outside this set is
+     * kept decoded.
+     */
+    workingPaths() {
+      if (!current || !currentStop) return [];
+      const wanted = [currentStop.index - 1, currentStop.index, currentStop.index + 1];
+      return wanted
+        .map((index) => current.stops[index])
+        .filter(Boolean)
+        .map((stop) => stop.left.path)
+        .filter(Boolean);
+    },
+    /** An estimate of the open volume's own textures: four pages plus covers. */
+    residentBytes() {
+      const page = textureBytes(PAGE_SIZE.width, PAGE_SIZE.height);
+      const cover = textureBytes(COVER_SIZE.width, COVER_SIZE.height);
+      return bookMeshes.length * cover + (current ? 4 * page : 0);
+    },
     get openStoryId() { return current ? current.id : null; },
     get animating() { return !!turning || !!opening; },
     dispose() {

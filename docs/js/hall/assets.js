@@ -7,6 +7,11 @@
 // Work is cancelled by generation token. An image that finishes decoding after
 // the visitor has moved to another story must not paint over what they are
 // looking at now, so every caller passes the token it started with.
+//
+// Decoded images are owned, not cached for ever. The hall names its working set
+// — the sheets it has painted, the open spread, and the stops either side of it
+// — and everything outside that set is released. Without that, walking the hall
+// once would hold all 55 wall copies decoded at the same time.
 
 const MANIFEST_URL = 'data/wall-copies.json';
 
@@ -57,10 +62,12 @@ export function createAssets({ generation = () => 0 } = {}) {
   /**
    * Decode one image. `priority` marks what the visitor is looking at now; a
    * low priority request yields to the browser rather than competing with it.
+   * The promise resolves to null when the token is no longer current, so a late
+   * arrival can never paint over the view the visitor moved on to.
    */
   function loadImage(path, { token = generation(), priority = 'low' } = {}) {
     if (!path || disposed || failed.has(path)) return Promise.resolve(null);
-    if (images.has(path)) return Promise.resolve(images.get(path));
+    if (images.has(path)) return Promise.resolve(isCurrent(token) ? images.get(path) : null);
     if (inFlight.has(path)) return inFlight.get(path).then((image) => (isCurrent(token) ? image : null));
     const work = (async () => {
       const image = new Image();
@@ -70,6 +77,9 @@ export function createAssets({ generation = () => 0 } = {}) {
       try {
         await image.decode();
       } catch {
+        // A file that will not decode is remembered, so the hall shows the
+        // image-unavailable wording instead of asking for it again on every
+        // repaint.
         failed.add(path);
         return null;
       }
@@ -91,9 +101,36 @@ export function createAssets({ generation = () => 0 } = {}) {
     return images.get(path) || null;
   }
 
+  /** True once a file has failed to decode. The caller says so in words. */
+  function hasFailed(path) {
+    return failed.has(path);
+  }
+
   /**
-   * A byte estimate for what the hall holds, so package 3 can measure the
-   * budget rather than guess it. Decoded images are counted as RGBA8.
+   * Keep only the working set. Everything else is released: the map entry goes
+   * and the element's source is dropped, which is what lets the browser free the
+   * decoded pixels rather than holding them behind a live reference.
+   *
+   * @param {Iterable<string>} keep paths the hall is using right now
+   * @returns {number} how many decoded images were released
+   */
+  function evict(keep) {
+    const working = keep instanceof Set ? keep : new Set(keep || []);
+    let released = 0;
+    for (const [path, image] of [...images]) {
+      if (working.has(path)) continue;
+      images.delete(path);
+      // removeAttribute rather than src = '', which some browsers treat as a
+      // request for the page itself.
+      image.removeAttribute('src');
+      released += 1;
+    }
+    return released;
+  }
+
+  /**
+   * A byte estimate for the decoded images the hall holds. Decoded pixels are
+   * counted as RGBA8; the compressed file on the network is a different number.
    */
   function residentBytes() {
     let total = 0;
@@ -109,6 +146,7 @@ export function createAssets({ generation = () => 0 } = {}) {
 
   function dispose() {
     disposed = true;
+    for (const image of images.values()) image.removeAttribute('src');
     images.clear();
     inFlight.clear();
     failed.clear();
@@ -122,9 +160,15 @@ export function createAssets({ generation = () => 0 } = {}) {
     wallCopyForPath,
     loadImage,
     peek,
+    hasFailed,
     forget,
+    evict,
     residentBytes,
     dispose,
+    /** Counters for the review: what the hall owns and what it is still waiting for. */
+    get decodedImages() { return images.size; },
+    get pendingImages() { return inFlight.size; },
+    get failedImages() { return failed.size; },
     get manifest() { return manifest || []; }
   };
 }

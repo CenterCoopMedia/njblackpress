@@ -30,7 +30,10 @@ export function createReader(options) {
   const {
     root, inspector, narrow,
     onPrevious = () => {}, onNext = () => {}, onClose = () => {},
-    onGotoStop = () => {}, onSelectPublication = () => {}, copyLink = () => ''
+    onGotoStop = () => {}, onSelectPublication = () => {}, copyLink = () => '',
+    // Every listener the reader registers goes through the hall's counter, so a
+    // repeated open and close cycle can be shown not to accumulate any.
+    listen = (target, type, handler, opts) => target.addEventListener(type, handler, opts)
   } = options;
 
   root.innerHTML = `
@@ -51,6 +54,7 @@ export function createReader(options) {
     </label>
     <figure class="hall-reader-plate" data-reader-plate hidden>
       <img alt="" data-reader-image>
+      <p class="hall-reader-missing" data-reader-missing hidden></p>
       <figcaption data-reader-figcaption></figcaption>
     </figure>
     <div class="hall-reader-body" data-reader-body></div>
@@ -68,6 +72,7 @@ export function createReader(options) {
     stopList: root.querySelector('[data-reader="stops"]'),
     plate: root.querySelector('[data-reader-plate]'),
     image: root.querySelector('[data-reader-image]'),
+    missing: root.querySelector('[data-reader-missing]'),
     figcaption: root.querySelector('[data-reader-figcaption]'),
     previous: root.querySelector('[data-reader="previous"]'),
     next: root.querySelector('[data-reader="next"]'),
@@ -83,12 +88,12 @@ export function createReader(options) {
   let releaseTrap = null;
   let returnFocus = null;
 
-  parts.previous.addEventListener('click', () => onPrevious());
-  parts.next.addEventListener('click', () => onNext());
-  parts.close.addEventListener('click', () => onClose());
-  parts.stopList.addEventListener('change', () => onGotoStop(parts.stopList.value));
-  parts.clipping.addEventListener('click', () => openInspector());
-  parts.copy.addEventListener('click', async () => {
+  listen(parts.previous, 'click', () => onPrevious());
+  listen(parts.next, 'click', () => onNext());
+  listen(parts.close, 'click', () => onClose());
+  listen(parts.stopList, 'change', () => onGotoStop(parts.stopList.value));
+  listen(parts.clipping, 'click', () => openInspector());
+  listen(parts.copy, 'click', async () => {
     const url = copyLink();
     try {
       await navigator.clipboard.writeText(url);
@@ -97,13 +102,54 @@ export function createReader(options) {
       parts.status.textContent = url;
     }
   });
-  root.addEventListener('click', (event) => {
+  // An image the browser cannot fetch is said in words, with the stop's own
+  // metadata still beside it. The reader never shows a broken picture frame.
+  listen(parts.image, 'error', () => {
+    if (!stop || !stop.clipping) return;
+    parts.image.hidden = true;
+    parts.missing.hidden = false;
+    parts.missing.textContent = 'Image unavailable. This clipping could not be loaded; its citation and rights note are below.';
+    parts.clipping.disabled = true;
+  });
+  listen(root, 'click', (event) => {
     const button = event.target.closest('[data-reader-pub]');
     if (button) onSelectPublication(Number(button.dataset.readerPub));
   });
-  root.addEventListener('keydown', (event) => {
+  listen(root, 'keydown', (event) => {
     if (event.key === 'Escape' && opened) { event.stopPropagation(); onClose(); }
+    // Left and right turn pages, but only while the focus is inside the reader
+    // and not inside a control that owns those keys itself.
+    if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+    if (!opened || event.altKey || event.metaKey || event.ctrlKey) return;
+    const target = event.target;
+    if (target.closest('select, input, textarea, [contenteditable="true"]')) return;
+    event.preventDefault();
+    if (event.key === 'ArrowLeft') onPrevious(); else onNext();
   });
+
+  // A swipe across the picture turns the page, the way a thumb would. It is
+  // limited to the picture: a swipe that is mostly vertical, or that starts in
+  // the text, belongs to the page's own scrolling.
+  const SWIPE_MIN = 42;
+  let swipe = null;
+  // A picture is draggable by default, and the browser's own drag cancels the
+  // pointer the moment it starts, so the swipe would never finish.
+  parts.image.draggable = false;
+  listen(parts.plate, 'dragstart', (event) => event.preventDefault());
+  listen(parts.plate, 'pointerdown', (event) => {
+    if (event.pointerType === 'mouse' && event.buttons !== 1) return;
+    swipe = { x: event.clientX, y: event.clientY, id: event.pointerId };
+  });
+  listen(parts.plate, 'pointerup', (event) => {
+    if (!swipe || event.pointerId !== swipe.id) return;
+    const dx = event.clientX - swipe.x;
+    const dy = event.clientY - swipe.y;
+    swipe = null;
+    if (Math.abs(dx) < SWIPE_MIN || Math.abs(dx) <= Math.abs(dy)) return;
+    // Swiping left carries the page away and brings the next one in.
+    if (dx < 0) onNext(); else onPrevious();
+  });
+  listen(parts.plate, 'pointercancel', () => { swipe = null; });
 
   function paragraph(text, className) {
     const p = document.createElement('p');
@@ -177,8 +223,11 @@ export function createReader(options) {
 
     const clip = stop.clipping;
     parts.clipping.hidden = !clip;
+    parts.clipping.disabled = false;
+    parts.missing.hidden = true;
     if (clip) {
       parts.plate.hidden = false;
+      parts.image.hidden = false;
       parts.image.src = clip.path;
       parts.image.alt = clip.alt;
       parts.figcaption.textContent = clip.caption || '';
@@ -214,19 +263,25 @@ export function createReader(options) {
   function applyZoom() {
     inspectorImage.style.width = `${Math.round(zoom * 100)}%`;
   }
-  inspector.querySelector('[data-inspect="in"]').addEventListener('click', () => { zoom = Math.min(4, zoom * 1.4); applyZoom(); });
-  inspector.querySelector('[data-inspect="out"]').addEventListener('click', () => { zoom = Math.max(0.5, zoom / 1.4); applyZoom(); });
-  inspector.querySelector('[data-inspect="reset"]').addEventListener('click', () => { zoom = 1; applyZoom(); });
-  inspector.querySelector('[data-inspect="close"]').addEventListener('click', () => closeInspector());
-  inspector.addEventListener('keydown', (event) => {
+  listen(inspector.querySelector('[data-inspect="in"]'), 'click', () => { zoom = Math.min(4, zoom * 1.4); applyZoom(); });
+  listen(inspector.querySelector('[data-inspect="out"]'), 'click', () => { zoom = Math.max(0.5, zoom / 1.4); applyZoom(); });
+  listen(inspector.querySelector('[data-inspect="reset"]'), 'click', () => { zoom = 1; applyZoom(); });
+  listen(inspector.querySelector('[data-inspect="close"]'), 'click', () => closeInspector());
+  listen(inspector, 'keydown', (event) => {
     if (event.key === 'Escape') { event.stopPropagation(); closeInspector(); }
   });
-  inspector.addEventListener('click', (event) => { if (event.target === inspector) closeInspector(); });
+  listen(inspector, 'click', (event) => { if (event.target === inspector) closeInspector(); });
+  // The large image can fail too, and the credit stays under it either way.
+  listen(inspectorImage, 'error', () => {
+    inspectorImage.hidden = true;
+    inspectorCredit.textContent = `Image unavailable. ${inspectorCredit.textContent}`.trim();
+  });
 
   function openInspector() {
     const clip = stop && stop.clipping;
     if (!clip) return;
     inspectorReturn = document.activeElement;
+    inspectorImage.hidden = false;
     inspectorImage.src = clip.fullPath || clip.path;
     inspectorImage.alt = clip.alt;
     inspectorCredit.textContent = [clip.caption, clip.citation, clip.rightsNote].filter(Boolean).join(' · ');

@@ -30,14 +30,35 @@ The browser review covers WebGL, filters, records, focus, pointer selection afte
 
 GitHub Pages publishes `docs/` from `master`. Verify the Pages build and the public route after merge. Git history provides rollback. No data migration or dependency change is required.
 
-## History hall: texture budget (work package 2)
+## History hall: texture budget and quality tiers
 
-The hall paints a bounded pool of 24 sheet faces. A face is 512 by 704 RGBA8,
-about 1.83 MiB with its mip chain, so the painted faces hold about 44 MiB. With
-their 24 brass plates (about 8 MiB), the 16 decade markers (about 11 MiB), the
-13 book covers (about 6 MiB), and the open volume's pages and clipping (about
-11 MiB), the hall's own resident textures come to roughly 80 MiB, inside the
-128 MiB standard budget. Painting all 136 faces at that size would take about
-249 MiB, which is why the pool exists. Sheets outside the pool share one low
-detail paper material with an era accent and no type. The simplified tier and
-its own pool size arrive with the adaptive work in the next package.
+The hall paints a bounded pool of sheet faces: **24 in the standard tier and 12
+in the simplified tier**, recorded as `FACE_POOL_SIZES` in
+`docs/js/hall/sheets.js`. A face is 512 by 704 RGBA8, about 1.83 MiB with its
+mip chain, so the painted faces hold about 44 MiB in the standard tier and about
+22 MiB in the simplified one. With their brass plates (about 8 and 4 MiB), the
+16 decade markers (about 11 MiB), the 13 book covers (about 6 MiB), and the open
+volume's pages and clipping (about 11 MiB), the hall's own resident textures
+come to roughly 80 MiB standard and roughly 50 MiB simplified, inside the 128
+MiB and 64 MiB budgets. Painting all 136 faces at that size would take about 249
+MiB, which is why the pool exists. Sheets outside the pool share one low detail
+paper material with an era accent and no type.
+
+Decoded images are owned rather than cached: the working set is the wall copies
+the painted pool is showing plus the open spread and the stop either side of it,
+and everything else is released. Only those adjacent stops are preloaded.
+
+The two named tiers are standard and simplified. Simplified lowers the device
+pixel ratio to 1.25, halves the face pool, drops the optional fill light, and
+turns a flat leaf instead of a bending one. The hall has no shadows, so shadows
+are not in the ladder. The tier is judged only on frame intervals measured while
+something was moving, over windows of 30 samples, with separate thresholds for
+falling back and returning so it cannot oscillate. A **Simplified view** control
+in the hall controls explains the current setting and pins the visitor's choice,
+after which measurement never changes it.
+
+`window.__woven.app.exhibit.stats()` reports what the hall owns: resident bytes,
+decoded images, pending images, painted faces, pending paints, listeners
+registered by the hall, and the renderer's texture and geometry counts.
+`scripts/review_hall.py` runs ten hall and timeline switches and ten story open
+and close cycles and asserts that those counters return to their settled values.

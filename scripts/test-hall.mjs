@@ -18,7 +18,7 @@ const { loadModel } = await import('../docs/js/woven/data.js');
 const {
   HALL_CONFIG, buildHallLayout, boxesOverlap, pointInBox,
   formatDates, dateCase, recordCount, recordsLabel, clearedRecordCount,
-  beginsBefore1880, storyEraNote, storyFirstDecade
+  beginsBefore1880, storyEraNote, storyFirstDecade, matchingOrder
 } = await import('../docs/js/hall/layout.js');
 const { createHallState } = await import('../docs/js/hall/state.js');
 const links = await import('../docs/js/hall/links.js');
@@ -174,6 +174,31 @@ const sparse = layout.sectionById.get('1910s');
 assert.ok(dense.length > sparse.length, 'a dense decade is longer than a sparse one');
 assert.ok(layout.sectionById.get('1950s').length > sparse.length, 'nine titles need more room than two');
 assert.ok(sparse.length >= layout.sectionById.get('1890s').length, 'an empty decade is never longer than an occupied one');
+
+// ---------------------------------------------------------------------------
+// Stepping between publications under a filter
+// ---------------------------------------------------------------------------
+
+// No filter: Previous and Next walk the whole gallery in its own order.
+assert.deepEqual(matchingOrder(layout, null), layout.publicationOrder);
+// A filter narrows that order without reordering it: the result is always a
+// subsequence of the gallery, never a new sort.
+const newarkIds = new Set(source.filter((p) => p.city === 'Newark').map((p) => p.id));
+const newarkOrder = matchingOrder(layout, newarkIds);
+assert.ok(newarkOrder.length > 1 && newarkOrder.length < source.length, 'Newark is a real subset');
+assert.deepEqual(newarkOrder, layout.publicationOrder.filter((id) => newarkIds.has(id)));
+for (const id of newarkOrder) assert.ok(newarkIds.has(id));
+// One match, and no match at all.
+const oneMatch = new Set([layout.publicationOrder[7]]);
+assert.deepEqual(matchingOrder(layout, oneMatch), [layout.publicationOrder[7]]);
+assert.deepEqual(matchingOrder(layout, new Set()), [], 'a filter that matches nothing has nothing to step through');
+// A record revealed past the filters can be stepped away from, and it keeps its
+// own place in the gallery rather than being pushed to either end.
+const outsider = layout.publicationOrder.find((id) => !newarkIds.has(id));
+const revealedOrder = matchingOrder(layout, newarkIds, outsider);
+assert.ok(revealedOrder.includes(outsider), 'a revealed record is reachable');
+assert.deepEqual(revealedOrder, layout.publicationOrder.filter((id) => newarkIds.has(id) || id === outsider));
+assert.equal(matchingOrder(layout, new Set(), outsider).length, 1, 'a revealed record survives a zero-result filter');
 
 // ---------------------------------------------------------------------------
 // Date wording and record counts
@@ -350,6 +375,67 @@ const newState = () => createHallState({ stopsForStory: (id) => stopsById.get(id
 }
 
 // ---------------------------------------------------------------------------
+// Quality tiers
+// ---------------------------------------------------------------------------
+
+{
+  const { createTiers, SAMPLE_WINDOW, TIERS } = await import('../docs/js/hall/tiers.js');
+  assert.deepEqual(Object.keys(TIERS), ['standard', 'simplified'], 'two named tiers, and no third');
+  assert.ok(TIERS.simplified.pixelRatio < TIERS.standard.pixelRatio, 'simplified lowers the device pixel ratio');
+  assert.equal(TIERS.simplified.fill, false, 'simplified drops the optional fill light');
+  assert.equal(TIERS.simplified.bend, false, 'simplified drops the page bend');
+  for (const settings of Object.values(TIERS)) {
+    assert.ok(!('shadows' in settings), 'the hall has no shadows, so they are not in the ladder');
+  }
+
+  const applied = [];
+  const said = [];
+  let click = null;
+  const toggle = { setAttribute() {} };
+  const note = { textContent: '' };
+  const tiers = createTiers({
+    toggle,
+    note,
+    listen: (target, type, handler) => { click = handler; },
+    announce: (text) => said.push(text),
+    apply: (settings, tier) => applied.push(tier)
+  });
+  const feed = (ms, windows) => {
+    for (let i = 0; i < SAMPLE_WINDOW * windows; i += 1) tiers.sample(ms);
+  };
+
+  assert.equal(tiers.tier, 'standard', 'the hall starts at the standard tier');
+  feed(25, 1);
+  assert.equal(tiers.tier, 'standard', 'one slow window is not enough to change the tier');
+  feed(25, 1);
+  assert.equal(tiers.tier, 'simplified', 'two sustained slow windows fall back');
+  assert.deepEqual(applied, ['simplified']);
+  assert.ok(said.some((text) => text.includes('Simplified view')), 'the change is announced');
+  assert.ok(note.textContent.startsWith('Simplified view'), 'and explained in the control');
+
+  feed(10, 3);
+  assert.equal(tiers.tier, 'simplified', 'three fast windows are not enough to go back');
+  feed(10, 1);
+  assert.equal(tiers.tier, 'standard', 'four sustained fast windows restore the standard tier');
+
+  // A window between the two thresholds clears both counts, so a hall hovering
+  // around the boundary never oscillates.
+  feed(25, 1);
+  feed(16, 1);
+  feed(25, 1);
+  assert.equal(tiers.tier, 'standard', 'a middling window resets the count toward simplified');
+
+  click();
+  assert.equal(tiers.tier, 'simplified', 'the control pins the other tier');
+  assert.equal(tiers.pinned, 'simplified');
+  assert.ok(note.textContent.includes('You chose this view.'));
+  feed(10, 10);
+  assert.equal(tiers.tier, 'simplified', 'measurement never overrides a pinned choice');
+  click();
+  assert.equal(tiers.tier, 'standard', 'and the visitor can pin the standard tier back');
+}
+
+// ---------------------------------------------------------------------------
 // Routes
 // ---------------------------------------------------------------------------
 
@@ -448,4 +534,4 @@ for (const search of ['?pub=9', '?story=story-001', '?stop=evt-001', '?decade=19
 }
 assert.equal(links.hasDeepLink('?view=hall'), false, 'a bare view is not a deep link');
 
-console.log(`PASS: ${layout.slots.length} publication slots, ${layout.bookSlots.length} volumes, ${layout.sections.length} sections, no overlaps, date wording, state machine, and every route`);
+console.log(`PASS: ${layout.slots.length} publication slots, ${layout.bookSlots.length} volumes, ${layout.sections.length} sections, no overlaps, date wording, state machine, filtered stepping, quality tiers, and every route`);

@@ -42,11 +42,18 @@ export function createRail(camera, layout, options = {}) {
   const maxZ = Math.max(minZ + 1, layout.length - 1.2);
   const position = new THREE.Vector3(0, config.eyeHeight, minZ);
   const look = new THREE.Vector3(0, config.eyeHeight, minZ + 4);
+  // Which way is up for the current pose. Standing in the hall it is the world
+  // up; reading a spread from directly above it is the direction along the
+  // table that puts the top of the page at the top of the screen.
+  const up = new THREE.Vector3(0, 1, 0);
   let from = null;
   let to = null;
   let started = 0;
   let duration = 0;
   let settled = true;
+  // Only the entrance re-fits itself when the window changes shape, because it
+  // is the one pose that depends on whether the window is portrait or landscape.
+  let atEntrance = false;
 
   function entranceZ() {
     if (entranceTarget == null) return layout.sections[0]?.entryAnchor.position.z ?? minZ;
@@ -60,7 +67,7 @@ export function createRail(camera, layout, options = {}) {
 
   function apply() {
     camera.position.copy(position);
-    camera.up.set(0, 1, 0);
+    camera.up.copy(up);
     camera.lookAt(look);
     invalidate();
   }
@@ -100,24 +107,31 @@ export function createRail(camera, layout, options = {}) {
     };
   }
 
-  // A reader standing in the corridor beside the table, far enough back that
-  // both pages of the spread are in view at once.
+  // The reading pose: straight down at the open spread, the way a reader stands
+  // over a book on a table. The spread fills the band of the stage the controls
+  // and the reader leave clear, and nothing of the room competes with it.
+  //
+  // The spread lies along the table, so what has to fit across the screen is
+  // its two-page width and what has to fit down the screen is one page's height.
+  // The camera's up vector points along the wall the table stands against, which
+  // is the direction the type on the pages runs; get that wrong and the spread
+  // reads sideways.
   function poseForBook(book) {
     const sign = book.wall === 'left' ? -1 : 1;
-    const look = new THREE.Vector3(book.position.x, config.table.height + 0.16, book.position.z);
-    // The open spread runs along the table, so what has to fit across the view
-    // is its length, and the visitor stands in the corridor opposite it.
-    // Close enough that the spread fills the band the controls leave clear and
-    // the headline on the right page can be read.
-    const raw = fitDistance(book.size.width * 1.85, book.size.height * 0.8);
-    const distance = Math.min(4.2, Math.max(1.5, raw));
-    const x = Math.max(-(config.corridorHalfWidth - 0.1), Math.min(config.corridorHalfWidth - 0.1, look.x - sign * distance));
-    // The controls cover the top of the canvas, so the spread is aimed into the
-    // band that is left, exactly as a sheet is.
-    look.y += verticalOffset(distance);
+    const spreadWidth = (book.size.width - 0.04) * 2;
+    const spreadHeight = book.size.height - 0.06;
+    const raw = fitDistance(spreadWidth, spreadHeight);
+    // Far enough that the whole spread is in the free band, near enough that the
+    // camera stays well below the top of the walls.
+    const distance = Math.min(config.ceilingHeight - config.table.height - 0.4, Math.max(1.2, raw));
+    // Moving the camera along the screen's up direction slides the spread down
+    // the screen, into the middle of the band the controls leave clear.
+    const shift = verticalOffset(distance);
+    const x = book.position.x + sign * shift;
     return {
-      position: new THREE.Vector3(x, config.eyeHeight, book.position.z),
-      look
+      position: new THREE.Vector3(x, config.table.height + distance, book.position.z),
+      look: new THREE.Vector3(x, config.table.height, book.position.z),
+      up: new THREE.Vector3(sign, 0, 0)
     };
   }
 
@@ -137,11 +151,29 @@ export function createRail(camera, layout, options = {}) {
     };
   }
 
-  function moveTo(pose, { immediate = false, ms = RAIL_CONFIG.nearMoveMs } = {}) {
+  /**
+   * The entrance. A landscape window looks down the hall, with the first
+   * section's sheets on both walls at reading distance. A portrait window is too
+   * narrow a slice of a six metre corridor for that to say anything, so it turns
+   * to the wall on the left of the picture instead: the first sheet on that wall
+   * fills the view and the hall recedes to the right past its edge.
+   */
+  function entrancePose() {
+    if (camera.aspect >= 1 || !options.portraitEntranceSlot) return poseForZ(entranceZ());
+    const slot = options.portraitEntranceSlot;
+    return slot ? poseForSlot(slot) : poseForZ(entranceZ());
+  }
+
+  function moveTo(pose, { immediate = false, ms = RAIL_CONFIG.nearMoveMs, entrance = false } = {}) {
+    atEntrance = entrance;
     const far = pose.position.distanceTo(position) > RAIL_CONFIG.cutDistance;
-    if (immediate || far || reduceMotion.matches || ms === 0) {
+    const nextUp = pose.up || new THREE.Vector3(0, 1, 0);
+    // A change of up vector is a change of stance, not a move along the rail, so
+    // it lands at once rather than being interpolated through a degenerate view.
+    if (immediate || far || reduceMotion.matches || ms === 0 || !nextUp.equals(up)) {
       position.copy(pose.position);
       look.copy(pose.look);
+      up.copy(nextUp);
       from = null;
       to = null;
       settled = true;
@@ -178,8 +210,10 @@ export function createRail(camera, layout, options = {}) {
     // It uses the same pose as every other move, so the pitch never jumps
     // between the end of a drag and the start of a button move.
     const pose = poseForZ((to ? to.position.z : position.z) + dz);
+    atEntrance = false;
     position.copy(pose.position);
     look.copy(pose.look);
+    up.set(0, 1, 0);
     from = null;
     to = null;
     settled = true;
@@ -207,11 +241,14 @@ export function createRail(camera, layout, options = {}) {
     poseForZ,
     focusSlot(slot, opts) { moveTo(poseForSlot(slot), { ms: RAIL_CONFIG.focusMs, ...opts }); },
     focusBook(book, opts) { moveTo(poseForBook(book), { ms: RAIL_CONFIG.focusMs, ...opts }); },
-    toEntrance(opts) { moveTo(poseForZ(entranceZ()), opts); },
+    entrancePose,
+    toEntrance(opts) { moveTo(entrancePose(), { ...opts, entrance: true }); },
     goToSection(section, opts) { moveTo(poseForZ(section.entryAnchor.position.z), opts); },
     /** A resize changes the fit, so the current focus pose is recomputed. */
     refocus(pose) { if (pose) moveTo(pose, { immediate: true }); },
     get z() { return position.z; },
+    get atEntrance() { return atEntrance; },
+    get up() { return up.clone(); },
     get settled() { return settled; },
     get section() { return sectionAt(position.z); },
     sectionAt,

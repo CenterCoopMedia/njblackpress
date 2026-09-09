@@ -55,6 +55,15 @@ function surface(width, height) {
   return { canvas, ctx: canvas.getContext('2d') };
 }
 
+/**
+ * What one texture of this size costs in GPU memory, as RGBA8 with a full mip
+ * chain. The mip chain adds a third again. This is a calculation from the
+ * dimensions, not a measurement, and the review reports it as such.
+ */
+export function textureBytes(width, height) {
+  return Math.round(width * height * 4 * (4 / 3));
+}
+
 /** A canvas becomes a colour texture, so it must say it holds sRGB colour. */
 export function textureFrom(canvas, anisotropy = 4) {
   const texture = new THREE.CanvasTexture(canvas);
@@ -115,8 +124,9 @@ function grain(ctx, width, height, amount = 8) {
  *
  * @param {object} view prepared record view from hall.js
  * @param {HTMLImageElement|null} image decoded wall copy, when one is cleared
+ * @param {{unavailable?: boolean}} [state] the copy is cleared but would not load
  */
-export function paintSheetFace(view, image) {
+export function paintSheetFace(view, image, state = {}) {
   const { width, height } = FACE_SIZE;
   const { canvas, ctx } = surface(width, height);
   ctx.fillStyle = PAINT.paper;
@@ -178,7 +188,11 @@ export function paintSheetFace(view, image) {
   } else {
     ctx.fillStyle = PAINT.inkSoft;
     ctx.font = `400 25px ${PAINT.body}`;
-    const label = view.note || 'No copies cleared for display here. Copies may survive elsewhere.';
+    // An image that would not load is said in words on the sheet itself, so a
+    // blank space is never mistaken for "nothing survives".
+    const label = state.unavailable
+      ? 'Image unavailable. The cleared copy could not be loaded here; its record is in the panel.'
+      : view.note || 'No copies cleared for display here. Copies may survive elsewhere.';
     drawLines(ctx, wrap(ctx, label, textWidth, Math.floor(boxHeight / 34)), pad, y, 34);
   }
 

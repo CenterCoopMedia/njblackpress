@@ -8,7 +8,7 @@
 // walls is the brightest thing in the room, and it should stay that way.
 
 import * as THREE from 'three';
-import { paintFloor, paintWall, paintMarker, textureFrom } from './paint.js';
+import { paintFloor, paintWall, paintMarker, textureFrom, textureBytes, MARKER_SIZE } from './paint.js';
 
 // Every colour and light value the room uses, taken from the site's tokens.
 export const SPACE_CONFIG = {
@@ -150,6 +150,22 @@ export function buildSpace(layout, { anisotropy = 4 } = {}) {
       key.target.position.z = z + 6;
       key.target.updateMatrixWorld();
       fill.position.z = z + 8;
+    },
+    /**
+     * The fill is the one optional light in the room. The simplified tier drops
+     * it; nothing is unreadable without it, because the hemisphere and the key
+     * light every sheet on both walls on their own.
+     */
+    setFill(enabled) {
+      if (fill.visible === enabled) return false;
+      fill.visible = enabled;
+      return true;
+    },
+    get fillEnabled() { return fill.visible; },
+    /** An estimate of what the room's own textures hold: floor, walls, markers. */
+    residentBytes() {
+      return textureBytes(256, 256) + textureBytes(8, 256)
+        + layout.sections.length * textureBytes(MARKER_SIZE.width, MARKER_SIZE.height);
     },
     markerMeshes,
     dispose() {
