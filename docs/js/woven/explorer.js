@@ -25,6 +25,8 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
   // are left exactly as they were: changing someone's filters without being
   // asked is worse than showing one extra row.
   let revealed = null;
+  // Whether the last render actually had to show it past the filters.
+  let revealedOutside = false;
   const eraChoices = document.getElementById('woven-era-choices');
   for (const band of [{ key: 'all', count: all.length }, ...model.bands.filter((b) => b.count)]) {
     const button = document.createElement('button');
@@ -51,6 +53,7 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
     const matched = all.filter((thread) => matchesFilters(thread, selection) && (era === 'all' || thread.bandKey === era));
     const filtered = era !== 'all' || !!city.value || evidence.value !== 'all';
     const outside = revealed != null && filtered && !matched.some((thread) => thread.id === revealed);
+    revealedOutside = outside;
     const extra = outside ? all.filter((thread) => thread.id === revealed) : [];
     current = extra.length ? [...extra, ...matched] : matched;
     const fragment = document.createDocumentFragment();
@@ -112,7 +115,9 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
     changed();
     if (!options || options.move !== false) focusEra(era);
   }
-  clear.addEventListener('click', clearFilters);
+  // The handler takes an options object, so the click event must not be passed
+  // to it as one.
+  clear.addEventListener('click', () => clearFilters());
   list.addEventListener('click', (event) => {
     const button = event.target.closest('[data-pub]');
     if (button) open(Number(button.dataset.pub));
@@ -187,6 +192,9 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
      * the mismatch and offer to clear them.
      */
     reveal: (id) => {
+      // Opening the same revealed record again is still outside the filters:
+      // its row keeps the note that says so, so the notice has to stay too.
+      if (id === revealed && revealedOutside) return true;
       if (current.some((thread) => thread.id === id)) {
         // Already listed. A record revealed earlier is no longer needed.
         if (revealed != null && revealed !== id) { revealed = null; render(); }
@@ -194,7 +202,7 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
       }
       revealed = id;
       render();
-      return true;
+      return revealedOutside;
     },
     scope: (key) => { era = key; changed(); },
     era: () => era,

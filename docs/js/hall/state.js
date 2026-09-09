@@ -2,10 +2,9 @@
 //
 // Every control, search result, deep link, and history event dispatches a
 // command here. Animation is a transition between states; it never owns the
-// selected publication or the current story stop.
-//
-// Loading and renderer failure are conditions, not states: a renderer that
-// fails must not lose the record the visitor asked for.
+// selected publication or the current story stop. Inspecting a clipping is one
+// of the four modes, so it is entered and left the same way as the others and
+// carries the return context back to the stop it was opened from.
 
 export const VIEWS = ['hall', 'timeline', 'text'];
 export const MODES = ['browse', 'publication', 'story', 'clipping'];
@@ -26,6 +25,19 @@ function sameFilters(a, b) {
  * @param {(storyId: string) => string[]} [options.stopsForStory] ordered stop ids
  * @param {object} [options.initial] starting field values, usually from the URL
  */
+/**
+ * What a state change means for the clipping inspector. The hall reads this
+ * rather than deciding for itself, so inspection is entered and left through
+ * the state like every other mode.
+ *
+ * @returns {'open'|'close'|null}
+ */
+export function clippingTransition(next, before) {
+  if (next.mode === 'clipping' && before.mode !== 'clipping') return 'open';
+  if (before.mode === 'clipping' && next.mode !== 'clipping') return 'close';
+  return null;
+}
+
 export function createHallState(options = {}) {
   const stopsForStory = options.stopsForStory || (() => []);
   const listeners = new Set();
@@ -42,8 +54,6 @@ export function createHallState(options = {}) {
     returnStack: [],
     motion: 'full',
     tier: 'standard',
-    loading: false,
-    rendererFailed: false,
     generation: 0,
     ...(options.initial || {})
   };
@@ -214,16 +224,6 @@ export function createHallState(options = {}) {
     setMotion(motion) {
       if (motion === state.motion) return state;
       return apply({ motion });
-    },
-
-    setLoading(loading) {
-      if (loading === state.loading) return state;
-      return commit({ loading: !!loading });
-    },
-
-    setRendererFailed(failed) {
-      if (failed === state.rendererFailed) return state;
-      return commit({ rendererFailed: !!failed });
     }
   };
 

@@ -12,7 +12,7 @@
 import * as THREE from 'three';
 import {
   paintSheetFace, paintPlate, paintPlainPaper, textureFrom, textureBytes,
-  FACE_SIZE, PLATE_SIZE
+  FACE_SIZE, PLATE_SIZE, PAINT
 } from './paint.js';
 import { SPACE_CONFIG } from './space.js';
 
@@ -23,7 +23,6 @@ import { SPACE_CONFIG } from './space.js';
 // tier to roughly 50 MiB, inside the 128 MiB and 64 MiB budgets. Painting all
 // 136 faces would take about 249 MiB, which is why the pool exists.
 export const FACE_POOL_SIZES = { standard: 24, simplified: 12 };
-export const FACE_POOL_SIZE = FACE_POOL_SIZES.standard;
 
 // A label plate, not a second slab: about the size of a gallery card under a
 // frame. The required credit lives in the record panel either way.
@@ -333,7 +332,7 @@ export function buildSheets(layout, views, assets, options = {}) {
     return line;
   }
   const hoverLine = marker('#f0854a');
-  const selectedLine = marker('#e2662b');
+  const selectedLine = marker(PAINT.accent);
   // The story cue: quiet brass edges on the sheets the current stop names. No
   // camera move, no lines through the room.
   const relatedLines = [];

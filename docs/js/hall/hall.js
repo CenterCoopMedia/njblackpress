@@ -8,7 +8,7 @@
 
 import * as THREE from 'three';
 import { buildHallLayout, matchingOrder } from './layout.js';
-import { createHallState } from './state.js';
+import { createHallState, clippingTransition } from './state.js';
 import * as links from './links.js';
 import { createAssets } from './assets.js';
 import { buildSpace } from './space.js';
@@ -79,7 +79,9 @@ export async function mountHall(app, params) {
   // What the filters currently match, and how the visitor was told about it.
   let matchIds = null;
   let matchCount = model.threads.length;
-  let revealedId = null;
+  // The last where-am-I line written, so a drag does not rewrite the same
+  // sentence dozens of times a second under a screen reader.
+  let lastWhere = '';
 
   // ---- the archive as the hall reads it -----------------------------------
   const layout = buildHallLayout(model);
@@ -101,7 +103,6 @@ export async function mountHall(app, params) {
     filter: (ids, info = {}) => {
       matchIds = ids;
       matchCount = info.matchCount ?? (ids ? ids.size : model.threads.length);
-      revealedId = info.revealed ?? null;
       if (sheets) sheets.setMatches(ids);
       app.setExploreMatches?.(ids);
       updatePool(true);
@@ -185,6 +186,8 @@ export async function mountHall(app, params) {
     onClose: () => closeTop(),
     onGotoStop: (key) => state.gotoStop(key),
     onSelectPublication: (id) => app.select(id, {}),
+    onOpenClipping: (payload) => state.openClipping(payload),
+    onCloseClipping: () => closeTop(),
     copyLink: () => new URL(links.format(state.getState()), location.href).toString()
   });
 
@@ -275,13 +278,23 @@ export async function mountHall(app, params) {
       const here = section.publicationIds.filter((id) => matchIds.has(id)).length;
       filterLine = ` ${matchCount} publication${matchCount === 1 ? '' : 's'} match these filters, ${here} in this section. The rest are dimmed.`;
     }
-    whereEl.textContent = place + filterLine;
+    const line = place + filterLine;
+    // Only a real change is written. Rewriting the same status text is an
+    // announcement to a screen reader, and a drag would make dozens a second.
+    if (line === lastWhere) return;
+    lastWhere = line;
+    whereEl.textContent = line;
   }
 
-  function settled() {
+  /**
+   * The rail has stopped somewhere. A settle during a drag or a wheel gesture
+   * says live: the room follows the camera, but nothing is said out loud until
+   * the gesture ends.
+   */
+  function settled(info = {}) {
     updatePool(false);
     const section = rail.section;
-    describeFilters();
+    if (!info.live) describeFilters();
     if (decadeSelect && decadeSelect.value !== section.id && document.activeElement !== decadeSelect) {
       decadeSelect.value = section.id;
     }
@@ -357,14 +370,28 @@ export async function mountHall(app, params) {
   }
 
   function closeTop() {
-    if (reader.inspectorOpen) { reader.closeInspector(); return; }
     const current = state.getState();
+    // Inspection is a state, so it is left through the state; react() hides the
+    // inspector on the way out.
+    if (current.mode === 'clipping') { state.close(); return; }
+    if (reader.inspectorOpen) { reader.closeInspector(); return; }
     if (current.mode === 'story' || current.mode === 'publication') {
       panel.closePanel();
       state.close();
       return;
     }
     rail.toEntrance();
+  }
+
+  /**
+   * What a selection changes outside the room: the page's own record of it, the
+   * text archive, and the publication index. Every path into a selection ends
+   * here, so no one of them can forget a part of it.
+   */
+  function markSelected(id) {
+    app.state.selectedId = id ?? null;
+    syncTwin(app.state);
+    explorer.syncSelected();
   }
 
   // ---- the one place that reacts to a state change ------------------------
@@ -375,14 +402,27 @@ export async function mountHall(app, params) {
       pushRoute();
       return;
     }
+    const clipping = clippingTransition(next, before);
+    if (clipping === 'open') { reader.openInspector(next.overlay); return; }
+    if (clipping === 'close') {
+      reader.closeInspector();
+      // The return context put the story and the stop back as they were, so
+      // nothing else in the room has to change.
+      if (next.mode === 'story' && next.storyId === before.storyId && next.stopId === before.stopId) return;
+    }
     if (next.mode === 'publication' && next.selectedPublicationId !== before.selectedPublicationId) {
+      // Choosing a name inside an open story leaves the story: the reader, the
+      // open volume, and the story's marks in the room all go with it.
+      if (before.mode === 'story') {
+        reader.close();
+        volumes.closeVolume();
+        sheets.setRelated([]);
+      }
       const slot = layout.slotByPublicationId.get(next.selectedPublicationId);
       if (slot) rail.focusSlot(slot);
       sheets.setSelected(next.selectedPublicationId);
       updatePool(true);
-      app.state.selectedId = next.selectedPublicationId;
-      syncTwin(app.state);
-      explorer.syncSelected();
+      markSelected(next.selectedPublicationId);
       const publication = model.byId.get(next.selectedPublicationId);
       if (publication) {
         announce(`${publication.name}. ${publication.city || 'City unrecorded'}. ${publicationYears(publication)}.`);
@@ -415,10 +455,8 @@ export async function mountHall(app, params) {
         panel.closePanel();
         sheets.setSelected(next.selectedPublicationId);
         sheets.setRelated([]);
-        app.state.selectedId = next.selectedPublicationId ?? null;
         app.state.tourId = null;
-        syncTwin(app.state);
-        explorer.syncSelected();
+        markSelected(next.selectedPublicationId);
         evictImages();
         replaceRoute();
       } else if (next.mode === 'publication') {
@@ -428,6 +466,9 @@ export async function mountHall(app, params) {
         const slot = layout.slotByPublicationId.get(next.selectedPublicationId);
         if (slot) rail.focusSlot(slot);
         sheets.setSelected(next.selectedPublicationId);
+        // The same sheet can be chosen again from inside a story, so this path
+        // carries the selection outward too.
+        markSelected(next.selectedPublicationId);
         evictImages();
       } else if (next.mode === 'story') {
         openStoryScene(next.storyId, next.stopId);
@@ -516,14 +557,12 @@ export async function mountHall(app, params) {
     notice(checked.issues.length ? checked.issues[0].message : '');
     routing = true;
     try {
-      if (view === 'text') {
-        applyView('timeline');
-        state.setView('timeline');
-        return;
-      }
-      applyView(view === 'timeline' ? 'timeline' : 'hall');
-      state.setView(view === 'timeline' ? 'timeline' : 'hall');
-      if (view === 'timeline') return;
+      // One path to the view: the state decides and react() applies it. The
+      // forced text flags never reach here, because main.js opens the text
+      // archive without loading the hall at all.
+      const wanted = view === 'hall' ? 'hall' : 'timeline';
+      state.setView(wanted);
+      if (wanted === 'timeline') return;
       const target = checked.target;
       if (target.kind === 'story') state.openStory(target.id, target.stop);
       else if (target.kind === 'publication') app.select(target.id, {});
@@ -543,10 +582,7 @@ export async function mountHall(app, params) {
       const parsed = links.parse(location.search);
       const checked = links.validate(parsed, model, layout);
       const view = links.resolveView(parsed, { canRenderHall: true });
-      if (view !== state.getState().view) {
-        applyView(view === 'hall' ? 'hall' : 'timeline');
-        state.setView(view === 'hall' ? 'hall' : 'timeline');
-      }
+      state.setView(view === 'hall' ? 'hall' : 'timeline');
       if (checked.target.kind === 'story') state.openStory(checked.target.id, checked.target.stop);
       else if (checked.target.kind === 'publication') app.select(checked.target.id, {});
       else if (checked.target.kind === 'decade') moveToSection(layout.sectionById.get(checked.target.id), { immediate: true });
@@ -583,7 +619,7 @@ export async function mountHall(app, params) {
 
   function stepPublication(direction) {
     // The gallery's own order, narrowed to the matches. See matchingOrder.
-    const order = matchingOrder(layout, matchIds, revealedId);
+    const order = matchingOrder(layout, matchIds);
     if (!order.length) {
       announce('No publications match these filters.');
       return;
@@ -698,14 +734,12 @@ export async function mountHall(app, params) {
     }
     if (!active) return original.select(id, opts);
     panel.closePanel();
+    // The sheet mark, the text archive, and the index all follow from the state
+    // change; react() is the one place that does them.
     state.selectPublication(id, {});
-    sheets.setSelected(id);
     if (!opts.silent && !opts.fromTwin) {
       panel.openPublication(publication, model, { playStory: (story) => app.playStory(story) });
     }
-    app.state.selectedId = id;
-    syncTwin(app.state);
-    explorer.syncSelected();
   };
 
   app.playStory = function playStory(id, options = {}) {
@@ -785,6 +819,9 @@ export async function mountHall(app, params) {
 
   // ---- entry ---------------------------------------------------------------
   resize();
+  // The hall mounts in the hall view. A route that asks for the flat timeline
+  // changes it through the state, like every later change.
+  applyView('hall');
   rail.toEntrance({ immediate: true });
   updatePool(true);
   settled();

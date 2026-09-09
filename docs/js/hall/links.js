@@ -191,9 +191,3 @@ export function format(state = {}) {
   }
   return `?${params.toString()}`;
 }
-
-/** True when the query names something to open. */
-export function hasDeepLink(searchString) {
-  const params = searchParams(searchString);
-  return DEEP_LINK_PARAMS.some((key) => params.has(key));
-}

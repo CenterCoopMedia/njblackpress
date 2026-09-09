@@ -140,10 +140,6 @@ export function createAssets({ generation = () => 0 } = {}) {
     return total;
   }
 
-  function forget(path) {
-    images.delete(path);
-  }
-
   function dispose() {
     disposed = true;
     for (const image of images.values()) image.removeAttribute('src');
@@ -161,7 +157,6 @@ export function createAssets({ generation = () => 0 } = {}) {
     loadImage,
     peek,
     hasFailed,
-    forget,
     evict,
     residentBytes,
     dispose,

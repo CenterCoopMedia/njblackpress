@@ -10,9 +10,6 @@
 export const ERA_COLORS = ['#cb7857', '#d59c59', '#cfb37c', '#b1a0b8', '#83a69b', '#91b7c2', '#ead5af'];
 export const ERA_COLOR_UNDATED = '#a89c85';
 
-// Legacy name kept for the era band keys A to G in the woven model.
-export const THREAD_COLORS = ERA_COLORS;
-
 export function eraColor(publication) {
   const index = 'ABCDEFG'.indexOf(publication.bandKey);
   return index < 0 ? ERA_COLOR_UNDATED : ERA_COLORS[index];

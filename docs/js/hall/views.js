@@ -7,6 +7,7 @@
 // The woven model calls a publication record a thread. That word stops here.
 
 import { formatDates, recordsLabel, storyEraNote } from './layout.js';
+import { PAINT } from './paint.js';
 import { eraColor } from '../woven/records.js';
 
 /** The first sentence of a record's own notes, used as an exhibit label. */
@@ -110,7 +111,7 @@ export function buildStopView(model, assets, tour, stop, index) {
       path: copy ? copy.wallPath : clip.webPath,
       caption: clip.caption,
       rightsStatus: clip.rightsStatus,
-      accent: '#e2662b'
+      accent: PAINT.accent
     } : {
       kind: 'text',
       date: stop.dateLabel,

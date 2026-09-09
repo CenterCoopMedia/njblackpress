@@ -22,6 +22,9 @@ export const PAINT = {
   brassEdge: '#8a7252',
   brassInk: '#241c12',
   walnut: '#2b2318',
+  // The site's stain accent. One token, so the hall's marks and the pages of a
+  // volume cannot drift apart from each other or from the page.
+  accent: '#e2662b',
   display: '"Libre Franklin", "Helvetica Neue", Arial, sans-serif',
   body: '"DM Sans", Arial, sans-serif'
 };
@@ -228,14 +231,16 @@ export function paintPlate(view) {
   ctx.fillText(right.join(' · '), width - 16, 16);
   ctx.textAlign = 'left';
 
-  // The plate supplements the record panel's attribution; the exact required
-  // credit is always in the DOM as well, so small type here is safe.
-  const credit = view.rightsStatus === 'publishable_with_credit' && view.citation
-    ? view.citation
-    : view.rightsStatus === 'crop_first' ? 'Cropped detail' : '';
+  // A cropped detail still carries its citation: the rights rule for crop_first
+  // material is that it may be published only as a cited crop, so the words
+  // "Cropped detail" never stand in for the credit. The record panel keeps the
+  // full credit either way, which is why small type here is safe.
+  const credit = view.rightsStatus === 'crop_first'
+    ? ['Cropped detail', view.citation].filter(Boolean).join(' · ')
+    : view.rightsStatus === 'publishable_with_credit' && view.citation ? view.citation : '';
   if (credit) {
-    ctx.font = `400 14px ${PAINT.body}`;
-    drawLines(ctx, wrap(ctx, credit, width - 32, 2), 16, 50, 18);
+    ctx.font = `400 13px ${PAINT.body}`;
+    drawLines(ctx, wrap(ctx, credit, width - 32, 2), 16, 48, 17);
   }
   return canvas;
 }
@@ -322,7 +327,7 @@ export function paintPage(page, image) {
     if (page.rightsStatus === 'crop_first') {
       // The outline says the public file is a cropped detail. It is a label, not
       // a crop: the hall never crops a cleared file.
-      ctx.strokeStyle = page.accent || '#e2662b';
+      ctx.strokeStyle = page.accent || PAINT.accent;
       ctx.lineWidth = 3;
       ctx.strokeRect(x - 4.5, y - 4.5, w + 9, h + 9);
     }

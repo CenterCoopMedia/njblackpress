@@ -20,7 +20,7 @@ const {
   formatDates, dateCase, recordCount, recordsLabel, clearedRecordCount,
   beginsBefore1880, storyEraNote, storyFirstDecade, matchingOrder
 } = await import('../docs/js/hall/layout.js');
-const { createHallState } = await import('../docs/js/hall/state.js');
+const { createHallState, clippingTransition } = await import('../docs/js/hall/state.js');
 const links = await import('../docs/js/hall/links.js');
 
 const model = await loadModel();
@@ -192,13 +192,15 @@ for (const id of newarkOrder) assert.ok(newarkIds.has(id));
 const oneMatch = new Set([layout.publicationOrder[7]]);
 assert.deepEqual(matchingOrder(layout, oneMatch), [layout.publicationOrder[7]]);
 assert.deepEqual(matchingOrder(layout, new Set()), [], 'a filter that matches nothing has nothing to step through');
-// A record revealed past the filters can be stepped away from, and it keeps its
-// own place in the gallery rather than being pushed to either end.
+// A record revealed past the filters is already in the set the index hands over,
+// so stepping reaches it, and it keeps its own place in the gallery rather than
+// being pushed to either end.
 const outsider = layout.publicationOrder.find((id) => !newarkIds.has(id));
-const revealedOrder = matchingOrder(layout, newarkIds, outsider);
+const shown = new Set([...newarkIds, outsider]);
+const revealedOrder = matchingOrder(layout, shown);
 assert.ok(revealedOrder.includes(outsider), 'a revealed record is reachable');
-assert.deepEqual(revealedOrder, layout.publicationOrder.filter((id) => newarkIds.has(id) || id === outsider));
-assert.equal(matchingOrder(layout, new Set(), outsider).length, 1, 'a revealed record survives a zero-result filter');
+assert.deepEqual(revealedOrder, layout.publicationOrder.filter((id) => shown.has(id)));
+assert.equal(matchingOrder(layout, new Set([outsider])).length, 1, 'a revealed record survives a zero-result filter');
 
 // ---------------------------------------------------------------------------
 // Date wording and record counts
@@ -278,9 +280,18 @@ const newState = () => createHallState({ stopsForStory: (id) => stopsById.get(id
   store.nextStop();
   const secondStop = stopsById.get('story-006')[1];
   assert.equal(store.getState().stopId, secondStop);
+  const inStory = store.getState();
   store.openClipping({ webPath: 'images/evidence/x.jpg', citation: 'A citation.' });
-  assert.equal(store.getState().mode, 'clipping');
+  const inClipping = store.getState();
+  assert.equal(inClipping.mode, 'clipping');
+  assert.equal(inClipping.overlay.webPath, 'images/evidence/x.jpg', 'the overlay carries what the inspector shows');
+  // The hall opens and closes the inspector from these transitions alone, so a
+  // clipping can never be on screen without the state saying so.
+  assert.equal(clippingTransition(inClipping, inStory), 'open');
+  assert.equal(clippingTransition(inClipping, inClipping), null, 'a stop change inside inspection opens nothing again');
   store.close();
+  assert.equal(clippingTransition(store.getState(), inClipping), 'close');
+  assert.equal(clippingTransition(inStory, inStory), null, 'states without inspection ask for nothing');
   assert.equal(store.getState().mode, 'story', 'closing the clipping returns to the story');
   assert.equal(store.getState().stopId, secondStop, 'and to the stop it was opened from');
   store.close();
@@ -362,14 +373,10 @@ const newState = () => createHallState({ stopsForStory: (id) => stopsById.get(id
   assert.equal(store.getState().view, 'timeline', 'an unknown view is ignored');
   store.setTier('simplified');
   store.setMotion('reduced');
-  store.setLoading(true);
-  store.setRendererFailed(true);
   const s = store.getState();
   assert.equal(s.tier, 'simplified');
   assert.equal(s.motion, 'reduced');
-  assert.equal(s.loading, true);
-  assert.equal(s.rendererFailed, true);
-  assert.equal(s.view, 'timeline', 'a renderer failure does not discard the requested view');
+  assert.equal(s.view, 'timeline', 'a quality change does not discard the requested view');
   store.close();
   assert.equal(store.getState().mode, 'browse', 'closing from browse is harmless');
 }
@@ -529,9 +536,5 @@ assert.equal(links.format({ view: 'hall', selectedPublicationId: 9, storyId: fir
 
 // The deep-link list guide.js reads must include the two new parameters.
 assert.deepEqual(links.DEEP_LINK_PARAMS, ['pub', 'story', 'stop', 'decade', 'ghost', 'nogl', 'twin']);
-for (const search of ['?pub=9', '?story=story-001', '?stop=evt-001', '?decade=1930s', '?ghost=1', '?nogl=1', '?twin=1']) {
-  assert.equal(links.hasDeepLink(search), true, `${search} is a deep link`);
-}
-assert.equal(links.hasDeepLink('?view=hall'), false, 'a bare view is not a deep link');
 
 console.log(`PASS: ${layout.slots.length} publication slots, ${layout.bookSlots.length} volumes, ${layout.sections.length} sections, no overlaps, date wording, state machine, filtered stepping, quality tiers, and every route`);

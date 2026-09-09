@@ -19,6 +19,8 @@ export const RAIL_CONFIG = {
   wheelMetresPerUnit: 0.02,
   maxWheelStep: 2.4,
   dragThreshold: 8,
+  // How long after the last wheel tick the gesture counts as over.
+  wheelIdleMs: 180,
   margin: 1.14,
   minFocusDistance: 1.5,
   maxFocusDistance: 4.4
@@ -139,8 +141,12 @@ export function createRail(camera, layout, options = {}) {
   // level view is aimed into the band of canvas the controls leave clear.
   const BROWSE_REFERENCE = 6;
 
+  function clampZ(z) {
+    return Math.min(maxZ, Math.max(minZ, z));
+  }
+
   function poseForZ(z) {
-    const clamped = Math.min(maxZ, Math.max(minZ, z));
+    const clamped = clampZ(z);
     return {
       position: new THREE.Vector3(0, config.eyeHeight, clamped),
       look: new THREE.Vector3(
@@ -178,7 +184,7 @@ export function createRail(camera, layout, options = {}) {
       to = null;
       settled = true;
       apply();
-      onSettle();
+      onSettle({ live: false });
       return;
     }
     // New intent cancels whatever was in flight; nothing queues up.
@@ -197,7 +203,7 @@ export function createRail(camera, layout, options = {}) {
     position.lerpVectors(from.position, to.position, e);
     look.lerpVectors(from.look, to.look, e);
     apply();
-    if (k >= 1) { from = null; to = null; settled = true; onSettle(); return false; }
+    if (k >= 1) { from = null; to = null; settled = true; onSettle({ live: false }); return false; }
     return true;
   }
 
@@ -218,7 +224,9 @@ export function createRail(camera, layout, options = {}) {
     to = null;
     settled = true;
     apply();
-    onSettle();
+    // Still under the hand: the gesture has not ended, so whatever a settle
+    // costs to say out loud waits for settleNow.
+    onSettle({ live: true });
   }
 
   function sectionAt(z) {
@@ -239,6 +247,9 @@ export function createRail(camera, layout, options = {}) {
     poseForSlot,
     poseForBook,
     poseForZ,
+    clampZ,
+    /** The gesture ended. Said once, not once per pointer move or wheel tick. */
+    settleNow() { onSettle({ live: false }); },
     focusSlot(slot, opts) { moveTo(poseForSlot(slot), { ms: RAIL_CONFIG.focusMs, ...opts }); },
     focusBook(book, opts) { moveTo(poseForBook(book), { ms: RAIL_CONFIG.focusMs, ...opts }); },
     entrancePose,
@@ -247,6 +258,8 @@ export function createRail(camera, layout, options = {}) {
     /** A resize changes the fit, so the current focus pose is recomputed. */
     refocus(pose) { if (pose) moveTo(pose, { immediate: true }); },
     get z() { return position.z; },
+    /** Where the rail is heading: the end of a move in flight, or where it stands. */
+    get targetZ() { return to ? to.position.z : position.z; },
     get atEntrance() { return atEntrance; },
     get up() { return up.clone(); },
     get settled() { return settled; },
@@ -275,6 +288,8 @@ export function attachRailInput(canvas, rail, options = {}) {
   let scrollMode = false;
   let down = null;
   let dragging = false;
+  let wheelIdle = null;
+  signal?.addEventListener('abort', () => { if (wheelIdle) clearTimeout(wheelIdle); }, { once: true });
 
   const listen = (target, type, handler, opts = {}) =>
     target.addEventListener(type, handler, { ...opts, signal });
@@ -302,10 +317,15 @@ export function attachRailInput(canvas, rail, options = {}) {
     down.y = event.clientY;
   });
 
-  const release = () => { down = null; };
+  // The end of a drag is the moment the visitor has arrived somewhere, so it is
+  // the moment the hall says where that is.
+  const release = () => {
+    if (dragging) rail.settleNow();
+    down = null;
+  };
   listen(canvas, 'pointerup', release);
-  listen(canvas, 'pointercancel', () => { down = null; dragging = false; });
-  listen(canvas, 'pointerleave', () => { down = null; });
+  listen(canvas, 'pointercancel', () => { release(); dragging = false; });
+  listen(canvas, 'pointerleave', release);
 
   listen(canvas, 'click', (event) => {
     if (!isEnabled()) return;
@@ -316,12 +336,19 @@ export function attachRailInput(canvas, rail, options = {}) {
 
   listen(canvas, 'wheel', (event) => {
     if (!scrollMode || !isEnabled()) return;   // The page scrolls by default.
-    event.preventDefault();
     const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? 400 : 1;
     const raw = (event.deltaY * unit) * RAIL_CONFIG.wheelMetresPerUnit;
     const step = Math.max(-RAIL_CONFIG.maxWheelStep, Math.min(RAIL_CONFIG.maxWheelStep, raw));
-    // At either end the page keeps its own scrolling rather than trapping it.
-    rail.travelBy(step);
+    const from = rail.targetZ;
+    const next = rail.clampZ(from + step);
+    // At either end of the hall the gesture belongs to the page. Taking it here
+    // would leave a visitor at the last decade unable to scroll off the hall.
+    if (next === from) return;
+    event.preventDefault();
+    rail.travelBy(next - from);
+    // One settle for the whole gesture, when the wheel stops.
+    if (wheelIdle) clearTimeout(wheelIdle);
+    wheelIdle = setTimeout(() => { wheelIdle = null; rail.settleNow(); }, RAIL_CONFIG.wheelIdleMs);
   }, { passive: false });
 
   listen(window, 'blur', () => { if (scrollMode) { scrollMode = false; onScrollModeEnd(); } });

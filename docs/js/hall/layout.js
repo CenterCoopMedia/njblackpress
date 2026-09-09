@@ -373,19 +373,17 @@ export function buildHallLayout(model, options = {}) {
 
 /**
  * The order Previous and Next publication step through: the gallery's own
- * order, narrowed to what the filters match, plus one record revealed past the
- * filters so a visitor who arrived on it can still step away from it. Filtering
- * never reorders the gallery, so this is a subsequence of it, never a new sort.
+ * order, narrowed to what the filters match. The index already puts a record
+ * revealed past the filters into that match set, so a visitor who arrived on
+ * one can still step away from it. Filtering never reorders the gallery, so
+ * this is a subsequence of it, never a new sort.
  *
  * @param {object} layout built layout
- * @param {Set<number>|null} matches publication ids the filters match, or null
- * @param {?number} revealedId a record shown despite the filters
+ * @param {Set<number>|null} matches publication ids on show, or null for all
  * @returns {Array<number>} publication ids in gallery order
  */
-export function matchingOrder(layout, matches, revealedId = null) {
-  return layout.publicationOrder.filter(
-    (id) => !matches || matches.has(id) || id === revealedId
-  );
+export function matchingOrder(layout, matches) {
+  return layout.publicationOrder.filter((id) => !matches || matches.has(id));
 }
 
 function compareIds(a, b) {
