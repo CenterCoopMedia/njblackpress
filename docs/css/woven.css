@@ -637,3 +637,33 @@ body.twin-primary #woven-stage { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .woven-btn::after { transition: none; }
 }
+
+/* ---------- flat timeline: the dock offset and its own controls ----------
+   The publication index and record panel dock at the width the hall's
+   stylesheet sets on #woven-stage (--exhibit-dock). The year rail, the DOM
+   labels, and the era markers are flat-timeline-only, so their offset against
+   that same dock lives here rather than in the hall's stylesheet. These rules
+   used to live in woven-exhibit.css, removed with the 3D exhibit view; the
+   hall never showed the dock-based #woven-legend column, so that stays
+   hidden here too. */
+#woven-stage #woven-legend { display: none; }
+#woven-stage #woven-yearrail { right: var(--exhibit-dock, 0px); }
+#woven-stage #woven-labels, #woven-stage #woven-eras { right: var(--exhibit-dock, 0px); }
+#woven-stage.woven-legend-hidden #woven-canvas { width: 100%; }
+#woven-stage.woven-legend-hidden #woven-chrome,
+#woven-stage.woven-legend-hidden #woven-yearrail { right: 0; }
+#woven-stage.woven-legend-hidden #woven-browser { display: none; }
+
+/* The flat timeline's own zoom controls. Hidden outside timeline mode and
+   while a tour or the gaps roll takes the dock's place. */
+#woven-timeline-controls { position: absolute; left: 1rem; bottom: 2.5rem; display: flex; gap: 0.4rem; z-index: 5; }
+#woven-timeline-controls button { min-width: 44px; min-height: 44px; font-size: 1.2rem; }
+#woven-stage:not([data-view="timeline"]) #woven-timeline-controls,
+#woven-stage.woven-legend-hidden #woven-timeline-controls { display: none; }
+
+@media (max-width: 899px) {
+  #woven-stage.woven-legend-hidden { height: 720px; }
+  #woven-stage.woven-legend-hidden #woven-canvas { height: 100%; }
+  #woven-stage.woven-legend-hidden #woven-yearrail { bottom: 0; }
+  #woven-timeline-controls { top: calc(var(--plot-height) - 80px); bottom: auto; }
+}

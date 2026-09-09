@@ -19,7 +19,7 @@ Pages serves the committed results from `docs/`.
 | Stories | `docs/story.html?id=` | Stories, events, and publications |
 | Eras | `docs/era.html?decade=` | Events, stories, and publications |
 | Map | `docs/map.html` | Generated map publication data |
-| Historical notes | `docs/historical-notes.html` | Publications, stories, events, and evidence |
+| Historical notes | `docs/historical-notes.html` | Publications, stories, events, evidence, and generated wall copies |
 | Public wiki | `docs/wiki/` | Pre-rendered publication and browse pages |
 | Portable wiki | `okf/` | Markdown pages with YAML frontmatter |
 
@@ -37,9 +37,14 @@ The main site scripts live in `docs/js/`:
 - `map.js`: Map rendering and decade filtering.
 - `site-nav.js`: Shared navigation.
 
-Historical notes uses ES modules under `docs/js/woven/`. Its modules separate data,
-layout, rendering, labels, selection, story tours, evidence panels, fallback
-behavior, and first-visit guidance. Three.js is vendored under `docs/vendor/`.
+Historical notes uses ES modules under `docs/js/woven/` and `docs/js/hall/`.
+`docs/js/woven/` holds data loading, the flat timeline's rendering and
+labels, the shared record panel, story tours, the text-archive fallback, and
+first-visit guidance. `docs/js/hall/` holds the history hall: deterministic
+layout, the one authoritative state machine, the room and its sheets and
+painted surfaces, asset ownership, camera and input handling, the reading
+tables and their DOM reader, and route parsing. Three.js is vendored under
+`docs/vendor/`.
 
 ## Styling
 
@@ -50,8 +55,11 @@ stylesheet to `docs/css/tailwind.css`.
 Custom styles live in:
 
 - `docs/css/styles.css`: Shared site styles.
-- `docs/css/woven.css`: Historical notes layout and rendering interface.
+- `docs/css/woven.css`: Historical notes page chrome and the flat timeline's
+  rendering interface.
 - `docs/css/woven-guide.css`: Historical notes guidance and progressive controls.
+- `docs/css/hall.css`: The history hall's controls, story reader, and mobile
+  reading sheet.
 
 ## Data flow
 
@@ -72,6 +80,10 @@ Hand-curated featured records
 Rights manifest + local evidence corpus
   -> data/make_clippings.py
   -> docs/data/clippings.json and docs/images/evidence/
+
+Public clippings
+  -> data/make_wall_copies.py
+  -> docs/data/wall-copies.json and docs/images/evidence/wall/
 
 Editorial events and stories
   -> data/build_site_events_stories.py

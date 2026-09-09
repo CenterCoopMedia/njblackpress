@@ -171,6 +171,15 @@ try:
               page.evaluate('window.__woven.app.exhibit.rail.settled') and after - before <= 2)
         shot(page, 'desktop-entrance')
 
+        check('Full text archive starts collapsed',
+              not page.locator('#woven-list-disclosure').evaluate('(el) => el.open'))
+
+        # The bare ?pub= route changed: it now opens the hall, not the flat timeline.
+        ready(page, f'?pub={SHEET_ID}')
+        check('A bare ?pub= link opens the hall',
+              page.evaluate('window.__woven.app.exhibit.active'))
+        expect(page.locator('#woven-panel-title')).to_have_text(SHEET_NAME)
+
         ready(page, '?decade=1970s')
         check('A decade link opens that section',
               page.evaluate('window.__woven.app.exhibit.rail.section.id') == '1970s')
@@ -184,6 +193,31 @@ try:
         check('Selecting a sheet has a shareable link', f'pub={SHEET_ID}' in page.url)
         page.wait_for_timeout(500)
         shot(page, 'desktop-sheet-focus')
+
+        # ---- record close restores the index and keyboard focus ---------------
+        ready(page)
+        chosen = page.locator('#woven-publications button').first
+        pub_id = int(chosen.get_attribute('data-pub'))
+        pub_title = chosen.locator('strong').inner_text()
+        chosen.click()
+        expect(page.locator('#woven-panel-title')).to_have_text(pub_title)
+        check('Index is inert while its record dock is open',
+              page.locator('#woven-browser').evaluate('(el) => el.inert'))
+        page.locator('#woven-panel .p-close').click()
+        page.wait_for_timeout(200)
+        check('Record close restores the index',
+              not page.locator('#woven-browser').evaluate('(el) => el.inert'))
+        check('Record close returns keyboard focus to the publication',
+              page.evaluate('document.activeElement.dataset.pub') == str(pub_id))
+        page.locator('#woven-publications button').first.click()
+        page.locator('#woven-find-title').click()
+        expect(page.locator('#woven-search')).to_be_focused()
+        check('Find a title restores search focus from an open record', True)
+
+        ready(page)
+        page.locator('#woven-browser a[href="#woven-twin"]').click()
+        check('Read-as-list link opens the complete archive',
+              page.locator('#woven-list-disclosure').evaluate('(el) => el.open'))
 
         ready(page, '?story=story-001')
         expect(page.locator('#hall-reader')).to_be_visible()
@@ -619,6 +653,54 @@ try:
         page.wait_for_timeout(400)
         check('The hall comes back', page.evaluate('window.__woven.app.exhibit.active'))
 
+        # ---- the flat timeline keeps its own filters, panel, keyboard, and picking --
+        page.locator('[data-woven-view="timeline"]').click()
+        page.wait_for_timeout(600)
+        page.locator('[data-era="C"]').click()
+        page.wait_for_timeout(300)
+        era_count = page.evaluate('window.__woven.model.bands.find((b) => b.key === "C").count')
+        check('The flat timeline retains era browsing',
+              page.locator('#woven-publications button').count() == era_count)
+        page.locator('#woven-publications button').first.click()
+        expect(page.locator('#woven-panel')).to_be_visible()
+        check('The flat timeline opens a record panel', True)
+        page.locator('#woven-panel .p-close').click()
+        page.locator('[data-era="all"]').click()
+        page.wait_for_timeout(300)
+
+        page.mouse.move(1, 1)
+        page.evaluate('window.scrollTo(0, 120)')
+        page.wait_for_timeout(200)
+        point = page.evaluate("""() => {
+          const label = document.querySelector('#woven-labels .thread-label');
+          const r = label.getBoundingClientRect();
+          return { x: r.left - 10, y: r.top + r.height / 2 };
+        }""")
+        page.mouse.click(point['x'], point['y'])
+        page.wait_for_timeout(300)
+        check('The flat timeline can be picked after the page scrolls',
+              page.locator('#woven-panel').is_visible())
+        page.locator('#woven-panel .p-close').click()
+
+        page.locator('#woven-canvas').focus()
+        page.keyboard.press('ArrowDown')
+        page.keyboard.press('Enter')
+        expect(page.locator('#woven-panel')).to_be_visible()
+        check('The flat timeline can select a record with the keyboard', True)
+        page.keyboard.press('Escape')
+        page.wait_for_timeout(200)
+
+        before = page.evaluate('window.__woven.renderer.info.render.frame')
+        page.mouse.move(1, 1)
+        page.wait_for_timeout(400)
+        after = page.evaluate('window.__woven.renderer.info.render.frame')
+        check('An idle flat timeline does not continuously render', after - before <= 2)
+
+        page.locator('[data-woven-view="hall"]').click()
+        page.wait_for_timeout(400)
+        check('Switching back to the hall leaves it active',
+              page.evaluate('window.__woven.app.exhibit.active'))
+
         # Forced text still loads no drawing code at all, on either flag, and it
         # opens the record or story the link asked for.
         for flag, target in [('?nogl=1&pub=38', 'pub'), ('?twin=1&story=story-006', 'story')]:
@@ -820,6 +902,32 @@ try:
         }'''))
         shot(small, 'mobile-reading-sheet')
         mobile.close()
+
+        # The other three reference viewports get the general checks: no
+        # horizontal overflow, the index below the drawing, and a record that
+        # opens and closes. 375x812 above already covers the portrait entrance,
+        # the tap-to-focus, and the full-height reading sheet in detail.
+        for width, height in [(390, 844), (320, 740), (768, 1024)]:
+            other = browser.new_context(viewport={'width': width, 'height': height},
+                                        device_scale_factor=1, is_mobile=True, has_touch=True,
+                                        reduced_motion='reduce')
+            op = other.new_page()
+            op.on('pageerror', lambda error: errors.append(str(error)))
+            ready(op)
+            check(f'{width}px has no horizontal page overflow',
+                  op.evaluate('document.documentElement.scrollWidth <= innerWidth'))
+            check(f'{width}px keeps the index below the drawing', op.evaluate('''() => {
+              const canvas = document.getElementById('woven-canvas').getBoundingClientRect();
+              const index = document.getElementById('woven-browser').getBoundingClientRect();
+              return index.top >= canvas.bottom - 2;
+            }'''))
+            shot(op, f'mobile-{width}', True)
+            op.locator('#woven-publications button').first.click()
+            expect(op.locator('#woven-panel')).to_be_visible()
+            op.locator('#woven-panel .p-close').click()
+            check(f'{width}px record can close', op.locator('#woven-panel').is_hidden())
+            other.close()
+
         browser.close()
     check('No uncaught browser errors', not errors)
 except Exception:

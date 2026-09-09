@@ -86,7 +86,7 @@ async function boot() {
 async function startScene(model, flat = false) {
   const THREE = await import('three');
   const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
-  const { buildWeft, buildWarp, createStateTexture, createClothMaterial, pluckUniforms, weaveUniform, minHalfWidth } = await import('./cloth.js');
+  const { buildWeft, createStateTexture, createClothMaterial, weaveUniform, minHalfWidth } = await import('./cloth.js');
   const { buildLoom, buildLights } = await import('./loom.js');
   const { buildKnots } = await import('./knots.js');
   const { createPicker } = await import('./picking.js');
@@ -123,15 +123,6 @@ async function startScene(model, flat = false) {
   weftSolid.name = 'weft-solid';
   weftGhost.name = 'weft-ghost';
   scene.add(weftSolid, weftGhost);
-
-  const warpFull = new THREE.Mesh(buildWarp(model, 1, 1), createClothMaterial(stateTex, { depthWrite: false }));
-  const warpCoarse = new THREE.Mesh(buildWarp(model, 4, 4), createClothMaterial(stateTex, { depthWrite: false }));
-  warpFull.material.uniforms.uGhostAlpha.value = 0.55;
-  warpCoarse.material.uniforms.uGhostAlpha.value = 0.55;
-  warpFull.renderOrder = 1;
-  warpCoarse.renderOrder = 1;
-  warpFull.visible = false;
-  // The decade grid provides scale; the publication bars have no crossing texture.
 
   const knots = buildKnots(model);
   knots.meshes.forEach((m) => scene.add(m));
@@ -191,7 +182,7 @@ async function startScene(model, flat = false) {
 
   const three = {
     THREE, renderer, scene, camera, controls, stateTex, knots, panel,
-    weftSolid, weftGhost, warpFull, warpCoarse, materials: [matSolid, matGhost],
+    weftSolid, weftGhost, materials: [matSolid, matGhost],
     stage, canvas
   };
   app.three = three;
@@ -326,18 +317,12 @@ async function startScene(model, flat = false) {
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     app.exhibit?.resize();
-    // The fine warp is 40k triangles of detail nobody can see on a 375px screen,
-    // so a narrow window gets the coarse warp. A window can be narrowed after
-    // load, so this is decided on every resize, not once. Once the frame timer
-    // has asked for the coarse warp it stays coarse.
-    app.forceCoarseWarp = coarseFromDegrade || window.innerWidth < 700;
     app.needsRender = true;
     // Names, era markers, and the year rail are DOM in canvas pixels, so they
     // are re-placed against the new rect before the next frame is drawn.
     if (app.labels) app.labels.update();
   }
   app.resize = resize;
-  let coarseFromDegrade = false;
   let canvasCssHeight = 1;
 
   // How thin a thread is allowed to get. At the default framing a real thread is
@@ -455,9 +440,6 @@ async function startScene(model, flat = false) {
     if (key !== hoverTarget) {
       hoverTarget = key;
       state.hoverId = h && h.kind === 'thread' ? h.thread.id : null;
-      // Only a mouse plucks on hover. A finger has no hover, and a stylus
-      // sweeping the cloth would set every thread ringing at once.
-      if (h && h.kind === 'thread' && canHover.matches && !pending.touch) pluck(h.thread);
       writeHover(h);
       syncTwin(state);
       app.needsRender = true;
@@ -542,44 +524,6 @@ async function startScene(model, flat = false) {
     parent.appendChild(s);
   }
 
-  // ---- pluck ----
-  // Picking a thread plucks it. The wave runs in the vertex shader off three
-  // uniforms, so a pluck adds no draw call and no CPU work per frame beyond
-  // writing its age. Under reduced motion the amplitude is zero and the
-  // highlight lands at once instead.
-  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
-  let pluckStart = -1;
-
-  function applyMotionPref() {
-    pluckUniforms.uPluckAmp.value = reduceMotion.matches ? 0 : 1;
-    if (reduceMotion.matches) { pluckStart = -1; pluckUniforms.uPluckAge.value = 99; }
-  }
-  applyMotionPref();
-  reduceMotion.addEventListener('change', () => { applyMotionPref(); app.needsRender = true; });
-
-  function pluck(t) {
-    if (!t || reduceMotion.matches) return;
-    const slots = model.layout.slots;
-    const above = slots[t.globalIndex - 1];
-    const below = slots[t.globalIndex + 1];
-    pluckUniforms.uPluckIdx.value.set(
-      t.threadIndex,
-      above ? above.threadIndex : -1,
-      below ? below.threadIndex : -1
-    );
-    // The ripple is sized in screen pixels, so a thread moves about ten pixels
-    // whatever the zoom. It is capped, because at the widest view ten pixels of
-    // travel would be three decades of rows.
-    const rect = canvas.getBoundingClientRect();
-    const dist = camera.position.distanceTo(controls.target);
-    const worldPerPx = (2 * Math.tan((camera.fov * Math.PI) / 360) * dist) / Math.max(1, rect.height);
-    pluckUniforms.uPluckScale.value = Math.max(0.5, Math.min(2.5, worldPerPx * 50));
-    pluckUniforms.uPluckAge.value = 0;
-    pluckStart = performance.now();
-    app.needsRender = true;
-  }
-  app.pluck = pluck;
-
   // ---- the growing edge ----
   // The cloth draws itself in as the reader moves right. Panning left never
   // undoes it: once a year has been seen it stays drawn for the session. Nothing
@@ -630,9 +574,6 @@ async function startScene(model, flat = false) {
       minY: t.y - 1.2, maxY: t.y + 1.2
     };
     await app.easeTo([(box.minX + box.maxX) / 2, t.y], fitDistance(box, 0.2, camera), 700);
-    // Struck after the camera lands, so the ripple is sized for the zoom the
-    // reader ends up at rather than the one they started from.
-    pluck(t);
     if (!opts.silent && !opts.fromTwin) panel.openPublication(t, model, { playStory: (s) => app.playStory(s) });
     announce(`${t.name}. ${t.city || 'city unrecorded'}. ${t.yearFounded ?? 'founding year unrecorded'}.`);
   };
@@ -1075,14 +1016,8 @@ async function startScene(model, flat = false) {
     if (median > 22) badWindows++; else badWindows = 0;
     if (badWindows >= 2 && degradeStep < 4) { badWindows = 0; degrade(++degradeStep); }
   }
-  // This ladder governs the flat timeline. The hall draws its own frames and
-  // runs its own two named tiers over them, because it degrades different
-  // things and offers the visitor a control of their own; feeding both from one
-  // sampler would have the two ladders fighting over the pixel ratio.
-  app.sampleFrameInterval = sample;
 
   function degrade(stepN) {
-    if (stepN === 1) { coarseFromDegrade = true; app.forceCoarseWarp = true; }
     if (stepN === 2) { renderer.setPixelRatio(1.25); }
     if (stepN === 3) app.noDecoration = true;
     if (stepN === 4) {
@@ -1103,21 +1038,9 @@ async function startScene(model, flat = false) {
     if (app.exhibit?.active) { app.exhibit.frame(now); last = now; return; }
     processHover();
     if (app.tween) app.tween();
-    if (pluckStart >= 0) {
-      const age = (now - pluckStart) / 1000;
-      pluckUniforms.uPluckAge.value = age;
-      if (age > 1.25) { pluckStart = -1; pluckUniforms.uPluckAge.value = 99; }
-      app.needsRender = true;
-    }
     updateWeave(now);
     const dist = camera.position.distanceTo(controls.target);
     updateThreadFloor(dist);
-    const wantFull = dist < 45 && !app.forceCoarseWarp;
-    if (warpFull.visible !== wantFull) {
-      warpFull.visible = wantFull;
-      warpCoarse.visible = !wantFull;
-      app.needsRender = true;
-    }
     const damping = controls.update();
     const active = damping || app.tween || (app.tour && app.tour.isAnimating) ||
       (app.ghost && app.ghost.isPlaying);

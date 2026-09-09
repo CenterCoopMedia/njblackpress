@@ -40,18 +40,24 @@ Main pages:
 - `docs/story.html`: Sourced narrative selected with `?id=`.
 - `docs/era.html`: Historical era selected with `?decade=`.
 - `docs/map.html`: Publication map and decade filter.
-- `docs/historical-notes.html`: Guided stories, a plain publication timeline,
-  an era index, and a publication browser. Lines use recorded publication spans.
-  Distinguish unknown dates from active status. Three.js renders a 3D timeline
-  of separate publication bars. A flat timeline provides precise date comparison.
-  Canvas 2D supports browsers without WebGL.
-  `?nogl=1` opens the complete text archive. See `WOVEN_REVIEW.md` for checks.
-  `docs/woven.html` forwards old links and preserves their query and fragment.
+- `docs/historical-notes.html`: Guided stories, an era index, and a
+  publication browser, shown through the history hall by default. Three.js
+  renders each publication as a framed sheet in founding order, with a
+  section per decade and a section for unrecorded dates. Each guided story is
+  a bound volume on a reading table, read through a DOM reader. A flat
+  timeline gives the precise view for comparing exact dates. Canvas 2D
+  supports browsers without WebGL, and the full text archive is the last
+  fallback. `?nogl=1` opens the text archive without fetching Three.js. See
+  `WOVEN_REVIEW.md` for what each view shows, its routes in full, and the
+  checks to run. `docs/woven.html` forwards old links and preserves their
+  query and fragment.
 - `docs/wiki/`: Generated public HTML wiki.
 
 The scripts in `docs/js/` support the main site. Most older scripts use the
-IIFE pattern. Historical notes uses ES modules under `docs/js/woven/` and vendored Three.js
-files under `docs/vendor/`.
+IIFE pattern. Historical notes uses ES modules under `docs/js/woven/` (data,
+the flat timeline, the record panel, fallbacks) and `docs/js/hall/` (the
+history hall: layout, state, the room, the sheets, the reading tables and
+their reader, routing), plus vendored Three.js files under `docs/vendor/`.
 
 `docs/js/site-nav.js` defines the shared site navigation. Update its regression
 check when you change the global navigation.
@@ -147,6 +153,7 @@ python3 data/test_woven_layout.py
 python3 data/test_woven_usability.py
 python3 data/test_hall_assets.py
 node scripts/test-hall.mjs
+python3 scripts/review_hall.py
 python3 scripts/generate_okf_wiki.py --check
 ```
 
