@@ -622,3 +622,13 @@ Chromium with SwiftShader.
 | 3 Full collection | All sheets and volumes; bounded resources; filters; history; fallbacks; adaptive tiers | 4, 5, 9, 10 | Opus |
 | 4 Verification | Browser review matrix; obsolete code removal including issue 72; docs; record of untested checks | 11, 12, 13 | Sonnet |
 | 5 Review | Independent review of the diff; fixes | 13 | Opus review |
+
+### Decisions during the build
+
+6. Entrance: the first settled view stands in the 1880s bay and looks down
+   the hall. The 1880s sheets are on both walls at reading distance, the
+   first reading table is ahead, and the hall recedes toward the 2020s.
+7. Sheets without a cleared clipping show the first sentence of the record's
+   `historicalNotes` field as an exhibit label under the name, city, and
+   dates. A record with no notes shows only the "No copies cleared for
+   display here" line.
