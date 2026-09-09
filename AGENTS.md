@@ -13,7 +13,10 @@ The project has no backend, database server, authentication, or write API.
 ## Important paths
 
 - `docs/`: Published site and browser data.
-- `docs/js/woven/`: Historical notes ES modules.
+- `docs/js/woven/`: Historical notes ES modules (data, the flat timeline,
+  the record panel, fallbacks).
+- `docs/js/hall/`: The history hall's ES modules (layout, state, the room,
+  the reading tables and their reader, routing).
 - `data/`: Pipeline data, research inputs, builders, and checks.
 - `data/research/source-catalog.json`: Evidence provenance.
 - `data/research/rights/rights-manifest.json`: Evidence rights decisions.
@@ -51,6 +54,9 @@ python3 data/test_navigation.py
 python3 data/test_wiki_publications.py
 python3 data/test_woven_layout.py
 python3 data/test_woven_usability.py
+python3 data/test_hall_assets.py
+node scripts/test-hall.mjs
+python3 scripts/review_hall.py
 python3 scripts/generate_okf_wiki.py --check
 ```
 

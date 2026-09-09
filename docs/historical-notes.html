@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/woven.css">
     <link rel="stylesheet" href="css/woven-guide.css">
-    <link rel="stylesheet" href="css/woven-exhibit.css">
+    <link rel="stylesheet" href="css/hall.css">
 
     <script type="importmap">
     {
@@ -117,19 +117,19 @@
         <nav class="woven-era-index" aria-label="Browse by founding era">
             <p>Follow a founding era</p>
             <div id="woven-era-choices" role="group" aria-label="Founding era"></div>
-            <p id="woven-renderer-note" hidden>The flat timeline is available. The 3D timeline needs WebGL.</p>
+            <p id="woven-renderer-note" hidden>The flat timeline is available. The history hall needs WebGL.</p>
         </nav>
 
         <div id="woven-stage" data-view="loading">
-            <p id="woven-canvas-help" class="sr-only">In the 3D timeline, use up and down to choose a publication, Enter to read it, and left and right to turn. In the flat timeline, drag to move and scroll or pinch to zoom. The publication index and Read as a list offer the same records.</p>
+            <p id="woven-canvas-help" class="sr-only">In the history hall, use the decade controls, the publication index, and the guided stories to move and to open a record; the drawing itself needs no keyboard. With the focus inside the hall controls, left and right move between publications and shift with them moves between decades. Inside an open story, left and right turn the pages. In the flat timeline, use up and down to choose a publication, Enter to read it, and drag or scroll to move. The publication index and Read as a list offer the same records.</p>
             <canvas id="woven-canvas" role="application" tabindex="0"
                     aria-label="Interactive timeline of New Jersey Black publications"
                     aria-describedby="woven-canvas-help"></canvas>
 
             <div id="woven-chrome">
             <div id="woven-topbar">
-                <div class="woven-view-switch" role="group" aria-label="Visualization view">
-                    <button type="button" class="woven-btn" data-woven-view="3d" aria-pressed="true">3D timeline</button>
+                <div class="woven-view-switch" role="group" aria-label="Choose a view">
+                    <button type="button" class="woven-btn" data-woven-view="hall" aria-pressed="true">History hall</button>
                     <button type="button" class="woven-btn" data-woven-view="timeline" aria-pressed="false">Flat timeline</button>
                 </div>
                 <button type="button" class="woven-btn woven-primary-btn" id="btn-tours" aria-expanded="false" aria-controls="woven-tourpicker">Guided stories</button>
@@ -160,13 +160,22 @@
             </div>
 
             <div id="woven-loading" role="status">Loading the archive…</div>
-            <div id="woven-exhibit-axis" aria-label="Publication years"></div>
-            <div id="woven-turn-controls" role="group" aria-label="Turn the 3D timeline" hidden>
-                <button type="button" class="woven-btn" data-woven-turn="-1" aria-label="Turn timeline left">←</button>
-                <button type="button" class="woven-btn" data-woven-turn="1" aria-label="Turn timeline right">→</button>
-                <button type="button" class="woven-btn" id="woven-motion" aria-pressed="false">Play motion</button>
+            <div id="woven-hall-controls" role="group" aria-label="Move through the history hall" hidden>
+                <div class="bar-scroll">
+                    <button type="button" class="woven-btn" id="hall-previous-pub">Previous publication</button>
+                    <button type="button" class="woven-btn" id="hall-next-pub">Next publication</button>
+                    <button type="button" class="woven-btn" id="hall-previous-decade">Previous decade</button>
+                    <label class="hall-decade-field" for="hall-decade">Decade
+                        <select id="hall-decade"></select>
+                    </label>
+                    <button type="button" class="woven-btn" id="hall-next-decade">Next decade</button>
+                    <button type="button" class="woven-btn" id="hall-entrance">Back to entrance</button>
+                    <button type="button" class="woven-btn" id="hall-scroll-toggle" aria-pressed="false">Use scroll to move</button>
+                    <button type="button" class="woven-btn" id="hall-tier" aria-pressed="false" aria-describedby="hall-tier-note">Simplified view</button>
+                </div>
+                <p id="hall-where" role="status"></p>
+                <p id="hall-hint">Choose a publication, open a guided story, or move to another decade. Arranged by founding date; gallery spacing varies. <span id="hall-tier-note">Standard view. Full detail.</span></p>
             </div>
-            <p id="woven-exhibit-caption">Select a publication to read its history and sources.</p>
             <aside id="woven-browser" aria-labelledby="woven-browser-title">
                 <div class="woven-browser-head">
                     <h2 id="woven-browser-title">Publications</h2>
@@ -203,7 +212,7 @@
             </div>
             <div id="woven-yearrail" aria-hidden="true"></div>
             <div id="woven-tip" role="presentation" hidden></div>
-            <div id="woven-notice" role="status" hidden></div>
+            <div id="woven-notice" role="status" hidden><span id="hall-notice-text"></span><button type="button" class="woven-btn" id="hall-notice-action" hidden></button></div>
             <div id="woven-empty-hint" role="status" hidden>Nothing here — zoom out or reset the view</div>
 
             <div id="woven-overlay" hidden></div>
@@ -255,6 +264,9 @@
 
             <aside id="woven-panel" role="dialog" aria-modal="false" aria-labelledby="woven-panel-title" hidden></aside>
 
+            <section id="hall-reader" role="region" aria-labelledby="hall-reader-title" hidden></section>
+            <div id="hall-inspector" hidden></div>
+
             <div id="woven-tourbar" hidden></div>
         </div>
         </div>
@@ -265,11 +277,11 @@
         </section>
 
         <section class="woven-reading-key" aria-labelledby="woven-key-title">
-            <h2 id="woven-key-title">Reading the timeline</h2>
+            <h2 id="woven-key-title">Reading the hall and the timeline</h2>
             <div class="woven-key-lines">
-                <p><span class="woven-key-thread" aria-hidden="true"></span><strong>One bar, one publication.</strong> Color groups founding eras. Bar width reflects the number of evidence records.</p>
+                <p><span class="woven-key-thread" aria-hidden="true"></span><strong>One sheet, one publication.</strong> In the history hall every publication hangs as a framed sheet with its name, city, and recorded dates, in order of founding date. Guided stories rest as bound volumes on the reading tables. In the flat timeline the same publication is one bar, and bar width reflects the number of evidence records.</p>
                 <p><span class="woven-key-thread is-dashed" aria-hidden="true"></span><strong>Gaps in the evidence.</strong> Faint bars identify titles without evidence cleared for display here. Copies may survive elsewhere.</p>
-                <p><span class="woven-key-thread is-open" aria-hidden="true"></span><strong>Dates need care.</strong> Bars show recorded publication spans. Dashed bars mark unrecorded end dates. Arrows mark active titles. Undated titles appear in a separate group.</p>
+                <p><span class="woven-key-thread is-open" aria-hidden="true"></span><strong>Dates need care.</strong> Both views show recorded publication spans. The hall arranges titles by founding date, so its spacing is not a measure of time; the flat timeline is the view for comparing dates precisely. Undated titles have their own section at the end of the hall.</p>
             </div>
             <p class="woven-key-note">An unrecorded end date does not establish that a title survived to the present. Colors group titles by founding era; gray marks undated titles.</p>
         </section>

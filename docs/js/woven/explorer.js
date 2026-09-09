@@ -1,4 +1,4 @@
-import { matchesFilters, publicationYears, threadColor } from './exhibit-geometry.js';
+import { matchesFilters, publicationYears, eraColor } from './records.js';
 import { announce } from './twin.js';
 
 // A real, keyboard-accessible index alongside either drawing. No second fetch,
@@ -20,13 +20,20 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
   cities.forEach((name) => city.add(new Option(name, name)));
   let current = all;
   let era = 'all';
+  // A record reached by a deep link or by search can sit outside the filters the
+  // visitor set. It is revealed for as long as it is selected, and the filters
+  // are left exactly as they were: changing someone's filters without being
+  // asked is worse than showing one extra row.
+  let revealed = null;
+  // Whether the last render actually had to show it past the filters.
+  let revealedOutside = false;
   const eraChoices = document.getElementById('woven-era-choices');
   for (const band of [{ key: 'all', count: all.length }, ...model.bands.filter((b) => b.count)]) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'woven-era-choice';
     button.dataset.era = band.key;
-    if (band.threads?.length) button.style.setProperty('--thread-color', threadColor(band.threads[0]));
+    if (band.threads?.length) button.style.setProperty('--thread-color', eraColor(band.threads[0]));
     button.append(band.key === 'all' ? 'All years' : band.from == null ? 'Undated' : `${band.from}–${band.to}`);
     const count = document.createElement('span');
     count.textContent = band.count;
@@ -43,7 +50,12 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
 
   function render() {
     const selection = { city: city.value, evidence: evidence.value };
-    current = all.filter((thread) => matchesFilters(thread, selection) && (era === 'all' || thread.bandKey === era));
+    const matched = all.filter((thread) => matchesFilters(thread, selection) && (era === 'all' || thread.bandKey === era));
+    const filtered = era !== 'all' || !!city.value || evidence.value !== 'all';
+    const outside = revealed != null && filtered && !matched.some((thread) => thread.id === revealed);
+    revealedOutside = outside;
+    const extra = outside ? all.filter((thread) => thread.id === revealed) : [];
+    current = extra.length ? [...extra, ...matched] : matched;
     const fragment = document.createDocumentFragment();
     current.forEach((thread) => {
       const item = document.createElement('li');
@@ -51,24 +63,38 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
       button.type = 'button';
       button.className = 'woven-publication';
       button.dataset.pub = String(thread.id);
-      button.style.setProperty('--thread-color', threadColor(thread));
+      button.style.setProperty('--thread-color', eraColor(thread));
       button.setAttribute('aria-pressed', String(app.state.selectedId === thread.id));
+      if (extra.length && thread.id === revealed) button.dataset.revealed = 'true';
       const name = document.createElement('strong');
       name.textContent = thread.name;
       const meta = document.createElement('span');
       meta.textContent = `${thread.city || 'City unrecorded'} · ${publicationYears(thread)}`;
       button.append(name, meta);
+      if (extra.length && thread.id === revealed) {
+        const note = document.createElement('span');
+        note.className = 'woven-revealed-note';
+        note.textContent = 'Outside the current filters. Shown because it was opened directly.';
+        button.append(note);
+      }
       item.append(button);
       fragment.append(item);
     });
     list.replaceChildren(fragment);
-    status.textContent = `${current.length} of ${all.length} publications`;
+    // The count is the count of matches. A revealed record is named separately
+    // rather than folded into a number that would then be wrong.
+    status.textContent = matched.length === 0 && filtered
+      ? `No publications match these filters. ${all.length} publications in the archive.`
+      : `${matched.length} of ${all.length} publications`;
     const empty = document.getElementById('woven-browser-empty');
-    empty.hidden = current.length !== 0;
+    empty.hidden = matched.length !== 0;
     eraChoices.querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.era === era)));
-    const filtered = era !== 'all' || !!city.value || evidence.value !== 'all';
     clear.disabled = !filtered;
-    filter(filtered ? new Set(current.map((thread) => thread.id)) : null);
+    filter(filtered ? new Set(current.map((thread) => thread.id)) : null, {
+      matchCount: matched.length,
+      filtered,
+      revealed: outside ? revealed : null
+    });
   }
 
   function changed() {
@@ -78,7 +104,20 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
   }
   city.addEventListener('change', changed);
   evidence.addEventListener('change', changed);
-  clear.addEventListener('click', () => { era = 'all'; city.value = ''; evidence.value = 'all'; changed(); focusEra(era); });
+  // The index's own button also takes the visitor back to the whole span, which
+  // is what "clear" means there. Cleared from a notice beside a record they just
+  // opened, the view stays where it is; being thrown back to 1880 would be a
+  // second surprise on top of the first.
+  function clearFilters(options) {
+    era = 'all';
+    city.value = '';
+    evidence.value = 'all';
+    changed();
+    if (!options || options.move !== false) focusEra(era);
+  }
+  // The handler takes an options object, so the click event must not be passed
+  // to it as one.
+  clear.addEventListener('click', () => clearFilters());
   list.addEventListener('click', (event) => {
     const button = event.target.closest('[data-pub]');
     if (button) open(Number(button.dataset.pub));
@@ -115,6 +154,7 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
     era = 'all';
     city.value = '';
     evidence.value = 'all';
+    revealed = null;
     render();
   }
   render();
@@ -143,5 +183,31 @@ export function mountExplorer(app, { highlight, filter, focusEra, open }) {
     document.getElementById('btn-tours').click();
   });
   document.getElementById('woven-stories').hidden = !model.tours.some((tour) => tour.stops.length);
-  return { reset, reveal: (id) => { if (!current.some((t) => t.id === id)) reset(); }, scope: (key) => { era = key; changed(); }, era: () => era, syncSelected, records: () => current, dispose: () => { panelObserver.disconnect(); document.getElementById('woven-stories').hidden = true; } };
+  return {
+    reset,
+    clearFilters,
+    /**
+     * Show a record the filters exclude, without touching the filters. Returns
+     * true when the record really was outside them, so the caller can explain
+     * the mismatch and offer to clear them.
+     */
+    reveal: (id) => {
+      // Opening the same revealed record again is still outside the filters:
+      // its row keeps the note that says so, so the notice has to stay too.
+      if (id === revealed && revealedOutside) return true;
+      if (current.some((thread) => thread.id === id)) {
+        // Already listed. A record revealed earlier is no longer needed.
+        if (revealed != null && revealed !== id) { revealed = null; render(); }
+        return false;
+      }
+      revealed = id;
+      render();
+      return revealedOutside;
+    },
+    scope: (key) => { era = key; changed(); },
+    era: () => era,
+    syncSelected,
+    records: () => current,
+    dispose: () => { panelObserver.disconnect(); document.getElementById('woven-stories').hidden = true; }
+  };
 }

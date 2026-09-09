@@ -56,15 +56,17 @@ async function boot() {
 
   console.info('[historical notes] counts', model.counts);
 
-  if (params.get('nogl') === '1') {
+  // Both forced-text flags are decided here, before anything that could import
+  // Three.js. ?twin=1 is a request for the text archive, not for the text
+  // archive beside a drawing nobody asked to download.
+  if (params.get('nogl') === '1' || params.get('twin') === '1') {
     const { startFallback } = await import('./fallback.js');
-    const api = startFallback(model, 'nogl');
+    const api = startFallback(model, params.get('nogl') === '1' ? 'nogl' : 'twin');
     app.select = (id) => api.open(id);
     app.playStory = (id) => api.playStory(id);
     app.showGhost = () => api.showGhost();
     return;
   }
-  if (params.get('twin') === '1') document.getElementById('woven-twin').classList.add('twin-visible');
 
   try {
     await startScene(model, !hasWebGL());
@@ -84,7 +86,7 @@ async function boot() {
 async function startScene(model, flat = false) {
   const THREE = await import('three');
   const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
-  const { buildWeft, buildWarp, createStateTexture, createClothMaterial, pluckUniforms, weaveUniform, minHalfWidth } = await import('./cloth.js');
+  const { buildWeft, createStateTexture, createClothMaterial, weaveUniform, minHalfWidth } = await import('./cloth.js');
   const { buildLoom, buildLights } = await import('./loom.js');
   const { buildKnots } = await import('./knots.js');
   const { createPicker } = await import('./picking.js');
@@ -121,15 +123,6 @@ async function startScene(model, flat = false) {
   weftSolid.name = 'weft-solid';
   weftGhost.name = 'weft-ghost';
   scene.add(weftSolid, weftGhost);
-
-  const warpFull = new THREE.Mesh(buildWarp(model, 1, 1), createClothMaterial(stateTex, { depthWrite: false }));
-  const warpCoarse = new THREE.Mesh(buildWarp(model, 4, 4), createClothMaterial(stateTex, { depthWrite: false }));
-  warpFull.material.uniforms.uGhostAlpha.value = 0.55;
-  warpCoarse.material.uniforms.uGhostAlpha.value = 0.55;
-  warpFull.renderOrder = 1;
-  warpCoarse.renderOrder = 1;
-  warpFull.visible = false;
-  // The decade grid provides scale; the publication bars have no crossing texture.
 
   const knots = buildKnots(model);
   knots.meshes.forEach((m) => scene.add(m));
@@ -189,7 +182,7 @@ async function startScene(model, flat = false) {
 
   const three = {
     THREE, renderer, scene, camera, controls, stateTex, knots, panel,
-    weftSolid, weftGhost, warpFull, warpCoarse, materials: [matSolid, matGhost],
+    weftSolid, weftGhost, materials: [matSolid, matGhost],
     stage, canvas
   };
   app.three = three;
@@ -324,18 +317,12 @@ async function startScene(model, flat = false) {
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     app.exhibit?.resize();
-    // The fine warp is 40k triangles of detail nobody can see on a 375px screen,
-    // so a narrow window gets the coarse warp. A window can be narrowed after
-    // load, so this is decided on every resize, not once. Once the frame timer
-    // has asked for the coarse warp it stays coarse.
-    app.forceCoarseWarp = coarseFromDegrade || window.innerWidth < 700;
     app.needsRender = true;
     // Names, era markers, and the year rail are DOM in canvas pixels, so they
     // are re-placed against the new rect before the next frame is drawn.
     if (app.labels) app.labels.update();
   }
   app.resize = resize;
-  let coarseFromDegrade = false;
   let canvasCssHeight = 1;
 
   // How thin a thread is allowed to get. At the default framing a real thread is
@@ -453,9 +440,6 @@ async function startScene(model, flat = false) {
     if (key !== hoverTarget) {
       hoverTarget = key;
       state.hoverId = h && h.kind === 'thread' ? h.thread.id : null;
-      // Only a mouse plucks on hover. A finger has no hover, and a stylus
-      // sweeping the cloth would set every thread ringing at once.
-      if (h && h.kind === 'thread' && canHover.matches && !pending.touch) pluck(h.thread);
       writeHover(h);
       syncTwin(state);
       app.needsRender = true;
@@ -540,44 +524,6 @@ async function startScene(model, flat = false) {
     parent.appendChild(s);
   }
 
-  // ---- pluck ----
-  // Picking a thread plucks it. The wave runs in the vertex shader off three
-  // uniforms, so a pluck adds no draw call and no CPU work per frame beyond
-  // writing its age. Under reduced motion the amplitude is zero and the
-  // highlight lands at once instead.
-  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
-  let pluckStart = -1;
-
-  function applyMotionPref() {
-    pluckUniforms.uPluckAmp.value = reduceMotion.matches ? 0 : 1;
-    if (reduceMotion.matches) { pluckStart = -1; pluckUniforms.uPluckAge.value = 99; }
-  }
-  applyMotionPref();
-  reduceMotion.addEventListener('change', () => { applyMotionPref(); app.needsRender = true; });
-
-  function pluck(t) {
-    if (!t || reduceMotion.matches) return;
-    const slots = model.layout.slots;
-    const above = slots[t.globalIndex - 1];
-    const below = slots[t.globalIndex + 1];
-    pluckUniforms.uPluckIdx.value.set(
-      t.threadIndex,
-      above ? above.threadIndex : -1,
-      below ? below.threadIndex : -1
-    );
-    // The ripple is sized in screen pixels, so a thread moves about ten pixels
-    // whatever the zoom. It is capped, because at the widest view ten pixels of
-    // travel would be three decades of rows.
-    const rect = canvas.getBoundingClientRect();
-    const dist = camera.position.distanceTo(controls.target);
-    const worldPerPx = (2 * Math.tan((camera.fov * Math.PI) / 360) * dist) / Math.max(1, rect.height);
-    pluckUniforms.uPluckScale.value = Math.max(0.5, Math.min(2.5, worldPerPx * 50));
-    pluckUniforms.uPluckAge.value = 0;
-    pluckStart = performance.now();
-    app.needsRender = true;
-  }
-  app.pluck = pluck;
-
   // ---- the growing edge ----
   // The cloth draws itself in as the reader moves right. Panning left never
   // undoes it: once a year has been seen it stays drawn for the session. Nothing
@@ -628,9 +574,6 @@ async function startScene(model, flat = false) {
       minY: t.y - 1.2, maxY: t.y + 1.2
     };
     await app.easeTo([(box.minX + box.maxX) / 2, t.y], fitDistance(box, 0.2, camera), 700);
-    // Struck after the camera lands, so the ripple is sized for the zoom the
-    // reader ends up at rather than the one they started from.
-    pluck(t);
     if (!opts.silent && !opts.fromTwin) panel.openPublication(t, model, { playStory: (s) => app.playStory(s) });
     announce(`${t.name}. ${t.city || 'city unrecorded'}. ${t.yearFounded ?? 'founding year unrecorded'}.`);
   };
@@ -1073,14 +1016,16 @@ async function startScene(model, flat = false) {
     if (median > 22) badWindows++; else badWindows = 0;
     if (badWindows >= 2 && degradeStep < 4) { badWindows = 0; degrade(++degradeStep); }
   }
+
   function degrade(stepN) {
-    if (stepN === 1) { coarseFromDegrade = true; app.forceCoarseWarp = true; }
     if (stepN === 2) { renderer.setPixelRatio(1.25); }
     if (stepN === 3) app.noDecoration = true;
     if (stepN === 4) {
       const n = document.getElementById('woven-notice');
       n.hidden = false;
-      n.textContent = 'Simplified the drawing to keep it smooth.';
+      // The notice holds a message and an optional action, so the message goes
+      // in its own element rather than replacing both.
+      (n.querySelector('#hall-notice-text') || n).textContent = 'Simplified the drawing to keep it smooth.';
       announceAssertive('Simplified the drawing to keep it smooth.');
     }
   }
@@ -1093,21 +1038,9 @@ async function startScene(model, flat = false) {
     if (app.exhibit?.active) { app.exhibit.frame(now); last = now; return; }
     processHover();
     if (app.tween) app.tween();
-    if (pluckStart >= 0) {
-      const age = (now - pluckStart) / 1000;
-      pluckUniforms.uPluckAge.value = age;
-      if (age > 1.25) { pluckStart = -1; pluckUniforms.uPluckAge.value = 99; }
-      app.needsRender = true;
-    }
     updateWeave(now);
     const dist = camera.position.distanceTo(controls.target);
     updateThreadFloor(dist);
-    const wantFull = dist < 45 && !app.forceCoarseWarp;
-    if (warpFull.visible !== wantFull) {
-      warpFull.visible = wantFull;
-      warpCoarse.visible = !wantFull;
-      app.needsRender = true;
-    }
     const damping = controls.update();
     const active = damping || app.tween || (app.tour && app.tour.isAnimating) ||
       (app.ghost && app.ghost.isPlaying);
@@ -1128,27 +1061,105 @@ async function startScene(model, flat = false) {
   }
   requestAnimationFrame(frame);
 
+  // A lost context ends the drawing. It never ends the reading: the record, the
+  // story, and the stop are read off the hall's own state before it is disposed
+  // and opened again in the text archive. The event is deliberately not
+  // cancelled, because cancelling it is how a page asks the browser to restore
+  // the context, and a restored context would arrive at a scene that has
+  // already been disposed. A retry is the visitor's to make, by reloading.
   canvas.addEventListener('webglcontextlost', async () => {
     app.contextLost = true;
+    const hall = app.exhibit?.state?.getState?.() || {};
+    const filters = activeFilterLabels();
+    const carry = {
+      pubId: hall.selectedPublicationId ?? state.selectedId ?? null,
+      storyId: hall.storyId ?? state.tourId ?? null,
+      stopId: hall.stopId ?? null,
+      filters
+    };
     app.exhibit?.dispose();
     if (app.tour && app.tour.isPlaying) app.tour.exit();
     const { startFallback } = await import('./fallback.js');
-    const api = startFallback(model, 'lost');
+    const api = startFallback(model, 'lost', carry);
     app.select = (id) => api.open(id);
-    app.playStory = (id) => api.playStory(id);
+    app.playStory = (id, stop) => api.playStory(id, stop);
     app.showGhost = () => api.showGhost();
-    if (state.selectedId != null) api.open(state.selectedId);
   });
 
   window.__woven = { app, renderer, scene, camera, model, controls, THREE, pick };
-  const { mountExhibit } = await import('./exhibit.js');
-  app.exhibit = mountExhibit(app, params);
+  try {
+    const { mountHall } = await import('../hall/hall.js');
+    app.exhibit = await mountHall(app, params);
+  } catch (error) {
+    // The hall failed to open. The page keeps its index, its search, its
+    // records, and its flat timeline; only the hall is unavailable, and the
+    // page says so rather than sitting on a loading line.
+    console.error('Historical notes: the history hall could not open', error);
+    app.exhibit = null;
+    // The publication index, the filters, and the story shelf are mounted by
+    // the hall module, so a hall that never loaded would leave the page without
+    // them. They belong to the page, not to the drawing, so they are mounted
+    // here instead, wired to the flat timeline exactly as they would have been.
+    if (!app.explorer) {
+      try {
+        const { mountExplorer } = await import('./explorer.js');
+        app.explorer = mountExplorer(app, {
+          highlight: () => {},
+          filter: (ids) => app.setExploreMatches?.(ids),
+          focusEra: (key) => app.focusBand(key),
+          open: (id) => app.select(id, {})
+        });
+      } catch (indexError) {
+        console.error('Historical notes: the publication index could not open', indexError);
+      }
+    }
+    stage.dataset.view = 'timeline';
+    document.getElementById('woven-loading').hidden = true;
+    document.getElementById('woven-hall-controls').hidden = true;
+    for (const button of document.querySelectorAll('[data-woven-view]')) {
+      const isHall = button.dataset.wovenView === 'hall';
+      button.disabled = isHall;
+      button.setAttribute('aria-pressed', String(!isHall));
+    }
+    const rendererNote = document.getElementById('woven-renderer-note');
+    if (rendererNote) {
+      rendererNote.hidden = false;
+      rendererNote.textContent = 'The history hall could not open on this device. The flat timeline is available.';
+    }
+    const notice = document.getElementById('woven-notice');
+    if (notice) {
+      notice.hidden = false;
+      (notice.querySelector('#hall-notice-text') || notice).textContent =
+        'The history hall could not open, so the flat timeline is showing instead.';
+    }
+    applyView(defaultFraming());
+  }
 
   // ---- deep links ----
-  if (params.get('pub')) app.select(+params.get('pub'), {});
-  if (params.get('story')) app.playStory(params.get('story'));
+  // The hall reads the route itself, through one adapter, so these are for the
+  // flat timeline and for a hall that could not open.
+  if (!app.exhibit?.active) {
+    if (params.get('pub')) app.select(+params.get('pub'), {});
+    if (params.get('story')) app.playStory(params.get('story'));
+  }
   if (params.get('ghost') === '1') app.showGhost();
 
+}
+
+// The filter selections in the visitor's own words, read from the controls
+// while they are still on the page. A promoted text archive lists everything,
+// so the least it can do is say which filters it is not applying.
+function activeFilterLabels() {
+  const labels = [];
+  const city = document.getElementById('woven-city');
+  const evidence = document.getElementById('woven-evidence');
+  const era = document.querySelector('#woven-era-choices [aria-pressed="true"]');
+  if (city && city.value) labels.push(`city ${city.value}`);
+  if (evidence && evidence.value !== 'all') {
+    labels.push((evidence.selectedOptions[0] && evidence.selectedOptions[0].textContent) || evidence.value);
+  }
+  if (era && era.dataset.era !== 'all') labels.push(era.textContent.replace(/\s+/g, ' ').trim());
+  return labels;
 }
 
 function hideCards() {

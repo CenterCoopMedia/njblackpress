@@ -132,7 +132,7 @@ function tourHTML(tour) {
       <h5>Publications in this story</h5>
       <ul>${tour.threadIds.map((id) => `<li><a class="link-thread" href="?pub=${id}">${esc(model.byId.get(id).name)}</a></li>`).join('')}</ul>
       <h5>Stops</h5>
-      <ol>${tour.stops.map((s) => `<li><span class="e-date">${esc(s.dateLabel)}</span> ${esc(s.event.title)}<br><span class="e-desc">${esc(s.event.description)}</span>${s.clipping ? `<br><cite>${esc(s.clipping.citation)}</cite>` : ''}</li>`).join('')}</ol>
+      <ol>${tour.stops.map((s) => `<li id="tour-${esc(tour.id)}-stop-${esc(s.eventId)}"><span class="e-date">${esc(s.dateLabel)}</span> ${esc(s.event.title)}<br><span class="e-desc">${esc(s.event.description)}</span>${s.clipping ? `<br><cite>${esc(s.clipping.citation)}</cite>` : ''}</li>`).join('')}</ol>
     </details>
   </li>`;
 }
