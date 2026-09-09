@@ -12,8 +12,8 @@ section 15 addendum).
 - [x] Feasibility review of the draft against the code.
 - [x] Merge Joe's revised spec and record decisions in section 15.
 - [x] Create milestone 7 and issues 74 to 78. Assign 58 and 72 to it.
-- [ ] Package 1 (#74): data audit, layout, state, links, wall copies, pure tests.
-- [ ] Package 2 (#75): vertical slice. Screenshots reviewed by Joe.
+- [x] Package 1 (#74): data audit, layout, state, links, wall copies, pure tests. Commit 7b41d57.
+- [x] Package 2 (#75): vertical slice. Commit 5569588. Joe approved the screenshots.
 - [ ] Package 3 (#76): full collection, resources, filters, history, fallbacks.
 - [ ] Package 4 (#77): browser review matrix, obsolete code removal, docs.
 - [ ] Package 5: independent review of the diff. Fix findings.

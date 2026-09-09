@@ -632,3 +632,10 @@ Chromium with SwiftShader.
    `historicalNotes` field as an exhibit label under the name, city, and
    dates. A record with no notes shows only the "No copies cleared for
    display here" line.
+8. Slice approved on September 9, 2026 from screenshots (commit 5569588).
+   The full build continues.
+9. Reading pose: look straight down at the open spread. The spread fills the
+   stage while a story is open. The lectern angle is replaced.
+10. Portrait entrance: the camera turns toward the left wall so the first sheet
+    fills the view and the hall recedes to the right. A tap on a sheet still
+    focuses it.
