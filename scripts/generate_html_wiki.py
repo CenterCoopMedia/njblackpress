@@ -40,12 +40,11 @@ from generate_okf_wiki import (  # noqa: E402  (local sibling module)
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "docs" / "wiki"
-# Canonical/Open Graph base. Defaults to the production domain the static files
-# are actually served from (see CLAUDE.md → Deployment). All in-page navigation
-# and asset references are relative, so the wiki works under any path prefix;
-# only the absolute canonical/OG/sitemap URLs use this base. Override with
-# --base-url for a different host (e.g. the GitHub Pages mirror).
-SITE_BASE = "https://centerforcooperativemedia.org/njblackpress/"
+# Canonical/Open Graph base. Defaults to GitHub Pages, the live host
+# (see CLAUDE.md → Deployment). All in-page navigation and asset references
+# are relative, so the wiki works under any path prefix; only the absolute
+# canonical/OG/sitemap URLs use this base. Override with --base-url.
+SITE_BASE = "https://centercoopmedia.github.io/njblackpress/"
 
 GROUP_LABEL = {"cities": "City", "decades": "Decade", "formats": "Format", "mediums": "Medium"}
 
