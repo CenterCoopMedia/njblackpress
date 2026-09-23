@@ -50,6 +50,7 @@ Common focused checks:
 ```bash
 python3 data/test_site_data.py
 python3 data/test_site_metadata.py
+python3 data/test_design_system.py
 python3 data/test_source_catalog.py
 python3 data/test_map.py
 python3 data/test_navigation.py

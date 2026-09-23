@@ -24,7 +24,7 @@
       else heading.removeAttribute('aria-sort');
       const arrow = button.querySelector('[aria-hidden="true"]');
       arrow.textContent = active ? (direction === 'ascending' ? '↑' : '↓') : '↕';
-      arrow.classList.toggle('text-accent', active);
+      arrow.classList.toggle('text-stain', active);
       arrow.classList.toggle('opacity-40', !active);
     });
   };

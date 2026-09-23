@@ -297,11 +297,11 @@
 
         // Update active state
         document.querySelectorAll('.timeline-decade-btn').forEach(b => {
-             b.classList.remove('border-accent', 'text-accent');
-             b.classList.add('border-walnut-600', 'text-paper-300');
+             b.classList.remove('border-stain', 'text-stain');
+             b.classList.add('border-walnut-600', 'text-linen-300');
         });
-        btn.classList.remove('border-walnut-600', 'text-paper-300');
-        btn.classList.add('border-accent', 'text-accent');
+        btn.classList.remove('border-walnut-600', 'text-linen-300');
+        btn.classList.add('border-stain', 'text-stain');
       });
     });
   }
@@ -328,7 +328,7 @@
             <div>
                 <h4 class="font-display text-3xl text-linen-50 font-bold mb-1">${resolved.label}</h4>
             </div>
-            <div class="text-right font-mono text-xs text-paper-300">
+            <div class="text-right font-mono text-xs text-linen-300">
                 <p><span class="text-linen-50 text-lg">${resolved.activeCount}</span> active</p>
                 <p><span class="text-linen-50 text-lg">${resolved.foundedCount}</span> founded</p>
             </div>
@@ -336,15 +336,15 @@
 
         ${pubs.length > 0 ? `
           <div>
-            <p class="font-mono text-xs text-paper-300 uppercase tracking-widest mb-3">Publications of record</p>
+            <p class="font-mono text-xs text-linen-300 uppercase tracking-widest mb-3">Publications of record</p>
             <div class="flex flex-wrap gap-2">
               ${pubs.slice(0, 15).map(p => `
-                <span class="px-3 py-1 bg-walnut-700 border border-walnut-600 hover:border-accent hover:text-linen-50 text-paper-300 text-sm transition-colors cursor-default">${escapeHtml(p.name)}</span>
+                <span class="px-3 py-1 bg-walnut-700 border border-walnut-600 hover:border-stain hover:text-linen-50 text-linen-300 text-sm transition-colors cursor-default">${escapeHtml(p.name)}</span>
               `).join('')}
-              ${pubs.length > 15 ? `<span class="px-3 py-1 text-paper-300 text-sm">+${pubs.length - 15} more</span>` : ''}
+              ${pubs.length > 15 ? `<span class="px-3 py-1 text-linen-300 text-sm">+${pubs.length - 15} more</span>` : ''}
             </div>
           </div>
-        ` : '<p class="text-paper-300 font-sans">No publications recorded for this decade.</p>'}
+        ` : '<p class="text-linen-300 font-sans">No publications recorded for this decade.</p>'}
 
         <div class="mt-8 pt-4 border-t border-walnut-600 text-center md:text-left">
             <button onclick="window.njbp.filterByDecade('${resolved.label}')"
@@ -409,15 +409,15 @@
         .map(pid => publications.find(p => p.id === pid))
         .filter(Boolean);
       const relatedHtml = relatedPubs.length > 0
-        ? `<p class="font-mono text-xs text-paper-300 mt-2">Publication: ${relatedPubs.map(p =>
-            `<a href="publication.html?id=${p.id}" class="link-thread hover:text-accent">${escapeHtml(p.name)}</a>`
+        ? `<p class="font-mono text-xs text-linen-300 mt-2">Publication: ${relatedPubs.map(p =>
+            `<a href="publication.html?id=${p.id}" class="link-thread hover:text-stain">${escapeHtml(p.name)}</a>`
           ).join(', ')}</p>`
         : '';
 
       const noteHtml = note
         ? `<details class="mt-2">
              <summary class="font-mono text-[10px] uppercase tracking-widest text-linen-300 cursor-pointer hover:text-stain">Sourcing note</summary>
-             <p class="font-sans text-sm text-paper-300 leading-relaxed mt-2">${escapeHtml(note)}</p>
+             <p class="font-sans text-sm text-linen-300 leading-relaxed mt-2">${escapeHtml(note)}</p>
            </details>`
         : '';
 
@@ -428,7 +428,7 @@
             ${isMedium ? '<span class="font-mono text-[10px] uppercase tracking-widest text-linen-300 border-b border-dashed border-stain pb-0.5">Medium confidence</span>' : ''}
           </div>
           <h5 class="font-display text-lg md:text-xl text-linen-50 font-bold mt-1 mb-1">${escapeHtml(evt.title)}</h5>
-          <p class="font-sans text-sm text-paper-300 leading-relaxed">${escapeHtml(main)}</p>
+          <p class="font-sans text-sm text-linen-300 leading-relaxed">${escapeHtml(main)}</p>
           ${relatedHtml}
           ${noteHtml}
         </li>
@@ -440,7 +440,7 @@
             <div>
                 <h4 class="font-display text-3xl text-linen-50 font-bold mb-1">${decade.label} events</h4>
             </div>
-            <div class="text-right font-mono text-xs text-paper-300">
+            <div class="text-right font-mono text-xs text-linen-300">
                 <p><span class="text-linen-50 text-lg">${decade.eventCount}</span> recorded</p>
                 <p><span class="text-linen-50 text-lg">${decade.mediumConfidenceCount}</span> medium confidence</p>
             </div>
@@ -448,7 +448,7 @@
 
         ${decade.events.length > 0
           ? `<ol class="divide-y divide-walnut-600">${listItems}</ol>`
-          : '<p class="text-paper-300 font-sans">No recorded events for this decade.</p>'}
+          : '<p class="text-linen-300 font-sans">No recorded events for this decade.</p>'}
     `;
 
     details.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });

@@ -62,6 +62,20 @@ their reader, routing), plus vendored Three.js files under `docs/vendor/`.
 `docs/js/site-nav.js` defines the shared site navigation. Update its regression
 check when you change the global navigation.
 
+## Design system
+
+- Colours: `walnut`, `oak`, `linen`, `thread`, and `stain` in
+  `tailwind.config.js`. Do not add Tailwind default colours or raw white.
+  `src/input.css` exposes the same tokens as CSS variables (`--walnut-900`,
+  `--stain`, `--font-display`, `--mono`) for hand-written CSS.
+- Fonts: Libre Franklin for display, DM Sans for text, the system monospace
+  stack for labels. Every page loads the same Google Fonts link.
+- Header and footer: `docs/js/site-nav.js` renders the navigation links and the
+  footer into `<footer data-site-footer>`. Keep the footer outside `<main>`.
+- Focus: `docs/css/styles.css` holds the one `:focus-visible` rule. Do not use
+  `focus:outline-none` or a per-page focus colour.
+- `data/test_design_system.py` enforces these rules.
+
 ## Data sources
 
 - `data/publications.json`: Current publication record.
@@ -160,6 +174,7 @@ Run the focused checks for the changed area. Useful checks include:
 npm run build:css
 python3 data/test_site_data.py
 python3 data/test_site_metadata.py
+python3 data/test_design_system.py
 python3 data/test_source_catalog.py
 python3 data/test_map.py
 python3 data/test_navigation.py

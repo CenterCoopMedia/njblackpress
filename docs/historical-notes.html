@@ -311,17 +311,11 @@
                 <p class="mt-3"><a class="link-thread" href="archive.html">Open the full archive</a> · <a class="link-thread" href="index.html#timeline">Open the decade timeline</a></p>
             </div>
         </noscript>
-
-        <footer class="bg-walnut-900 border-t border-walnut-600 pt-12 pb-10 px-4 md:px-8">
-            <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start gap-4 text-xs font-mono text-linen-300 uppercase tracking-wider">
-                <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
-                <div class="flex gap-6">
-                    <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener noreferrer" class="hover:text-stain">CCM</a>
-                    <a href="https://github.com/CenterCoopMedia" target="_blank" rel="noopener noreferrer" class="hover:text-stain">GitHub</a>
-                </div>
-            </div>
-        </footer>
     </main>
+
+    <footer data-site-footer class="bg-walnut-950 border-t border-walnut-600 py-10 px-4 md:px-8">
+        <p class="max-w-[1400px] mx-auto text-xs font-mono text-linen-300 uppercase tracking-wider">&copy; Center for Cooperative Media, Montclair State University</p>
+    </footer>
 
     <script type="module" src="js/woven/guide.js"></script>
     <script type="module" src="js/woven/main.js"></script>
@@ -345,7 +339,6 @@
                 if (e.key === 'Escape' && !menu.classList.contains('translate-x-full')) setOpen(false);
             });
 
-            document.getElementById('copyright-year').textContent = new Date().getFullYear();
         })();
     </script>
     <script src="js/site-nav.js"></script>

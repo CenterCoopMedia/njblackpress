@@ -35,25 +35,6 @@ module.exports = {
           light: '#f0854a',
           deep: '#8f3a14',
         },
-        // legacy aliases, repointed to warm tokens (issue #48 pass 1)
-        ink: {
-          950: '#0b0806',
-          900: '#14100b',
-          800: '#1e1811',
-          700: '#2b2318',
-          600: '#3b3122',
-        },
-        paper: {
-          50: '#faf7f0',
-          100: '#f3eee2',
-          200: '#e3dccc',
-          300: '#cdc4b1',
-        },
-        accent: {
-          DEFAULT: '#e2662b', // burnt sienna / wood stain
-          hover: '#8f3a14',
-          light: '#f0854a',
-        },
       },
       fontFamily: {
         display: ['Libre Franklin', 'Helvetica Neue', 'Arial', 'sans-serif'],

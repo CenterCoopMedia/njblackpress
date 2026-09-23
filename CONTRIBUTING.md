@@ -88,7 +88,7 @@ Use the smallest checks that cover the changed area:
 
 | Area | Checks |
 |---|---|
-| Shared styles | `npm run build:css` and browser checks |
+| Shared styles | `npm run build:css`, `python3 data/test_design_system.py`, and browser checks |
 | Publications and evidence | `python3 data/test_evidence.py` and `python3 data/test_source_catalog.py`, with the local evidence corpus |
 | Events and stories | `python3 data/test_site_data.py` |
 | Page metadata, icons, sitemap, and external links | `python3 data/test_site_metadata.py` |

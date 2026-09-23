@@ -2,40 +2,11 @@
    reader, and the image inspector.
    No framework, no new fonts, no generated CSS.
 
-   Ownership: every rule the hall needs now lives here, so woven-exhibit.css can
-   be removed without the hall losing its layout. These selectors were copied
-   from woven-exhibit.css and are duplicated there for as long as it survives;
-   the declarations are identical, so the later file simply repeats the earlier
-   one and nothing changes on screen:
-
-     .surface-notes, .surface-notes .surface-cloth, .surface-notes .link-thread,
-     .surface-notes .divider-stitched, .surface-notes .grain-overlay,
-     .surface-notes :is(button, a, input, select, summary):focus-visible,
-     #woven-firstscreen, #woven-intro.woven-masthead, .woven-title-block,
-     .woven-intro-summary, .woven-totals, #woven-stage (and its --exhibit-dock,
-     --plot-height, size, and fullscreen rules), #woven-stage #woven-canvas,
-     #woven-stage #woven-chrome, #woven-topbar and its buttons,
-     .woven-view-switch, #woven-topbar #btn-tours, #woven-more-tools,
-     #woven-loading, #woven-browser and everything inside it
-     (.woven-browser-head, .woven-filter-fields, .woven-browser-count,
-     #woven-browser-status, #woven-clear-filters, #woven-publications,
-     .woven-publication, .woven-index-link, #woven-browser-empty),
-     #woven-stage #woven-panel and its type, .woven-reading-key,
-     .woven-story-shelf, .woven-key-lines, .woven-key-thread, .woven-key-note,
-     .woven-section-heading, #woven-story-list, #woven-list-disclosure,
-     .woven-era-index, #woven-era-choices, .woven-era-choice,
-     #woven-renderer-note, #woven-topbar button:disabled, body.twin-primary
-     rules, and the 1100px, 899px, 480px, reduced-motion, and forced-colors
-     blocks for all of the above.
-
-   Not copied, because they belong to the flat timeline and not to the hall:
-   every #woven-stage[data-view="3d"] rule, #woven-exhibit-axis,
-   #woven-turn-controls, #woven-exhibit-caption, #woven-timeline-controls,
-   #woven-yearrail offsets, #woven-labels, #woven-eras, and the
-   .woven-legend-hidden rules. */
+   Every rule the hall needs lives here. Rules for the flat timeline stay in
+   woven.css. */
 
 /* ---------- the page around the stage ---------- */
-.surface-notes { background: #14100b; }
+.surface-notes { background: var(--walnut-900); }
 .surface-notes .surface-cloth { background-image: none; }
 .surface-notes .link-thread { text-decoration-style: solid; }
 .surface-notes .divider-stitched { border-top-style: solid; }
@@ -173,9 +144,6 @@ body.twin-primary .woven-reading-key { display: none; }
 #woven-stage[data-view="hall"] #woven-yearrail,
 #woven-stage[data-view="hall"] #woven-empty-hint,
 #woven-stage[data-view="hall"] #woven-coach,
-#woven-stage[data-view="hall"] #woven-exhibit-axis,
-#woven-stage[data-view="hall"] #woven-exhibit-caption,
-#woven-stage[data-view="hall"] #woven-turn-controls,
 #woven-stage[data-view="hall"] #woven-timeline-controls { display: none; }
 
 /* A horizontal drag moves along the hall; a vertical drag still scrolls the page. */

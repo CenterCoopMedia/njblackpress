@@ -128,9 +128,9 @@
             const selected = location.id === state.place;
             const marker = window.L.circleMarker([location.latitude, location.longitude], {
                 radius: Math.min(20, 7 + Math.sqrt(location.publications.length) * 1.7),
-                color: selected ? '#f1eadf' : '#f16b7e',
+                color: selected ? '#f3eee2' : '#f0854a',
                 weight: selected ? 3 : 2,
-                fillColor: selected ? '#ca3553' : '#5f1d2b',
+                fillColor: selected ? '#e2662b' : '#8f3a14',
                 fillOpacity: 0.94,
                 className: 'publication-marker',
                 keyboard: true,
