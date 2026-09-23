@@ -66,6 +66,20 @@ def citation(excerpt: dict) -> str:
     return f"{excerpt['title']}, {SOURCE}, LCCN {excerpt['lccn']}, {excerpt['url']}"
 
 
+def record_success(row: dict, excerpt: dict) -> None:
+    """Qualify an earlier failed lookup note, so the catalog does not say both."""
+    sources = row.get("sources", {}).get("chronicling_america")
+    if not sources:
+        return
+    success = f"loc.gov item record {excerpt['lccn']} retrieved {excerpt['fetched']}."
+    notes = sources.get("notes") or ""
+    if success in notes:
+        return
+    if "lookup failed" in notes and "Chronicling America" not in notes:
+        notes = notes.replace("lookup failed", "Chronicling America lookup failed", 1)
+    sources["notes"] = f"{notes.rstrip('.')}; {success}" if notes else success
+
+
 def main(pairs: list[str]) -> None:
     LOC_DIR.mkdir(parents=True, exist_ok=True)
     catalog = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
@@ -100,6 +114,10 @@ def main(pairs: list[str]) -> None:
             sources["searched"] = True
             sources.setdefault("hits", []).append({"kind": "catalog_record", "title": excerpt["title"], "url": excerpt["url"], "localFile": rel})
             row["status"] = "has_keeper"
+        record_success(row, excerpt)
+        entry = next((e for e in manifest["files"] if e["path"] == rel), None)
+        if entry and pub_id not in entry["publicationIds"]:
+            entry["publicationIds"].append(pub_id)
         if rel not in manifest_paths:
             manifest["files"].append({
                 "path": rel,
@@ -112,6 +130,10 @@ def main(pairs: list[str]) -> None:
             })
             manifest_paths.add(rel)
         print(f"{pub_id} {row['name']} <- {lccn} {excerpt['title']} ({excerpt['datesOfPublication']})")
+
+    statuses = [entry["status"] for entry in manifest["files"]]
+    manifest["metadata"]["totalCount"] = len(statuses)
+    manifest["metadata"]["byStatus"] = {status: statuses.count(status) for status in manifest["metadata"]["byStatus"] | dict.fromkeys(statuses)}
 
     counts = catalog["counts"]
     counts["keeper_total"] = sum(len(row["keepers"]) for row in catalog["publications"])

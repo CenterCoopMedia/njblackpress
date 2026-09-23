@@ -402,7 +402,7 @@
               "localFile": "data/research/loc/sn88071369.json"
             }
           ],
-          "notes": "LCCN sn92060412 lookup failed: HTTP Error 403: Forbidden"
+          "notes": "LCCN sn92060412 Chronicling America lookup failed: HTTP Error 403: Forbidden; loc.gov item record sn88071369 retrieved 2026-09-23."
         },
         "other": {
           "searched": true,
@@ -944,7 +944,7 @@
               "localFile": "data/research/loc/sn88071222.json"
             }
           ],
-          "notes": "LCCN sn88071222 lookup failed: HTTP Error 403: Forbidden"
+          "notes": "LCCN sn88071222 Chronicling America lookup failed: HTTP Error 403: Forbidden; loc.gov item record sn88071222 retrieved 2026-09-23."
         },
         "other": {
           "searched": true,
@@ -1161,7 +1161,7 @@
               "localFile": "data/research/loc/sn84026314.json"
             }
           ],
-          "notes": "LCCN 2014254331 lookup failed: HTTP Error 403: Forbidden"
+          "notes": "LCCN 2014254331 Chronicling America lookup failed: HTTP Error 403: Forbidden; loc.gov item record sn84026314 retrieved 2026-09-23."
         },
         "other": {
           "searched": true,
@@ -1852,7 +1852,7 @@
               "localFile": "data/research/loc/sn84025698.json"
             }
           ],
-          "notes": "LCCN sn84025698 lookup failed: HTTP Error 403: Forbidden"
+          "notes": "LCCN sn84025698 Chronicling America lookup failed: HTTP Error 403: Forbidden; loc.gov item record sn84025698 retrieved 2026-09-23."
         },
         "other": {
           "searched": true,
@@ -3098,7 +3098,7 @@
               "localFile": "data/research/loc/sn2001062056.json"
             }
           ],
-          "notes": "LCCN sn2001062056 lookup failed: HTTP Error 403: Forbidden"
+          "notes": "LCCN sn2001062056 Chronicling America lookup failed: HTTP Error 403: Forbidden; loc.gov item record sn2001062056 retrieved 2026-09-23."
         },
         "other": {
           "searched": true,
@@ -3417,7 +3417,7 @@
               "localFile": "data/research/loc/sn88071050.json"
             }
           ],
-          "notes": "LCCN sn88071050 lookup failed: HTTP Error 403: Forbidden"
+          "notes": "LCCN sn88071050 Chronicling America lookup failed: HTTP Error 403: Forbidden; loc.gov item record sn88071050 retrieved 2026-09-23."
         },
         "other": {
           "searched": true,
@@ -3905,7 +3905,7 @@
               "localFile": "data/research/loc/sn84025926.json"
             }
           ],
-          "notes": "LCCN sn84025926 lookup failed: HTTP Error 403: Forbidden"
+          "notes": "LCCN sn84025926 Chronicling America lookup failed: HTTP Error 403: Forbidden; loc.gov item record sn84025926 retrieved 2026-09-23."
         },
         "other": {
           "searched": true,
@@ -4145,7 +4145,7 @@
               "localFile": "data/research/loc/sn89069097.json"
             }
           ],
-          "notes": "LCCN sn89069097 lookup failed: HTTP Error 403: Forbidden"
+          "notes": "LCCN sn89069097 Chronicling America lookup failed: HTTP Error 403: Forbidden; loc.gov item record sn89069097 retrieved 2026-09-23."
         },
         "other": {
           "searched": true,
@@ -4246,7 +4246,7 @@
               "localFile": "data/research/loc/sn87068175.json"
             }
           ],
-          "notes": "LCCN sn87068175 lookup failed: HTTP Error 403: Forbidden"
+          "notes": "LCCN sn87068175 Chronicling America lookup failed: HTTP Error 403: Forbidden; loc.gov item record sn87068175 retrieved 2026-09-23."
         },
         "other": {
           "searched": true,
@@ -4602,7 +4602,7 @@
               "localFile": "data/research/loc/sn88063027.json"
             }
           ],
-          "notes": "LCCN sn88063027 lookup failed: HTTP Error 403: Forbidden"
+          "notes": "LCCN sn88063027 Chronicling America lookup failed: HTTP Error 403: Forbidden; loc.gov item record sn88063027 retrieved 2026-09-23."
         },
         "other": {
           "searched": true,
