@@ -148,11 +148,7 @@
         // Status buttons
         elements.statusBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                elements.statusBtns.forEach(b => b.classList.remove('active', 'text-stain'));
-                elements.statusBtns.forEach(b => b.classList.add('text-linen-300'));
-                btn.classList.add('active', 'text-stain');
-                btn.classList.remove('text-linen-300');
-
+                showStatus(btn.dataset.status);
                 state.filters.status = btn.dataset.status;
                 state.page = 1;
                 applyFilters();
@@ -228,14 +224,7 @@
         }
 
         // Status
-        elements.statusBtns.forEach(btn => {
-            btn.classList.remove('active', 'text-stain');
-            btn.classList.add('text-linen-300');
-            if (btn.dataset.status === state.filters.status) {
-                btn.classList.add('active', 'text-stain');
-                btn.classList.remove('text-linen-300');
-            }
-        });
+        showStatus(state.filters.status);
 
         // Sort
         elements.sortSelect.value = state.sort;
@@ -490,14 +479,7 @@
             elements.decadeFilter.value = 'all';
         } else if (type === 'status') {
             state.filters.status = 'all';
-            elements.statusBtns.forEach(btn => {
-                btn.classList.remove('active', 'text-stain');
-                btn.classList.add('text-linen-300');
-                if (btn.dataset.status === 'all') {
-                    btn.classList.add('active', 'text-stain');
-                    btn.classList.remove('text-linen-300');
-                }
-            });
+            showStatus('all');
         }
 
         state.page = 1;
@@ -517,14 +499,7 @@
         elements.cityFilter.value = 'all';
         elements.decadeFilter.value = 'all';
 
-        elements.statusBtns.forEach(btn => {
-            btn.classList.remove('active', 'text-stain');
-            btn.classList.add('text-linen-300');
-            if (btn.dataset.status === 'all') {
-                btn.classList.add('active', 'text-stain');
-                btn.classList.remove('text-linen-300');
-            }
-        });
+        showStatus('all');
 
         applyFilters();
     }
@@ -610,6 +585,17 @@
         }
 
         requestAnimationFrame(update);
+    }
+
+    // Mark the selected status button by colour and, for assistive technology, by aria-pressed.
+    function showStatus(value) {
+        elements.statusBtns.forEach(btn => {
+            const selected = btn.dataset.status === value;
+            btn.classList.toggle('active', selected);
+            btn.classList.toggle('text-stain', selected);
+            btn.classList.toggle('text-linen-300', !selected);
+            btn.setAttribute('aria-pressed', String(selected));
+        });
     }
 
     function hideLoadingOverlay() {

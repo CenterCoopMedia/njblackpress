@@ -140,6 +140,7 @@ python3 data/test_navigation.py
 python3 data/test_wiki_publications.py
 python3 data/test_woven_layout.py
 python3 data/test_woven_usability.py
+python3 scripts/review_site.py
 python3 scripts/generate_okf_wiki.py --check
 ```
 

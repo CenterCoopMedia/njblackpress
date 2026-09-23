@@ -201,8 +201,8 @@
     const sorted = [...new Set(cities)].filter(Boolean).sort((a, b) => a.localeCompare(b));
 
     elements.cityFilters.innerHTML = `
-      <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" data-filter="city" data-value="all">All</button>
-      ${sorted.map(city => `<button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" data-filter="city" data-value="${escapeHtml(city)}">${escapeHtml(city)}</button>`).join('')}
+      <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" aria-pressed="true" data-filter="city" data-value="all">All</button>
+      ${sorted.map(city => `<button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" aria-pressed="false" data-filter="city" data-value="${escapeHtml(city)}">${escapeHtml(city)}</button>`).join('')}
     `;
 
     // Re-cache and re-bind: these buttons didn't exist when setupEventListeners ran.
@@ -230,6 +230,7 @@
     
     btn.classList.add('active', 'bg-walnut-700', 'text-stain-light', 'border-oak-400');
     btn.classList.remove('text-linen-300', 'border-walnut-600');
+    siblings.forEach(sib => sib.setAttribute('aria-pressed', String(sib === btn)));
 
     // Update state
     state.filters[filterType] = filterValue;

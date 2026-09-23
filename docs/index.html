@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="motion-safe:scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#14100b">
+    <meta name="color-scheme" content="dark">
     <meta name="description" content="An archive of Black journalism in New Jersey since 1880. 136 publications — newspapers, magazines, and digital outlets — spanning 1880 to present.">
     <meta name="keywords" content="New Jersey, Black press, African American newspapers, journalism history, NJ Black media">
     <meta name="author" content="Center for Cooperative Media">
@@ -84,9 +85,9 @@
     <a href="#main-content" class="skip-link">Skip to content</a>
 
     <!-- Loading Overlay -->
-    <div id="loading-overlay" class="fixed inset-0 bg-walnut-950 z-[100] flex flex-col items-center justify-center transition-opacity duration-500">
-        <div class="text-stain text-6xl font-display font-black tracking-wide animate-pulse">NJBP</div>
-        <div class="mt-4 font-mono text-xs uppercase tracking-widest text-linen-300">Loading Archive...</div>
+    <div id="loading-overlay" role="status" class="fixed inset-0 bg-walnut-950 z-[100] flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="text-stain text-6xl font-display font-black tracking-wide animate-pulse" aria-hidden="true">NJBP</div>
+        <div class="mt-4 font-mono text-xs uppercase tracking-widest text-linen-300">Loading archive…</div>
     </div>
 
     <!-- Navigation -->
@@ -125,23 +126,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-walnut-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
-        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-linen-300 hover:text-stain" aria-label="Close menu">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-        <ul class="space-y-8 text-center font-display text-3xl font-medium tracking-wide">
-            <li><a href="#featured" class="inline-block py-2 hover:text-stain transition-colors">Historic</a></li>
-            <li><a href="#contemporary" class="inline-block py-2 hover:text-stain transition-colors">Contemporary</a></li>
-            <li><a href="#timeline" class="inline-block py-2 hover:text-stain transition-colors">Timeline</a></li>
-            <li><a href="archive.html" class="inline-block py-2 hover:text-stain transition-colors">Archive</a></li>
-            <li><a href="story.html" class="inline-block py-2 hover:text-stain transition-colors">Stories</a></li>
-            <li><a href="era.html" class="inline-block py-2 hover:text-stain transition-colors">Eras</a></li>
-            <li><a href="wiki/index.html" class="inline-block py-2 hover:text-stain transition-colors">Wiki</a></li>
-            <li><a href="historical-notes.html" class="inline-block py-2 hover:text-stain transition-colors">Historical notes</a></li>
-            <li><a href="#about" class="inline-block py-2 hover:text-stain transition-colors">About</a></li>
-        </ul>
-    </div>
 
     <main id="main-content">
         <!-- Hero Section -->
@@ -198,7 +182,7 @@
                     <a href="publication.html?id=10" class="bg-walnut-900 p-5 sm:p-8 group hover:bg-walnut-800 transition-colors block">
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-mono text-xs text-stain tracking-widest">1880s</span>
-                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity">01</span>
+                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity" aria-hidden="true">01</span>
                         </div>
                         <h3 class="font-display text-2xl sm:text-3xl font-bold mb-2 leading-tight group-hover:text-stain transition-colors">The Sentinel</h3>
                         <p class="font-mono text-xs text-linen-300 mb-4 uppercase tracking-wider">Trenton, NJ • 1880–1883</p>
@@ -211,7 +195,7 @@
                     <a href="publication.html?id=38" class="bg-walnut-900 p-5 sm:p-8 group hover:bg-walnut-800 transition-colors block">
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-mono text-xs text-stain tracking-widest">1880s</span>
-                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity">02</span>
+                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity" aria-hidden="true">02</span>
                         </div>
                         <h3 class="font-display text-2xl sm:text-3xl font-bold mb-2 leading-tight group-hover:text-stain transition-colors">New Jersey Trumpet</h3>
                         <p class="font-mono text-xs text-linen-300 mb-4 uppercase tracking-wider">Jersey City / Newark • 1887–1897</p>
@@ -224,7 +208,7 @@
                     <a href="publication.html?id=31" class="bg-walnut-900 p-5 sm:p-8 group hover:bg-walnut-800 transition-colors block">
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-mono text-xs text-stain tracking-widest">1900s</span>
-                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity">03</span>
+                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity" aria-hidden="true">03</span>
                         </div>
                         <h3 class="font-display text-2xl sm:text-3xl font-bold mb-2 leading-tight group-hover:text-stain transition-colors">The Echo</h3>
                         <p class="font-mono text-xs text-linen-300 mb-4 uppercase tracking-wider">Long Branch / Red Bank • 1904–1943</p>
@@ -237,7 +221,7 @@
                     <a href="publication.html?id=37" class="bg-walnut-900 p-5 sm:p-8 group hover:bg-walnut-800 transition-colors block">
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-mono text-xs text-stain tracking-widest">1930s</span>
-                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity">04</span>
+                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity" aria-hidden="true">04</span>
                         </div>
                         <h3 class="font-display text-2xl sm:text-3xl font-bold mb-2 leading-tight group-hover:text-stain transition-colors">New Jersey Guardian</h3>
                         <p class="font-mono text-xs text-linen-300 mb-4 uppercase tracking-wider">Newark, NJ • 1934–1942</p>
@@ -250,7 +234,7 @@
                     <a href="publication.html?id=35" class="bg-walnut-900 p-5 sm:p-8 group hover:bg-walnut-800 transition-colors block">
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-mono text-xs text-stain tracking-widest">1940s</span>
-                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity">05</span>
+                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity" aria-hidden="true">05</span>
                         </div>
                         <h3 class="font-display text-2xl sm:text-3xl font-bold mb-2 leading-tight group-hover:text-stain transition-colors">NJ Afro-American</h3>
                         <p class="font-mono text-xs text-linen-300 mb-4 uppercase tracking-wider">Newark, NJ • 1941–1991</p>
@@ -263,7 +247,7 @@
                     <a href="publication.html?id=28" class="bg-walnut-900 p-5 sm:p-8 group hover:bg-walnut-800 transition-colors block">
                         <div class="flex justify-between items-start mb-6">
                             <span class="font-mono text-xs text-stain tracking-widest">1960s</span>
-                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity">06</span>
+                            <span class="font-display text-4xl text-linen-300 opacity-20 group-hover:opacity-40 transition-opacity" aria-hidden="true">06</span>
                         </div>
                         <h3 class="font-display text-2xl sm:text-3xl font-bold mb-2 leading-tight group-hover:text-stain transition-colors">Black Newark</h3>
                         <p class="font-mono text-xs text-linen-300 mb-4 uppercase tracking-wider">Newark, NJ • 1968–1974</p>
@@ -439,8 +423,8 @@
                     </div>
                     
                     <!-- Search Input -->
-                    <div class="w-full md:w-96 relative group">
-                        <input type="search" id="database-search" 
+                    <div role="search" class="w-full md:w-96 relative group">
+                        <input type="search" id="database-search" aria-label="Search publications"
                             class="w-full bg-walnut-800 border-b-2 border-walnut-600 px-4 py-3 text-linen-100 font-sans focus:border-stain focus:bg-walnut-700 transition-all placeholder-thread-400"
                             placeholder="Search keywords, cities, names...">
                         <div class="absolute right-0 bottom-3 text-thread-400 group-focus-within:text-stain">
@@ -456,7 +440,7 @@
                         <div class="flex flex-col gap-3">
                             <span class="font-mono text-xs text-stain uppercase tracking-widest">City</span>
                             <div class="flex flex-wrap gap-2" id="city-filters">
-                                <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" data-filter="city" data-value="all">All</button>
+                                <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" aria-pressed="true" data-filter="city" data-value="all">All</button>
                             </div>
                         </div>
 
@@ -464,9 +448,9 @@
                          <div class="flex flex-col gap-3">
                             <span class="font-mono text-xs text-stain uppercase tracking-widest">Status</span>
                             <div class="flex flex-wrap gap-2" id="status-filters">
-                                <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" data-filter="status" data-value="all">All</button>
-                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" data-filter="status" data-value="active">Active only</button>
-                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" data-filter="status" data-value="defunct">Ceased</button>
+                                <button class="filter-btn active text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" aria-pressed="true" data-filter="status" data-value="all">All</button>
+                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" aria-pressed="false" data-filter="status" data-value="active">Active only</button>
+                                <button class="filter-btn text-sm px-4 py-2 sm:px-3 sm:py-1 border border-walnut-600 hover:border-oak-500 text-linen-300 hover:text-linen-50 transition-colors" aria-pressed="false" data-filter="status" data-value="defunct">Ceased</button>
                             </div>
                         </div>
                     </div>
@@ -528,7 +512,7 @@
                                      class="h-12 w-auto opacity-90 group-hover:opacity-100 transition-opacity">
                             </a>
                             <p class="text-sm text-linen-300">Curated by the Center for Cooperative Media at Montclair State University.</p>
-                            <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-xs font-mono uppercase border-b border-oak-500 pb-1 hover:text-stain hover:border-stain transition-colors">Visit Center &rarr;</a>
+                            <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center min-h-[44px] mt-2 text-xs font-mono uppercase underline decoration-oak-500 underline-offset-4 hover:text-stain hover:decoration-stain transition-colors">Visit the Center &rarr;</a>
                         </div>
                     </div>
 
@@ -549,33 +533,6 @@
 
     <script src="js/timeline.js?v=20260323" defer></script>
     <script src="js/app.js?v=20260323" defer></script>
-    <script>
-         // Simple Mobile Menu Toggle
-         const menuBtn = document.getElementById('mobile-menu-btn');
-         const menuClose = document.getElementById('mobile-menu-close');
-         const menu = document.getElementById('mobile-menu');
-
-         function toggleMenu() {
-             menu.classList.toggle('translate-x-full');
-             document.body.classList.toggle('overflow-hidden');
-             const isOpen = !menu.classList.contains('translate-x-full');
-             menuBtn.setAttribute('aria-expanded', String(isOpen));
-             menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-         }
-
-         menuBtn.addEventListener('click', toggleMenu);
-         menuClose.addEventListener('click', toggleMenu);
-         menu.querySelectorAll('a').forEach(link => link.addEventListener('click', toggleMenu));
-
-         // Loading Overlay
-         window.addEventListener('load', () => {
-             setTimeout(() => {
-                 document.getElementById('loading-overlay').classList.add('opacity-0', 'pointer-events-none');
-             }, 800);
-         });
-
-         // Copyright
-    </script>
     <script src="js/site-nav.js"></script>
 </body>
 </html>

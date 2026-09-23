@@ -25,3 +25,19 @@
 - Review screenshots before showing them to Joe. The first slice had a flat
   sheet where a bound volume was specified; one more agent round fixed it
   and the review with Joe took one question instead of three.
+
+## Site sweep, September 2026
+
+- The public name is Historical notes, and its main view is the history hall.
+  Never write "Woven" in visitor-facing text, social images, alt text, or
+  page metadata. It survives only in internal file names, ids, and code.
+  `data/test_design_system.py` checks the visible text of every page.
+  Regenerate `docs/og-image.png` with `scripts/make_social_assets.py`
+  whenever the navigation changes, because the card is a screenshot.
+- Tailwind `min-height` does nothing on an inline link. Give a small link
+  `inline-flex items-center min-h-[44px]` or `inline-block py-2`, then
+  confirm the size in `scripts/review_site.py`.
+- Chromium in the cloud container does not trust the proxy CA. Route
+  external requests through Python (`urllib`) in Playwright scripts rather
+  than weakening TLS.
+

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="motion-safe:scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#14100b">
+    <meta name="color-scheme" content="dark">
     <meta name="description" content="Browse the complete directory of 136 Black publications in New Jersey from 1880 to present. Filter by city, decade, format, and status.">
 
     <!-- Open Graph -->
@@ -117,9 +118,9 @@
     <a href="#main-content" class="skip-link">Skip to content</a>
 
     <!-- Loading Overlay -->
-    <div id="loading-overlay" class="fixed inset-0 bg-walnut-950 z-[100] flex flex-col items-center justify-center transition-opacity duration-500">
-        <div class="text-stain text-6xl font-display font-black tracking-wide animate-pulse">NJBP</div>
-        <div class="mt-4 font-mono text-xs uppercase tracking-widest text-linen-300">Loading archive...</div>
+    <div id="loading-overlay" role="status" class="fixed inset-0 bg-walnut-950 z-[100] flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="text-stain text-6xl font-display font-black tracking-wide animate-pulse" aria-hidden="true">NJBP</div>
+        <div class="mt-4 font-mono text-xs uppercase tracking-widest text-linen-300">Loading archive…</div>
     </div>
 
     <!-- Navigation -->
@@ -158,22 +159,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-walnut-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
-        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-linen-300 hover:text-stain" aria-label="Close menu">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-        <ul class="space-y-8 text-center font-display text-3xl font-medium tracking-wide">
-            <li><a href="archive.html" class="inline-block py-2 text-stain">Archive</a></li>
-            <li><a href="story.html" class="inline-block py-2 hover:text-stain transition-colors">Stories</a></li>
-            <li><a href="era.html" class="inline-block py-2 hover:text-stain transition-colors">Eras</a></li>
-            <li><a href="wiki/index.html" class="inline-block py-2 hover:text-stain transition-colors">Wiki</a></li>
-            <li><a href="historical-notes.html" class="inline-block py-2 hover:text-stain transition-colors">Historical notes</a></li>
-            <li><a href="index.html#timeline" class="inline-block py-2 hover:text-stain transition-colors">Timeline</a></li>
-            <li><a href="index.html#featured" class="inline-block py-2 hover:text-stain transition-colors">Featured</a></li>
-            <li><a href="index.html#about" class="inline-block py-2 hover:text-stain transition-colors">About</a></li>
-        </ul>
-    </div>
 
     <main id="main-content" class="pt-20">
 
@@ -212,8 +197,8 @@
             <div class="max-w-[1400px] mx-auto">
 
                 <!-- Search Row (always full width) -->
-                <div class="w-full relative mb-3 md:mb-0">
-                    <input type="search" id="search-input"
+                <div role="search" class="w-full relative mb-3 md:mb-0">
+                    <input type="search" id="search-input" aria-label="Search publications"
                         class="w-full md:w-80 bg-walnut-800 border border-walnut-600 focus:border-stain px-4 py-3 md:py-2.5 text-linen-100 font-sans text-base md:text-sm transition-colors placeholder-linen-300/50"
                         placeholder="Search publications...">
                     <svg class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-linen-300 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -259,9 +244,9 @@
                     <div class="flex flex-col gap-1 w-full md:w-auto">
                         <span class="font-mono text-[10px] uppercase tracking-widest text-linen-300">Status</span>
                         <div class="flex border border-walnut-600 w-full md:w-auto">
-                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-linen-300 hover:text-linen-50 transition-colors active" data-status="all">All</button>
-                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-linen-300 hover:text-linen-50 transition-colors border-l border-walnut-600" data-status="active">Active</button>
-                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-linen-300 hover:text-linen-50 transition-colors border-l border-walnut-600" data-status="archived">Ceased</button>
+                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-linen-300 hover:text-linen-50 transition-colors active" aria-pressed="true" data-status="all">All</button>
+                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-linen-300 hover:text-linen-50 transition-colors border-l border-walnut-600" aria-pressed="false" data-status="active">Active</button>
+                            <button class="status-btn flex-1 md:flex-none px-4 md:px-3 py-3 md:py-2 font-mono text-xs uppercase text-linen-300 hover:text-linen-50 transition-colors border-l border-walnut-600" aria-pressed="false" data-status="archived">Ceased</button>
                         </div>
                     </div>
 
@@ -354,25 +339,6 @@
     </footer>
 
     <script src="js/archive.js?v=20260323"></script>
-    <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const menuClose = document.getElementById('mobile-menu-close');
-        const menu = document.getElementById('mobile-menu');
-
-        function toggleMenu() {
-            menu.classList.toggle('translate-x-full');
-            document.body.classList.toggle('overflow-hidden');
-            const isOpen = !menu.classList.contains('translate-x-full');
-            menuBtn.setAttribute('aria-expanded', String(isOpen));
-            menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-        }
-
-        menuBtn.addEventListener('click', toggleMenu);
-        menuClose.addEventListener('click', toggleMenu);
-        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', toggleMenu));
-
-    </script>
     <script src="js/site-nav.js"></script>
 </body>
 </html>

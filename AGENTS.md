@@ -60,6 +60,7 @@ python3 data/test_woven_usability.py
 python3 data/test_hall_assets.py
 node scripts/test-hall.mjs
 python3 scripts/review_hall.py
+python3 scripts/review_site.py
 python3 scripts/generate_okf_wiki.py --check
 ```
 

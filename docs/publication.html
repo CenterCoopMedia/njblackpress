@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="motion-safe:scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#14100b">
+    <meta name="color-scheme" content="dark">
     <meta id="meta-description" name="description" content="Publication details from the NJ Black Press Archive — 136 Black-owned newspapers, magazines, and digital outlets in New Jersey from 1880 to present.">
 
     <!-- Open Graph (static fallbacks; JS sets per-publication values after load) -->
@@ -141,14 +142,15 @@
     </style>
 </head>
 <body class="surface-woven bg-walnut-900 text-linen-100 font-sans selection:bg-stain selection:text-linen-50 antialiased">
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
     <!-- Grain Overlay -->
     <div class="grain-overlay fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.07] mix-blend-soft-light"></div>
 
     <!-- Loading Overlay -->
-    <div id="loading-overlay" class="fixed inset-0 bg-walnut-950 z-[100] flex flex-col items-center justify-center transition-opacity duration-500">
-        <div class="text-stain text-6xl font-display font-black tracking-wide animate-pulse">NJBP</div>
-        <div class="mt-4 font-mono text-xs uppercase tracking-widest text-linen-300">Loading record...</div>
+    <div id="loading-overlay" role="status" class="fixed inset-0 bg-walnut-950 z-[100] flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="text-stain text-6xl font-display font-black tracking-wide animate-pulse" aria-hidden="true">NJBP</div>
+        <div class="mt-4 font-mono text-xs uppercase tracking-widest text-linen-300">Loading record…</div>
     </div>
 
     <!-- Navigation -->
@@ -178,29 +180,13 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-walnut-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
-        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-linen-300 hover:text-stain">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-        <ul class="space-y-8 text-center font-display text-3xl font-medium tracking-wide">
-            <li><a href="archive.html" class="inline-block py-2 hover:text-stain transition-colors">Archive</a></li>
-            <li><a href="story.html" class="inline-block py-2 hover:text-stain transition-colors">Stories</a></li>
-            <li><a href="era.html" class="inline-block py-2 hover:text-stain transition-colors">Eras</a></li>
-            <li><a href="wiki/index.html" class="inline-block py-2 hover:text-stain transition-colors">Wiki</a></li>
-            <li><a href="historical-notes.html" class="inline-block py-2 hover:text-stain transition-colors">Historical notes</a></li>
-            <li><a href="index.html#timeline" class="inline-block py-2 hover:text-stain transition-colors">Timeline</a></li>
-            <li><a href="index.html#database" class="inline-block py-2 hover:text-stain transition-colors">Database</a></li>
-            <li><a href="index.html#about" class="inline-block py-2 hover:text-stain transition-colors">About</a></li>
-        </ul>
-    </div>
 
-    <main class="pt-20">
+    <main id="main-content" class="pt-20">
 
         <!-- Back Navigation -->
         <div class="bg-walnut-950 border-b border-walnut-600 py-4 px-4 md:px-8">
             <div class="max-w-[1400px] mx-auto">
-                <a href="archive.html" class="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-linen-300 hover:text-stain transition-colors group">
+                <a href="archive.html" class="inline-flex items-center gap-2 min-h-[44px] font-mono text-xs uppercase tracking-widest text-linen-300 hover:text-stain transition-colors group">
                     <span class="transition-transform group-hover:-translate-x-1">&larr;</span>
                     <span>Back to archive</span>
                 </a>
@@ -232,22 +218,6 @@
     </footer>
 
     <script src="js/publication.js?v=20260824-3"></script>
-    <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const menuClose = document.getElementById('mobile-menu-close');
-        const menu = document.getElementById('mobile-menu');
-
-        function toggleMenu() {
-            menu.classList.toggle('translate-x-full');
-            document.body.classList.toggle('overflow-hidden');
-        }
-
-        menuBtn.addEventListener('click', toggleMenu);
-        menuClose.addEventListener('click', toggleMenu);
-        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', toggleMenu));
-
-    </script>
     <script src="js/site-nav.js"></script>
 </body>
 </html>

@@ -93,7 +93,7 @@ Use the smallest checks that cover the changed area:
 | Events and stories | `python3 data/test_site_data.py` |
 | Page metadata, icons, sitemap, and external links | `python3 data/test_site_metadata.py` |
 | Map | `python3 data/test_map.py` |
-| Navigation | `python3 data/test_navigation.py` |
+| Navigation, menus, focus, and target sizes | `python3 data/test_navigation.py` and `python3 scripts/review_site.py` |
 | Public wiki | `python3 data/test_wiki_publications.py` |
 | Portable wiki | `python3 scripts/generate_okf_wiki.py --check` |
 | Historical notes | `python3 data/test_woven_layout.py` and `python3 data/test_woven_usability.py` |
