@@ -346,7 +346,7 @@
 
                 <section class="px-4 md:px-8 pb-12">
                     <div class="max-w-[1100px] mx-auto flex flex-wrap gap-6 font-mono text-xs">
-                        <a href="story.html" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">All stories</a>
+                        <a href="story.html" class="inline-flex items-center min-h-[44px] text-stain hover:text-linen-100 transition-colors">All stories</a>
                         ${eraDecades(story.era).length > 0 ? eraDecades(story.era).map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">The ${escapeHtml(d)}</a>`).join('') : ''}
                     </div>
                 </section>
@@ -354,7 +354,7 @@
                 <nav class="px-4 md:px-8 pb-16" aria-label="Story navigation">
                     <div class="max-w-[1100px] mx-auto flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
                         ${previousStory ? `<a href="story.html?id=${encodeURIComponent(previousStory.id)}" class="inline-flex items-center gap-1 min-h-[44px] text-stain hover:text-linen-100 transition-colors"><span aria-hidden="true">&larr;</span> ${escapeHtml(previousStory.title)}</a>` : `<span class="text-linen-300">This is the first story in the index.</span>`}
-                        <a href="story.html" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">All stories</a>
+                        <a href="story.html" class="inline-flex items-center min-h-[44px] text-stain hover:text-linen-100 transition-colors">All stories</a>
                         ${nextStory ? `<a href="story.html?id=${encodeURIComponent(nextStory.id)}" class="inline-flex items-center gap-1 min-h-[44px] text-stain hover:text-linen-100 transition-colors">${escapeHtml(nextStory.title)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-linen-300">This is the last story in the index.</span>`}
                     </div>
                 </nav>
