@@ -160,7 +160,8 @@ def main() -> None:
     with sync_playwright() as p:
         browser = p.chromium.launch()
         for size, viewport in (("desktop", {"width": 1440, "height": 900}), ("phone", {"width": 390, "height": 844})):
-            context = browser.new_context(viewport=viewport, reduced_motion="reduce")
+            phone = size == "phone"
+            context = browser.new_context(viewport=viewport, reduced_motion="reduce", is_mobile=phone, has_touch=phone)
             context.route("**/*", route)
             page = context.new_page()
             errors = []
@@ -183,6 +184,8 @@ def main() -> None:
                 check(f"{name}: no running animation under reduced motion", running == 0, f"{running} running")
                 if size == "phone":
                     check(f"{name}: no horizontal page scroll", page.evaluate("document.documentElement.scrollWidth <= innerWidth"))
+                    zoomers = page.evaluate("[...document.querySelectorAll('input, select, textarea')].filter((el) => el.getClientRects().length && parseFloat(getComputedStyle(el).fontSize) < 16).map((el) => el.id || el.name || el.tagName)")
+                    check(f"{name}: form fields use 16px text so iOS does not zoom on focus", not zoomers, ", ".join(zoomers))
                     review_menu(page, name, check)
                 page.screenshot(path=str(out / f"{size}-{path.replace('/', '_').replace('?', '_')}.png"))
             context.close()

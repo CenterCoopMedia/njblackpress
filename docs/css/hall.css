@@ -49,7 +49,7 @@ body.twin-primary .woven-reading-key { display: none; }
 #woven-loading[hidden] { display: none; }
 #woven-topbar { padding: 0.75rem; gap: 0.5rem; background: var(--walnut-900); align-items: stretch; }
 #woven-topbar .woven-btn {
-  min-height: 40px; font-size: 0.81rem; padding: 0.5rem 0.7rem;
+  min-height: 44px; font-size: 0.81rem; padding: 0.5rem 0.7rem;
   letter-spacing: 0; text-transform: none; border-color: var(--walnut-600);
 }
 #woven-topbar button:disabled { opacity: 0.5; cursor: default; }
@@ -96,7 +96,7 @@ body.twin-primary .woven-reading-key { display: none; }
 .woven-index-link { padding: 0.85rem 1.1rem; font-size: 0.8rem; border-top: 1px solid var(--walnut-600); color: var(--stain-light); }
 #woven-browser-empty { padding: 1rem; font-size: 0.9rem; line-height: 1.5; }
 #woven-stage #woven-panel { position: absolute; top: 0; right: 0; bottom: 0; width: var(--exhibit-dock); max-height: none; max-width: none; margin: 0; box-sizing: border-box; border: 0; border-left: 1px solid var(--oak-400); padding: 1.15rem; background: var(--walnut-800); z-index: 8; overflow-y: auto; }
-#woven-panel .p-close { position: sticky; top: 0; margin-left: auto; display: block; background: var(--walnut-700); min-height: 40px; }
+#woven-panel .p-close { position: sticky; top: 0; margin-left: auto; display: block; background: var(--walnut-700); min-height: 44px; }
 #woven-panel h2 { padding-right: 0; font-size: 1.65rem; line-height: 1.15; letter-spacing: -0.035em; margin-top: 1rem; }
 #woven-panel p, #woven-panel cite { font-size: 0.9rem; line-height: 1.55; }
 #woven-panel .p-meta { color: var(--linen-300); font-size: 0.8rem; line-height: 1.5; }
@@ -109,7 +109,7 @@ body.twin-primary .woven-reading-key { display: none; }
 .woven-era-index { width: calc(100% - 5rem); max-width: 1520px; margin: 0 auto 1rem; }
 .woven-era-index > p { font: 0.72rem/1.4 var(--mono); color: var(--linen-300); margin: 0 0 0.6rem; }
 #woven-era-choices { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.woven-era-choice { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.75rem; min-height: 42px; border: 1px solid var(--walnut-600); color: var(--linen-300); font: 0.75rem/1.3 var(--mono); }
+.woven-era-choice { display: flex; align-items: center; gap: 0.5rem; padding: 0.6rem 0.75rem; min-height: 44px; border: 1px solid var(--walnut-600); color: var(--linen-300); font: 0.75rem/1.3 var(--mono); }
 .woven-era-choice::before { content: ''; width: 0.4rem; height: 1rem; background: var(--thread-color, var(--linen-200)); }
 .woven-era-choice span { opacity: 0.7; }
 .woven-era-choice[aria-pressed="true"] { background: var(--walnut-700); border-color: var(--oak-400); color: var(--linen-50); }
@@ -160,7 +160,7 @@ body.twin-primary .woven-reading-key { display: none; }
 #woven-hall-controls[hidden] { display: none; }
 #woven-hall-controls .bar-scroll { gap: 0.4rem; }
 #woven-hall-controls .woven-btn {
-  min-height: 40px; font-size: 0.78rem; padding: 0.45rem 0.65rem;
+  min-height: 44px; font-size: 0.78rem; padding: 0.45rem 0.65rem;
   letter-spacing: 0; text-transform: none; border-color: var(--walnut-600);
 }
 .hall-decade-field {
@@ -169,7 +169,7 @@ body.twin-primary .woven-reading-key { display: none; }
   text-transform: none; letter-spacing: 0.04em;
 }
 .hall-decade-field select {
-  min-height: 40px; padding: 0.35rem 0.4rem; border: 1px solid var(--oak-400);
+  min-height: 44px; padding: 0.35rem 0.4rem; border: 1px solid var(--oak-400);
   background: var(--walnut-800); color: var(--linen-100); font: inherit; border-radius: 0;
 }
 #hall-where {
@@ -238,7 +238,7 @@ body.twin-primary .woven-reading-key { display: none; }
   font-family: var(--mono); font-size: 11px; color: var(--linen-300);
 }
 .hall-reader-jump select {
-  flex: 1; min-width: 0; min-height: 40px; padding: 0.35rem;
+  flex: 1; min-width: 0; min-height: 44px; padding: 0.35rem;
   background: var(--walnut-900); color: var(--linen-100);
   border: 1px solid var(--oak-400); border-radius: 0; font: inherit;
 }
@@ -355,12 +355,13 @@ body.twin-primary .woven-reading-key { display: none; }
   .woven-title-block > p { font-size: 0.86rem; }
   #woven-stage { width: 100%; border-inline: 0; --plot-height: 475px; }
   #woven-topbar { padding: 0.6rem; gap: 0.4rem; }
-  #woven-topbar .woven-btn { min-height: 40px; padding: 0.45rem 0.6rem; font-size: 0.78rem; }
+  #woven-topbar .woven-btn { min-height: 44px; padding: 0.45rem 0.6rem; font-size: 0.78rem; }
   #woven-more-tools { margin-left: 0; }
   .woven-view-switch { flex: 1; }
   .woven-view-switch .woven-btn { flex: 1; }
   #woven-topbar #btn-tours { order: 3; }
   #woven-find-title { order: 4; }
+  #btn-fullscreen { order: 5; }
   .woven-totals dd { font-size: 1.15rem; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -371,12 +372,30 @@ body.twin-primary .woven-reading-key { display: none; }
   .woven-view-switch [aria-pressed="true"], .woven-publication[aria-pressed="true"] { outline: 2px solid Highlight; }
 }
 
+/* ---------- small screens: the top bar in two rows ---------- */
+/* woven-guide.css makes the bar a two-column grid below 700px, which left
+   Full screen on a third row. Three columns fit it in two: the views and More
+   tools, then stories, search, and full screen. Every row the bar saves is
+   room the drawing gets back. */
+@media (max-width: 700px) {
+  #woven-topbar { grid-template-columns: minmax(0, 1fr) auto auto; column-gap: 0.4rem; }
+  #woven-topbar .woven-view-switch { grid-column: 1 / 3; }
+  #woven-topbar #woven-more-tools { grid-column: 3; order: 2; }
+  #woven-topbar #btn-tours { order: 3; }
+  #woven-topbar #woven-find-title { order: 4; }
+  #woven-topbar #btn-fullscreen { order: 5; }
+}
+
 /* ---------- small screens: the hall ---------- */
 @media (max-width: 899px) {
   /* The stage height follows the viewport rather than a fixed pixel count, with
      a plain vh value first for browsers that do not know svh. */
-  #woven-stage[data-view="hall"] { --plot-height: clamp(320px, 62vh, 560px); }
-  #woven-stage[data-view="hall"] { --plot-height: clamp(320px, 62svh, 560px); }
+  /* The drawing fills the screen under the site header, so once the hall is
+     scrolled into view the room is most of what a phone shows, not a strip
+     under the controls. A plain vh value comes first for browsers without svh. */
+  #woven-stage[data-view="hall"] { --plot-height: max(360px, calc(100vh - 5rem)); }
+  #woven-stage[data-view="hall"] { --plot-height: max(360px, calc(100svh - 5rem)); }
+  #woven-stage { scroll-margin-top: 5rem; }
   #woven-hall-controls { right: 0; padding: 0.45rem 0.6rem 0.5rem; }
   /* One scrolling row rather than four stacked ones: the controls must not eat
      the drawing they are there to move through. */
@@ -384,7 +403,8 @@ body.twin-primary .woven-reading-key { display: none; }
     flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; padding-bottom: 0.2rem;
   }
   #hall-where { margin-top: 0.35rem; font-size: 11px; }
-  #hall-hint { margin-top: 0.15rem; font-size: 0.72rem; line-height: 1.4; }
+  /* The status line stays; the long how-to line would push the room down. */
+  #hall-hint { display: none; }
   #hall-tier-note { font-size: 10px; }
   #woven-stage[data-view="hall"] #woven-notice { right: 0.9rem; max-width: none; }
   /* A full height reading sheet with an ordinary vertical flow: the stop's

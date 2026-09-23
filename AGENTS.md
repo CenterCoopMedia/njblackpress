@@ -86,6 +86,11 @@ large research files are ignored by Git and are not present in a normal clone.
 
 - Use sentence case for headings and interface text.
 - Preserve keyboard access, focus behavior, reduced motion, and semantic HTML.
+- Follow the design system rules in `CLAUDE.md`: tokens, fonts, the shared
+  header and footer, and the one focus rule.
+- Make interactive elements at least 44px tall where they stand alone.
+- Give form fields 16px text on touch devices (`pointer: coarse`), so iOS does
+  not zoom the page when a field takes the focus.
 - Use complete Tailwind class strings in JavaScript.
 - Rebuild Tailwind after a class change.
 - Check visible changes at desktop and mobile sizes.

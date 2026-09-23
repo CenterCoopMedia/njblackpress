@@ -834,6 +834,15 @@ export async function mountHall(app, params) {
 
   function frame(now) {
     if (!active || disposed || !visible || document.hidden) { last = 0; return; }
+    // The drawing buffer must match the canvas box. A size change the resize
+    // observer missed (a zoom, a display change, another script resizing the
+    // renderer) otherwise leaves the room drawn in a strip with a dark band
+    // below. Reading the client size is cheap when layout is clean.
+    const ratio = renderer.getPixelRatio();
+    if (Math.abs(canvas.width - Math.round(canvas.clientWidth * ratio)) > 1
+        || Math.abs(canvas.height - Math.round(canvas.clientHeight * ratio)) > 1) {
+      resize();
+    }
     let busy = rail.frame(now);
     if (volumes.frame(now)) busy = true;
     if (sheets.work()) busy = true;
