@@ -224,11 +224,11 @@
             const evts = (eventsByDecade[d] || []).length;
             const clips = (clipsByDecade[d] || []).length;
             return `
-                <li class="surface-cloth bg-ink-700 border border-ink-600 p-6">
+                <li class="surface-cloth bg-walnut-700 border border-walnut-600 p-6">
                     <h2 class="font-display text-2xl font-bold leading-snug">
-                        <a href="era.html?decade=${encodeURIComponent(d)}" class="text-paper-100 hover:text-accent transition-colors">The ${escapeHtml(d)}</a>
+                        <a href="era.html?decade=${encodeURIComponent(d)}" class="text-linen-100 hover:text-stain transition-colors">The ${escapeHtml(d)}</a>
                     </h2>
-                    <p class="font-mono text-[11px] text-paper-300 mt-3 tabular-nums">
+                    <p class="font-mono text-[11px] text-linen-300 mt-3 tabular-nums">
                         ${pubs === 1 ? '1 publication founded' : pubs + ' publications founded'} &middot;
                         ${evts === 1 ? '1 dated event' : evts + ' dated events'} &middot;
                         ${clips === 1 ? '1 clipping' : clips + ' clippings'}
@@ -238,20 +238,20 @@
         }).join('');
 
         const stripHtml = emptyDecades.length > 0 ? `
-            <p class="font-mono text-xs text-paper-300 mt-8 pt-6 border-t border-ink-600 leading-loose">
-                Also in the record: ${emptyDecades.map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="text-accent hover:text-paper-100 transition-colors">${escapeHtml(decadeStripLabel(d))}</a>`).join(', ')}
+            <p class="font-mono text-xs text-linen-300 mt-8 pt-6 border-t border-walnut-600 leading-loose">
+                Also in the record: ${emptyDecades.map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="text-stain hover:text-linen-100 transition-colors">${escapeHtml(decadeStripLabel(d))}</a>`).join(', ')}
             </p>
         ` : '';
 
         container.innerHTML = `
             <section class="px-4 md:px-8 py-12 md:py-16">
                 <div class="max-w-[1100px] mx-auto">
-                    <h1 class="type-impression font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[0.95] tracking-normal text-paper-100 mb-4 balance">Eras</h1>
-                    <p class="measure font-sans text-lg text-paper-200 leading-relaxed mb-10">
+                    <h1 class="type-impression font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[0.95] tracking-normal text-linen-100 mb-4 balance">Eras</h1>
+                    <p class="measure font-sans text-lg text-linen-200 leading-relaxed mb-10">
                         The archive holds records across ${decades.length} decades. Each decade page gathers the titles
                         founded then, the dated events logged for those years, and the clippings we are cleared to show.
                         The same material also reads as
-                        <a href="story.html" class="link-thread text-accent hover:text-paper-100 transition-colors">narrative threads</a>.
+                        <a href="story.html" class="link-thread text-stain hover:text-linen-100 transition-colors">narrative threads</a>.
                     </p>
                     ${fullDecades.length > 0 ? `<ul class="grid grid-cols-1 md:grid-cols-2 gap-4">${rows}</ul>` : ''}
                     ${stripHtml}
@@ -313,9 +313,9 @@
         const decadeNav = (label) => `
             <nav class="px-4 md:px-8 ${label === 'top' ? 'pt-4' : 'pb-16'}" aria-label="Decade navigation, ${label === 'top' ? 'above content' : 'below content'}">
                 <div class="max-w-[1100px] mx-auto flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
-                    ${previous ? `<a href="era.html?decade=${encodeURIComponent(previous)}" class="text-accent hover:text-paper-100 transition-colors"><span aria-hidden="true">&larr;</span> The ${escapeHtml(previous)}</a>` : `<span class="text-paper-300">The ${escapeHtml(decade)} is the earliest decade on record.</span>`}
-                    <a href="era.html" class="text-accent hover:text-paper-100 transition-colors">All decades</a>
-                    ${next ? `<a href="era.html?decade=${encodeURIComponent(next)}" class="text-accent hover:text-paper-100 transition-colors">The ${escapeHtml(next)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-paper-300">The ${escapeHtml(decade)} is the most recent decade on record.</span>`}
+                    ${previous ? `<a href="era.html?decade=${encodeURIComponent(previous)}" class="text-stain hover:text-linen-100 transition-colors"><span aria-hidden="true">&larr;</span> The ${escapeHtml(previous)}</a>` : `<span class="text-linen-300">The ${escapeHtml(decade)} is the earliest decade on record.</span>`}
+                    <a href="era.html" class="text-stain hover:text-linen-100 transition-colors">All decades</a>
+                    ${next ? `<a href="era.html?decade=${encodeURIComponent(next)}" class="text-stain hover:text-linen-100 transition-colors">The ${escapeHtml(next)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-linen-300">The ${escapeHtml(decade)} is the most recent decade on record.</span>`}
                 </div>
             </nav>
         `;
@@ -337,20 +337,20 @@
                      page — including the h1 right below it — renders underneath
                      this fixed bar. -->
                 <div id="decade-jump-bar-spacer" aria-hidden="true"></div>
-                <div id="decade-jump-bar" class="fixed inset-x-0 top-20 z-30 flex flex-col gap-2 border-y border-ink-600 bg-ink-900/95 px-4 py-3 backdrop-blur-sm md:px-8">
+                <div id="decade-jump-bar" class="fixed inset-x-0 top-20 z-30 flex flex-col gap-2 border-y border-walnut-600 bg-walnut-900/95 px-4 py-3 backdrop-blur-sm md:px-8">
                     <div class="max-w-[1100px] mx-auto flex w-full flex-col gap-2 font-mono text-xs md:flex-row md:items-center md:justify-between">
                         <div class="flex flex-wrap gap-x-6 gap-y-1" aria-label="Jump to section">
-                            ${sections.map(s => `<a href="${s.href}" class="text-accent hover:text-paper-100 transition-colors">${s.label}</a>`).join('')}
+                            ${sections.map(s => `<a href="${s.href}" class="text-stain hover:text-linen-100 transition-colors">${s.label}</a>`).join('')}
                         </div>
-                        <a href="#main-content" class="text-paper-300 hover:text-accent transition-colors">Back to top <span aria-hidden="true">&uarr;</span></a>
+                        <a href="#main-content" class="text-linen-300 hover:text-stain transition-colors">Back to top <span aria-hidden="true">&uarr;</span></a>
                     </div>
                 </div>
                 ` : ''}
 
                 <header class="px-4 md:px-8 pt-8 pb-8">
                     <div class="max-w-[1100px] mx-auto">
-                        <h1 class="type-impression font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[0.95] tracking-normal text-paper-100 mb-4 balance">The ${escapeHtml(decade)}</h1>
-                        <p class="font-mono text-xs text-paper-300 tabular-nums">
+                        <h1 class="type-impression font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[0.95] tracking-normal text-linen-100 mb-4 balance">The ${escapeHtml(decade)}</h1>
+                        <p class="font-mono text-xs text-linen-300 tabular-nums">
                             ${pubs.length === 1 ? '1 publication founded' : pubs.length + ' publications founded'} &middot;
                             ${evts.length === 1 ? '1 dated event' : evts.length + ' dated events'} &middot;
                             ${clips.length === 1 ? '1 clipping' : clips.length + ' clippings'}
@@ -360,63 +360,63 @@
 
                 ${decadeNav('top')}
 
-                <section class="px-4 md:px-8 py-10 border-t border-ink-600" aria-labelledby="pubs-heading">
+                <section class="px-4 md:px-8 py-10 border-t border-walnut-600" aria-labelledby="pubs-heading">
                     <div class="max-w-[1100px] mx-auto">
-                        <h2 id="pubs-heading" class="font-display text-2xl font-bold text-paper-100 mb-2">Publications founded in the ${escapeHtml(decade)}</h2>
+                        <h2 id="pubs-heading" class="font-display text-2xl font-bold text-linen-100 mb-2">Publications founded in the ${escapeHtml(decade)}</h2>
                         <hr class="rail-wood mb-8" aria-hidden="true">
                         ${pubs.length > 0 ? `
                             <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 ${pubs.map(p => `
-                                    <li class="surface-cloth bg-ink-700 border border-ink-600 p-6">
-                                        <p class="font-mono text-[10px] uppercase tracking-widest text-paper-300 mb-2">${escapeHtml(p.city || 'New Jersey')}</p>
+                                    <li class="surface-cloth bg-walnut-700 border border-walnut-600 p-6">
+                                        <p class="font-mono text-[10px] uppercase tracking-widest text-linen-300 mb-2">${escapeHtml(p.city || 'New Jersey')}</p>
                                         <h3 class="font-display text-lg font-bold leading-snug">
-                                            <a href="publication.html?id=${p.id}" class="text-paper-100 hover:text-accent transition-colors">${escapeHtml(p.name)}</a>
+                                            <a href="publication.html?id=${p.id}" class="text-linen-100 hover:text-stain transition-colors">${escapeHtml(p.name)}</a>
                                         </h3>
-                                        <p class="font-mono text-xs text-paper-300 mt-2 tabular-nums">${escapeHtml(formatYears(p))}</p>
+                                        <p class="font-mono text-xs text-linen-300 mt-2 tabular-nums">${escapeHtml(formatYears(p))}</p>
                                     </li>
                                 `).join('')}
                             </ul>
-                        ` : `<p class="measure font-sans text-paper-200">No publication in this archive was founded in the ${escapeHtml(decade)}.</p>`}
+                        ` : `<p class="measure font-sans text-linen-200">No publication in this archive was founded in the ${escapeHtml(decade)}.</p>`}
                     </div>
                 </section>
 
-                <section class="px-4 md:px-8 py-10 bg-ink-800 border-y border-ink-600" aria-labelledby="events-heading">
+                <section class="px-4 md:px-8 py-10 bg-walnut-800 border-y border-walnut-600" aria-labelledby="events-heading">
                     <div class="max-w-[1100px] mx-auto">
-                        <h2 id="events-heading" class="font-display text-2xl font-bold text-paper-100 mb-2">Dated events</h2>
+                        <h2 id="events-heading" class="font-display text-2xl font-bold text-linen-100 mb-2">Dated events</h2>
                         <hr class="rail-wood mb-8" aria-hidden="true">
                         ${evts.length > 0 ? `
                             <ol class="space-y-8">${evts.map(eventEntry).join('')}</ol>
-                        ` : `<p class="measure font-sans text-paper-200">No dated events are logged for this decade yet.</p>`}
+                        ` : `<p class="measure font-sans text-linen-200">No dated events are logged for this decade yet.</p>`}
                     </div>
                 </section>
 
                 <section class="px-4 md:px-8 py-10" aria-labelledby="clippings-heading">
                     <div class="max-w-[1100px] mx-auto">
-                        <h2 id="clippings-heading" class="font-display text-2xl font-bold text-paper-100 mb-2">Clippings</h2>
+                        <h2 id="clippings-heading" class="font-display text-2xl font-bold text-linen-100 mb-2">Clippings</h2>
                         <hr class="rail-wood mb-8" aria-hidden="true">
                         ${clips.length > 0 ? `
                             <div class="space-y-10">${clips.map(entry => clippingFigure(entry.clip, entry.pub)).join('')}</div>
-                        ` : `<p class="measure font-sans text-paper-200">No clipping we are cleared to publish belongs to a title founded in this decade.</p>`}
+                        ` : `<p class="measure font-sans text-linen-200">No clipping we are cleared to publish belongs to a title founded in this decade.</p>`}
                     </div>
                 </section>
 
-                <section class="px-4 md:px-8 py-10 border-t border-ink-600" aria-labelledby="threads-heading">
+                <section class="px-4 md:px-8 py-10 border-t border-walnut-600" aria-labelledby="threads-heading">
                     <div class="max-w-[1100px] mx-auto">
-                        <h2 id="threads-heading" class="font-display text-2xl font-bold text-paper-100 mb-2">Stories that run through this decade</h2>
+                        <h2 id="threads-heading" class="font-display text-2xl font-bold text-linen-100 mb-2">Stories that run through this decade</h2>
                         <hr class="rail-wood mb-8" aria-hidden="true">
                         ${threads.length > 0 ? `
                             <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 ${threads.map(s => `
-                                    <li class="surface-cloth bg-ink-700 border border-ink-600 p-6">
+                                    <li class="surface-cloth bg-walnut-700 border border-walnut-600 p-6">
                                         <h3 class="font-display text-lg font-bold leading-snug">
-                                            <a href="story.html?id=${encodeURIComponent(s.id)}" class="text-paper-100 hover:text-accent transition-colors">${escapeHtml(s.title)}</a>
+                                            <a href="story.html?id=${encodeURIComponent(s.id)}" class="text-linen-100 hover:text-stain transition-colors">${escapeHtml(s.title)}</a>
                                         </h3>
-                                        <p class="font-mono text-[11px] text-paper-300 mt-2">${escapeHtml(formatEra(s.era) || 'era not recorded')}</p>
-                                        ${s.strength === 'weak' ? `<p class="font-mono text-[11px] text-accent mt-2">Thinly sourced.</p>` : ''}
+                                        <p class="font-mono text-[11px] text-linen-300 mt-2">${escapeHtml(formatEra(s.era) || 'era not recorded')}</p>
+                                        ${s.strength === 'weak' ? `<p class="font-mono text-[11px] text-stain mt-2">Thinly sourced.</p>` : ''}
                                     </li>
                                 `).join('')}
                             </ul>
-                        ` : `<p class="measure font-sans text-paper-200">No narrative thread reaches this decade yet.</p>`}
+                        ` : `<p class="measure font-sans text-linen-200">No narrative thread reaches this decade yet.</p>`}
                     </div>
                 </section>
 
@@ -465,17 +465,17 @@
     function eventEntry(event) {
         const pubs = (event.publicationIds || []).map(id => publicationsById[id]).filter(Boolean);
         return `
-            <li class="border-l-2 border-ink-600 pl-5 md:pl-6">
-                <p class="font-mono text-[11px] uppercase tracking-widest text-accent mb-2 tabular-nums">${escapeHtml(formatDate(event.date))}</p>
-                <h3 class="font-display text-xl font-bold text-paper-100 leading-snug measure balance mb-3">${escapeHtml(event.title)}</h3>
-                ${event.description ? `<p class="measure font-sans text-[17px] leading-[1.7] text-paper-200">${escapeHtml(event.description)}</p>` : ''}
-                ${event.confidence === 'medium' ? `<p class="measure font-mono text-[11px] text-paper-300 mt-3">Medium confidence. The date or the detail is not fully settled.</p>` : ''}
+            <li class="border-l-2 border-walnut-600 pl-5 md:pl-6">
+                <p class="font-mono text-[11px] uppercase tracking-widest text-stain mb-2 tabular-nums">${escapeHtml(formatDate(event.date))}</p>
+                <h3 class="font-display text-xl font-bold text-linen-100 leading-snug measure balance mb-3">${escapeHtml(event.title)}</h3>
+                ${event.description ? `<p class="measure font-sans text-[17px] leading-[1.7] text-linen-200">${escapeHtml(event.description)}</p>` : ''}
+                ${event.confidence === 'medium' ? `<p class="measure font-mono text-[11px] text-linen-300 mt-3">Medium confidence. The date or the detail is not fully settled.</p>` : ''}
                 ${pubs.length > 0 ? `
-                    <p class="font-mono text-[11px] text-paper-300 mt-3">
+                    <p class="font-mono text-[11px] text-linen-300 mt-3">
                         ${pubs.length === 1 ? 'Publication:' : 'Publications:'}
-                        ${pubs.map(p => `<a href="publication.html?id=${p.id}" class="text-accent hover:text-paper-100 transition-colors">${escapeHtml(p.name)}</a>`).join(', ')}
+                        ${pubs.map(p => `<a href="publication.html?id=${p.id}" class="text-stain hover:text-linen-100 transition-colors">${escapeHtml(p.name)}</a>`).join(', ')}
                     </p>
-                ` : `<p class="font-mono text-[11px] text-paper-300 mt-3">No publication in the archive is linked to this event yet.</p>`}
+                ` : `<p class="font-mono text-[11px] text-linen-300 mt-3">No publication in the archive is linked to this event yet.</p>`}
             </li>
         `;
     }
@@ -484,9 +484,9 @@
         if (!clip.webPath || !clip.alt) return '';
         const cropped = clip.status === 'crop_first';
         return `
-            <figure class="evidence-figure surface-cloth bg-ink-700 border border-ink-600 p-4 max-w-[720px]">
+            <figure class="evidence-figure surface-cloth bg-walnut-700 border border-walnut-600 p-4 max-w-[720px]">
                 <div class="${cropped ? 'clip-mounted' : ''}">
-                    <button type="button" class="clip-trigger block w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2" aria-label="Enlarge image: ${escapeAttr(clip.alt)}">
+                    <button type="button" class="clip-trigger block w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-stain focus-visible:outline-offset-2" aria-label="Enlarge image: ${escapeAttr(clip.alt)}">
                         <img src="${escapeAttr(clip.webPath)}"
                              alt="${escapeAttr(clip.alt)}"
                              ${clip.width ? `width="${clip.width}"` : ''} ${clip.height ? `height="${clip.height}"` : ''}
@@ -494,11 +494,11 @@
                     </button>
                 </div>
                 <figcaption class="pt-4 space-y-2">
-                    ${clip.caption ? `<p class="measure font-sans text-[15px] text-paper-100 leading-relaxed">${escapeHtml(clip.caption)}</p>` : ''}
-                    ${cropped ? `<p class="measure font-mono text-[11px] text-paper-300">Cropped detail. The full page is not reproduced.</p>` : ''}
-                    ${clip.status === 'publishable_with_credit' ? `<p class="measure font-mono text-[11px] text-paper-300">Free to reuse with credit.</p>` : ''}
-                    ${clip.citation ? `<p class="measure font-mono text-[11px] text-paper-300 leading-relaxed"><cite class="not-italic">${escapeHtml(clip.citation)}</cite></p>` : ''}
-                    ${pub ? `<p class="font-mono text-[11px] text-paper-300">From <a href="publication.html?id=${pub.id}" class="text-accent hover:text-paper-100 transition-colors">${escapeHtml(pub.name)}</a></p>` : ''}
+                    ${clip.caption ? `<p class="measure font-sans text-[15px] text-linen-100 leading-relaxed">${escapeHtml(clip.caption)}</p>` : ''}
+                    ${cropped ? `<p class="measure font-mono text-[11px] text-linen-300">Cropped detail. The full page is not reproduced.</p>` : ''}
+                    ${clip.status === 'publishable_with_credit' ? `<p class="measure font-mono text-[11px] text-linen-300">Free to reuse with credit.</p>` : ''}
+                    ${clip.citation ? `<p class="measure font-mono text-[11px] text-linen-300 leading-relaxed"><cite class="not-italic">${escapeHtml(clip.citation)}</cite></p>` : ''}
+                    ${pub ? `<p class="font-mono text-[11px] text-linen-300">From <a href="publication.html?id=${pub.id}" class="text-stain hover:text-linen-100 transition-colors">${escapeHtml(pub.name)}</a></p>` : ''}
                 </figcaption>
             </figure>
         `;
@@ -569,7 +569,7 @@
         sep.setAttribute('aria-hidden', 'true');
         sep.textContent = '/';
         const current = document.createElement('li');
-        current.className = 'text-paper-100';
+        current.className = 'text-linen-100';
         current.setAttribute('aria-current', 'page');
         current.textContent = label;
         list.appendChild(sep);
@@ -580,8 +580,8 @@
         return `
             <section class="px-4 md:px-8 py-16">
                 <div class="max-w-[1100px] mx-auto">
-                    <h1 class="font-display text-4xl font-extrabold text-paper-100 mb-4">${escapeHtml(heading)}</h1>
-                    <p class="measure font-sans text-paper-200">${escapeHtml(message)}</p>
+                    <h1 class="font-display text-4xl font-extrabold text-linen-100 mb-4">${escapeHtml(heading)}</h1>
+                    <p class="measure font-sans text-linen-200">${escapeHtml(message)}</p>
                 </div>
             </section>
         `;

@@ -169,26 +169,26 @@
 
         container.innerHTML = `
             <!-- Hero Section -->
-            <section class="relative bg-ink-950 border-b border-walnut-600 py-16 md:py-24 px-4 md:px-8">
+            <section class="relative bg-walnut-950 border-b border-walnut-600 py-16 md:py-24 px-4 md:px-8">
                 <div class="max-w-[1400px] mx-auto">
 
                     <!-- Decorative corner elements -->
-                    <div class="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-accent/30 hidden lg:block"></div>
-                    <div class="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-accent/30 hidden lg:block"></div>
+                    <div class="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-stain/30 hidden lg:block"></div>
+                    <div class="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-stain/30 hidden lg:block"></div>
 
                     ${altName && !altName.isFate ? `
                     <div class="animate-in delay-1">
-                        <p class="font-mono text-xs text-paper-300 mb-6">${escapeHtml(altName.label)} ${escapeHtml(altName.value)}</p>
+                        <p class="font-mono text-xs text-linen-300 mb-6">${escapeHtml(altName.label)} ${escapeHtml(altName.value)}</p>
                     </div>
                     ` : ''}
 
-                    <h1 class="type-impression font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[0.88] tracking-normal text-paper-100 mb-6 animate-in delay-2">
+                    <h1 class="type-impression font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[0.88] tracking-normal text-linen-100 mb-6 animate-in delay-2">
                         ${escapeHtml(pub.name)}
                     </h1>
 
-                    <div class="flex flex-wrap items-center gap-6 text-paper-300 animate-in delay-3">
+                    <div class="flex flex-wrap items-center gap-6 text-linen-300 animate-in delay-3">
                         <div class="flex items-center gap-2">
-                            <svg class="w-4 h-4 text-accent" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 text-stain" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
@@ -200,7 +200,7 @@
 
                     <p class="mt-8 animate-in delay-3">
                         <a href="${wikiHref(pub)}"
-                           class="inline-block font-mono text-xs uppercase tracking-widest text-accent hover:text-paper-100 transition-colors border-b border-accent/40 hover:border-paper-100 py-1">
+                           class="inline-block font-mono text-xs uppercase tracking-widest text-stain hover:text-linen-100 transition-colors border-b border-stain/40 hover:border-linen-100 py-1">
                             Wiki page for this title <span aria-hidden="true">&rarr;</span>
                         </a>
                     </p>
@@ -211,7 +211,7 @@
             ${missionSection}
 
             <!-- Main Content Grid -->
-            <section class="py-16 md:py-20 px-4 md:px-8 bg-ink-900">
+            <section class="py-16 md:py-20 px-4 md:px-8 bg-walnut-900">
                 <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
                     <!-- Main Column -->
@@ -244,10 +244,10 @@
         if (!mission) return '';
 
         return `
-            <section class="bg-ink-800 border-y border-walnut-600 py-12 md:py-16 px-4 md:px-8 animate-in delay-4">
+            <section class="bg-walnut-800 border-y border-walnut-600 py-12 md:py-16 px-4 md:px-8 animate-in delay-4">
                 <div class="max-w-[1000px] mx-auto">
-                    <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Mission statement</h2>
-                    <blockquote class="pull-quote font-sans text-xl sm:text-2xl md:text-3xl text-paper-100 leading-relaxed font-light italic">
+                    <h2 class="font-mono text-xs text-stain uppercase tracking-widest mb-4">Mission statement</h2>
+                    <blockquote class="pull-quote font-sans text-xl sm:text-2xl md:text-3xl text-linen-100 leading-relaxed font-light italic">
                         ${escapeHtml(mission)}
                     </blockquote>
                 </div>
@@ -271,12 +271,12 @@
 
         return `
             <div class="animate-in delay-4">
-                <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-walnut-600">Publication details</h2>
+                <h2 class="font-mono text-xs text-stain uppercase tracking-widest mb-6 pb-2 border-b border-walnut-600">Publication details</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     ${items.map(item => `
                         <div class="border-l-2 border-walnut-600 pl-4">
-                            <p class="font-mono text-[10px] uppercase tracking-widest text-paper-300 mb-1">${item.label}</p>
-                            <p class="font-sans text-paper-100">${escapeHtml(item.value)}</p>
+                            <p class="font-mono text-[10px] uppercase tracking-widest text-linen-300 mb-1">${item.label}</p>
+                            <p class="font-sans text-linen-100">${escapeHtml(item.value)}</p>
                         </div>
                     `).join('')}
                 </div>
@@ -333,17 +333,17 @@
 
         return `
             <div class="animate-in delay-5">
-                <h2 class="font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-walnut-600">Historical notes</h2>
+                <h2 class="font-mono text-xs text-stain uppercase tracking-widest mb-6 pb-2 border-b border-walnut-600">Historical notes</h2>
                 <div class="prose prose-invert max-w-none">
                     ${useColumns ? `
                         <div class="columns-1 md:columns-2 gap-8 column-rule space-y-4">
                             ${paragraphs.map((p, i) => `
-                                <p class="${i === 0 ? 'drop-cap' : ''} font-sans text-lg text-paper-200 leading-relaxed">${escapeHtml(p.trim())}</p>
+                                <p class="${i === 0 ? 'drop-cap' : ''} font-sans text-lg text-linen-200 leading-relaxed">${escapeHtml(p.trim())}</p>
                             `).join('')}
                         </div>
                     ` : `
                         ${paragraphs.map((p, i) => `
-                            <p class="${i === 0 ? 'drop-cap' : ''} font-sans text-lg text-paper-200 leading-relaxed">${escapeHtml(p.trim())}</p>
+                            <p class="${i === 0 ? 'drop-cap' : ''} font-sans text-lg text-linen-200 leading-relaxed">${escapeHtml(p.trim())}</p>
                         `).join('')}
                     `}
                 </div>
@@ -367,15 +367,15 @@
         return `
             <div class="animate-in delay-5">
                 <div class="flex flex-wrap items-end justify-between gap-3 mb-6 pb-2 border-b border-walnut-600">
-                    <h2 class="font-mono text-xs text-accent uppercase tracking-widest">Recent stories</h2>
-                    <a href="${escapeHtml(source.feedUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] uppercase tracking-widest text-paper-300 hover:text-accent">Official feed <span aria-hidden="true">&nearr;</span></a>
+                    <h2 class="font-mono text-xs text-stain uppercase tracking-widest">Recent stories</h2>
+                    <a href="${escapeHtml(source.feedUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] uppercase tracking-widest text-linen-300 hover:text-stain">Official feed <span aria-hidden="true">&nearr;</span></a>
                 </div>
                 <ol class="divide-y divide-walnut-600 border-y border-walnut-600">
                     ${items.map(item => `
                         <li>
                             <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="group grid gap-2 py-5 sm:grid-cols-[8rem_1fr] sm:items-baseline">
-                                <time datetime="${escapeHtml(item.published)}" class="font-mono text-xs text-paper-300">${escapeHtml(dateLabel(item.published))}</time>
-                                <span class="font-display text-lg font-semibold leading-snug text-paper-100 group-hover:text-accent transition-colors">${escapeHtml(item.title)}</span>
+                                <time datetime="${escapeHtml(item.published)}" class="font-mono text-xs text-linen-300">${escapeHtml(dateLabel(item.published))}</time>
+                                <span class="font-display text-lg font-semibold leading-snug text-linen-100 group-hover:text-stain transition-colors">${escapeHtml(item.title)}</span>
                             </a>
                         </li>
                     `).join('')}
@@ -399,23 +399,23 @@
 
         if (!canPublishImage) {
             return `
-                <div class="animate-in delay-5 border border-walnut-600 bg-ink-950 p-5">
+                <div class="animate-in delay-5 border border-walnut-600 bg-walnut-950 p-5">
                     <div class="flex flex-wrap items-center justify-between gap-3">
-                        <span class="font-mono text-[10px] uppercase tracking-widest text-paper-300">Homepage archived for research ${escapeHtml(dateLabel)}</span>
-                        <a href="${escapeHtml(capture.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] uppercase tracking-widest text-accent hover:text-paper-100">Visit current site <span aria-hidden="true">&nearr;</span></a>
+                        <span class="font-mono text-[10px] uppercase tracking-widest text-linen-300">Homepage archived for research ${escapeHtml(dateLabel)}</span>
+                        <a href="${escapeHtml(capture.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] uppercase tracking-widest text-stain hover:text-linen-100">Visit current site <span aria-hidden="true">&nearr;</span></a>
                     </div>
                 </div>
             `;
         }
 
         return `
-            <figure class="animate-in delay-5 border border-walnut-600 bg-ink-950 overflow-hidden">
+            <figure class="animate-in delay-5 border border-walnut-600 bg-walnut-950 overflow-hidden">
                 <a href="${escapeHtml(capture.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="block group">
                     <img src="${escapeHtml(capture.screenshotPath)}" alt="${escapeHtml(pub.name)} homepage captured on ${escapeHtml(dateLabel)}" loading="lazy" decoding="async" class="block w-full h-auto group-hover:opacity-90 transition-opacity">
                 </a>
                 <figcaption class="flex flex-wrap items-center justify-between gap-3 p-4 border-t border-walnut-600">
-                    <span class="font-mono text-[10px] uppercase tracking-widest text-paper-300">Homepage captured ${escapeHtml(dateLabel)}</span>
-                    <a href="${escapeHtml(capture.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] uppercase tracking-widest text-accent hover:text-paper-100">Visit current site <span aria-hidden="true">&nearr;</span></a>
+                    <span class="font-mono text-[10px] uppercase tracking-widest text-linen-300">Homepage captured ${escapeHtml(dateLabel)}</span>
+                    <a href="${escapeHtml(capture.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="font-mono text-[10px] uppercase tracking-widest text-stain hover:text-linen-100">Visit current site <span aria-hidden="true">&nearr;</span></a>
                 </figcaption>
             </figure>
         `;
@@ -441,7 +441,7 @@
         }
 
         return `
-            <div class="bg-ink-800 border border-walnut-600 p-6 animate-in delay-5">
+            <div class="bg-walnut-800 border border-walnut-600 p-6 animate-in delay-5">
                 <h3 class="font-display text-xl font-bold mb-6 text-center border-b border-walnut-600 pb-4">
                     <span class="ornament-mark" aria-hidden="true">~</span><span>Masthead</span><span class="ornament-mark" aria-hidden="true">~</span>
                 </h3>
@@ -449,25 +449,25 @@
                 <div class="space-y-6">
                     ${founders.length > 0 ? `
                         <div class="masthead-entry pb-4">
-                            <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Founder${founders.length > 1 ? 's' : ''}</p>
-                            ${founders.map(f => `<p class="font-display text-lg text-center text-paper-100">${escapeHtml(f)}</p>`).join('')}
+                            <p class="font-mono text-[10px] uppercase tracking-widest text-stain mb-2 text-center">Founder${founders.length > 1 ? 's' : ''}</p>
+                            ${founders.map(f => `<p class="font-display text-lg text-center text-linen-100">${escapeHtml(f)}</p>`).join('')}
                         </div>
                     ` : ''}
 
                     ${publishers.length > 0 ? `
                         <div class="masthead-entry pb-4">
-                            <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Publisher${publishers.length > 1 ? 's' : ''}</p>
-                            ${publishers.map(p => `<p class="font-display text-lg text-center text-paper-100">${escapeHtml(p)}</p>`).join('')}
+                            <p class="font-mono text-[10px] uppercase tracking-widest text-stain mb-2 text-center">Publisher${publishers.length > 1 ? 's' : ''}</p>
+                            ${publishers.map(p => `<p class="font-display text-lg text-center text-linen-100">${escapeHtml(p)}</p>`).join('')}
                         </div>
                     ` : ''}
 
                     ${staff.length > 0 ? `
                         <div class="space-y-3">
-                            <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Key staff</p>
+                            <p class="font-mono text-[10px] uppercase tracking-widest text-stain mb-2 text-center">Key staff</p>
                             ${staff.map(s => `
                                 <div class="text-center">
-                                    <p class="font-display text-paper-100">${escapeHtml(s.name)}</p>
-                                    <p class="font-mono text-xs text-paper-300">${escapeHtml(s.role)}</p>
+                                    <p class="font-display text-linen-100">${escapeHtml(s.name)}</p>
+                                    <p class="font-mono text-xs text-linen-300">${escapeHtml(s.role)}</p>
                                 </div>
                             `).join('')}
                         </div>
@@ -475,8 +475,8 @@
 
                     ${staffString ? `
                         <div class="masthead-entry pb-4">
-                            <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-2 text-center">Key staff</p>
-                            <p class="font-display text-lg text-center text-paper-100">${escapeHtml(staffString)}</p>
+                            <p class="font-mono text-[10px] uppercase tracking-widest text-stain mb-2 text-center">Key staff</p>
+                            <p class="font-display text-lg text-center text-linen-100">${escapeHtml(staffString)}</p>
                         </div>
                     ` : ''}
                 </div>
@@ -490,11 +490,11 @@
 
         return `
             <div class="animate-in delay-6">
-                <h3 class="font-mono text-xs text-accent uppercase tracking-widest mb-4">Topics and tags</h3>
+                <h3 class="font-mono text-xs text-stain uppercase tracking-widest mb-4">Topics and tags</h3>
                 <div class="flex flex-wrap gap-2">
                     ${tags.map(tag => `
                         <a href="archive.html?search=${encodeURIComponent(tag)}"
-                           class="px-3 py-1 bg-ink-800 border border-walnut-600 hover:border-accent hover:text-accent text-paper-300 text-sm font-mono transition-colors">
+                           class="px-3 py-1 bg-walnut-800 border border-walnut-600 hover:border-stain hover:text-stain text-linen-300 text-sm font-mono transition-colors">
                             ${escapeHtml(tag)}
                         </a>
                     `).join('')}
@@ -610,17 +610,17 @@
             const note = rightsNote(clip.status || item.rightsStatus);
             const label = hostLabel(item.url);
             return `
-                <figure class="evidence-figure bg-ink-800 border border-walnut-600 flex flex-col">
+                <figure class="evidence-figure bg-walnut-800 border border-walnut-600 flex flex-col">
                     <img src="${escapeAttr(clip.webPath)}"
                          alt="${escapeAttr(clip.alt || caption)}"
                          ${clip.width ? `width="${clip.width}"` : ''} ${clip.height ? `height="${clip.height}"` : ''}
                          loading="lazy" decoding="async">
                     <figcaption class="p-4 grow flex flex-col gap-2">
-                        ${caption ? `<p class="measure font-sans text-sm text-paper-200 leading-relaxed">${escapeHtml(caption)}</p>` : ''}
+                        ${caption ? `<p class="measure font-sans text-sm text-linen-200 leading-relaxed">${escapeHtml(caption)}</p>` : ''}
                         <div class="mt-auto space-y-1">
-                            ${citation ? `<p class="measure font-mono text-[11px] text-paper-300 leading-relaxed"><cite class="not-italic" title="${escapeAttr(citation)}">${escapeHtml(citation)}</cite></p>` : ''}
-                            ${note ? `<p class="measure font-mono text-[11px] text-paper-300/80">${escapeHtml(note)}</p>` : ''}
-                            ${isUrl(item.url) ? `<p class="font-mono text-[11px]"><a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-paper-100 transition-colors">View at ${escapeHtml(label)} <span aria-hidden="true">&nearr;</span></a></p>` : ''}
+                            ${citation ? `<p class="measure font-mono text-[11px] text-linen-300 leading-relaxed"><cite class="not-italic" title="${escapeAttr(citation)}">${escapeHtml(citation)}</cite></p>` : ''}
+                            ${note ? `<p class="measure font-mono text-[11px] text-linen-300/80">${escapeHtml(note)}</p>` : ''}
+                            ${isUrl(item.url) ? `<p class="font-mono text-[11px]"><a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer" class="text-stain hover:text-linen-100 transition-colors">View at ${escapeHtml(label)} <span aria-hidden="true">&nearr;</span></a></p>` : ''}
                         </div>
                     </figcaption>
                 </figure>
@@ -632,10 +632,10 @@
             const label = hostLabel(item.url);
             return `
                 <li class="border-l-2 border-walnut-600 pl-4 py-1 space-y-1">
-                    ${item.caption ? `<p class="measure font-sans text-sm text-paper-200 leading-relaxed">${escapeHtml(item.caption)}</p>` : ''}
-                    ${item.citation ? `<p class="measure font-mono text-[11px] text-paper-300 leading-relaxed"><cite class="not-italic" title="${escapeAttr(item.citation)}">${escapeHtml(item.citation)}</cite></p>` : ''}
-                    ${note ? `<p class="measure font-mono text-[11px] text-paper-300/80">${escapeHtml(note)}</p>` : ''}
-                    ${isUrl(item.url) ? `<p class="font-mono text-[11px]"><a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-paper-100 transition-colors">View at ${escapeHtml(label)} <span aria-hidden="true">&nearr;</span></a></p>` : ''}
+                    ${item.caption ? `<p class="measure font-sans text-sm text-linen-200 leading-relaxed">${escapeHtml(item.caption)}</p>` : ''}
+                    ${item.citation ? `<p class="measure font-mono text-[11px] text-linen-300 leading-relaxed"><cite class="not-italic" title="${escapeAttr(item.citation)}">${escapeHtml(item.citation)}</cite></p>` : ''}
+                    ${note ? `<p class="measure font-mono text-[11px] text-linen-300/80">${escapeHtml(note)}</p>` : ''}
+                    ${isUrl(item.url) ? `<p class="font-mono text-[11px]"><a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer" class="text-stain hover:text-linen-100 transition-colors">View at ${escapeHtml(label)} <span aria-hidden="true">&nearr;</span></a></p>` : ''}
                 </li>
             `;
         }).join('');
@@ -646,8 +646,8 @@
 
         return `
             <div class="animate-in delay-5">
-                <h2 class="balance font-mono text-xs text-accent uppercase tracking-widest mb-6 pb-2 border-b border-walnut-600">Evidence</h2>
-                <p class="measure font-mono text-[11px] text-paper-300 mb-6">${escapeHtml(summary)}</p>
+                <h2 class="balance font-mono text-xs text-stain uppercase tracking-widest mb-6 pb-2 border-b border-walnut-600">Evidence</h2>
+                <p class="measure font-mono text-[11px] text-linen-300 mb-6">${escapeHtml(summary)}</p>
                 ${figures ? `<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">${figures}</div>` : ''}
                 ${records ? `<ul class="space-y-5">${records}</ul>` : ''}
             </div>
@@ -679,72 +679,72 @@
         const nothingToShow = !hasArchiveLink && !catalogRef && !hasWebsite && !pub.physicalArchive;
 
         return `
-            <div class="bg-ink-950 border border-accent/30 p-6 animate-in delay-6">
-                <h3 class="balance font-mono text-xs text-accent uppercase tracking-widest mb-4">Access and archives</h3>
+            <div class="bg-walnut-950 border border-stain/30 p-6 animate-in delay-6">
+                <h3 class="balance font-mono text-xs text-stain uppercase tracking-widest mb-4">Access and archives</h3>
                 <div class="space-y-4">
                     ${hasWebsite ? `
                         <a href="${escapeAttr(pub.websiteUrl)}" target="_blank" rel="noopener noreferrer"
-                           class="flex items-center gap-3 text-paper-100 hover:text-accent transition-colors group">
-                            <svg class="w-5 h-5 text-accent shrink-0" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           class="flex items-center gap-3 text-linen-100 hover:text-stain transition-colors group">
+                            <svg class="w-5 h-5 text-stain shrink-0" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
                             </svg>
                             <span class="font-sans group-hover:underline">Read at ${escapeHtml(hostLabel(pub.websiteUrl))}</span>
-                            <span class="text-accent ml-auto" aria-hidden="true">&rarr;</span>
+                            <span class="text-stain ml-auto" aria-hidden="true">&rarr;</span>
                         </a>
                     ` : ''}
 
                     ${hasArchiveLink ? `
                         <a href="${escapeAttr(archiveRaw)}" target="_blank" rel="noopener noreferrer"
-                           class="flex items-center gap-3 text-paper-100 hover:text-accent transition-colors group">
-                            <svg class="w-5 h-5 text-accent shrink-0" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           class="flex items-center gap-3 text-linen-100 hover:text-stain transition-colors group">
+                            <svg class="w-5 h-5 text-stain shrink-0" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
                             </svg>
                             <span class="font-sans group-hover:underline">Archive record at ${escapeHtml(hostLabel(archiveRaw))}</span>
-                            <span class="text-accent ml-auto" aria-hidden="true">&rarr;</span>
+                            <span class="text-stain ml-auto" aria-hidden="true">&rarr;</span>
                         </a>
                     ` : ''}
 
                     ${catalogRef ? `
-                        <div class="flex items-start gap-3 text-paper-300">
-                            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex items-start gap-3 text-linen-300">
+                            <svg class="w-5 h-5 text-stain mt-0.5 shrink-0" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                             </svg>
                             <div class="min-w-0">
-                                <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-1">Library catalog record</p>
-                                <p class="measure font-mono text-sm text-paper-200 break-words" title="${escapeAttr(catalogRef)}">${escapeHtml(catalogRef)}</p>
+                                <p class="font-mono text-[10px] uppercase tracking-widest text-stain mb-1">Library catalog record</p>
+                                <p class="measure font-mono text-sm text-linen-200 break-words" title="${escapeAttr(catalogRef)}">${escapeHtml(catalogRef)}</p>
                             </div>
                         </div>
                     ` : ''}
 
                     ${pub.physicalArchive ? `
-                        <div class="flex items-start gap-3 text-paper-300">
-                            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex items-start gap-3 text-linen-300">
+                            <svg class="w-5 h-5 text-stain mt-0.5 shrink-0" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                             </svg>
                             <div class="min-w-0">
-                                <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-1">Physical archive</p>
-                                <p class="measure font-sans text-sm text-paper-200">${escapeHtml(pub.physicalArchive)}</p>
+                                <p class="font-mono text-[10px] uppercase tracking-widest text-stain mb-1">Physical archive</p>
+                                <p class="measure font-sans text-sm text-linen-200">${escapeHtml(pub.physicalArchive)}</p>
                             </div>
                         </div>
                     ` : ''}
 
                     ${nothingToShow ? `
-                        <p class="measure font-sans text-sm text-paper-300">No digital or physical archive has been located for this title yet.</p>
+                        <p class="measure font-sans text-sm text-linen-300">No digital or physical archive has been located for this title yet.</p>
                     ` : ''}
                 </div>
 
                 ${citations.length > 0 ? `
                     <div class="mt-6 pt-4 border-t border-walnut-600">
-                        <p class="font-mono text-[10px] uppercase tracking-widest text-accent mb-3">How to cite</p>
+                        <p class="font-mono text-[10px] uppercase tracking-widest text-stain mb-3">How to cite</p>
                         <ul class="space-y-3">
                             ${citations.map(c => `
                                 <li>
-                                    <p class="measure font-mono text-[11px] text-paper-200 leading-relaxed"><cite class="not-italic" title="${escapeAttr(c.text)}">${escapeHtml(c.text)}</cite></p>
-                                    ${c.note ? `<p class="measure font-mono text-[11px] text-paper-300/80">${escapeHtml(c.note)}</p>` : ''}
+                                    <p class="measure font-mono text-[11px] text-linen-200 leading-relaxed"><cite class="not-italic" title="${escapeAttr(c.text)}">${escapeHtml(c.text)}</cite></p>
+                                    ${c.note ? `<p class="measure font-mono text-[11px] text-linen-300/80">${escapeHtml(c.note)}</p>` : ''}
                                 </li>
                             `).join('')}
                         </ul>
-                        <p class="measure font-mono text-[11px] text-paper-300/80 mt-3">Where no reuse note appears, cite the source and ask the holding institution for permission.</p>
+                        <p class="measure font-mono text-[11px] text-linen-300/80 mt-3">Where no reuse note appears, cite the source and ask the holding institution for permission.</p>
                     </div>
                 ` : ''}
             </div>
@@ -765,16 +765,16 @@
         if (related.length === 0) return '';
 
         return `
-            <section class="bg-ink-950 border-t border-walnut-600 py-16 px-4 md:px-8">
+            <section class="bg-walnut-950 border-t border-walnut-600 py-16 px-4 md:px-8">
                 <div class="max-w-[1400px] mx-auto">
                     <h2 class="font-display text-2xl font-bold mb-8">Related publications</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         ${related.map(r => `
                             <a href="publication.html?id=${r.id}"
-                               class="block bg-ink-900 border border-walnut-600 hover:border-accent p-6 transition-colors group">
-                                <p class="font-mono text-[10px] uppercase tracking-widest text-paper-300 mb-2">${escapeHtml(r.city || 'NJ')}</p>
-                                <h3 class="font-display text-lg font-bold group-hover:text-accent transition-colors">${escapeHtml(r.name)}</h3>
-                                <p class="font-mono text-xs text-paper-300 mt-2">${formatYears(r)}</p>
+                               class="block bg-walnut-900 border border-walnut-600 hover:border-stain p-6 transition-colors group">
+                                <p class="font-mono text-[10px] uppercase tracking-widest text-linen-300 mb-2">${escapeHtml(r.city || 'NJ')}</p>
+                                <h3 class="font-display text-lg font-bold group-hover:text-stain transition-colors">${escapeHtml(r.name)}</h3>
+                                <p class="font-mono text-xs text-linen-300 mt-2">${formatYears(r)}</p>
                             </a>
                         `).join('')}
                     </div>

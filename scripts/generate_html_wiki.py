@@ -98,23 +98,23 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
     <link rel="stylesheet" href="{a}css/tailwind.css">
     <link rel="stylesheet" href="{a}css/styles.css">
 </head>
-<body class="surface-woven bg-ink-900 text-paper-100 font-sans selection:bg-accent selection:text-white antialiased">
+<body class="surface-woven bg-walnut-900 text-linen-100 font-sans selection:bg-stain selection:text-white antialiased">
     <div class="grain-overlay fixed inset-0 bg-noise pointer-events-none z-50 opacity-[0.07] mix-blend-soft-light"></div>
 
-    <nav class="fixed top-0 w-full z-40 bg-ink-900/90 backdrop-blur-sm border-b border-white/10">
+    <nav class="fixed top-0 w-full z-40 bg-walnut-900/90 backdrop-blur-sm border-b border-white/10">
         <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
             <a href="{w}index.html" class="flex items-center gap-2 group">
                 <img src="{a}njblackpress-icon.png" alt="NJ Black Press" class="w-8 h-8 transition-transform group-hover:rotate-12">
-                <span class="font-display font-bold text-xl tracking-wide group-hover:text-accent transition-colors">NJ Black Press <span class="text-accent">Wiki</span></span>
+                <span class="font-display font-bold text-xl tracking-wide group-hover:text-stain transition-colors">NJ Black Press <span class="text-stain">Wiki</span></span>
             </a>
             <ul class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
-                <li><a href="{w}index.html" class="hover:text-accent transition-colors">Wiki home</a></li>
-                <li><a href="{w}publications.html" class="hover:text-accent transition-colors">Publications</a></li>
-                <li><a href="{w}statistics.html" class="hover:text-accent transition-colors">Statistics</a></li>
-                <li><a href="{a}archive.html" class="hover:text-accent transition-colors">Archive</a></li>
-                <li><a href="{a}index.html" class="hover:text-accent transition-colors">Main site</a></li>
+                <li><a href="{w}index.html" class="hover:text-stain transition-colors">Wiki home</a></li>
+                <li><a href="{w}publications.html" class="hover:text-stain transition-colors">Publications</a></li>
+                <li><a href="{w}statistics.html" class="hover:text-stain transition-colors">Statistics</a></li>
+                <li><a href="{a}archive.html" class="hover:text-stain transition-colors">Archive</a></li>
+                <li><a href="{a}index.html" class="hover:text-stain transition-colors">Main site</a></li>
             </ul>
-            <a href="{w}index.html" class="md:hidden font-mono text-xs uppercase tracking-widest text-accent">Wiki</a>
+            <a href="{w}index.html" class="md:hidden font-mono text-xs uppercase tracking-widest text-stain">Wiki</a>
         </div>
     </nav>
 
@@ -124,8 +124,8 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
         </div>
     </main>
 
-    <footer class="bg-ink-900 border-t border-white/10 pt-12 pb-10 px-4 md:px-8">
-        <div class="max-w-[1100px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-paper-300 uppercase tracking-wider">
+    <footer class="bg-walnut-900 border-t border-white/10 pt-12 pb-10 px-4 md:px-8">
+        <div class="max-w-[1100px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-linen-300 uppercase tracking-wider">
             <div class="flex items-center gap-4">
                 <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener noreferrer">
                     <img src="{a}favicon.png" alt="CCM" class="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity">
@@ -133,9 +133,9 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
                 <p>&copy; {date.today().year} Center for Cooperative Media</p>
             </div>
             <div class="flex gap-6">
-                <a href="{a}index.html" class="inline-block px-3 py-[14px] hover:text-accent">Main site</a>
-                <a href="{a}archive.html" class="inline-block px-3 py-[14px] hover:text-accent">Archive</a>
-                <a href="https://github.com/CenterCoopMedia/njblackpress" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-[14px] hover:text-accent">GitHub</a>
+                <a href="{a}index.html" class="inline-block px-3 py-[14px] hover:text-stain">Main site</a>
+                <a href="{a}archive.html" class="inline-block px-3 py-[14px] hover:text-stain">Archive</a>
+                <a href="https://github.com/CenterCoopMedia/njblackpress" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-[14px] hover:text-stain">GitHub</a>
             </div>
         </div>
     </footer>
@@ -151,11 +151,11 @@ def crumbs(items: list[tuple[str, str | None]]) -> str:
     parts = []
     for label, href in items:
         if href:
-            parts.append(f'<a href="{esc(href)}" class="hover:text-accent transition-colors">{esc(label)}</a>')
+            parts.append(f'<a href="{esc(href)}" class="hover:text-stain transition-colors">{esc(label)}</a>')
         else:
-            parts.append(f'<span class="text-paper-100">{esc(label)}</span>')
-    sep = '<span class="text-paper-300/40">/</span>'
-    return f'<nav class="font-mono text-xs uppercase tracking-widest text-paper-300 flex flex-wrap items-center gap-3 mb-8">{sep.join(parts)}</nav>'
+            parts.append(f'<span class="text-linen-100">{esc(label)}</span>')
+    sep = '<span class="text-linen-300/40">/</span>'
+    return f'<nav class="font-mono text-xs uppercase tracking-widest text-linen-300 flex flex-wrap items-center gap-3 mb-8">{sep.join(parts)}</nav>'
 
 
 def page_title(text: str) -> str:
@@ -169,7 +169,7 @@ def section_title(text: str) -> str:
 def status_text(pub: dict[str, Any]) -> str:
     """Status as plain text, never a badge. The lifespan line already carries it."""
     if pub.get("isActive"):
-        return '<span class="font-mono text-xs text-accent">still publishing</span>'
+        return '<span class="font-mono text-xs text-stain">still publishing</span>'
     ceased = clean(pub.get("yearCeased"))
     label = f"ceased {ceased}" if ceased else "ceased"
     return f'<span class="font-mono text-xs text-thread-400">{esc(label)}</span>'
@@ -178,11 +178,11 @@ def status_text(pub: dict[str, Any]) -> str:
 def pub_card(pub: dict[str, Any], depth: int, wiki_root: str) -> str:
     href = f"{wiki_root}publications/{pub_html_name(pub)}"
     city = esc(clean(pub.get("city")) or "Unknown")
-    star = ' <span class="text-accent">&#9733;</span>' if featured_kind(pub) else ""
+    star = ' <span class="text-stain">&#9733;</span>' if featured_kind(pub) else ""
     return (
-        f'<a href="{esc(href)}" class="group block border border-white/10 bg-ink-950 p-5 hover:border-accent/60 hover:bg-ink-800 transition-colors">'
-        f'<h3 class="font-display text-lg font-bold leading-snug mb-2 group-hover:text-accent transition-colors">{esc(pub["name"])}{star}</h3>'
-        f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300">{city} &middot; {esc(life_span(pub))}</p>'
+        f'<a href="{esc(href)}" class="group block border border-white/10 bg-walnut-950 p-5 hover:border-stain/60 hover:bg-walnut-800 transition-colors">'
+        f'<h3 class="font-display text-lg font-bold leading-snug mb-2 group-hover:text-stain transition-colors">{esc(pub["name"])}{star}</h3>'
+        f'<p class="font-mono text-xs uppercase tracking-widest text-linen-300">{city} &middot; {esc(life_span(pub))}</p>'
         f'</a>'
     )
 
@@ -194,9 +194,9 @@ def pub_grid(pubs: list[dict[str, Any]], depth: int, wiki_root: str) -> str:
 
 def browse_card(href: str, title: str, sub: str) -> str:
     return (
-        f'<a href="{esc(href)}" class="group flex flex-col justify-between border border-white/10 bg-ink-950 p-6 hover:border-accent/60 hover:bg-ink-800 transition-colors min-h-[120px]">'
-        f'<span class="font-display text-xl font-bold group-hover:text-accent transition-colors">{esc(title)}</span>'
-        f'<span class="font-mono text-xs uppercase tracking-widest text-paper-300 mt-3">{esc(sub)} <span class="group-hover:translate-x-1 inline-block transition-transform">&rarr;</span></span>'
+        f'<a href="{esc(href)}" class="group flex flex-col justify-between border border-white/10 bg-walnut-950 p-6 hover:border-stain/60 hover:bg-walnut-800 transition-colors min-h-[120px]">'
+        f'<span class="font-display text-xl font-bold group-hover:text-stain transition-colors">{esc(title)}</span>'
+        f'<span class="font-mono text-xs uppercase tracking-widest text-linen-300 mt-3">{esc(sub)} <span class="group-hover:translate-x-1 inline-block transition-transform">&rarr;</span></span>'
         f'</a>'
     )
 
@@ -208,7 +208,7 @@ def landing_body(pubs, by_city, by_decade, by_format, by_medium, slugs, timestam
     featured = [p for p in pubs if featured_kind(p)]
     b = page_title("The NJ Black Press archive, page by page")
     b += (
-        '<p class="text-lg md:text-xl text-paper-300 font-light leading-relaxed max-w-2xl mb-10 border-l border-white/10 pl-5">'
+        '<p class="text-lg md:text-xl text-linen-300 font-light leading-relaxed max-w-2xl mb-10 border-l border-white/10 pl-5">'
         'A browsable companion to the database: one page per publication, cross-linked by city, decade, format, and medium, '
         'with statistics and curated highlights. Built for readers, researchers, and machines alike.</p>'
     )
@@ -220,8 +220,8 @@ def landing_body(pubs, by_city, by_decade, by_format, by_medium, slugs, timestam
         ("Founding span", year_range(pubs)),
     ]
     cells = "".join(
-        f'<div class="border border-white/10 bg-ink-950 p-5"><div class="font-display text-3xl font-bold text-accent">{esc(v)}</div>'
-        f'<div class="font-mono text-[11px] uppercase tracking-widest text-paper-300 mt-1">{esc(k)}</div></div>'
+        f'<div class="border border-white/10 bg-walnut-950 p-5"><div class="font-display text-3xl font-bold text-stain">{esc(v)}</div>'
+        f'<div class="font-mono text-[11px] uppercase tracking-widest text-linen-300 mt-1">{esc(k)}</div></div>'
         for k, v in stats
     )
     b += f'<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">{cells}</div>'
@@ -245,9 +245,9 @@ def landing_body(pubs, by_city, by_decade, by_format, by_medium, slugs, timestam
     if featured:
         b += section_title("Featured publications")
         b += pub_grid(sorted(featured, key=lambda p: p.get("yearFounded") or 9999)[:6], 0, "")
-        b += '<p class="mt-4 font-mono text-xs uppercase tracking-widest"><a href="featured.html" class="inline-block py-[15px] text-accent hover:text-white transition-colors">See all featured &rarr;</a></p>'
+        b += '<p class="mt-4 font-mono text-xs uppercase tracking-widest"><a href="featured.html" class="inline-block py-[15px] text-stain hover:text-white transition-colors">See all featured &rarr;</a></p>'
 
-    b += f'<p class="mt-16 font-mono text-[11px] uppercase tracking-widest text-paper-300/60">Generated {esc(timestamp)} from data/publications.json</p>'
+    b += f'<p class="mt-16 font-mono text-[11px] uppercase tracking-widest text-linen-300/60">Generated {esc(timestamp)} from data/publications.json</p>'
     return b
 
 
@@ -264,24 +264,24 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
     meta = f"{esc(city)} &middot; {esc(decade)} &middot; {esc(life_span(pub))}"
     if feat:
         meta += f" &middot; featured {esc(feat)}"
-    b += f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-4">{meta}</p>'
+    b += f'<p class="font-mono text-xs uppercase tracking-widest text-linen-300 mb-4">{meta}</p>'
 
     # Reciprocal link back to the main-site detail page (publication.html links here).
     b += (f'<p class="mb-8"><a href="{wiki_root}../publication.html?id={pub["id"]}" '
-          f'class="inline-block py-[14px] font-mono text-xs uppercase tracking-widest text-accent '
+          f'class="inline-block py-[14px] font-mono text-xs uppercase tracking-widest text-stain '
           f'hover:text-white transition-colors focus-visible:outline focus-visible:outline-2 '
-          f'focus-visible:outline-offset-2 focus-visible:outline-accent">'
+          f'focus-visible:outline-offset-2 focus-visible:outline-stain">'
           f'Main site record for {esc(name)} <span aria-hidden="true">&rarr;</span></a></p>')
 
     rows = [
         ("Alternate name", esc(clean(pub.get("alternateName")) or "—")),
-        ("City", f'<a href="{wiki_root}cities/{city_slugs[city]}.html" class="inline-block py-[14px] text-accent hover:text-white transition-colors">{esc(city)}</a>'),
+        ("City", f'<a href="{wiki_root}cities/{city_slugs[city]}.html" class="inline-block py-[14px] text-stain hover:text-white transition-colors">{esc(city)}</a>'),
         ("Publishers / owners", esc(clean(pub.get("publishers")) or "—")),
         ("Active years", esc(life_span(pub))),
         ("Status", esc(status_label(pub))),
-        ("Decade", f'<a href="{wiki_root}decades/{decade_slugs[decade]}.html" class="inline-block py-[14px] text-accent hover:text-white transition-colors">{esc(decade)}</a>'),
-        ("Format", f'<a href="{wiki_root}formats/{format_slugs[fmt]}.html" class="inline-block py-[14px] text-accent hover:text-white transition-colors">{esc(fmt)}</a>'),
-        ("Medium", f'<a href="{wiki_root}mediums/{medium_slugs[medium]}.html" class="inline-block py-[14px] text-accent hover:text-white transition-colors">{esc(medium)}</a>'),
+        ("Decade", f'<a href="{wiki_root}decades/{decade_slugs[decade]}.html" class="inline-block py-[14px] text-stain hover:text-white transition-colors">{esc(decade)}</a>'),
+        ("Format", f'<a href="{wiki_root}formats/{format_slugs[fmt]}.html" class="inline-block py-[14px] text-stain hover:text-white transition-colors">{esc(fmt)}</a>'),
+        ("Medium", f'<a href="{wiki_root}mediums/{medium_slugs[medium]}.html" class="inline-block py-[14px] text-stain hover:text-white transition-colors">{esc(medium)}</a>'),
         ("Frequency", esc(clean(pub.get("frequency")) or "—")),
         ("Languages", esc(clean(pub.get("languages")) or "—")),
         ("Primary focus", esc(clean(pub.get("primaryFocus")) or "—")),
@@ -289,8 +289,8 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
     ]
     row_html = "".join(
         f'<div class="grid grid-cols-3 gap-4 py-3 border-b border-white/10">'
-        f'<dt class="font-mono text-[11px] uppercase tracking-widest text-paper-300 pt-1">{k}</dt>'
-        f'<dd class="col-span-2 text-paper-100">{v}</dd></div>'
+        f'<dt class="font-mono text-[11px] uppercase tracking-widest text-linen-300 pt-1">{k}</dt>'
+        f'<dd class="col-span-2 text-linen-100">{v}</dd></div>'
         for k, v in rows
     )
     b += f'<dl class="mb-4">{row_html}</dl>'
@@ -299,7 +299,7 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
         value = clean(pub.get(key))
         if value:
             b += section_title(heading)
-            b += f'<p class="text-lg text-paper-200 font-light leading-relaxed max-w-3xl">{esc(value)}</p>'
+            b += f'<p class="text-lg text-linen-200 font-light leading-relaxed max-w-3xl">{esc(value)}</p>'
 
     archive_url = as_link_url(pub.get("archiveUrl"))
     website_url = as_link_url(pub.get("websiteUrl"))
@@ -314,10 +314,10 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
         b += '<div class="flex flex-wrap items-center gap-3">'
         for url, label in links:
             b += (f'<a href="{esc(url)}" target="_blank" rel="noopener noreferrer" '
-                  f'class="inline-flex items-center gap-2 border border-white/15 px-4 py-2 font-mono text-xs uppercase tracking-widest hover:border-accent hover:text-accent transition-colors">{esc(label)} &nearr;</a>')
+                  f'class="inline-flex items-center gap-2 border border-white/15 px-4 py-2 font-mono text-xs uppercase tracking-widest hover:border-stain hover:text-stain transition-colors">{esc(label)} &nearr;</a>')
         if archive_ref and not archive_url:
-            b += (f'<span class="inline-flex items-center gap-2 border border-white/10 bg-ink-950 px-4 py-2 font-mono text-xs text-paper-300">'
-                  f'<span class="uppercase tracking-widest text-paper-300/60">Catalog</span> {esc(archive_ref)}</span>')
+            b += (f'<span class="inline-flex items-center gap-2 border border-white/10 bg-walnut-950 px-4 py-2 font-mono text-xs text-linen-300">'
+                  f'<span class="uppercase tracking-widest text-linen-300/60">Catalog</span> {esc(archive_ref)}</span>')
         b += "</div>"
 
     def siblings(group, limit=6):
@@ -329,10 +329,10 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
     if city_sib or decade_sib:
         b += section_title("Related publications")
         if city_sib:
-            b += f'<h3 class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-3 mt-2">Also in {esc(city)}</h3>'
+            b += f'<h3 class="font-mono text-xs uppercase tracking-widest text-linen-300 mb-3 mt-2">Also in {esc(city)}</h3>'
             b += pub_grid(city_sib, depth, wiki_root)
         if decade_sib:
-            b += f'<h3 class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-3 mt-6">Also from the {esc(decade)}</h3>'
+            b += f'<h3 class="font-mono text-xs uppercase tracking-widest text-linen-300 mb-3 mt-6">Also from the {esc(decade)}</h3>'
             b += pub_grid(decade_sib, depth, wiki_root)
     return b
 
@@ -343,8 +343,8 @@ def group_detail_body(kind, name, items, depth, wiki_root, slug) -> str:
     b = crumbs([("Wiki", f"{wiki_root}index.html"), (f"{singular} index", f"{wiki_root}{kind}.html"), (name, None)])
     b += page_title(name)
     if kind == "decades" and name in DECADE_CONTEXT:
-        b += f'<p class="text-lg text-paper-200 font-light mb-6 max-w-2xl">{esc(DECADE_CONTEXT[name])}</p>'
-    b += (f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-10">'
+        b += f'<p class="text-lg text-linen-200 font-light mb-6 max-w-2xl">{esc(DECADE_CONTEXT[name])}</p>'
+    b += (f'<p class="font-mono text-xs uppercase tracking-widest text-linen-300 mb-10">'
           f'{len(items)} publications &middot; {active} active &middot; founding years {esc(year_range(items))}</p>')
     ordered = sorted(items, key=lambda p: (p.get("yearFounded") or 9999, p.get("name") or ""))
     b += pub_grid(ordered, depth, wiki_root)
@@ -356,7 +356,7 @@ def group_index_body(kind, groups, slugs, depth) -> str:
     total = sum(len(v) for v in groups.values())
     b = crumbs([("Wiki", "index.html"), (f"{singular} index", None)])
     b += page_title(f"{singular} index")
-    b += f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-10">{len(groups)} {kind} &middot; {total} records</p>'
+    b += f'<p class="font-mono text-xs uppercase tracking-widest text-linen-300 mb-10">{len(groups)} {kind} &middot; {total} records</p>'
 
     if kind == "decades":
         names = sorted(groups, key=lambda n: (n == "Unknown", n))
@@ -375,10 +375,10 @@ def group_index_body(kind, groups, slugs, depth) -> str:
 def publications_index_body(pubs, depth) -> str:
     b = crumbs([("Wiki", "index.html"), ("Publications", None)])
     b += page_title("All publications")
-    b += f'<p class="font-mono text-xs uppercase tracking-widest text-paper-300 mb-10">{len(pubs)} records, alphabetical</p>'
+    b += f'<p class="font-mono text-xs uppercase tracking-widest text-linen-300 mb-10">{len(pubs)} records, alphabetical</p>'
     rows = ""
     for pub in sorted(pubs, key=lambda p: (p.get("name") or "").lower()):
-        star = ' <span class="text-accent">&#9733;</span>' if featured_kind(pub) else ""
+        star = ' <span class="text-stain">&#9733;</span>' if featured_kind(pub) else ""
         city_value = clean(pub.get("city")) or "Unknown"
         city = esc(city_value)
         founded = pub.get("yearFounded") or 9999
@@ -386,19 +386,19 @@ def publications_index_body(pubs, depth) -> str:
         years_order = f"{founded:04d}-{ceased:04d}" if isinstance(founded, int) and isinstance(ceased, int) else f"{founded}-{ceased}"
         status_order = 0 if pub.get("isActive") else 1
         rows += (
-            f'<tr class="border-b border-white/10 hover:bg-ink-800 transition-colors">'
-            f'<td class="py-3 pl-5 pr-4" data-sort-value="{esc(pub["name"])}"><a href="publications/{pub_html_name(pub)}" class="font-display text-base font-semibold hover:text-accent transition-colors">{esc(pub["name"])}{star}</a></td>'
-            f'<td class="py-3 pr-4 text-paper-300 text-sm" data-sort-value="{city}">{city}</td>'
-            f'<td class="py-3 pr-4 font-mono text-xs text-paper-300 whitespace-nowrap" data-sort-value="{years_order}">{esc(life_span(pub))}</td>'
+            f'<tr class="border-b border-white/10 hover:bg-walnut-800 transition-colors">'
+            f'<td class="py-3 pl-5 pr-4" data-sort-value="{esc(pub["name"])}"><a href="publications/{pub_html_name(pub)}" class="font-display text-base font-semibold hover:text-stain transition-colors">{esc(pub["name"])}{star}</a></td>'
+            f'<td class="py-3 pr-4 text-linen-300 text-sm" data-sort-value="{city}">{city}</td>'
+            f'<td class="py-3 pr-4 font-mono text-xs text-linen-300 whitespace-nowrap" data-sort-value="{years_order}">{esc(life_span(pub))}</td>'
             f'<td class="py-3 pl-4 pr-5 text-right whitespace-nowrap" data-sort-value="{status_order}">{status_text(pub)}</td>'
             f'</tr>'
         )
-    b += ('<div class="overflow-x-auto border border-white/10 bg-ink-950"><table class="w-full text-left" id="publication-index">'
-          '<thead><tr class="font-mono text-[10px] uppercase tracking-widest text-paper-300 border-b border-white/15">'
-          '<th class="py-2 pl-5 pr-4" aria-sort="ascending"><button type="button" aria-label="Sort by publication" class="group inline-flex min-h-11 items-center gap-2 text-left hover:text-accent focus-visible:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-sort-key="publication">Publication <span aria-hidden="true" class="text-accent">&#8593;</span></button></th>'
-          '<th class="py-2 pr-4"><button type="button" aria-label="Sort by city" class="group inline-flex min-h-11 items-center gap-2 text-left hover:text-accent focus-visible:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-sort-key="city">City <span aria-hidden="true" class="opacity-40">&#8597;</span></button></th>'
-          '<th class="py-2 pr-4"><button type="button" aria-label="Sort by years" class="group inline-flex min-h-11 items-center gap-2 text-left hover:text-accent focus-visible:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-sort-key="years">Years <span aria-hidden="true" class="opacity-40">&#8597;</span></button></th>'
-          '<th class="py-2 pl-4 pr-5 text-right"><button type="button" aria-label="Sort by status" class="ml-auto inline-flex min-h-11 items-center gap-2 text-right hover:text-accent focus-visible:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent" data-sort-key="status">Status <span aria-hidden="true" class="opacity-40">&#8597;</span></button></th></tr></thead>'
+    b += ('<div class="overflow-x-auto border border-white/10 bg-walnut-950"><table class="w-full text-left" id="publication-index">'
+          '<thead><tr class="font-mono text-[10px] uppercase tracking-widest text-linen-300 border-b border-white/15">'
+          '<th class="py-2 pl-5 pr-4" aria-sort="ascending"><button type="button" aria-label="Sort by publication" class="group inline-flex min-h-11 items-center gap-2 text-left hover:text-stain focus-visible:text-stain focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stain" data-sort-key="publication">Publication <span aria-hidden="true" class="text-stain">&#8593;</span></button></th>'
+          '<th class="py-2 pr-4"><button type="button" aria-label="Sort by city" class="group inline-flex min-h-11 items-center gap-2 text-left hover:text-stain focus-visible:text-stain focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stain" data-sort-key="city">City <span aria-hidden="true" class="opacity-40">&#8597;</span></button></th>'
+          '<th class="py-2 pr-4"><button type="button" aria-label="Sort by years" class="group inline-flex min-h-11 items-center gap-2 text-left hover:text-stain focus-visible:text-stain focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stain" data-sort-key="years">Years <span aria-hidden="true" class="opacity-40">&#8597;</span></button></th>'
+          '<th class="py-2 pl-4 pr-5 text-right"><button type="button" aria-label="Sort by status" class="ml-auto inline-flex min-h-11 items-center gap-2 text-right hover:text-stain focus-visible:text-stain focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stain" data-sort-key="status">Status <span aria-hidden="true" class="opacity-40">&#8597;</span></button></th></tr></thead>'
           f'<tbody>{rows}</tbody></table></div>'
           '<p class="sr-only" aria-live="polite" id="publication-sort-status"></p>'
           '<script src="../js/wiki-publications.js"></script>')
@@ -414,8 +414,8 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
     stats = [("Records", str(total)), ("Active", str(active)), ("Ceased", str(total - active)),
              ("Cities", str(len(by_city))), ("Formats", str(len(by_format))), ("Span", year_range(pubs))]
     cells = "".join(
-        f'<div class="border border-white/10 bg-ink-950 p-4"><div class="font-display text-2xl font-bold text-accent">{esc(v)}</div>'
-        f'<div class="font-mono text-[10px] uppercase tracking-widest text-paper-300 mt-1">{esc(k)}</div></div>'
+        f'<div class="border border-white/10 bg-walnut-950 p-4"><div class="font-display text-2xl font-bold text-stain">{esc(v)}</div>'
+        f'<div class="font-mono text-[10px] uppercase tracking-widest text-linen-300 mt-1">{esc(k)}</div></div>'
         for k, v in stats
     )
     b += f'<div class="grid grid-cols-3 lg:grid-cols-6 gap-3 mb-4">{cells}</div>'
@@ -431,13 +431,13 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
         bars += (
             f'<a href="decades/{slugs["decades"][dec]}.html" class="group block">'
             f'<div class="flex items-center gap-3 py-1">'
-            f'<span class="w-16 shrink-0 font-mono text-xs text-paper-300 group-hover:text-accent transition-colors text-right">{esc(dec)}</span>'
+            f'<span class="w-16 shrink-0 font-mono text-xs text-linen-300 group-hover:text-stain transition-colors text-right">{esc(dec)}</span>'
             f'<span class="flex-1 h-5 bg-white/5 relative">'
-            f'<span class="absolute inset-y-0 left-0 bg-accent/70 group-hover:bg-accent transition-colors" style="width:{pct}%"></span></span>'
-            f'<span class="w-8 shrink-0 font-mono text-xs text-paper-300 text-right">{len(items)}</span>'
+            f'<span class="absolute inset-y-0 left-0 bg-stain/70 group-hover:bg-stain transition-colors" style="width:{pct}%"></span></span>'
+            f'<span class="w-8 shrink-0 font-mono text-xs text-linen-300 text-right">{len(items)}</span>'
             f'</div></a>'
         )
-    b += f'<div class="border border-white/10 bg-ink-950 p-5">{bars}</div>'
+    b += f'<div class="border border-white/10 bg-walnut-950 p-5">{bars}</div>'
 
     # top cities
     b += section_title("Cities by publication count")
@@ -445,33 +445,33 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
     rows = ""
     for name, items in ranked:
         ca = sum(1 for p in items if p.get("isActive"))
-        rows += (f'<tr class="border-b border-white/10 hover:bg-ink-800 transition-colors">'
-                 f'<td class="py-2.5 pr-4"><a href="cities/{slugs["cities"][name]}.html" class="inline-block py-[14px] hover:text-accent transition-colors">{esc(name)}</a></td>'
+        rows += (f'<tr class="border-b border-white/10 hover:bg-walnut-800 transition-colors">'
+                 f'<td class="py-2.5 pr-4"><a href="cities/{slugs["cities"][name]}.html" class="inline-block py-[14px] hover:text-stain transition-colors">{esc(name)}</a></td>'
                  f'<td class="py-2.5 pr-4 font-mono text-sm text-right">{len(items)}</td>'
-                 f'<td class="py-2.5 font-mono text-sm text-right text-paper-300">{ca}</td></tr>')
-    b += ('<div class="border border-white/10 bg-ink-950 p-2"><table class="w-full text-left">'
-          '<thead><tr class="font-mono text-[10px] uppercase tracking-widest text-paper-300 border-b border-white/15">'
+                 f'<td class="py-2.5 font-mono text-sm text-right text-linen-300">{ca}</td></tr>')
+    b += ('<div class="border border-white/10 bg-walnut-950 p-2"><table class="w-full text-left">'
+          '<thead><tr class="font-mono text-[10px] uppercase tracking-widest text-linen-300 border-b border-white/15">'
           '<th class="py-2 px-2">City</th><th class="py-2 pr-4 text-right">Records</th><th class="py-2 text-right">Active</th></tr></thead>'
           f'<tbody class="px-2">{rows}</tbody></table></div>')
     singles = sum(1 for v in by_city.values() if len(v) == 1)
-    b += f'<p class="mt-3 font-mono text-xs text-paper-300">{singles} cities have a single recorded publication. <a href="cities.html" class="text-accent hover:text-white transition-colors">Full city index &rarr;</a></p>'
+    b += f'<p class="mt-3 font-mono text-xs text-linen-300">{singles} cities have a single recorded publication. <a href="cities.html" class="text-stain hover:text-white transition-colors">Full city index &rarr;</a></p>'
 
     # medium + format categories side by side
     b += section_title("Medium & format")
     med = "".join(
-        f'<div class="flex justify-between py-2 border-b border-white/10"><span>{esc(name)}</span><span class="font-mono text-paper-300">{len(items)}</span></div>'
+        f'<div class="flex justify-between py-2 border-b border-white/10"><span>{esc(name)}</span><span class="font-mono text-linen-300">{len(items)}</span></div>'
         for name, items in sorted(by_medium.items(), key=lambda kv: -len(kv[1]))
     )
     cat_counts: Counter[str] = Counter()
     for pub in pubs:
         cat_counts[format_category(clean(pub.get("format")) or "Unknown")] += 1
     cats = "".join(
-        f'<div class="flex justify-between py-2 border-b border-white/10"><span>{esc(name)}</span><span class="font-mono text-paper-300">{count}</span></div>'
+        f'<div class="flex justify-between py-2 border-b border-white/10"><span>{esc(name)}</span><span class="font-mono text-linen-300">{count}</span></div>'
         for name, count in cat_counts.most_common()
     )
     b += ('<div class="grid grid-cols-1 md:grid-cols-2 gap-8">'
-          f'<div><h3 class="font-mono text-xs uppercase tracking-widest text-accent mb-2">Medium</h3>{med}</div>'
-          f'<div><h3 class="font-mono text-xs uppercase tracking-widest text-accent mb-2">Format category</h3>{cats}</div></div>')
+          f'<div><h3 class="font-mono text-xs uppercase tracking-widest text-stain mb-2">Medium</h3>{med}</div>'
+          f'<div><h3 class="font-mono text-xs uppercase tracking-widest text-stain mb-2">Format category</h3>{cats}</div></div>')
 
     # longest running
     def span_years(p):
@@ -484,11 +484,11 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
     b += section_title("Longest-running publications")
     rows = ""
     for span, pub in spans:
-        rows += (f'<tr class="border-b border-white/10 hover:bg-ink-800 transition-colors">'
-                 f'<td class="py-2.5 pr-4"><a href="publications/{pub_html_name(pub)}" class="hover:text-accent transition-colors">{esc(pub["name"])}</a></td>'
-                 f'<td class="py-2.5 pr-4 font-mono text-xs text-paper-300 whitespace-nowrap">{esc(life_span(pub))}</td>'
+        rows += (f'<tr class="border-b border-white/10 hover:bg-walnut-800 transition-colors">'
+                 f'<td class="py-2.5 pr-4"><a href="publications/{pub_html_name(pub)}" class="hover:text-stain transition-colors">{esc(pub["name"])}</a></td>'
+                 f'<td class="py-2.5 pr-4 font-mono text-xs text-linen-300 whitespace-nowrap">{esc(life_span(pub))}</td>'
                  f'<td class="py-2.5 font-mono text-sm text-right">{span} yrs</td></tr>')
-    b += ('<div class="border border-white/10 bg-ink-950 p-2"><table class="w-full text-left">'
+    b += ('<div class="border border-white/10 bg-walnut-950 p-2"><table class="w-full text-left">'
           f'<tbody>{rows}</tbody></table></div>')
     return b
 
@@ -498,7 +498,7 @@ def featured_body(pubs, depth) -> str:
     contemporary = [p for p in pubs if p.get("isFeaturedContemporary")]
     b = crumbs([("Wiki", "index.html"), ("Featured", None)])
     b += page_title("Featured publications")
-    b += '<p class="text-lg text-paper-300 font-light max-w-2xl mb-8">Publications highlighted on the archive site for their historical or contemporary significance.</p>'
+    b += '<p class="text-lg text-linen-300 font-light max-w-2xl mb-8">Publications highlighted on the archive site for their historical or contemporary significance.</p>'
     b += section_title(f"Historic ({len(historic)})")
     b += pub_grid(sorted(historic, key=lambda p: p.get("yearFounded") or 9999), depth, "")
     b += section_title(f"Contemporary ({len(contemporary)})")
@@ -509,16 +509,16 @@ def featured_body(pubs, depth) -> str:
 def data_model_body() -> str:
     b = crumbs([("Wiki", "index.html"), ("Data model", None)])
     b += page_title("Data model")
-    b += '<p class="text-lg text-paper-300 font-light max-w-2xl mb-8">Every publication page is generated from <code class="font-mono text-paper-100">data/publications.json</code>. Source values are preserved as written; empty values render as a dash.</p>'
+    b += '<p class="text-lg text-linen-300 font-light max-w-2xl mb-8">Every publication page is generated from <code class="font-mono text-linen-100">data/publications.json</code>. Source values are preserved as written; empty values render as a dash.</p>'
     rows = ""
     for field, desc, origin in FIELD_DOCS:
-        origin_text = ('<span class="font-mono text-xs text-accent">computed</span>'
+        origin_text = ('<span class="font-mono text-xs text-stain">computed</span>'
                        if origin == "computed" else '<span class="font-mono text-xs text-thread-400">source</span>')
         rows += (f'<tr class="border-b border-white/10">'
-                 f'<td class="py-3 pr-4 font-mono text-sm text-accent whitespace-nowrap">{esc(field)}</td>'
+                 f'<td class="py-3 pr-4 font-mono text-sm text-stain whitespace-nowrap">{esc(field)}</td>'
                  f'<td class="py-3 pr-4">{origin_text}</td>'
-                 f'<td class="py-3 text-paper-200">{esc(desc)}</td></tr>')
-    b += ('<div class="overflow-x-auto border border-white/10 bg-ink-950 p-2"><table class="w-full text-left">'
+                 f'<td class="py-3 text-linen-200">{esc(desc)}</td></tr>')
+    b += ('<div class="overflow-x-auto border border-white/10 bg-walnut-950 p-2"><table class="w-full text-left">'
           f'<tbody>{rows}</tbody></table></div>')
     return b
 

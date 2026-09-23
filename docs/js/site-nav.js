@@ -14,8 +14,6 @@
     { label: 'Historical notes', path: 'historical-notes.html' },
     { label: 'About', path: 'index.html#about' }
   ];
-  const stain = location.pathname.endsWith('/historical-notes.html');
-  const accent = stain ? 'stain' : 'accent';
   const activePath = location.pathname.split('/').pop() || 'index.html';
 
   const isActive = link => {
@@ -26,7 +24,7 @@
   const markup = (mobile = false) => links.map(link => {
     const active = isActive(link);
     const spacing = mobile ? 'inline-block py-2' : 'inline-block py-[14px]';
-    const color = active ? `text-${accent}` : `hover:text-${accent} transition-colors`;
+    const color = active ? 'text-stain' : 'hover:text-stain transition-colors';
     return `<li><a href="${url(link.path)}" class="${spacing} ${color}"${active ? ' aria-current="page"' : ''}>${link.label}</a></li>`;
   }).join('');
 
@@ -44,8 +42,8 @@
   if (!menu) {
     const mobileLink = document.querySelector('nav a.md\\:hidden');
     if (mobileLink) {
-      mobileLink.outerHTML = `<button id="mobile-menu-btn" class="md:hidden p-[10px] text-paper-100 hover:text-${accent}" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true">Menu</span></button>`;
-      document.querySelector('nav').insertAdjacentHTML('afterend', `<div id="mobile-menu" class="fixed inset-0 bg-ink-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center"><button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-paper-300 hover:text-${accent}" aria-label="Close menu">Close</button><ul class="space-y-6 text-center font-display text-2xl font-medium tracking-wide"></ul></div>`);
+      mobileLink.outerHTML = `<button id="mobile-menu-btn" class="md:hidden p-[10px] text-linen-100 hover:text-stain" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true">Menu</span></button>`;
+      document.querySelector('nav').insertAdjacentHTML('afterend', `<div id="mobile-menu" class="fixed inset-0 bg-walnut-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center"><button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-linen-300 hover:text-stain" aria-label="Close menu">Close</button><ul class="space-y-6 text-center font-display text-2xl font-medium tracking-wide"></ul></div>`);
       menu = document.getElementById('mobile-menu');
       openButton = document.getElementById('mobile-menu-btn');
       closeButton = document.getElementById('mobile-menu-close');

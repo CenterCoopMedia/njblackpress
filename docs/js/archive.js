@@ -148,10 +148,10 @@
         // Status buttons
         elements.statusBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                elements.statusBtns.forEach(b => b.classList.remove('active', 'text-accent'));
-                elements.statusBtns.forEach(b => b.classList.add('text-paper-300'));
-                btn.classList.add('active', 'text-accent');
-                btn.classList.remove('text-paper-300');
+                elements.statusBtns.forEach(b => b.classList.remove('active', 'text-stain'));
+                elements.statusBtns.forEach(b => b.classList.add('text-linen-300'));
+                btn.classList.add('active', 'text-stain');
+                btn.classList.remove('text-linen-300');
 
                 state.filters.status = btn.dataset.status;
                 state.page = 1;
@@ -229,11 +229,11 @@
 
         // Status
         elements.statusBtns.forEach(btn => {
-            btn.classList.remove('active', 'text-accent');
-            btn.classList.add('text-paper-300');
+            btn.classList.remove('active', 'text-stain');
+            btn.classList.add('text-linen-300');
             if (btn.dataset.status === state.filters.status) {
-                btn.classList.add('active', 'text-accent');
-                btn.classList.remove('text-paper-300');
+                btn.classList.add('active', 'text-stain');
+                btn.classList.remove('text-linen-300');
             }
         });
 
@@ -248,19 +248,19 @@
         if (state.view === 'grid') {
             elements.resultsGrid.classList.remove('hidden');
             elements.resultsList.classList.add('hidden');
-            elements.viewGrid.classList.add('text-accent');
-            elements.viewGrid.classList.remove('text-paper-300');
-            elements.viewList.classList.remove('text-accent');
-            elements.viewList.classList.add('text-paper-300');
+            elements.viewGrid.classList.add('text-stain');
+            elements.viewGrid.classList.remove('text-linen-300');
+            elements.viewList.classList.remove('text-stain');
+            elements.viewList.classList.add('text-linen-300');
             elements.viewGrid.setAttribute('aria-pressed', 'true');
             elements.viewList.setAttribute('aria-pressed', 'false');
         } else {
             elements.resultsGrid.classList.add('hidden');
             elements.resultsList.classList.remove('hidden');
-            elements.viewList.classList.add('text-accent');
-            elements.viewList.classList.remove('text-paper-300');
-            elements.viewGrid.classList.remove('text-accent');
-            elements.viewGrid.classList.add('text-paper-300');
+            elements.viewList.classList.add('text-stain');
+            elements.viewList.classList.remove('text-linen-300');
+            elements.viewGrid.classList.remove('text-stain');
+            elements.viewGrid.classList.add('text-linen-300');
             elements.viewList.setAttribute('aria-pressed', 'true');
             elements.viewGrid.setAttribute('aria-pressed', 'false');
         }
@@ -379,7 +379,7 @@
                     </header>
 
                     <a href="publication.html?id=${pub.id}" class="block group">
-                        <h2 class="font-display text-xl font-bold text-linen-100 mb-1 leading-tight group-hover:text-accent transition-colors">
+                        <h2 class="font-display text-xl font-bold text-linen-100 mb-1 leading-tight group-hover:text-stain transition-colors">
                             ${escapeHtml(pub.name)}
                         </h2>
                     </a>
@@ -397,7 +397,7 @@
                     ` : ''}
 
                     <footer class="flex gap-4 mt-4 pt-4 border-t border-walnut-600">
-                        <a href="publication.html?id=${pub.id}" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-linen-50 transition-colors">
+                        <a href="publication.html?id=${pub.id}" class="hit-area-link text-xs font-mono uppercase tracking-wider text-stain hover:text-linen-50 transition-colors">
                             View record &rarr;
                         </a>
                         ${pub.websiteUrl ? `
@@ -420,20 +420,20 @@
 
             return `
                 <a href="publication.html?id=${pub.id}"
-                   class="list-row py-4 border-b border-walnut-600 hover:bg-ink-800 transition-colors px-2 -mx-2 fade-in"
+                   class="list-row py-4 border-b border-walnut-600 hover:bg-walnut-800 transition-colors px-2 -mx-2 fade-in"
                    style="animation-delay: ${Math.min(index * 20, 200)}ms">
 
                     <div class="flex items-center gap-3">
                         <span class="font-mono text-xs text-linen-300 index-number hidden md:inline">#${String(pub.id).padStart(3, '0')}</span>
-                        <span class="font-display text-lg font-bold text-paper-100 hover:text-accent transition-colors">${escapeHtml(pub.name)}</span>
+                        <span class="font-display text-lg font-bold text-linen-100 hover:text-stain transition-colors">${escapeHtml(pub.name)}</span>
                     </div>
 
-                    <span class="text-sm text-paper-300 hidden md:block">${escapeHtml(pub.city || 'NJ')}</span>
-                    <span class="font-mono text-xs text-paper-300 hidden md:block">${years}</span>
+                    <span class="text-sm text-linen-300 hidden md:block">${escapeHtml(pub.city || 'NJ')}</span>
+                    <span class="font-mono text-xs text-linen-300 hidden md:block">${years}</span>
                     <span class="font-mono text-xs ${statusClass} text-right hidden md:block">${statusText}</span>
 
                     <!-- Mobile info -->
-                    <div class="md:hidden text-xs text-paper-300 mt-1">
+                    <div class="md:hidden text-xs text-linen-300 mt-1">
                         ${escapeHtml(pub.city || 'NJ')} &middot; ${years} &middot; <span class="${statusClass}">${statusText}</span>
                     </div>
                 </a>
@@ -465,14 +465,14 @@
         // Finding 17: plain-text removable chips in the site's thread/stitch
         // idiom, not rounded pill badges.
         elements.activeFilters.innerHTML = `
-            <span class="font-mono text-xs text-paper-300 mr-2">Filters:</span>
+            <span class="font-mono text-xs text-linen-300 mr-2">Filters:</span>
             ${chips.map(chip => `
                 <button type="button" onclick="window.archivePage.clearFilter('${chip.type}')" class="filter-chip" aria-label="Remove filter: ${escapeAttr(chip.label)}">
                     ${escapeHtml(chip.label)}
                     <span class="filter-chip-x" aria-hidden="true">&times;</span>
                 </button>
             `).join('')}
-            <button type="button" onclick="window.archivePage.resetFilters()" class="text-xs text-accent hover:underline font-mono ml-2">
+            <button type="button" onclick="window.archivePage.resetFilters()" class="text-xs text-stain hover:underline font-mono ml-2">
                 Clear all
             </button>
         `;
@@ -491,11 +491,11 @@
         } else if (type === 'status') {
             state.filters.status = 'all';
             elements.statusBtns.forEach(btn => {
-                btn.classList.remove('active', 'text-accent');
-                btn.classList.add('text-paper-300');
+                btn.classList.remove('active', 'text-stain');
+                btn.classList.add('text-linen-300');
                 if (btn.dataset.status === 'all') {
-                    btn.classList.add('active', 'text-accent');
-                    btn.classList.remove('text-paper-300');
+                    btn.classList.add('active', 'text-stain');
+                    btn.classList.remove('text-linen-300');
                 }
             });
         }
@@ -518,11 +518,11 @@
         elements.decadeFilter.value = 'all';
 
         elements.statusBtns.forEach(btn => {
-            btn.classList.remove('active', 'text-accent');
-            btn.classList.add('text-paper-300');
+            btn.classList.remove('active', 'text-stain');
+            btn.classList.add('text-linen-300');
             if (btn.dataset.status === 'all') {
-                btn.classList.add('active', 'text-accent');
-                btn.classList.remove('text-paper-300');
+                btn.classList.add('active', 'text-stain');
+                btn.classList.remove('text-linen-300');
             }
         });
 
@@ -622,9 +622,9 @@
 
     function showError(message) {
         elements.resultsGrid.innerHTML = `
-            <div class="col-span-full text-center py-12 border border-accent/50 bg-accent/5">
-                <p class="text-accent font-mono uppercase tracking-widest mb-2">Error</p>
-                <p class="text-paper-300">${escapeHtml(message)}</p>
+            <div class="col-span-full text-center py-12 border border-stain/50 bg-stain/5">
+                <p class="text-stain font-mono uppercase tracking-widest mb-2">Error</p>
+                <p class="text-linen-300">${escapeHtml(message)}</p>
             </div>
         `;
     }

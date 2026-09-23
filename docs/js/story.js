@@ -187,7 +187,7 @@
             const gridClass = byEra[era].length === 1 ? 'grid grid-cols-1 gap-4' : 'grid grid-cols-1 md:grid-cols-2 gap-4';
             return `
             <section class="mb-14">
-                <h2 class="font-display text-2xl font-bold text-paper-100 mb-2">${escapeHtml(formatEra(era))}</h2>
+                <h2 class="font-display text-2xl font-bold text-linen-100 mb-2">${escapeHtml(formatEra(era))}</h2>
                 <hr class="rail-wood mb-6" aria-hidden="true">
                 <ul class="${gridClass}">
                     ${byEra[era].map(s => storyCard(s)).join('')}
@@ -199,12 +199,12 @@
         container.innerHTML = `
             <section class="px-4 md:px-8 py-12 md:py-16">
                 <div class="max-w-[1100px] mx-auto">
-                    <h1 class="type-impression font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[0.95] tracking-normal text-paper-100 mb-4 balance">Stories</h1>
-                    <p class="measure font-sans text-lg text-paper-200 leading-relaxed mb-10">
+                    <h1 class="type-impression font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[0.95] tracking-normal text-linen-100 mb-4 balance">Stories</h1>
+                    <p class="measure font-sans text-lg text-linen-200 leading-relaxed mb-10">
                         ${stories.length} narrative threads run through this archive. Each one is assembled from dated
                         events in the record, the publications they belong to, and the clippings we are cleared to show.
                         Read a thread, or browse the same material
-                        <a href="era.html" class="link-thread text-accent hover:text-paper-100 transition-colors">decade by decade</a>.
+                        <a href="era.html" class="link-thread text-stain hover:text-linen-100 transition-colors">decade by decade</a>.
                     </p>
                     ${groups}
                 </div>
@@ -218,17 +218,17 @@
         const opening = firstSentence(story.thread);
         const weak = story.strength === 'weak';
         return `
-            <li class="surface-cloth bg-ink-700 border border-ink-600 p-6 flex flex-col gap-3">
+            <li class="surface-cloth bg-walnut-700 border border-walnut-600 p-6 flex flex-col gap-3">
                 <h3 class="font-display text-xl font-bold leading-snug">
-                    <a href="story.html?id=${encodeURIComponent(story.id)}" class="text-paper-100 hover:text-accent transition-colors">${escapeHtml(story.title)}</a>
+                    <a href="story.html?id=${encodeURIComponent(story.id)}" class="text-linen-100 hover:text-stain transition-colors">${escapeHtml(story.title)}</a>
                 </h3>
-                ${opening ? `<p class="font-sans text-[15px] text-paper-200 leading-relaxed">${escapeHtml(opening)}</p>` : ''}
-                <p class="font-mono text-[11px] text-paper-300 mt-auto">
+                ${opening ? `<p class="font-sans text-[15px] text-linen-200 leading-relaxed">${escapeHtml(opening)}</p>` : ''}
+                <p class="font-mono text-[11px] text-linen-300 mt-auto">
                     ${escapeHtml(formatEra(story.era) || 'era not recorded')} &middot;
                     ${stops === 1 ? '1 dated stop' : stops + ' dated stops'} &middot;
                     ${pubs === 1 ? '1 publication' : pubs + ' publications'}
                 </p>
-                ${weak ? `<p class="font-mono text-[11px] text-accent">Thinly sourced. This thread rests on very little evidence.</p>` : ''}
+                ${weak ? `<p class="font-mono text-[11px] text-stain">Thinly sourced. This thread rests on very little evidence.</p>` : ''}
             </li>
         `;
     }
@@ -256,7 +256,7 @@
 
         const stopsHtml = stops.length > 0
             ? `<ol class="space-y-10">${stops.map((e, i) => stopEntry(e, i, shown)).join('')}</ol>`
-            : `<p class="measure font-sans text-paper-200">No dated events are logged for this thread yet.</p>`;
+            : `<p class="measure font-sans text-linen-200">No dated events are logged for this thread yet.</p>`;
 
         // Any cleared clipping for a publication in this thread that no stop
         // has already carried is shown after the chronology, so nothing held
@@ -283,13 +283,13 @@
             <article>
                 <header class="px-4 md:px-8 pt-12 md:pt-16 pb-8">
                     <div class="max-w-[1100px] mx-auto">
-                        <h1 class="type-impression font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[0.95] tracking-normal text-paper-100 mb-4 balance">${escapeHtml(story.title)}</h1>
-                        <p class="font-mono text-xs text-paper-300">
+                        <h1 class="type-impression font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[0.95] tracking-normal text-linen-100 mb-4 balance">${escapeHtml(story.title)}</h1>
+                        <p class="font-mono text-xs text-linen-300">
                             ${escapeHtml(formatEra(story.era) || 'era not recorded')} &middot;
                             ${stops.length === 1 ? '1 dated stop' : stops.length + ' dated stops'}${(story.people && story.people.length) ? ' &middot; ' + escapeHtml(story.people.join(', ')) : ''}
                         </p>
                         ${story.strength === 'weak' ? `
-                            <p class="measure font-mono text-xs text-accent mt-4">
+                            <p class="measure font-mono text-xs text-stain mt-4">
                                 Thinly sourced. This thread rests on very little evidence and should not be read as settled.
                             </p>
                         ` : ''}
@@ -298,7 +298,7 @@
 
                 <section class="px-4 md:px-8 pb-12">
                     <div class="max-w-[1100px] mx-auto">
-                        <p class="measure font-sans text-[18px] leading-[1.7] text-paper-50">${escapeHtml(story.thread || '')}</p>
+                        <p class="measure font-sans text-[18px] leading-[1.7] text-linen-50">${escapeHtml(story.thread || '')}</p>
                     </div>
                 </section>
 
@@ -306,17 +306,17 @@
 
                 <section class="px-4 md:px-8 py-12" aria-labelledby="stops-heading">
                     <div class="max-w-[1100px] mx-auto">
-                        <h2 id="stops-heading" class="font-display text-2xl font-bold text-paper-100 mb-2">Chronology</h2>
+                        <h2 id="stops-heading" class="font-display text-2xl font-bold text-linen-100 mb-2">Chronology</h2>
                         <hr class="rail-wood mb-8" aria-hidden="true">
                         ${stopsHtml}
-                        ${missingStops > 0 ? `<p class="measure font-mono text-[11px] text-paper-300 mt-8">${missingStops === 1 ? 'One event listed for this thread is not in the event record yet.' : missingStops + ' events listed for this thread are not in the event record yet.'}</p>` : ''}
+                        ${missingStops > 0 ? `<p class="measure font-mono text-[11px] text-linen-300 mt-8">${missingStops === 1 ? 'One event listed for this thread is not in the event record yet.' : missingStops + ' events listed for this thread are not in the event record yet.'}</p>` : ''}
                     </div>
                 </section>
 
                 ${leftovers.length > 0 ? `
-                <section class="px-4 md:px-8 py-12 bg-ink-800 border-y border-ink-600" aria-labelledby="clippings-heading">
+                <section class="px-4 md:px-8 py-12 bg-walnut-800 border-y border-walnut-600" aria-labelledby="clippings-heading">
                     <div class="max-w-[1100px] mx-auto">
-                        <h2 id="clippings-heading" class="font-display text-2xl font-bold text-paper-100 mb-2">More clippings from this thread</h2>
+                        <h2 id="clippings-heading" class="font-display text-2xl font-bold text-linen-100 mb-2">More clippings from this thread</h2>
                         <hr class="rail-wood mb-8" aria-hidden="true">
                         <div class="space-y-10">${leftovers.map(clippingFigure).join('')}</div>
                     </div>
@@ -325,37 +325,37 @@
 
                 <section class="px-4 md:px-8 py-12" aria-labelledby="pubs-heading">
                     <div class="max-w-[1100px] mx-auto">
-                        <h2 id="pubs-heading" class="font-display text-2xl font-bold text-paper-100 mb-2">Publications in this thread</h2>
+                        <h2 id="pubs-heading" class="font-display text-2xl font-bold text-linen-100 mb-2">Publications in this thread</h2>
                         <hr class="rail-wood mb-8" aria-hidden="true">
                         ${pubCards.length > 0 ? `
                             <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                                 ${pubCards.map(p => `
-                                    <li class="surface-cloth bg-ink-700 border border-ink-600 p-6">
-                                        <p class="font-mono text-[10px] uppercase tracking-widest text-paper-300 mb-2">${escapeHtml(p.city || 'New Jersey')}</p>
+                                    <li class="surface-cloth bg-walnut-700 border border-walnut-600 p-6">
+                                        <p class="font-mono text-[10px] uppercase tracking-widest text-linen-300 mb-2">${escapeHtml(p.city || 'New Jersey')}</p>
                                         <h3 class="font-display text-lg font-bold leading-snug">
-                                            <a href="publication.html?id=${p.id}" class="text-paper-100 hover:text-accent transition-colors">${escapeHtml(p.name)}</a>
+                                            <a href="publication.html?id=${p.id}" class="text-linen-100 hover:text-stain transition-colors">${escapeHtml(p.name)}</a>
                                         </h3>
-                                        <p class="font-mono text-xs text-paper-300 mt-2">${escapeHtml(formatYears(p))}</p>
-                                        ${p.decade && p.decade !== 'Unknown' ? `<p class="font-mono text-xs mt-2"><a href="era.html?decade=${encodeURIComponent(p.decade)}" class="text-accent hover:text-paper-100 transition-colors">The ${escapeHtml(p.decade)}</a></p>` : ''}
+                                        <p class="font-mono text-xs text-linen-300 mt-2">${escapeHtml(formatYears(p))}</p>
+                                        ${p.decade && p.decade !== 'Unknown' ? `<p class="font-mono text-xs mt-2"><a href="era.html?decade=${encodeURIComponent(p.decade)}" class="text-stain hover:text-linen-100 transition-colors">The ${escapeHtml(p.decade)}</a></p>` : ''}
                                     </li>
                                 `).join('')}
                             </ul>
-                        ` : `<p class="measure font-sans text-paper-200">No publication in the archive is linked to this thread yet.</p>`}
+                        ` : `<p class="measure font-sans text-linen-200">No publication in the archive is linked to this thread yet.</p>`}
                     </div>
                 </section>
 
                 <section class="px-4 md:px-8 pb-12">
                     <div class="max-w-[1100px] mx-auto flex flex-wrap gap-6 font-mono text-xs">
-                        <a href="story.html" class="text-accent hover:text-paper-100 transition-colors">All stories</a>
-                        ${eraDecades(story.era).length > 0 ? eraDecades(story.era).map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="text-accent hover:text-paper-100 transition-colors">The ${escapeHtml(d)}</a>`).join('') : ''}
+                        <a href="story.html" class="text-stain hover:text-linen-100 transition-colors">All stories</a>
+                        ${eraDecades(story.era).length > 0 ? eraDecades(story.era).map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="text-stain hover:text-linen-100 transition-colors">The ${escapeHtml(d)}</a>`).join('') : ''}
                     </div>
                 </section>
 
                 <nav class="px-4 md:px-8 pb-16" aria-label="Story navigation">
                     <div class="max-w-[1100px] mx-auto flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
-                        ${previousStory ? `<a href="story.html?id=${encodeURIComponent(previousStory.id)}" class="text-accent hover:text-paper-100 transition-colors"><span aria-hidden="true">&larr;</span> ${escapeHtml(previousStory.title)}</a>` : `<span class="text-paper-300">This is the first story in the index.</span>`}
-                        <a href="story.html" class="text-accent hover:text-paper-100 transition-colors">All stories</a>
-                        ${nextStory ? `<a href="story.html?id=${encodeURIComponent(nextStory.id)}" class="text-accent hover:text-paper-100 transition-colors">${escapeHtml(nextStory.title)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-paper-300">This is the last story in the index.</span>`}
+                        ${previousStory ? `<a href="story.html?id=${encodeURIComponent(previousStory.id)}" class="text-stain hover:text-linen-100 transition-colors"><span aria-hidden="true">&larr;</span> ${escapeHtml(previousStory.title)}</a>` : `<span class="text-linen-300">This is the first story in the index.</span>`}
+                        <a href="story.html" class="text-stain hover:text-linen-100 transition-colors">All stories</a>
+                        ${nextStory ? `<a href="story.html?id=${encodeURIComponent(nextStory.id)}" class="text-stain hover:text-linen-100 transition-colors">${escapeHtml(nextStory.title)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-linen-300">This is the last story in the index.</span>`}
                     </div>
                 </nav>
             </article>
@@ -392,17 +392,17 @@
         });
 
         return `
-            <li class="border-l-2 border-ink-600 pl-5 md:pl-6">
-                <p class="font-mono text-[11px] uppercase tracking-widest text-accent mb-2">${escapeHtml(formatDate(event.date))}</p>
-                <h3 class="font-display text-xl md:text-2xl font-bold text-paper-100 leading-snug measure balance mb-3">${escapeHtml(event.title)}</h3>
-                ${event.description ? `<p class="measure font-sans text-[17px] leading-[1.7] text-paper-200">${escapeHtml(event.description)}</p>` : ''}
-                ${event.confidence === 'medium' ? `<p class="measure font-mono text-[11px] text-paper-300 mt-3">Medium confidence. The date or the detail is not fully settled.</p>` : ''}
+            <li class="border-l-2 border-walnut-600 pl-5 md:pl-6">
+                <p class="font-mono text-[11px] uppercase tracking-widest text-stain mb-2">${escapeHtml(formatDate(event.date))}</p>
+                <h3 class="font-display text-xl md:text-2xl font-bold text-linen-100 leading-snug measure balance mb-3">${escapeHtml(event.title)}</h3>
+                ${event.description ? `<p class="measure font-sans text-[17px] leading-[1.7] text-linen-200">${escapeHtml(event.description)}</p>` : ''}
+                ${event.confidence === 'medium' ? `<p class="measure font-mono text-[11px] text-linen-300 mt-3">Medium confidence. The date or the detail is not fully settled.</p>` : ''}
                 ${pubs.length > 0 ? `
-                    <p class="font-mono text-[11px] text-paper-300 mt-3">
+                    <p class="font-mono text-[11px] text-linen-300 mt-3">
                         ${pubs.length === 1 ? 'Publication:' : 'Publications:'}
-                        ${pubs.map(p => `<a href="publication.html?id=${p.id}" class="text-accent hover:text-paper-100 transition-colors">${escapeHtml(p.name)}</a>`).join(', ')}
+                        ${pubs.map(p => `<a href="publication.html?id=${p.id}" class="text-stain hover:text-linen-100 transition-colors">${escapeHtml(p.name)}</a>`).join(', ')}
                     </p>
-                ` : `<p class="font-mono text-[11px] text-paper-300 mt-3">No publication in the archive is linked to this event yet.</p>`}
+                ` : `<p class="font-mono text-[11px] text-linen-300 mt-3">No publication in the archive is linked to this event yet.</p>`}
                 ${clips.length > 0 ? `<div class="mt-6 space-y-8">${clips.map(clippingFigure).join('')}</div>` : ''}
             </li>
         `;
@@ -418,9 +418,9 @@
         if (!clip.webPath || !clip.alt) return '';
         const cropped = clip.status === 'crop_first';
         return `
-            <figure class="evidence-figure surface-cloth bg-ink-700 border border-ink-600 p-4 max-w-[720px]">
+            <figure class="evidence-figure surface-cloth bg-walnut-700 border border-walnut-600 p-4 max-w-[720px]">
                 <div class="${cropped ? 'clip-mounted' : ''}">
-                    <button type="button" class="clip-trigger block w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2" aria-label="Enlarge image: ${escapeAttr(clip.alt)}">
+                    <button type="button" class="clip-trigger block w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-stain focus-visible:outline-offset-2" aria-label="Enlarge image: ${escapeAttr(clip.alt)}">
                         <img src="${escapeAttr(clip.webPath)}"
                              alt="${escapeAttr(clip.alt)}"
                              ${clip.width ? `width="${clip.width}"` : ''} ${clip.height ? `height="${clip.height}"` : ''}
@@ -428,10 +428,10 @@
                     </button>
                 </div>
                 <figcaption class="pt-4 space-y-2">
-                    ${clip.caption ? `<p class="measure font-sans text-[15px] text-paper-100 leading-relaxed">${escapeHtml(clip.caption)}</p>` : ''}
-                    ${cropped ? `<p class="measure font-mono text-[11px] text-paper-300">Cropped detail. The full page is not reproduced.</p>` : ''}
-                    ${clip.status === 'publishable_with_credit' ? `<p class="measure font-mono text-[11px] text-paper-300">Free to reuse with credit.</p>` : ''}
-                    ${clip.citation ? `<p class="measure font-mono text-[11px] text-paper-300 leading-relaxed"><cite class="not-italic">${escapeHtml(clip.citation)}</cite></p>` : ''}
+                    ${clip.caption ? `<p class="measure font-sans text-[15px] text-linen-100 leading-relaxed">${escapeHtml(clip.caption)}</p>` : ''}
+                    ${cropped ? `<p class="measure font-mono text-[11px] text-linen-300">Cropped detail. The full page is not reproduced.</p>` : ''}
+                    ${clip.status === 'publishable_with_credit' ? `<p class="measure font-mono text-[11px] text-linen-300">Free to reuse with credit.</p>` : ''}
+                    ${clip.citation ? `<p class="measure font-mono text-[11px] text-linen-300 leading-relaxed"><cite class="not-italic">${escapeHtml(clip.citation)}</cite></p>` : ''}
                 </figcaption>
             </figure>
         `;
@@ -534,7 +534,7 @@
         sep.setAttribute('aria-hidden', 'true');
         sep.textContent = '/';
         const current = document.createElement('li');
-        current.className = 'text-paper-100';
+        current.className = 'text-linen-100';
         current.setAttribute('aria-current', 'page');
         current.textContent = label;
         list.appendChild(sep);
@@ -545,8 +545,8 @@
         return `
             <section class="px-4 md:px-8 py-16">
                 <div class="max-w-[1100px] mx-auto">
-                    <h1 class="font-display text-4xl font-extrabold text-paper-100 mb-4">${escapeHtml(heading)}</h1>
-                    <p class="measure font-sans text-paper-200">${escapeHtml(message)}</p>
+                    <h1 class="font-display text-4xl font-extrabold text-linen-100 mb-4">${escapeHtml(heading)}</h1>
+                    <p class="measure font-sans text-linen-200">${escapeHtml(message)}</p>
                 </div>
             </section>
         `;
