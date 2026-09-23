@@ -99,6 +99,22 @@ def main() -> None:
     if re.search(r"woven", (DOCS / "llms.txt").read_text(encoding="utf-8"), re.I):
         errors.append("docs/llms.txt says Woven")
 
+    # A custom property that no stylesheet defines makes its declaration
+    # invalid, so the colour silently falls back (the map lost its counts' colour this way).
+    defined = set(re.findall(r"(--[a-z0-9-]+)\s*:", tokens))
+    for css in [DOCS / page for page in PAGES] + sorted((DOCS / "css").glob("*.css")):
+        if css.name == "tailwind.css":
+            continue
+        text = css.read_text(encoding="utf-8")
+        defined |= set(re.findall(r"(--[a-z0-9-]+)\s*:", text))
+    for script in (DOCS / "js").rglob("*.js"):
+        defined |= set(re.findall(r"setProperty\(\s*'(--[a-z0-9-]+)'", script.read_text(encoding="utf-8")))
+    for css in [DOCS / page for page in PAGES] + sorted((DOCS / "css").glob("*.css")):
+        if css.name == "tailwind.css":
+            continue
+        for name in sorted(set(re.findall(r"var\((--[a-z0-9-]+)\)", css.read_text(encoding="utf-8"))) - defined):
+            errors.append(f"{css.relative_to(ROOT)}: var({name}) is never defined")
+
     styles = (DOCS / "css" / "styles.css").read_text(encoding="utf-8")
     if ":is(a, button, input, select, textarea, summary, [tabindex]):focus-visible" not in styles:
         errors.append("docs/css/styles.css lacks the shared focus rule")
