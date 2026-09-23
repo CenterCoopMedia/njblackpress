@@ -289,6 +289,21 @@ body.twin-primary .woven-reading-key { display: none; }
 }
 
 /* ---------- small screens: the page frame ---------- */
+@media (min-width: 900px) {
+  /* The stage fills the window under the site header, and the hall controls
+     keep to one row, so the room is never a sliver under the controls. */
+  #woven-stage { height: clamp(520px, calc(100vh - 6rem), 860px); min-height: 520px; }
+  #woven-stage { height: clamp(520px, calc(100dvh - 6rem), 860px); }
+  #woven-hall-controls { padding: 0.5rem 0.75rem 0.55rem; }
+  #woven-hall-controls .bar-scroll { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; }
+  #hall-where { display: inline; margin: 0 0.75rem 0 0; }
+  #hall-hint { display: inline; margin: 0; max-width: none; }
+}
+@media (min-width: 900px) and (max-height: 950px) {
+  #woven-intro.woven-masthead { padding: 1.1rem 2.5rem 1rem; }
+  .woven-title-block h1 { font-size: clamp(2.2rem, 3.4vw, 3.4rem); }
+}
+
 @media (max-width: 1100px) {
   #woven-intro.woven-masthead { padding: 1.6rem; align-items: start; }
   .woven-title-block { gap: 1.3rem; }

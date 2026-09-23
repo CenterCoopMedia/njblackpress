@@ -79,6 +79,14 @@ for (const section of layout.sections) {
   assert.ok(section.entryAnchor && section.entryAnchor.position, `${section.id} has an entry anchor`);
   assert.ok(section.entryAnchor.position.z > section.startZ && section.entryAnchor.position.z < section.endZ);
   assert.equal(section.markerBounds.length, 2, `${section.id} keeps a marker on both walls`);
+  for (const b of section.markerBounds) {
+    // A blade sign: it reaches into the room from the wall face and is thin
+    // along the hall, so it can be read from far down the corridor.
+    assert.ok(Math.abs((b.maxX - b.minX) - layout.config.marker.length) < 1e-9, `${section.id} marker reaches into the room`);
+    assert.ok(Math.abs((b.maxZ - b.minZ) - layout.config.marker.depth) < 1e-9, `${section.id} marker is thin along the hall`);
+    assert.ok(Math.max(Math.abs(b.minX), Math.abs(b.maxX)) === layout.config.wallX, `${section.id} marker is mounted on a wall`);
+    assert.ok(Math.min(Math.abs(b.minX), Math.abs(b.maxX)) >= layout.config.corridorHalfWidth, `${section.id} marker stays out of the walking corridor`);
+  }
   previousEnd = section.endZ;
 }
 assert.equal(previousEnd, layout.length);

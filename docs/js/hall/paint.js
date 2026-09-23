@@ -33,6 +33,7 @@ export const FACE_SIZE = { width: 512, height: 704 };
 export const PLATE_SIZE = { width: 512, height: 100 };
 export const MARKER_SIZE = { width: 288, height: 256 };
 export const COVER_SIZE = { width: 320, height: 428 };
+export const END_WALL_SIZE = { width: 640, height: 800 };
 export const PAGE_SIZE = { width: 512, height: 704 };
 
 /**
@@ -264,6 +265,35 @@ export function paintMarker(label) {
   lines.forEach((line, i) => {
     ctx.fillText(line, width / 2, height / 2 + (i - (lines.length - 1) / 2) * lineHeight);
   });
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  return canvas;
+}
+
+/**
+ * The panel on the far wall: the site icon, the archive's name, and its span.
+ * It paints at once without the icon, then again when the icon has loaded.
+ */
+export function paintEndWall(icon, span) {
+  const { width, height } = END_WALL_SIZE;
+  const { canvas, ctx } = surface(width, height);
+  ctx.fillStyle = PAINT.paper;
+  ctx.fillRect(0, 0, width, height);
+  ctx.strokeStyle = PAINT.accent;
+  ctx.lineWidth = 10;
+  ctx.strokeRect(5, 5, width - 10, height - 10);
+  const iconSize = 420;
+  if (icon) ctx.drawImage(icon, (width - iconSize) / 2, 56, iconSize, iconSize);
+  ctx.fillStyle = PAINT.ink;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'alphabetic';
+  ctx.font = `800 64px ${PAINT.display}`;
+  ctx.fillText('NJ Black Press', width / 2, 568);
+  ctx.fillStyle = PAINT.accent;
+  ctx.fillText('Archive', width / 2, 640);
+  ctx.fillStyle = PAINT.inkSoft;
+  ctx.font = `500 30px ${PAINT.body}`;
+  ctx.fillText(span, width / 2, 712);
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
   return canvas;

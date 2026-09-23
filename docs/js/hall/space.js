@@ -8,7 +8,7 @@
 // walls is the brightest thing in the room, and it should stay that way.
 
 import * as THREE from 'three';
-import { paintFloor, paintWall, paintMarker, textureFrom, textureBytes, MARKER_SIZE } from './paint.js';
+import { paintFloor, paintWall, paintMarker, paintEndWall, textureFrom, textureBytes, MARKER_SIZE, END_WALL_SIZE } from './paint.js';
 
 // Every colour and light value the room uses, taken from the site's tokens.
 export const SPACE_CONFIG = {
@@ -75,29 +75,78 @@ export function buildSpace(layout, { anisotropy = 4 } = {}) {
     group.add(end);
   }
 
+  // ---- the far wall ------------------------------------------------------
+  // The archive's icon and name close the hall, so the walk ends somewhere.
+  // The panel is framed like the sheets and hangs at the same eye line.
+  const span = `${config.chronology.firstYear}\u2013${config.chronology.lastYear}`;
+  const endCanvas = paintEndWall(null, span);
+  const endTexture = track(textureFrom(endCanvas, anisotropy));
+  const panelHeight = 2.8;
+  const panelWidth = panelHeight * END_WALL_SIZE.width / END_WALL_SIZE.height;
+  const endPanel = new THREE.Group();
+  endPanel.name = 'hall-end-wall';
+  const endFrame = new THREE.Mesh(
+    track(new THREE.BoxGeometry(panelWidth + 0.16, panelHeight + 0.16, 0.08)),
+    track(new THREE.MeshLambertMaterial({ color: SPACE_CONFIG.frameWood }))
+  );
+  endFrame.userData.decorative = true;
+  const endFace = new THREE.Mesh(
+    track(new THREE.PlaneGeometry(panelWidth, panelHeight)),
+    track(new THREE.MeshLambertMaterial({ map: endTexture }))
+  );
+  endFace.position.z = 0.041;
+  endFace.userData.decorative = true;
+  endPanel.add(endFrame, endFace);
+  endPanel.position.set(0, config.frame.centreHeight + 0.55, length - 0.05);
+  endPanel.rotation.y = Math.PI;
+  group.add(endPanel);
+  const icon = new Image();
+  icon.addEventListener('load', () => {
+    const painted = paintEndWall(icon, span);
+    endCanvas.getContext('2d').drawImage(painted, 0, 0);
+    endTexture.needsUpdate = true;
+  }, { once: true });
+  icon.src = 'njblackpress-icon.png';
+
   // ---- decade markers ----------------------------------------------------
-  // One painted plate per wall at the head of each section, from the layout's
-  // own marker bounds, so nothing here can drift out of the tested layout.
+  // One blade sign per wall at the head of each section, from the layout's own
+  // marker bounds, so nothing here can drift out of the tested layout. The
+  // blade stands at a right angle to the wall on a bracket, and carries the
+  // decade on both faces: one read walking in, one read walking back.
   const markerMeshes = [];
+  const bladeEdge = track(new THREE.MeshLambertMaterial({ color: SPACE_CONFIG.frameWood }));
+  const bracketGeometry = track(new THREE.BoxGeometry(1, 0.035, 0.035));
   for (const section of layout.sections) {
     const texture = track(textureFrom(paintMarker(section.label), anisotropy));
     const material = track(new THREE.MeshLambertMaterial({ map: texture }));
     section.markerBounds.forEach((box, index) => {
+      const width = box.maxX - box.minX;
+      const height = box.maxY - box.minY;
+      const depth = box.maxZ - box.minZ;
+      const centre = new THREE.Vector3((box.minX + box.maxX) / 2, (box.minY + box.maxY) / 2, (box.minZ + box.maxZ) / 2);
+      const blade = new THREE.Group();
+      blade.name = `marker-${section.id}`;
+      blade.position.copy(centre);
+      const body = new THREE.Mesh(track(new THREE.BoxGeometry(width, height, depth * 0.6)), bladeEdge);
+      body.userData.decorative = true;
+      blade.add(body);
+      for (const facing of [-1, 1]) {
+        const face = new THREE.Mesh(track(new THREE.PlaneGeometry(width, height)), material);
+        face.position.z = facing * depth / 2;
+        if (facing < 0) face.rotation.y = Math.PI;
+        face.userData.decorative = true;
+        blade.add(face);
+        markerMeshes.push(face);
+      }
+      // A slim bracket from the wall carries the blade along its top edge.
       const side = index === 0 ? -1 : 1;
-      const plate = new THREE.Mesh(
-        track(new THREE.PlaneGeometry(box.maxZ - box.minZ, box.maxY - box.minY)),
-        material
-      );
-      plate.position.set(
-        side * (halfWidth - 0.02),
-        (box.minY + box.maxY) / 2,
-        (box.minZ + box.maxZ) / 2
-      );
-      plate.rotation.y = side < 0 ? Math.PI / 2 : -Math.PI / 2;
-      plate.name = `marker-${section.id}`;
-      plate.userData.decorative = true;
-      group.add(plate);
-      markerMeshes.push(plate);
+      const bracket = new THREE.Mesh(bracketGeometry, bladeEdge);
+      bracket.scale.x = width;
+      bracket.position.set(0, height / 2 + 0.03, 0);
+      bracket.userData.decorative = true;
+      blade.add(bracket);
+      blade.userData.wall = side < 0 ? 'left' : 'right';
+      group.add(blade);
     });
   }
 

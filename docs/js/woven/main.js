@@ -879,8 +879,8 @@ async function startScene(model, flat = false) {
     });
     const onFullscreenChange = () => {
       const isFull = (document.fullscreenElement || document.webkitFullscreenElement) === stage;
-      btnFullscreen.textContent = isFull ? 'Exit fullscreen' : 'Fullscreen';
-      btnFullscreen.setAttribute('aria-label', isFull ? 'Exit fullscreen' : 'Enter fullscreen');
+      // The label names the action, so it also serves as the accessible name.
+      btnFullscreen.textContent = isFull ? 'Exit full screen' : 'Full screen';
       // Escape exits fullscreen natively; this just keeps the renderer in sync
       // with the size change that follows.
       resize();

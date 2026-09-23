@@ -34,7 +34,9 @@ export const HALL_CONFIG = {
   wallThickness: 0.4,
   corridorHalfWidth: 1.6,
 
-  // Decade marker plate, mounted above the frames on both walls.
+  // Decade marker: a blade sign above the frames on both walls. It stands out
+  // from the wall at a right angle, so it reads from far down the hall.
+  // length is how far it reaches into the room; depth is its thickness.
   marker: { length: 0.9, height: 0.8, bottom: 2.7, depth: 0.06, offset: 0.3 },
 
   // Closed volume proportions from the specification: width across the spine,
@@ -393,13 +395,13 @@ function compareIds(a, b) {
 
 function markerBox(config, wall, startZ) {
   const sign = wall === 'left' ? -1 : 1;
-  const inner = sign * config.wallX;
-  const outer = inner - sign * config.marker.depth;
+  const wallFace = sign * config.wallX;
+  const tip = wallFace - sign * config.marker.length;
   const z0 = startZ + config.marker.offset;
   return box(
-    Math.min(inner, outer), Math.max(inner, outer),
+    Math.min(wallFace, tip), Math.max(wallFace, tip),
     config.marker.bottom, config.marker.bottom + config.marker.height,
-    z0, z0 + config.marker.length
+    z0, z0 + config.marker.depth
   );
 }
 
