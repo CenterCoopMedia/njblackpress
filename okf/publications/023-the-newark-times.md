@@ -2,7 +2,7 @@
 type: "publication"
 title: "The Newark Times"
 description: "Archive wiki record for The Newark Times."
-resource: "https://thenewarktimes.com/"
+resource: "http://thenewarktimes.com/"
 tags:
   - "nj-black-press"
   - "publication"
@@ -48,7 +48,7 @@ The Newark Times is a digital publication dedicated to sharing the perspectives 
 
 ## External links
 
-- [Website](https://thenewarktimes.com/)
+- [Website](http://thenewarktimes.com/)
 
 ## Related publications
 

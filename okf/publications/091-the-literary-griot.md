@@ -43,7 +43,7 @@ Editor: Ousseynou B. Traore.
 
 ## Historical notes
 
-[March 2026 research: Published 1988-2002 (ISSN 1053-9344). Based at Indiana University of Pennsylvania, not NJ as listed.] Note: Based at Indiana University of Pennsylvania, not New Jersey.
+A March 2026 search found that the journal was published from 1988 to 2002 (ISSN 1053-9344). It was based at Indiana University of Pennsylvania, not in New Jersey as this database lists it.
 
 ## Archive reference
 

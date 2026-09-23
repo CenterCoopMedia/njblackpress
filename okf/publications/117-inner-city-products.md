@@ -43,7 +43,7 @@ Editor: Donnette Bishop Johnson.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found at all.]
+A March 2026 search found no records of this publication in any searched database.
 
 ## Archive reference
 

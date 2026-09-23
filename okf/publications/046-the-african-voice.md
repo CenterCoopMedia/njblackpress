@@ -35,7 +35,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. LOC has 'Black New Ark' (1972-1974) from same era/city.]
+A March 2026 search found no records. The Library of Congress catalogs 'Black New Ark' (1972-1974), from the same era and city.
 
 ## Archive reference
 

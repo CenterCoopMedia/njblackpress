@@ -12,6 +12,12 @@ on:
       - 'scripts/generate_html_wiki.py'
       - 'scripts/build_sitemap.py'
       - 'data/test_site_metadata.py'
+      - 'data/test_publication_record.py'
+      - 'data/add_evidence.py'
+      - 'data/publications.json'
+      - 'data/research/source-catalog.json'
+      - 'data/research/rights/rights-manifest.json'
+      - 'data/research/loc/**'
       - 'data/test_design_system.py'
       - 'data/test_map.py'
       - 'data/test_wiki_publications.py'
@@ -68,6 +74,7 @@ jobs:
           python3 -m pip install pillow
           python3 data/test_site_data.py
           python3 data/test_site_metadata.py
+          python3 data/test_publication_record.py
           python3 data/test_design_system.py
           python3 data/test_map.py
           python3 data/test_wiki_publications.py

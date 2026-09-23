@@ -91,6 +91,7 @@ Use the smallest checks that cover the changed area:
 | Shared styles | `npm run build:css`, `python3 data/test_design_system.py`, and browser checks |
 | Publications and evidence | `python3 data/test_evidence.py` and `python3 data/test_source_catalog.py`, with the local evidence corpus |
 | Events and stories | `python3 data/test_site_data.py` |
+| Publication record, metadata, and evidence sources | `python3 data/test_publication_record.py` |
 | Page metadata, icons, sitemap, and external links | `python3 data/test_site_metadata.py` |
 | Map | `python3 data/test_map.py` |
 | Navigation, menus, focus, and target sizes | `python3 data/test_navigation.py` and `python3 scripts/review_site.py` |

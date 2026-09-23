@@ -39,7 +39,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Generic title 'Update' makes identification impossible without publisher info.]
+A March 2026 search found no records. The generic title 'Update' makes identification impossible without publisher information.
 
 ## Related publications
 

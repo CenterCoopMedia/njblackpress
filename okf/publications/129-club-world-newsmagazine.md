@@ -39,7 +39,7 @@ Previous editor(s): Sally Cooke Young.
 
 ## Historical notes
 
-[March 2026 research: Last correspondence in Tiny Prince Collection dated Winter 1959. Published by Club World Inc.]
+A March 2026 search found the last correspondence in the Tiny Prince Collection dated winter 1959. The magazine was published by Club World Inc.
 
 ## Archive reference
 

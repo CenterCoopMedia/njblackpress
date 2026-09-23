@@ -149,7 +149,10 @@ full diff and prove that the refresh preserves curated fields, record count,
 publication IDs, cessation years, and active status.
 
 For a routine publication correction, update `data/publications.json`, run
-`data/add_evidence.py`, and review both publication JSON files. Use
+`data/add_evidence.py`, and review both publication JSON files. The builder
+also rewrites the derived metadata. To add a Library of Congress directory
+record as evidence, run `python3 data/attach_loc_records.py <id>:<lccn>`, then
+`data/add_evidence.py`. Use
 `data/merge_research.py` only for a reviewed research-enrichment batch.
 
 The HTML wiki generator also rebuilds Tailwind unless `--skip-css` is present.
@@ -180,6 +183,7 @@ Run the focused checks for the changed area. Useful checks include:
 ```bash
 npm run build:css
 python3 data/test_site_data.py
+python3 data/test_publication_record.py
 python3 data/test_site_metadata.py
 python3 data/test_design_system.py
 python3 data/test_source_catalog.py

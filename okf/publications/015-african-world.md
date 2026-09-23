@@ -43,7 +43,7 @@ Previous editor (s): Imafidou Olaye.
 
 ## Historical notes
 
-[March 2026 research (estimated): WorldCat OCLC 36178031 exists but details not retrievable. No web presence.]
+A March 2026 search found a WorldCat record (OCLC 36178031), but no further details could be retrieved. The search found no web presence.
 
 ## External links
 

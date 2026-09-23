@@ -39,7 +39,7 @@ Editor: Jeanne Jason.
 
 ## Historical notes
 
-[March 2026 research (estimated): Wikipedia confirms weekly newspaper 'likely started in Newark around 1979.' No further detail.]
+A March 2026 search found no detail beyond Wikipedia, which describes it as a weekly newspaper that 'likely started in Newark around 1979.'.
 
 ## Archive reference
 

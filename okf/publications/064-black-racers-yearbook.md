@@ -35,7 +35,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research: One-time yearbook published by Black American Racers Association (BARA). Copy held by Smithsonian NMAH.]
+A March 2026 search found that this was a one-time yearbook published by the Black American Racers Association (BARA). The Smithsonian NMAH holds a copy.
 
 ## Archive reference
 

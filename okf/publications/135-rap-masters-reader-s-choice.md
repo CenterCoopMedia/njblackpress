@@ -39,7 +39,7 @@ Previous editor: Kate Ferguson.
 
 ## Historical notes
 
-[March 2026 research: Sister publication to Word Up!, published by Faces Magazines, Paramus, NJ. Issues 1989-2001 per Sotheby's 2022 auction.]
+A March 2026 search found that this was a sister publication to Word Up!, published by Faces Magazines of Paramus, NJ. A Sotheby's auction in 2022 listed issues from 1989 to 2001.
 
 ## Archive reference
 

@@ -39,7 +39,7 @@ Editor: Matthew Holden Jr.
 
 ## Historical notes
 
-[March 2026 research: Published 1989-2019 by NCOBPS. Succeeded in 2020 by National Review of Black Politics (UC Press).]
+A March 2026 search found that the review was published from 1989 to 2019 by NCOBPS. In 2020 it was succeeded by the National Review of Black Politics, published by UC Press.
 
 ## Archive reference
 

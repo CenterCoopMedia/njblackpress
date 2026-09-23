@@ -1830,7 +1830,7 @@
         21
       ],
       "status": "metadata_only",
-      "citation": "Nite Lite, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 426 (entry 4440).",
+      "citation": "Nite Lite, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 426 (entry 4440, first page).",
       "cropPlan": "",
       "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
     },
@@ -1841,7 +1841,7 @@
         21
       ],
       "status": "metadata_only",
-      "citation": "Nite Lite, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 427 (entry 4440).",
+      "citation": "Nite Lite, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 427 (entry 4440, continuation).",
       "cropPlan": "",
       "notes": "Danky book scan; never publish the image, quote the citation text instead (issue 31 policy)."
     },
@@ -3321,14 +3321,124 @@
       "citation": "Library of Congress catalog record sn88071370.",
       "cropPlan": "",
       "notes": "Screenshot of an LOC catalog record; government catalog data, low risk. Director ruling 2026-08-19; Joe can override."
+    },
+    {
+      "path": "data/research/loc/sn88071369.json",
+      "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
+      "publicationIds": [
+        5
+      ],
+      "status": "metadata_only",
+      "citation": "The Connection (Teaneck, N.J.) 198?-Current, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn88071369, https://www.loc.gov/item/sn88071369/",
+      "cropPlan": "",
+      "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
+    },
+    {
+      "path": "data/research/loc/sn88071222.json",
+      "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
+      "publicationIds": [
+        9
+      ],
+      "status": "metadata_only",
+      "citation": "The Newark Herald (Newark, N.J.) 1928-1939, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn88071222, https://www.loc.gov/item/sn88071222/",
+      "cropPlan": "",
+      "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
+    },
+    {
+      "path": "data/research/loc/sn84026314.json",
+      "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
+      "publicationIds": [
+        10
+      ],
+      "status": "metadata_only",
+      "citation": "The Sentinel (Trenton, N.J.) 1880-1882, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn84026314, https://www.loc.gov/item/sn84026314/",
+      "cropPlan": "",
+      "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
+    },
+    {
+      "path": "data/research/loc/sn84025698.json",
+      "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
+      "publicationIds": [
+        16
+      ],
+      "status": "metadata_only",
+      "citation": "New Jersey Herald News (Newark, N.J.) 1938-1966, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn84025698, https://www.loc.gov/item/sn84025698/",
+      "cropPlan": "",
+      "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
+    },
+    {
+      "path": "data/research/loc/sn2001062056.json",
+      "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
+      "publicationIds": [
+        28
+      ],
+      "status": "metadata_only",
+      "citation": "Black Newark (Newark, N.J.) 1968-1968, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn2001062056, https://www.loc.gov/item/sn2001062056/",
+      "cropPlan": "",
+      "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
+    },
+    {
+      "path": "data/research/loc/sn88071050.json",
+      "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
+      "publicationIds": [
+        31
+      ],
+      "status": "metadata_only",
+      "citation": "The Echo (Long Branch, N.J.) 1904-1943, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn88071050, https://www.loc.gov/item/sn88071050/",
+      "cropPlan": "",
+      "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
+    },
+    {
+      "path": "data/research/loc/sn84025926.json",
+      "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
+      "publicationIds": [
+        35
+      ],
+      "status": "metadata_only",
+      "citation": "New Jersey Afro American (Newark, N.J.) 1941-1991, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn84025926, https://www.loc.gov/item/sn84025926/",
+      "cropPlan": "",
+      "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
+    },
+    {
+      "path": "data/research/loc/sn89069097.json",
+      "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
+      "publicationIds": [
+        37
+      ],
+      "status": "metadata_only",
+      "citation": "The New Jersey Guardian (Newark, N.J.) 1934-1942, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn89069097, https://www.loc.gov/item/sn89069097/",
+      "cropPlan": "",
+      "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
+    },
+    {
+      "path": "data/research/loc/sn87068175.json",
+      "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
+      "publicationIds": [
+        38
+      ],
+      "status": "metadata_only",
+      "citation": "The New Jersey Trumpet (Jersey City, N.J.) 1887-1897, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn87068175, https://www.loc.gov/item/sn87068175/",
+      "cropPlan": "",
+      "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
+    },
+    {
+      "path": "data/research/loc/sn88063027.json",
+      "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
+      "publicationIds": [
+        41
+      ],
+      "status": "metadata_only",
+      "citation": "The Voice (Plainfield, N.J.) 1968-????, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn88063027, https://www.loc.gov/item/sn88063027/",
+      "cropPlan": "",
+      "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
     }
   ],
   "metadata": {
-    "totalCount": 327,
+    "totalCount": 337,
     "byStatus": {
       "crop_first": 50,
       "publishable": 34,
-      "metadata_only": 236,
+      "metadata_only": 246,
       "publishable_with_credit": 7
     },
     "generated": "2026-08-19"

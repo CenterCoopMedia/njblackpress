@@ -39,7 +39,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): LOC lists 1972-???? (sn88071370). Published by Multi-Linear Publications, East Orange, NJ.]
+A March 2026 search found that the Library of Congress lists the run as beginning in 1972 with no recorded end date (LCCN sn88071370). It was published by Multi-Linear Publications of East Orange, NJ.
 
 ## External links
 

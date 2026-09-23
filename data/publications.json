@@ -61,7 +61,8 @@
       "1980s",
       "1990s",
       "2010s",
-      "2020s"
+      "2020s",
+      "Unknown"
     ],
     "formats": [
       "Academic/Scholarly Journal",
@@ -73,10 +74,12 @@
       "Community media organization",
       "Digital",
       "Digital Newspaper",
+      "Digital archive collection",
       "Grassroots local nonprofit newsroom",
       "Journal, Magazine",
       "Literary Magazine/Periodicals",
       "Magazine",
+      "Magazine / literary anthology",
       "Magazine/Periodical",
       "Magazine/Periodicals",
       "Multi-media news website",
@@ -94,7 +97,6 @@
       "Periodicals, Slavery Caribbean Area Periodicals",
       "Periodicals, line drawings, photographs",
       "Periodicals, photographs",
-      "Poetry, short stories, essays",
       "Print",
       "Print Newspaper",
       "Publications",
@@ -105,7 +107,7 @@
     ],
     "activeCount": 17,
     "ceasedCount": 119,
-    "evidenceCount": 171
+    "evidenceCount": 181
   },
   "publications": [
     {
@@ -295,6 +297,16 @@
           "rightsStatus": "metadata_only",
           "citation": "The Connection / North Jersey Connection, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 172 (entry 1791).",
           "url": "https://archive.org/details/africanamericanne00dank/page/172/mode/1up"
+        },
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "198?-current",
+          "caption": "Library of Congress record sn88071369: The Connection (Teaneck, N.J.) 198?-Current. Biweekly. \"News from a Black perspective.\" \"Largest African-American weekly newspaper in New Jersey.\"",
+          "file": "data/research/loc/sn88071369.json",
+          "rightsStatus": "metadata_only",
+          "citation": "The Connection (Teaneck, N.J.) 198?-Current, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn88071369, https://www.loc.gov/item/sn88071369/",
+          "url": "https://www.loc.gov/item/sn88071369/"
         }
       ]
     },
@@ -539,6 +551,16 @@
           "rightsStatus": "publishable",
           "citation": "New Jersey Herald News, July 4, 1942.",
           "url": "https://archive.org/details/NewJerseyHeraldNews19420704"
+        },
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1928-1939",
+          "caption": "Library of Congress record sn88071222: The Newark Herald (Newark, N.J.) 1928-1939. Weekly. Began in 1928; ceased in 1939? Description based on: Vol. 11, no. 18 (June 11, 1938).",
+          "file": "data/research/loc/sn88071222.json",
+          "rightsStatus": "metadata_only",
+          "citation": "The Newark Herald (Newark, N.J.) 1928-1939, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn88071222, https://www.loc.gov/item/sn88071222/",
+          "url": "https://www.loc.gov/item/sn88071222/"
         }
       ]
     },
@@ -585,6 +607,16 @@
           "rightsStatus": "publishable",
           "citation": "Trenton Sunday Advertiser, 1895-10-20, p. 1.",
           "url": "https://www.newspapers.com/image/1194116748/"
+        },
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1880-1882",
+          "caption": "Library of Congress record sn84026314: The Sentinel (Trenton, N.J.) 1880-1882. Weekly. Vol. 1, no. 8 (June 26, 1880)-v. 3, no. 19 (Nov. 13, 1882). Also issued on microfilm by the Library of Congress Photoduplication Service for the Committee on Negro Studies of the American Council of Learned Societies.",
+          "file": "data/research/loc/sn84026314.json",
+          "rightsStatus": "metadata_only",
+          "citation": "The Sentinel (Trenton, N.J.) 1880-1882, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn84026314, https://www.loc.gov/item/sn84026314/",
+          "url": "https://www.loc.gov/item/sn84026314/"
         }
       ]
     },
@@ -880,6 +912,16 @@
           "rightsStatus": "publishable",
           "citation": "New Jersey Herald News, July 4, 1942.",
           "url": "https://archive.org/details/NewJerseyHeraldNews19420704"
+        },
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1938-1966",
+          "caption": "Library of Congress record sn84025698: New Jersey Herald News (Newark, N.J.) 1938-1966. Weekly. Began in May 1938; ceased in 1966? \"Independent.\" Cf. Ayer, 1967.",
+          "file": "data/research/loc/sn84025698.json",
+          "rightsStatus": "metadata_only",
+          "citation": "New Jersey Herald News (Newark, N.J.) 1938-1966, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn84025698, https://www.loc.gov/item/sn84025698/",
+          "url": "https://www.loc.gov/item/sn84025698/"
         }
       ]
     },
@@ -1286,6 +1328,16 @@
           "rightsStatus": "metadata_only",
           "citation": "Black Newark, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 91 (entry 934).",
           "url": "https://archive.org/details/africanamericanne00dank/page/91/mode/1up"
+        },
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1968-1968",
+          "caption": "Library of Congress record sn2001062056: Black Newark (Newark, N.J.) 1968-1968. Monthly. Vol. 1, no. 1 (April 1968)-volume 1, number 3 (November 1968). Description based on: Vol. 1, no. 1 (April 1968); title from cover, Readex African American Periodicals, 1825-1995 (viewed June 11, 2019).",
+          "file": "data/research/loc/sn2001062056.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Black Newark (Newark, N.J.) 1968-1968, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn2001062056, https://www.loc.gov/item/sn2001062056/",
+          "url": "https://www.loc.gov/item/sn2001062056/"
         }
       ]
     },
@@ -1404,6 +1456,16 @@
           "rightsStatus": "publishable",
           "citation": "Asbury Park Press, 1909-03-05, p. 2.",
           "url": "https://www.newspapers.com/image/143869436/"
+        },
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1904-1943",
+          "caption": "Library of Congress record sn88071050: The Echo (Long Branch, N.J.) 1904-1943. Weekly. Began in 1904; ceased in 1943. Cf. Wright, W.C. and Stellhorn, P.A. Direct. of N.J. newspapers. \"The oldest colored paper in New Jersey.\"",
+          "file": "data/research/loc/sn88071050.json",
+          "rightsStatus": "metadata_only",
+          "citation": "The Echo (Long Branch, N.J.) 1904-1943, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn88071050, https://www.loc.gov/item/sn88071050/",
+          "url": "https://www.loc.gov/item/sn88071050/"
         }
       ]
     },
@@ -1568,6 +1630,16 @@
           "rightsStatus": "crop_first",
           "citation": "Daily Record (Morristown), 2023-05-21, p. D2.",
           "url": "https://www.newspapers.com/image/962761544/"
+        },
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1941-1991",
+          "caption": "Library of Congress record sn84025926: New Jersey Afro American (Newark, N.J.) 1941-1991. Weekly. Vol. 1, no. 1 (Mar. 15, 1941)-v.30, no. 51 (Aug. 11, 1979) ; 88th year, no. 1 (Aug. 18, 1979)-. Ceased in 1991. Cf. Ayer.",
+          "file": "data/research/loc/sn84025926.json",
+          "rightsStatus": "metadata_only",
+          "citation": "New Jersey Afro American (Newark, N.J.) 1941-1991, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn84025926, https://www.loc.gov/item/sn84025926/",
+          "url": "https://www.loc.gov/item/sn84025926/"
         }
       ]
     },
@@ -1640,6 +1712,16 @@
           "rightsStatus": "crop_first",
           "citation": "The News (Paterson), 1939-09-09, p. 9.",
           "url": "https://www.newspapers.com/image/525697398/"
+        },
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1934-1942",
+          "caption": "Library of Congress record sn89069097: The New Jersey Guardian (Newark, N.J.) 1934-1942. Weekly. Began with Sept. 29, 1934 issue; ceased in 1942? \"Voice of the Colored People.\"",
+          "file": "data/research/loc/sn89069097.json",
+          "rightsStatus": "metadata_only",
+          "citation": "The New Jersey Guardian (Newark, N.J.) 1934-1942, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn89069097, https://www.loc.gov/item/sn89069097/",
+          "url": "https://www.loc.gov/item/sn89069097/"
         }
       ]
     },
@@ -1686,6 +1768,16 @@
           "rightsStatus": "publishable",
           "citation": "Asbury Park Press, 1893-07-22, p. 1.",
           "url": "https://www.newspapers.com/image/436760060/"
+        },
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1887-1897",
+          "caption": "Library of Congress record sn87068175: The New Jersey Trumpet (Jersey City, N.J.) 1887-1897. Weekly. Began with Dec. 29, 1887 issue; ceased in 1897? Published in Newark, N.J., 1889-1897.",
+          "file": "data/research/loc/sn87068175.json",
+          "rightsStatus": "metadata_only",
+          "citation": "The New Jersey Trumpet (Jersey City, N.J.) 1887-1897, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn87068175, https://www.loc.gov/item/sn87068175/",
+          "url": "https://www.loc.gov/item/sn87068175/"
         }
       ]
     },
@@ -1804,6 +1896,16 @@
           "rightsStatus": "metadata_only",
           "citation": "The Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 594 (entry 6211).",
           "url": "https://archive.org/details/africanamericanne00dank/page/594/mode/1up"
+        },
+        {
+          "type": "catalog_record",
+          "source": "loc",
+          "date": "1968-????",
+          "caption": "Library of Congress record sn88063027: The Voice (Plainfield, N.J.) 1968-????. Weekly. Began in 1968. Description based on: Vol. 4, no. 5 (Jan. 24, 1971).",
+          "file": "data/research/loc/sn88063027.json",
+          "rightsStatus": "metadata_only",
+          "citation": "The Voice (Plainfield, N.J.) 1968-????, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn88063027, https://www.loc.gov/item/sn88063027/",
+          "url": "https://www.loc.gov/item/sn88063027/"
         }
       ]
     },

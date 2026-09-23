@@ -39,7 +39,7 @@ Ernie Johnston.
 
 ## Historical notes
 
-[March 2026 research (estimated): Possibly a Toronto journal (At the Crossroads: A Journal for Women Artists of African Descent, 1992-1997) misattributed to NJ.]
+A March 2026 search suggests this entry may be a Toronto journal, At the Crossroads: A Journal for Women Artists of African Descent (1992-1997), misattributed to New Jersey.
 
 ## Related publications
 

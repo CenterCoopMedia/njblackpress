@@ -43,7 +43,7 @@ Previous editor(s): Henry J. Auston.
 
 ## Historical notes
 
-[March 2026 research (estimated): No LOC entry, no microfilm, no records found beyond founding (1909, Princeton). Status unknown per Wikipedia NJ list.]
+A March 2026 search found no Library of Congress entry, no microfilm, and no records of this publication beyond its founding in Princeton in 1909. Its status is recorded as unknown on the Wikipedia list of African American newspapers in New Jersey.
 
 ## Archive reference
 

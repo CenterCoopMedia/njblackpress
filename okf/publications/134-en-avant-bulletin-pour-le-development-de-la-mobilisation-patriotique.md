@@ -35,7 +35,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Possibly same publication as ID 59 (En Avant) with subtitle.]
+A March 2026 search found no records. This may be the same publication as En Avant (ID 59), listed here with its subtitle.
 
 ## Archive reference
 

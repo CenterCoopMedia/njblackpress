@@ -1,16 +1,18 @@
 # Data dictionary
 
-This documents the full schema for the NJ Black Press Database, in the same
-style as the "data model" section of `CLAUDE.md`. It covers `publications.json`
+This documents the full schema for the NJ Black Press Archive. It covers `publications.json`
 (including the evidence array added for issue #33), `events.json`,
 `stories.json`, the rights manifest, and the source-catalog keeper shape.
 
 ## publications.json
 
 Location: `data/publications.json` (pipeline source of truth), copied to
-`docs/data/publications.json` for the frontend. Built by `data/convert_csv.py`
-from `data/publications.csv`, which also re-runs `data/add_evidence.py` to
-attach the evidence array.
+`docs/data/publications.json` for the frontend. Correct a record by editing
+`data/publications.json`, then run `data/add_evidence.py`, which rebuilds the
+evidence array and the derived `metadata` and copies the file to `docs/data/`.
+`data/test_publication_record.py` fails when either drifts from its sources.
+`data/convert_csv.py` is only for a controlled full refresh from a fresh Notion
+export (see `CLAUDE.md`).
 
 Top-level shape: `{ "metadata": {...}, "publications": [...] }`.
 
@@ -138,7 +140,8 @@ Top-level shape: `{ "files": [...], "metadata": {...} }`.
   - `publishable` — can be published as-is (for example, pre-1930 US public domain Internet Archive/newspapers.com material)
   - `publishable_with_credit` — can be published with attribution
   - `crop_first` — newspapers.com material; only a cited clip/crop may be published, never the full page
-  - `metadata_only` — Danky book scans; cite the text, do not publish the image
+  - `metadata_only` — Danky book scans and Library of Congress catalog
+    excerpts; cite the text, do not publish the image
 - `citation` — citation string to display alongside published use
 - `cropPlan` — description of what to crop, populated when `status` is `crop_first`
 - `notes` — free-text rationale for the rights call
@@ -170,6 +173,12 @@ Top-level shape: `{ "generated", "goal", "publicationCount", "counts", "publicat
   - `localFile` — repo-relative path to the downloaded file, or null if not yet saved locally
   - `source` — human-readable provenance note
   - `date` — date string
+
+Library of Congress directory records are attached with
+`python3 data/attach_loc_records.py <id>:<lccn> ...`. Each writes a small JSON
+excerpt of the record to `data/research/loc/<lccn>.json` (committed, unlike
+research images), a `catalog_record` keeper, and a `metadata_only` rights
+entry. Run `data/add_evidence.py` afterwards.
 
 Every publication in `publications.json` must have a matching row here by
 `id` (enforced by `data/test_source_catalog.py`), and every keeper's

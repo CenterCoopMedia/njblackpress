@@ -39,7 +39,7 @@ Previous editor(s): Natasha A. Brooks-Everett.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. River Edge location ties it to Word Up!/Enoble Media cluster.]
+A March 2026 search found no records. Its River Edge location ties it to the Word Up! and Enoble Media cluster.
 
 ## Archive reference
 
