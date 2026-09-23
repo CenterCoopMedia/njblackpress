@@ -35,6 +35,7 @@ on:
       - 'data/test_navigation.py'
       - 'scripts/*woven*'
       - 'scripts/*hall*'
+      - 'scripts/review_site.py'
       - 'package*.json'
       - 'tailwind.config.js'
       - 'src/input.css'
@@ -83,10 +84,14 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Check the hall, the flat timeline, and their fallbacks
         run: python scripts/review_hall.py --output /tmp/hall-review
+      - name: Check the main site pages in a browser
+        run: python scripts/review_site.py --output /tmp/site-review
       - name: Save visual review evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: hall-visual-review
-          path: /tmp/hall-review
+          path: |
+            /tmp/hall-review
+            /tmp/site-review
           retention-days: 14

@@ -143,7 +143,7 @@
           </button>
 
           <!-- Tooltip -->
-          <div class="timeline-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-40 md:w-52 bg-walnut-900 border border-walnut-600 p-3 md:p-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10 shadow-2xl">
+          <div class="timeline-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-40 md:w-52 bg-walnut-900 border border-walnut-600 p-3 md:p-4 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity pointer-events-none z-10 shadow-2xl">
             <div class="font-display text-base md:text-lg text-stain mb-1 font-bold">${decade.label}</div>
             <div class="text-xs font-mono text-linen-300 space-y-1 border-t border-walnut-600 pt-2">
               <p><span class="text-linen-50">${decade.foundedCount}</span> founded</p>

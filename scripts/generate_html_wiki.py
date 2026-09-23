@@ -67,11 +67,12 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
     w = "../" * depth        # reach docs/wiki/ root for wiki links
     canonical = SITE_BASE + "wiki/" + ("" if canonical_rel == "index.html" else canonical_rel)
     return f"""<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="motion-safe:scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#14100b">
+    <meta name="color-scheme" content="dark">
     <meta name="description" content="{esc(description)}">
     <meta name="author" content="Center for Cooperative Media">
     <meta property="og:title" content="{esc(title)} | NJ Black Press Wiki">
@@ -148,11 +149,11 @@ def crumbs(items: list[tuple[str, str | None]]) -> str:
     parts = []
     for label, href in items:
         if href:
-            parts.append(f'<a href="{esc(href)}" class="hover:text-stain transition-colors">{esc(label)}</a>')
+            parts.append(f'<a href="{esc(href)}" class="inline-flex items-center min-h-[44px] hover:text-stain transition-colors">{esc(label)}</a>')
         else:
             parts.append(f'<span class="text-linen-100">{esc(label)}</span>')
     sep = '<span class="text-linen-300/40">/</span>'
-    return f'<nav class="font-mono text-xs uppercase tracking-widest text-linen-300 flex flex-wrap items-center gap-3 mb-8">{sep.join(parts)}</nav>'
+    return f'<nav aria-label="Breadcrumb" class="font-mono text-xs uppercase tracking-widest text-linen-300 flex flex-wrap items-center gap-3 mb-6">{sep.join(parts)}</nav>'
 
 
 def page_title(text: str) -> str:
@@ -172,20 +173,21 @@ def status_text(pub: dict[str, Any]) -> str:
     return f'<span class="font-mono text-xs text-thread-400">{esc(label)}</span>'
 
 
-def pub_card(pub: dict[str, Any], depth: int, wiki_root: str) -> str:
+def pub_card(pub: dict[str, Any], depth: int, wiki_root: str, heading: str = "h3") -> str:
     href = f"{wiki_root}publications/{pub_html_name(pub)}"
     city = esc(clean(pub.get("city")) or "Unknown")
-    star = ' <span class="text-stain">&#9733;</span>' if featured_kind(pub) else ""
+    star = ' <span class="text-stain" aria-hidden="true">&#9733;</span><span class="sr-only"> (featured)</span>' if featured_kind(pub) else ""
     return (
         f'<a href="{esc(href)}" class="group block border border-walnut-600 bg-walnut-950 p-5 hover:border-stain/60 hover:bg-walnut-800 transition-colors">'
-        f'<h3 class="font-display text-lg font-bold leading-snug mb-2 group-hover:text-stain transition-colors">{esc(pub["name"])}{star}</h3>'
+        f'<{heading} class="font-display text-lg font-bold leading-snug mb-2 group-hover:text-stain transition-colors">{esc(pub["name"])}{star}</{heading}>'
         f'<p class="font-mono text-xs uppercase tracking-widest text-linen-300">{city} &middot; {esc(life_span(pub))}</p>'
         f'</a>'
     )
 
 
-def pub_grid(pubs: list[dict[str, Any]], depth: int, wiki_root: str) -> str:
-    cards = "\n".join(pub_card(p, depth, wiki_root) for p in pubs)
+def pub_grid(pubs: list[dict[str, Any]], depth: int, wiki_root: str, heading: str = "h3") -> str:
+    """Cards carry the given heading level so each page keeps an unbroken outline."""
+    cards = "\n".join(pub_card(p, depth, wiki_root, heading) for p in pubs)
     return f'<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">{cards}</div>'
 
 
@@ -326,10 +328,10 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
         b += section_title("Related publications")
         if city_sib:
             b += f'<h3 class="font-mono text-xs uppercase tracking-widest text-linen-300 mb-3 mt-2">Also in {esc(city)}</h3>'
-            b += pub_grid(city_sib, depth, wiki_root)
+            b += pub_grid(city_sib, depth, wiki_root, heading="h4")
         if decade_sib:
             b += f'<h3 class="font-mono text-xs uppercase tracking-widest text-linen-300 mb-3 mt-6">Also from the {esc(decade)}</h3>'
-            b += pub_grid(decade_sib, depth, wiki_root)
+            b += pub_grid(decade_sib, depth, wiki_root, heading="h4")
     return b
 
 
@@ -343,6 +345,7 @@ def group_detail_body(kind, name, items, depth, wiki_root, slug) -> str:
     b += (f'<p class="font-mono text-xs uppercase tracking-widest text-linen-300 mb-10">'
           f'{len(items)} publications &middot; {active} active &middot; founding years {esc(year_range(items))}</p>')
     ordered = sorted(items, key=lambda p: (p.get("yearFounded") or 9999, p.get("name") or ""))
+    b += section_title("Publications")
     b += pub_grid(ordered, depth, wiki_root)
     return b
 
@@ -374,7 +377,7 @@ def publications_index_body(pubs, depth) -> str:
     b += f'<p class="font-mono text-xs uppercase tracking-widest text-linen-300 mb-10">{len(pubs)} records, alphabetical</p>'
     rows = ""
     for pub in sorted(pubs, key=lambda p: (p.get("name") or "").lower()):
-        star = ' <span class="text-stain">&#9733;</span>' if featured_kind(pub) else ""
+        star = ' <span class="text-stain" aria-hidden="true">&#9733;</span><span class="sr-only"> (featured)</span>' if featured_kind(pub) else ""
         city_value = clean(pub.get("city")) or "Unknown"
         city = esc(city_value)
         founded = pub.get("yearFounded") or 9999
@@ -383,7 +386,7 @@ def publications_index_body(pubs, depth) -> str:
         status_order = 0 if pub.get("isActive") else 1
         rows += (
             f'<tr class="border-b border-walnut-600 hover:bg-walnut-800 transition-colors">'
-            f'<td class="py-3 pl-5 pr-4" data-sort-value="{esc(pub["name"])}"><a href="publications/{pub_html_name(pub)}" class="font-display text-base font-semibold hover:text-stain transition-colors">{esc(pub["name"])}{star}</a></td>'
+            f'<td class="py-3 pl-5 pr-4" data-sort-value="{esc(pub["name"])}"><a href="publications/{pub_html_name(pub)}" class="inline-block py-2 font-display text-base font-semibold hover:text-stain transition-colors">{esc(pub["name"])}{star}</a></td>'
             f'<td class="py-3 pr-4 text-linen-300 text-sm" data-sort-value="{city}">{city}</td>'
             f'<td class="py-3 pr-4 font-mono text-xs text-linen-300 whitespace-nowrap" data-sort-value="{years_order}">{esc(life_span(pub))}</td>'
             f'<td class="py-3 pl-4 pr-5 text-right whitespace-nowrap" data-sort-value="{status_order}">{status_text(pub)}</td>'
@@ -481,7 +484,7 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
     rows = ""
     for span, pub in spans:
         rows += (f'<tr class="border-b border-walnut-600 hover:bg-walnut-800 transition-colors">'
-                 f'<td class="py-2.5 pr-4"><a href="publications/{pub_html_name(pub)}" class="hover:text-stain transition-colors">{esc(pub["name"])}</a></td>'
+                 f'<td class="py-2.5 pr-4"><a href="publications/{pub_html_name(pub)}" class="inline-block py-2 hover:text-stain transition-colors">{esc(pub["name"])}</a></td>'
                  f'<td class="py-2.5 pr-4 font-mono text-xs text-linen-300 whitespace-nowrap">{esc(life_span(pub))}</td>'
                  f'<td class="py-2.5 font-mono text-sm text-right">{span} yrs</td></tr>')
     b += ('<div class="border border-walnut-600 bg-walnut-950 p-2"><table class="w-full text-left">'

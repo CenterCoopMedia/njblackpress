@@ -25,7 +25,7 @@
 
   const markup = (mobile = false) => links.map(link => {
     const active = isActive(link);
-    const spacing = mobile ? 'inline-block py-2' : 'inline-block py-[14px]';
+    const spacing = mobile ? 'inline-flex items-center min-h-[44px] px-4' : 'inline-block py-[14px]';
     const color = active ? 'text-stain' : 'hover:text-stain transition-colors';
     return `<li><a href="${url(link.path)}" class="${spacing} ${color}"${active ? ' aria-current="page"' : ''}>${link.label}</a></li>`;
   }).join('');
@@ -57,35 +57,61 @@
     </div>`;
   }
 
-  let menu = document.getElementById('mobile-menu');
+  // One mobile menu for every page: a modal dialog built here, so each page
+  // only supplies a #mobile-menu-btn button or an a.md:hidden placeholder.
+  const icon = path => `<svg class="w-6 h-6" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${path}"/></svg>`;
   let openButton = document.getElementById('mobile-menu-btn');
-  let closeButton = document.getElementById('mobile-menu-close');
-  let createdMenu = false;
-
-  if (!menu) {
-    const mobileLink = document.querySelector('nav a.md\\:hidden');
-    if (mobileLink) {
-      mobileLink.outerHTML = `<button id="mobile-menu-btn" class="md:hidden p-[10px] text-linen-100 hover:text-stain" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span aria-hidden="true">Menu</span></button>`;
-      document.querySelector('nav').insertAdjacentHTML('afterend', `<div id="mobile-menu" class="fixed inset-0 bg-walnut-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center"><button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-linen-300 hover:text-stain" aria-label="Close menu">Close</button><ul class="space-y-6 text-center font-display text-2xl font-medium tracking-wide"></ul></div>`);
-      menu = document.getElementById('mobile-menu');
-      openButton = document.getElementById('mobile-menu-btn');
-      closeButton = document.getElementById('mobile-menu-close');
-      createdMenu = true;
-    }
+  if (!openButton) {
+    const placeholder = document.querySelector('nav a.md\\:hidden');
+    if (!placeholder) return;
+    placeholder.outerHTML = `<button id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center w-11 h-11 text-linen-100 hover:text-stain">${icon('M4 6h16M4 12h16M4 18h16')}</button>`;
+    openButton = document.getElementById('mobile-menu-btn');
   }
+  openButton.type = 'button';
+  openButton.setAttribute('aria-label', 'Open menu');
+  openButton.setAttribute('aria-expanded', 'false');
+  openButton.setAttribute('aria-controls', 'mobile-menu');
 
-  const mobileList = menu?.querySelector('ul');
-  if (mobileList) mobileList.innerHTML = markup(true);
-  if (!menu || !openButton || !closeButton) return;
+  document.getElementById('mobile-menu')?.remove();
+  document.body.insertAdjacentHTML('beforeend', `<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden class="fixed inset-0 z-[60] bg-walnut-950 overflow-y-auto overscroll-contain md:hidden">
+    <button id="mobile-menu-close" type="button" class="fixed top-[18px] right-[18px] inline-flex items-center justify-center w-11 h-11 text-linen-300 hover:text-stain" aria-label="Close menu">${icon('M6 18L18 6M6 6l12 12')}</button>
+    <ul class="min-h-full flex flex-col items-center justify-center gap-1 py-20 text-center font-display text-2xl font-medium tracking-wide">${markup(true)}</ul>
+  </div>`);
+  const menu = document.getElementById('mobile-menu');
+  const closeButton = document.getElementById('mobile-menu-close');
+  const focusable = () => [...menu.querySelectorAll('a[href], button')];
 
-  const setOpen = open => {
-    menu.classList.toggle('translate-x-full', !open);
+  const setOpen = (open, restoreFocus = true) => {
+    menu.hidden = !open;
     document.body.classList.toggle('overflow-hidden', open);
     openButton.setAttribute('aria-expanded', String(open));
+    if (open) closeButton.focus();
+    else if (restoreFocus) openButton.focus();
   };
-  if (createdMenu) {
-    openButton.addEventListener('click', () => setOpen(menu.classList.contains('translate-x-full')));
-    closeButton.addEventListener('click', () => setOpen(false));
-  }
-  mobileList?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+
+  openButton.addEventListener('click', () => setOpen(true));
+  closeButton.addEventListener('click', () => setOpen(false));
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false, false)));
+  menu.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      setOpen(false);
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const items = focusable();
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  // The menu is hidden at desktop widths; do not leave the page scroll-locked.
+  window.matchMedia('(min-width: 768px)').addEventListener('change', event => {
+    if (event.matches && !menu.hidden) setOpen(false, false);
+  });
 })();

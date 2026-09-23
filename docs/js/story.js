@@ -220,7 +220,7 @@
         return `
             <li class="surface-cloth bg-walnut-700 border border-walnut-600 p-6 flex flex-col gap-3">
                 <h3 class="font-display text-xl font-bold leading-snug">
-                    <a href="story.html?id=${encodeURIComponent(story.id)}" class="text-linen-100 hover:text-stain transition-colors">${escapeHtml(story.title)}</a>
+                    <a href="story.html?id=${encodeURIComponent(story.id)}" class="inline-block py-2 text-linen-100 hover:text-stain transition-colors">${escapeHtml(story.title)}</a>
                 </h3>
                 ${opening ? `<p class="font-sans text-[15px] text-linen-200 leading-relaxed">${escapeHtml(opening)}</p>` : ''}
                 <p class="font-mono text-[11px] text-linen-300 mt-auto">
@@ -333,10 +333,10 @@
                                     <li class="surface-cloth bg-walnut-700 border border-walnut-600 p-6">
                                         <p class="font-mono text-[10px] uppercase tracking-widest text-linen-300 mb-2">${escapeHtml(p.city || 'New Jersey')}</p>
                                         <h3 class="font-display text-lg font-bold leading-snug">
-                                            <a href="publication.html?id=${p.id}" class="text-linen-100 hover:text-stain transition-colors">${escapeHtml(p.name)}</a>
+                                            <a href="publication.html?id=${p.id}" class="inline-block py-2 text-linen-100 hover:text-stain transition-colors">${escapeHtml(p.name)}</a>
                                         </h3>
                                         <p class="font-mono text-xs text-linen-300 mt-2">${escapeHtml(formatYears(p))}</p>
-                                        ${p.decade && p.decade !== 'Unknown' ? `<p class="font-mono text-xs mt-2"><a href="era.html?decade=${encodeURIComponent(p.decade)}" class="text-stain hover:text-linen-100 transition-colors">The ${escapeHtml(p.decade)}</a></p>` : ''}
+                                        ${p.decade && p.decade !== 'Unknown' ? `<p class="font-mono text-xs mt-2"><a href="era.html?decade=${encodeURIComponent(p.decade)}" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">The ${escapeHtml(p.decade)}</a></p>` : ''}
                                     </li>
                                 `).join('')}
                             </ul>
@@ -346,16 +346,16 @@
 
                 <section class="px-4 md:px-8 pb-12">
                     <div class="max-w-[1100px] mx-auto flex flex-wrap gap-6 font-mono text-xs">
-                        <a href="story.html" class="text-stain hover:text-linen-100 transition-colors">All stories</a>
-                        ${eraDecades(story.era).length > 0 ? eraDecades(story.era).map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="text-stain hover:text-linen-100 transition-colors">The ${escapeHtml(d)}</a>`).join('') : ''}
+                        <a href="story.html" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">All stories</a>
+                        ${eraDecades(story.era).length > 0 ? eraDecades(story.era).map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">The ${escapeHtml(d)}</a>`).join('') : ''}
                     </div>
                 </section>
 
                 <nav class="px-4 md:px-8 pb-16" aria-label="Story navigation">
                     <div class="max-w-[1100px] mx-auto flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
-                        ${previousStory ? `<a href="story.html?id=${encodeURIComponent(previousStory.id)}" class="text-stain hover:text-linen-100 transition-colors"><span aria-hidden="true">&larr;</span> ${escapeHtml(previousStory.title)}</a>` : `<span class="text-linen-300">This is the first story in the index.</span>`}
-                        <a href="story.html" class="text-stain hover:text-linen-100 transition-colors">All stories</a>
-                        ${nextStory ? `<a href="story.html?id=${encodeURIComponent(nextStory.id)}" class="text-stain hover:text-linen-100 transition-colors">${escapeHtml(nextStory.title)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-linen-300">This is the last story in the index.</span>`}
+                        ${previousStory ? `<a href="story.html?id=${encodeURIComponent(previousStory.id)}" class="inline-flex items-center gap-1 min-h-[44px] text-stain hover:text-linen-100 transition-colors"><span aria-hidden="true">&larr;</span> ${escapeHtml(previousStory.title)}</a>` : `<span class="text-linen-300">This is the first story in the index.</span>`}
+                        <a href="story.html" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">All stories</a>
+                        ${nextStory ? `<a href="story.html?id=${encodeURIComponent(nextStory.id)}" class="inline-flex items-center gap-1 min-h-[44px] text-stain hover:text-linen-100 transition-colors">${escapeHtml(nextStory.title)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-linen-300">This is the last story in the index.</span>`}
                     </div>
                 </nav>
             </article>
@@ -400,7 +400,7 @@
                 ${pubs.length > 0 ? `
                     <p class="font-mono text-[11px] text-linen-300 mt-3">
                         ${pubs.length === 1 ? 'Publication:' : 'Publications:'}
-                        ${pubs.map(p => `<a href="publication.html?id=${p.id}" class="text-stain hover:text-linen-100 transition-colors">${escapeHtml(p.name)}</a>`).join(', ')}
+                        ${pubs.map(p => `<a href="publication.html?id=${p.id}" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">${escapeHtml(p.name)}</a>`).join(', ')}
                     </p>
                 ` : `<p class="font-mono text-[11px] text-linen-300 mt-3">No publication in the archive is linked to this event yet.</p>`}
                 ${clips.length > 0 ? `<div class="mt-6 space-y-8">${clips.map(clippingFigure).join('')}</div>` : ''}
@@ -553,6 +553,12 @@
     }
 
     function showError() {
+        // Name the error in the tab, and keep the empty route out of search results.
+        document.title = 'Story not found | NJ Black Press Archive';
+        const robots = document.createElement('meta');
+        robots.name = 'robots';
+        robots.content = 'noindex';
+        document.head.appendChild(robots);
         const content = document.getElementById('story-content');
         const error = document.getElementById('error-state');
         if (content) content.classList.add('hidden');

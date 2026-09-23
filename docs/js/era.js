@@ -226,7 +226,7 @@
             return `
                 <li class="surface-cloth bg-walnut-700 border border-walnut-600 p-6">
                     <h2 class="font-display text-2xl font-bold leading-snug">
-                        <a href="era.html?decade=${encodeURIComponent(d)}" class="text-linen-100 hover:text-stain transition-colors">The ${escapeHtml(d)}</a>
+                        <a href="era.html?decade=${encodeURIComponent(d)}" class="inline-block py-2 text-linen-100 hover:text-stain transition-colors">The ${escapeHtml(d)}</a>
                     </h2>
                     <p class="font-mono text-[11px] text-linen-300 mt-3 tabular-nums">
                         ${pubs === 1 ? '1 publication founded' : pubs + ' publications founded'} &middot;
@@ -239,7 +239,7 @@
 
         const stripHtml = emptyDecades.length > 0 ? `
             <p class="font-mono text-xs text-linen-300 mt-8 pt-6 border-t border-walnut-600 leading-loose">
-                Also in the record: ${emptyDecades.map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="text-stain hover:text-linen-100 transition-colors">${escapeHtml(decadeStripLabel(d))}</a>`).join(', ')}
+                Also in the record: ${emptyDecades.map(d => `<a href="era.html?decade=${encodeURIComponent(d)}" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">${escapeHtml(decadeStripLabel(d))}</a>`).join(', ')}
             </p>
         ` : '';
 
@@ -313,9 +313,9 @@
         const decadeNav = (label) => `
             <nav class="px-4 md:px-8 ${label === 'top' ? 'pt-4' : 'pb-16'}" aria-label="Decade navigation, ${label === 'top' ? 'above content' : 'below content'}">
                 <div class="max-w-[1100px] mx-auto flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
-                    ${previous ? `<a href="era.html?decade=${encodeURIComponent(previous)}" class="text-stain hover:text-linen-100 transition-colors"><span aria-hidden="true">&larr;</span> The ${escapeHtml(previous)}</a>` : `<span class="text-linen-300">The ${escapeHtml(decade)} is the earliest decade on record.</span>`}
-                    <a href="era.html" class="text-stain hover:text-linen-100 transition-colors">All decades</a>
-                    ${next ? `<a href="era.html?decade=${encodeURIComponent(next)}" class="text-stain hover:text-linen-100 transition-colors">The ${escapeHtml(next)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-linen-300">The ${escapeHtml(decade)} is the most recent decade on record.</span>`}
+                    ${previous ? `<a href="era.html?decade=${encodeURIComponent(previous)}" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors"><span aria-hidden="true">&larr;</span> The ${escapeHtml(previous)}</a>` : `<span class="text-linen-300">The ${escapeHtml(decade)} is the earliest decade on record.</span>`}
+                    <a href="era.html" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">All decades</a>
+                    ${next ? `<a href="era.html?decade=${encodeURIComponent(next)}" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">The ${escapeHtml(next)} <span aria-hidden="true">&rarr;</span></a>` : `<span class="text-linen-300">The ${escapeHtml(decade)} is the most recent decade on record.</span>`}
                 </div>
             </nav>
         `;
@@ -340,9 +340,9 @@
                 <div id="decade-jump-bar" class="fixed inset-x-0 top-20 z-30 flex flex-col gap-2 border-y border-walnut-600 bg-walnut-900/95 px-4 py-3 backdrop-blur-sm md:px-8">
                     <div class="max-w-[1100px] mx-auto flex w-full flex-col gap-2 font-mono text-xs md:flex-row md:items-center md:justify-between">
                         <div class="flex flex-wrap gap-x-6 gap-y-1" aria-label="Jump to section">
-                            ${sections.map(s => `<a href="${s.href}" class="text-stain hover:text-linen-100 transition-colors">${s.label}</a>`).join('')}
+                            ${sections.map(s => `<a href="${s.href}" class="inline-flex items-center min-h-[44px] text-stain hover:text-linen-100 transition-colors">${s.label}</a>`).join('')}
                         </div>
-                        <a href="#main-content" class="text-linen-300 hover:text-stain transition-colors">Back to top <span aria-hidden="true">&uarr;</span></a>
+                        <a href="#main-content" class="inline-flex items-center gap-1 min-h-[44px] text-linen-300 hover:text-stain transition-colors">Back to top <span aria-hidden="true">&uarr;</span></a>
                     </div>
                 </div>
                 ` : ''}
@@ -370,7 +370,7 @@
                                     <li class="surface-cloth bg-walnut-700 border border-walnut-600 p-6">
                                         <p class="font-mono text-[10px] uppercase tracking-widest text-linen-300 mb-2">${escapeHtml(p.city || 'New Jersey')}</p>
                                         <h3 class="font-display text-lg font-bold leading-snug">
-                                            <a href="publication.html?id=${p.id}" class="text-linen-100 hover:text-stain transition-colors">${escapeHtml(p.name)}</a>
+                                            <a href="publication.html?id=${p.id}" class="inline-block py-2 text-linen-100 hover:text-stain transition-colors">${escapeHtml(p.name)}</a>
                                         </h3>
                                         <p class="font-mono text-xs text-linen-300 mt-2 tabular-nums">${escapeHtml(formatYears(p))}</p>
                                     </li>
@@ -409,7 +409,7 @@
                                 ${threads.map(s => `
                                     <li class="surface-cloth bg-walnut-700 border border-walnut-600 p-6">
                                         <h3 class="font-display text-lg font-bold leading-snug">
-                                            <a href="story.html?id=${encodeURIComponent(s.id)}" class="text-linen-100 hover:text-stain transition-colors">${escapeHtml(s.title)}</a>
+                                            <a href="story.html?id=${encodeURIComponent(s.id)}" class="inline-block py-2 text-linen-100 hover:text-stain transition-colors">${escapeHtml(s.title)}</a>
                                         </h3>
                                         <p class="font-mono text-[11px] text-linen-300 mt-2">${escapeHtml(formatEra(s.era) || 'era not recorded')}</p>
                                         ${s.strength === 'weak' ? `<p class="font-mono text-[11px] text-stain mt-2">Thinly sourced.</p>` : ''}
@@ -473,7 +473,7 @@
                 ${pubs.length > 0 ? `
                     <p class="font-mono text-[11px] text-linen-300 mt-3">
                         ${pubs.length === 1 ? 'Publication:' : 'Publications:'}
-                        ${pubs.map(p => `<a href="publication.html?id=${p.id}" class="text-stain hover:text-linen-100 transition-colors">${escapeHtml(p.name)}</a>`).join(', ')}
+                        ${pubs.map(p => `<a href="publication.html?id=${p.id}" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">${escapeHtml(p.name)}</a>`).join(', ')}
                     </p>
                 ` : `<p class="font-mono text-[11px] text-linen-300 mt-3">No publication in the archive is linked to this event yet.</p>`}
             </li>
@@ -498,7 +498,7 @@
                     ${cropped ? `<p class="measure font-mono text-[11px] text-linen-300">Cropped detail. The full page is not reproduced.</p>` : ''}
                     ${clip.status === 'publishable_with_credit' ? `<p class="measure font-mono text-[11px] text-linen-300">Free to reuse with credit.</p>` : ''}
                     ${clip.citation ? `<p class="measure font-mono text-[11px] text-linen-300 leading-relaxed"><cite class="not-italic">${escapeHtml(clip.citation)}</cite></p>` : ''}
-                    ${pub ? `<p class="font-mono text-[11px] text-linen-300">From <a href="publication.html?id=${pub.id}" class="text-stain hover:text-linen-100 transition-colors">${escapeHtml(pub.name)}</a></p>` : ''}
+                    ${pub ? `<p class="font-mono text-[11px] text-linen-300">From <a href="publication.html?id=${pub.id}" class="inline-block py-2 text-stain hover:text-linen-100 transition-colors">${escapeHtml(pub.name)}</a></p>` : ''}
                 </figcaption>
             </figure>
         `;
@@ -588,6 +588,12 @@
     }
 
     function showError() {
+        // Name the error in the tab, and keep the empty route out of search results.
+        document.title = 'Era not found | NJ Black Press Archive';
+        const robots = document.createElement('meta');
+        robots.name = 'robots';
+        robots.content = 'noindex';
+        document.head.appendChild(robots);
         const content = document.getElementById('era-content');
         const error = document.getElementById('error-state');
         if (content) content.classList.add('hidden');

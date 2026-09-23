@@ -306,7 +306,7 @@ html, body {
 .hit-area-link {
     display: inline-flex;
     align-items: center;
-    min-height: 40px;
+    min-height: 44px;
     padding: 0.35rem 0;
 }
 
@@ -335,4 +335,19 @@ html, body {
 .clip-mounted {
     border: 1px solid var(--stain);
     padding: 4px;
+}
+
+/* Respect a reader's reduced-motion setting on every page: no smooth
+   scrolling, and animations and transitions finish at once. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

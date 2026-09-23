@@ -6,6 +6,7 @@ keep one vocabulary, one footer, one focus style, and one font set.
 """
 
 import re
+from html.parser import HTMLParser
 from pathlib import Path
 
 
@@ -16,6 +17,30 @@ WIKI = ROOT / "scripts" / "generate_html_wiki.py"
 FONTS = "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..700&family=Libre+Franklin:wght@400..900&display=swap"
 LEGACY = re.compile(r"(?<![\w-])(?:[a-z0-9-]+:)*(?:bg|text|border|outline|placeholder|ring|from|via|to|divide|decoration|fill|stroke|shadow|caret)-(?:ink|paper|accent)(?![\w])")
 OFF_PALETTE = re.compile(r"(?<![\w-])(?:[a-z0-9-]+:)*(?:bg|text|border)-(?:white|black|gray|slate|zinc|neutral|stone|red|orange|amber|yellow|blue|sky|indigo|pink|rose)(?:-\d+)?(?:/\d+)?(?![\w-])")
+
+
+class VisibleText(HTMLParser):
+    """Collect text and text attributes a visitor can see or hear."""
+
+    def __init__(self):
+        super().__init__()
+        self.parts = []
+        self.skip = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag in ("script", "style"):
+            self.skip += 1
+        for key, value in attrs:
+            if key in ("alt", "title", "aria-label", "content", "placeholder") and value:
+                self.parts.append(value)
+
+    def handle_endtag(self, tag):
+        if tag in ("script", "style"):
+            self.skip -= 1
+
+    def handle_data(self, data):
+        if not self.skip:
+            self.parts.append(data)
 
 
 def sources() -> list[Path]:
@@ -62,6 +87,17 @@ def main() -> None:
     for needle in (FONTS, "<footer data-site-footer", 'class="skip-link"', 'id="main-content"'):
         if needle not in wiki:
             errors.append(f"wiki template: missing {needle}")
+
+    # The public name is Historical notes and its main view is the history hall.
+    # "Woven" survives only in internal file names, ids, and code.
+    public = [DOCS / page for page in PAGES + ["woven.html"]] + sorted((DOCS / "wiki").rglob("*.html"))
+    for path in public:
+        parser = VisibleText()
+        parser.feed(path.read_text(encoding="utf-8"))
+        if any(re.search(r"woven", part, re.I) for part in parser.parts):
+            errors.append(f"{path.relative_to(ROOT)}: visitor-facing text says Woven")
+    if re.search(r"woven", (DOCS / "llms.txt").read_text(encoding="utf-8"), re.I):
+        errors.append("docs/llms.txt says Woven")
 
     styles = (DOCS / "css" / "styles.css").read_text(encoding="utf-8")
     if ":is(a, button, input, select, textarea, summary, [tabindex]):focus-visible" not in styles:

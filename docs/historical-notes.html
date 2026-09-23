@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#14100b">
+    <meta name="color-scheme" content="dark">
     <meta name="description" content="Explore the history of New Jersey’s Black press through publication timelines, guided stories, and source evidence.">
     <meta name="author" content="Center for Cooperative Media">
 
@@ -82,21 +83,6 @@
         </div>
     </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-walnut-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
-        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-linen-300 hover:text-stain" aria-label="Close menu">
-            <svg class="w-8 h-8" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-        <ul class="space-y-6 text-center font-display text-2xl font-medium tracking-wide">
-            <li><a href="index.html#featured" class="inline-block py-2 hover:text-stain transition-colors">Historic</a></li>
-            <li><a href="index.html#timeline" class="inline-block py-2 hover:text-stain transition-colors">Timeline</a></li>
-            <li><a href="archive.html" class="inline-block py-2 hover:text-stain transition-colors">Archive</a></li>
-            <li><a href="story.html" class="inline-block py-2 hover:text-stain transition-colors">Stories</a></li>
-            <li><a href="era.html" class="inline-block py-2 hover:text-stain transition-colors">Eras</a></li>
-            <li><a href="wiki/index.html" class="inline-block py-2 hover:text-stain transition-colors">Wiki</a></li>
-            <li><a href="historical-notes.html" aria-current="page" class="inline-block py-2 text-stain">Historical notes</a></li>
-            <li><a href="index.html#about" class="inline-block py-2 hover:text-stain transition-colors">About</a></li>
-        </ul>
-    </div>
 
     <main class="pt-20">
         <div id="woven-firstscreen">
@@ -319,28 +305,6 @@
 
     <script type="module" src="js/woven/guide.js"></script>
     <script type="module" src="js/woven/main.js"></script>
-    <script>
-        (function () {
-            const btn = document.getElementById('mobile-menu-btn');
-            const close = document.getElementById('mobile-menu-close');
-            const menu = document.getElementById('mobile-menu');
-
-            function setOpen(open) {
-                menu.classList.toggle('translate-x-full', !open);
-                document.body.classList.toggle('overflow-hidden', open);
-                btn.setAttribute('aria-expanded', String(open));
-                if (open) close.focus(); else btn.focus();
-            }
-
-            btn.addEventListener('click', () => setOpen(menu.classList.contains('translate-x-full')));
-            close.addEventListener('click', () => setOpen(false));
-            menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && !menu.classList.contains('translate-x-full')) setOpen(false);
-            });
-
-        })();
-    </script>
     <script src="js/site-nav.js"></script>
 </body>
 </html>

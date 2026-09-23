@@ -91,6 +91,7 @@ def check_head(page: str, head: Head) -> list[str]:
         "twitter:description",
         "twitter:image",
         "theme-color",
+        "color-scheme",
     ]
     for key in required:
         if not head.meta.get(key):

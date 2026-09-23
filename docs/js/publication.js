@@ -620,7 +620,7 @@
                         <div class="mt-auto space-y-1">
                             ${citation ? `<p class="measure font-mono text-[11px] text-linen-300 leading-relaxed"><cite class="not-italic" title="${escapeAttr(citation)}">${escapeHtml(citation)}</cite></p>` : ''}
                             ${note ? `<p class="measure font-mono text-[11px] text-linen-300/80">${escapeHtml(note)}</p>` : ''}
-                            ${isUrl(item.url) ? `<p class="font-mono text-[11px]"><a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer" class="text-stain hover:text-linen-100 transition-colors">View at ${escapeHtml(label)} <span aria-hidden="true">&nearr;</span></a></p>` : ''}
+                            ${isUrl(item.url) ? `<p class="font-mono text-[11px]"><a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center min-h-[44px] text-stain hover:text-linen-100 transition-colors">View at ${escapeHtml(label)} <span aria-hidden="true">&nearr;</span></a></p>` : ''}
                         </div>
                     </figcaption>
                 </figure>
@@ -635,7 +635,7 @@
                     ${item.caption ? `<p class="measure font-sans text-sm text-linen-200 leading-relaxed">${escapeHtml(item.caption)}</p>` : ''}
                     ${item.citation ? `<p class="measure font-mono text-[11px] text-linen-300 leading-relaxed"><cite class="not-italic" title="${escapeAttr(item.citation)}">${escapeHtml(item.citation)}</cite></p>` : ''}
                     ${note ? `<p class="measure font-mono text-[11px] text-linen-300/80">${escapeHtml(note)}</p>` : ''}
-                    ${isUrl(item.url) ? `<p class="font-mono text-[11px]"><a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer" class="text-stain hover:text-linen-100 transition-colors">View at ${escapeHtml(label)} <span aria-hidden="true">&nearr;</span></a></p>` : ''}
+                    ${isUrl(item.url) ? `<p class="font-mono text-[11px]"><a href="${escapeAttr(item.url)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center min-h-[44px] text-stain hover:text-linen-100 transition-colors">View at ${escapeHtml(label)} <span aria-hidden="true">&nearr;</span></a></p>` : ''}
                 </li>
             `;
         }).join('');
@@ -792,6 +792,12 @@
 
     function showError() {
         hideLoadingOverlay();
+        // Name the error in the tab, and keep the empty route out of search results.
+        document.title = 'Publication not found | NJ Black Press Archive';
+        const robots = document.createElement('meta');
+        robots.name = 'robots';
+        robots.content = 'noindex';
+        document.head.appendChild(robots);
         document.getElementById('publication-content').classList.add('hidden');
         document.getElementById('error-state').classList.remove('hidden');
     }

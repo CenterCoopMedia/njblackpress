@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="motion-safe:scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#14100b">
+    <meta name="color-scheme" content="dark">
     <meta id="meta-description" name="description" content="Decade by decade through the NJ Black Press Archive — publications founded, dated events and clippings for each era.">
 
     <!-- Open Graph (static fallbacks; JS sets per-story values after load) -->
@@ -84,21 +85,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-walnut-950 z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
-        <button id="mobile-menu-close" class="absolute top-[18px] right-[18px] p-[6px] text-linen-300 hover:text-stain" aria-label="Close menu">
-            <svg class="w-8 h-8" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-        <ul class="space-y-8 text-center font-display text-3xl font-medium tracking-wide">
-            <li><a href="archive.html" class="inline-block py-2 hover:text-stain transition-colors">Archive</a></li>
-            <li><a href="story.html" class="inline-block py-2 hover:text-stain transition-colors">Stories</a></li>
-            <li><a href="era.html" class="inline-block py-2 hover:text-stain transition-colors">Eras</a></li>
-            <li><a href="wiki/index.html" class="inline-block py-2 hover:text-stain transition-colors">Wiki</a></li>
-            <li><a href="historical-notes.html" class="inline-block py-2 hover:text-stain transition-colors">Historical notes</a></li>
-            <li><a href="index.html#timeline" class="inline-block py-2 hover:text-stain transition-colors">Timeline</a></li>
-            <li><a href="index.html#about" class="inline-block py-2 hover:text-stain transition-colors">About</a></li>
-        </ul>
-    </div>
 
     <main id="main-content" class="pt-20">
 
@@ -106,9 +92,9 @@
         <div class="bg-walnut-950 border-b border-walnut-600 py-4 px-4 md:px-8">
             <nav aria-label="Breadcrumb" class="max-w-[1400px] mx-auto">
                 <ol id="breadcrumb" class="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-linen-300">
-                    <li><a href="index.html" class="hover:text-stain transition-colors">Archive</a></li>
+                    <li><a href="index.html" class="inline-flex items-center min-h-[44px] hover:text-stain transition-colors">Home</a></li>
                     <li aria-hidden="true">/</li>
-                    <li><a href="era.html" class="hover:text-stain transition-colors">Eras</a></li>
+                    <li><a href="era.html" class="inline-flex items-center min-h-[44px] hover:text-stain transition-colors">Eras</a></li>
                 </ol>
             </nav>
         </div>
@@ -149,24 +135,6 @@
     </footer>
 
     <script src="js/era.js?v=20260819"></script>
-    <script>
-        // Mobile menu toggle
-        (function () {
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const menuClose = document.getElementById('mobile-menu-close');
-            const menu = document.getElementById('mobile-menu');
-
-            function toggleMenu() {
-                menu.classList.toggle('translate-x-full');
-                document.body.classList.toggle('overflow-hidden');
-            }
-
-            menuBtn.addEventListener('click', toggleMenu);
-            menuClose.addEventListener('click', toggleMenu);
-            menu.querySelectorAll('a').forEach(link => link.addEventListener('click', toggleMenu));
-
-        })();
-    </script>
     <script src="js/site-nav.js"></script>
 </body>
 </html>

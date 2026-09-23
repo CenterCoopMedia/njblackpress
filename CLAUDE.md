@@ -74,7 +74,14 @@ check when you change the global navigation.
   footer into `<footer data-site-footer>`. Keep the footer outside `<main>`.
 - Focus: `docs/css/styles.css` holds the one `:focus-visible` rule. Do not use
   `focus:outline-none` or a per-page focus colour.
-- `data/test_design_system.py` enforces these rules.
+- Mobile menu: `site-nav.js` builds it as a modal dialog on every page. A page
+  supplies only a `#mobile-menu-btn` button or an `a.md:hidden` placeholder.
+- Targets: interactive elements are at least 44px tall where they stand alone.
+  `min-height` has no effect on an inline link; use `inline-flex` or padding.
+- Motion: `styles.css` stops animation and smooth scrolling under
+  `prefers-reduced-motion`.
+- `data/test_design_system.py` enforces these rules, and
+  `scripts/review_site.py` checks them in a browser.
 
 ## Data sources
 
@@ -184,6 +191,7 @@ python3 data/test_woven_usability.py
 python3 data/test_hall_assets.py
 node scripts/test-hall.mjs
 python3 scripts/review_hall.py
+python3 scripts/review_site.py
 python3 scripts/generate_okf_wiki.py --check
 ```
 
