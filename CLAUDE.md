@@ -91,6 +91,8 @@ Do not hand-edit these outputs:
 - `data/map-publications.json`
 - `docs/data/map-publications.json`
 - `docs/wiki/`
+- `docs/sitemap.xml`
+- `docs/og-image.png`, `docs/favicon-32.png`, `docs/apple-touch-icon.png`
 - `okf/`
 
 Run the smallest builder that covers the source change:
@@ -105,7 +107,19 @@ python3 data/make_wall_copies.py
 python3 scripts/generate_html_wiki.py --base-url https://centercoopmedia.github.io/njblackpress/
 python3 scripts/generate_okf_wiki.py
 python3 scripts/generate_okf_wiki.py --check
+python3 scripts/build_sitemap.py
+python3 scripts/make_social_assets.py
 ```
+
+Run `scripts/build_sitemap.py` after a change adds or removes a publication,
+story, or decade. Run `scripts/make_social_assets.py` after a visible change to
+the home page hero or the navigation; it recaptures the shared social card.
+
+Every public page uses the same head: a title that ends with
+`| NJ Black Press Archive` (the home page title is the name alone), a
+description, Open Graph and Twitter tags with the shared `og-image.png` and its
+alt text, `theme-color`, the SVG favicon, `favicon-32.png`, and
+`apple-touch-icon.png`. `data/test_site_metadata.py` enforces it.
 
 The checked-in CSV is stale relative to the current publication record. Do not
 run `data/convert_csv.py` for a routine correction. Use it only for a controlled
@@ -145,6 +159,7 @@ Run the focused checks for the changed area. Useful checks include:
 ```bash
 npm run build:css
 python3 data/test_site_data.py
+python3 data/test_site_metadata.py
 python3 data/test_source_catalog.py
 python3 data/test_map.py
 python3 data/test_navigation.py

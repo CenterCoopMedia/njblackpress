@@ -95,6 +95,8 @@ Important generated files include:
 - `docs/data/clippings.json`
 - `docs/images/evidence/`
 - `docs/wiki/`
+- `docs/sitemap.xml`
+- `docs/og-image.png` and the PNG icons
 - `okf/`
 
 Publication evidence comes from
@@ -112,6 +114,8 @@ python3 data/build_site_events_stories.py
 python3 data/build_map_data.py
 python3 scripts/generate_html_wiki.py --base-url https://centercoopmedia.github.io/njblackpress/
 python3 scripts/generate_okf_wiki.py
+python3 scripts/build_sitemap.py
+python3 scripts/make_social_assets.py
 ```
 
 Run only the builders needed for the changed source. Review generated diffs
@@ -128,6 +132,7 @@ Run the checks that match the changed area. Common checks include:
 ```bash
 npm run build:css
 python3 data/test_site_data.py
+python3 data/test_site_metadata.py
 python3 data/test_source_catalog.py
 python3 data/test_map.py
 python3 data/test_navigation.py

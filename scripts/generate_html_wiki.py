@@ -45,6 +45,8 @@ OUT_DIR = ROOT / "docs" / "wiki"
 # are relative, so the wiki works under any path prefix; only the absolute
 # canonical/OG/sitemap URLs use this base. Override with --base-url.
 SITE_BASE = "https://centercoopmedia.github.io/njblackpress/"
+# Describes docs/og-image.png, the shared social card for every page.
+OG_IMAGE_ALT = "NJ Black Press Archive home page: the Black press archive, with counts of publications, cities, and active outlets."
 
 GROUP_LABEL = {"cities": "City", "decades": "Decade", "formats": "Format", "mediums": "Medium"}
 
@@ -69,6 +71,7 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#14100b">
     <meta name="description" content="{esc(description)}">
     <meta name="author" content="Center for Cooperative Media">
     <meta property="og:title" content="{esc(title)} | NJ Black Press Wiki">
@@ -76,12 +79,19 @@ def shell(*, title: str, description: str, depth: int, body: str, canonical_rel:
     <meta property="og:type" content="website">
     <meta property="og:url" content="{esc(canonical)}">
     <meta property="og:image" content="{SITE_BASE}og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{OG_IMAGE_ALT}">
     <meta property="og:site_name" content="NJ Black Press Archive">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{esc(title)} | NJ Black Press Wiki">
+    <meta name="twitter:description" content="{esc(description)}">
+    <meta name="twitter:image" content="{SITE_BASE}og-image.png">
     <title>{esc(title)} | NJ Black Press Wiki</title>
     <link rel="canonical" href="{esc(canonical)}">
     <link rel="icon" type="image/svg+xml" href="{a}favicon.svg">
-    <link rel="icon" type="image/png" href="{a}favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{a}favicon-32.png">
+    <link rel="apple-touch-icon" href="{a}apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..700&family=Libre+Franklin:wght@400..900&display=swap" rel="stylesheet">

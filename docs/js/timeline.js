@@ -1,5 +1,5 @@
 /**
- * NJ Black Press Database - Timeline Visualization
+ * NJ Black Press Archive - Timeline Visualization
  * Interactive decade-by-decade visualization of publication activity.
  *
  * Each decade bar is stacked (founded + ceased, honest proportions) and

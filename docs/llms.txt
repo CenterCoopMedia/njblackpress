@@ -4,7 +4,7 @@
 
 ## About
 
-The NJ Black Press Archive catalogs 137 Black-owned publications spanning 145 years of New Jersey journalism history. It covers newspapers, magazines, newsletters, and digital outlets across 45+ cities from the post-Reconstruction era through today.
+The NJ Black Press Archive catalogs 136 Black-owned publications across more than 140 years of New Jersey journalism history. It covers newspapers, magazines, newsletters, and digital outlets across 40+ New Jersey cities from the post-Reconstruction era through today.
 
 Data was curated by Amanda Alicea and led by Cassandra Etienne at the Center for Cooperative Media.
 
@@ -12,8 +12,13 @@ Data was curated by Amanda Alicea and led by Cassandra Etienne at the Center for
 
 - Home: https://centercoopmedia.github.io/njblackpress/
 - Full archive: https://centercoopmedia.github.io/njblackpress/archive.html
-- Wiki (one page per publication, cross-linked by city/decade/format): https://centerforcooperativemedia.org/njblackpress/wiki/
-- Wiki statistics: https://centerforcooperativemedia.org/njblackpress/wiki/statistics.html
+- Publication detail: https://centercoopmedia.github.io/njblackpress/publication.html?id=1 (one page per record, by ID)
+- Stories (sourced narratives): https://centercoopmedia.github.io/njblackpress/story.html
+- Eras (one page per decade): https://centercoopmedia.github.io/njblackpress/era.html
+- Publication map: https://centercoopmedia.github.io/njblackpress/map.html
+- Historical notes (guided stories and publication browser): https://centercoopmedia.github.io/njblackpress/historical-notes.html
+- Wiki (one page per publication, cross-linked by city/decade/format): https://centercoopmedia.github.io/njblackpress/wiki/
+- Wiki statistics: https://centercoopmedia.github.io/njblackpress/wiki/statistics.html
 - GitHub repository: https://github.com/CenterCoopMedia/njblackpress
 
 A portable, agent-readable markdown version of the wiki (open knowledge format — one markdown file per record with YAML frontmatter) lives in the repo at `okf/`.
@@ -31,7 +36,7 @@ Each publication record includes: name, city, years of operation, format, freque
 This archive documents:
 - Black press history spanning post-Reconstruction (1880s) through the digital era
 - Publications across Newark, Trenton, Camden, Jersey City, and 40+ other NJ cities
-- Key periods: Reconstruction era, Great Migration, Jim Crow era, Civil Rights movement, Black Power era (1968 Newark uprising and aftermath), and contemporary digital journalism
+- Key periods: Reconstruction era, Great Migration, Jim Crow era, Civil Rights movement, Black Power era (1967 Newark uprising and aftermath), and contemporary digital journalism
 - Publication types: weekly newspapers, monthly magazines, academic journals, community newsletters, digital-native outlets
 
 ## Related initiatives
@@ -45,4 +50,4 @@ This archive documents:
 Data curator: Amanda Alicea
 Project lead: Cassandra Etienne
 Institution: Center for Cooperative Media, Montclair State University
-License: Public domain / open access
+Reuse: No license file is published. Contact the Center for Cooperative Media before you redistribute the data.
