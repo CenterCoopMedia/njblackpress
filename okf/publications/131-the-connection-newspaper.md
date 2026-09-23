@@ -44,7 +44,7 @@ Editor: Ralph F. Johnson.
 
 ## Historical notes
 
-[March 2026 research: Duplicate of ID 5 (The Connection / North Jersey Connection). Same publication, same founding year, same publisher.]
+A March 2026 search found this entry to be a duplicate of The Connection / North Jersey Connection (ID 5). It is the same publication, with the same founding year and the same publisher.
 
 ## Archive reference
 

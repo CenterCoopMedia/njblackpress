@@ -39,7 +39,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): No active website or social media found. Listed on Wikipedia NJ African American newspapers page.]
+A March 2026 search found no active website and no social media account. The title is listed on the Wikipedia page of African American newspapers in New Jersey.
 
 ## External links
 

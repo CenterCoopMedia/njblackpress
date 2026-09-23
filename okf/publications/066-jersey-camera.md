@@ -39,7 +39,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found in any searched database.]
+A March 2026 search found no records of this publication in any searched database.
 
 ## Archive reference
 

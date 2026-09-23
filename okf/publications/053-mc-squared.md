@@ -35,7 +35,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Same Piscataway location and year as Inner City Products (ID 117); may be related.]
+A March 2026 search found no records. The entry shares its Piscataway location and year with Inner City Products (ID 117) and may be related.
 
 ## Related publications
 

@@ -40,7 +40,7 @@ Previous editor(s): Marcia Cole.
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Likely another title from the Word Up!/Enoble Media group.]
+A March 2026 search found no records. The title was likely another from the Word Up! and Enoble Media group.
 
 ## Archive reference
 

@@ -39,7 +39,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): WorldCat entry exists but no date range retrievable. No evidence of sustained activity.]
+A March 2026 search found a WorldCat entry, but no date range could be retrieved. The search found no evidence of sustained activity.
 
 ## External links
 

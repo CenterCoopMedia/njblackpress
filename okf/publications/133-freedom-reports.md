@@ -35,7 +35,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Searches for civil rights publications in Newark 1966 returned no matches.]
+A March 2026 search found no records. Searches for civil rights publications in Newark in 1966 returned no matches.
 
 ## Archive reference
 

@@ -35,7 +35,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Likely connected to Amiri Baraka's CFUN/Congress of African People (1970-1976).]
+A March 2026 search found no records. The title was likely connected to Amiri Baraka's CFUN and Congress of African People (1970-1976).
 
 ## Archive reference
 

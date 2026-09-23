@@ -39,7 +39,7 @@ Previous editor(s): Albert E. Hart.
 
 ## Historical notes
 
-No specific archival records were found for the North Jersey Independent from Paterson in online databases. A related publication, the New Jersey Herald News (Newark, 1938-1966), was described as 'Independent' and 'Owned and published by New Jersey Negroes' with editor O.W. Brown, but this was a separate Newark-based publication. The North Jersey Independent may have been a community newspaper serving Paterson's African American residents. Physical copies may survive at the Paterson Free Public Library, the New Jersey State Archives, or in the comprehensive Danky & Hady bibliography. [March 2026 research (estimated): No LOC entry, no microfilm, no records found beyond founding (1950, Paterson). Status unknown per Wikipedia NJ list.]
+No specific archival records were found for the North Jersey Independent from Paterson in online databases. A related publication, the New Jersey Herald News (Newark, 1938-1966), was described as 'Independent' and 'Owned and published by New Jersey Negroes' with editor O.W. Brown, but this was a separate Newark-based publication. The North Jersey Independent may have been a community newspaper serving Paterson's African American residents. Physical copies may survive at the Paterson Free Public Library, the New Jersey State Archives, or in the comprehensive Danky & Hady bibliography. A March 2026 search found no Library of Congress entry, no microfilm, and no records beyond its founding in Paterson in 1950. Its status is recorded as unknown on the Wikipedia list of African American newspapers in New Jersey.
 
 ## Related publications
 

@@ -132,6 +132,7 @@ Run the checks that match the changed area. Common checks include:
 ```bash
 npm run build:css
 python3 data/test_site_data.py
+python3 data/test_publication_record.py
 python3 data/test_site_metadata.py
 python3 data/test_design_system.py
 python3 data/test_source_catalog.py

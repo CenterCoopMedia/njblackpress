@@ -39,7 +39,7 @@ Print.
 
 ## Historical notes
 
-[March 2026 research: Last confirmed physical issues on Amazon date to 2011-2012. Subscription sites may have stale listings.]
+A March 2026 search found the last confirmed physical issues listed on Amazon dated 2011 to 2012. Subscription sites may carry stale listings.
 
 ## Related publications
 

@@ -39,7 +39,7 @@ Editor: Elizabeth Peale Johnson.
 
 ## Historical notes
 
-[March 2026 research (estimated): NJ chapter of AAHGS still active (Facebook, conferences 2024-2025). Newsletter confirmed through 1996 in library catalogs.]
+A March 2026 search found that the New Jersey chapter of AAHGS remains active, with a Facebook presence and conferences in 2024 and 2025. Library catalogs confirm the newsletter through 1996.
 
 ## Archive reference
 

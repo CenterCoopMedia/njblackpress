@@ -39,7 +39,7 @@ Editor: Kate Ferguson.
 
 ## Historical notes
 
-[March 2026 research: Duplicate of ID 63. Same publication (Today's Black Woman), same publisher (John Blassingame / Enoble Media).]
+A March 2026 search found this entry to be a duplicate of Today's Black Woman (ID 63). It is the same publication, with the same publisher, John Blassingame of Enoble Media.
 
 ## Archive reference
 

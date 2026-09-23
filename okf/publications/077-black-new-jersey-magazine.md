@@ -39,7 +39,7 @@ Previous editor(s): Barbara Johnson.
 
 ## Historical notes
 
-[March 2026 research: Continued from Black Atlantic City Magazine (ID 119). Published as Black New Jersey Magazine 1987-1990. ACFPL bibliography.]
+A March 2026 search found that the magazine continued from Black Atlantic City Magazine (ID 119) and appeared as Black New Jersey Magazine from 1987 to 1990, according to the ACFPL bibliography.
 
 ## Archive reference
 

@@ -39,7 +39,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. West Orange-based organizational newsletter.]
+A March 2026 search found no records. The title was a West Orange-based organizational newsletter.
 
 ## Archive reference
 

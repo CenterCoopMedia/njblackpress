@@ -39,7 +39,7 @@ Jacqueline Mitchell Robinson (Current Editor).
 
 ## Historical notes
 
-[March 2026 research (estimated): No records found. Likely church-affiliated with limited distribution.]
+A March 2026 search found no records. The magazine was likely church-affiliated with limited distribution.
 
 ## External links
 

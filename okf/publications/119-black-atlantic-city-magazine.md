@@ -39,7 +39,7 @@ Previous editor(s): J. H. Lyles-Belton.
 
 ## Historical notes
 
-[March 2026 research: Published 1978-1986 as Black Atlantic City Magazine, then renamed Black New Jersey Magazine (ID 77) 1987-1990. ACFPL Heston Archives.]
+A March 2026 search found that the magazine was published as Black Atlantic City Magazine from 1978 to 1986, then renamed Black New Jersey Magazine (ID 77) from 1987 to 1990, according to the ACFPL Heston Archives.
 
 ## Archive reference
 

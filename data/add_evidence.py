@@ -9,6 +9,7 @@ Run:
   python data/add_evidence.py
 
 Writes data/publications.json and copies it to docs/data/publications.json.
+Also rewrites the derived metadata (counts, cities, decades, formats).
 No hand-editing of publications.json — this script is the only writer.
 """
 
@@ -91,6 +92,26 @@ def build_evidence_for_publication(pub_catalog_entry, rights_lookup):
     return evidence
 
 
+def derive_metadata(publications, evidence_count):
+    """Summary lists and counts, derived from the records so they cannot go stale.
+
+    Same rules as data/convert_csv.py: sorted values, "Unknown" decade last.
+    """
+    def values(field):
+        return {p.get(field) for p in publications if p.get(field)}
+
+    active = sum(1 for p in publications if p.get("isActive"))
+    return {
+        "totalCount": len(publications),
+        "cities": sorted(values("city")),
+        "decades": sorted(values("decade"), key=lambda d: int(d[:-1]) if d != "Unknown" else 9999),
+        "formats": sorted(values("format")),
+        "activeCount": active,
+        "ceasedCount": len(publications) - active,
+        "evidenceCount": evidence_count,
+    }
+
+
 def main():
     publications_data = json.loads(PUBLICATIONS_PATH.read_text(encoding="utf-8"))
     catalog_data = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
@@ -117,7 +138,7 @@ def main():
         else:
             pubs_without_evidence += 1
 
-    publications_data["metadata"]["evidenceCount"] = total_evidence
+    publications_data["metadata"].update(derive_metadata(publications_data["publications"], total_evidence))
 
     PUBLICATIONS_PATH.write_text(
         json.dumps(publications_data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"

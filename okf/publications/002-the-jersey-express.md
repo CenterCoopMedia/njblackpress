@@ -39,7 +39,7 @@ Previous editor(s): Melvin B. Johnson.
 
 ## Historical notes
 
-[March 2026 research (estimated): No LOC entry, no microfilm, no records found beyond founding (ca. 1932, Montclair). Status unknown per Wikipedia NJ list.]
+A March 2026 search found no Library of Congress entry, no microfilm, and no records of this publication beyond its founding in Montclair around 1932. Its status is recorded as unknown on the Wikipedia list of African American newspapers in New Jersey.
 
 ## Related publications
 

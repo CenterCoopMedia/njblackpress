@@ -39,7 +39,7 @@ Editor: Kate Ferguson.
 
 ## Historical notes
 
-[March 2026 research: Published by Enoble Media Group / John Blassingame, Paramus, NJ. Last reference in 2009 press release.]
+A March 2026 search found that the magazine was published by Enoble Media Group and John Blassingame in Paramus, NJ. The last reference to it appears in a 2009 press release.
 
 ## Archive reference
 

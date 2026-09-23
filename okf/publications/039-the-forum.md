@@ -39,7 +39,7 @@ featured: false
 
 ## Historical notes
 
-[March 2026 research (estimated): LOC sn88071371 confirmed but end date unknown. May have merged into Essex Forum (ID 42).]
+A March 2026 search confirmed a Library of Congress record (LCCN sn88071371), but the end date is unknown. The paper may have merged into Essex Forum (ID 42).
 
 ## External links
 
