@@ -91,6 +91,16 @@ for (const section of layout.sections) {
 }
 assert.equal(previousEnd, layout.length);
 
+// The bare wall is furnished, and every furnishing stays out of the corridor.
+assert.ok(layout.ornaments.length >= 10, `the hall has ${layout.ornaments.length} furnishings`);
+for (const kind of ['bench', 'plinth', 'sconce']) {
+  assert.ok(layout.ornaments.some((o) => o.kind === kind), `the hall has at least one ${kind}`);
+}
+for (const o of layout.ornaments) {
+  assert.ok(Math.min(Math.abs(o.bounds.minX), Math.abs(o.bounds.maxX)) >= layout.config.corridorHalfWidth, `${o.id} stays out of the corridor`);
+  assert.ok(o.bounds.minZ > 0 && o.bounds.maxZ < layout.length, `${o.id} stands inside the hall`);
+}
+
 const decadeCounts = { '1880s': 3, '1890s': 0, '1900s': 2, '1910s': 2, '1920s': 2, '1930s': 13, '1940s': 3, '1950s': 9, '1960s': 10, '1970s': 29, '1980s': 21, '1990s': 25, '2000s': 0, '2010s': 8, '2020s': 6 };
 for (const [id, count] of Object.entries(decadeCounts)) {
   assert.equal(layout.sectionById.get(id).count, count, `${id} holds ${count} titles`);

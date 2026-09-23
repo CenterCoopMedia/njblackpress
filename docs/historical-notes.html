@@ -123,7 +123,7 @@
                 </div>
                 <button type="button" class="woven-btn woven-primary-btn" id="btn-tours" aria-expanded="false" aria-controls="woven-tourpicker">Guided stories</button>
                 <button type="button" class="woven-btn" id="woven-find-title">Find a title</button>
-                <button type="button" class="woven-btn" id="btn-fullscreen" hidden>Full screen</button>
+                <button type="button" class="woven-btn" id="btn-fullscreen" aria-keyshortcuts="F" title="Full screen (F)" hidden>Full screen</button>
 
                 <details id="woven-more-tools">
                     <summary class="woven-btn">More tools</summary>
@@ -151,18 +151,19 @@
             <div id="woven-loading" role="status">Loading the archive…</div>
             <div id="woven-hall-controls" role="group" aria-label="Move through the history hall" hidden>
                 <div class="bar-scroll">
-                    <button type="button" class="woven-btn" id="hall-previous-pub">Previous publication</button>
-                    <button type="button" class="woven-btn" id="hall-next-pub">Next publication</button>
-                    <button type="button" class="woven-btn" id="hall-previous-decade">Previous decade</button>
+                    <button type="button" class="woven-btn" id="hall-previous-pub" aria-keyshortcuts="ArrowLeft" title="Previous publication (Left arrow)"><span aria-hidden="true">&larr;</span> Previous publication</button>
+                    <button type="button" class="woven-btn" id="hall-next-pub" aria-keyshortcuts="ArrowRight" title="Next publication (Right arrow)">Next publication <span aria-hidden="true">&rarr;</span></button>
+                    <button type="button" class="woven-btn" id="hall-previous-decade" aria-keyshortcuts="ArrowDown PageUp" title="Previous decade (Down arrow)"><span aria-hidden="true">&darr;</span> Previous decade</button>
                     <label class="hall-decade-field" for="hall-decade">Decade
                         <select id="hall-decade"></select>
                     </label>
-                    <button type="button" class="woven-btn" id="hall-next-decade">Next decade</button>
-                    <button type="button" class="woven-btn" id="hall-entrance">Back to entrance</button>
+                    <button type="button" class="woven-btn" id="hall-next-decade" aria-keyshortcuts="ArrowUp PageDown" title="Next decade (Up arrow)">Next decade <span aria-hidden="true">&uarr;</span></button>
+                    <button type="button" class="woven-btn" id="hall-entrance" aria-keyshortcuts="Home" title="Back to entrance (Home)">Back to entrance</button>
                     <button type="button" class="woven-btn" id="hall-scroll-toggle" aria-pressed="false">Use scroll to move</button>
                     <button type="button" class="woven-btn" id="hall-tier" aria-pressed="false" aria-describedby="hall-tier-note">Simplified view</button>
                 </div>
                 <p id="hall-where" role="status"></p>
+                <p id="hall-keys" class="hall-keys">Keys: <kbd>&larr;</kbd> <kbd>&rarr;</kbd> publications · <kbd>&uarr;</kbd> <kbd>&darr;</kbd> decades · <kbd>Home</kbd> entrance · <kbd>End</kbd> last decade · <kbd>F</kbd> full screen</p>
                 <p id="hall-hint">Choose a publication, open a guided story, or move to another decade. Arranged by founding date; gallery spacing varies. <span id="hall-tier-note">Standard view. Full detail.</span></p>
             </div>
             <aside id="woven-browser" aria-labelledby="woven-browser-title">

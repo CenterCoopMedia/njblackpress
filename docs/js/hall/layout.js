@@ -55,6 +55,19 @@ export const HALL_CONFIG = {
   readDistance: 2.2,
   tableStandX: 1.2,
 
+  // Furnishings for the bare stretches of wall between frames and tables. Each
+  // stays against its wall and out of the walking corridor. x is the reach
+  // from the wall face, y the height span, z the length along the hall.
+  ornaments: {
+    margin: 0.35,
+    stationSpacing: 4.5,
+    bench: { reach: 0.5, bottom: 0, top: 0.46, length: 1.5, minGap: 2.4 },
+    plinth: { reach: 0.5, bottom: 0, top: 1.25, length: 0.5, minGap: 1.2 },
+    sconce: { reach: 0.28, bottom: 1.95, top: 2.45, length: 0.3, minGap: 0.8 }
+  },
+  // The runner down the middle of the corridor.
+  runner: { width: 1.8, inset: 0.4 },
+
   // Positive overlap smaller than this is contact, not collision.
   epsilon: 1e-6
 };
@@ -338,6 +351,10 @@ export function buildHallLayout(model, options = {}) {
   }
 
   const hallLength = round(cursor);
+  const ornaments = placeOrnaments(config, collisions, hallLength);
+  for (const ornament of ornaments) {
+    collisions.push({ kind: 'ornament', id: ornament.id, sectionId: null, box: ornament.bounds });
+  }
   const corridor = box(
     -config.corridorHalfWidth, config.corridorHalfWidth,
     0, config.ceilingHeight,
@@ -363,6 +380,7 @@ export function buildHallLayout(model, options = {}) {
     bayById: new Map(bays.map((bay) => [bay.id, bay])),
     bookSlots,
     bookSlotByStoryId,
+    ornaments,
     corridor,
     collisions,
     bounds: box(-config.wallX - config.wallThickness, config.wallX + config.wallThickness, 0, config.ceilingHeight, 0, hallLength),
@@ -391,6 +409,64 @@ export function matchingOrder(layout, matches) {
 function compareIds(a, b) {
   if (typeof a === 'number' && typeof b === 'number') return a - b;
   return String(a).localeCompare(String(b));
+}
+
+/**
+ * Furnish the bare wall. For each wall, find the stretches no frame, table, or
+ * book occupies (with a margin), and set evenly spaced stations along each:
+ * a bench or a plinth carrying a bundle of newspapers, with a sconce above.
+ * Decorative only; nothing here stands for a record.
+ */
+function placeOrnaments(config, collisions, hallLength) {
+  const spec = config.ornaments;
+  const out = [];
+  let turn = 0;
+  for (const wall of ['left', 'right']) {
+    const sign = wall === 'left' ? -1 : 1;
+    const busy = collisions
+      .filter((c) => (c.kind === 'frame' || c.kind === 'table' || c.kind === 'book')
+        && Math.sign(c.box.minX + c.box.maxX) === sign)
+      .map((c) => [c.box.minZ - spec.margin, c.box.maxZ + spec.margin])
+      .sort((a, b) => a[0] - b[0]);
+    let cursor = spec.margin + 0.6;
+    const gaps = [];
+    for (const [start, end] of busy) {
+      if (start > cursor) gaps.push([cursor, start]);
+      cursor = Math.max(cursor, end);
+    }
+    const last = hallLength - spec.margin - 0.6;
+    if (last > cursor) gaps.push([cursor, last]);
+    for (const [start, end] of gaps) {
+      // A long stretch holds several stations, spaced evenly. Each station has
+      // a floor piece, alternating bench and plinth for variety, and a sconce
+      // above it; the sconce sits higher than either piece, so they never meet.
+      const stations = Math.max(1, Math.floor((end - start) / spec.stationSpacing));
+      const width = (end - start) / stations;
+      for (let i = 0; i < stations; i += 1) {
+        const centreZ = round(start + width * (i + 0.5));
+        const preferred = turn++ % 2 === 0 ? ['bench', 'plinth'] : ['plinth', 'bench'];
+        const floor = preferred.find((name) => width >= spec[name].minGap);
+        for (const kind of [floor, width >= spec.sconce.minGap ? 'sconce' : null]) {
+          if (!kind) continue;
+          const item = spec[kind];
+          const wallFace = sign * config.wallX;
+          const tip = wallFace - sign * item.reach;
+          out.push({
+            id: `ornament-${wall}-${out.length}`,
+            kind,
+            wall,
+            z: centreZ,
+            bounds: box(
+              Math.min(wallFace, tip), Math.max(wallFace, tip),
+              item.bottom, item.top,
+              round(centreZ - item.length / 2), round(centreZ + item.length / 2)
+            )
+          });
+        }
+      }
+    }
+  }
+  return out;
 }
 
 function markerBox(config, wall, startZ) {

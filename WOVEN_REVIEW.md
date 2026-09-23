@@ -16,6 +16,20 @@ not a fixed distance per year; a note beside the decade navigator says so.
 Every guided story is a bound volume on a reading table in a shallow bay off
 the main corridor.
 
+Each decade is marked by a blade sign on both walls, standing at a right
+angle on a bracket above the frames, so a visitor reads it from far down the
+hall. A carpet runner runs down the corridor. The bare wall between frames and
+reading tables is furnished with benches, plinths carrying tied bundles of
+newspapers, and brass sconces; they are decorative and stand for no record.
+The far wall carries the archive's icon, name, and years.
+
+Keyboard: while the focus is in the hall controls, or after a click in the
+hall with nothing focused, left and right step publications, up and down (and
+Page Up and Page Down) step decades, Home returns to the entrance, End goes to
+the last decade, and F toggles full screen. Each control names its key in
+`aria-keyshortcuts`, and a key legend shows on devices with a pointer. Full
+screen sits in the top bar beside the views.
+
 Selecting a sheet opens the existing record panel and brings the sheet into a
 comfortable focus pose. Selecting a volume opens the story's own DOM reader
 immediately, without waiting for the book to finish opening. The reader holds
@@ -142,7 +156,8 @@ The hall paints a bounded pool of sheet faces: **24 in the standard tier and
 `docs/js/hall/sheets.js`. A face is 512 by 704 RGBA8, about 1.83 MiB with its
 mip chain, so the painted faces hold about 44 MiB in the standard tier and
 about 22 MiB in the simplified one. With their brass plates (about 8 and 4
-MiB), the 16 decade markers (about 11 MiB), the 13 book covers (about 6 MiB),
+MiB), the 16 decade markers (about 11 MiB), the far wall panel and the runner
+(about 3 MiB together), the 13 book covers (about 6 MiB),
 and the open volume's pages and clipping (about 11 MiB), the hall's own
 resident textures come to roughly 80 MiB standard and roughly 50 MiB
 simplified, inside the 128 MiB and 64 MiB budgets. Painting all 136 faces at

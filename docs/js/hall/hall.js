@@ -658,16 +658,47 @@ export async function mountHall(app, params) {
     announce('Back at the entrance of the hall.');
   });
 
-  // Left and right step publications, and with Shift they step decades. They
-  // apply only while the focus is inside this group of controls, and never
-  // inside the decade menu, which owns those keys itself.
-  listen(hallControls, 'keydown', (event) => {
-    if (!active || event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
-    if (event.altKey || event.metaKey || event.ctrlKey) return;
-    if (event.target.closest('select, input, textarea, [contenteditable="true"]')) return;
+  // ---- keyboard ------------------------------------------------------------
+  // Left and right step publications; up and down (and Page Up and Page Down)
+  // walk a decade forward or back; Shift with left or right also steps a
+  // decade; Home returns to the entrance; End goes to the last decade; F
+  // toggles full screen. The keys apply while the focus is in the hall
+  // controls, or when nothing has the focus and the visitor last clicked in
+  // the hall. They never apply inside a form field, the decade menu, another
+  // control, or the story reader, which own their keys. The record panel is a
+  // dock beside the hall, so stepping carries on while it is open.
+  const fullscreenButton = document.getElementById('btn-fullscreen');
+  let stageEngaged = false;
+  listen(document, 'pointerdown', (event) => { stageEngaged = stage.contains(event.target); }, { capture: true });
+
+  function hallKeyAction(event) {
+    if (event.altKey || event.metaKey || event.ctrlKey) return null;
+    const key = event.key;
+    if (key === 'ArrowLeft' || key === 'ArrowRight') {
+      const direction = key === 'ArrowLeft' ? -1 : 1;
+      return event.shiftKey ? () => stepDecade(direction) : () => stepPublication(direction);
+    }
+    if (event.shiftKey) return null;
+    if (key === 'ArrowUp' || key === 'PageDown') return () => stepDecade(1);
+    if (key === 'ArrowDown' || key === 'PageUp') return () => stepDecade(-1);
+    if (key === 'Home') return () => document.getElementById('hall-entrance').click();
+    if (key === 'End') return () => moveToSection(layout.sections[layout.sections.length - 1], { immediate: true });
+    if ((key === 'f' || key === 'F') && fullscreenButton && !fullscreenButton.hidden) return () => fullscreenButton.click();
+    return null;
+  }
+
+  listen(document, 'keydown', (event) => {
+    if (!active || event.defaultPrevented) return;
+    const target = event.target;
+    const inControls = hallControls.contains(target);
+    const idle = (target === document.body || target === stage) && stageEngaged;
+    if (!inControls && !idle) return;
+    if (target.closest && target.closest('select, input, textarea, [contenteditable="true"]')) return;
+    if (reader.isOpen || reader.inspectorOpen) return;
+    const action = hallKeyAction(event);
+    if (!action) return;
     event.preventDefault();
-    const direction = event.key === 'ArrowLeft' ? -1 : 1;
-    if (event.shiftKey) stepDecade(direction); else stepPublication(direction);
+    action();
   });
 
   function syncScrollToggle() {
