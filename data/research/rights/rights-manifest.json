@@ -3434,11 +3434,11 @@
     }
   ],
   "metadata": {
-    "totalCount": 327,
+    "totalCount": 337,
     "byStatus": {
       "crop_first": 50,
       "publishable": 34,
-      "metadata_only": 236,
+      "metadata_only": 246,
       "publishable_with_credit": 7
     },
     "generated": "2026-08-19"

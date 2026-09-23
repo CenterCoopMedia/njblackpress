@@ -111,7 +111,13 @@
     }
   });
   // The menu is hidden at desktop widths; do not leave the page scroll-locked.
+  // Focus moves to the site logo, which stays visible at every width, so a
+  // keyboard user keeps their place. The md:hidden rule can hide the menu
+  // before this event runs, and the browser then drops focus to the body.
   window.matchMedia('(min-width: 768px)').addEventListener('change', event => {
-    if (event.matches && !menu.hidden) setOpen(false, false);
+    if (!event.matches || menu.hidden) return;
+    const hadFocus = document.activeElement === document.body || menu.contains(document.activeElement);
+    setOpen(false, false);
+    if (hadFocus) (logo || document.querySelector('nav a[href]'))?.focus();
   });
 })();

@@ -12,6 +12,7 @@ Exit code 0 = pass, 1 = fail. Prints one line per check.
 """
 import json
 import os
+import re
 import sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
@@ -50,7 +51,10 @@ def main():
             full = os.path.join(d, fname)
             if not os.path.isfile(full):
                 continue
-            if os.path.splitext(fname)[1].lower() in SKIP_EXT:
+            # Library of Congress records are committed JSON excerpts named by
+            # LCCN (see data/attach_loc_records.py); they are evidence files.
+            is_loc_record = d.endswith('loc') and re.fullmatch(r'(sn)?\d+\.json', fname)
+            if os.path.splitext(fname)[1].lower() in SKIP_EXT and not is_loc_record:
                 continue
             disk_files.add(rel(full))
 

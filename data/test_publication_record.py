@@ -29,7 +29,8 @@ def main() -> None:
     if record != load(ROOT / "docs" / "data" / "publications.json"):
         errors.append("docs/data/publications.json differs from data/publications.json")
 
-    expected = add_evidence.derive_metadata(record["publications"], record["metadata"].get("evidenceCount", 0))
+    evidence_total = sum(len(pub["evidence"]) for pub in record["publications"])
+    expected = add_evidence.derive_metadata(record["publications"], evidence_total)
     for key, value in expected.items():
         if record["metadata"].get(key) != value:
             errors.append(f"metadata.{key} is stale; run python3 data/add_evidence.py")
@@ -38,9 +39,19 @@ def main() -> None:
     rights = add_evidence.build_rights_lookup(load(add_evidence.MANIFEST_PATH))
     for pub in record["publications"]:
         row = catalog.get(pub["id"])
-        rebuilt = add_evidence.build_evidence_for_publication(row, rights) if row else []
+        if row is None:
+            errors.append(f"publication {pub['id']}: no row in the source catalog")
+            continue
+        rebuilt = add_evidence.build_evidence_for_publication(row, rights)
         if pub["evidence"] != rebuilt:
             errors.append(f"publication {pub['id']}: evidence differs from the source catalog and rights manifest")
+
+    manifest = load(add_evidence.MANIFEST_PATH)
+    statuses = [entry["status"] for entry in manifest["files"]]
+    if manifest["metadata"]["totalCount"] != len(statuses):
+        errors.append("rights manifest metadata.totalCount is stale")
+    if manifest["metadata"]["byStatus"] != {s: statuses.count(s) for s in manifest["metadata"]["byStatus"] | dict.fromkeys(statuses)}:
+        errors.append("rights manifest metadata.byStatus is stale")
 
     lccn = re.compile(r"^(sn)?\d{8,10}$")
     for pub in record["publications"]:
