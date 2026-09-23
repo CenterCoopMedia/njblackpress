@@ -27,7 +27,7 @@ export const SPACE_CONFIG = {
   fillIntensity: 0.55
 };
 
-export function buildSpace(layout, { anisotropy = 4 } = {}) {
+export function buildSpace(layout, { anisotropy = 4, onChange = () => {} } = {}) {
   const config = layout.config;
   const group = new THREE.Group();
   group.name = 'hall-space';
@@ -105,6 +105,9 @@ export function buildSpace(layout, { anisotropy = 4 } = {}) {
     const painted = paintEndWall(icon, span);
     endCanvas.getContext('2d').drawImage(painted, 0, 0);
     endTexture.needsUpdate = true;
+    // The hall draws on demand, so ask for a frame or the panel waits for the
+    // visitor's next move.
+    onChange();
   }, { once: true });
   icon.src = 'njblackpress-icon.png';
 

@@ -150,7 +150,7 @@ export async function mountHall(app, params) {
   const anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
   const invalidate = () => { dirty = true; };
   const generation = () => state.generation();
-  space = buildSpace(layout, { anisotropy });
+  space = buildSpace(layout, { anisotropy, onChange: () => { dirty = true; } });
   sheets = buildSheets(layout, views, assets, { anisotropy, invalidate, generation });
   volumes = buildVolumes(layout, storyViews, assets, {
     anisotropy, invalidate, generation, reduceMotion: app.reduceMotion
