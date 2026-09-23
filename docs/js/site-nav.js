@@ -84,8 +84,19 @@
     openButton.setAttribute('aria-expanded', String(open));
   };
   if (createdMenu) {
-    openButton.addEventListener('click', () => setOpen(menu.classList.contains('translate-x-full')));
-    closeButton.addEventListener('click', () => setOpen(false));
+    // The built menu (map, wiki) is inert while closed, so it is out of the tab
+    // order and the accessibility tree; Escape closes it and focus returns.
+    menu.inert = true;
+    const toggle = open => {
+      setOpen(open);
+      menu.inert = !open;
+      (open ? closeButton : openButton).focus();
+    };
+    openButton.addEventListener('click', () => toggle(menu.classList.contains('translate-x-full')));
+    closeButton.addEventListener('click', () => toggle(false));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !menu.inert) toggle(false);
+    });
   }
-  mobileList?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+  mobileList?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { setOpen(false); if (createdMenu) menu.inert = true; }));
 })();
