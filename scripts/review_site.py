@@ -135,6 +135,15 @@ def review_menu(page, name: str, check) -> None:
     check(f"{name}: Escape closes the menu", menu.evaluate("el => el.hidden"))
     check(f"{name}: focus returns to the menu button", page.evaluate("document.activeElement.id") == "mobile-menu-btn")
     check(f"{name}: page scroll is unlocked", not page.evaluate("document.body.classList.contains('overflow-hidden')"))
+    # Rotating or widening past the breakpoint with the menu open keeps focus visible.
+    button.click()
+    page.set_viewport_size({"width": 1024, "height": 844})
+    page.wait_for_timeout(200)
+    check(f"{name}: widening past the breakpoint closes the menu", menu.evaluate("el => el.hidden"))
+    check(f"{name}: focus stays on a visible control after widening",
+          page.evaluate("document.activeElement !== document.body && document.activeElement.getClientRects().length > 0"))
+    page.set_viewport_size({"width": 390, "height": 844})
+    page.wait_for_timeout(200)
 
 
 def main() -> None:
@@ -170,7 +179,7 @@ def main() -> None:
                 check(f"{name}: targets are at least 24px", not small, "; ".join(small[:6]))
                 check(f"{name}: one site footer, outside main", page.evaluate(
                     "document.querySelectorAll('footer[data-site-footer]').length === 1 && !document.querySelector('main footer[data-site-footer]')"))
-                running = page.evaluate("document.getAnimations().filter(a => a.playState === 'running' && a.effect && a.effect.getTiming().duration > 50).length")
+                running = page.evaluate("document.getAnimations().filter(a => a.playState === 'running' && a.effect && (a.effect.getTiming().duration > 50 || a.effect.getTiming().delay > 50)).length")
                 check(f"{name}: no running animation under reduced motion", running == 0, f"{running} running")
                 if size == "phone":
                     check(f"{name}: no horizontal page scroll", page.evaluate("document.documentElement.scrollWidth <= innerWidth"))
