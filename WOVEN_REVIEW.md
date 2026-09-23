@@ -23,6 +23,13 @@ reading tables is furnished with benches, plinths carrying tied bundles of
 newspapers, and brass sconces; they are decorative and stand for no record.
 The far wall carries the archive's icon, name, and years.
 
+On a phone the drawing fills the screen under the site header, the top bar
+keeps to two rows, and the how-to line is hidden, so the room is most of the
+screen once the hall is in view. Every frame checks that the drawing buffer
+matches the canvas box, so a size change the resize observer misses cannot
+leave the room drawn in a strip. `scripts/review_hall.py` checks both at
+1280x720, 1661x825, 375x667, and 390x844.
+
 Keyboard: while the focus is in the hall controls, or after a click in the
 hall with nothing focused, left and right step publications, up and down (and
 Page Up and Page Down) step decades, Home returns to the entrance, End goes to

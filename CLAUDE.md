@@ -78,6 +78,8 @@ check when you change the global navigation.
   supplies only a `#mobile-menu-btn` button or an `a.md:hidden` placeholder.
 - Targets: interactive elements are at least 44px tall where they stand alone.
   `min-height` has no effect on an inline link; use `inline-flex` or padding.
+- Touch: form fields use 16px text on touch devices (`pointer: coarse`), so
+  iOS does not zoom the page when a field takes the focus.
 - Motion: `styles.css` stops animation and smooth scrolling under
   `prefers-reduced-motion`.
 - `data/test_design_system.py` enforces these rules, and

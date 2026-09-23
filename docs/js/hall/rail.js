@@ -97,11 +97,11 @@ export function createRail(camera, layout, options = {}) {
     return offsetPixels * worldPerPixel;
   }
 
-  function poseForSlot(slot) {
+  function poseForSlot(slot, { minDistance = RAIL_CONFIG.minFocusDistance } = {}) {
     const sign = slot.wall === 'left' ? -1 : 1;
     const wallFace = sign * config.wallX;
     const raw = fitDistance(config.frame.width, config.frame.height);
-    const distance = Math.min(RAIL_CONFIG.maxFocusDistance, Math.max(RAIL_CONFIG.minFocusDistance, raw));
+    const distance = Math.min(RAIL_CONFIG.maxFocusDistance, Math.max(minDistance, raw));
     const offset = verticalOffset(distance);
     return {
       position: new THREE.Vector3(wallFace - sign * distance, config.eyeHeight, slot.z),
@@ -167,7 +167,11 @@ export function createRail(camera, layout, options = {}) {
   function entrancePose() {
     if (camera.aspect >= 1 || !options.portraitEntranceSlot) return poseForZ(entranceZ());
     const slot = options.portraitEntranceSlot;
-    return slot ? poseForSlot(slot) : poseForZ(entranceZ());
+    // The entrance stands back across the corridor, so the hall still recedes
+    // beside the first sheet on a tall phone screen (decision 10), however much
+    // of the screen the drawing is given.
+    const standBack = config.wallX + config.corridorHalfWidth * 0.8;
+    return slot ? poseForSlot(slot, { minDistance: standBack }) : poseForZ(entranceZ());
   }
 
   function moveTo(pose, { immediate = false, ms = RAIL_CONFIG.nearMoveMs, entrance = false } = {}) {

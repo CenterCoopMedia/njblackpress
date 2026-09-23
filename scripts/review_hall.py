@@ -931,6 +931,47 @@ try:
         # horizontal overflow, the index below the drawing, and a record that
         # opens and closes. 375x812 above already covers the portrait entrance,
         # the tap-to-focus, and the full-height reading sheet in detail.
+        # ---- the room fills the screen and recovers a stale canvas -----------
+        # A drawing buffer left at an old size draws the room in a strip with a
+        # dark band below it. The frame loop must notice and resize.
+        room_viewports = [(1280, 720, False), (1661, 825, False), (375, 667, True), (390, 844, True)]
+        for width, height, mobile in room_viewports:
+            fit = browser.new_context(viewport={'width': width, 'height': height}, device_scale_factor=1,
+                                      is_mobile=mobile, has_touch=mobile, reduced_motion='reduce')
+            fp = fit.new_page()
+            fp.on('pageerror', lambda error: errors.append(str(error)))
+            ready(fp)
+            fp.evaluate("window.scrollTo(0, document.getElementById('woven-stage').getBoundingClientRect().top + scrollY - 80)")
+            fp.wait_for_timeout(500)
+            room = fp.evaluate('''() => {
+              const canvas = document.getElementById('woven-canvas').getBoundingClientRect();
+              const covers = [...document.querySelectorAll('#woven-chrome, #woven-hall-controls')]
+                .filter((el) => el.getClientRects().length)
+                .map((el) => el.getBoundingClientRect().bottom);
+              const top = Math.max(canvas.top, 80, ...covers);
+              const bottom = Math.min(canvas.bottom, innerHeight);
+              return { open: Math.max(0, bottom - top), viewport: innerHeight - 80 };
+            }''')
+            check(f'{width}x{height}: the room fills at least 45% of the screen under the site header ({room["open"]}px of {room["viewport"]})',
+                  room['open'] >= 0.45 * room['viewport'])
+            fp.evaluate('window.__woven.renderer.setSize(300, 200, false)')
+            fp.wait_for_timeout(400)
+            check(f'{width}x{height}: a stale canvas size recovers on the next frame', fp.evaluate('''() => {
+              const c = document.getElementById('woven-canvas');
+              const ratio = window.__woven.renderer.getPixelRatio();
+              return Math.abs(c.width - Math.round(c.clientWidth * ratio)) <= 1
+                && Math.abs(c.height - Math.round(c.clientHeight * ratio)) <= 1;
+            }'''))
+            if width < 900:
+                small = fp.evaluate('''() => [...document.querySelectorAll('#woven-topbar .woven-btn, #woven-topbar summary, #woven-hall-controls .woven-btn, #woven-hall-controls select, .woven-era-choice')]
+                  .filter((el) => el.getClientRects().length).filter((el) => el.getBoundingClientRect().height < 44).length''')
+                check(f'{width}x{height}: hall controls and era chips are at least 44px tall', small == 0)
+                zoom = fp.evaluate('''() => [...document.querySelectorAll('input, select, textarea')]
+                  .filter((el) => el.getClientRects().length && parseFloat(getComputedStyle(el).fontSize) < 16).length''')
+                check(f'{width}x{height}: form fields use 16px text so iOS does not zoom on focus', zoom == 0)
+            shot(fp, f'room-{width}x{height}', False)
+            fit.close()
+
         for width, height in [(390, 844), (320, 740), (768, 1024)]:
             other = browser.new_context(viewport={'width': width, 'height': height},
                                         device_scale_factor=1, is_mobile=True, has_touch=True,
