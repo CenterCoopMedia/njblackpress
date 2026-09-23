@@ -438,6 +438,30 @@ try:
               page.evaluate('window.__woven.app.exhibit.rail.section.id') == section_before
               and page.evaluate('window.__woven.app.exhibit.state.getState().selectedPublicationId') == selected_before)
 
+        # After a click in the hall, with nothing focused, the keys walk the
+        # hall: up and down step decades, End and Home go to either end.
+        sections = page.evaluate('window.__woven.app.exhibit.layout.sections.map((s) => s.id)')
+        page.evaluate("document.activeElement.blur(); document.getElementById('woven-stage').dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }))")
+        page.keyboard.press('Home')
+        page.wait_for_timeout(500)
+        check('Home returns to the entrance', page.evaluate('window.__woven.app.exhibit.rail.section.id') == sections[0])
+        page.keyboard.press('ArrowUp')
+        page.wait_for_timeout(500)
+        check('Up walks forward a decade', page.evaluate('window.__woven.app.exhibit.rail.section.id') == sections[1])
+        page.keyboard.press('ArrowDown')
+        page.wait_for_timeout(500)
+        check('Down walks back a decade', page.evaluate('window.__woven.app.exhibit.rail.section.id') == sections[0])
+        page.keyboard.press('End')
+        page.wait_for_timeout(500)
+        check('End goes to the last decade', page.evaluate('window.__woven.app.exhibit.rail.section.id') == sections[-1])
+        page.evaluate("document.activeElement.blur(); document.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }))")
+        page.keyboard.press('Home')
+        page.wait_for_timeout(300)
+        check('Keys are left alone after a click outside the hall',
+              page.evaluate('window.__woven.app.exhibit.rail.section.id') == sections[-1])
+        check('Every hall control names its key shortcut',
+              page.evaluate("['hall-previous-pub','hall-next-pub','hall-previous-decade','hall-next-decade','hall-entrance'].every((id) => document.getElementById(id).getAttribute('aria-keyshortcuts'))"))
+
         # ---- history --------------------------------------------------------
         ready(page)
         page.evaluate('(id) => window.__woven.app.select(id, {})', order[3])

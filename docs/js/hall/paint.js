@@ -33,6 +33,8 @@ export const FACE_SIZE = { width: 512, height: 704 };
 export const PLATE_SIZE = { width: 512, height: 100 };
 export const MARKER_SIZE = { width: 288, height: 256 };
 export const COVER_SIZE = { width: 320, height: 428 };
+export const END_WALL_SIZE = { width: 640, height: 800 };
+export const RUNNER_SIZE = { width: 256, height: 512 };
 export const PAGE_SIZE = { width: 512, height: 704 };
 
 /**
@@ -266,6 +268,89 @@ export function paintMarker(label) {
   });
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
+  return canvas;
+}
+
+/**
+ * The panel on the far wall: the site icon, the archive's name, and its span.
+ * It paints at once without the icon, then again when the icon has loaded.
+ */
+export function paintEndWall(icon, span) {
+  const { width, height } = END_WALL_SIZE;
+  const { canvas, ctx } = surface(width, height);
+  ctx.fillStyle = PAINT.paper;
+  ctx.fillRect(0, 0, width, height);
+  ctx.strokeStyle = PAINT.accent;
+  ctx.lineWidth = 10;
+  ctx.strokeRect(5, 5, width - 10, height - 10);
+  const iconSize = 420;
+  if (icon) ctx.drawImage(icon, (width - iconSize) / 2, 56, iconSize, iconSize);
+  ctx.fillStyle = PAINT.ink;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'alphabetic';
+  ctx.font = `800 64px ${PAINT.display}`;
+  ctx.fillText('NJ Black Press', width / 2, 568);
+  ctx.fillStyle = PAINT.accent;
+  ctx.fillText('Archive', width / 2, 640);
+  ctx.fillStyle = PAINT.inkSoft;
+  ctx.font = `500 30px ${PAINT.body}`;
+  ctx.fillText(span, width / 2, 712);
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  return canvas;
+}
+
+/**
+ * One repeat of the runner down the corridor: a deep madder field with walnut
+ * and brass borders and a lozenge at its centre, woven texture from fine noise.
+ * The long edges run along the canvas height, which repeats down the hall.
+ */
+export function paintRunner() {
+  const { width, height } = RUNNER_SIZE;
+  const { canvas, ctx } = surface(width, height);
+  ctx.fillStyle = '#5e2512';
+  ctx.fillRect(0, 0, width, height);
+  // Borders: walnut, then a brass line, then a fine linen line, on both edges.
+  for (const [x, w, colour] of [[0, 22, PAINT.walnut], [22, 5, PAINT.brass], [30, 2, PAINT.paperShade]]) {
+    ctx.fillStyle = colour;
+    ctx.fillRect(x, 0, w, height);
+    ctx.fillRect(width - x - w, 0, w, height);
+  }
+  // A running chevron inside each border.
+  ctx.strokeStyle = PAINT.brassEdge;
+  ctx.lineWidth = 3;
+  for (const edge of [44, width - 44]) {
+    ctx.beginPath();
+    for (let y = 0; y <= height; y += 32) {
+      ctx.moveTo(edge - 8, y);
+      ctx.lineTo(edge, y + 16);
+      ctx.lineTo(edge + 8, y);
+    }
+    ctx.stroke();
+  }
+  // The centre lozenge, with an inner lozenge and a stain point.
+  const cx = width / 2;
+  const cy = height / 2;
+  const lozenge = (rx, ry, colour, fill) => {
+    ctx.beginPath();
+    ctx.moveTo(cx, cy - ry);
+    ctx.lineTo(cx + rx, cy);
+    ctx.lineTo(cx, cy + ry);
+    ctx.lineTo(cx - rx, cy);
+    ctx.closePath();
+    if (fill) { ctx.fillStyle = colour; ctx.fill(); } else { ctx.strokeStyle = colour; ctx.lineWidth = 6; ctx.stroke(); }
+  };
+  lozenge(70, 190, '#4a1d0e', true);
+  lozenge(70, 190, PAINT.brass, false);
+  lozenge(38, 104, PAINT.brassEdge, false);
+  lozenge(12, 32, PAINT.accent, true);
+  // Fine noise reads as pile at a distance, and stays the same on every load.
+  let seed = 7;
+  const random = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+  for (let i = 0; i < 9000; i += 1) {
+    ctx.fillStyle = random() < 0.5 ? 'rgba(0,0,0,0.08)' : 'rgba(255,240,220,0.05)';
+    ctx.fillRect(Math.floor(random() * width), Math.floor(random() * height), 1, 2);
+  }
   return canvas;
 }
 

@@ -41,3 +41,12 @@
   external requests through Python (`urllib`) in Playwright scripts rather
   than weakening TLS.
 
+- Codex Connector posts its findings as inline review comments, not as a
+  review with a verdict, and its summary comment only says "Completed". After
+  every push and every PR event, list each PR's review threads
+  (`get_review_comments`) and treat every unresolved thread as open work:
+  fix it or explain why not, reply with the commit, then resolve it. Do not
+  wait for a "changes requested" review; there will not be one.
+- A fix that lives in a later PR of a stack does not resolve a finding on an
+  earlier PR. Each PR must stand on its own if merged alone; port a minimal
+  fix down, then let the later PR replace it.

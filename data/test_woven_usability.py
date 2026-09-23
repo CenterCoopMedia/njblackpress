@@ -146,9 +146,14 @@ def main() -> None:
 
     details_start = html.index('<details id="woven-more-tools">')
     details_end = html.index("</details>", details_start)
-    for control_id in ("btn-help", "btn-ghost", "btn-reset", "btn-fullscreen"):
+    for control_id in ("btn-help", "btn-ghost", "btn-reset"):
         position = html.index(f'id="{control_id}"')
         assert details_start < position < details_end, f"{control_id} must stay under More tools"
+    # Full screen is a primary way to see the hall, so it sits in the top bar
+    # beside the views, not behind More tools.
+    topbar_start = html.index('<div id="woven-topbar">')
+    fullscreen = html.index('id="btn-fullscreen"')
+    assert topbar_start < fullscreen < details_start, "Full screen must be a primary control in the top bar"
 
     assert html.count('data-guide-action="story"') == 1
     assert html.count('data-guide-action="search"') == 1
