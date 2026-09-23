@@ -43,40 +43,6 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* Long-read measure for the narrative column */
-        .measure {
-            max-width: 68ch;
-        }
-
-        .balance {
-            text-wrap: balance;
-        }
-
-        /* Evidence images sit on a dark field with a hairline so a scan reads
-           as an object on the surface rather than a hole cut into it. */
-        .evidence-figure img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            background: #14100b;
-            outline: 1px solid rgba(250, 247, 240, 0.08);
-            outline-offset: -1px;
-        }
-
-        /* A crop_first clipping is a mounted fragment, not a whole page. */
-        .clip-mounted {
-            border: 1px solid #e2662b;
-            padding: 4px;
-        }
-
-        /* Keyboard focus for links this page builds at runtime */
-        #era-content a:focus-visible {
-            outline: 2px solid #e2662b;
-            outline-offset: 3px;
-            border-radius: 1px;
-        }
-
         /* Section headings sit under the fixed nav (5rem) plus the sticky
            in-page jump bar on decade pages, so a jump-to-anchor click does
            not cut the heading off under either bar. */
@@ -168,7 +134,7 @@
 
     <!-- Clipping lightbox (issue #40 friction fix) -->
     <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-walnut-950/95 p-4 md:p-10" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
-        <button id="lightbox-close" type="button" class="absolute top-4 right-4 md:top-6 md:right-6 min-h-[44px] min-w-[44px] p-3 text-linen-100 hover:text-stain focus-visible:outline focus-visible:outline-2 focus-visible:outline-stain focus-visible:outline-offset-2" aria-label="Close image">
+        <button id="lightbox-close" type="button" class="absolute top-4 right-4 md:top-6 md:right-6 min-h-[44px] min-w-[44px] p-3 text-linen-100 hover:text-stain" aria-label="Close image">
             <svg class="w-6 h-6" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
         <div class="flex max-h-[90vh] max-w-[92vw] flex-col items-center gap-4 overflow-auto">
@@ -178,16 +144,8 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-walnut-950 border-t border-walnut-600 py-10 px-4 md:px-8 mt-20">
-        <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-linen-300 uppercase tracking-wider">
-            <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="index.html" class="inline-block px-3 py-[14px] hover:text-stain">Home</a>
-                <a href="archive.html" class="inline-block px-3 py-[14px] hover:text-stain">Archive</a>
-                <a href="story.html" class="inline-block px-3 py-[14px] hover:text-stain">Stories</a>
-                <a href="era.html" class="inline-block px-3 py-[14px] hover:text-stain">Eras</a>
-            </div>
-        </div>
+    <footer data-site-footer class="bg-walnut-950 border-t border-walnut-600 py-10 px-4 md:px-8">
+        <p class="max-w-[1400px] mx-auto text-xs font-mono text-linen-300 uppercase tracking-wider">&copy; Center for Cooperative Media, Montclair State University</p>
     </footer>
 
     <script src="js/era.js?v=20260819"></script>
@@ -207,7 +165,6 @@
             menuClose.addEventListener('click', toggleMenu);
             menu.querySelectorAll('a').forEach(link => link.addEventListener('click', toggleMenu));
 
-            document.getElementById('copyright-year').textContent = new Date().getFullYear();
         })();
     </script>
     <script src="js/site-nav.js"></script>

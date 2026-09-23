@@ -51,7 +51,7 @@
             line-height: 0.8;
             padding-right: 0.75rem;
             padding-top: 0.25rem;
-            color: #e2662b;
+            color: var(--stain);
             font-weight: 900;
         }
         @media (max-width: 640px) {
@@ -64,40 +64,12 @@
         /* Decorative marks flanking the masthead label. Rendered as real
            elements with aria-hidden so screen readers do not read "tilde". */
         .ornament-mark {
-            color: #e2662b;
+            color: var(--stain);
             padding: 0 0.5rem;
         }
 
-        /* Evidence figures. The inset hairline makes a scan read as an object
-           sitting on the surface rather than a hole cut into it. */
-        .evidence-figure img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-width: 100%;
-            background: #14100b;
-            outline: 1px solid rgba(250, 247, 240, 0.08);
-            outline-offset: -1px;
-        }
-
-        /* Reading measure for evidence captions, citations and rights notes */
-        .measure {
-            max-width: 68ch;
-        }
-
-        .balance {
-            text-wrap: balance;
-        }
-
-        /* Keyboard focus for the links this page builds at runtime */
-        #publication-content a:focus-visible {
-            outline: 2px solid #e2662b;
-            outline-offset: 3px;
-            border-radius: 1px;
-        }
-
         .column-rule {
-            column-rule: 1px solid #3b3122;
+            column-rule: 1px solid var(--walnut-600);
         }
 
         /* Staggered animations */
@@ -136,7 +108,7 @@
             top: -0.5rem;
             font-family: 'DM Sans', sans-serif;
             font-size: 4rem;
-            color: #e2662b;
+            color: var(--stain);
             line-height: 1;
             opacity: 0.5;
         }
@@ -161,7 +133,7 @@
             transform: translateX(-50%);
             width: 2rem;
             height: 1px;
-            background: #3b3122;
+            background: var(--walnut-600);
         }
         .masthead-entry:last-child::after {
             display: none;
@@ -255,16 +227,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-walnut-950 border-t border-walnut-600 py-10 px-4 md:px-8 mt-20">
-        <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-linen-300 uppercase tracking-wider">
-            <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
-            <div class="flex gap-6">
-                <a href="index.html" class="inline-block px-3 py-[14px] hover:text-stain">Home</a>
-                <a href="archive.html" class="inline-block px-3 py-[14px] hover:text-stain">Archive</a>
-                <a href="wiki/index.html" class="inline-block px-3 py-[14px] hover:text-stain">Wiki</a>
-                <a href="index.html#about" class="inline-block px-3 py-[14px] hover:text-stain">About</a>
-            </div>
-        </div>
+    <footer data-site-footer class="bg-walnut-950 border-t border-walnut-600 py-10 px-4 md:px-8">
+        <p class="max-w-[1400px] mx-auto text-xs font-mono text-linen-300 uppercase tracking-wider">&copy; Center for Cooperative Media, Montclair State University</p>
     </footer>
 
     <script src="js/publication.js?v=20260824-3"></script>
@@ -283,8 +247,6 @@
         menuClose.addEventListener('click', toggleMenu);
         menu.querySelectorAll('a').forEach(link => link.addEventListener('click', toggleMenu));
 
-        // Copyright
-        document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
     <script src="js/site-nav.js"></script>
 </body>

@@ -1,26 +1,7 @@
-/* Woven — page chrome, twin, panels, tour bar.
-   Tokens come from the Tailwind inline config; this file only holds what
-   utility classes cannot express. No gradients on text, no blur, no shadows. */
+/* Historical notes — page chrome, text twin, panels, tour bar.
+   Colour and font variables come from src/input.css (built into tailwind.css);
+   this file only holds what utility classes cannot express. */
 
-:root {
-  --walnut-950: #0b0806;
-  --walnut-900: #14100b;
-  --walnut-800: #1e1811;
-  --walnut-700: #2b2318;
-  --walnut-600: #3b3122;
-  --oak-500: #6b563c;
-  --oak-400: #8a7252;
-  --oak-300: #a89179;
-  --linen-50: #faf7f0;
-  --linen-100: #f3eee2;
-  --linen-200: #e3dccc;
-  --linen-300: #cdc4b1;
-  --thread-400: #a89c85;
-  --thread-500: #7d7261;
-  --stain: #e2662b;
-  --stain-light: #f0854a;
-  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-}
 
 /* The nav is fixed, so every in-page jump stops clear of it instead of under it. */
 html { scroll-padding-top: 5.5rem; }
@@ -36,7 +17,7 @@ html { scroll-padding-top: 5.5rem; }
   background: var(--walnut-700); color: var(--linen-50);
   padding: 0.75rem 1.25rem; font-family: var(--mono); font-size: 12px;
 }
-#woven-skip:focus { transform: translateY(0); outline: 2px solid var(--stain); outline-offset: 2px; }
+#woven-skip:focus { transform: translateY(0); outline: 2px solid var(--stain-light); outline-offset: 3px; }
 
 /* ---------- first screen ----------
    The nav is a fixed 5rem band, so the intro and the stage share what is left
@@ -53,11 +34,6 @@ html { scroll-padding-top: 5.5rem; }
 /* No canvas, no first screen to reserve: the list starts right after the intro. */
 body.twin-primary #woven-firstscreen { min-height: 0; }
 
-#woven-intro .intro-grid { display: grid; gap: 0.9rem 2.5rem; align-items: end; }
-@media (min-width: 1024px) {
-  #woven-intro .intro-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
-  #woven-intro .intro-grid p { max-width: 46ch; }
-}
 
 /* ---------- stage ---------- */
 
@@ -72,7 +48,7 @@ body.twin-primary #woven-stage { display: none; }
 /* Absolutely positioned so the drawing-buffer size can never feed back into
    page layout through the canvas's intrinsic aspect ratio. */
 #woven-canvas { display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
-#woven-canvas:focus-visible { outline: 2px solid var(--stain); outline-offset: 2px; }
+#woven-canvas:focus-visible { outline: 2px solid var(--stain-light); outline-offset: 3px; }
 
 /* The two control bars stack in one absolutely positioned block. When the first
    bar wraps to a second row the second bar moves down with it instead of being
@@ -103,7 +79,7 @@ body.twin-primary #woven-stage { display: none; }
   padding: 0.4rem 0.6rem; width: 12rem; min-width: 8rem;
 }
 #woven-search::placeholder { color: var(--linen-300); opacity: 0.8; }
-#woven-search:focus-visible { outline: 2px solid var(--stain); outline-offset: 2px; }
+#woven-search:focus-visible { outline: 2px solid var(--stain-light); outline-offset: 3px; }
 #woven-search-count { font-family: var(--mono); font-size: 11px; color: var(--linen-300); white-space: nowrap; }
 
 .woven-btn {
@@ -117,7 +93,7 @@ body.twin-primary #woven-stage { display: none; }
   background: var(--oak-500); transform: scaleX(1); transform-origin: left;
 }
 .woven-btn::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--oak-500); transform: scaleX(0); transform-origin: left; transition: transform 180ms; }
-.woven-btn:focus-visible { outline: 2px solid var(--stain); outline-offset: 2px; }
+.woven-btn:focus-visible { outline: 2px solid var(--stain-light); outline-offset: 3px; }
 .woven-btn[aria-pressed="true"] { background: var(--walnut-700); border-color: var(--oak-400); color: var(--stain-light); }
 
 #woven-yearrail {
@@ -190,7 +166,6 @@ body.twin-primary #woven-stage { display: none; }
 #woven-legend ul { list-style: none; padding: 0; margin: 0; }
 #woven-legend li { display: flex; align-items: center; gap: 0.55rem; font-size: 13px; line-height: 1.45; color: var(--linen-200); padding: 2px 0; }
 #woven-legend .lg-rows { font-size: 12px; color: var(--linen-300); margin-top: 0.55rem; }
-#woven-legend .lg-toggle { margin-bottom: 0.6rem; }
 #woven-legend[data-collapsed="true"] .lg-body { display: none; }
 #woven-legend[data-collapsed="true"] { width: auto; }
 
@@ -205,7 +180,6 @@ body.twin-primary #woven-stage { display: none; }
     overflow-y: auto; background: var(--walnut-900);
     border: 0; border-left: 1px solid var(--walnut-600); padding: 1rem;
   }
-  #woven-legend .lg-toggle { display: none; }
   #woven-legend[data-collapsed="true"] .lg-body { display: revert; }
   #woven-legend[data-collapsed="true"] { width: 19rem; }
   /* The chrome stops at the dock edge. The tour bar is not in this list: the
@@ -214,11 +188,6 @@ body.twin-primary #woven-stage { display: none; }
   #woven-stage.woven-legend-hidden #woven-chrome,
   #woven-stage.woven-legend-hidden #woven-yearrail { right: 0; }
 }
-.lg-swatch { flex: none; width: 34px; height: 12px; display: block; }
-.lg-thick { background: linear-gradient(90deg, #cdc4b1 0 60%, transparent 60%); height: 7px; }
-.lg-ghost { background: repeating-linear-gradient(90deg, rgba(205,196,177,0.45) 0 4px, transparent 4px 7px); height: 3px; }
-.lg-loose { background: linear-gradient(90deg, #e3dccc 0 55%, rgba(227,220,204,0.35) 55% 100%); height: 4px; }
-.lg-knot { background: none; border: 2px solid var(--stain); border-radius: 50%; width: 12px; height: 12px; }
 
 #woven-tip {
   position: absolute; z-index: 8; max-width: 20rem; pointer-events: none;
@@ -254,8 +223,8 @@ body.twin-primary #woven-stage { display: none; }
 .rail-wood {
   height: 3px; border: 0;
   background-image:
-    linear-gradient(180deg, #a89179 0%, #8a7252 35%, #6b563c 36%, #6b563c 72%, #3b3122 73%, #2b2318 100%),
-    linear-gradient(90deg, #6b563c 0%, #5e4b34 17%, #6b563c 18%, #6b563c 41%, #5a4830 42%, #6b563c 43%, #6b563c 78%, #604d36 79%, #6b563c 100%);
+    linear-gradient(180deg, var(--oak-300) 0%, var(--oak-400) 35%, var(--oak-500) 36%, var(--oak-500) 72%, var(--walnut-600) 73%, var(--walnut-700) 100%),
+    linear-gradient(90deg, var(--oak-500) 0%, #5e4b34 17%, var(--oak-500) 18%, var(--oak-500) 41%, #5a4830 42%, var(--oak-500) 43%, var(--oak-500) 78%, #604d36 79%, var(--oak-500) 100%);
   background-blend-mode: multiply;
 }
 
@@ -458,7 +427,7 @@ body.twin-primary #woven-stage { display: none; }
 #woven-twin .threads > li[aria-current="true"] { border-left: 3px solid var(--stain); padding-left: 0.6rem; }
 #woven-twin .threads > li[data-in-tour="true"] .t-name { color: var(--stain-light); }
 #woven-twin .t-open { display: grid; grid-template-columns: minmax(0, 2fr) 1fr 1fr 1fr 1fr; gap: 0.75rem; width: 100%; text-align: left; background: none; border: 0; color: inherit; padding: 0.7rem 0; cursor: pointer; align-items: baseline; }
-#woven-twin .t-open:focus-visible { outline: 2px solid var(--stain); outline-offset: 2px; }
+#woven-twin .t-open:focus-visible { outline: 2px solid var(--stain-light); outline-offset: 3px; }
 #woven-twin .t-name { font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 700; font-size: 1rem; color: var(--linen-50); }
 #woven-twin .t-place, #woven-twin .t-years, #woven-twin .t-evidence, #woven-twin .t-state { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--linen-300); }
 #woven-twin li[data-ghost="true"] .t-evidence { color: var(--thread-400); }
@@ -472,7 +441,7 @@ body.twin-primary #woven-stage { display: none; }
 #woven-twin .e-conf { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--stain); }
 #woven-twin .t-play { background: none; border: 1px solid var(--walnut-600); color: var(--linen-200); font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; padding: 0.35rem 0.7rem; margin-top: 0.5rem; cursor: pointer; }
 #woven-twin .t-play:hover { border-color: var(--oak-500); color: var(--linen-50); }
-#woven-twin .t-play:focus-visible { outline: 2px solid var(--stain); outline-offset: 2px; }
+#woven-twin .t-play:focus-visible { outline: 2px solid var(--stain-light); outline-offset: 3px; }
 #woven-twin .tour-list > li, #woven-twin .ghost-list > li { border-bottom: 1px solid var(--walnut-600); padding: 0.9rem 0; }
 #woven-twin .ghost-list > li[aria-current="true"] { border-left: 3px solid var(--stain); padding-left: 0.6rem; }
 #woven-twin .g-name { display: block; font-family: 'Libre Franklin', Arial, sans-serif; font-weight: 700; color: var(--linen-50); }
@@ -552,14 +521,12 @@ body.twin-primary #woven-stage { display: none; }
   }
   /* The panel keeps its close control and scrolls the copy beneath it, so the
      last line of the key is never the last line a reader can reach. */
-  #woven-legend .lg-toggle { flex: 0 0 auto; }
   #woven-legend .lg-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
   /* The intro gives back space so the whole loom lands on the first screen of a
      phone. Below the fold, a zoomed-out overview is an overview of nothing. */
   #woven-intro { padding-top: 0.7rem; padding-bottom: 0.7rem; }
   #woven-intro .rail-wood { margin-top: 0.6rem; }
   #woven-intro p { font-size: 0.8125rem; line-height: 1.5; }
-  #woven-intro .intro-grid { gap: 0.5rem; }
   /* A phone gives the story card about 250 pixels. Desktop type put 800 pixels
      of copy in it, so most of a stop sat below the fold. Smaller type and
      tighter padding roughly halve that, and the card still scrolls for the rest
@@ -599,7 +566,6 @@ body.twin-primary #woven-stage { display: none; }
    rules above. */
 @media (max-height: 700px) {
   #woven-intro { padding-top: 0.6rem; padding-bottom: 0.6rem; }
-  #woven-intro .intro-grid { gap: 0.5rem 2.5rem; }
   #woven-stage { min-height: 320px; }
 }
 @media (max-height: 600px) {

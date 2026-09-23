@@ -17,7 +17,9 @@
   const activePath = location.pathname.split('/').pop() || 'index.html';
 
   const isActive = link => {
-    if (link.path === 'wiki/index.html') return location.pathname.includes('/wiki/');
+    const inWiki = location.pathname.includes('/wiki/');
+    if (link.path === 'wiki/index.html') return inWiki;
+    if (inWiki) return false;
     return link.path.split('#')[0] === activePath && !link.path.includes('#');
   };
 
@@ -33,6 +35,27 @@
 
   const logo = document.querySelector('nav a:has(img)');
   if (logo) logo.href = url('index.html');
+
+  // One footer for every page. A page opts in with <footer data-site-footer>.
+  const footer = document.querySelector('footer[data-site-footer]');
+  if (footer) {
+    const external = 'target="_blank" rel="noopener noreferrer"';
+    const linkClass = 'inline-flex items-center min-h-[44px] px-3 hover:text-stain transition-colors';
+    footer.className = 'bg-walnut-950 border-t border-walnut-600 py-10 px-4 md:px-8';
+    footer.innerHTML = `<div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-mono text-linen-300 uppercase tracking-wider">
+      <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+        <a href="https://centerforcooperativemedia.org" ${external} class="inline-flex min-h-[44px] items-center">
+          <img src="${url('ccm-banner.png')}" alt="Center for Cooperative Media" class="h-5 w-auto opacity-80 hover:opacity-100 transition-opacity">
+        </a>
+        <p>&copy; ${new Date().getFullYear()} Center for Cooperative Media, Montclair State University</p>
+      </div>
+      <ul class="flex flex-wrap justify-center gap-x-2">
+        <li><a href="${url('index.html#about')}" class="${linkClass}">About</a></li>
+        <li><a href="mailto:info@centerforcooperativemedia.org" class="${linkClass}">Contact</a></li>
+        <li><a href="https://github.com/CenterCoopMedia/njblackpress" ${external} class="${linkClass}">Source on GitHub</a></li>
+      </ul>
+    </div>`;
+  }
 
   let menu = document.getElementById('mobile-menu');
   let openButton = document.getElementById('mobile-menu-btn');

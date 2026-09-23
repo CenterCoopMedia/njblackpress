@@ -112,7 +112,7 @@
 
             <!-- Finding 7: fixed-nav search affordance -->
             <div class="nav-search-wrap ml-auto md:ml-0">
-                <input type="search" id="nav-search-input" class="nav-search-input bg-walnut-800 text-linen-100 font-sans text-sm placeholder-thread-400 focus:outline-none focus:border-stain" placeholder="Search the archive…" aria-label="Search publications">
+                <input type="search" id="nav-search-input" class="nav-search-input bg-walnut-800 text-linen-100 font-sans text-sm placeholder-thread-400 focus:border-stain" placeholder="Search the archive…" aria-label="Search publications">
                 <button type="button" id="nav-search-toggle" class="nav-search-toggle w-11 h-11 flex items-center justify-center text-linen-100 hover:text-stain" aria-expanded="false" aria-controls="nav-search-input" aria-label="Open search">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                 </button>
@@ -441,7 +441,7 @@
                     <!-- Search Input -->
                     <div class="w-full md:w-96 relative group">
                         <input type="search" id="database-search" 
-                            class="w-full bg-walnut-800 border-b-2 border-walnut-600 px-4 py-3 text-linen-100 font-sans focus:outline-none focus:border-stain focus:bg-walnut-700 transition-all placeholder-thread-400"
+                            class="w-full bg-walnut-800 border-b-2 border-walnut-600 px-4 py-3 text-linen-100 font-sans focus:border-stain focus:bg-walnut-700 transition-all placeholder-thread-400"
                             placeholder="Search keywords, cities, names...">
                         <div class="absolute right-0 bottom-3 text-thread-400 group-focus-within:text-stain">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
@@ -505,9 +505,9 @@
             </div>
         </section>
 
-        <!-- About / Footer -->
-        <footer id="about" class="bg-walnut-900 border-t border-walnut-600 pt-20 pb-10 px-4 md:px-8">
-            <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-20">
+        <!-- About -->
+        <section id="about" class="bg-walnut-900 border-t border-walnut-600 pt-20 pb-20 px-4 md:px-8">
+            <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
                 <div>
                     <h3 class="font-display text-2xl sm:text-3xl font-bold mb-6">About the project</h3>
                     <div class="font-sans text-lg text-linen-300 space-y-6 leading-relaxed max-w-xl">
@@ -538,24 +538,14 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="max-w-[1400px] mx-auto border-t border-walnut-600 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-linen-300 uppercase tracking-wider">
-                <div class="flex items-center gap-4">
-                    <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener noreferrer">
-                        <img src="favicon.png"
-                             alt="CCM"
-                             class="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity">
-                    </a>
-                    <p>&copy; <span id="copyright-year">2026</span> Center for Cooperative Media</p>
-                </div>
-                <div class="flex gap-6">
-                    <a href="https://centerforcooperativemedia.org" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-[14px] hover:text-stain">CCM</a>
-                    <a href="https://github.com/CenterCoopMedia" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-[14px] hover:text-stain">GitHub</a>
-                </div>
-            </div>
-        </footer>
 
     </main>
+
+    <footer data-site-footer class="bg-walnut-950 border-t border-walnut-600 py-10 px-4 md:px-8">
+        <p class="max-w-[1400px] mx-auto text-xs font-mono text-linen-300 uppercase tracking-wider">&copy; Center for Cooperative Media, Montclair State University</p>
+    </footer>
 
     <script src="js/timeline.js?v=20260323" defer></script>
     <script src="js/app.js?v=20260323" defer></script>
@@ -585,7 +575,6 @@
          });
 
          // Copyright
-         document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
     <script src="js/site-nav.js"></script>
 </body>

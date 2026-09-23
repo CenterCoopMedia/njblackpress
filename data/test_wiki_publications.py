@@ -16,7 +16,8 @@ def main() -> None:
     assert html.count('data-sort-value=') == 136 * 4, "publication rows lack sort values"
     assert "pl-5" in html and "pr-5" in html, "table edges lack the required cell padding"
     assert 'id="publication-index"' in html, "publication table lacks a script scope"
-    assert "focus-visible:outline" in html, "sort controls lack a visible keyboard focus"
+    styles = (ROOT / "docs" / "css" / "styles.css").read_text(encoding="utf-8")
+    assert 'href="../css/styles.css"' in html and ":focus-visible" in styles, "sort controls lack a visible keyboard focus"
     assert 'src="../js/wiki-publications.js"' in html, "publication sort script is missing"
     print("PASS: the publication index has sortable headers and padded edge cells")
 

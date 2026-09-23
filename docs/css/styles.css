@@ -1,12 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Material language: wood and fabric (issue #48) */
 
 /* Woven linen ground — replaces the flat dark ground on body */
 .surface-woven {
-  background-color: #14100b;
+  background-color: var(--walnut-900);
   background-image:
     /* weft */ repeating-linear-gradient(0deg,
       rgba(232, 224, 208, 0.014) 0px, rgba(232, 224, 208, 0.014) 1px,
@@ -21,7 +17,7 @@
 
 /* Cloth card surface — book-cloth weave with a raised nap */
 .surface-cloth {
-  background-color: #2b2318;
+  background-color: var(--walnut-700);
   background-image:
     repeating-linear-gradient(45deg,
       rgba(243, 238, 226, 0.012) 0px, rgba(243, 238, 226, 0.012) 1px,
@@ -40,11 +36,11 @@
   border: 0;
   background-image:
     linear-gradient(180deg,
-      #a89179 0%, #8a7252 35%, #6b563c 36%,
-      #6b563c 72%, #3b3122 73%, #2b2318 100%),
+      var(--oak-300) 0%, var(--oak-400) 35%, var(--oak-500) 36%,
+      var(--oak-500) 72%, var(--walnut-600) 73%, var(--walnut-700) 100%),
     linear-gradient(90deg,
-      #6b563c 0%, #5e4b34 17%, #6b563c 18%, #6b563c 41%, #5a4830 42%,
-      #6b563c 43%, #6b563c 78%, #604d36 79%, #6b563c 100%);
+      var(--oak-500) 0%, #5e4b34 17%, var(--oak-500) 18%, var(--oak-500) 41%, #5a4830 42%,
+      var(--oak-500) 43%, var(--oak-500) 78%, #604d36 79%, var(--oak-500) 100%);
   background-blend-mode: multiply;
 }
 
@@ -54,14 +50,14 @@
   text-decoration-style: dotted;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
-  text-decoration-color: #a89c85;
+  text-decoration-color: var(--thread-400);
 }
-.link-thread:hover { text-decoration-color: #e2662b; }
+.link-thread:hover { text-decoration-color: var(--stain); }
 
 /* Stitched divider — between major sections, used sparingly */
 .divider-stitched {
   border: 0;
-  border-top: 1px dashed #7d7261;
+  border-top: 1px dashed var(--thread-500);
   margin: 2rem 0;
 }
 
@@ -107,16 +103,16 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-  background: #14100b;
+  background: var(--walnut-900);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b3122;
+  background: var(--walnut-600);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e2662b;
+  background: var(--stain);
 }
 
 /* Hide Scrollbar Utility */
@@ -136,8 +132,8 @@ p {
 
 /* Text Selection */
 ::selection {
-    background-color: #e2662b;
-    color: #f3eee2;
+    background-color: var(--stain);
+    color: var(--linen-100);
 }
 
 /* Timeline Visualization Styles */
@@ -148,7 +144,7 @@ p {
 
 @media (hover: hover) {
     .timeline-bar:hover {
-        fill: #e2662b !important;
+        fill: var(--stain) !important;
         transform: scaleY(1.1);
     }
 }
@@ -216,14 +212,11 @@ html, body {
     pointer-events: auto;
 }
 
-/* Decade timeline keyboard focus (issue #39) — never outline:none */
-.timeline-bar:focus-visible,
-.incident-btn:focus-visible,
-.mobile-decade-events-btn:focus-visible,
-.nav-search-toggle:focus-visible,
-.nav-search-input:focus-visible {
-    outline: 2px solid #e2662b;
-    outline-offset: 2px;
+/* One keyboard focus style for every page. Never remove an outline
+   without giving the control this one. */
+:is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--stain-light);
+    outline-offset: 3px;
 }
 
 /* Issue #44 finding 4: desktop incident-btn hit area grows to 44px tall
@@ -259,7 +252,7 @@ html, body {
     opacity: 1;
     padding: 0 2.5rem 0 0.75rem;
     pointer-events: auto;
-    border: 1px solid #3b3122;
+    border: 1px solid var(--walnut-600);
 }
 @media (max-width: 480px) {
     .nav-search-wrap.open .nav-search-input {
@@ -274,26 +267,22 @@ html, body {
     gap: 0.4em;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 0.75rem;
-    color: #cdc4b1;
+    color: var(--linen-300);
     background: transparent;
     border: 0;
-    border-bottom: 1px dashed #7d7261;
+    border-bottom: 1px dashed var(--thread-500);
     padding: 0.35rem 0.1rem;
     cursor: pointer;
     min-height: 44px;
 }
 @media (hover: hover) {
     .filter-chip:hover {
-        color: #faf7f0;
-        border-bottom-color: #e2662b;
+        color: var(--linen-50);
+        border-bottom-color: var(--stain);
     }
 }
 .filter-chip .filter-chip-x {
-    color: #e2662b;
-}
-.filter-chip:focus-visible {
-    outline: 2px solid #e2662b;
-    outline-offset: 2px;
+    color: var(--stain);
 }
 
 /* Issue #44 finding 11: skip-to-content link, matching woven.html's pattern */
@@ -303,16 +292,14 @@ html, body {
     top: 0;
     z-index: 90;
     transform: translateY(-120%);
-    background: #2b2318;
-    color: #faf7f0;
+    background: var(--walnut-700);
+    color: var(--linen-50);
     padding: 0.75rem 1.25rem;
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 12px;
 }
 .skip-link:focus {
     transform: translateY(0);
-    outline: 2px solid #e2662b;
-    outline-offset: 2px;
 }
 
 /* Issue #44 finding 24: give text-only archive links a real hit area */
@@ -321,4 +308,31 @@ html, body {
     align-items: center;
     min-height: 40px;
     padding: 0.35rem 0;
+}
+
+/* Reading pages (publication, story, era): shared long-read helpers */
+.measure {
+    max-width: 68ch;
+}
+
+.balance {
+    text-wrap: balance;
+}
+
+/* Evidence images sit on a dark field with a hairline so a scan reads
+   as an object on the surface rather than a hole cut into it. */
+.evidence-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    background: var(--walnut-900);
+    outline: 1px solid rgba(250, 247, 240, 0.08);
+    outline-offset: -1px;
+}
+
+/* A crop_first clipping is a mounted fragment, not a whole page. */
+.clip-mounted {
+    border: 1px solid var(--stain);
+    padding: 4px;
 }

@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Design tokens as CSS variables, read from tailwind.config.js so hand-written
+   CSS (styles.css, woven.css, hall.css, map.html) and utility classes share one
+   source. Change a colour in the config, then run npm run build:css. */
+@layer base {
+  :root {
+    color-scheme: dark;
+    --walnut-950: theme('colors.walnut.950');
+    --walnut-900: theme('colors.walnut.900');
+    --walnut-800: theme('colors.walnut.800');
+    --walnut-700: theme('colors.walnut.700');
+    --walnut-600: theme('colors.walnut.600');
+    --oak-500: theme('colors.oak.500');
+    --oak-400: theme('colors.oak.400');
+    --oak-300: theme('colors.oak.300');
+    --linen-50: theme('colors.linen.50');
+    --linen-100: theme('colors.linen.100');
+    --linen-200: theme('colors.linen.200');
+    --linen-300: theme('colors.linen.300');
+    --thread-400: theme('colors.thread.400');
+    --thread-500: theme('colors.thread.500');
+    --stain: theme('colors.stain.DEFAULT');
+    --stain-light: theme('colors.stain.light');
+    --stain-deep: theme('colors.stain.deep');
+    --font-display: theme('fontFamily.display');
+    --font-sans: theme('fontFamily.sans');
+    --mono: theme('fontFamily.mono');
+  }
+}

@@ -420,7 +420,7 @@
         return `
             <figure class="evidence-figure surface-cloth bg-walnut-700 border border-walnut-600 p-4 max-w-[720px]">
                 <div class="${cropped ? 'clip-mounted' : ''}">
-                    <button type="button" class="clip-trigger block w-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-stain focus-visible:outline-offset-2" aria-label="Enlarge image: ${escapeAttr(clip.alt)}">
+                    <button type="button" class="clip-trigger block w-full cursor-zoom-in" aria-label="Enlarge image: ${escapeAttr(clip.alt)}">
                         <img src="${escapeAttr(clip.webPath)}"
                              alt="${escapeAttr(clip.alt)}"
                              ${clip.width ? `width="${clip.width}"` : ''} ${clip.height ? `height="${clip.height}"` : ''}
