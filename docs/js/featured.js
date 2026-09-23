@@ -1,5 +1,5 @@
 /**
- * NJ Black Press Database - Featured Publications
+ * NJ Black Press Archive - Featured Publications
  * Renders featured historical and contemporary publication showcases
  * with extended data support for richer content display
  */
@@ -102,7 +102,7 @@
 
       if (pub.archiveUrl) {
         archiveSection += `
-          <a href="${pub.archiveUrl}" target="_blank" rel="noopener"
+          <a href="${pub.archiveUrl}" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center gap-1.5 text-stain hover:text-stain-light text-sm transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
@@ -205,7 +205,7 @@
     }
 
     const websiteLink = websiteUrl
-      ? `<a href="${websiteUrl}" target="_blank" rel="noopener"
+      ? `<a href="${websiteUrl}" target="_blank" rel="noopener noreferrer"
            class="inline-flex items-center gap-2 px-4 py-2 border border-walnut-600 hover:border-oak-500 text-linen-200 hover:text-linen-50 transition-colors font-mono text-xs uppercase tracking-widest">
            Visit website
            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>

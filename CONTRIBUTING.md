@@ -61,6 +61,8 @@ python3 data/build_site_events_stories.py
 python3 data/build_map_data.py
 python3 scripts/generate_html_wiki.py --base-url https://centercoopmedia.github.io/njblackpress/
 python3 scripts/generate_okf_wiki.py
+python3 scripts/build_sitemap.py
+python3 scripts/make_social_assets.py
 ```
 
 Commit the source and its generated outputs together.
@@ -89,6 +91,7 @@ Use the smallest checks that cover the changed area:
 | Shared styles | `npm run build:css` and browser checks |
 | Publications and evidence | `python3 data/test_evidence.py` and `python3 data/test_source_catalog.py`, with the local evidence corpus |
 | Events and stories | `python3 data/test_site_data.py` |
+| Page metadata, icons, sitemap, and external links | `python3 data/test_site_metadata.py` |
 | Map | `python3 data/test_map.py` |
 | Navigation | `python3 data/test_navigation.py` |
 | Public wiki | `python3 data/test_wiki_publications.py` |

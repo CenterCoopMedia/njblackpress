@@ -32,6 +32,7 @@ Do not hand-edit these outputs:
 - Browser data under `docs/data/`
 - `data/map-publications.json`
 - `docs/wiki/`
+- `docs/sitemap.xml`, `docs/og-image.png`, and the PNG icons
 - `okf/`
 
 Update the source and run its builder. Review generated diffs before commit.
@@ -48,6 +49,7 @@ Common focused checks:
 
 ```bash
 python3 data/test_site_data.py
+python3 data/test_site_metadata.py
 python3 data/test_source_catalog.py
 python3 data/test_map.py
 python3 data/test_navigation.py

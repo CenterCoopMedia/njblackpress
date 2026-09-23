@@ -1,5 +1,5 @@
 /**
- * NJ Black Press Database - Publication Detail Page
+ * NJ Black Press Archive - Publication Detail Page
  * Loads and displays individual publication records
  */
 

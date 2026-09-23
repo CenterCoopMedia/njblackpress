@@ -1,5 +1,5 @@
 /**
- * NJ Black Press Database - Main Application
+ * NJ Black Press Archive - Main Application
  * Handles data loading, filtering, search, and rendering
  */
 
@@ -345,10 +345,10 @@
     const years = pub.yearFounded
       ? `${pub.yearFounded}–${pub.yearCeased ? pub.yearCeased : 'present'}`
       : (pub.isActive ? 'still publishing' : 'dates unknown');
-    const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-linen-50 transition-colors border-b border-transparent hover:border-accent">Visit site</a>` : '';
+    const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener noreferrer" class="hit-area-link text-xs font-mono uppercase tracking-wider text-accent hover:text-linen-50 transition-colors border-b border-transparent hover:border-accent">Visit site</a>` : '';
     // Only show archive link if it's an actual URL (starts with http)
     const hasValidArchiveUrl = pub.archiveUrl && pub.archiveUrl.startsWith('http');
-    const archiveLink = hasValidArchiveUrl ? `<a href="${pub.archiveUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-linen-300 hover:text-linen-50 transition-colors border-b border-transparent hover:border-oak-500">Archives</a>` : '';
+    const archiveLink = hasValidArchiveUrl ? `<a href="${pub.archiveUrl}" target="_blank" rel="noopener noreferrer" class="hit-area-link text-xs font-mono uppercase tracking-wider text-linen-300 hover:text-linen-50 transition-colors border-b border-transparent hover:border-oak-500">Archives</a>` : '';
 
     // Build one-line description from available fields
     const oneLiner = getOneLiner(pub);

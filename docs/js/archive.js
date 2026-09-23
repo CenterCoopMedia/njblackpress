@@ -1,5 +1,5 @@
 /**
- * NJ Black Press Database - Archive Page
+ * NJ Black Press Archive - Archive Page
  * Full directory with advanced filtering, sorting, and view modes
  */
 
@@ -401,7 +401,7 @@
                             View record &rarr;
                         </a>
                         ${pub.websiteUrl ? `
-                            <a href="${pub.websiteUrl}" target="_blank" rel="noopener" class="hit-area-link text-xs font-mono uppercase tracking-wider text-linen-300 hover:text-linen-50 transition-colors ml-auto">
+                            <a href="${pub.websiteUrl}" target="_blank" rel="noopener noreferrer" class="hit-area-link text-xs font-mono uppercase tracking-wider text-linen-300 hover:text-linen-50 transition-colors ml-auto">
                                 Website
                             </a>
                         ` : ''}
