@@ -74,7 +74,7 @@ export function openPublication(t, model, hooks) {
     ${t.publishers ? `<p>Publisher: ${esc(t.publishers)}</p>` : ''}
     ${[t.format, t.frequency, t.medium, t.languages].some(Boolean) ? `<p class="p-meta">${esc([t.format, t.frequency, t.medium, t.languages].filter(Boolean).join(' · '))}</p>` : ''}
     ${t.missionStatement ? `<p><em>${esc(t.missionStatement)}</em></p>` : ''}
-    ${t.historicalNotes ? `<p>${esc(t.historicalNotes)}</p>` : ''}
+    ${t.historicalNotes ? t.historicalNotes.split(/\n+/).filter(p => p.trim()).map(p => `<p>${esc(p)}</p>`).join('') : ''}
     <h3>Evidence we hold</h3>
     ${t.evidence.length ? t.evidence.map(evidenceCard).join('') : '<p>No evidence records are attached to this publication in the archive.</p>'}
     ${t.stories && t.stories.length ? `<h3>Related stories</h3>${t.stories.map((s) => `<p><button type="button" class="woven-btn t-play" data-story="${esc(s.id)}">${esc(s.title)}</button></p>`).join('')}` : ''}

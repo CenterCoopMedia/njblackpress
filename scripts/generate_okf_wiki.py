@@ -311,7 +311,9 @@ def publication_page(
     ]:
         value = clean(pub.get(key))
         if value:
-            body += f"\n## {heading}\n\n{sentence(value)}\n"
+            paragraphs = [p for p in value.splitlines() if p.strip()] if key == "historicalNotes" else [value]
+            rendered = "\n\n".join(paragraphs) if key == "historicalNotes" else sentence(value)
+            body += f"\n## {heading}\n\n{rendered}\n"
 
     archive_url = as_link_url(pub.get("archiveUrl"))
     website_url = as_link_url(pub.get("websiteUrl"))

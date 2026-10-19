@@ -324,8 +324,8 @@
         let notes = stripResearchAnnotations(pub.historicalNotes || '');
         const altName = classifyAlternateName(pub.alternateName);
 
-        // Split only on actual paragraph breaks (double newlines), not sentence boundaries
-        const paragraphs = notes.split(/\n\n+/).filter(p => p.trim());
+        // Staff copy can separate paragraphs with one or more newlines.
+        const paragraphs = notes.split(/\n+/).filter(p => p.trim());
         if (altName && altName.isFate) paragraphs.push(altName.value);
         if (paragraphs.length === 0) return '';
         notes = paragraphs.join('\n\n');
