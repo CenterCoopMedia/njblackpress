@@ -134,8 +134,8 @@ with open('publications.csv', 'r', encoding='utf-8-sig') as f:
 
         # Missing final years cannot establish current activity.
         is_active = csv_activity(row, previous_activity.get(int(pub_id)))
-        if is_active is True and year_ceased is not None:
-            raise ValueError(f"Record {pub_id}: Set an explicit activity status for a title with a final year")
+        if is_active is not False and year_ceased is not None:
+            raise ValueError(f"Record {pub_id}: Set activity status to historical or ceased for a title with a final year")
 
         decade = get_decade(year_founded)
 
