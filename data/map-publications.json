@@ -1206,8 +1206,8 @@
           "name": "Black Hair Digest",
           "city": "River Edge",
           "yearFounded": 1993,
-          "yearCeased": 1996,
-          "isActive": false
+          "yearCeased": null,
+          "isActive": null
         },
         {
           "id": 78,

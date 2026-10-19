@@ -19,7 +19,7 @@ count: 3
 | Publication | Years | Status |
 |---|---|---|
 | [Hype](../publications/001-hype.md) | 1990–1993 | Ceased 1993 |
-| [Black Hair Digest](../publications/125-black-hair-digest.md) | 1993–1996 | Ceased 1996 |
+| [Black Hair Digest](../publications/125-black-hair-digest.md) | 1993–? | Activity unverified |
 | [Fotorama](../publications/078-fotorama.md) | 1993–1995 | Ceased 1995 |
 
 ## Navigate

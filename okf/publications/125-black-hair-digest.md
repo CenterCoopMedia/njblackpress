@@ -11,7 +11,7 @@ tags:
   - "periodicals"
 timestamp: "2026-06-29"
 archive_id: 125
-status: "inactive-or-historical"
+status: "unverified"
 featured: false
 ---
 
@@ -25,8 +25,8 @@ featured: false
 | Alternate name | Unknown |
 | City | [River Edge](../cities/river-edge.md) |
 | Publishers or owners | Word Up! Video Productions |
-| Active years | 1993–1996 |
-| Status | Ceased 1996 |
+| Active years | 1993–? |
+| Status | Activity unverified |
 | Decade | [1990s](../decades/1990s.md) |
 | Format | [Periodicals](../formats/periodicals.md) |
 | Medium | [Print](../mediums/print.md) |
@@ -41,7 +41,7 @@ Previous editor(s): Natasha A. Brooks-Everett.
 
 ## Historical notes
 
-A March 2026 search found no records. Its River Edge location ties it to the Word Up! and Enoble Media cluster.
+Black Hair Digest was a print periodical about hairdressing, beauty, and fashion, published by Word Up! Video Productions in Paramus and River Edge. Danky and Hady’s 1998 bibliography, entry 866, documents volume 1, number 1 in November 1993, describes a 66-page issue, and names Natasha A. Brooks-Everett as editor. No final issue or cessation date has been verified, and current activity remains unverified.
 
 ## Archive reference
 

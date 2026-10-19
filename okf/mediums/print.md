@@ -117,7 +117,7 @@ count: 123
 | [Black Book Connection, Inc. Newsletter](../publications/085-black-book-connection-inc-newsletter.md) | 1992–1995 | Ceased 1995 |
 | [Captain Africa](../publications/112-captain-africa.md) | 1992–1994 | Ceased 1994 |
 | [The Jersey Heritage](../publications/116-the-jersey-heritage.md) | 1992–1996 | Ceased 1996 |
-| [Black Hair Digest](../publications/125-black-hair-digest.md) | 1993–1996 | Ceased 1996 |
+| [Black Hair Digest](../publications/125-black-hair-digest.md) | 1993–? | Activity unverified |
 | [Fotorama](../publications/078-fotorama.md) | 1993–1995 | Ceased 1995 |
 | [Hype Hair](../publications/082-hype-hair.md) | 1993–present | Active |
 | [Try It Yourself Hair!](../publications/093-try-it-yourself-hair.md) | 1993–1996 | Ceased 1996 |

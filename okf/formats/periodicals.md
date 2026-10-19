@@ -46,7 +46,7 @@ count: 36
 | [The Literary Griot](../publications/091-the-literary-griot.md) | 1988–2002 | Ceased 2002 |
 | [The National Political Science Review](../publications/061-the-national-political-science-review.md) | 1989–2019 | Ceased 2019 |
 | [The Jersey Heritage](../publications/116-the-jersey-heritage.md) | 1992–1996 | Ceased 1996 |
-| [Black Hair Digest](../publications/125-black-hair-digest.md) | 1993–1996 | Ceased 1996 |
+| [Black Hair Digest](../publications/125-black-hair-digest.md) | 1993–? | Activity unverified |
 | [Hype Hair](../publications/082-hype-hair.md) | 1993–present | Active |
 | [African World](../publications/015-african-world.md) | 1994–1998 | Ceased 1998 |
 | [Braids & Beauty](../publications/092-braids-and-beauty.md) | 1994–1995 | Ceased 1995 |
