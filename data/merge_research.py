@@ -68,9 +68,10 @@ def main():
     data['publications'] = sorted(publications.values(), key=lambda x: x['id'])
 
     # Recalculate metadata
-    active_count = sum(1 for p in data['publications'] if p['isActive'])
+    active_count = sum(1 for p in data['publications'] if p.get('isActive') is True)
     data['metadata']['activeCount'] = active_count
-    data['metadata']['ceasedCount'] = len(data['publications']) - active_count
+    data['metadata']['ceasedCount'] = sum(1 for p in data['publications'] if p.get('isActive') is False)
+    data['metadata']['unknownStatusCount'] = sum(1 for p in data['publications'] if p.get('isActive') is None)
 
     # Save updated publications
     with open(PUBLICATIONS_PATH, 'w', encoding='utf-8') as f:
