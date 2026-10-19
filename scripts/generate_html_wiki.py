@@ -422,6 +422,8 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
         for k, v in stats
     )
     b += f'<div class="grid grid-cols-3 lg:grid-cols-6 gap-3 mb-4">{cells}</div>'
+    unknown = sum(1 for p in pubs if p.get("isActive") is None)
+    b += f'<p class="text-linen-300">{unknown} records have unverified activity or describe an archive collection. They are included in the total.</p>'
 
     # decade bar chart
     b += section_title("Publications by founding decade")

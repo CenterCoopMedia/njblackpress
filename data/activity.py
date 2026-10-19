@@ -2,7 +2,7 @@
 
 
 def csv_activity(row, previous=None):
-    value = row.get("Activity status", row.get("isActive", "")).strip().lower()
+    value = (row.get("Activity status", row.get("isActive", "")) or "").strip().lower()
     if not value:
         return previous
     states = {"true": True, "active": True, "false": False, "ceased": False,
