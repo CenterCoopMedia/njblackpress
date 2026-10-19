@@ -3,10 +3,10 @@
   "goal": "Archival record for every NJ Black press title",
   "publicationCount": 136,
   "counts": {
-    "has_keeper": 136,
-    "searched_none": 0,
+    "has_keeper": 135,
+    "searched_none": 1,
     "not_searched": 0,
-    "keeper_total": 203
+    "keeper_total": 202
   },
   "publications": [
     {
@@ -1522,7 +1522,7 @@
       "city": "Newark",
       "yearFounded": null,
       "yearCeased": null,
-      "status": "has_keeper",
+      "status": "searched_none",
       "sources": {
         "newspapers_com": {
           "searched": true,
@@ -1624,17 +1624,7 @@
           "notes": "named library catalogs checked; no collection match for this title Danky 1998 African-American Newspapers and Periodicals has no Newark title New Jersey Record. The Record entries are Birmingham and other out-of-state papers. No digitized issue or library catalog record for a Newark African American newspaper under this name. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
-      "keepers": [
-        {
-          "kind": "research_summary",
-          "title": "New Jersey Record: Publication history review, October 2026",
-          "caption": "The exact identity and publication dates of this Newark title remain unverified. A 1977 New Jersey Historical Commission newspaper directory is a research lead for a Black weekly named New Jersey Record, with an approximate 1942–1951 range. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
-          "url": "https://www.scribd.com/document/471953938/Directory-of-New-Jersey-Newspapers-a-k-a-Wright-Stellhorn",
-          "localFile": "data/research/corrections/2026-10-19.json",
-          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
-          "date": "2026-10-19"
-        }
-      ],
+      "keepers": [],
       "updated": "2026-10-19"
     },
     {
