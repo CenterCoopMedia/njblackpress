@@ -149,6 +149,10 @@
         body: JSON.stringify({ ...payload, request_id: requestId }),
       });
       const result = await response.json();
+      if (response.status === 409) {
+        requestId = '';
+        lastPayload = '';
+      }
       if (!response.ok || result.success !== true || result.id !== 'bp_' + requestId) throw new Error(result.error || 'We could not confirm receipt. Please retry.');
       received = true;
       drafts.delete(context.url);
