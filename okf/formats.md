@@ -6,23 +6,24 @@ tags:
   - "nj-black-press"
   - "formats"
 timestamp: "2026-06-29"
-count: 40
+count: 41
 ---
 
 # Formats index
 
-40 formats group the 136 publication records.
+41 formats group the 136 publication records.
 
-## Newspapers (44)
+## Newspapers (43)
 
-- [Newspaper](formats/newspaper.md) — 33
+- [Newspaper](formats/newspaper.md) — 31
 - [Newspaper/Periodicals](formats/newspaper-periodicals.md) — 9
 - [Digital Newspaper](formats/digital-newspaper.md) — 1
+- [Newspaper; later magazine](formats/newspaper-later-magazine.md) — 1
 - [Print Newspaper](formats/print-newspaper.md) — 1
 
-## Magazines (15)
+## Magazines (16)
 
-- [Magazine](formats/magazine.md) — 6
+- [Magazine](formats/magazine.md) — 7
 - [Magazine/Periodicals](formats/magazine-periodicals.md) — 3
 - [Magazine/Periodical](formats/magazine-periodical.md) — 2
 - [Journal, Magazine](formats/journal-magazine.md) — 1

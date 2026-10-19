@@ -92,6 +92,7 @@
       "Newsletters",
       "Newspaper",
       "Newspaper/Periodicals",
+      "Newspaper; later magazine",
       "Periodicals",
       "Periodicals, Newsletters",
       "Periodicals, Slavery Caribbean Area Periodicals",
@@ -105,9 +106,10 @@
       "Uncataloged serials",
       "Volumes"
     ],
-    "activeCount": 17,
-    "ceasedCount": 119,
-    "evidenceCount": 181
+    "activeCount": 13,
+    "ceasedCount": 118,
+    "evidenceCount": 203,
+    "unknownStatusCount": 5
   },
   "publications": [
     {
@@ -152,8 +154,8 @@
       "alternateName": null,
       "city": "Montclair",
       "publishers": "Rumble Printing Service",
-      "yearFounded": 1932,
-      "yearCeased": 1940,
+      "yearFounded": null,
+      "yearCeased": null,
       "frequency": "Weekly",
       "format": "Newspaper",
       "languages": "English",
@@ -164,9 +166,9 @@
       "medium": "Print",
       "missionStatement": null,
       "keyStaff": "Previous editor(s): Melvin B. Johnson",
-      "historicalNotes": "A March 2026 search found no Library of Congress entry, no microfilm, and no records of this publication beyond its founding in Montclair around 1932. Its status is recorded as unknown on the Wikipedia list of African American newspapers in New Jersey.",
+      "historicalNotes": "The Jersey Express was a Montclair weekly published by Rumble Printing Service; Melvin B. Johnson is recorded as a previous editor. Danky and Hady, entry 3285, page 312, lists a Wisconsin Historical Society microfilm holding of volume 1, number 10, June 18, 1932. This corrects the earlier claim that no microfilm was found and establishes publication by that date. The bibliography gives an uncertain 1932? start and no exact end; neither an exact founding year nor the former 1940 cessation is established. The 1949 clippings about Johnson’s newspaper career do not establish this title’s lifespan. A May 24, 1932 Montclair Times item is a launch-date lead whose article text remains unread.",
       "isActive": false,
-      "decade": "1930s",
+      "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
       "evidence": [
@@ -189,6 +191,16 @@
           "rightsStatus": "crop_first",
           "citation": "Asbury Park Press, 1949-11-06, p. 2.",
           "url": "https://www.newspapers.com/image/143065742/"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The Jersey Express was a Montclair weekly published by Rumble Printing Service; Melvin B. Johnson is recorded as a previous editor. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://archive.org/details/africanamericanne00dank/page/312/mode/1up"
         }
       ]
     },
@@ -270,9 +282,9 @@
       "alternateName": null,
       "city": "Teaneck",
       "publishers": "Ralph F. Johnson",
-      "yearFounded": 1982,
-      "yearCeased": 1991,
-      "frequency": "Biweekly",
+      "yearFounded": null,
+      "yearCeased": null,
+      "frequency": "Varied; see historical notes",
       "format": "Newspaper",
       "languages": "English",
       "archiveUrl": "LCCN no: sn88071369/OCLC no: 18514803",
@@ -282,9 +294,9 @@
       "medium": "Print",
       "missionStatement": "\"Largest African-American weekly newspaper in New Jersey.”",
       "keyStaff": "Publisher:  Ralph F. Johnson",
-      "historicalNotes": "The North Jersey Connection was a biweekly African American newspaper published in Teaneck, NJ by Connection Publications. The Library of Congress catalogs it with LCCN sn92060412, with the earliest described issue being No. 9 (Oct. 22, 1983). The exact founding date is uncertain but falls in the early 1980s, consistent with the 1982 date. The paper was later succeeded by or renamed to The Connection (Teaneck, N.J.), LCCN sn88071369, which continued publication and grew to describe itself as 'News from a Black perspective' and the 'Largest African-American weekly newspaper in New Jersey.' The Connection was published by Ralph F. Johnson. The newspaper served Bergen County and northern New Jersey's Black community, providing local news coverage from a Black perspective during a period when Teaneck was one of the first communities in the nation to voluntarily desegregate its schools (1965). The Library of Congress holds the catalog record, though physical copies may be held at other libraries. The latest issue consulted in the Library of Congress catalog during a March 2026 search is dated March 23, 1991 (LCCN sn88071369 and sn92060412).",
+      "historicalNotes": "The North Jersey Connection and its successor The Connection were Teaneck publications associated with Ralph F. Johnson. The Library of Congress describes North Jersey Connection, LCCN sn92060412, from an October 22, 1983 issue, and The Connection, LCCN sn88071369, from June 16, 1984. March 23, 1991 is the latter catalog’s latest issue consulted, not a final issue. Danky and Hady, entry 1791, page 172, records Wisconsin holdings beginning with volume 11, number 20, June 5, 1993, and gives an uncertain 1982 start. The holding contradicts the former 1991 end; neither an exact founding year nor a final year is established. The predecessor is described as biweekly and the later bibliography as weekly; schedules require dated mastheads. Records 5 and 131 share OCLC 18514803 and duplicate the successor identity. Both IDs are retained to preserve existing references, with the duplication explicit. An open catalog end does not establish present activity. The newspaper served Bergen County and northern New Jersey’s Black community, providing local reporting during and after Teaneck’s voluntary school desegregation in 1965.",
       "isActive": false,
-      "decade": "1980s",
+      "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
       "evidence": [
@@ -307,6 +319,16 @@
           "rightsStatus": "metadata_only",
           "citation": "The Connection (Teaneck, N.J.) 198?-Current, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn88071369, https://www.loc.gov/item/sn88071369/",
           "url": "https://www.loc.gov/item/sn88071369/"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The North Jersey Connection and its successor The Connection were Teaneck publications associated with Ralph F. Johnson. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://www.loc.gov/item/sn92060412/"
         }
       ]
     },
@@ -746,12 +768,23 @@
       "medium": "Print",
       "missionStatement": null,
       "keyStaff": null,
-      "historicalNotes": "No verifiable record found for an African American newspaper specifically titled 'New Jersey Record' published in Newark. Extensive searches of the Library of Congress newspaper directory, Chronicling America, Newark Public Library digital collections, Rutgers University Libraries, and the Wikipedia list of African-American newspapers in New Jersey returned no matches for this title. It is possible this title has been conflated with the 'New Jersey Afro American' (1941-1991, Newark edition of the Afro-American chain) or another Newark publication. The name may also refer to a short-lived or hyper-local publication not indexed in major catalogs. Recommended: Contact the Newark Public Library's Charles F. Cummings NJ Information Center at njreference@npl.org or (973) 733-7775, or the James Brown African American Room, for verification. A March 2026 search found no records and no founding year, so no cessation date can be estimated. The search found no web presence for the title as a Black publication. The name may be a variant of another title or a misattribution.",
-      "isActive": true,
+      "historicalNotes": "The exact identity and publication dates of this Newark title remain unverified. A 1977 New Jersey Historical Commission newspaper directory is a research lead for a Black weekly named New Jersey Record, with an approximate 1942–1951 range. That directory entry has not been inspected here, so neither year is entered as an exact publication date. The record must not be conflated with the Newark edition of the Afro-American without title-level evidence. Current activity is unverified. For title verification, contact Newark Public Library’s Charles F. Cummings New Jersey Information Center at njreference@npl.org or 973-733-7775, or its James Brown African American Room.",
+      "isActive": null,
       "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
-      "evidence": []
+      "evidence": [
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The exact identity and publication dates of this Newark title remain unverified. A 1977 New Jersey Historical Commission newspaper directory is a research lead for a Black weekly named New Jersey Record, with an approximate 1942–1951 range. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://www.scribd.com/document/471953938/Directory-of-New-Jersey-Newspapers-a-k-a-Wright-Stellhorn"
+        }
+      ]
     },
     {
       "id": 15,
@@ -943,7 +976,7 @@
       "medium": "Digital",
       "missionStatement": "To provide the people of Trenton with accurate, independent, and meaningful journalism that informs, empowers, and uplifts our community.",
       "keyStaff": "Kenneth Miles, Publisher",
-      "historicalNotes": "The Trenton Journal is an independently owned and operated multimedia platform founded around 2020 by Kenneth M., who serves as Founder and Publisher. It was welcomed into the URL Media network, which recognized its commitment to bridging information gaps and providing community news for Trenton's nearly 90,000 residents. The publication focuses on solutions-based journalism to address information inequities in New Jersey's capital city.",
+      "historicalNotes": "The Trenton Journal is an independently owned and operated multimedia platform launched in 2021 by Kenneth Miles, who serves as Founder and Publisher. It was welcomed into the URL Media network, which recognized its commitment to bridging information gaps and providing community news for Trenton's nearly 90,000 residents. The publication focuses on solutions-based journalism to address information inequities in New Jersey's capital city. In his October 31, 2021 publisher note, Miles said the first newsletter had appeared almost a year earlier and described weekly newsletter delivery. A 2025 Center for Cooperative Media interview dates the formal Journal launch to 2021 and describes its newsletter origin. A late-2020 precursor is inferred from the 2021 account; its first issue has not been located. The earlier newsletter schedule does not establish the current site’s publishing frequency.",
       "isActive": true,
       "decade": "2020s",
       "isFeaturedHistoric": false,
@@ -958,6 +991,16 @@
           "rightsStatus": "publishable_with_credit",
           "citation": "Trenton Journal, website capture, 2026-08-17.",
           "url": "https://trentonjournal.com/"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The Trenton Journal is an independently owned and operated multimedia platform launched in 2021 by Kenneth Miles, who serves as Founder and Publisher. It was welcomed into the URL Media network, which recognized its commitment to bridging information gaps and providing community news for Trenton's nearly 90,000 residents. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://trentonjournal.com/207496668171490-2/"
         }
       ]
     },
@@ -1300,9 +1343,9 @@
       "name": "Black Newark",
       "alternateName": null,
       "city": "Newark",
-      "publishers": "Committee for Unified Newark",
+      "publishers": "Black People of Newark",
       "yearFounded": 1968,
-      "yearCeased": 1974,
+      "yearCeased": 1968,
       "frequency": "Monthly",
       "format": "Print Newspaper",
       "languages": "English",
@@ -1312,8 +1355,8 @@
       "primaryFocus": "Politics, News, Protest literature, Protest works.",
       "medium": "Print",
       "missionStatement": "“The Voice of New Ark’s Inner City.”",
-      "keyStaff": "Previous editor(s): Abu Ansar, Apr-Nov 1968; Yusef Iman, Jan 1970; Daoud Abdullah, Jan 1970; Simba Risasi, Apr-May 1972.",
-      "historicalNotes": "Black Newark was the first in a series of interconnected newspapers published under the leadership of Amiri Baraka (LeRoi Jones) through the Committee for Unified Newark (CFUN) and its successor organizations. The publication sequence was: Black Newark (Vol. 1, Nos. 1-3, April-November 1968), then Black News (Vol. 1, No. 4, 1969, published by Black People of Newark), then Black New Ark (Vol. 1, No. 5, April 1972 through Vol. 2, No. 14, December 1973, published by CFUN), and finally Unity and Struggle (Vol. 3, No. 1, January/February 1974 through Vol. 8, No. 1/2, February 1979, published by CFUN as the national newspaper of the Congress of Afrikan People). These newspapers were published through the post-rebellion period of Newark, serving as tools for organizing and advocating for Black liberation and political and economic agency for Newark's majority Black citizenry. Baraka served as chairman of CFUN from 1968 to 1975. The movement documented in these papers contributed to the Black and Puerto Rican alliance that led to the election of Newark's first Black mayor, Kenneth Gibson, in 1970. The newspapers also covered Baraka's community-based initiatives addressing housing conditions, failing schools, and economic opportunities, including the Kawaida Towers apartment project and NJR-32 urban renewal project. The collection is digitized and searchable through the Rutgers Dana Library Newark Black Newspapers Collection. Additional copies are held at the NYU Tamiment Library and the Auburn Avenue Research Library. Scholarly treatment includes Jennifer Caroccio Maldonado's article 'Putting the Black Ink Back into Print: Black Newark/Black New Ark' in New Jersey Studies: An Interdisciplinary Journal 8(1), Winter 2022, pp. 34-49.",
+      "keyStaff": "Editor: Abu Ansar (April–November 1968)",
+      "historicalNotes": "This record represents the title Black Newark as cataloged by the Library of Congress, LCCN sn2001062056, rather than the complete newspaper lineage. That record describes volume 1, number 1, April 1968, through volume 1, number 3, November 1968, published by Black People of Newark. The April 1968 issue’s imprint confirms the publisher and identifies Abu Ansar among the staff. The related titles continued as Black News in 1969 and Black New Ark in the early 1970s. Black New Ark still appears on volume 3, number 1, January–February 1974; Unity and Struggle appears on volume 3, number 2, February–March 1974. Later issues are successors, not evidence that the 1968 title continued unchanged to 1974. The papers were associated with Amiri Baraka and Newark’s Black liberation organizing. Their digitized lineage is available in Rutgers’ Newark Black Newspapers Collection, record 128. Unity and Struggle has its own publication record, 84. These newspapers were published through the post-rebellion period of Newark, serving as tools for organizing and advocating for Black liberation and political and economic agency for Newark's majority Black citizenry. Baraka served as chairman of CFUN from 1968 to 1975. The movement documented in these papers contributed to the Black and Puerto Rican alliance that led to the election of Newark's first Black mayor, Kenneth Gibson, in 1970. The newspapers also covered Baraka's community-based initiatives addressing housing conditions, failing schools, and economic opportunities, including the Kawaida Towers apartment project and NJR-32 urban renewal project. The collection is digitized and searchable through the Rutgers Dana Library Newark Black Newspapers Collection. Additional copies are held at the NYU Tamiment Library and the Auburn Avenue Research Library. Scholarly treatment includes Jennifer Caroccio Maldonado's article 'Putting the Black Ink Back into Print: Black Newark/Black New Ark' in New Jersey Studies: An Interdisciplinary Journal 8(1), Winter 2022, pp. 34-49.",
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": true,
@@ -1338,6 +1381,16 @@
           "rightsStatus": "metadata_only",
           "citation": "Black Newark (Newark, N.J.) 1968-1968, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn2001062056, https://www.loc.gov/item/sn2001062056/",
           "url": "https://www.loc.gov/item/sn2001062056/"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "This record represents the title Black Newark as cataloged by the Library of Congress, LCCN sn2001062056, rather than the complete newspaper lineage. That record describes volume 1, number 1, April 1968, through volume 1, number 3, November 1968, published by Black People of Newark. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://www.loc.gov/item/sn2001062056/"
         }
       ]
     },
@@ -1359,7 +1412,7 @@
       "medium": "Print/Digital",
       "missionStatement": "Faithfully Magazine amplifies conversations, issues, and events affecting diverse communities.",
       "keyStaff": "Founder/Managing Editor: https://nicolamenzieonline.com/",
-      "historicalNotes": "Faithfully Magazine was founded in 2016 by religion writer Nicola A. Menzie and is published by Faithfully Media, LLC, based at 397 Hillside Avenue, Hillside, NJ. The publication is a fresh, bold news and culture outlet centering on Christian communities of color, and has been featured in The Washington Post, Christianity Today, Fortune Magazine, WNYC, and other major outlets. It publishes exclusive Q&As, features, and commentaries reflecting influential voices in U.S. Christianity.",
+      "historicalNotes": "Faithfully Magazine dates its current editorial form to 2016 by religion writer Nicola A. Menzie and is published by Faithfully Media, LLC, based at 397 Hillside Avenue, Hillside, NJ. The publication is a fresh, bold news and culture outlet centering on Christian communities of color, and has been featured in The Washington Post, Christianity Today, Fortune Magazine, WNYC, and other major outlets. It publishes exclusive Q&As, features, and commentaries reflecting influential voices in U.S. Christianity. The publisher’s history says it was initially online in 2016 and funded a first print issue in January 2017. However, a July 6, 2015 web capture contains the same publication name and domain, and its About page is dated May 5, 2015. An October 2015 capture also shows content. These records establish an earlier web presence, but do not settle continuity between the 2015 site and the later editorial form. The 2016 field retains the publisher’s stated date pending that review; it must not be read as proof that the name and site first existed in 2016.",
       "isActive": true,
       "decade": "2010s",
       "isFeaturedHistoric": false,
@@ -1374,6 +1427,16 @@
           "rightsStatus": "crop_first",
           "citation": "Faithfully Magazine, website capture, 20151025.",
           "url": "https://web.archive.org/web/20151025031224/http://www.faithfullymagazine.com:80/"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "Faithfully Magazine dates its current editorial form to 2016 by religion writer Nicola A. Menzie and is published by Faithfully Media, LLC, based at 397 Hillside Avenue, Hillside, NJ. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://web.archive.org/web/20150706052920/http://www.faithfullymagazine.com/"
         }
       ]
     },
@@ -1787,8 +1850,8 @@
       "alternateName": null,
       "city": "Newark",
       "publishers": "Forum Publications",
-      "yearFounded": 1970,
-      "yearCeased": 1980,
+      "yearFounded": null,
+      "yearCeased": null,
       "frequency": "Biweekly",
       "format": "Newspaper",
       "languages": "English",
@@ -1799,9 +1862,9 @@
       "medium": "Print",
       "missionStatement": "\"Serving the New Jersey black community.\"",
       "keyStaff": null,
-      "historicalNotes": "A March 2026 search confirmed a Library of Congress record (LCCN sn88071371), but the end date is unknown. The paper may have merged into Essex Forum (ID 42).",
+      "historicalNotes": "The Library of Congress, LCCN sn88071371, describes The Forum of Newark as 197?–???? and bases its description on volume 2, number 47, January 4, 1974. This establishes an issue described from 1974, not an exact 1970 launch or 1980 cessation. Both former exact years are unverified and are omitted. WorldCat OCLC 18514783 also leaves the end open. A possible merger with Essex Forum, record 42, remains unverified; separate catalog entries alone do not prove that relationship.",
       "isActive": false,
-      "decade": "1970s",
+      "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
       "evidence": [
@@ -1813,6 +1876,16 @@
           "file": "data/research/loc/forum-loc-sn88071371.png",
           "rightsStatus": "publishable_with_credit",
           "citation": "Library of Congress catalog record sn88071371.",
+          "url": "https://www.loc.gov/item/sn88071371/"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The Library of Congress, LCCN sn88071371, describes The Forum of Newark as 197?–???? and bases its description on volume 2, number 47, January 4, 1974. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
           "url": "https://www.loc.gov/item/sn88071371/"
         }
       ]
@@ -1829,14 +1902,14 @@
       "format": "Newspaper",
       "languages": "English/Some spanish",
       "archiveUrl": "OCLC no. 28588271",
-      "websiteUrl": null,
+      "websiteUrl": "https://www.thenubiannews.com/",
       "targetAudience": null,
       "primaryFocus": "Newspaper",
       "medium": "Print",
       "missionStatement": "\"New Jersey's only African-American-Hispanic news source.”",
-      "keyStaff": "Editor: Kamau Kujichagulia, Previous editor(s): Pamela A. Sims",
-      "historicalNotes": "The Nubian News was founded circa 1988-1989 by publisher Kamau Kujichagulia and is the only bilingual (English and Spanish) African American newspaper in New Jersey. Based at 25 South Westfield Avenue, Trenton, NJ 08618, the newspaper has been in continuous publication for over 35 years, covering local events, politics, and community issues relevant to Trenton's Black community. Kujichagulia remains the publisher and key principal. The Nubian News also produces the podcast 'On The Case,' featuring weekly interviews with community leaders every Thursday at 8 PM EST. The paper gained wider attention in 2020 when Kujichagulia organized a rally in support of Trenton councilwoman Robin Vaughn. The Nubian News Corporation operates the newspaper's current digital presence at thenubiannews.com. No digitized historical archive of print issues was found online.",
-      "isActive": true,
+      "keyStaff": "Kamau Kujichagulia, publisher emeritus (April 2024 issue); earlier editor Pamela A. Sims",
+      "historicalNotes": "The Nubian News serves Trenton’s Black and Hispanic communities. Its February 5, 2021 issue dates its establishment to September 9, 1989. The July 31, 2022 issue announces the end of that print run, so uninterrupted print publication is not established. A publisher-hosted April 2024 joint issue bears The Nubian News and El Latino News names, states a print run of 5,000 copies, and names Kamau Kujichagulia as publisher emeritus. The later issue prevents treating 2022 as the title’s final publication year. The State Library’s 1989–2004 range describes historical holdings, not the full publication run. Digitized issues are available on the publisher’s website. Current activity and cadence in 2026 remain unverified; a recent issue is needed. Earlier archive research also recorded the podcast On The Case; its current schedule has not been checked.",
+      "isActive": null,
       "decade": "1980s",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": true,
@@ -1860,6 +1933,16 @@
           "rightsStatus": "crop_first",
           "citation": "The Nubian News, The Nubian News, Vol. 6 No. 1, Jan. 7, 2022 -- full 12-page issue PDF from the paper's own online archive.",
           "url": "https://www.thenubiannews.com/archive"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The Nubian News serves Trenton’s Black and Hispanic communities. Its February 5, 2021 issue dates its establishment to September 9, 1989. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://thenubiannews.com/assets/pdf/V5-N2-02-04-2021.pdf"
         }
       ]
     },
@@ -1916,7 +1999,7 @@
       "city": "East Orange",
       "publishers": "Multi-Linear Publications",
       "yearFounded": 1972,
-      "yearCeased": 1985,
+      "yearCeased": null,
       "frequency": "Biweekly",
       "format": "Newspaper",
       "languages": "English",
@@ -1927,7 +2010,7 @@
       "medium": "Print",
       "missionStatement": "\"A weekly newspaper serving Orange, Montclair and E. Orange,\" June 29, 1972-<July 26, 1973>; \"A biweekly newspaper serving Metropolitan Essex County,\" <Feb. 14-Mar. 21, 1972>",
       "keyStaff": null,
-      "historicalNotes": "A March 2026 search found that the Library of Congress lists the run as beginning in 1972 with no recorded end date (LCCN sn88071370). It was published by Multi-Linear Publications of East Orange, NJ.",
+      "historicalNotes": "The Library of Congress, LCCN sn88071370, describes a first issue dated June 29, 1972, volume 1, number 1, published by Multi-Linear Publications of East Orange. The catalog does not record a final year; the former 1985 end is unverified and is omitted. An October 15, 1976 White House memo’s Black Press invitation roster lists Jonathan Blount, Essex Forum, at a Newark contact address. The roster is a contemporary person-and-address lead, not proof of a 1976 issue or a move from East Orange. A relationship or merger with The Forum, record 39, remains unverified.",
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
@@ -1941,6 +2024,16 @@
           "file": "data/research/loc/essex-forum-loc-sn88071370.png",
           "rightsStatus": "publishable_with_credit",
           "citation": "Library of Congress catalog record sn88071370.",
+          "url": "https://www.loc.gov/item/sn88071370/"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The Library of Congress, LCCN sn88071370, describes a first issue dated June 29, 1972, volume 1, number 1, published by Multi-Linear Publications of East Orange. The catalog does not record a final year; the former 1985 end is unverified and is omitted. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
           "url": "https://www.loc.gov/item/sn88071370/"
         }
       ]
@@ -2205,7 +2298,7 @@
       "publishers": "Published by Deadline Publishing Company, Inc.",
       "yearFounded": null,
       "yearCeased": null,
-      "frequency": "Biweekly",
+      "frequency": "Twice monthly",
       "format": "Periodicals",
       "languages": "English",
       "archiveUrl": "OCLC no. 35268934",
@@ -2215,8 +2308,8 @@
       "medium": "Print",
       "missionStatement": null,
       "keyStaff": "Previous editor(s): Harry B. Webber",
-      "historicalNotes": "No verifiable record found for an African American newspaper titled 'New Jersey Deadline' published in Newark. Searches of the Library of Congress newspaper directory, Chronicling America, Newark Public Library inventories, Rutgers University Newark Archives Project, the New Jersey Historical Society newspaper listings, and the Wikipedia list of African-American newspapers in New Jersey returned no matches. The title does not appear in any known NJ newspaper catalog or microfilm inventory. This may be a very short-lived publication, an alternative name for another title, or possibly a misattribution. Recommended: Contact the Newark Public Library NJ Information Center or the New Jersey Historical Society for further verification. A March 2026 search found no records and no founding year, so no cessation date can be estimated. The search found no web presence and no library catalog records, and the title does not appear on any known list of New Jersey African American newspapers.",
-      "isActive": true,
+      "historicalNotes": "New Jersey Deadline was a Newark periodical published by Deadline Publishing Company and edited by Harry B. Webber. The Observer of November 7, 1959 refers to its latest issue, establishing publication by that date. Danky and Hady, entry 4261, page 409, records a Wisconsin Historical Society holding of volume 2, number 4, May 30, 1960, and describes twice-monthly publication. These sources correct the earlier claim that no catalog record or evidence of the title exists. They do not establish the first or final publication year. Current publication is unverified.",
+      "isActive": null,
       "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
@@ -2230,6 +2323,16 @@
           "rightsStatus": "metadata_only",
           "citation": "New Jersey Deadline, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 409 (entry 4261).",
           "url": "https://archive.org/details/africanamericanne00dank/page/409/mode/1up"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "New Jersey Deadline was a Newark periodical published by Deadline Publishing Company and edited by Harry B. Webber. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://trentonlib.org/wp-content/uploads/2021/08/The-Observer-November-7-1959.pdf"
         }
       ]
     },
@@ -2881,7 +2984,7 @@
       "alternateName": null,
       "city": "Newark",
       "publishers": "Published by Jihad Publications",
-      "yearFounded": 1969,
+      "yearFounded": 1968,
       "yearCeased": 1969,
       "frequency": "Unknown",
       "format": "Periodicals",
@@ -2893,7 +2996,7 @@
       "medium": "Print",
       "missionStatement": "The Cricket aimed 'to provide Black Music with a powerful historical and critical tool' and to enable avant-garde Black musicians and writers 'to finally make a way for themselves.' It sought to reunite advanced art with its community and foster critical and political dialogue for Black musicians and writers.",
       "keyStaff": "Previous editor(s): Le Roi Jones, Amamu Baraka, Larry Neal, A. B. Spellman",
-      "historicalNotes": "The Cricket: Black Music in Evolution was edited by Amiri Baraka, A.B. Spellman, and Larry Neal between 1968 and 1969. Published by Baraka's Newark-based Jihad Productions, it was a mimeographed experimental music magazine that ran for four issues. The Cricket emerged from the heart of the Black Arts Movement, published shortly after the 1967 Newark Rebellion. Over its four issues, it laid out an anticommercial ideology and took aim at the conservative jazz press, providing space for critics, poets, journalists, and musicians to devise new styles of music writing. It ran poetry, position papers, and gossip alongside concert and record reviews and essays on music and politics. Contributors included Albert Ayler, Milford Graves, Sun Ra, Cecil Taylor, Stanley Crouch, Haki Madhubuti (Don L. Lee), Ishmael Reed, Sonia Sanchez, Keorapetse Kgositsile, Mtume, Black Unity Trio, Ben Caldwell, Askia Muhammad Toure, and many others. The fourth issue (1969) is particularly notable for containing Albert Ayler's letter 'To Mr. Jones -- I had a Vision,' describing an intense UFO sighting/religious revelation Ayler and his brother experienced in New Jersey. The complete facsimile of all four issues was republished by Blank Forms Editions with an introduction by poet and scholar David Grundy, author of 'A Black Arts Poetry Machine: Amiri Baraka and the Umbra Poets' (Bloomsbury Academic, 2019).",
+      "historicalNotes": "The Cricket: Black Music in Evolution was edited by Amiri Baraka, A.B. Spellman, and Larry Neal between 1968 and 1969. Published by Baraka's Newark-based Jihad Productions, it was a mimeographed experimental music magazine that ran for four issues. The Cricket emerged from the heart of the Black Arts Movement, published shortly after the 1967 Newark Rebellion. Over its four issues, it laid out an anticommercial ideology and took aim at the conservative jazz press, providing space for critics, poets, journalists, and musicians to devise new styles of music writing. It ran poetry, position papers, and gossip alongside concert and record reviews and essays on music and politics. Contributors included Albert Ayler, Milford Graves, Sun Ra, Cecil Taylor, Stanley Crouch, Haki Madhubuti (Don L. Lee), Ishmael Reed, Sonia Sanchez, Keorapetse Kgositsile, Mtume, Black Unity Trio, Ben Caldwell, Askia Muhammad Toure, and many others. The fourth issue (1969) is particularly notable for containing Albert Ayler's letter 'To Mr. Jones -- I had a Vision,' describing an intense UFO sighting/religious revelation Ayler and his brother experienced in New Jersey. The complete facsimile of all four issues was republished by Blank Forms Editions with an introduction by poet and scholar David Grundy, author of 'A Black Arts Poetry Machine: Amiri Baraka and the Umbra Poets' (Bloomsbury Academic, 2019). A notice in Black Newark, April 1968, page 8, describes The Cricket’s first issue and tells readers to obtain it from Jihad Productions in Newark. This establishes availability by April 1968 and corrects the former 1969 founding field. The Auburn Avenue finding aid and Blank Forms’ facsimile account describe 1968–1969. The 1969 end follows that collected-edition account; the final original issue and a regular publishing schedule have not been verified.",
       "isActive": false,
       "decade": "1960s",
       "isFeaturedHistoric": false,
@@ -2908,6 +3011,16 @@
           "rightsStatus": "metadata_only",
           "citation": "The Cricket: Black Music in Evolution, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 179 (entry 1867).",
           "url": "https://archive.org/details/africanamericanne00dank/page/179/mode/1up"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The Cricket: Black Music in Evolution was edited by Amiri Baraka, A.B. Spellman, and Larry Neal between 1968 and 1969. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://www.marxists.org/history/erol/periodicals/unity-struggle/bn-1-1.pdf#page=8"
         }
       ]
     },
@@ -3025,10 +3138,10 @@
       "alternateName": null,
       "city": "Trenton",
       "publishers": "Trenton State College",
-      "yearFounded": 1968,
-      "yearCeased": 1990,
-      "frequency": "Six times a year",
-      "format": "Newspaper",
+      "yearFounded": 1972,
+      "yearCeased": null,
+      "frequency": "Varied; see historical notes",
+      "format": "Newspaper; later magazine",
       "languages": "English",
       "archiveUrl": "OCLC no. 47772945",
       "websiteUrl": null,
@@ -3037,9 +3150,9 @@
       "medium": "Print",
       "missionStatement": null,
       "keyStaff": "Previous editor(s): Kingsley Ugorji, Nov/Dec 1985Apr/May 1986; Curt Broadway, Fall 1986-Dec/Jan 1986/87; Kris Tucker, Feb-Mar 1988; Faith Pennant, Sept/Oct 1989; Hore Caldwell, Nov/Dec 1989; Will A. Mitchell, Apr 1990; Raeshell Carter, Spring 1991; Michael C. Burton, Feb- Apr 1992; Anthony Maddot, Nov 1993.",
-      "historicalNotes": "Utimme Umana/La Voz Oculta was a minority student newspaper at Trenton State College (now The College of New Jersey). The original Utimme Umana was incorporated in 1968 as a Black student newspaper, though it initially struggled to gain footing. On October 2, 1972, the first issue of the combined Utimme Umana: La Voz Oculta was published, merging the Black student paper with a Hispanic voice. 'Utimme Umana' means 'rebirth' in Swahili, while 'La Voz Oculta' means 'the hidden voice' in Spanish. The paper's defining mission was to combat ignorance on the topics of race and it encouraged readers to help spread the word. The publication presented poetry, short stories, and essays relating predominantly to Black, Hispanic, and Latinx themes, along with social and cultural events, announcements, reviews, letters to the editor, photographs, and drawings. It was published twice monthly in newspaper format until early 1978 when it changed to a magazine format, with issues averaging 30 pages. The publication ran from 1972 to 1990. Its founding was part of a broader movement at Trenton State College where, following the assassination of Martin Luther King Jr. in April 1968, African American students presented a list of 10 demands to President Robert Heussler, including creation of an Afro-American Studies program, increased Black student enrollment, hiring Black entertainment, and having a dedicated space on campus for Black students. Digitized issues are available through the TCNJ Digital Repository. A March 2026 search confirmed issues from 1972 to 1990 in the TCNJ digital archives.",
+      "historicalNotes": "This record represents the combined title Utimme Umana/La Voz Oculta at Trenton State College, now The College of New Jersey. TCNJ dates the earlier Black student paper Utimme Umana to 1968 and the combined title’s first issue to October 2, 1972. The 1972 field follows the title named by this record; 1968 remains its predecessor date. TCNJ describes a change from newspaper to magazine format in 1978. A surviving volume 25, number 3 issue bears February 1993 on its cover, contradicting the former 1990 end year. A September 27, 1993 Trenton Times account also names the minority magazine. No final publication year is established. The publication served Black and Hispanic students through poetry, short stories, essays, campus reporting, photographs, and artwork. Schedules varied across its history; the earlier six-times-a-year field is not used for the whole run. Digitized issues are available through TCNJ. Its founding was part of a broader movement  at Trenton State College where, following the assassination of Martin Luther King Jr. in April 1968, African American students presented a list of 10 demands to President Robert Heussler, including creation of an Afro-American Studies program, increased Black student enrollment, hiring Black entertainment, and having a dedicated space on campus for Black students. Digitized issues are available through the TCNJ Digital Repository.",
       "isActive": false,
-      "decade": "1960s",
+      "decade": "1970s",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
       "evidence": [
@@ -3072,6 +3185,16 @@
           "rightsStatus": "crop_first",
           "citation": "Trenton Times / The Times, 1993-09-27, p. 32.",
           "url": "https://www.newspapers.com/image/1197515771/"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "This record represents the combined title Utimme Umana/La Voz Oculta at Trenton State College, now The College of New Jersey. TCNJ dates the earlier Black student paper Utimme Umana to 1968 and the combined title’s first issue to October 2, 1972. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://atom.tcnj.edu/index.php/TCNJ-Utimme-Umana:-La-Voz-Oculta"
         }
       ]
     },
@@ -3153,8 +3276,8 @@
       "alternateName": null,
       "city": "Newark",
       "publishers": "Newark Community Union Project",
-      "yearFounded": 1963,
-      "yearCeased": 1965,
+      "yearFounded": null,
+      "yearCeased": null,
       "frequency": "Irregular",
       "format": "Newsletter/Periodicals",
       "languages": "English",
@@ -3165,9 +3288,9 @@
       "medium": "Print",
       "missionStatement": null,
       "keyStaff": null,
-      "historicalNotes": "The Newark Community Union Project (NCUP) was established in 1964 as part of the Students for a Democratic Society (SDS) Economic Research and Action Project (ERAP), co-led by Tom Hayden and Carl Wittman. NCUP settled into the Clinton Hill neighborhood in South Newark in the summer of 1964, consisting of about 12-15 organizers (half Black, half white college students and graduates). While a specific newsletter titled 'NCUP News' was not confirmed in online sources, NCUP produced community publications and flyers as part of its organizing work in the predominantly Black Clinton Hill neighborhood. The project focused on housing issues, organizing rent strikes (which were illegal in New Jersey), picketing slumlords' homes, and conducting block meetings to address rats, roaches, unsafe living conditions, and police misconduct. NCUP's work is documented in the 1966 documentary film 'Troublemakers.' By late summer 1965, the project staff had dwindled to about half a dozen organizers, though an estimated 150 local people participated in various programs and meetings. The 1967 Newark Rebellion effectively ended NCUP, as the uprising convinced the remaining white organizers they were unwanted. NCUP's methods -- rent strikes, picketing, block meetings -- had by then spread to other parts of the city. Archival materials may exist at the NYU Tamiment Library, Rutgers University Libraries, or the Library of Congress, which catalogs materials under the subject heading 'Newark Community Union Project (N.J.)'.",
+      "historicalNotes": "The Newark Community Union Project produced a newsletter, but its exact title and first and final publication years remain unverified. Danky and Hady, entry 4335, page 417, gives the uncertain range 1963?–1965? and a Wisconsin Historical Society reference, Pam 1719. Those question-mark dates must not appear as exact years. WorldCat OCLC 261342029 catalogs an NCUP newsletter without an exact publication year. New Left Notes of March 11, 1966 describes the organizers’ arrival in summer 1964; that is a project date, not the newsletter’s founding date. Its August 5, 1966 issue attributes a reprinted Peter Countryman article to the NCUP newsletter. The reprint establishes the newsletter’s existence before that date, not publication during 1966 or its final year. Cornell’s Walter Thabit papers, collection 4215, box 4, folder 23, provides another newsletter lead. NCUP organized in Newark’s Clinton Hill neighborhood as part of SDS’s Economic Research and Action Project. The project focused on housing issues , organizing rent strikes (which were illegal in New Jersey), picketing slumlords' homes, and conducting block meetings to address rats, roaches, unsafe living conditions, and police misconduct. NCUP's work is documented in the 1966 documentary film 'Troublemakers.' By late summer 1965, the project staff had dwindled to about half a dozen organizers, though an estimated 150 local people participated in various programs and meetings. The 1967 Newark Rebellion effectively ended NCUP, as the uprising convinced the remaining white organizers they were unwanted. NCUP's methods -- rent strikes, picketing, block meetings -- had by then spread to other parts of the city. Archival materials may exist at the NYU Tamiment Library, Rutgers University Libraries, or the Library of Congress, which catalogs materials under the subject heading 'Newark Community Union Project (N.J.)'.",
       "isActive": false,
-      "decade": "1960s",
+      "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
       "evidence": [
@@ -3180,17 +3303,27 @@
           "rightsStatus": "metadata_only",
           "citation": "Newark Community Union Project News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 417 (entry 4335).",
           "url": "https://archive.org/details/africanamericanne00dank/page/417/mode/1up"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The Newark Community Union Project produced a newsletter, but its exact title and first and final publication years remain unverified. Danky and Hady, entry 4335, page 417, gives the uncertain range 1963?–1965? Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://search.worldcat.org/title/261342029"
         }
       ]
     },
     {
       "id": 77,
       "name": "Black New Jersey Magazine",
-      "alternateName": null,
+      "alternateName": "Formerly Black Atlantic City Magazine",
       "city": "Atlantic City",
       "publishers": "BAC Pub",
-      "yearFounded": 1988,
-      "yearCeased": 1990,
+      "yearFounded": null,
+      "yearCeased": null,
       "frequency": "Bimonthly",
       "format": "Periodicals",
       "languages": "English",
@@ -3201,9 +3334,9 @@
       "medium": "Print",
       "missionStatement": null,
       "keyStaff": "Previous editor(s): Barbara Johnson",
-      "historicalNotes": "A March 2026 search found that the magazine continued from Black Atlantic City Magazine (ID 119) and appeared as Black New Jersey Magazine from 1987 to 1990, according to the ACFPL bibliography.",
+      "historicalNotes": "Atlantic City Free Public Library’s Heston guide lists Black New Jersey Magazine for 1987–1990 and identifies Black Atlantic City Magazine, record 119, as its former title. These are library collection dates until the issues are checked, not verified first and final publication dates. Danky and Hady, entry 935, page 91, records a March/April 1988 holding; that issue does not establish a 1988 launch. The former exact 1988 founding and 1990 cessation fields are omitted pending first- and last-issue checks. The Heston guide and its online bibliography describe the same collection and are not independent confirmations.",
       "isActive": false,
-      "decade": "1980s",
+      "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
       "evidence": [
@@ -3216,6 +3349,16 @@
           "rightsStatus": "metadata_only",
           "citation": "Black New Jersey Magazine, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 91 (entry 935).",
           "url": "https://archive.org/details/africanamericanne00dank/page/91/mode/1up"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "Atlantic City Free Public Library’s Heston guide lists Black New Jersey Magazine for 1987–1990 and identifies Black Atlantic City Magazine, record 119, as its former title. These are library collection dates until the issues are checked, not verified first and final publication dates. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://acfpl.org/files/SubjectGuides/AfricanAmericanHestonguide-02.12.pdf#page=2"
         }
       ]
     },
@@ -3381,7 +3524,7 @@
       "medium": "Print",
       "missionStatement": null,
       "keyStaff": "Editor: Marcia A. Cole",
-      "historicalNotes": "Hype Hair was founded in 1992 by editor-in-chief Belinda Trotter, who developed the concept while working as editor-in-chief for the 2 Hype fanzine under the Word Up! publication house in Paramus, NJ. Publisher Scott Figman greenlit the standalone magazine after the hairstyle sections proved enormously popular. Hype Hair became the #1 hair and beauty publication for women of color, published nine times per year featuring hairstyles, beauty products, and celebrity coverage. The magazine was Black women-led since its founding but was only Black-owned from 2013-2017 under UPTOWN Ventures Group. In 2021, Lia Dias (owner of The Girl Cave LA beauty supply stores) purchased the magazine, making it Black-owned again. Dias merged her beauty supply chain with the brand to launch Hype Hair Beauty Supply stores in California and Texas. The magazine is now digital-only, headquartered in Los Angeles.",
+      "historicalNotes": "Hype Hair’s publisher dates its founding to 1992, crediting editor-in-chief Belinda Trotter, who developed the concept while working as editor-in-chief for the 2 Hype fanzine under the Word Up! publication house in Paramus, NJ. Publisher Scott Figman greenlit the standalone magazine after the hairstyle sections proved enormously popular. Hype Hair became the #1 hair and beauty publication for women of color, published nine times per year featuring hairstyles, beauty products, and celebrity coverage. The magazine was Black women-led since its founding but was only Black-owned from 2013-2017 under UPTOWN Ventures Group. In 2021, Lia Dias (owner of The Girl Cave LA beauty supply stores) purchased the magazine, making it Black-owned again. Dias merged her beauty supply chain with the brand to launch Hype Hair Beauty Supply stores in California and Texas. The magazine is now digital-only, headquartered in Los Angeles. The 2023 publisher release gives 1992, while the Central Arkansas Library System serial record dates the Paramus magazine from 1993. Danky and Hady, entry 3020, page 287, records Wisconsin holdings from September 1993. The 1993 field follows the library serial description pending a first-issue check; the publisher’s 1992 account remains a documented conflicting claim. A holdings start alone does not prove a launch date.",
       "isActive": true,
       "decade": "1990s",
       "isFeaturedHistoric": false,
@@ -3396,6 +3539,16 @@
           "rightsStatus": "metadata_only",
           "citation": "Hype Hair, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 287 (entry 3020).",
           "url": "https://archive.org/details/africanamericanne00dank/page/287/mode/1up"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "Hype Hair’s publisher dates its founding to 1992, crediting editor-in-chief Belinda Trotter, who developed the concept while working as editor-in-chief for the 2 Hype fanzine under the Word Up! publication house in Paramus, NJ. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://www.globenewswire.com/news-release/2023/01/13/2588732/0/en/Hype-Hair-Acquires-Good-Good-Hair-Adds-E-Commerce-Industry-Veteran.html"
         }
       ]
     },
@@ -3440,10 +3593,10 @@
       "name": "Unity and Struggle",
       "alternateName": null,
       "city": "Newark",
-      "publishers": "Committee for Unified Newark",
-      "yearFounded": 1972,
-      "yearCeased": 1978,
-      "frequency": "Monthly",
+      "publishers": "Congress of Afrikan People; later Revolutionary Communist League",
+      "yearFounded": 1974,
+      "yearCeased": null,
+      "frequency": "Varied; twice monthly announced October 1974",
       "format": "Newspaper",
       "languages": "English",
       "archiveUrl": "OCLC no. 5591021/LC card no. sn91-64001",
@@ -3452,8 +3605,8 @@
       "primaryFocus": "Socialism, Black Liberation movement, Politics, Education, Employment, Housing, Health",
       "medium": "Print",
       "missionStatement": "‘The Struggle Continues”",
-      "keyStaff": null,
-      "historicalNotes": "Unity and Struggle was the national newspaper of the Congress of Afrikan People (CAP), led by Amiri Baraka. It evolved from earlier Newark Black publications: Black Newark (1968), Black News (1969), and Black New Ark (1972-1973), all published by the Committee for Unified Newark (CFUN). Unity and Struggle was issued by CAP from approximately February/March 1974 through April 1976, then by the Revolutionary Communist League (Marxist-Leninist-Mao Tse Tung Thought) from June 1976 through 1979, reflecting CAP's ideological transition from Black cultural nationalism to Marxism-Leninism. Dr. Komozi Woodard (professor of American history at Sarah Lawrence College and author of 'A Nation Within: Baraka and Black Power Politics') served as editor. The paper covered topics including African liberation, trade unions, factory organizing, and Black political conventions. The August 1974 issue featured coverage of the All-Afrikan Women's Conference held in Newark. The history of CAP was first published in Vol. V, No. 6 (June 1976). Digitized issues are available through the Rutgers Dana Library Newark Black Newspapers Collection (collections.libraries.rutgers.edu/newark-black-newspapers) and individual issues through RiseUp Newark (riseupnewark.com), with credit to the NYU Tamiment Library. Physical copies are held at the Komozi Woodard Amiri Baraka Collection at the Auburn Avenue Research Library, with a distribution list from 1975 preserved in the archive.",
+      "keyStaff": "Editor: Komozi Woodard (tenure not established)",
+      "historicalNotes": "Unity and Struggle succeeded Black New Ark in early 1974. Volume 3, number 1, January–February 1974, still bears Black New Ark; volume 3, number 2, February–March 1974, bears Unity and Struggle. The 1974 founding field refers to this title, while 1972 belongs to its predecessor history. It was the newspaper of the Congress of Afrikan People and later the Revolutionary Communist League. A surviving 1979 issue, volume 8, numbers 4–9, identifies the latter organization and contradicts the former 1978 end year. The final publication year is unknown, so no exact cessation year is entered. The October 1974 first edition, volume 3, number 10, announces twice-monthly publication, which does not establish one schedule for the entire run. The Rutgers/Newark History Society collection description identifies Komozi Woodard as an editor without establishing his complete tenure. Earlier related titles include Black Newark, Black News, and Black New Ark. Digitized issues are available through Rutgers and Marxists Internet Archive. The paper covered topics including African liberation, trade unions, factory organizing, and Black political conventions. The August 1974 issue featured coverage of the All-Afrikan Women's Conference held in Newark. The history of CAP was first published in Vol. V, No. 6 (June 1976). Digitized issues are available through the Rutgers Dana Library Newark Black Newspapers Collection (collections.libraries.rutgers.edu/newark-black-newspapers) and individual issues through RiseUp Newark (riseupnewark.com), with credit to the NYU Tamiment Library. Physical copies are held at the Komozi Woodard Amiri Baraka Collection at the Auburn Avenue Research Library, with a distribution list from 1975 preserved in the archive.",
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": true,
@@ -3468,6 +3621,16 @@
           "rightsStatus": "crop_first",
           "citation": "Unity and Struggle, website capture, 20200118.",
           "url": "https://web.archive.org/web/20200118211629/https://www.marxists.org/history/erol/periodicals/unity-struggle/index.htm"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "Unity and Struggle succeeded Black New Ark in early 1974. Volume 3, number 1, January–February 1974, still bears Black New Ark; volume 3, number 2, February–March 1974, bears Unity and Struggle. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://www.marxists.org/history/erol/periodicals/unity-struggle/bn-3-1.pdf"
         }
       ]
     },
@@ -3942,11 +4105,11 @@
     {
       "id": 98,
       "name": "Black Voice/Carta Boricua",
-      "alternateName": null,
+      "alternateName": "Black Voice/Carta Latina",
       "city": "Piscataway",
       "publishers": "Paul Robeson Cultural Center",
       "yearFounded": 1970,
-      "yearCeased": 2015,
+      "yearCeased": null,
       "frequency": "Weekly",
       "format": "Periodicals",
       "languages": "English, Spanish",
@@ -3957,7 +4120,7 @@
       "medium": "Print",
       "missionStatement": "The newspaper is produced by and for Black and Latinx students, with the goal of \"Break the Chains of Ignorance\" and to develop social, cultural, and political consciousness within the community.",
       "keyStaff": "Kim Robinson, Editor",
-      "historicalNotes": "A March 2026 search found that the publication now appears as Black Voice/Carta Latina at Rutgers. The last confirmed issues on Issuu date to spring 2015, and the student organization may still exist.",
+      "historicalNotes": "Rutgers’ 2003–2005 undergraduate catalog uses Black Voice/Carta Latina and reports a 1970 founding. The Rutgers Oral History Archives’ editorial note dates the change from Carta Boricua to Carta Latina to 1985; the relevant mastheads have not been checked. Spring 2015 Issuu issues were the latest located in the earlier search, not verified final issues, so the former 2015 cessation is omitted. Rutgers Student Assembly’s fall 2016 budget allocates funds to Black Voice Carta Latina for Voice Magazine under SABO 42; the spring 2020 budget also funds Voice Magazine under SABO 42. These budgets are continuity leads, not proof of a published issue, uninterrupted publication, or current activity. The 1970 founding field is retained from the Rutgers catalog, and the final publication year remains unknown.",
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": false,
@@ -3972,6 +4135,16 @@
           "rightsStatus": "metadata_only",
           "citation": "Black Voice/Carta Boricua, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 104 (entry 1076).",
           "url": "https://archive.org/details/africanamericanne00dank/page/104/mode/1up"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "Rutgers’ 2003–2005 undergraduate catalog uses Black Voice/Carta Latina and reports a 1970 founding. The Rutgers Oral History Archives’ editorial note dates the change from Carta Boricua to Carta Latina to 1985; the relevant mastheads have not been checked. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://catalogs.rutgers.edu/generated/nb-ug_0305/pg4274.html"
         }
       ]
     },
@@ -3983,7 +4156,7 @@
       "publishers": "Black Caucus of the American Library Association (BCALA)",
       "yearFounded": 1974,
       "yearCeased": null,
-      "frequency": "Semi-annually",
+      "frequency": "Varied; see historical notes",
       "format": "Newsletter",
       "languages": "English",
       "archiveUrl": null,
@@ -3993,8 +4166,8 @@
       "medium": "Print",
       "missionStatement": "Print",
       "keyStaff": null,
-      "historicalNotes": null,
-      "isActive": true,
+      "historicalNotes": "The ALA Archives describes the Black Caucus Newsletter as serving readers since 1974. Danky and Hady, entry 795, page 77, instead describes a bimonthly serial beginning in 1971 and records Pomona, New Jersey, as its place of publication from September 1983 to April 1986. The earliest issue and the relationship between the two start dates remain unresolved. ALA Archives illustrates volume 13, number 6, from 1985–1986; this does not support a single semiannual schedule for the full run. BCALA’s newsletter page links issues through fall 2021. That page alone does not verify current activity; a recent issue is needed. The 1974 field retains the ALA Archives date pending that title-history review.",
+      "isActive": null,
       "decade": "1970s",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
@@ -4008,6 +4181,16 @@
           "rightsStatus": "metadata_only",
           "citation": "Black Caucus of ALA Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 77 (entry 795).",
           "url": "https://archive.org/details/africanamericanne00dank/page/77/mode/1up"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The ALA Archives describes the Black Caucus Newsletter as serving readers since 1974. Danky and Hady, entry 795, page 77, instead describes a bimonthly serial beginning in 1971 and records Pomona, New Jersey, as its place of publication from September 1983 to April 1986. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://www.library.illinois.edu/ala/2017/02/01/publications-black-caucus-newsletter/"
         }
       ]
     },
@@ -4270,7 +4453,7 @@
       "city": "Newark",
       "publishers": "United Black Workers",
       "yearFounded": 1970,
-      "yearCeased": 1975,
+      "yearCeased": null,
       "frequency": "Monthly",
       "format": "Periodicals",
       "languages": "English",
@@ -4281,7 +4464,7 @@
       "medium": "Print",
       "missionStatement": null,
       "keyStaff": null,
-      "historicalNotes": "The Black Voice was a Newark, NJ publication active from approximately 1972 to 1976, published by the United Black Workers, according to the Newark Public Library's inventory of New Jersey newspapers on microfilm. The publication is held on microfilm at the Newark Public Library's Charles F. Cummings New Jersey Information Center. As a labor-affiliated Black publication, it served a distinct niche from the Baraka-era cultural nationalist newspapers (Black NewArk, Unity and Struggle) that were active in Newark during the same period. The 1970s saw significant Black labor organizing in Newark and New Jersey, with community control of construction projects and War on Poverty programs becoming central to Black economic self-determination. This should not be confused with the Black Voice News of Riverside, California (est. 1972), The Black Voice at Syracuse University (student publication, est. 1969), or the later Rutgers Black Voice Carta Latina (BVCL) student publication. Contact the Newark Public Library's NJ Information Center (973-733-7775, njreference@npl.org) for microfilm access.",
+      "historicalNotes": "The Black Voice was published by the United Black Workers in Newark and served Black industrial workers, including those at Ford’s Mahwah plant. Volume 5, number 2, printed page 2, reports that the paper began in 1970, supporting the founding field. The undated volume 6, number 2, printed page 8, discusses events as occurring in 1976. That internal wording supports publication in 1976 or later and contradicts an exact 1975 end, but does not prove a 1976 cessation. Danky and Hady’s 1975? end and the Wisconsin union list’s holdings through June 1975 are uncertain catalog or holdings statements. The final year remains unknown. Newark Public Library holds microfilm. This title is distinct from Black Voice News in California and the Rutgers student publication Black Voice/Carta Boricua. The microfilm is held at Newark Public Library’s Charles F. Cummings New Jersey Information Center. Contact njreference@npl.org or 973-733-7775 for access. This paper is also distinct from The Black Voice at Syracuse University, a student publication founded in 1969.",
       "isActive": false,
       "decade": "1970s",
       "isFeaturedHistoric": true,
@@ -4296,6 +4479,16 @@
           "rightsStatus": "metadata_only",
           "citation": "The Black Voice, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 104 (entry 1071).",
           "url": "https://archive.org/details/africanamericanne00dank/page/104/mode/1up"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The Black Voice was published by the United Black Workers in Newark and served Black industrial workers, including those at Ford’s Mahwah plant. Volume 5, number 2, printed page 2, reports that the paper began in 1970, supporting the founding field. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://files.libcom.org/files/TheBlackVoice.vol_.5.2.pdf#page=2"
         }
       ]
     },
@@ -4531,10 +4724,10 @@
       "alternateName": null,
       "city": "Paramus",
       "publishers": "Scott Mitchell Figman",
-      "yearFounded": 1990,
-      "yearCeased": 2012,
+      "yearFounded": 1987,
+      "yearCeased": null,
       "frequency": "Monthly",
-      "format": "Newspaper",
+      "format": "Magazine",
       "languages": "English",
       "archiveUrl": "OCLC no. 21278914/LC card no. sn91-1930",
       "websiteUrl": null,
@@ -4542,10 +4735,10 @@
       "primaryFocus": "Music, Rap music",
       "medium": "Print",
       "missionStatement": null,
-      "keyStaff": "Editor: Kate Ferguson",
-      "historicalNotes": "Word Up! debuted in August 1987 as a spin-off of Right On! magazine, headquartered in Paramus, NJ under Enoble Media and publisher John Blassingame. Gerrie Summers served as founding editor-in-chief, shortly after replaced by Kate Ferguson. The magazine was a glossy, visually engaging teen publication featuring hip-hop and R&B artist interviews, pin-ups, fashion tips, a pen pals section called 'Pass the Word,' crossword puzzles, and song lyrics. Principal photographer was Ernie Paniccioli. Word Up! was famously immortalized by The Notorious B.I.G. in 'Juicy' (1994): 'It was all a dream; I used to read Word Up! magazine.' Rap Masters was its sister publication, both produced by Faces Magazines in Paramus. The magazine circulated from 1987-2012, proving indispensable in launching careers of countless hip-hop and R&B legends. In the 2020s, Cynthia Horner (former Right On! editor-in-chief) purchased both titles, forming Right On! Media Holdings, LLC. In 2023, the Notorious B.I.G. Estate partnered with Budweiser to release limited-edition tribute issues (5,000 copies each) during Hip-Hop 50 celebrations. A March 2026 search dated the last print issue to April 2012.",
+      "keyStaff": "Founding editor: Gerrie Summers; later editor: Kate Ferguson",
+      "historicalNotes": "Word Up! was a monthly hip-hop and R&B magazine associated with Paramus, New Jersey. Founding editor Gerrie Summers reports an August 1987 debut. Sotheby’s 2022 lot 116 describes issues from her own collection dated 1987–1997 and also gives an August 1987 founding. These participant and collection accounts support 1987 rather than the former 1990 field, with the exact first-issue masthead still to be checked. The title was a magazine, not a newspaper. Kate Ferguson was a later editor, and Ernie Paniccioli was a principal photographer. The retained history’s April 2012 final-print claim is not confirmed by an inspected final issue, so no exact cessation year is entered. Later tribute or revival issues must be distinguished from the original run. Word Up! was a sister publication of Rap Masters within the Faces Magazines publishing operation. Its features included artist interviews, pin-ups, fashion, letters, puzzles, and music writing. Earlier archive research also recorded later tribute and revival issues; these require a separate continuity check.",
       "isActive": false,
-      "decade": "1990s",
+      "decade": "1980s",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
       "evidence": [
@@ -4568,6 +4761,16 @@
           "rightsStatus": "metadata_only",
           "citation": "Word Up!, A lot of 28 issues of Word Up! magazine (1987-1997), the Paramus, NJ hip-hop teen magazine, photographed for a 2022 Sotheby's 'Art and Influence of Hip Hop' auction. (image credit: auction listing photo, not for reproduction).",
           "url": "https://www.sothebys.com/en/buy/auction/2022/hip-hop/a-collection-of-28-issues-of-word-up-magazine-1987"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "Word Up! was a monthly hip-hop and R&B magazine associated with Paramus, New Jersey. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://www.linkedin.com/posts/gerrie-summers-2b89b85_i-used-to-edit-word-up-magazine-when-i-activity-7108541802005032960-PZ7-"
         }
       ]
     },
@@ -5056,7 +5259,7 @@
       "city": null,
       "publishers": null,
       "yearFounded": null,
-      "yearCeased": 1979,
+      "yearCeased": null,
       "frequency": null,
       "format": "Digital archive collection",
       "languages": "English",
@@ -5067,8 +5270,8 @@
       "medium": "Digital",
       "missionStatement": null,
       "keyStaff": null,
-      "historicalNotes": "This is NOT a newspaper. It is a digital library collection hosted by Rutgers University Libraries at collections.libraries.rutgers.edu/newark-black-newspapers. The collection contains four newspapers published under the leadership of Amiri Baraka (Leroi Jones) between 1968 and 1979 during Newark's post-rebellion period: (1) Black Newark, Vol. 1 No. 1-3, April-November 1968; (2) Black News, published by Black People of Newark, Vol. 1 No. 4, 1969; (3) Black New Ark, published by Committee for Unified Newark, Vol. 1 No. 5 (April 1972) - Vol. 2 No. 14 (Dec. 1973), incomplete; (4) Unity and Struggle, published by Committee for Unified Newark, Vol. 3 No. 1 (Jan/Feb 1974) - Vol. 8 No. 1/2 (Feb. 1979), incomplete. The collection is digitized from holdings at the Rutgers Dana Library and is fully searchable. These newspapers served as tools for activism, organizing, and advocating for Black liberation and political and economic agency. This entry should be reclassified as a 'collection' rather than a standalone newspaper. A March 2026 search confirmed that this is a digitized archival collection at Rutgers University, not a single active publication.",
-      "isActive": false,
+      "historicalNotes": "This record describes Rutgers University Libraries’ Newark Black Newspapers digital collection, not a single newspaper. Its format remains Digital archive collection, and no founding or cessation year is assigned to the collection from its contents. Rutgers describes four related titles published between 1968 and 1979: Black Newark, Black News, Black New Ark, and Unity and Struggle. Those are coverage dates for the collected newspapers, not dates when the digital collection began or ended. The January–February 1974 issue, volume 3, number 1, still carries Black New Ark; volume 3, number 2, February–March 1974, carries Unity and Struggle. The collection should be excluded from requests to determine newspaper founding dates. The newspapers’ coverage dates do not indicate that Rutgers’ digital collection has closed. The digital collection draws on holdings at Rutgers Dana Library and documents organizing, activism, and Black political agency in Newark.",
+      "isActive": null,
       "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
@@ -5082,6 +5285,16 @@
           "rightsStatus": "crop_first",
           "citation": "Newark Black Newspapers Collection | Digital Collections, website capture, 20190419.",
           "url": "https://web.archive.org/web/20190419185835/https://collections.libraries.rutgers.edu/"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "This record describes Rutgers University Libraries’ Newark Black Newspapers digital collection, not a single newspaper. Its format remains Digital archive collection, and no founding or cessation year is assigned to the collection from its contents. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://collections.libraries.rutgers.edu/newark-black-newspapers"
         }
       ]
     },
@@ -5163,9 +5376,9 @@
       "alternateName": null,
       "city": "Teaneck",
       "publishers": "Published by Ralph F. Johnson",
-      "yearFounded": 1982,
-      "yearCeased": 1991,
-      "frequency": "Weekly",
+      "yearFounded": null,
+      "yearCeased": null,
+      "frequency": "Varied; see historical notes",
       "format": "Newspaper/Periodicals",
       "languages": "English",
       "archiveUrl": "OCLC no. 18514803",
@@ -5175,9 +5388,9 @@
       "medium": "Print",
       "missionStatement": "\"News from a Black perspective.\"\n\"Largest African-American weekly newspaper in New Jersey.”",
       "keyStaff": "Editor: Ralph F. Johnson",
-      "historicalNotes": "A March 2026 search found this entry to be a duplicate of The Connection / North Jersey Connection (ID 5). It is the same publication, with the same founding year and the same publisher.",
+      "historicalNotes": "The North Jersey Connection and its successor The Connection were Teaneck publications associated with Ralph F. Johnson. The Library of Congress describes North Jersey Connection, LCCN sn92060412, from an October 22, 1983 issue, and The Connection, LCCN sn88071369, from June 16, 1984. March 23, 1991 is the latter catalog’s latest issue consulted, not a final issue. Danky and Hady, entry 1791, page 172, records Wisconsin holdings beginning with volume 11, number 20, June 5, 1993, and gives an uncertain 1982 start. The holding contradicts the former 1991 end; neither an exact founding year nor a final year is established. The predecessor is described as biweekly and the later bibliography as weekly; schedules require dated mastheads. Records 5 and 131 share OCLC 18514803 and duplicate the successor identity. Both IDs are retained to preserve existing references, with the duplication explicit. An open catalog end does not establish present activity.",
       "isActive": false,
-      "decade": "1980s",
+      "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
       "evidence": [
@@ -5190,6 +5403,16 @@
           "rightsStatus": "metadata_only",
           "citation": "The Connection Newspaper, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 172 (entry 1791).",
           "url": "https://archive.org/details/africanamericanne00dank/page/172/mode/1up"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-19",
+          "caption": "The North Jersey Connection and its successor The Connection were Teaneck publications associated with Ralph F. Johnson. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "file": "data/research/corrections/2026-10-19.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://www.loc.gov/item/sn92060412/"
         }
       ]
     },

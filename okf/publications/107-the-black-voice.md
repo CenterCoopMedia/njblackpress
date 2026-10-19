@@ -25,8 +25,8 @@ featured: true
 | Alternate name | Unknown |
 | City | [Newark](../cities/newark.md) |
 | Publishers or owners | United Black Workers |
-| Active years | 1970–1975 |
-| Status | Ceased 1975 |
+| Active years | 1970–? |
+| Status | Ceased (date unknown) |
 | Decade | [1970s](../decades/1970s.md) |
 | Format | [Periodicals](../formats/periodicals.md) |
 | Medium | [Print](../mediums/print.md) |
@@ -37,7 +37,7 @@ featured: true
 
 ## Historical notes
 
-The Black Voice was a Newark, NJ publication active from approximately 1972 to 1976, published by the United Black Workers, according to the Newark Public Library's inventory of New Jersey newspapers on microfilm. The publication is held on microfilm at the Newark Public Library's Charles F. Cummings New Jersey Information Center. As a labor-affiliated Black publication, it served a distinct niche from the Baraka-era cultural nationalist newspapers (Black NewArk, Unity and Struggle) that were active in Newark during the same period. The 1970s saw significant Black labor organizing in Newark and New Jersey, with community control of construction projects and War on Poverty programs becoming central to Black economic self-determination. This should not be confused with the Black Voice News of Riverside, California (est. 1972), The Black Voice at Syracuse University (student publication, est. 1969), or the later Rutgers Black Voice Carta Latina (BVCL) student publication. Contact the Newark Public Library's NJ Information Center (973-733-7775, njreference@npl.org) for microfilm access.
+The Black Voice was published by the United Black Workers in Newark and served Black industrial workers, including those at Ford’s Mahwah plant. Volume 5, number 2, printed page 2, reports that the paper began in 1970, supporting the founding field. The undated volume 6, number 2, printed page 8, discusses events as occurring in 1976. That internal wording supports publication in 1976 or later and contradicts an exact 1975 end, but does not prove a 1976 cessation. Danky and Hady’s 1975? end and the Wisconsin union list’s holdings through June 1975 are uncertain catalog or holdings statements. The final year remains unknown. Newark Public Library holds microfilm. This title is distinct from Black Voice News in California and the Rutgers student publication Black Voice/Carta Boricua. The microfilm is held at Newark Public Library’s Charles F. Cummings New Jersey Information Center. Contact njreference@npl.org or 973-733-7775 for access. This paper is also distinct from The Black Voice at Syracuse University, a student publication founded in 1969.
 
 ## Archive reference
 
@@ -59,14 +59,14 @@ OCLC no. 17008478.
 
 ### Also from the 1970s
 
-- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–2015
+- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–?
 - [CFUN News](051-cfun-news.md) — 1970–1971
-- [The Forum](039-the-forum.md) — 1970–1980
 - [The Liberator](109-the-liberator.md) — 1970–1971
 - [MEDIC News](068-medic-news.md) — 1971–1975
 - [Ngoma](111-ngoma.md) — 1971–1976
 - [Right On!](095-right-on.md) — 1971–2014
 - [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
+- [En Avant](059-en-avant.md) — 1972–1975
 - …and 20 more
 
 ## Navigate

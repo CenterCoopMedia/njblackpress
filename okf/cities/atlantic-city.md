@@ -20,9 +20,9 @@ count: 5
 |---|---|---|
 | [Apex News](../publications/045-apex-news.md) | 1929–1940 | Ceased 1940 |
 | [Black Atlantic City Magazine](../publications/119-black-atlantic-city-magazine.md) | 1978–1986 | Ceased 1986 |
-| [Black New Jersey Magazine](../publications/077-black-new-jersey-magazine.md) | 1988–1990 | Ceased 1990 |
 | [Front Runner New Jersey](../publications/006-front-runner-new-jersey.md) | 2017–present | Active |
 | [Atlantic City Focus](../publications/025-atlantic-city-focus.md) | 2022–present | Active |
+| [Black New Jersey Magazine](../publications/077-black-new-jersey-magazine.md) | ?–? | Ceased (date unknown) |
 
 ## Navigate
 

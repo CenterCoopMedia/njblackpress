@@ -11,7 +11,7 @@ tags:
   - "digital-archive-collection"
 timestamp: "2026-06-29"
 archive_id: 128
-status: "inactive-or-historical"
+status: "collection"
 featured: false
 ---
 
@@ -23,8 +23,8 @@ featured: false
 | Alternate name | Unknown |
 | City | [Unknown](../cities/unknown.md) |
 | Publishers or owners | Unknown |
-| Active years | ?–1979 |
-| Status | Ceased 1979 |
+| Active years | Collection coverage; see notes |
+| Status | Digital collection |
 | Decade | [Unknown](../decades/unknown.md) |
 | Format | [Digital archive collection](../formats/digital-archive-collection.md) |
 | Medium | [Digital](../mediums/digital.md) |
@@ -35,7 +35,7 @@ featured: false
 
 ## Historical notes
 
-This is NOT a newspaper. It is a digital library collection hosted by Rutgers University Libraries at collections.libraries.rutgers.edu/newark-black-newspapers. The collection contains four newspapers published under the leadership of Amiri Baraka (Leroi Jones) between 1968 and 1979 during Newark's post-rebellion period: (1) Black Newark, Vol. 1 No. 1-3, April-November 1968; (2) Black News, published by Black People of Newark, Vol. 1 No. 4, 1969; (3) Black New Ark, published by Committee for Unified Newark, Vol. 1 No. 5 (April 1972) - Vol. 2 No. 14 (Dec. 1973), incomplete; (4) Unity and Struggle, published by Committee for Unified Newark, Vol. 3 No. 1 (Jan/Feb 1974) - Vol. 8 No. 1/2 (Feb. 1979), incomplete. The collection is digitized from holdings at the Rutgers Dana Library and is fully searchable. These newspapers served as tools for activism, organizing, and advocating for Black liberation and political and economic agency. This entry should be reclassified as a 'collection' rather than a standalone newspaper. A March 2026 search confirmed that this is a digitized archival collection at Rutgers University, not a single active publication.
+This record describes Rutgers University Libraries’ Newark Black Newspapers digital collection, not a single newspaper. Its format remains Digital archive collection, and no founding or cessation year is assigned to the collection from its contents. Rutgers describes four related titles published between 1968 and 1979: Black Newark, Black News, Black New Ark, and Unity and Struggle. Those are coverage dates for the collected newspapers, not dates when the digital collection began or ended. The January–February 1974 issue, volume 3, number 1, still carries Black New Ark; volume 3, number 2, February–March 1974, carries Unity and Struggle. The collection should be excluded from requests to determine newspaper founding dates. The newspapers’ coverage dates do not indicate that Rutgers’ digital collection has closed. The digital collection draws on holdings at Rutgers Dana Library and documents organizing, activism, and Black political agency in Newark.
 
 ## External links
 
@@ -50,8 +50,14 @@ This is NOT a newspaper. It is a digital library collection hosted by Rutgers Un
 
 ### Also from the Unknown
 
-- [New Jersey Deadline](050-new-jersey-deadline.md) — ?–present
-- [New Jersey Record](014-new-jersey-record.md) — ?–present
+- [Black New Jersey Magazine](077-black-new-jersey-magazine.md) — ?–?
+- [New Jersey Deadline](050-new-jersey-deadline.md) — ?–?
+- [New Jersey Record](014-new-jersey-record.md) — ?–?
+- [Newark Community Union Project News](076-newark-community-union-project-news.md) — ?–?
+- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — ?–?
+- [The Connection Newspaper](131-the-connection-newspaper.md) — ?–?
+- [The Forum](039-the-forum.md) — ?–?
+- [The Jersey Express](002-the-jersey-express.md) — ?–?
 
 ## Navigate
 

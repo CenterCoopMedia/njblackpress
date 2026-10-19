@@ -46,7 +46,7 @@ Communique was a newsletter published by the New Jersey chapter of the National 
 ### Also in East Orange
 
 - [Club World: Newsmagazine](129-club-world-newsmagazine.md) — 1955–1959
-- [Essex Forum](042-essex-forum.md) — 1972–1985
+- [Essex Forum](042-essex-forum.md) — 1972–?
 - [Primer](105-primer.md) — 1973–1978
 - [Perspectus News Magazine](110-perspectus-news-magazine.md) — 1989–1992
 
@@ -54,13 +54,13 @@ Communique was a newsletter published by the New Jersey chapter of the National 
 
 - [Bootstrap](074-bootstrap.md) — 1981–1983
 - [Right On! Focus](083-right-on-focus.md) — 1982–1985
-- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — 1982–1991
-- [The Connection Newspaper](131-the-connection-newspaper.md) — 1982–1991
 - [City News](013-city-news.md) — 1983–2003
 - [Right On! Presents Class](096-right-on-presents-class.md) — 1983–1985
 - [Update](104-update.md) — 1983–1988
 - [Corporate Headquarters](132-corporate-headquarters.md) — 1985–1991
-- …and 12 more
+- [Write On Newsletter](120-write-on-newsletter.md) — 1985–1990
+- [Starline](086-starline.md) — 1987–2005
+- …and 10 more
 
 ## Navigate
 

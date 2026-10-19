@@ -12,14 +12,14 @@ count: 2
 
 # Newsletter/Periodicals
 
-**2** publications in this format grouping · **0** active · founding years **1963–1989**.
+**2** publications in this format grouping · **0** active · founding years **1989**.
 
 ## Publications
 
 | Publication | Years | Status |
 |---|---|---|
-| [Newark Community Union Project News](../publications/076-newark-community-union-project-news.md) | 1963–1965 | Ceased 1965 |
 | [NJ-AAHGS Newsletter](../publications/106-nj-aahgs-newsletter.md) | 1989–2000 | Ceased 2000 |
+| [Newark Community Union Project News](../publications/076-newark-community-union-project-news.md) | ?–? | Ceased (date unknown) |
 
 ## Navigate
 

@@ -23,8 +23,8 @@ featured: false
 | Alternate name | Unknown |
 | City | [East Orange](../cities/east-orange.md) |
 | Publishers or owners | Multi-Linear Publications |
-| Active years | 1972–1985 |
-| Status | Ceased 1985 |
+| Active years | 1972–? |
+| Status | Ceased (date unknown) |
 | Decade | [1970s](../decades/1970s.md) |
 | Format | [Newspaper](../formats/newspaper.md) |
 | Medium | [Print](../mediums/print.md) |
@@ -39,7 +39,7 @@ featured: false
 
 ## Historical notes
 
-A March 2026 search found that the Library of Congress lists the run as beginning in 1972 with no recorded end date (LCCN sn88071370). It was published by Multi-Linear Publications of East Orange, NJ.
+The Library of Congress, LCCN sn88071370, describes a first issue dated June 29, 1972, volume 1, number 1, published by Multi-Linear Publications of East Orange. The catalog does not record a final year; the former 1985 end is unverified and is omitted. An October 15, 1976 White House memo’s Black Press invitation roster lists Jonathan Blount, Essex Forum, at a Newark contact address. The roster is a contemporary person-and-address lead, not proof of a 1976 issue or a move from East Orange. A relationship or merger with The Forum, record 39, remains unverified.
 
 ## External links
 
@@ -60,14 +60,14 @@ LCNC: sn88071370/ OCLC: 18514779.
 
 ### Also from the 1970s
 
-- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–2015
+- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–?
 - [CFUN News](051-cfun-news.md) — 1970–1971
-- [The Black Voice](107-the-black-voice.md) — 1970–1975
-- [The Forum](039-the-forum.md) — 1970–1980
+- [The Black Voice](107-the-black-voice.md) — 1970–?
 - [The Liberator](109-the-liberator.md) — 1970–1971
 - [MEDIC News](068-medic-news.md) — 1971–1975
 - [Ngoma](111-ngoma.md) — 1971–1976
 - [Right On!](095-right-on.md) — 1971–2014
+- [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
 - …and 20 more
 
 ## Navigate

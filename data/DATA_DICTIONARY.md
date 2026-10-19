@@ -24,6 +24,7 @@ Top-level shape: `{ "metadata": {...}, "publications": [...] }`.
 - `formats` — sorted list of distinct `format` values
 - `activeCount` — count where `isActive` is true
 - `ceasedCount` — count where `isActive` is false
+- `unknownStatusCount` — count where `isActive` is null, including collection resources whose status is not a newspaper activity claim
 - `evidenceCount` — total evidence entries across all publications (added by `add_evidence.py`)
 
 **publication object**
@@ -33,8 +34,8 @@ Top-level shape: `{ "metadata": {...}, "publications": [...] }`.
 - `alternateName` — alternate/former name, or null
 - `city` — location, or null
 - `publishers` — owner/publisher text, or null
-- `yearFounded` — integer year, or null
-- `yearCeased` — integer year, or null (null means still active unless the raw CSV value was `?`)
+- `yearFounded` — integer year for the title represented by the record, or null when an exact year is unresolved. Put predecessor dates, approximate dates, and conflicting claims in `historicalNotes`.
+- `yearCeased` — integer final publication year, or null when active or the final year is unknown. A latest held issue, collection range, or last issue consulted is not a cessation date. A null value never changes `isActive` automatically.
 - `frequency` — publication frequency text, or null
 - `format` — raw format text from the CSV, or null
 - `languages` — languages published, defaults to "English"
@@ -45,7 +46,7 @@ Top-level shape: `{ "metadata": {...}, "publications": [...] }`.
 - `websiteUrl` — website/archive link text, or null
 - `targetAudience` — audience text, or null
 - `keyStaff` — free-text staff names, or null
-- `isActive` — computed boolean: true if the raw "Year ceased" CSV cell was empty, `?`, or unset
+- `isActive` — true for a currently active title, false for a historical title, or null when current activity is unverified or the record describes a digital collection. It is independent of `yearCeased`. Some legacy true flags came from empty CSV end dates; use null when research establishes that current activity remains unverified.
 - `decade` — computed from `yearFounded` as `"YYYYs"`, or `"Unknown"`
 - `isFeaturedHistoric` / `isFeaturedContemporary` — computed booleans against a hardcoded name list in `convert_csv.py`
 - `medium` — computed: `"Print"`, `"Digital"`, or `"Print/Digital"`

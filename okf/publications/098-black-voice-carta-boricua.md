@@ -20,11 +20,11 @@ featured: false
 | Field | Value |
 |---|---|
 | Archive id | 98 |
-| Alternate name | Unknown |
+| Alternate name | Black Voice/Carta Latina |
 | City | [Piscataway](../cities/piscataway.md) |
 | Publishers or owners | Paul Robeson Cultural Center |
-| Active years | 1970–2015 |
-| Status | Ceased 2015 |
+| Active years | 1970–? |
+| Status | Ceased (date unknown) |
 | Decade | [1970s](../decades/1970s.md) |
 | Format | [Periodicals](../formats/periodicals.md) |
 | Medium | [Print](../mediums/print.md) |
@@ -43,7 +43,7 @@ Kim Robinson, Editor.
 
 ## Historical notes
 
-A March 2026 search found that the publication now appears as Black Voice/Carta Latina at Rutgers. The last confirmed issues on Issuu date to spring 2015, and the student organization may still exist.
+Rutgers’ 2003–2005 undergraduate catalog uses Black Voice/Carta Latina and reports a 1970 founding. The Rutgers Oral History Archives’ editorial note dates the change from Carta Boricua to Carta Latina to 1985; the relevant mastheads have not been checked. Spring 2015 Issuu issues were the latest located in the earlier search, not verified final issues, so the former 2015 cessation is omitted. Rutgers Student Assembly’s fall 2016 budget allocates funds to Black Voice Carta Latina for Voice Magazine under SABO 42; the spring 2020 budget also funds Voice Magazine under SABO 42. These budgets are continuity leads, not proof of a published issue, uninterrupted publication, or current activity. The 1970 founding field is retained from the Rutgers catalog, and the final publication year remains unknown.
 
 ## Archive reference
 
@@ -59,13 +59,13 @@ n/a.
 ### Also from the 1970s
 
 - [CFUN News](051-cfun-news.md) — 1970–1971
-- [The Black Voice](107-the-black-voice.md) — 1970–1975
-- [The Forum](039-the-forum.md) — 1970–1980
+- [The Black Voice](107-the-black-voice.md) — 1970–?
 - [The Liberator](109-the-liberator.md) — 1970–1971
 - [MEDIC News](068-medic-news.md) — 1971–1975
 - [Ngoma](111-ngoma.md) — 1971–1976
 - [Right On!](095-right-on.md) — 1971–2014
 - [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
+- [En Avant](059-en-avant.md) — 1972–1975
 - …and 20 more
 
 ## Navigate

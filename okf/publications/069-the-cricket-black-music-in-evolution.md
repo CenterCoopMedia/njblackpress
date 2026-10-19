@@ -23,7 +23,7 @@ featured: false
 | Alternate name | Unknown |
 | City | [Newark](../cities/newark.md) |
 | Publishers or owners | Published by Jihad Publications |
-| Active years | 1969–1969 |
+| Active years | 1968–1969 |
 | Status | Ceased 1969 |
 | Decade | [1960s](../decades/1960s.md) |
 | Format | [Periodicals](../formats/periodicals.md) |
@@ -43,7 +43,7 @@ Previous editor(s): Le Roi Jones, Amamu Baraka, Larry Neal, A. B. Spellman.
 
 ## Historical notes
 
-The Cricket: Black Music in Evolution was edited by Amiri Baraka, A.B. Spellman, and Larry Neal between 1968 and 1969. Published by Baraka's Newark-based Jihad Productions, it was a mimeographed experimental music magazine that ran for four issues. The Cricket emerged from the heart of the Black Arts Movement, published shortly after the 1967 Newark Rebellion. Over its four issues, it laid out an anticommercial ideology and took aim at the conservative jazz press, providing space for critics, poets, journalists, and musicians to devise new styles of music writing. It ran poetry, position papers, and gossip alongside concert and record reviews and essays on music and politics. Contributors included Albert Ayler, Milford Graves, Sun Ra, Cecil Taylor, Stanley Crouch, Haki Madhubuti (Don L. Lee), Ishmael Reed, Sonia Sanchez, Keorapetse Kgositsile, Mtume, Black Unity Trio, Ben Caldwell, Askia Muhammad Toure, and many others. The fourth issue (1969) is particularly notable for containing Albert Ayler's letter 'To Mr. Jones -- I had a Vision,' describing an intense UFO sighting/religious revelation Ayler and his brother experienced in New Jersey. The complete facsimile of all four issues was republished by Blank Forms Editions with an introduction by poet and scholar David Grundy, author of 'A Black Arts Poetry Machine: Amiri Baraka and the Umbra Poets' (Bloomsbury Academic, 2019).
+The Cricket: Black Music in Evolution was edited by Amiri Baraka, A.B. Spellman, and Larry Neal between 1968 and 1969. Published by Baraka's Newark-based Jihad Productions, it was a mimeographed experimental music magazine that ran for four issues. The Cricket emerged from the heart of the Black Arts Movement, published shortly after the 1967 Newark Rebellion. Over its four issues, it laid out an anticommercial ideology and took aim at the conservative jazz press, providing space for critics, poets, journalists, and musicians to devise new styles of music writing. It ran poetry, position papers, and gossip alongside concert and record reviews and essays on music and politics. Contributors included Albert Ayler, Milford Graves, Sun Ra, Cecil Taylor, Stanley Crouch, Haki Madhubuti (Don L. Lee), Ishmael Reed, Sonia Sanchez, Keorapetse Kgositsile, Mtume, Black Unity Trio, Ben Caldwell, Askia Muhammad Toure, and many others. The fourth issue (1969) is particularly notable for containing Albert Ayler's letter 'To Mr. Jones -- I had a Vision,' describing an intense UFO sighting/religious revelation Ayler and his brother experienced in New Jersey. The complete facsimile of all four issues was republished by Blank Forms Editions with an introduction by poet and scholar David Grundy, author of 'A Black Arts Poetry Machine: Amiri Baraka and the Umbra Poets' (Bloomsbury Academic, 2019). A notice in Black Newark, April 1968, page 8, describes The Cricket’s first issue and tells readers to obtain it from Jihad Productions in Newark. This establishes availability by April 1968 and corrects the former 1969 founding field. The Auburn Avenue finding aid and Blank Forms’ facsimile account describe 1968–1969. The 1969 end follows that collected-edition account; the final original issue and a regular publishing schedule have not been verified.
 
 ## Archive reference
 
@@ -66,14 +66,12 @@ OCLC no. 2259919.
 ### Also from the 1960s
 
 - [Wait](113-wait.md) — 1961–1965
-- [Newark Community Union Project News](076-newark-community-union-project-news.md) — 1963–1965
 - [Afro-American Festival of the Arts Magazine](062-afro-american-festival-of-the-arts-magazine.md) — 1966–1966
 - [Freedom Reports](133-freedom-reports.md) — 1966–1970
 - [Deliverance Voice](070-deliverance-voice.md) — 1967–2014
-- [Black Newark](028-black-newark.md) — 1968–1974
+- [Black Newark](028-black-newark.md) — 1968–1968
 - [The Black Observer](033-the-black-observer.md) — 1968–1970
 - [The Voice](041-the-voice.md) — 1968–1974
-- …and 1 more
 
 ## Navigate
 

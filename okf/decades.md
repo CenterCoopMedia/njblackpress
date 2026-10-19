@@ -17,13 +17,13 @@ count: 14
 - [1900s](decades/1900s.md) — 2
 - [1910s](decades/1910s.md) — 2
 - [1920s](decades/1920s.md) — 2
-- [1930s](decades/1930s.md) — 13
+- [1930s](decades/1930s.md) — 12
 - [1940s](decades/1940s.md) — 3
 - [1950s](decades/1950s.md) — 9
-- [1960s](decades/1960s.md) — 10
-- [1970s](decades/1970s.md) — 29 · 1 active
-- [1980s](decades/1980s.md) — 21 · 1 active
-- [1990s](decades/1990s.md) — 25 · 1 active
+- [1960s](decades/1960s.md) — 8
+- [1970s](decades/1970s.md) — 29
+- [1980s](decades/1980s.md) — 19
+- [1990s](decades/1990s.md) — 24 · 1 active
 - [2010s](decades/2010s.md) — 8 · 6 active
 - [2020s](decades/2020s.md) — 6 · 6 active
-- [Unknown](decades/unknown.md) — 3 · 2 active
+- [Unknown](decades/unknown.md) — 9

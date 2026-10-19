@@ -58,14 +58,12 @@ OCLC no. 11733840.
 ### Also from the 1960s
 
 - [Wait](113-wait.md) — 1961–1965
-- [Newark Community Union Project News](076-newark-community-union-project-news.md) — 1963–1965
 - [Afro-American Festival of the Arts Magazine](062-afro-american-festival-of-the-arts-magazine.md) — 1966–1966
 - [Deliverance Voice](070-deliverance-voice.md) — 1967–2014
-- [Black Newark](028-black-newark.md) — 1968–1974
+- [Black Newark](028-black-newark.md) — 1968–1968
 - [The Black Observer](033-the-black-observer.md) — 1968–1970
+- [The Cricket: Black Music in Evolution](069-the-cricket-black-music-in-evolution.md) — 1968–1969
 - [The Voice](041-the-voice.md) — 1968–1974
-- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
-- …and 1 more
 
 ## Navigate
 

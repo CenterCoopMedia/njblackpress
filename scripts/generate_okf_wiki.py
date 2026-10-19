@@ -70,7 +70,7 @@ FIELD_DOCS: list[tuple[str, str, str]] = [
     ("missionStatement", "Editorial philosophy or stated mission.", "source"),
     ("keyStaff", "Notable editors, publishers, or contributors.", "source"),
     ("historicalNotes", "Context, significance, and research findings.", "source"),
-    ("isActive", "True when the publication is still operating (yearCeased is blank).", "computed"),
+    ("isActive", "True for active titles, false for historical titles, null when activity is unverified or the record is a collection. Independent of yearCeased.", "source"),
     ("decade", "Decade of founding, derived from yearFounded.", "computed"),
     ("isFeaturedHistoric", "Highlighted as a featured historic publication on the site.", "source"),
     ("isFeaturedContemporary", "Highlighted as a featured contemporary publication on the site.", "source"),
@@ -200,6 +200,10 @@ def page_timestamp(explicit_timestamp: str | None) -> str:
 # --- derived helpers ---------------------------------------------------------
 
 def status_label(pub: dict[str, Any]) -> str:
+    if pub.get("format") == "Digital archive collection":
+        return "Digital collection"
+    if pub.get("isActive") is None:
+        return "Activity unverified"
     if pub.get("isActive"):
         return "Active"
     ceased = clean(pub.get("yearCeased"))
@@ -207,6 +211,8 @@ def status_label(pub: dict[str, Any]) -> str:
 
 
 def life_span(pub: dict[str, Any]) -> str:
+    if pub.get("format") == "Digital archive collection":
+        return "Collection coverage; see notes"
     founded = clean(pub.get("yearFounded")) or "?"
     if pub.get("isActive"):
         return f"{founded}–present"
@@ -275,7 +281,7 @@ def publication_page(
         tags=["nj-black-press", "publication", slugify(city), slugify(decade), slugify(fmt)],
         timestamp=timestamp,
         archive_id=pub["id"],
-        status="active" if pub.get("isActive") else "inactive-or-historical",
+        status="collection" if pub.get("format") == "Digital archive collection" else "unverified" if pub.get("isActive") is None else "active" if pub.get("isActive") else "inactive-or-historical",
         featured=bool(feat),
     )
     body += f"# {name}\n\n"
@@ -424,7 +430,8 @@ def write_group_index(kind: str, groups: dict[str, list[dict[str, Any]]], timest
 def build_statistics(pubs: list[dict[str, Any]], by_city, by_decade, by_format, by_medium, timestamp: str, city_slugs, decade_slugs) -> str:
     total = len(pubs)
     active = sum(1 for p in pubs if p.get("isActive"))
-    ceased = total - active
+    ceased = sum(1 for p in pubs if p.get("isActive") is False)
+    unverified = sum(1 for p in pubs if p.get("isActive") is None)
     body = frontmatter(
         type="statistics",
         title="Archive statistics",
@@ -437,6 +444,7 @@ def build_statistics(pubs: list[dict[str, Any]], by_city, by_decade, by_format, 
         f"- Publication records: **{total}**\n"
         f"- Active: **{active}**\n"
         f"- Ceased or historical: **{ceased}**\n"
+        f"- Activity unverified or collection: **{unverified}**\n"
         f"- Cities: **{len(by_city)}**\n"
         f"- Distinct formats: **{len(by_format)}**\n"
         f"- Founding span: **{year_range(pubs)}**\n\n"
@@ -482,7 +490,7 @@ def build_statistics(pubs: list[dict[str, Any]], by_city, by_decade, by_format, 
     # Longest-running publications.
     def lifespan_years(p):
         f, c = p.get("yearFounded"), p.get("yearCeased")
-        if not f:
+        if not f or (c is None and not p.get("isActive")):
             return None
         end = c if c else date.fromisoformat(timestamp).year
         return end - f

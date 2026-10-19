@@ -344,7 +344,7 @@
   function createPublicationCard(pub) {
     // Status is carried by the lifespan line, never by a badge.
     const years = pub.yearFounded
-      ? `${pub.yearFounded}–${pub.yearCeased ? pub.yearCeased : 'present'}`
+      ? `${pub.yearFounded}–${pub.yearCeased ?? (pub.isActive ? 'present' : 'end year unknown')}`
       : (pub.isActive ? 'still publishing' : 'dates unknown');
     const websiteLink = pub.websiteUrl ? `<a href="${pub.websiteUrl}" target="_blank" rel="noopener noreferrer" class="hit-area-link text-xs font-mono uppercase tracking-wider text-stain hover:text-linen-50 transition-colors border-b border-transparent hover:border-stain">Visit site</a>` : '';
     // Only show archive link if it's an actual URL (starts with http)

@@ -3,10 +3,10 @@
   "goal": "Archival record for every NJ Black press title",
   "publicationCount": 136,
   "counts": {
-    "has_keeper": 135,
-    "searched_none": 1,
+    "has_keeper": 136,
+    "searched_none": 0,
     "not_searched": 0,
-    "keeper_total": 181
+    "keeper_total": 203
   },
   "publications": [
     {
@@ -95,7 +95,7 @@
       "id": 2,
       "name": "The Jersey Express",
       "city": "Montclair",
-      "yearFounded": 1932,
+      "yearFounded": null,
       "yearCeased": null,
       "status": "has_keeper",
       "sources": {
@@ -140,8 +140,18 @@
         },
         "other": {
           "searched": true,
-          "hits": [],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "hits": [
+            {
+              "kind": "research_summary",
+              "title": "The Jersey Express: Publication history review, October 2026",
+              "caption": "The Jersey Express was a Montclair weekly published by Rumble Printing Service; Melvin B. Johnson is recorded as a previous editor. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://archive.org/details/africanamericanne00dank/page/312/mode/1up",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
+            }
+          ],
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -162,9 +172,18 @@
           "source": "Asbury Park Press",
           "date": "1949-11-06",
           "caption": "Photo cutline: Melvin B. Johnson, former editor and publisher of weekly newspapers at Montclair and Newark."
+        },
+        {
+          "kind": "research_summary",
+          "title": "The Jersey Express: Publication history review, October 2026",
+          "caption": "The Jersey Express was a Montclair weekly published by Rumble Printing Service; Melvin B. Johnson is recorded as a previous editor. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://archive.org/details/africanamericanne00dank/page/312/mode/1up",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 3,
@@ -363,7 +382,7 @@
       "id": 5,
       "name": "The Connection / North Jersey Connection",
       "city": "Teaneck",
-      "yearFounded": 1982,
+      "yearFounded": null,
       "yearCeased": null,
       "status": "has_keeper",
       "sources": {
@@ -412,9 +431,18 @@
               "title": "websiteUrl",
               "url": "https://www.loc.gov/item/sn88071369/",
               "localFile": null
+            },
+            {
+              "kind": "research_summary",
+              "title": "The Connection / North Jersey Connection: Publication history review, October 2026",
+              "caption": "The North Jersey Connection and its successor The Connection were Teaneck publications associated with Ralph F. Johnson. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.loc.gov/item/sn92060412/",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -435,9 +463,18 @@
           "localFile": "data/research/loc/sn88071369.json",
           "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
           "date": "198?-current"
+        },
+        {
+          "kind": "research_summary",
+          "title": "The Connection / North Jersey Connection: Publication history review, October 2026",
+          "caption": "The North Jersey Connection and its successor The Connection were Teaneck publications associated with Ralph F. Johnson. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.loc.gov/item/sn92060412/",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 6,
@@ -1485,7 +1522,7 @@
       "city": "Newark",
       "yearFounded": null,
       "yearCeased": null,
-      "status": "searched_none",
+      "status": "has_keeper",
       "sources": {
         "newspapers_com": {
           "searched": true,
@@ -1573,12 +1610,32 @@
         },
         "other": {
           "searched": true,
-          "hits": [],
-          "notes": "named library catalogs checked; no collection match for this title Danky 1998 African-American Newspapers and Periodicals has no Newark title New Jersey Record. The Record entries are Birmingham and other out-of-state papers. No digitized issue or library catalog record for a Newark African American newspaper under this name."
+          "hits": [
+            {
+              "kind": "research_summary",
+              "title": "New Jersey Record: Publication history review, October 2026",
+              "caption": "The exact identity and publication dates of this Newark title remain unverified. A 1977 New Jersey Historical Commission newspaper directory is a research lead for a Black weekly named New Jersey Record, with an approximate 1942–1951 range. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.scribd.com/document/471953938/Directory-of-New-Jersey-Newspapers-a-k-a-Wright-Stellhorn",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
+            }
+          ],
+          "notes": "named library catalogs checked; no collection match for this title Danky 1998 African-American Newspapers and Periodicals has no Newark title New Jersey Record. The Record entries are Birmingham and other out-of-state papers. No digitized issue or library catalog record for a Newark African American newspaper under this name. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
-      "keepers": [],
-      "updated": "2026-08-17"
+      "keepers": [
+        {
+          "kind": "research_summary",
+          "title": "New Jersey Record: Publication history review, October 2026",
+          "caption": "The exact identity and publication dates of this Newark title remain unverified. A 1977 New Jersey Historical Commission newspaper directory is a research lead for a Black weekly named New Jersey Record, with an approximate 1942–1951 range. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.scribd.com/document/471953938/Directory-of-New-Jersey-Newspapers-a-k-a-Wright-Stellhorn",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
+        }
+      ],
+      "updated": "2026-10-19"
     },
     {
       "id": 15,
@@ -2060,9 +2117,18 @@
               "title": "websiteUrl",
               "url": "https://trentonjournal.com/",
               "localFile": null
+            },
+            {
+              "kind": "research_summary",
+              "title": "Trenton Journal: Publication history review, October 2026",
+              "caption": "The Trenton Journal is an independently owned and operated multimedia platform launched in 2021 by Kenneth Miles, who serves as Founder and Publisher. It was welcomed into the URL Media network, which recognized its commitment to bridging information gaps and providing community news for Trenton's nearly 90,000 residents. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://trentonjournal.com/207496668171490-2/",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -2074,9 +2140,18 @@
           "source": "live website",
           "date": "2026-08-17",
           "caption": "Live site screenshot of Trenton Journal after Wayback replay failed"
+        },
+        {
+          "kind": "research_summary",
+          "title": "Trenton Journal: Publication history review, October 2026",
+          "caption": "The Trenton Journal is an independently owned and operated multimedia platform launched in 2021 by Kenneth Miles, who serves as Founder and Publisher. It was welcomed into the URL Media network, which recognized its commitment to bridging information gaps and providing community news for Trenton's nearly 90,000 residents. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://trentonjournal.com/207496668171490-2/",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17",
+      "updated": "2026-10-19",
       "previewlessHits": [
         {
           "kind": "wayback_snapshot",
@@ -3040,7 +3115,7 @@
       "name": "Black Newark",
       "city": "Newark",
       "yearFounded": 1968,
-      "yearCeased": 1974,
+      "yearCeased": 1968,
       "status": "has_keeper",
       "sources": {
         "newspapers_com": {
@@ -3117,9 +3192,18 @@
               "source": "Danky and Hady 1998 / Internet Archive",
               "date": "1998",
               "caption": "Danky entry 934: Black New Ark, monthly, Newark, 1968-?. Motto The Voice of New Ark's Inner City. WHi microfilm 1968-1974."
+            },
+            {
+              "kind": "research_summary",
+              "title": "Black Newark: Publication history review, October 2026",
+              "caption": "This record represents the title Black Newark as cataloged by the Library of Congress, LCCN sn2001062056, rather than the complete newspaper lineage. That record describes volume 1, number 1, April 1968, through volume 1, number 3, November 1968, published by Black People of Newark. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.loc.gov/item/sn2001062056/",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title; Danky entry 934: Black New Ark, monthly, Newark, 1968-?. Motto The Voice of New Ark's Inner City. WHi microfilm 1968-1974."
+          "notes": "named library catalogs checked; no collection match for this title; Danky entry 934: Black New Ark, monthly, Newark, 1968-?. Motto The Voice of New Ark's Inner City. WHi microfilm 1968-1974. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -3140,9 +3224,18 @@
           "localFile": "data/research/loc/sn2001062056.json",
           "source": "Library of Congress, Directory of U.S. Newspapers in American Libraries",
           "date": "1968-1968"
+        },
+        {
+          "kind": "research_summary",
+          "title": "Black Newark: Publication history review, October 2026",
+          "caption": "This record represents the title Black Newark as cataloged by the Library of Congress, LCCN sn2001062056, rather than the complete newspaper lineage. That record describes volume 1, number 1, April 1968, through volume 1, number 3, November 1968, published by Black People of Newark. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.loc.gov/item/sn2001062056/",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 29,
@@ -3195,9 +3288,18 @@
               "title": "websiteUrl",
               "url": "https://faithfullymagazine.com/",
               "localFile": null
+            },
+            {
+              "kind": "research_summary",
+              "title": "Faithfully Magazine: Publication history review, October 2026",
+              "caption": "Faithfully Magazine dates its current editorial form to 2016 by religion writer Nicola A. Menzie and is published by Faithfully Media, LLC, based at 397 Hillside Avenue, Hillside, NJ. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://web.archive.org/web/20150706052920/http://www.faithfullymagazine.com/",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -3209,9 +3311,18 @@
           "source": "Wayback Machine",
           "date": "20151025",
           "caption": "Wayback capture for Faithfully Magazine"
+        },
+        {
+          "kind": "research_summary",
+          "title": "Faithfully Magazine: Publication history review, October 2026",
+          "caption": "Faithfully Magazine dates its current editorial form to 2016 by religion writer Nicola A. Menzie and is published by Faithfully Media, LLC, based at 397 Hillside Avenue, Hillside, NJ. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://web.archive.org/web/20150706052920/http://www.faithfullymagazine.com/",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17",
+      "updated": "2026-10-19",
       "previewlessHits": [
         {
           "kind": "wayback_snapshot",
@@ -4300,7 +4411,7 @@
       "id": 39,
       "name": "The Forum",
       "city": "Newark",
-      "yearFounded": 1970,
+      "yearFounded": null,
       "yearCeased": null,
       "status": "has_keeper",
       "sources": {
@@ -4390,9 +4501,18 @@
               "title": "websiteUrl",
               "url": "https://www.loc.gov/item/sn88071371/",
               "localFile": null
+            },
+            {
+              "kind": "research_summary",
+              "title": "The Forum: Publication history review, October 2026",
+              "caption": "The Library of Congress, LCCN sn88071371, describes The Forum of Newark as 197?–???? and bases its description on volume 2, number 47, January 4, 1974. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.loc.gov/item/sn88071371/",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title Danky 1998 African-American Newspapers and Periodicals has no entry for The Forum, Newark, Forum Publications, LCCN sn88071371. Nearby Forum titles are out of state.; LOC directory: The Forum (Newark, N.J.) 197?-????. Forum Publications. Serving the New Jersey black community. Description based on Vol. 2, no. 47 (Jan. 4, 1974). LCCN sn88071371. OCLC 18514783."
+          "notes": "named library catalogs checked; no collection match for this title Danky 1998 African-American Newspapers and Periodicals has no entry for The Forum, Newark, Forum Publications, LCCN sn88071371. Nearby Forum titles are out of state.; LOC directory: The Forum (Newark, N.J.) 197?-????. Forum Publications. Serving the New Jersey black community. Description based on Vol. 2, no. 47 (Jan. 4, 1974). LCCN sn88071371. OCLC 18514783. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -4404,9 +4524,18 @@
           "source": "Library of Congress Directory of U.S. Newspapers",
           "date": "1974-01-04",
           "caption": "LOC directory: The Forum (Newark, N.J.) 197?-????. Forum Publications. Serving the New Jersey black community. Description based on Vol. 2, no. 47 (Jan. 4, 1974). LCCN sn88071371. OCLC 18514783."
+        },
+        {
+          "kind": "research_summary",
+          "title": "The Forum: Publication history review, October 2026",
+          "caption": "The Library of Congress, LCCN sn88071371, describes The Forum of Newark as 197?–???? and bases its description on volume 2, number 47, January 4, 1974. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.loc.gov/item/sn88071371/",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 40,
@@ -4479,8 +4608,18 @@
         },
         "other": {
           "searched": true,
-          "hits": [],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "hits": [
+            {
+              "kind": "research_summary",
+              "title": "The Nubian News: Publication history review, October 2026",
+              "caption": "The Nubian News serves Trenton’s Black and Hispanic communities. Its February 5, 2021 issue dates its establishment to September 9, 1989. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://thenubiannews.com/assets/pdf/V5-N2-02-04-2021.pdf",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
+            }
+          ],
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -4501,9 +4640,18 @@
           "source": "publisher's own website archive",
           "date": "2026-08-19",
           "caption": "The Nubian News, Vol. 6 No. 1, Jan. 7, 2022 -- full 12-page issue PDF from the paper's own online archive"
+        },
+        {
+          "kind": "research_summary",
+          "title": "The Nubian News: Publication history review, October 2026",
+          "caption": "The Nubian News serves Trenton’s Black and Hispanic communities. Its February 5, 2021 issue dates its establishment to September 9, 1989. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://thenubiannews.com/assets/pdf/V5-N2-02-04-2021.pdf",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 41,
@@ -4709,9 +4857,18 @@
               "title": "websiteUrl",
               "url": "https://www.loc.gov/item/sn88071370/",
               "localFile": null
+            },
+            {
+              "kind": "research_summary",
+              "title": "Essex Forum: Publication history review, October 2026",
+              "caption": "The Library of Congress, LCCN sn88071370, describes a first issue dated June 29, 1972, volume 1, number 1, published by Multi-Linear Publications of East Orange. The catalog does not record a final year; the former 1985 end is unverified and is omitted. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.loc.gov/item/sn88071370/",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title Danky 1998 African-American Newspapers and Periodicals has no entry for Essex Forum, East Orange, Multi-Linear Publications, LCCN sn88071370. Newspapers.com Essex Forum 1980 was a Maplewood restaurant want ad.; LOC directory: Essex Forum (East Orange, N.J.) 1972-????. Multi-Linear Publications. Vol. 1, no. 1 (June 29, 1972). Weekly serving Orange, Montclair and E. Orange; later biweekly Metropolitan Essex County. LCCN sn88071370. OCLC 18514779."
+          "notes": "named library catalogs checked; no collection match for this title Danky 1998 African-American Newspapers and Periodicals has no entry for Essex Forum, East Orange, Multi-Linear Publications, LCCN sn88071370. Newspapers.com Essex Forum 1980 was a Maplewood restaurant want ad.; LOC directory: Essex Forum (East Orange, N.J.) 1972-????. Multi-Linear Publications. Vol. 1, no. 1 (June 29, 1972). Weekly serving Orange, Montclair and E. Orange; later biweekly Metropolitan Essex County. LCCN sn88071370. OCLC 18514779. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -4723,9 +4880,18 @@
           "source": "Library of Congress Directory of U.S. Newspapers",
           "date": "1972-06-29",
           "caption": "LOC directory: Essex Forum (East Orange, N.J.) 1972-????. Multi-Linear Publications. Vol. 1, no. 1 (June 29, 1972). Weekly serving Orange, Montclair and E. Orange; later biweekly Metropolitan Essex County. LCCN sn88071370. OCLC 18514779."
+        },
+        {
+          "kind": "research_summary",
+          "title": "Essex Forum: Publication history review, October 2026",
+          "caption": "The Library of Congress, LCCN sn88071370, describes a first issue dated June 29, 1972, volume 1, number 1, published by Multi-Linear Publications of East Orange. The catalog does not record a final year; the former 1985 end is unverified and is omitted. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.loc.gov/item/sn88071370/",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 43,
@@ -5520,9 +5686,18 @@
               "source": "Danky and Hady 1998 / Internet Archive",
               "date": "1998",
               "caption": "Danky entry 4261: New Jersey Deadline, twice a month, Newark, Deadline Publishing, editor Harry B. Webber. WHi v.2 n.4 30 May 1960."
+            },
+            {
+              "kind": "research_summary",
+              "title": "New Jersey Deadline: Publication history review, October 2026",
+              "caption": "New Jersey Deadline was a Newark periodical published by Deadline Publishing Company and edited by Harry B. Webber. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://trentonlib.org/wp-content/uploads/2021/08/The-Observer-November-7-1959.pdf",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title; Danky entry 4261: New Jersey Deadline, twice a month, Newark, Deadline Publishing, editor Harry B. Webber. WHi v.2 n.4 30 May 1960."
+          "notes": "named library catalogs checked; no collection match for this title; Danky entry 4261: New Jersey Deadline, twice a month, Newark, Deadline Publishing, editor Harry B. Webber. WHi v.2 n.4 30 May 1960. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -5534,9 +5709,18 @@
           "source": "Danky and Hady 1998 / Internet Archive",
           "date": "1998",
           "caption": "Danky entry 4261: New Jersey Deadline, twice a month, Newark, Deadline Publishing, editor Harry B. Webber. WHi v.2 n.4 30 May 1960."
+        },
+        {
+          "kind": "research_summary",
+          "title": "New Jersey Deadline: Publication history review, October 2026",
+          "caption": "New Jersey Deadline was a Newark periodical published by Deadline Publishing Company and edited by Harry B. Webber. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://trentonlib.org/wp-content/uploads/2021/08/The-Observer-November-7-1959.pdf",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 51,
@@ -6992,7 +7176,7 @@
       "id": 69,
       "name": "The Cricket: Black Music in Evolution",
       "city": "Newark",
-      "yearFounded": 1969,
+      "yearFounded": 1968,
       "yearCeased": 1969,
       "status": "has_keeper",
       "sources": {
@@ -7027,9 +7211,18 @@
               "source": "Danky and Hady 1998 / Internet Archive",
               "date": "1998",
               "caption": "Danky entry 1867: The Cricket: Black Music in Evolution, Newark, 1969, Jihad Publications. Editors Le Roi Jones, Amamu Baraka, Larry Neal, A. B. Spellman. WHi n.1-3."
+            },
+            {
+              "kind": "research_summary",
+              "title": "The Cricket: Black Music in Evolution: Publication history review, October 2026",
+              "caption": "The Cricket: Black Music in Evolution was edited by Amiri Baraka, A.B. Spellman, and Larry Neal between 1968 and 1969. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.marxists.org/history/erol/periodicals/unity-struggle/bn-1-1.pdf#page=8",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title; Danky entry 1867: The Cricket: Black Music in Evolution, Newark, 1969, Jihad Publications. Editors Le Roi Jones, Amamu Baraka, Larry Neal, A. B. Spellman. WHi n.1-3."
+          "notes": "named library catalogs checked; no collection match for this title; Danky entry 1867: The Cricket: Black Music in Evolution, Newark, 1969, Jihad Publications. Editors Le Roi Jones, Amamu Baraka, Larry Neal, A. B. Spellman. WHi n.1-3. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -7041,9 +7234,18 @@
           "source": "Danky and Hady 1998 / Internet Archive",
           "date": "1998",
           "caption": "Danky entry 1867: The Cricket: Black Music in Evolution, Newark, 1969, Jihad Publications. Editors Le Roi Jones, Amamu Baraka, Larry Neal, A. B. Spellman. WHi n.1-3."
+        },
+        {
+          "kind": "research_summary",
+          "title": "The Cricket: Black Music in Evolution: Publication history review, October 2026",
+          "caption": "The Cricket: Black Music in Evolution was edited by Amiri Baraka, A.B. Spellman, and Larry Neal between 1968 and 1969. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.marxists.org/history/erol/periodicals/unity-struggle/bn-1-1.pdf#page=8",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 70,
@@ -7330,7 +7532,7 @@
       "id": 73,
       "name": "Utimme Umana/La Voz Oculta",
       "city": "Trenton",
-      "yearFounded": 1968,
+      "yearFounded": 1972,
       "yearCeased": null,
       "status": "has_keeper",
       "sources": {
@@ -7414,9 +7616,18 @@
               "source": "Danky and Hady 1998 / Internet Archive",
               "date": "1998",
               "caption": "Danky entry 6142: Utimme Umana/La Voz Oculta, six times a year, Trenton State College. NN-Sc Nov/Dec 1985-Nov 1993."
+            },
+            {
+              "kind": "research_summary",
+              "title": "Utimme Umana/La Voz Oculta: Publication history review, October 2026",
+              "caption": "This record represents the combined title Utimme Umana/La Voz Oculta at Trenton State College, now The College of New Jersey. TCNJ dates the earlier Black student paper Utimme Umana to 1968 and the combined title’s first issue to October 2, 1972. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://atom.tcnj.edu/index.php/TCNJ-Utimme-Umana:-La-Voz-Oculta",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title; Danky entry 6142: Utimme Umana/La Voz Oculta, six times a year, Trenton State College. NN-Sc Nov/Dec 1985-Nov 1993."
+          "notes": "named library catalogs checked; no collection match for this title; Danky entry 6142: Utimme Umana/La Voz Oculta, six times a year, Trenton State College. NN-Sc Nov/Dec 1985-Nov 1993. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -7446,9 +7657,18 @@
           "source": "The Times",
           "date": "1993-09-27",
           "caption": "Trenton Times campus guide lists Utimme Umana/La Voz Oculta as the minority magazine."
+        },
+        {
+          "kind": "research_summary",
+          "title": "Utimme Umana/La Voz Oculta: Publication history review, October 2026",
+          "caption": "This record represents the combined title Utimme Umana/La Voz Oculta at Trenton State College, now The College of New Jersey. TCNJ dates the earlier Black student paper Utimme Umana to 1968 and the combined title’s first issue to October 2, 1972. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://atom.tcnj.edu/index.php/TCNJ-Utimme-Umana:-La-Voz-Oculta",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 74,
@@ -7631,8 +7851,8 @@
       "id": 76,
       "name": "Newark Community Union Project News",
       "city": "Newark",
-      "yearFounded": 1963,
-      "yearCeased": 1965,
+      "yearFounded": null,
+      "yearCeased": null,
       "status": "has_keeper",
       "sources": {
         "newspapers_com": {
@@ -7673,9 +7893,18 @@
               "source": "Danky and Hady 1998 / Internet Archive",
               "date": "1998",
               "caption": "Danky entry 4335: Newark Community Union Project News, irregular, Newark, 1963?-1965?, housing. WHi 1962-1965 Pam 1719."
+            },
+            {
+              "kind": "research_summary",
+              "title": "Newark Community Union Project News: Publication history review, October 2026",
+              "caption": "The Newark Community Union Project produced a newsletter, but its exact title and first and final publication years remain unverified. Danky and Hady, entry 4335, page 417, gives the uncertain range 1963?–1965? Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://search.worldcat.org/title/261342029",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title; Danky entry 4335: Newark Community Union Project News, irregular, Newark, 1963?-1965?, housing. WHi 1962-1965 Pam 1719."
+          "notes": "named library catalogs checked; no collection match for this title; Danky entry 4335: Newark Community Union Project News, irregular, Newark, 1963?-1965?, housing. WHi 1962-1965 Pam 1719. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -7687,15 +7916,24 @@
           "source": "Danky and Hady 1998 / Internet Archive",
           "date": "1998",
           "caption": "Danky entry 4335: Newark Community Union Project News, irregular, Newark, 1963?-1965?, housing. WHi 1962-1965 Pam 1719."
+        },
+        {
+          "kind": "research_summary",
+          "title": "Newark Community Union Project News: Publication history review, October 2026",
+          "caption": "The Newark Community Union Project produced a newsletter, but its exact title and first and final publication years remain unverified. Danky and Hady, entry 4335, page 417, gives the uncertain range 1963?–1965? Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://search.worldcat.org/title/261342029",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 77,
       "name": "Black New Jersey Magazine",
       "city": "Atlantic City",
-      "yearFounded": 1988,
+      "yearFounded": null,
       "yearCeased": null,
       "status": "has_keeper",
       "sources": {
@@ -7762,8 +8000,18 @@
         },
         "other": {
           "searched": true,
-          "hits": [],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "hits": [
+            {
+              "kind": "research_summary",
+              "title": "Black New Jersey Magazine: Publication history review, October 2026",
+              "caption": "Atlantic City Free Public Library’s Heston guide lists Black New Jersey Magazine for 1987–1990 and identifies Black Atlantic City Magazine, record 119, as its former title. These are library collection dates until the issues are checked, not verified first and final publication dates. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://acfpl.org/files/SubjectGuides/AfricanAmericanHestonguide-02.12.pdf#page=2",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
+            }
+          ],
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -7775,9 +8023,18 @@
           "source": "Danky and Hady, African-American Newspapers and Periodicals",
           "date": "1998",
           "caption": "Danky entry 935: Black New Jersey Magazine, bimonthly, Atlantic City, Barbara Johnson. NN-Sc Mar/Apr 1988."
+        },
+        {
+          "kind": "research_summary",
+          "title": "Black New Jersey Magazine: Publication history review, October 2026",
+          "caption": "Atlantic City Free Public Library’s Heston guide lists Black New Jersey Magazine for 1987–1990 and identifies Black Atlantic City Magazine, record 119, as its former title. These are library collection dates until the issues are checked, not verified first and final publication dates. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://acfpl.org/files/SubjectGuides/AfricanAmericanHestonguide-02.12.pdf#page=2",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 78,
@@ -8215,9 +8472,18 @@
               "source": "Danky and Hady 1998 / Internet Archive",
               "date": "1998",
               "caption": "Danky entry 3020: Hype Hair, bimonthly, Paramus, Word Up! Video, editor Marcia A. Cole. WHi Sept 1993-."
+            },
+            {
+              "kind": "research_summary",
+              "title": "Hype Hair: Publication history review, October 2026",
+              "caption": "Hype Hair’s publisher dates its founding to 1992, crediting editor-in-chief Belinda Trotter, who developed the concept while working as editor-in-chief for the 2 Hype fanzine under the Word Up! publication house in Paramus, NJ. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.globenewswire.com/news-release/2023/01/13/2588732/0/en/Hype-Hair-Acquires-Good-Good-Hair-Adds-E-Commerce-Industry-Veteran.html",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title; Danky entry 3020: Hype Hair, bimonthly, Paramus, Word Up! Video, editor Marcia A. Cole. WHi Sept 1993-."
+          "notes": "named library catalogs checked; no collection match for this title; Danky entry 3020: Hype Hair, bimonthly, Paramus, Word Up! Video, editor Marcia A. Cole. WHi Sept 1993-. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -8229,9 +8495,18 @@
           "source": "Danky and Hady 1998 / Internet Archive",
           "date": "1998",
           "caption": "Danky entry 3020: Hype Hair, bimonthly, Paramus, Word Up! Video, editor Marcia A. Cole. WHi Sept 1993-."
+        },
+        {
+          "kind": "research_summary",
+          "title": "Hype Hair: Publication history review, October 2026",
+          "caption": "Hype Hair’s publisher dates its founding to 1992, crediting editor-in-chief Belinda Trotter, who developed the concept while working as editor-in-chief for the 2 Hype fanzine under the Word Up! publication house in Paramus, NJ. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.globenewswire.com/news-release/2023/01/13/2588732/0/en/Hype-Hair-Acquires-Good-Good-Hair-Adds-E-Commerce-Industry-Veteran.html",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 83,
@@ -8325,7 +8600,7 @@
       "id": 84,
       "name": "Unity and Struggle",
       "city": "Newark",
-      "yearFounded": 1972,
+      "yearFounded": 1974,
       "yearCeased": null,
       "status": "has_keeper",
       "sources": {
@@ -8436,9 +8711,18 @@
               "title": "websiteUrl",
               "url": "https://www.marxists.org/history/erol/periodicals/unity-struggle/index.htm",
               "localFile": null
+            },
+            {
+              "kind": "research_summary",
+              "title": "Unity and Struggle: Publication history review, October 2026",
+              "caption": "Unity and Struggle succeeded Black New Ark in early 1974. Volume 3, number 1, January–February 1974, still bears Black New Ark; volume 3, number 2, February–March 1974, bears Unity and Struggle. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.marxists.org/history/erol/periodicals/unity-struggle/bn-3-1.pdf",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -8450,9 +8734,18 @@
           "source": "Wayback Machine",
           "date": "20200118",
           "caption": "Wayback capture for Unity and Struggle"
+        },
+        {
+          "kind": "research_summary",
+          "title": "Unity and Struggle: Publication history review, October 2026",
+          "caption": "Unity and Struggle succeeded Black New Ark in early 1974. Volume 3, number 1, January–February 1974, still bears Black New Ark; volume 3, number 2, February–March 1974, bears Unity and Struggle. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.marxists.org/history/erol/periodicals/unity-struggle/bn-3-1.pdf",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17",
+      "updated": "2026-10-19",
       "previewlessHits": [
         {
           "kind": "wayback_snapshot",
@@ -9440,8 +9733,18 @@
         },
         "other": {
           "searched": true,
-          "hits": [],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "hits": [
+            {
+              "kind": "research_summary",
+              "title": "Black Voice/Carta Boricua: Publication history review, October 2026",
+              "caption": "Rutgers’ 2003–2005 undergraduate catalog uses Black Voice/Carta Latina and reports a 1970 founding. The Rutgers Oral History Archives’ editorial note dates the change from Carta Boricua to Carta Latina to 1985; the relevant mastheads have not been checked. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://catalogs.rutgers.edu/generated/nb-ug_0305/pg4274.html",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
+            }
+          ],
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -9453,9 +9756,18 @@
           "source": "Danky and Hady, African-American Newspapers and Periodicals",
           "date": "1998",
           "caption": "Danky entry 1076: Black Voice/Carta Boricua, Piscataway, Paul Robeson Cultural Center."
+        },
+        {
+          "kind": "research_summary",
+          "title": "Black Voice/Carta Boricua: Publication history review, October 2026",
+          "caption": "Rutgers’ 2003–2005 undergraduate catalog uses Black Voice/Carta Latina and reports a 1970 founding. The Rutgers Oral History Archives’ editorial note dates the change from Carta Boricua to Carta Latina to 1985; the relevant mastheads have not been checked. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://catalogs.rutgers.edu/generated/nb-ug_0305/pg4274.html",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 99,
@@ -9497,8 +9809,18 @@
         },
         "other": {
           "searched": true,
-          "hits": [],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "hits": [
+            {
+              "kind": "research_summary",
+              "title": "Black Caucus of ALA Newsletter: Publication history review, October 2026",
+              "caption": "The ALA Archives describes the Black Caucus Newsletter as serving readers since 1974. Danky and Hady, entry 795, page 77, instead describes a bimonthly serial beginning in 1971 and records Pomona, New Jersey, as its place of publication from September 1983 to April 1986. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.library.illinois.edu/ala/2017/02/01/publications-black-caucus-newsletter/",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
+            }
+          ],
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -9510,9 +9832,18 @@
           "source": "Danky and Hady, African-American Newspapers and Periodicals",
           "date": "1998",
           "caption": "Danky entry 795: Black Caucus of ALA Newsletter, bimonthly 1971-. Place of publication Pomona, NJ, Sept 1983-Apr 1986. WHi Sept 1983-."
+        },
+        {
+          "kind": "research_summary",
+          "title": "Black Caucus of ALA Newsletter: Publication history review, October 2026",
+          "caption": "The ALA Archives describes the Black Caucus Newsletter as serving readers since 1974. Danky and Hady, entry 795, page 77, instead describes a bimonthly serial beginning in 1971 and records Pomona, New Jersey, as its place of publication from September 1983 to April 1986. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.library.illinois.edu/ala/2017/02/01/publications-black-caucus-newsletter/",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 100,
@@ -10077,7 +10408,7 @@
       "name": "The Black Voice",
       "city": "Newark",
       "yearFounded": 1970,
-      "yearCeased": 1975,
+      "yearCeased": null,
       "status": "has_keeper",
       "sources": {
         "newspapers_com": {
@@ -10175,8 +10506,18 @@
         },
         "other": {
           "searched": true,
-          "hits": [],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "hits": [
+            {
+              "kind": "research_summary",
+              "title": "The Black Voice: Publication history review, October 2026",
+              "caption": "The Black Voice was published by the United Black Workers in Newark and served Black industrial workers, including those at Ford’s Mahwah plant. Volume 5, number 2, printed page 2, reports that the paper began in 1970, supporting the founding field. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://files.libcom.org/files/TheBlackVoice.vol_.5.2.pdf#page=2",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
+            }
+          ],
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -10188,9 +10529,18 @@
           "source": "Danky and Hady, African-American Newspapers and Periodicals",
           "date": "1998",
           "caption": "Danky entry 1071: The Black Voice, monthly 1970-1975?, Newark, United Black Workers."
+        },
+        {
+          "kind": "research_summary",
+          "title": "The Black Voice: Publication history review, October 2026",
+          "caption": "The Black Voice was published by the United Black Workers in Newark and served Black industrial workers, including those at Ford’s Mahwah plant. Volume 5, number 2, printed page 2, reports that the paper began in 1970, supporting the founding field. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://files.libcom.org/files/TheBlackVoice.vol_.5.2.pdf#page=2",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 108,
@@ -10843,7 +11193,7 @@
       "id": 114,
       "name": "Word Up!",
       "city": "Paramus",
-      "yearFounded": 1990,
+      "yearFounded": 1987,
       "yearCeased": null,
       "status": "has_keeper",
       "sources": {
@@ -10936,9 +11286,18 @@
               "source": "Danky and Hady 1998 / Internet Archive",
               "date": "1998",
               "caption": "Danky entry 6483: Word Up!, monthly, Paramus, editor Kate Ferguson, publisher Scott Mitchell Figman. WHi Nov 1991; May 1992-."
+            },
+            {
+              "kind": "research_summary",
+              "title": "Word Up!: Publication history review, October 2026",
+              "caption": "Word Up! was a monthly hip-hop and R&B magazine associated with Paramus, New Jersey. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.linkedin.com/posts/gerrie-summers-2b89b85_i-used-to-edit-word-up-magazine-when-i-activity-7108541802005032960-PZ7-",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "named library catalogs checked; no collection match for this title; Danky entry 6483: Word Up!, monthly, Paramus, editor Kate Ferguson, publisher Scott Mitchell Figman. WHi Nov 1991; May 1992-."
+          "notes": "named library catalogs checked; no collection match for this title; Danky entry 6483: Word Up!, monthly, Paramus, editor Kate Ferguson, publisher Scott Mitchell Figman. WHi Nov 1991; May 1992-. Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -10959,9 +11318,18 @@
           "source": "Sotheby's auction listing (Art and Influence of Hip Hop, 2022)",
           "date": "2026-08-19",
           "caption": "A lot of 28 issues of Word Up! magazine (1987-1997), the Paramus, NJ hip-hop teen magazine, photographed for a 2022 Sotheby's 'Art and Influence of Hip Hop' auction."
+        },
+        {
+          "kind": "research_summary",
+          "title": "Word Up!: Publication history review, October 2026",
+          "caption": "Word Up! was a monthly hip-hop and R&B magazine associated with Paramus, New Jersey. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.linkedin.com/posts/gerrie-summers-2b89b85_i-used-to-edit-word-up-magazine-when-i-activity-7108541802005032960-PZ7-",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 115,
@@ -11900,9 +12268,18 @@
               "title": "websiteUrl",
               "url": "https://collections.libraries.rutgers.edu/newark-black-newspapers",
               "localFile": null
+            },
+            {
+              "kind": "research_summary",
+              "title": "Newark Black Newspapers Collection | Digital Collections: Publication history review, October 2026",
+              "caption": "This record describes Rutgers University Libraries’ Newark Black Newspapers digital collection, not a single newspaper. Its format remains Digital archive collection, and no founding or cessation year is assigned to the collection from its contents. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://collections.libraries.rutgers.edu/newark-black-newspapers",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
             }
           ],
-          "notes": "1 named library page(s) checked"
+          "notes": "1 named library page(s) checked Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -11914,9 +12291,18 @@
           "source": "Wayback Machine",
           "date": "20190419",
           "caption": "Wayback capture for Newark Black Newspapers Collection | Digital Collections"
+        },
+        {
+          "kind": "research_summary",
+          "title": "Newark Black Newspapers Collection | Digital Collections: Publication history review, October 2026",
+          "caption": "This record describes Rutgers University Libraries’ Newark Black Newspapers digital collection, not a single newspaper. Its format remains Digital archive collection, and no founding or cessation year is assigned to the collection from its contents. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://collections.libraries.rutgers.edu/newark-black-newspapers",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17",
+      "updated": "2026-10-19",
       "previewlessHits": [
         {
           "kind": "wayback_snapshot",
@@ -12063,7 +12449,7 @@
       "id": 131,
       "name": "The Connection Newspaper",
       "city": "Teaneck",
-      "yearFounded": 1982,
+      "yearFounded": null,
       "yearCeased": null,
       "status": "has_keeper",
       "sources": {
@@ -12130,8 +12516,18 @@
         },
         "other": {
           "searched": true,
-          "hits": [],
-          "notes": "named library catalogs checked; no collection match for this title"
+          "hits": [
+            {
+              "kind": "research_summary",
+              "title": "The Connection Newspaper: Publication history review, October 2026",
+              "caption": "The North Jersey Connection and its successor The Connection were Teaneck publications associated with Ralph F. Johnson. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+              "url": "https://www.loc.gov/item/sn92060412/",
+              "localFile": "data/research/corrections/2026-10-19.json",
+              "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+              "date": "2026-10-19"
+            }
+          ],
+          "notes": "named library catalogs checked; no collection match for this title Publication history reconciled in data/research/corrections/2026-10-19.json; unresolved leads are explicit."
         }
       },
       "keepers": [
@@ -12143,9 +12539,18 @@
           "source": "Danky and Hady, African-American Newspapers and Periodicals",
           "date": "1998",
           "caption": "Danky entry 1791: The Connection Newspaper, weekly, Teaneck, Ralph F. Johnson. Same Teaneck weekly as id 5. WHi 5 June 1993-."
+        },
+        {
+          "kind": "research_summary",
+          "title": "The Connection Newspaper: Publication history review, October 2026",
+          "caption": "The North Jersey Connection and its successor The Connection were Teaneck publications associated with Ralph F. Johnson. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
+          "url": "https://www.loc.gov/item/sn92060412/",
+          "localFile": "data/research/corrections/2026-10-19.json",
+          "source": "Public primary sources and library descriptions; see the per-record source list and limits in the review metadata.",
+          "date": "2026-10-19"
         }
       ],
-      "updated": "2026-08-17"
+      "updated": "2026-10-19"
     },
     {
       "id": 132,

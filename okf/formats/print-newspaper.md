@@ -18,7 +18,7 @@ count: 1
 
 | Publication | Years | Status |
 |---|---|---|
-| [Black Newark](../publications/028-black-newark.md) | 1968–1974 | Ceased 1974 |
+| [Black Newark](../publications/028-black-newark.md) | 1968–1968 | Ceased 1968 |
 
 ## Navigate
 

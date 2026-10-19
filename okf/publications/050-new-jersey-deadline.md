@@ -11,7 +11,7 @@ tags:
   - "periodicals"
 timestamp: "2026-06-29"
 archive_id: 50
-status: "active"
+status: "unverified"
 featured: false
 ---
 
@@ -23,12 +23,12 @@ featured: false
 | Alternate name | Unknown |
 | City | [Newark](../cities/newark.md) |
 | Publishers or owners | Published by Deadline Publishing Company, Inc. |
-| Active years | ?–present |
-| Status | Active |
+| Active years | ?–? |
+| Status | Activity unverified |
 | Decade | [Unknown](../decades/unknown.md) |
 | Format | [Periodicals](../formats/periodicals.md) |
 | Medium | [Print](../mediums/print.md) |
-| Frequency | Biweekly |
+| Frequency | Twice monthly |
 | Languages | English |
 | Primary focus | Entertainment, Profiles |
 | Target audience | Unknown |
@@ -39,7 +39,7 @@ Previous editor(s): Harry B. Webber.
 
 ## Historical notes
 
-No verifiable record found for an African American newspaper titled 'New Jersey Deadline' published in Newark. Searches of the Library of Congress newspaper directory, Chronicling America, Newark Public Library inventories, Rutgers University Newark Archives Project, the New Jersey Historical Society newspaper listings, and the Wikipedia list of African-American newspapers in New Jersey returned no matches. The title does not appear in any known NJ newspaper catalog or microfilm inventory. This may be a very short-lived publication, an alternative name for another title, or possibly a misattribution. Recommended: Contact the Newark Public Library NJ Information Center or the New Jersey Historical Society for further verification. A March 2026 search found no records and no founding year, so no cessation date can be estimated. The search found no web presence and no library catalog records, and the title does not appear on any known list of New Jersey African American newspapers.
+New Jersey Deadline was a Newark periodical published by Deadline Publishing Company and edited by Harry B. Webber. The Observer of November 7, 1959 refers to its latest issue, establishing publication by that date. Danky and Hady, entry 4261, page 409, records a Wisconsin Historical Society holding of volume 2, number 4, May 30, 1960, and describes twice-monthly publication. These sources correct the earlier claim that no catalog record or evidence of the title exists. They do not establish the first or final publication year. Current publication is unverified.
 
 ## Archive reference
 
@@ -61,8 +61,14 @@ OCLC no. 35268934.
 
 ### Also from the Unknown
 
-- [New Jersey Record](014-new-jersey-record.md) — ?–present
-- [Newark Black Newspapers Collection | Digital Collections](128-newark-black-newspapers-collection-digital-collections.md) — ?–1979
+- [Black New Jersey Magazine](077-black-new-jersey-magazine.md) — ?–?
+- [New Jersey Record](014-new-jersey-record.md) — ?–?
+- [Newark Black Newspapers Collection | Digital Collections](128-newark-black-newspapers-collection-digital-collections.md) — Collection coverage; see notes
+- [Newark Community Union Project News](076-newark-community-union-project-news.md) — ?–?
+- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — ?–?
+- [The Connection Newspaper](131-the-connection-newspaper.md) — ?–?
+- [The Forum](039-the-forum.md) — ?–?
+- [The Jersey Express](002-the-jersey-express.md) — ?–?
 
 ## Navigate
 

@@ -506,6 +506,8 @@
     }
 
     function formatYears(pub) {
+        if (pub.format === 'Digital archive collection') return 'Collection coverage; see notes';
+        if (pub.isActive === null) return pub.yearFounded ? pub.yearFounded + ', current activity unverified' : 'dates and current activity unverified';
         if (!pub.yearFounded) return pub.isActive === false ? 'ceased, dates unknown' : 'dates unknown';
         if (pub.yearCeased) return pub.yearFounded + '–' + pub.yearCeased;
         if (pub.isActive === false) return 'founded ' + pub.yearFounded + ', ceased';

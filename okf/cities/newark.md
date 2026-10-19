@@ -12,7 +12,7 @@ count: 38
 
 # Newark
 
-**38** publications in this city grouping · **7** active · founding years **1887–2021**.
+**38** publications in this city grouping · **5** active · founding years **1887–2021**.
 
 ## Publications
 
@@ -27,22 +27,20 @@ count: 38
 | [Hours After](../publications/072-hours-after.md) | 1951–1955 | Ceased 1955 |
 | [Jersey Camera](../publications/066-jersey-camera.md) | 1951–1955 | Ceased 1955 |
 | [Nite Lite](../publications/021-nite-lite.md) | 1959–1965 | Ceased 1965 |
-| [Newark Community Union Project News](../publications/076-newark-community-union-project-news.md) | 1963–1965 | Ceased 1965 |
 | [Afro-American Festival of the Arts Magazine](../publications/062-afro-american-festival-of-the-arts-magazine.md) | 1966–1966 | Ceased 1966 |
 | [Freedom Reports](../publications/133-freedom-reports.md) | 1966–1970 | Ceased 1970 |
 | [Deliverance Voice](../publications/070-deliverance-voice.md) | 1967–2014 | Ceased 2014 |
-| [Black Newark](../publications/028-black-newark.md) | 1968–1974 | Ceased 1974 |
-| [The Cricket: Black Music in Evolution](../publications/069-the-cricket-black-music-in-evolution.md) | 1969–1969 | Ceased 1969 |
+| [Black Newark](../publications/028-black-newark.md) | 1968–1968 | Ceased 1968 |
+| [The Cricket: Black Music in Evolution](../publications/069-the-cricket-black-music-in-evolution.md) | 1968–1969 | Ceased 1969 |
 | [CFUN News](../publications/051-cfun-news.md) | 1970–1971 | Ceased 1971 |
-| [The Black Voice](../publications/107-the-black-voice.md) | 1970–1975 | Ceased 1975 |
-| [The Forum](../publications/039-the-forum.md) | 1970–1980 | Ceased 1980 |
+| [The Black Voice](../publications/107-the-black-voice.md) | 1970–? | Ceased (date unknown) |
 | [MEDIC News](../publications/068-medic-news.md) | 1971–1975 | Ceased 1975 |
 | [Ngoma](../publications/111-ngoma.md) | 1971–1976 | Ceased 1976 |
 | [En Avant](../publications/059-en-avant.md) | 1972–1975 | Ceased 1975 |
 | [En Avant: Bulletin pour le development de la mobilisation patriotique](../publications/134-en-avant-bulletin-pour-le-development-de-la-mobilisation-patriotique.md) | 1972–1975 | Ceased 1975 |
 | [The Hart Fund](../publications/122-the-hart-fund.md) | 1972–1978 | Ceased 1978 |
-| [Unity and Struggle](../publications/084-unity-and-struggle.md) | 1972–1978 | Ceased 1978 |
 | [Monthly Black Periodicals Selection Review](../publications/115-monthly-black-periodicals-selection-review.md) | 1973–1980 | Ceased 1980 |
+| [Unity and Struggle](../publications/084-unity-and-struggle.md) | 1974–? | Ceased (date unknown) |
 | [Black Women’s United Front Newsletter](../publications/126-black-women-s-united-front-newsletter.md) | 1976–1976 | Ceased 1976 |
 | [Greater News](../publications/027-greater-news.md) | 1979–1985 | Ceased 1985 |
 | [Bootstrap](../publications/074-bootstrap.md) | 1981–1983 | Ceased 1983 |
@@ -54,8 +52,10 @@ count: 38
 | [New Jersey Urban News](../publications/020-new-jersey-urban-news.md) | 2018–present | Active |
 | [Five Wards Media](../publications/012-five-wards-media.md) | 2021–present | Active |
 | [Public Square Amplified](../publications/043-public-square-amplified.md) | 2021–present | Active |
-| [New Jersey Deadline](../publications/050-new-jersey-deadline.md) | ?–present | Active |
-| [New Jersey Record](../publications/014-new-jersey-record.md) | ?–present | Active |
+| [New Jersey Deadline](../publications/050-new-jersey-deadline.md) | ?–? | Activity unverified |
+| [New Jersey Record](../publications/014-new-jersey-record.md) | ?–? | Activity unverified |
+| [Newark Community Union Project News](../publications/076-newark-community-union-project-news.md) | ?–? | Ceased (date unknown) |
+| [The Forum](../publications/039-the-forum.md) | ?–? | Ceased (date unknown) |
 
 ## Navigate
 

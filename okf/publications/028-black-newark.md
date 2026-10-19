@@ -24,9 +24,9 @@ featured: true
 | Archive id | 28 |
 | Alternate name | Unknown |
 | City | [Newark](../cities/newark.md) |
-| Publishers or owners | Committee for Unified Newark |
-| Active years | 1968–1974 |
-| Status | Ceased 1974 |
+| Publishers or owners | Black People of Newark |
+| Active years | 1968–1968 |
+| Status | Ceased 1968 |
 | Decade | [1960s](../decades/1960s.md) |
 | Format | [Print Newspaper](../formats/print-newspaper.md) |
 | Medium | [Print](../mediums/print.md) |
@@ -41,11 +41,11 @@ featured: true
 
 ## Key staff
 
-Previous editor(s): Abu Ansar, Apr-Nov 1968; Yusef Iman, Jan 1970; Daoud Abdullah, Jan 1970; Simba Risasi, Apr-May 1972.
+Editor: Abu Ansar (April–November 1968).
 
 ## Historical notes
 
-Black Newark was the first in a series of interconnected newspapers published under the leadership of Amiri Baraka (LeRoi Jones) through the Committee for Unified Newark (CFUN) and its successor organizations. The publication sequence was: Black Newark (Vol. 1, Nos. 1-3, April-November 1968), then Black News (Vol. 1, No. 4, 1969, published by Black People of Newark), then Black New Ark (Vol. 1, No. 5, April 1972 through Vol. 2, No. 14, December 1973, published by CFUN), and finally Unity and Struggle (Vol. 3, No. 1, January/February 1974 through Vol. 8, No. 1/2, February 1979, published by CFUN as the national newspaper of the Congress of Afrikan People). These newspapers were published through the post-rebellion period of Newark, serving as tools for organizing and advocating for Black liberation and political and economic agency for Newark's majority Black citizenry. Baraka served as chairman of CFUN from 1968 to 1975. The movement documented in these papers contributed to the Black and Puerto Rican alliance that led to the election of Newark's first Black mayor, Kenneth Gibson, in 1970. The newspapers also covered Baraka's community-based initiatives addressing housing conditions, failing schools, and economic opportunities, including the Kawaida Towers apartment project and NJR-32 urban renewal project. The collection is digitized and searchable through the Rutgers Dana Library Newark Black Newspapers Collection. Additional copies are held at the NYU Tamiment Library and the Auburn Avenue Research Library. Scholarly treatment includes Jennifer Caroccio Maldonado's article 'Putting the Black Ink Back into Print: Black Newark/Black New Ark' in New Jersey Studies: An Interdisciplinary Journal 8(1), Winter 2022, pp. 34-49.
+This record represents the title Black Newark as cataloged by the Library of Congress, LCCN sn2001062056, rather than the complete newspaper lineage. That record describes volume 1, number 1, April 1968, through volume 1, number 3, November 1968, published by Black People of Newark. The April 1968 issue’s imprint confirms the publisher and identifies Abu Ansar among the staff. The related titles continued as Black News in 1969 and Black New Ark in the early 1970s. Black New Ark still appears on volume 3, number 1, January–February 1974; Unity and Struggle appears on volume 3, number 2, February–March 1974. Later issues are successors, not evidence that the 1968 title continued unchanged to 1974. The papers were associated with Amiri Baraka and Newark’s Black liberation organizing. Their digitized lineage is available in Rutgers’ Newark Black Newspapers Collection, record 128. Unity and Struggle has its own publication record, 84. These newspapers were published through the post-rebellion period of Newark, serving as tools for organizing and advocating for Black liberation and political and economic agency for Newark's majority Black citizenry. Baraka served as chairman of CFUN from 1968 to 1975. The movement documented in these papers contributed to the Black and Puerto Rican alliance that led to the election of Newark's first Black mayor, Kenneth Gibson, in 1970. The newspapers also covered Baraka's community-based initiatives addressing housing conditions, failing schools, and economic opportunities, including the Kawaida Towers apartment project and NJR-32 urban renewal project. The collection is digitized and searchable through the Rutgers Dana Library Newark Black Newspapers Collection. Additional copies are held at the NYU Tamiment Library and the Auburn Avenue Research Library. Scholarly treatment includes Jennifer Caroccio Maldonado's article 'Putting the Black Ink Back into Print: Black Newark/Black New Ark' in New Jersey Studies: An Interdisciplinary Journal 8(1), Winter 2022, pp. 34-49.
 
 ## External links
 
@@ -72,14 +72,12 @@ LCNC:  sn2001062056/OCLC No. 32993495.
 ### Also from the 1960s
 
 - [Wait](113-wait.md) — 1961–1965
-- [Newark Community Union Project News](076-newark-community-union-project-news.md) — 1963–1965
 - [Afro-American Festival of the Arts Magazine](062-afro-american-festival-of-the-arts-magazine.md) — 1966–1966
 - [Freedom Reports](133-freedom-reports.md) — 1966–1970
 - [Deliverance Voice](070-deliverance-voice.md) — 1967–2014
 - [The Black Observer](033-the-black-observer.md) — 1968–1970
+- [The Cricket: Black Music in Evolution](069-the-cricket-black-music-in-evolution.md) — 1968–1969
 - [The Voice](041-the-voice.md) — 1968–1974
-- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
-- …and 1 more
 
 ## Navigate
 

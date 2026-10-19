@@ -3431,14 +3431,46 @@
       "citation": "The Voice (Plainfield, N.J.) 1968-????, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn88063027, https://www.loc.gov/item/sn88063027/",
       "cropPlan": "",
       "notes": "Catalog metadata from the Library of Congress. Cite the record and link to it; the excerpt is not an image."
+    },
+    {
+      "path": "data/research/corrections/2026-10-19.json",
+      "source": "Publication history review",
+      "publicationIds": [
+        2,
+        5,
+        14,
+        17,
+        28,
+        29,
+        39,
+        40,
+        42,
+        50,
+        69,
+        73,
+        76,
+        77,
+        82,
+        84,
+        98,
+        99,
+        107,
+        114,
+        128,
+        131
+      ],
+      "status": "metadata_only",
+      "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+      "cropPlan": "",
+      "notes": "Authored factual summaries and bibliographic metadata. No source images or private messages. This entry does not authorize publication of any linked source scan."
     }
   ],
   "metadata": {
-    "totalCount": 337,
+    "totalCount": 338,
     "byStatus": {
       "crop_first": 50,
       "publishable": 34,
-      "metadata_only": 246,
+      "metadata_only": 247,
       "publishable_with_credit": 7
     },
     "generated": "2026-08-19"

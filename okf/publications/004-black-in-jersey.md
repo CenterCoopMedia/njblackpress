@@ -57,10 +57,10 @@ Black In Jersey is a digital storytelling and media production company founded i
 
 - [The Sentinel](010-the-sentinel.md) — 1880–1883
 - [Wait](113-wait.md) — 1961–1965
-- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
+- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1972–?
 - [Black Racers Yearbook](064-black-racers-yearbook.md) — 1974–1974
 - [Fire II](080-fire-ii.md) — 1975–1978
-- [The Nubian News](040-the-nubian-news.md) — 1989–present
+- [The Nubian News](040-the-nubian-news.md) — 1989–?
 - [Trenton365 Stream with Jacque Howard](032-trenton365-stream-with-jacque-howard.md) — 2016–2024
 - [Trenton Journal](017-trenton-journal.md) — 2021–present
 

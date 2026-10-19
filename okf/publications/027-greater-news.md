@@ -61,14 +61,14 @@ OCLC no. 20252858.
 
 ### Also from the 1970s
 
-- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–2015
+- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–?
 - [CFUN News](051-cfun-news.md) — 1970–1971
-- [The Black Voice](107-the-black-voice.md) — 1970–1975
-- [The Forum](039-the-forum.md) — 1970–1980
+- [The Black Voice](107-the-black-voice.md) — 1970–?
 - [The Liberator](109-the-liberator.md) — 1970–1971
 - [MEDIC News](068-medic-news.md) — 1971–1975
 - [Ngoma](111-ngoma.md) — 1971–1976
 - [Right On!](095-right-on.md) — 1971–2014
+- [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
 - …and 20 more
 
 ## Navigate

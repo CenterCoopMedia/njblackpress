@@ -24,13 +24,13 @@ featured: true
 | Archive id | 84 |
 | Alternate name | Unknown |
 | City | [Newark](../cities/newark.md) |
-| Publishers or owners | Committee for Unified Newark |
-| Active years | 1972–1978 |
-| Status | Ceased 1978 |
+| Publishers or owners | Congress of Afrikan People; later Revolutionary Communist League |
+| Active years | 1974–? |
+| Status | Ceased (date unknown) |
 | Decade | [1970s](../decades/1970s.md) |
 | Format | [Newspaper](../formats/newspaper.md) |
 | Medium | [Print](../mediums/print.md) |
-| Frequency | Monthly |
+| Frequency | Varied; twice monthly announced October 1974 |
 | Languages | English |
 | Primary focus | Socialism, Black Liberation movement, Politics, Education, Employment, Housing, Health |
 | Target audience | Unknown |
@@ -39,9 +39,13 @@ featured: true
 
 ‘The Struggle Continues”.
 
+## Key staff
+
+Editor: Komozi Woodard (tenure not established).
+
 ## Historical notes
 
-Unity and Struggle was the national newspaper of the Congress of Afrikan People (CAP), led by Amiri Baraka. It evolved from earlier Newark Black publications: Black Newark (1968), Black News (1969), and Black New Ark (1972-1973), all published by the Committee for Unified Newark (CFUN). Unity and Struggle was issued by CAP from approximately February/March 1974 through April 1976, then by the Revolutionary Communist League (Marxist-Leninist-Mao Tse Tung Thought) from June 1976 through 1979, reflecting CAP's ideological transition from Black cultural nationalism to Marxism-Leninism. Dr. Komozi Woodard (professor of American history at Sarah Lawrence College and author of 'A Nation Within: Baraka and Black Power Politics') served as editor. The paper covered topics including African liberation, trade unions, factory organizing, and Black political conventions. The August 1974 issue featured coverage of the All-Afrikan Women's Conference held in Newark. The history of CAP was first published in Vol. V, No. 6 (June 1976). Digitized issues are available through the Rutgers Dana Library Newark Black Newspapers Collection (collections.libraries.rutgers.edu/newark-black-newspapers) and individual issues through RiseUp Newark (riseupnewark.com), with credit to the NYU Tamiment Library. Physical copies are held at the Komozi Woodard Amiri Baraka Collection at the Auburn Avenue Research Library, with a distribution list from 1975 preserved in the archive.
+Unity and Struggle succeeded Black New Ark in early 1974. Volume 3, number 1, January–February 1974, still bears Black New Ark; volume 3, number 2, February–March 1974, bears Unity and Struggle. The 1974 founding field refers to this title, while 1972 belongs to its predecessor history. It was the newspaper of the Congress of Afrikan People and later the Revolutionary Communist League. A surviving 1979 issue, volume 8, numbers 4–9, identifies the latter organization and contradicts the former 1978 end year. The final publication year is unknown, so no exact cessation year is entered. The October 1974 first edition, volume 3, number 10, announces twice-monthly publication, which does not establish one schedule for the entire run. The Rutgers/Newark History Society collection description identifies Komozi Woodard as an editor without establishing his complete tenure. Earlier related titles include Black Newark, Black News, and Black New Ark. Digitized issues are available through Rutgers and Marxists Internet Archive. The paper covered topics including African liberation, trade unions, factory organizing, and Black political conventions. The August 1974 issue featured coverage of the All-Afrikan Women's Conference held in Newark. The history of CAP was first published in Vol. V, No. 6 (June 1976). Digitized issues are available through the Rutgers Dana Library Newark Black Newspapers Collection (collections.libraries.rutgers.edu/newark-black-newspapers) and individual issues through RiseUp Newark (riseupnewark.com), with credit to the NYU Tamiment Library. Physical copies are held at the Komozi Woodard Amiri Baraka Collection at the Auburn Avenue Research Library, with a distribution list from 1975 preserved in the archive.
 
 ## External links
 
@@ -67,14 +71,14 @@ OCLC no. 5591021/LC card no. sn91-64001.
 
 ### Also from the 1970s
 
-- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–2015
+- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–?
 - [CFUN News](051-cfun-news.md) — 1970–1971
-- [The Black Voice](107-the-black-voice.md) — 1970–1975
-- [The Forum](039-the-forum.md) — 1970–1980
+- [The Black Voice](107-the-black-voice.md) — 1970–?
 - [The Liberator](109-the-liberator.md) — 1970–1971
 - [MEDIC News](068-medic-news.md) — 1971–1975
 - [Ngoma](111-ngoma.md) — 1971–1976
 - [Right On!](095-right-on.md) — 1971–2014
+- [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
 - …and 20 more
 
 ## Navigate

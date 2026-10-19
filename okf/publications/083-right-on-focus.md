@@ -55,14 +55,14 @@ OCLC no. 9333775/LC card no. sn83-556.
 ### Also from the 1980s
 
 - [Bootstrap](074-bootstrap.md) — 1981–1983
-- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — 1982–1991
-- [The Connection Newspaper](131-the-connection-newspaper.md) — 1982–1991
 - [City News](013-city-news.md) — 1983–2003
 - [Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women](130-communique-quarterly-newsletter-of-the-new-jersey-coalition-of-100-black-women.md) — 1983–1988
 - [Right On! Presents Class](096-right-on-presents-class.md) — 1983–1985
 - [Update](104-update.md) — 1983–1988
 - [Corporate Headquarters](132-corporate-headquarters.md) — 1985–1991
-- …and 12 more
+- [Write On Newsletter](120-write-on-newsletter.md) — 1985–1990
+- [Starline](086-starline.md) — 1987–2005
+- …and 10 more
 
 ## Navigate
 

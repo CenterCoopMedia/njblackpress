@@ -55,8 +55,8 @@ Atlantic City Focus is a hyper-local news platform founded by Mark Tyler, who ho
 
 - [Apex News](045-apex-news.md) — 1929–1940
 - [Black Atlantic City Magazine](119-black-atlantic-city-magazine.md) — 1978–1986
-- [Black New Jersey Magazine](077-black-new-jersey-magazine.md) — 1988–1990
 - [Front Runner New Jersey](006-front-runner-new-jersey.md) — 2017–present
+- [Black New Jersey Magazine](077-black-new-jersey-magazine.md) — ?–?
 
 ### Also from the 2020s
 

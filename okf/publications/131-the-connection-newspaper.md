@@ -7,7 +7,7 @@ tags:
   - "nj-black-press"
   - "publication"
   - "teaneck"
-  - "1980s"
+  - "unknown"
   - "newspaper-periodicals"
 timestamp: "2026-06-29"
 archive_id: 131
@@ -23,12 +23,12 @@ featured: false
 | Alternate name | Unknown |
 | City | [Teaneck](../cities/teaneck.md) |
 | Publishers or owners | Published by Ralph F. Johnson |
-| Active years | 1982–1991 |
-| Status | Ceased 1991 |
-| Decade | [1980s](../decades/1980s.md) |
+| Active years | ?–? |
+| Status | Ceased (date unknown) |
+| Decade | [Unknown](../decades/unknown.md) |
 | Format | [Newspaper/Periodicals](../formats/newspaper-periodicals.md) |
 | Medium | [Print](../mediums/print.md) |
-| Frequency | Weekly |
+| Frequency | Varied; see historical notes |
 | Languages | English |
 | Primary focus | Newspaper |
 | Target audience | Unknown |
@@ -44,7 +44,7 @@ Editor: Ralph F. Johnson.
 
 ## Historical notes
 
-A March 2026 search found this entry to be a duplicate of The Connection / North Jersey Connection (ID 5). It is the same publication, with the same founding year and the same publisher.
+The North Jersey Connection and its successor The Connection were Teaneck publications associated with Ralph F. Johnson. The Library of Congress describes North Jersey Connection, LCCN sn92060412, from an October 22, 1983 issue, and The Connection, LCCN sn88071369, from June 16, 1984. March 23, 1991 is the latter catalog’s latest issue consulted, not a final issue. Danky and Hady, entry 1791, page 172, records Wisconsin holdings beginning with volume 11, number 20, June 5, 1993, and gives an uncertain 1982 start. The holding contradicts the former 1991 end; neither an exact founding year nor a final year is established. The predecessor is described as biweekly and the later bibliography as weekly; schedules require dated mastheads. Records 5 and 131 share OCLC 18514803 and duplicate the successor identity. Both IDs are retained to preserve existing references, with the duplication explicit. An open catalog end does not establish present activity.
 
 ## Archive reference
 
@@ -54,24 +54,23 @@ OCLC no. 18514803.
 
 ### Also in Teaneck
 
-- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — 1982–1991
+- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — ?–?
 
-### Also from the 1980s
+### Also from the Unknown
 
-- [Bootstrap](074-bootstrap.md) — 1981–1983
-- [Right On! Focus](083-right-on-focus.md) — 1982–1985
-- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — 1982–1991
-- [City News](013-city-news.md) — 1983–2003
-- [Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women](130-communique-quarterly-newsletter-of-the-new-jersey-coalition-of-100-black-women.md) — 1983–1988
-- [Right On! Presents Class](096-right-on-presents-class.md) — 1983–1985
-- [Update](104-update.md) — 1983–1988
-- [Corporate Headquarters](132-corporate-headquarters.md) — 1985–1991
-- …and 12 more
+- [Black New Jersey Magazine](077-black-new-jersey-magazine.md) — ?–?
+- [New Jersey Deadline](050-new-jersey-deadline.md) — ?–?
+- [New Jersey Record](014-new-jersey-record.md) — ?–?
+- [Newark Black Newspapers Collection | Digital Collections](128-newark-black-newspapers-collection-digital-collections.md) — Collection coverage; see notes
+- [Newark Community Union Project News](076-newark-community-union-project-news.md) — ?–?
+- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — ?–?
+- [The Forum](039-the-forum.md) — ?–?
+- [The Jersey Express](002-the-jersey-express.md) — ?–?
 
 ## Navigate
 
 - [Wiki home](../index.md)
 - [All Teaneck publications](../cities/teaneck.md)
-- [All 1980s publications](../decades/1980s.md)
+- [All Unknown publications](../decades/unknown.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

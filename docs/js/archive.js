@@ -98,7 +98,7 @@
             // Update hero stats
             if (elements.heroTotal) elements.heroTotal.textContent = state.publications.length;
 
-            const activeCount = state.publications.filter(p => p.isActive !== false && !p.yearCeased).length;
+            const activeCount = state.publications.filter(p => p.isActive === true && !p.yearCeased).length;
             const archivedCount = state.publications.length - activeCount;
             const cities = new Set(state.publications.map(p => p.city).filter(Boolean));
 
@@ -288,7 +288,7 @@
         // Status
         if (state.filters.status !== 'all') {
             if (state.filters.status === 'active') {
-                filtered = filtered.filter(pub => pub.isActive !== false && !pub.yearCeased);
+                filtered = filtered.filter(pub => pub.isActive === true && !pub.yearCeased);
             } else {
                 filtered = filtered.filter(pub => pub.isActive === false || pub.yearCeased);
             }
@@ -402,9 +402,11 @@
 
     function renderListView(publications) {
         elements.listRows.innerHTML = publications.map((pub, index) => {
-            const isActive = pub.isActive !== false && !pub.yearCeased;
+            const isActive = pub.isActive === true && !pub.yearCeased;
             const statusClass = isActive ? 'text-stain' : 'text-thread-400';
-            const statusText = isActive ? 'still publishing' : (pub.yearCeased ? `ceased ${pub.yearCeased}` : 'ceased');
+            const statusText = pub.format === 'Digital archive collection' ? 'digital collection'
+                : pub.isActive === null ? 'activity unverified'
+                : isActive ? 'still publishing' : (pub.yearCeased ? `ceased ${pub.yearCeased}` : 'ceased');
             const years = formatYears(pub);
 
             return `
@@ -510,8 +512,10 @@
     }
 
     function formatYears(pub) {
+        if (pub.format === 'Digital archive collection') return 'Collection coverage; see notes';
         if (!pub.yearFounded) return 'Unknown';
         if (pub.yearCeased) return `${pub.yearFounded}–${pub.yearCeased}`;
+        if (pub.isActive !== true) return `${pub.yearFounded}–end year unknown`;
         return `${pub.yearFounded}–present`;
     }
 

@@ -19,7 +19,7 @@ count: 2
 | Publication | Years | Status |
 |---|---|---|
 | [Black Truth Bulletin](../publications/127-black-truth-bulletin.md) | 1978–1982 | Ceased 1982 |
-| [Newark Black Newspapers Collection | Digital Collections](../publications/128-newark-black-newspapers-collection-digital-collections.md) | ?–1979 | Ceased 1979 |
+| [Newark Black Newspapers Collection | Digital Collections](../publications/128-newark-black-newspapers-collection-digital-collections.md) | Collection coverage; see notes | Digital collection |
 
 ## Navigate
 

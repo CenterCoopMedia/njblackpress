@@ -54,9 +54,9 @@ OCLC no. 32234574.
 ### Also in Atlantic City
 
 - [Black Atlantic City Magazine](119-black-atlantic-city-magazine.md) — 1978–1986
-- [Black New Jersey Magazine](077-black-new-jersey-magazine.md) — 1988–1990
 - [Front Runner New Jersey](006-front-runner-new-jersey.md) — 2017–present
 - [Atlantic City Focus](025-atlantic-city-focus.md) — 2022–present
+- [Black New Jersey Magazine](077-black-new-jersey-magazine.md) — ?–?
 
 ### Also from the 1920s
 
