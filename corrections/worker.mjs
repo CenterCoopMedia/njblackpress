@@ -73,13 +73,20 @@ export default {
           'CF-Access-Client-Secret': env.ACCESS_CLIENT_SECRET,
         }, body: JSON.stringify(body),
       });
+      if (!response.ok && response.status !== 400 && response.status !== 409) {
+        console.error('Black Press intake failed', { category: 'upstream_status', status: response.status });
+      }
       const receipt = await response.json();
       if (response.ok && receipt.success === true && receipt.id === 'bp_' + body.request_id) {
         return reply(200, { success: true, id: receipt.id });
       }
       if (response.status === 409) return reply(409, { error: 'This receipt belongs to a different correction. Close and reopen the form.' });
       if (response.status === 400) return reply(400, { error: 'Check the page, description, and source link, then try again.' });
-    } catch { /* A lost response may follow a committed intake; keep the same ID on retry. */ }
+      if (response.ok) console.error('Black Press intake failed', { category: 'receipt_mismatch' });
+    } catch {
+      // A lost response may follow a committed intake; keep the same ID on retry.
+      console.error('Black Press intake failed', { category: 'fetch_or_json' });
+    }
     return reply(502, { error: 'We could not confirm receipt. Your text is saved in this form. Please retry.' });
   },
 };

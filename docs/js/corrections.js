@@ -53,7 +53,7 @@
   }
 
   function open(button) {
-    if (dialog.open) return;
+    if (dialog.open || pending) return;
     context = pageContext(button);
     const saved = drafts.get(context.url);
     form.reset();
@@ -80,6 +80,7 @@
   // Keep the hall's Escape handler and other page shortcuts out of the modal.
   dialog.addEventListener('keydown', event => {
     event.stopPropagation();
+    if (pending && event.key === 'Escape') event.preventDefault();
     if (event.key !== 'Tab') return;
     const items = [...dialog.querySelectorAll('button:not([disabled]), input, textarea')]
       .filter(element => element.getClientRects().length);

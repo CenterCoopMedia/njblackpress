@@ -198,7 +198,7 @@
                         <span class="font-mono text-sm tracking-wide">${years}</span>
                     </div>
 
-                    <button type="button" class="correction-trigger" data-submit-correction data-correction-record-id="${Number(pub.id)}" data-correction-title="${escapeHtml(pub.name)}">Submit a correction</button>
+                    <button type="button" class="correction-trigger" data-submit-correction data-correction-record-id="${Number(pub.id)}" data-correction-title="${escapeAttr(pub.name)}">Submit a correction</button>
 
                     <p class="mt-8 animate-in delay-3">
                         <a href="${wikiHref(pub)}"
