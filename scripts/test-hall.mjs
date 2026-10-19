@@ -101,7 +101,8 @@ for (const o of layout.ornaments) {
   assert.ok(o.bounds.minZ > 0 && o.bounds.maxZ < layout.length, `${o.id} stands inside the hall`);
 }
 
-const decadeCounts = { '1880s': 3, '1890s': 0, '1900s': 2, '1910s': 2, '1920s': 2, '1930s': 13, '1940s': 3, '1950s': 9, '1960s': 10, '1970s': 29, '1980s': 21, '1990s': 25, '2000s': 0, '2010s': 8, '2020s': 6 };
+// October 2026 source corrections move six unverified starts to the undated section.
+const decadeCounts = { '1880s': 3, '1890s': 0, '1900s': 2, '1910s': 2, '1920s': 2, '1930s': 12, '1940s': 3, '1950s': 9, '1960s': 8, '1970s': 29, '1980s': 19, '1990s': 24, '2000s': 0, '2010s': 8, '2020s': 6 };
 for (const [id, count] of Object.entries(decadeCounts)) {
   assert.equal(layout.sectionById.get(id).count, count, `${id} holds ${count} titles`);
 }
@@ -113,7 +114,7 @@ for (const id of ['1890s', '2000s']) {
 }
 
 const undatedCount = source.filter((p) => p.yearFounded == null).length;
-assert.equal(undatedCount, 3, 'the archive holds three undated titles');
+assert.equal(undatedCount, 9, 'the archive holds nine records with unverified founding years');
 assert.equal(layout.sectionById.get('undated').count, undatedCount, 'the undated section holds exactly the undated records');
 assert.equal(layout.sectionById.get('undated').label, 'Date unrecorded');
 
