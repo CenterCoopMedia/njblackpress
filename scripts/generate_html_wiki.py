@@ -302,7 +302,9 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
         value = clean(pub.get(key))
         if value:
             b += section_title(heading)
-            b += f'<p class="text-lg text-linen-200 font-light leading-relaxed max-w-3xl">{esc(value)}</p>'
+            paragraphs = value.splitlines() if key == "historicalNotes" else [value]
+            b += ''.join(f'<p class="text-lg text-linen-200 font-light leading-relaxed max-w-3xl">{esc(p)}</p>'
+                         for p in paragraphs if p.strip())
 
     archive_url = as_link_url(pub.get("archiveUrl"))
     website_url = as_link_url(pub.get("websiteUrl"))

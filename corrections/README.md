@@ -25,8 +25,9 @@ limits requests and forwards only to the fixed private dashboard endpoint. All
 credentials remain in Worker secrets. The dashboard validates known archive
 routes, derives source files and record IDs, stores the report, and queues Joe's
 private Telegram card. The card has **File**, **File + fix**, **Ignore**, and
-**CCM staff + fix**. Joe uses the staff action only after he identifies the CCM
-staff author. A name, claimed affiliation, source link, or supplied instruction
+**Review CCM staff request**. The bot shows the complete original text in
+pages, then offers **Confirm CCM staff + fix**. Joe confirms only after he
+identifies the CCM staff author. A name, claimed affiliation, source link, or supplied instruction
 in the anonymous form cannot establish staff authority.
 
 File creates a marked issue in `CenterCoopMedia/njblackpress`. File + fix first

@@ -85,7 +85,7 @@ function threadHTML(t) {
       ${t.publishers ? `<p class="t-meta">Publisher: ${esc(t.publishers)}</p>` : ''}
       ${t.format || t.frequency || t.medium ? `<p class="t-meta">${esc([t.format, t.frequency, t.medium].filter(Boolean).join(' · '))}</p>` : ''}
       ${t.missionStatement ? `<p class="t-mission"><em>${esc(t.missionStatement)}</em></p>` : ''}
-      ${t.historicalNotes ? `<p class="t-notes">${esc(t.historicalNotes)}</p>` : ''}
+      ${t.historicalNotes ? t.historicalNotes.split(/\n+/).filter(p => p.trim()).map(p => `<p class="t-notes">${esc(p)}</p>`).join('') : ''}
       ${evidenceHTML(t)}
       ${eventsHTML(t)}
       ${storiesHTML(t)}
