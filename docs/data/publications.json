@@ -108,7 +108,7 @@
     ],
     "activeCount": 13,
     "ceasedCount": 118,
-    "evidenceCount": 203,
+    "evidenceCount": 202,
     "unknownStatusCount": 5
   },
   "publications": [
@@ -773,18 +773,7 @@
       "decade": "Unknown",
       "isFeaturedHistoric": false,
       "isFeaturedContemporary": false,
-      "evidence": [
-        {
-          "type": "research_summary",
-          "source": "other",
-          "date": "2026-10-19",
-          "caption": "The exact identity and publication dates of this Newark title remain unverified. A 1977 New Jersey Historical Commission newspaper directory is a research lead for a Black weekly named New Jersey Record, with an approximate 1942–1951 range. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
-          "file": "data/research/corrections/2026-10-19.json",
-          "rightsStatus": "metadata_only",
-          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
-          "url": "https://www.scribd.com/document/471953938/Directory-of-New-Jersey-Newspapers-a-k-a-Wright-Stellhorn"
-        }
-      ]
+      "evidence": []
     },
     {
       "id": 15,
