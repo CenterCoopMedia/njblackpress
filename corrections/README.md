@@ -40,7 +40,7 @@ ready PR. Joe controls merging. Archive data retains Cassandra's editorial
 review requirement. A receipt or dispatched job does not mean a fix is merged
 or published.
 
-CCM staff + fix records Joe's staff confirmation in the private job and passes
+Confirm CCM staff + fix records Joe's staff confirmation in the private job and passes
 the complete original submission to the runner. Identifiable CCM staff requests
 are authoritative editorial direction. The runner applies the request and uses
 supplied replacement text verbatim, including every paragraph and punctuation
