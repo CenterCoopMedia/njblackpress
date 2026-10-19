@@ -97,7 +97,7 @@ publications = []
 existing_path = Path('publications.json')
 previous_activity = {
     p['id']: p.get('isActive')
-    for p in json.loads(existing_path.read_text())['publications']
+    for p in json.loads(existing_path.read_text(encoding='utf-8'))['publications']
 } if existing_path.is_file() else {}
 cities = set()
 decades = set()
