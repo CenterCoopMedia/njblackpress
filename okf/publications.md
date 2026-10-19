@@ -25,7 +25,7 @@ All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [Black Atlantic City Magazine](publications/119-black-atlantic-city-magazine.md) | Atlantic City | 1978–1986 | Ceased 1986 |
 | [Black Book Connection, Inc. Newsletter](publications/085-black-book-connection-inc-newsletter.md) | West Orange | 1992–1995 | Ceased 1995 |
 | [Black Caucus of ALA Newsletter](publications/099-black-caucus-of-ala-newsletter.md) | Chicago/National | 1974–? | Activity unverified |
-| [Black Hair Digest](publications/125-black-hair-digest.md) | River Edge | 1993–1996 | Ceased 1996 |
+| [Black Hair Digest](publications/125-black-hair-digest.md) | River Edge | 1993–? | Activity unverified |
 | [Black In Jersey](publications/004-black-in-jersey.md) ⭐ | Trenton | 2021–present | Active |
 | [Black Journal](publications/052-black-journal.md) | Jersey City | 1979–1985 | Ceased 1985 |
 | [Black New Jersey Magazine](publications/077-black-new-jersey-magazine.md) | Atlantic City | ?–? | Ceased (date unknown) |

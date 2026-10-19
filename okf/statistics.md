@@ -12,8 +12,8 @@ timestamp: "2026-06-29"
 
 - Publication records: **136**
 - Active: **13**
-- Ceased or historical: **118**
-- Activity unverified or collection: **5**
+- Ceased or historical: **117**
+- Activity unverified or collection: **6**
 - Cities: **45**
 - Distinct formats: **41**
 - Founding span: **1880–2022**

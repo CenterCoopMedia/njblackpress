@@ -43,7 +43,7 @@ Hype was a music magazine published out of River Edge, NJ, connected to the Word
 
 ### Also in River Edge
 
-- [Black Hair Digest](125-black-hair-digest.md) — 1993–1996
+- [Black Hair Digest](125-black-hair-digest.md) — 1993–?
 - [Fotorama](078-fotorama.md) — 1993–1995
 
 ### Also from the 1990s

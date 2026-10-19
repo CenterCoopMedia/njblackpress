@@ -44,7 +44,7 @@ Fotorama was a photography magazine with its premiere issue (#1) published in 19
 ### Also in River Edge
 
 - [Hype](001-hype.md) — 1990–1993
-- [Black Hair Digest](125-black-hair-digest.md) — 1993–1996
+- [Black Hair Digest](125-black-hair-digest.md) — 1993–?
 
 ### Also from the 1990s
 
