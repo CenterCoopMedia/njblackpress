@@ -17,6 +17,8 @@ featured: false
 
 # Ujamaa: Journal of the Black Students Union
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=103#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 103 |

@@ -17,6 +17,8 @@ featured: false
 
 # Camp Berlin Broadcast
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=102#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 102 |

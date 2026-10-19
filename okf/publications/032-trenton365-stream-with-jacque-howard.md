@@ -17,6 +17,8 @@ featured: false
 
 # Trenton365 Stream with Jacque Howard
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=32#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 32 |

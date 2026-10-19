@@ -17,6 +17,8 @@ featured: false
 
 # Journal of African American Men
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=54#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 54 |

@@ -17,6 +17,8 @@ featured: false
 
 # Captain Africa
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=112#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 112 |

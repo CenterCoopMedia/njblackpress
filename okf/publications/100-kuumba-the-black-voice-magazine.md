@@ -17,6 +17,8 @@ featured: false
 
 # Kuumba: The Black Voice Magazine
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=100#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 100 |

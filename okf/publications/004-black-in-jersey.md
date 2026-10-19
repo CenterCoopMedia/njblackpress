@@ -17,6 +17,8 @@ featured: true
 
 # Black In Jersey
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=4#submit-correction)
+
 > ⭐ Featured contemporary publication. See [Featured publications](../featured.md).
 
 | Field | Value |

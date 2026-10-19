@@ -17,6 +17,8 @@ featured: false
 
 # More Jersey
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=36#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 36 |

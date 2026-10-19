@@ -17,6 +17,8 @@ featured: false
 
 # New Jersey Record
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=14#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 14 |

@@ -17,6 +17,8 @@ featured: false
 
 # Newark Community Union Project News
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=76#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 76 |

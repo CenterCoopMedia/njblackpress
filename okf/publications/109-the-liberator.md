@@ -17,6 +17,8 @@ featured: false
 
 # The Liberator
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=109#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 109 |

@@ -17,6 +17,8 @@ featured: false
 
 # Atlantic City Focus
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=25#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 25 |

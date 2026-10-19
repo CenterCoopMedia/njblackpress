@@ -17,6 +17,8 @@ featured: false
 
 # Rap Masters: Reader’s Choice
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=135#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 135 |

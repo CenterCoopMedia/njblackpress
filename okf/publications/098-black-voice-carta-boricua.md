@@ -17,6 +17,8 @@ featured: false
 
 # Black Voice/Carta Boricua
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=98#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 98 |

@@ -17,6 +17,8 @@ featured: false
 
 # The Best of Rap & R&B
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=124#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 124 |

@@ -17,6 +17,8 @@ featured: false
 
 # Artz
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=47#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 47 |

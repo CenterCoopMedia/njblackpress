@@ -17,6 +17,8 @@ featured: false
 
 # The African Voice
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=46#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 46 |

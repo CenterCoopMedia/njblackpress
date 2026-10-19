@@ -17,6 +17,8 @@ featured: false
 
 # At the Crossroads
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=49#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 49 |

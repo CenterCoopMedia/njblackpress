@@ -17,6 +17,8 @@ featured: false
 
 # Try It Yourself Hair!
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=93#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 93 |

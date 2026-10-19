@@ -17,6 +17,8 @@ featured: true
 
 # Black Newark
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=28#submit-correction)
+
 > ⭐ Featured historic publication. See [Featured publications](../featured.md).
 
 | Field | Value |

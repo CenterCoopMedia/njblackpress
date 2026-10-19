@@ -3,6 +3,9 @@
   if (!script) return;
   const root = new URL('../', script.src);
   const url = path => new URL(path, root).href;
+  const corrections = document.createElement('script');
+  corrections.src = url('js/corrections.js');
+  document.head.append(corrections);
   const links = [
     { label: 'Home', path: 'index.html' },
     { label: 'Timeline', path: 'index.html#timeline' },

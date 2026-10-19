@@ -17,6 +17,8 @@ featured: false
 
 # Inner City Products
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=117#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 117 |

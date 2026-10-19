@@ -17,6 +17,8 @@ featured: true
 
 # Trenton Journal
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=17#submit-correction)
+
 > ⭐ Featured contemporary publication. See [Featured publications](../featured.md).
 
 | Field | Value |

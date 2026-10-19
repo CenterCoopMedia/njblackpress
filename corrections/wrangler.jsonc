@@ -1,0 +1,9 @@
+{
+  "name": "blackpress-corrections",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-19",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "blackpress-corrections.amditis.tech", "custom_domain": true }],
+  "ratelimits": [{ "name": "REPORT_LIMITER", "namespace_id": "2026101901", "simple": { "limit": 5, "period": 60 } }]
+}

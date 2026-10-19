@@ -17,6 +17,8 @@ featured: false
 
 # Black Hair Digest
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=125#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 125 |

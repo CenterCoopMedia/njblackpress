@@ -17,6 +17,8 @@ featured: false
 
 # Club World: Newsmagazine
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=129#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 129 |

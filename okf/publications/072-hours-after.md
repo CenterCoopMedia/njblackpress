@@ -17,6 +17,8 @@ featured: false
 
 # Hours After
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=72#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 72 |

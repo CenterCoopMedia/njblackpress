@@ -17,6 +17,8 @@ featured: false
 
 # The Landscape
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=34#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 34 |

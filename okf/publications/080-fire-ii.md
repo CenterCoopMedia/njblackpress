@@ -17,6 +17,8 @@ featured: false
 
 # Fire II
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=80#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 80 |

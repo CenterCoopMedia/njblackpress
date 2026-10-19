@@ -17,6 +17,8 @@ featured: false
 
 # Public Square Amplified
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=43#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 43 |

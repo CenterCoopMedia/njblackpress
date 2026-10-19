@@ -17,6 +17,8 @@ featured: false
 
 # New Jersey Herald News
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=16#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 16 |

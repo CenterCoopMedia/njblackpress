@@ -17,6 +17,8 @@ featured: false
 
 # The Forum
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=39#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 39 |

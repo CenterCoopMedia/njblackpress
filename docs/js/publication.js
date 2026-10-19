@@ -198,6 +198,8 @@
                         <span class="font-mono text-sm tracking-wide">${years}</span>
                     </div>
 
+                    <button type="button" class="correction-trigger" data-submit-correction data-correction-record-id="${Number(pub.id)}" data-correction-title="${escapeHtml(pub.name)}">Submit a correction</button>
+
                     <p class="mt-8 animate-in delay-3">
                         <a href="${wikiHref(pub)}"
                            class="inline-block font-mono text-xs uppercase tracking-widest text-stain hover:text-linen-100 transition-colors border-b border-stain/40 hover:border-linen-100 py-1">

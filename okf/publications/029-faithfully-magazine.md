@@ -17,6 +17,8 @@ featured: false
 
 # Faithfully Magazine
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=29#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 29 |

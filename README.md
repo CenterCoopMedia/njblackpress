@@ -154,8 +154,9 @@ Visible changes also need browser checks at desktop and mobile sizes.
 ## Contributing
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before you change data or generated
-files. Use the data correction issue form when you have a source for a missing
-or incorrect fact.
+files. Use **Submit a correction** on an archive page or record to send a sourced
+report for review. The repository issue form is also available. See
+[Correction reports](corrections/README.md) for routing and activation.
 
 ## Citation and reuse
 

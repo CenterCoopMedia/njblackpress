@@ -17,6 +17,8 @@ featured: false
 
 # Hype
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=1#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 1 |

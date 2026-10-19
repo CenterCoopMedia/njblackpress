@@ -17,6 +17,8 @@ featured: false
 
 # The Literary Griot
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=91#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 91 |

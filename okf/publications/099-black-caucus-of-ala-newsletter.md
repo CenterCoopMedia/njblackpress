@@ -17,6 +17,8 @@ featured: false
 
 # Black Caucus of ALA Newsletter
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=99#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 99 |

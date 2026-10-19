@@ -17,6 +17,8 @@ featured: false
 
 # MEDIC News
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=68#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 68 |

@@ -17,6 +17,8 @@ featured: true
 
 # The Nubian News
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=40#submit-correction)
+
 > ⭐ Featured contemporary publication. See [Featured publications](../featured.md).
 
 | Field | Value |

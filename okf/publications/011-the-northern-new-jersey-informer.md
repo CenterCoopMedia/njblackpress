@@ -17,6 +17,8 @@ featured: false
 
 # The Northern New Jersey Informer
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=11#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 11 |

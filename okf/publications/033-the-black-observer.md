@@ -17,6 +17,8 @@ featured: false
 
 # The Black Observer
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=33#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 33 |

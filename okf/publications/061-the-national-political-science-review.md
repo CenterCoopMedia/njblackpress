@@ -17,6 +17,8 @@ featured: false
 
 # The National Political Science Review
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=61#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 61 |

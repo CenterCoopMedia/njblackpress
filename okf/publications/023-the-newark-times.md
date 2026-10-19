@@ -17,6 +17,8 @@ featured: false
 
 # The Newark Times
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=23#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 23 |

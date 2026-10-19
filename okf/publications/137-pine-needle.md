@@ -17,6 +17,8 @@ featured: false
 
 # Pine Needle
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=137#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 137 |

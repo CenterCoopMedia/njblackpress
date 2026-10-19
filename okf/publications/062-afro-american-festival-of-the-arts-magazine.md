@@ -17,6 +17,8 @@ featured: false
 
 # Afro-American Festival of the Arts Magazine
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=62#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 62 |

@@ -17,6 +17,8 @@ featured: false
 
 # Jersey Camera
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=66#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 66 |

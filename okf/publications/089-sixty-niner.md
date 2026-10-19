@@ -17,6 +17,8 @@ featured: false
 
 # Sixty Niner
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=89#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 89 |
