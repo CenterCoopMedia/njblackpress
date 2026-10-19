@@ -105,6 +105,9 @@
             animateCounter(elements.statActive, activeCount);
             animateCounter(elements.statArchived, archivedCount);
             animateCounter(elements.statCities, cities.size);
+            const unknown = state.publications.filter(p => p.isActive === null).length;
+            const statusNote = document.getElementById('unknown-status-note');
+            if (statusNote) statusNote.textContent = `${unknown} records have unverified activity or describe an archive collection. They are included in the total.`;
 
         } catch (error) {
             console.error('Failed to load data:', error);

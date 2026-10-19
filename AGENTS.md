@@ -41,6 +41,7 @@ Update the source and run its builder. Review generated diffs before commit.
 
 ```bash
 npm ci
+python3 -m pip install -r data/requirements-images.txt
 npm run build:css
 cd docs && python3 -m http.server 8000
 ```

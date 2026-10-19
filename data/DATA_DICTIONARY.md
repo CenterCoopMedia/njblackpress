@@ -184,3 +184,12 @@ entry. Run `data/add_evidence.py` afterwards.
 Every publication in `publications.json` must have a matching row here by
 `id` (enforced by `data/test_source_catalog.py`), and every keeper's
 `localFile` must exist on disk.
+
+## Controlled CSV refresh activity
+
+Activity is independent of a missing final year. During a controlled full CSV
+refresh, an optional `Activity status` or `isActive` column can explicitly set
+active/true, ceased/false, or unverified/unknown/null/resource. If the column is
+absent or blank, preserve the current record's tri-state value by ID. A new
+record without explicit activity remains unverified. Invalid status text stops
+conversion. Review changed years and status before publication.
