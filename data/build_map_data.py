@@ -90,7 +90,7 @@ def build_payload(publications_payload: dict[str, Any], centers_payload: dict[st
             "city": city,
             "yearFounded": publication.get("yearFounded"),
             "yearCeased": publication.get("yearCeased"),
-            "isActive": publication.get("isActive") is True,
+            "isActive": publication.get("isActive"),
         }
         location = city_to_location.get(key)
         if location:

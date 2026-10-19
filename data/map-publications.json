@@ -214,7 +214,7 @@
           "city": "Chicago/National",
           "yearFounded": 1974,
           "yearCeased": null,
-          "isActive": false
+          "isActive": null
         }
       ]
     },
@@ -903,7 +903,7 @@
           "city": "Newark",
           "yearFounded": null,
           "yearCeased": null,
-          "isActive": false
+          "isActive": null
         },
         {
           "id": 14,
@@ -911,7 +911,7 @@
           "city": "Newark",
           "yearFounded": null,
           "yearCeased": null,
-          "isActive": false
+          "isActive": null
         },
         {
           "id": 76,
@@ -1382,7 +1382,7 @@
           "city": "Trenton",
           "yearFounded": 1989,
           "yearCeased": null,
-          "isActive": false
+          "isActive": null
         },
         {
           "id": 32,
@@ -1495,7 +1495,7 @@
       "city": null,
       "yearFounded": null,
       "yearCeased": null,
-      "isActive": false,
+      "isActive": null,
       "reason": "The source does not record a municipality."
     }
   ]

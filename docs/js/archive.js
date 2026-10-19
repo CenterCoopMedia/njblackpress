@@ -99,7 +99,7 @@
             if (elements.heroTotal) elements.heroTotal.textContent = state.publications.length;
 
             const activeCount = state.publications.filter(p => p.isActive === true && !p.yearCeased).length;
-            const archivedCount = state.publications.length - activeCount;
+            const archivedCount = state.publications.filter(p => p.isActive === false).length;
             const cities = new Set(state.publications.map(p => p.city).filter(Boolean));
 
             animateCounter(elements.statActive, activeCount);
