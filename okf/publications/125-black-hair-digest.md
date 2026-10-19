@@ -41,7 +41,13 @@ Previous editor(s): Natasha A. Brooks-Everett.
 
 ## Historical notes
 
-Black Hair Digest was a print periodical about hairdressing, beauty, and fashion, published by Word Up! Video Productions in Paramus and River Edge. Danky and Hady’s 1998 bibliography, entry 866, documents volume 1, number 1 in November 1993, describes a 66-page issue, and names Natasha A. Brooks-Everett as editor. No final issue or cessation date has been verified, and current activity remains unverified.
+Black Hair Digest was a beauty and lifestyle publication launched in 1993 by Word Up! Video Productions and published from Bergen County. Natasha A. Brooks-Everett served as editor during part of the magazine’s run.
+The publication focused on Black hair care, hairstyling, beauty, and fashion, and featured photographs, illustrations, product information, and commercial advertising. Black Hair Digest launched in Paramus during a period of significant growth in Black hair and beauty publishing. Its first issue appeared in 1993, one year after the launch of Hype Hair, which became a major publication in the Black hair and beauty market. Publications and hairstyle look books such as Hype Hair, Sophisticate’s Black Hair Styles, and Black Hair Digest became part of Black salon culture, offering inspiration and information used by stylists, salons, and customers.
+
+
+Black Hair Digest  served readers seeking specialized information about Black hair textures, styling techniques, beauty trends, and personal care. The magazine was part of a broader wave of publications that recognized Black consumers as an important and underserved audience within the beauty and fashion industries. Black Hair Digest offered readers practical information while contributing to a media landscape that affirmed a wider range of Black hairstyles, aesthetics, and beauty standards.
+The Digest was a commercial magazine that included advertising alongside its editorial content.  Businesses such as hair care manufacturers, beauty supply companies, and salons used Black beauty publications to reach consumers. And magazines such as Black Hair Digest, which were devoted to Black hair and beauty, also provided important marketing and educational platforms within the growing beauty industry.
+The date of the last known issue of Black Hair Digest is unclear. One documented issue contained 66 pages and included photographs, some in color, as well as commercial advertising. It measured 20 cm in height.
 
 ## Archive reference
 

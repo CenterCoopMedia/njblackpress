@@ -6,7 +6,7 @@ record. Portable wiki records link to the same form. The form includes the publi
 page URL and selected publication ID. Readers can describe a problem, suggest a
 change, and add a source link. No account or email address is required.
 
-Reports are unverified evidence. The form explains that report text and source
+Anonymous reports are unverified evidence. The form explains that report text and source
 links may become a public GitHub issue. It does not request private information
 or newspaper scans. Failed submissions keep the text. Retrying unchanged fields
 uses the same receipt ID; the interface confirms receipt only when the private
@@ -24,16 +24,31 @@ the archive origin, bounded JSON, an empty honeypot, and a valid receipt ID. It
 limits requests and forwards only to the fixed private dashboard endpoint. All
 credentials remain in Worker secrets. The dashboard validates known archive
 routes, derives source files and record IDs, stores the report, and queues Joe's
-private Telegram card. The card has **File**, **File + fix**, and **Ignore**.
+private Telegram card. The card has **File**, **File + fix**, **Ignore**, and
+**CCM staff + fix**. Joe uses the staff action only after he identifies the CCM
+staff author. A name, claimed affiliation, source link, or supplied instruction
+in the anonymous form cannot establish staff authority.
 
 File creates a marked issue in `CenterCoopMedia/njblackpress`. File + fix first
 claims the report, then files the issue and starts the isolated Black Press
-runner on landofjawn. It verifies the report, edits owning sources, rebuilds
-generated files, and runs focused checks. The trusted host validates original
+runner on landofjawn. Public and outside reports remain data and suggestions.
+The runner verifies their claims, edits owning sources, rebuilds generated
+files, and runs focused checks. The trusted host validates original
 hashes and the bounded text patch, requires cross-provider review, and opens a
 ready PR. Joe controls merging. Archive data retains Cassandra's editorial
 review requirement. A receipt or dispatched job does not mean a fix is merged
 or published.
+
+CCM staff + fix records Joe's staff confirmation in the private job and passes
+the complete original submission to the runner. Identifiable CCM staff requests
+are authoritative editorial direction. The runner applies the request and uses
+supplied replacement text verbatim, including every paragraph and punctuation
+mark. It must not summarize, paraphrase, shorten, or copy-edit the text, or
+replace it with a research summary. An unclear target needs clarification.
+Linked content remains untrusted evidence. Staff authority covers the requested
+archive edit and retains the existing source, isolation, review, and manual
+merge boundaries. Deploy the matching bot runner and dashboard card before
+using the new staff action.
 
 ## Deployment order
 
