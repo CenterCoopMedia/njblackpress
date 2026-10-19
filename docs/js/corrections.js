@@ -107,10 +107,23 @@
     const button = event.target.closest('[data-submit-correction]');
     if (button) open(button);
   });
-  window.addEventListener('hashchange', () => {
-    if (location.hash === '#submit-correction') open(document.querySelector('[data-submit-correction]'));
-  });
-  if (location.hash === '#submit-correction') open(document.querySelector('[data-submit-correction]'));
+  let waitingForPublication = false;
+  function openFromHash() {
+    if (location.hash !== '#submit-correction') return;
+    if (location.pathname.endsWith('/publication.html') && !document.documentElement.dataset.publicationReady) {
+      if (!waitingForPublication) {
+        waitingForPublication = true;
+        document.addEventListener('publication-ready', () => {
+          waitingForPublication = false;
+          openFromHash();
+        }, { once: true });
+      }
+      return;
+    }
+    open(document.querySelector('[data-submit-correction][data-correction-title]') || document.querySelector('[data-submit-correction]'));
+  }
+  window.addEventListener('hashchange', openFromHash);
+  openFromHash();
 
   form.addEventListener('submit', async event => {
     event.preventDefault();

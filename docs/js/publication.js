@@ -833,11 +833,20 @@
             .replace(/'/g, '&#39;');
     }
 
+    async function initWithContext() {
+        try {
+            await init();
+        } finally {
+            document.documentElement.dataset.publicationReady = 'true';
+            document.dispatchEvent(new Event('publication-ready'));
+        }
+    }
+
     // Initialize when DOM is ready
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
+        document.addEventListener('DOMContentLoaded', initWithContext);
     } else {
-        init();
+        initWithContext();
     }
 
 })();
