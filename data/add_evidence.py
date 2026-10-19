@@ -107,7 +107,8 @@ def derive_metadata(publications, evidence_count):
         "decades": sorted(values("decade"), key=lambda d: int(d[:-1]) if d != "Unknown" else 9999),
         "formats": sorted(values("format")),
         "activeCount": active,
-        "ceasedCount": len(publications) - active,
+        "ceasedCount": sum(1 for p in publications if p.get("isActive") is False),
+        "unknownStatusCount": sum(1 for p in publications if p.get("isActive") is None),
         "evidenceCount": evidence_count,
     }
 

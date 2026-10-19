@@ -232,32 +232,20 @@
     {
       "id": 28,
       "name": "Black Newark",
-      "alternateName": "Black News (1969), Black New Ark (1972-1974)",
+      "alternateName": null,
       "city": "Newark",
       "founders": [],
       "publishers": [
-        "Committee for Unified Newark"
+        "Black People of Newark"
       ],
       "keyStaff": [
         {
           "name": "Abu Ansar",
           "role": "Editor (April-November 1968)"
-        },
-        {
-          "name": "Yusef Iman",
-          "role": "Editor (January 1970)"
-        },
-        {
-          "name": "Daoud Abdullah",
-          "role": "Editor (January 1970)"
-        },
-        {
-          "name": "Simba Risasi",
-          "role": "Editor (April-May 1972)"
         }
       ],
       "yearFounded": 1968,
-      "yearCeased": 1974,
+      "yearCeased": 1968,
       "frequency": "Monthly",
       "medium": "Print",
       "format": "Newspaper",
@@ -266,7 +254,7 @@
       ],
       "primaryFocus": "Politics, news, protest literature, Black self-determination",
       "missionStatement": "The Voice of New Ark's Inner City.",
-      "historicalNotes": "Emerged during intense political organizing following the 1967 Newark uprising. Served Newark's Black communities with reporting on local politics, grassroots activism, and cultural development. Editors were associated with activist and nationalist circles. Like many movement-based newspapers, it faced chronic financial challenges relying on donations, volunteer labor, and limited advertising. Publication gaps, title changes, and organizational strain led to eventual discontinuation.",
+      "historicalNotes": "This record represents the title Black Newark as cataloged by the Library of Congress, LCCN sn2001062056, rather than the complete newspaper lineage. That record describes volume 1, number 1, April 1968, through volume 1, number 3, November 1968, published by Black People of Newark. The April 1968 issue’s imprint confirms the publisher and identifies Abu Ansar among the staff. The related titles continued as Black News in 1969 and Black New Ark in the early 1970s. Black New Ark still appears on volume 3, number 1, January–February 1974; Unity and Struggle appears on volume 3, number 2, February–March 1974. Later issues are successors, not evidence that the 1968 title continued unchanged to 1974. The papers were associated with Amiri Baraka and Newark’s Black liberation organizing. Their digitized lineage is available in Rutgers’ Newark Black Newspapers Collection, record 128. Unity and Struggle has its own publication record, 84. These newspapers were published through the post-rebellion period of Newark, serving as tools for organizing and advocating for Black liberation and political and economic agency for Newark's majority Black citizenry. Baraka served as chairman of CFUN from 1968 to 1975. The movement documented in these papers contributed to the Black and Puerto Rican alliance that led to the election of Newark's first Black mayor, Kenneth Gibson, in 1970. The newspapers also covered Baraka's community-based initiatives addressing housing conditions, failing schools, and economic opportunities, including the Kawaida Towers apartment project and NJR-32 urban renewal project. The collection is digitized and searchable through the Rutgers Dana Library Newark Black Newspapers Collection. Additional copies are held at the NYU Tamiment Library and the Auburn Avenue Research Library. Scholarly treatment includes Jennifer Caroccio Maldonado's article 'Putting the Black Ink Back into Print: Black Newark/Black New Ark' in New Jersey Studies: An Interdisciplinary Journal 8(1), Winter 2022, pp. 34-49.",
       "archiveUrl": "https://www.loc.gov/item/sn2001062056/",
       "physicalArchive": "New York University (original, dated 1968:4)",
       "tags": [
@@ -293,7 +281,7 @@
       ],
       "keyStaff": [],
       "yearFounded": 1970,
-      "yearCeased": 1975,
+      "yearCeased": null,
       "frequency": "Monthly",
       "medium": "Print",
       "format": "Periodical/Newspaper",
@@ -303,7 +291,7 @@
       ],
       "primaryFocus": "Labor, trade unions, workplace rights, United Black Workers",
       "missionStatement": "To help educate, expose, inform, and even agitate our fellow workers out of a feeling of complacency and frustration. Its further purpose is to assist in dealing realistically with the many problems facing workers on the job, in the community and around the world.",
-      "historicalNotes": "Published by United Black Workers, serving African American industrial workers, especially those at the Ford Mahwah Assembly Plant, during growing labor activism and racial discrimination in New Jersey manufacturing. Functioned as an internal communication and mobilization tool for Black workers seeking fair treatment and workplace rights. Relied on low-cost, self-published distribution rather than commercial advertising.",
+      "historicalNotes": "The Black Voice was published by the United Black Workers in Newark and served Black industrial workers, including those at Ford’s Mahwah plant. Volume 5, number 2, printed page 2, reports that the paper began in 1970, supporting the founding field. The undated volume 6, number 2, printed page 8, discusses events as occurring in 1976. That internal wording supports publication in 1976 or later and contradicts an exact 1975 end, but does not prove a 1976 cessation. Danky and Hady’s 1975? end and the Wisconsin union list’s holdings through June 1975 are uncertain catalog or holdings statements. The final year remains unknown. This title is distinct from Black Voice News in California and the Rutgers student publication Black Voice/Carta Boricua. The microfilm is held at Newark Public Library’s Charles F. Cummings New Jersey Information Center. Contact njreference@npl.org or 973-733-7775 for access. This paper is also distinct from The Black Voice at Syracuse University, a student publication founded in 1969.",
       "archiveUrl": "https://libcom.org/article/black-voice",
       "physicalArchive": null,
       "tags": [
@@ -328,12 +316,18 @@
         "Committee for Unified Newark"
       ],
       "publishers": [
-        "Committee for Unified Newark"
+        "Congress of Afrikan People",
+        "Revolutionary Communist League"
       ],
-      "keyStaff": [],
+      "keyStaff": [
+        {
+          "name": "Komozi Woodard",
+          "role": "Editor (tenure not established)"
+        }
+      ],
       "yearFounded": 1974,
-      "yearCeased": 1978,
-      "frequency": "Monthly",
+      "yearCeased": null,
+      "frequency": "Varied; twice monthly announced October 1974",
       "medium": "Print",
       "format": "Newspaper/Periodical",
       "languages": [
@@ -341,7 +335,7 @@
       ],
       "primaryFocus": "Socialism, Black Liberation movement, politics, education, employment, housing, health",
       "missionStatement": "The Struggle Continues.",
-      "historicalNotes": "A political periodical published by the Committee for Unified Newark, which later became the Congress of African Peoples and then the Revolutionary Communist League (Marxist-Leninist-Mao Tse-tung Thought). Addressed community self-determination, Black political education, anti-racist organizing, and socialist theory. Reflected CFUN's ideological evolution from Black nationalism toward Marxist-Leninist frameworks. An important record of how local Newark movements engaged with national debates around liberation and socialism.",
+      "historicalNotes": "Unity and Struggle succeeded Black New Ark in early 1974. Volume 3, number 1, January–February 1974, still bears Black New Ark; volume 3, number 2, February–March 1974, bears Unity and Struggle. The 1974 founding field refers to this title, while 1972 belongs to its predecessor history. It was the newspaper of the Congress of Afrikan People and later the Revolutionary Communist League. A surviving 1979 issue, volume 8, numbers 4–9, identifies the latter organization and contradicts the former 1978 end year. The final publication year is unknown, so no exact cessation year is entered. The October 1974 first edition, volume 3, number 10, announces twice-monthly publication, which does not establish one schedule for the entire run. The Rutgers/Newark History Society collection description identifies Komozi Woodard as an editor without establishing his complete tenure. Earlier related titles include Black Newark, Black News, and Black New Ark. The paper covered topics including African liberation, trade unions, factory organizing, and Black political conventions. The August 1974 issue featured coverage of the All-Afrikan Women's Conference held in Newark. The history of CAP was first published in Vol. V, No. 6 (June 1976). Digitized issues are available through the Rutgers Dana Library Newark Black Newspapers Collection (collections.libraries.rutgers.edu/newark-black-newspapers) and individual issues through RiseUp Newark (riseupnewark.com), with credit to the NYU Tamiment Library. Physical copies are held at the Komozi Woodard Amiri Baraka Collection at the Auburn Avenue Research Library, with a distribution list from 1975 preserved in the archive.",
       "archiveUrl": "https://www.marxists.org/history/erol/periodicals/unity-struggle/index.htm",
       "physicalArchive": null,
       "tags": [
@@ -620,7 +614,12 @@
       "publishers": [
         "Kamau Kujichagulia"
       ],
-      "keyStaff": [],
+      "keyStaff": [
+        {
+          "name": "Kamau Kujichagulia",
+          "role": "Publisher emeritus (April 2024 issue)"
+        }
+      ],
       "yearFounded": 1989,
       "yearCeased": null,
       "frequency": null,
@@ -631,8 +630,8 @@
       ],
       "primaryFocus": "News, African-American community, Hispanic community",
       "missionStatement": "New Jersey's only African-American-Hispanic news source.",
-      "historicalNotes": "A long-running publication serving both African-American and Hispanic communities in the Trenton area, notable for its bilingual and multicultural focus.",
-      "archiveUrl": null,
+      "historicalNotes": "The Nubian News serves Trenton’s Black and Hispanic communities. Its February 5, 2021 issue dates its establishment to September 9, 1989. The July 31, 2022 issue announces the end of that print run, so uninterrupted print publication is not established. A publisher-hosted April 2024 joint issue bears The Nubian News and El Latino News names, states a print run of 5,000 copies, and names Kamau Kujichagulia as publisher emeritus. The later issue prevents treating 2022 as the title’s final publication year. The State Library’s 1989–2004 range describes historical holdings, not the full publication run. Digitized issues are available on the publisher’s website. Current activity and cadence in 2026 remain unverified; a recent issue is needed. Earlier archive research also recorded the podcast On The Case; its current schedule has not been checked.",
+      "archiveUrl": "https://www.thenubiannews.com/",
       "physicalArchive": null,
       "tags": [
         "Trenton",

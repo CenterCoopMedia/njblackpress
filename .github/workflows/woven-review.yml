@@ -13,6 +13,10 @@ on:
       - 'scripts/build_sitemap.py'
       - 'data/test_site_metadata.py'
       - 'data/test_publication_record.py'
+      - 'data/activity.py'
+      - 'data/test_activity.py'
+      - 'data/convert_csv.py'
+      - 'data/requirements-images.txt'
       - 'data/add_evidence.py'
       - 'data/publications.json'
       - 'data/research/source-catalog.json'
@@ -71,10 +75,11 @@ jobs:
         run: |
           npm ci
           npm run build:css
-          python3 -m pip install pillow
+          python3 -m pip install -r data/requirements-images.txt
           python3 data/test_site_data.py
           python3 data/test_site_metadata.py
           python3 data/test_publication_record.py
+          python3 data/test_activity.py
           python3 data/test_design_system.py
           python3 data/test_map.py
           python3 data/test_wiki_publications.py

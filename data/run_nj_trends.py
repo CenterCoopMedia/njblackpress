@@ -44,7 +44,8 @@ def dataset_trends() -> dict:
     return {
         "total": len(pubs),
         "active": sum(1 for p in pubs if p.get("isActive")),
-        "ceased": sum(1 for p in pubs if not p.get("isActive")),
+        "ceased": sum(1 for p in pubs if p.get("isActive") is False),
+        "unverified_or_resource": sum(1 for p in pubs if p.get("isActive") is None),
         "pre1950": len(pre1950),
         "newspaper_format": len(newspapers),
         "foundings_by_decade": dict(sorted(decades.items())),

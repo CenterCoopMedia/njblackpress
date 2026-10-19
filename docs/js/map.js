@@ -41,7 +41,9 @@
 
     function formatYears(publication, asOfYear) {
         const founded = Number.isInteger(publication.yearFounded) ? publication.yearFounded : 'Year unknown';
-        const ceased = Number.isInteger(publication.yearCeased) ? publication.yearCeased : `present (as of ${asOfYear})`;
+        const ceased = Number.isInteger(publication.yearCeased)
+            ? publication.yearCeased
+            : publication.isActive ? `present (as of ${asOfYear})` : 'end year unknown';
         return `${founded}–${ceased}`;
     }
 

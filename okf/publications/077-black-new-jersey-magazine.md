@@ -7,7 +7,7 @@ tags:
   - "nj-black-press"
   - "publication"
   - "atlantic-city"
-  - "1980s"
+  - "unknown"
   - "periodicals"
 timestamp: "2026-06-29"
 archive_id: 77
@@ -20,12 +20,12 @@ featured: false
 | Field | Value |
 |---|---|
 | Archive id | 77 |
-| Alternate name | Unknown |
+| Alternate name | Formerly Black Atlantic City Magazine |
 | City | [Atlantic City](../cities/atlantic-city.md) |
 | Publishers or owners | BAC Pub |
-| Active years | 1988–1990 |
-| Status | Ceased 1990 |
-| Decade | [1980s](../decades/1980s.md) |
+| Active years | ?–? |
+| Status | Ceased (date unknown) |
+| Decade | [Unknown](../decades/unknown.md) |
 | Format | [Periodicals](../formats/periodicals.md) |
 | Medium | [Print](../mediums/print.md) |
 | Frequency | Bimonthly |
@@ -39,7 +39,7 @@ Previous editor(s): Barbara Johnson.
 
 ## Historical notes
 
-A March 2026 search found that the magazine continued from Black Atlantic City Magazine (ID 119) and appeared as Black New Jersey Magazine from 1987 to 1990, according to the ACFPL bibliography.
+Atlantic City Free Public Library’s Heston guide lists Black New Jersey Magazine for 1987–1990 and identifies Black Atlantic City Magazine, record 119, as its former title. These are library collection dates until the issues are checked, not verified first and final publication dates. Danky and Hady, entry 935, page 91, records a March/April 1988 holding; that issue does not establish a 1988 launch. The former exact 1988 founding and 1990 cessation fields are omitted pending first- and last-issue checks. The Heston guide and its online bibliography describe the same collection and are not independent confirmations.
 
 ## Archive reference
 
@@ -54,22 +54,21 @@ OCLC No. 36835907.
 - [Front Runner New Jersey](006-front-runner-new-jersey.md) — 2017–present
 - [Atlantic City Focus](025-atlantic-city-focus.md) — 2022–present
 
-### Also from the 1980s
+### Also from the Unknown
 
-- [Bootstrap](074-bootstrap.md) — 1981–1983
-- [Right On! Focus](083-right-on-focus.md) — 1982–1985
-- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — 1982–1991
-- [The Connection Newspaper](131-the-connection-newspaper.md) — 1982–1991
-- [City News](013-city-news.md) — 1983–2003
-- [Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women](130-communique-quarterly-newsletter-of-the-new-jersey-coalition-of-100-black-women.md) — 1983–1988
-- [Right On! Presents Class](096-right-on-presents-class.md) — 1983–1985
-- [Update](104-update.md) — 1983–1988
-- …and 12 more
+- [New Jersey Deadline](050-new-jersey-deadline.md) — ?–?
+- [New Jersey Record](014-new-jersey-record.md) — ?–?
+- [Newark Black Newspapers Collection | Digital Collections](128-newark-black-newspapers-collection-digital-collections.md) — Collection coverage; see notes
+- [Newark Community Union Project News](076-newark-community-union-project-news.md) — ?–?
+- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — ?–?
+- [The Connection Newspaper](131-the-connection-newspaper.md) — ?–?
+- [The Forum](039-the-forum.md) — ?–?
+- [The Jersey Express](002-the-jersey-express.md) — ?–?
 
 ## Navigate
 
 - [Wiki home](../index.md)
 - [All Atlantic City publications](../cities/atlantic-city.md)
-- [All 1980s publications](../decades/1980s.md)
+- [All Unknown publications](../decades/unknown.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

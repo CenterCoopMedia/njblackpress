@@ -7,12 +7,12 @@ tags:
   - "format"
   - "magazine"
 timestamp: "2026-06-29"
-count: 6
+count: 7
 ---
 
 # Magazine
 
-**6** publications in this format grouping · **0** active · founding years **1971–1994**.
+**7** publications in this format grouping · **0** active · founding years **1971–1994**.
 
 ## Publications
 
@@ -21,6 +21,7 @@ count: 6
 | [Right On!](../publications/095-right-on.md) | 1971–2014 | Ceased 2014 |
 | [Kuumba: The Black Voice Magazine](../publications/100-kuumba-the-black-voice-magazine.md) | 1974–1975 | Ceased 1975 |
 | [Right On! Presents Class](../publications/096-right-on-presents-class.md) | 1983–1985 | Ceased 1985 |
+| [Word Up!](../publications/114-word-up.md) | 1987–? | Ceased (date unknown) |
 | [Gospel Today Magazine](../publications/118-gospel-today-magazine.md) | 1989–2013 | Ceased 2013 |
 | [Fotorama](../publications/078-fotorama.md) | 1993–1995 | Ceased 1995 |
 | [Today's Black Woman](../publications/063-today-s-black-woman.md) | 1994–2012 | Ceased 2012 |

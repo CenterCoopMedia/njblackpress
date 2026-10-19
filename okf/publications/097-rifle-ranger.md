@@ -41,7 +41,6 @@ OCLC no. 277250656.
 
 ### Also from the 1930s
 
-- [The Jersey Express](002-the-jersey-express.md) — 1932–1940
 - [Camp Berlin Broadcast](102-camp-berlin-broadcast.md) — 1934–1935
 - [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
 - [Ash Can](048-ash-can.md) — 1935–1935
@@ -49,7 +48,8 @@ OCLC no. 277250656.
 - [Penn Crusader](136-penn-crusader.md) — 1936–1940
 - [Pine Needle](137-pine-needle.md) — 1936–1940
 - [Sixty Niner](089-sixty-niner.md) — 1936–1941
-- …and 4 more
+- [Dias Creek Echo](094-dias-creek-echo.md) — 1938–1938
+- …and 3 more
 
 ## Navigate
 

@@ -34,14 +34,6 @@
           "isActive": false
         },
         {
-          "id": 77,
-          "name": "Black New Jersey Magazine",
-          "city": "Atlantic City",
-          "yearFounded": 1988,
-          "yearCeased": 1990,
-          "isActive": false
-        },
-        {
           "id": 6,
           "name": "Front Runner New Jersey",
           "city": "Atlantic City",
@@ -56,6 +48,14 @@
           "yearFounded": 2022,
           "yearCeased": null,
           "isActive": true
+        },
+        {
+          "id": 77,
+          "name": "Black New Jersey Magazine",
+          "city": "Atlantic City",
+          "yearFounded": null,
+          "yearCeased": null,
+          "isActive": false
         }
       ]
     },
@@ -214,7 +214,7 @@
           "city": "Chicago/National",
           "yearFounded": 1974,
           "yearCeased": null,
-          "isActive": true
+          "isActive": null
         }
       ]
     },
@@ -288,7 +288,7 @@
           "name": "Essex Forum",
           "city": "East Orange",
           "yearFounded": 1972,
-          "yearCeased": 1985,
+          "yearCeased": null,
           "isActive": false
         },
         {
@@ -527,19 +527,19 @@
       "precision": "municipality_center",
       "publications": [
         {
-          "id": 2,
-          "name": "The Jersey Express",
-          "city": "Montclair",
-          "yearFounded": 1932,
-          "yearCeased": 1940,
-          "isActive": false
-        },
-        {
           "id": 121,
           "name": "Testimony: A Journal of African-American Poetry",
           "city": "Montclair",
           "yearFounded": 1987,
           "yearCeased": 1990,
+          "isActive": false
+        },
+        {
+          "id": 2,
+          "name": "The Jersey Express",
+          "city": "Montclair",
+          "yearFounded": null,
+          "yearCeased": null,
           "isActive": false
         }
       ]
@@ -698,14 +698,6 @@
           "isActive": false
         },
         {
-          "id": 76,
-          "name": "Newark Community Union Project News",
-          "city": "Newark",
-          "yearFounded": 1963,
-          "yearCeased": 1965,
-          "isActive": false
-        },
-        {
           "id": 62,
           "name": "Afro-American Festival of the Arts Magazine",
           "city": "Newark",
@@ -734,14 +726,14 @@
           "name": "Black Newark",
           "city": "Newark",
           "yearFounded": 1968,
-          "yearCeased": 1974,
+          "yearCeased": 1968,
           "isActive": false
         },
         {
           "id": 69,
           "name": "The Cricket: Black Music in Evolution",
           "city": "Newark",
-          "yearFounded": 1969,
+          "yearFounded": 1968,
           "yearCeased": 1969,
           "isActive": false
         },
@@ -758,15 +750,7 @@
           "name": "The Black Voice",
           "city": "Newark",
           "yearFounded": 1970,
-          "yearCeased": 1975,
-          "isActive": false
-        },
-        {
-          "id": 39,
-          "name": "The Forum",
-          "city": "Newark",
-          "yearFounded": 1970,
-          "yearCeased": 1980,
+          "yearCeased": null,
           "isActive": false
         },
         {
@@ -810,19 +794,19 @@
           "isActive": false
         },
         {
-          "id": 84,
-          "name": "Unity and Struggle",
-          "city": "Newark",
-          "yearFounded": 1972,
-          "yearCeased": 1978,
-          "isActive": false
-        },
-        {
           "id": 115,
           "name": "Monthly Black Periodicals Selection Review",
           "city": "Newark",
           "yearFounded": 1973,
           "yearCeased": 1980,
+          "isActive": false
+        },
+        {
+          "id": 84,
+          "name": "Unity and Struggle",
+          "city": "Newark",
+          "yearFounded": 1974,
+          "yearCeased": null,
           "isActive": false
         },
         {
@@ -919,7 +903,7 @@
           "city": "Newark",
           "yearFounded": null,
           "yearCeased": null,
-          "isActive": true
+          "isActive": null
         },
         {
           "id": 14,
@@ -927,7 +911,23 @@
           "city": "Newark",
           "yearFounded": null,
           "yearCeased": null,
-          "isActive": true
+          "isActive": null
+        },
+        {
+          "id": 76,
+          "name": "Newark Community Union Project News",
+          "city": "Newark",
+          "yearFounded": null,
+          "yearCeased": null,
+          "isActive": false
+        },
+        {
+          "id": 39,
+          "name": "The Forum",
+          "city": "Newark",
+          "yearFounded": null,
+          "yearCeased": null,
+          "isActive": false
         }
       ]
     },
@@ -964,6 +964,14 @@
           "isActive": false
         },
         {
+          "id": 114,
+          "name": "Word Up!",
+          "city": "Paramus",
+          "yearFounded": 1987,
+          "yearCeased": null,
+          "isActive": false
+        },
+        {
           "id": 124,
           "name": "The Best of Rap & R&B",
           "city": "Paramus",
@@ -977,14 +985,6 @@
           "city": "Paramus",
           "yearFounded": 1990,
           "yearCeased": 2001,
-          "isActive": false
-        },
-        {
-          "id": 114,
-          "name": "Word Up!",
-          "city": "Paramus",
-          "yearFounded": 1990,
-          "yearCeased": 2012,
           "isActive": false
         },
         {
@@ -1082,7 +1082,7 @@
           "name": "Black Voice/Carta Boricua",
           "city": "Piscataway",
           "yearFounded": 1970,
-          "yearCeased": 2015,
+          "yearCeased": null,
           "isActive": false
         },
         {
@@ -1315,16 +1315,16 @@
           "id": 5,
           "name": "The Connection / North Jersey Connection",
           "city": "Teaneck",
-          "yearFounded": 1982,
-          "yearCeased": 1991,
+          "yearFounded": null,
+          "yearCeased": null,
           "isActive": false
         },
         {
           "id": 131,
           "name": "The Connection Newspaper",
           "city": "Teaneck",
-          "yearFounded": 1982,
-          "yearCeased": 1991,
+          "yearFounded": null,
+          "yearCeased": null,
           "isActive": false
         }
       ]
@@ -1356,8 +1356,8 @@
           "id": 73,
           "name": "Utimme Umana/La Voz Oculta",
           "city": "Trenton",
-          "yearFounded": 1968,
-          "yearCeased": 1990,
+          "yearFounded": 1972,
+          "yearCeased": null,
           "isActive": false
         },
         {
@@ -1382,7 +1382,7 @@
           "city": "Trenton",
           "yearFounded": 1989,
           "yearCeased": null,
-          "isActive": true
+          "isActive": null
         },
         {
           "id": 32,
@@ -1494,8 +1494,8 @@
       "name": "Newark Black Newspapers Collection | Digital Collections",
       "city": null,
       "yearFounded": null,
-      "yearCeased": 1979,
-      "isActive": false,
+      "yearCeased": null,
+      "isActive": null,
       "reason": "The source does not record a municipality."
     }
   ]

@@ -11,7 +11,7 @@ tags:
   - "unknown"
 timestamp: "2026-06-29"
 archive_id: 14
-status: "active"
+status: "unverified"
 featured: false
 ---
 
@@ -23,8 +23,8 @@ featured: false
 | Alternate name | Unknown |
 | City | [Newark](../cities/newark.md) |
 | Publishers or owners | Unknown |
-| Active years | ?–present |
-| Status | Active |
+| Active years | ?–? |
+| Status | Activity unverified |
 | Decade | [Unknown](../decades/unknown.md) |
 | Format | [Unknown](../formats/unknown.md) |
 | Medium | [Print](../mediums/print.md) |
@@ -35,7 +35,7 @@ featured: false
 
 ## Historical notes
 
-No verifiable record found for an African American newspaper specifically titled 'New Jersey Record' published in Newark. Extensive searches of the Library of Congress newspaper directory, Chronicling America, Newark Public Library digital collections, Rutgers University Libraries, and the Wikipedia list of African-American newspapers in New Jersey returned no matches for this title. It is possible this title has been conflated with the 'New Jersey Afro American' (1941-1991, Newark edition of the Afro-American chain) or another Newark publication. The name may also refer to a short-lived or hyper-local publication not indexed in major catalogs. Recommended: Contact the Newark Public Library's Charles F. Cummings NJ Information Center at njreference@npl.org or (973) 733-7775, or the James Brown African American Room, for verification. A March 2026 search found no records and no founding year, so no cessation date can be estimated. The search found no web presence for the title as a Black publication. The name may be a variant of another title or a misattribution.
+The exact identity and publication dates of this Newark title remain unverified. A 1977 New Jersey Historical Commission newspaper directory is a research lead for a Black weekly named New Jersey Record, with an approximate 1942–1951 range. That directory entry has not been inspected here, so neither year is entered as an exact publication date. The record must not be conflated with the Newark edition of the Afro-American without title-level evidence. Current activity is unverified. For title verification, contact Newark Public Library’s Charles F. Cummings New Jersey Information Center at njreference@npl.org or 973-733-7775, or its James Brown African American Room.
 
 ## Related publications
 
@@ -53,8 +53,14 @@ No verifiable record found for an African American newspaper specifically titled
 
 ### Also from the Unknown
 
-- [New Jersey Deadline](050-new-jersey-deadline.md) — ?–present
-- [Newark Black Newspapers Collection | Digital Collections](128-newark-black-newspapers-collection-digital-collections.md) — ?–1979
+- [Black New Jersey Magazine](077-black-new-jersey-magazine.md) — ?–?
+- [New Jersey Deadline](050-new-jersey-deadline.md) — ?–?
+- [Newark Black Newspapers Collection | Digital Collections](128-newark-black-newspapers-collection-digital-collections.md) — Collection coverage; see notes
+- [Newark Community Union Project News](076-newark-community-union-project-news.md) — ?–?
+- [The Connection / North Jersey Connection](005-the-connection-north-jersey-connection.md) — ?–?
+- [The Connection Newspaper](131-the-connection-newspaper.md) — ?–?
+- [The Forum](039-the-forum.md) — ?–?
+- [The Jersey Express](002-the-jersey-express.md) — ?–?
 
 ## Navigate
 

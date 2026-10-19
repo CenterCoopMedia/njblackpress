@@ -24,15 +24,15 @@ All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [Atlantic City Focus](publications/025-atlantic-city-focus.md) | Atlantic City | 2022–present | Active |
 | [Black Atlantic City Magazine](publications/119-black-atlantic-city-magazine.md) | Atlantic City | 1978–1986 | Ceased 1986 |
 | [Black Book Connection, Inc. Newsletter](publications/085-black-book-connection-inc-newsletter.md) | West Orange | 1992–1995 | Ceased 1995 |
-| [Black Caucus of ALA Newsletter](publications/099-black-caucus-of-ala-newsletter.md) | Chicago/National | 1974–present | Active |
+| [Black Caucus of ALA Newsletter](publications/099-black-caucus-of-ala-newsletter.md) | Chicago/National | 1974–? | Activity unverified |
 | [Black Hair Digest](publications/125-black-hair-digest.md) | River Edge | 1993–1996 | Ceased 1996 |
 | [Black In Jersey](publications/004-black-in-jersey.md) ⭐ | Trenton | 2021–present | Active |
 | [Black Journal](publications/052-black-journal.md) | Jersey City | 1979–1985 | Ceased 1985 |
-| [Black New Jersey Magazine](publications/077-black-new-jersey-magazine.md) | Atlantic City | 1988–1990 | Ceased 1990 |
-| [Black Newark](publications/028-black-newark.md) ⭐ | Newark | 1968–1974 | Ceased 1974 |
+| [Black New Jersey Magazine](publications/077-black-new-jersey-magazine.md) | Atlantic City | ?–? | Ceased (date unknown) |
+| [Black Newark](publications/028-black-newark.md) ⭐ | Newark | 1968–1968 | Ceased 1968 |
 | [Black Racers Yearbook](publications/064-black-racers-yearbook.md) | Trenton | 1974–1974 | Ceased 1974 |
 | [Black Truth Bulletin](publications/127-black-truth-bulletin.md) | Unknown | 1978–1982 | Ceased 1982 |
-| [Black Voice/Carta Boricua](publications/098-black-voice-carta-boricua.md) | Piscataway | 1970–2015 | Ceased 2015 |
+| [Black Voice/Carta Boricua](publications/098-black-voice-carta-boricua.md) | Piscataway | 1970–? | Ceased (date unknown) |
 | [Black Women’s United Front Newsletter](publications/126-black-women-s-united-front-newsletter.md) ⭐ | Newark | 1976–1976 | Ceased 1976 |
 | [Bootstrap](publications/074-bootstrap.md) | Newark | 1981–1983 | Ceased 1983 |
 | [Braids & Beauty](publications/092-braids-and-beauty.md) | Paramus | 1994–1995 | Ceased 1995 |
@@ -50,7 +50,7 @@ All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [Educational Perspectives](publications/108-educational-perspectives.md) | Cherry Hill | 1978–1985 | Ceased 1985 |
 | [En Avant](publications/059-en-avant.md) | Newark | 1972–1975 | Ceased 1975 |
 | [En Avant: Bulletin pour le development de la mobilisation patriotique](publications/134-en-avant-bulletin-pour-le-development-de-la-mobilisation-patriotique.md) | Newark | 1972–1975 | Ceased 1975 |
-| [Essex Forum](publications/042-essex-forum.md) | East Orange | 1972–1985 | Ceased 1985 |
+| [Essex Forum](publications/042-essex-forum.md) | East Orange | 1972–? | Ceased (date unknown) |
 | [Faithfully Magazine](publications/029-faithfully-magazine.md) | Hillside | 2016–present | Active |
 | [Fire II](publications/080-fire-ii.md) | Trenton | 1975–1978 | Ceased 1978 |
 | [Five Wards Media](publications/012-five-wards-media.md) | Newark | 2021–present | Active |
@@ -74,13 +74,13 @@ All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [More Jersey](publications/036-more-jersey.md) | Statewide (New Jersey) | 2022–present | Active |
 | [New Jersey Afro-American](publications/035-new-jersey-afro-american.md) ⭐ | Newark | 1941–1991 | Ceased 1991 |
 | [New Jersey After Hours](publications/101-new-jersey-after-hours.md) | Newark | 1949–1980 | Ceased 1980 |
-| [New Jersey Deadline](publications/050-new-jersey-deadline.md) | Newark | ?–present | Active |
+| [New Jersey Deadline](publications/050-new-jersey-deadline.md) | Newark | ?–? | Activity unverified |
 | [New Jersey Herald News](publications/016-new-jersey-herald-news.md) | Newark | 1938–1966 | Ceased 1966 |
-| [New Jersey Record](publications/014-new-jersey-record.md) | Newark | ?–present | Active |
+| [New Jersey Record](publications/014-new-jersey-record.md) | Newark | ?–? | Activity unverified |
 | [New Jersey Trumpet](publications/038-new-jersey-trumpet.md) ⭐ | Newark | 1887–1897 | Ceased 1897 |
 | [New Jersey Urban News](publications/020-new-jersey-urban-news.md) ⭐ | Newark | 2018–present | Active |
-| [Newark Black Newspapers Collection | Digital Collections](publications/128-newark-black-newspapers-collection-digital-collections.md) | Unknown | ?–1979 | Ceased 1979 |
-| [Newark Community Union Project News](publications/076-newark-community-union-project-news.md) | Newark | 1963–1965 | Ceased 1965 |
+| [Newark Black Newspapers Collection | Digital Collections](publications/128-newark-black-newspapers-collection-digital-collections.md) | Unknown | Collection coverage; see notes | Digital collection |
+| [Newark Community Union Project News](publications/076-newark-community-union-project-news.md) | Newark | ?–? | Ceased (date unknown) |
 | [Ngoma](publications/111-ngoma.md) | Newark | 1971–1976 | Ceased 1976 |
 | [Nite Lite](publications/021-nite-lite.md) | Newark | 1959–1965 | Ceased 1965 |
 | [NJ in Color](publications/019-nj-in-color.md) | Leonia | 2019–present | Active |
@@ -107,19 +107,19 @@ All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [The Best of Rap & R&B](publications/124-the-best-of-rap-and-r-and-b.md) | Paramus | 1988–2001 | Ceased 2001 |
 | [The Black Observer](publications/033-the-black-observer.md) | Camden | 1968–1970 | Ceased 1970 |
 | [The Black Sociologist](publications/123-the-black-sociologist.md) | New Brunswick | 1972–1982 | Ceased 1982 |
-| [The Black Voice](publications/107-the-black-voice.md) ⭐ | Newark | 1970–1975 | Ceased 1975 |
+| [The Black Voice](publications/107-the-black-voice.md) ⭐ | Newark | 1970–? | Ceased (date unknown) |
 | [The Camden News](publications/003-the-camden-news.md) | Camden | 1915–1918 | Ceased 1918 |
 | [The Citizen](publications/007-the-citizen.md) | Princeton | 1909–1915 | Ceased 1915 |
-| [The Connection / North Jersey Connection](publications/005-the-connection-north-jersey-connection.md) | Teaneck | 1982–1991 | Ceased 1991 |
-| [The Connection Newspaper](publications/131-the-connection-newspaper.md) | Teaneck | 1982–1991 | Ceased 1991 |
-| [The Cricket: Black Music in Evolution](publications/069-the-cricket-black-music-in-evolution.md) | Newark | 1969–1969 | Ceased 1969 |
+| [The Connection / North Jersey Connection](publications/005-the-connection-north-jersey-connection.md) | Teaneck | ?–? | Ceased (date unknown) |
+| [The Connection Newspaper](publications/131-the-connection-newspaper.md) | Teaneck | ?–? | Ceased (date unknown) |
+| [The Cricket: Black Music in Evolution](publications/069-the-cricket-black-music-in-evolution.md) | Newark | 1968–1969 | Ceased 1969 |
 | [The Echo](publications/031-the-echo.md) ⭐ | Long Branch/Red Bank | 1904–1943 | Ceased 1943 |
-| [The Forum](publications/039-the-forum.md) | Newark | 1970–1980 | Ceased 1980 |
+| [The Forum](publications/039-the-forum.md) | Newark | ?–? | Ceased (date unknown) |
 | [The Franklin Voice](publications/044-the-franklin-voice.md) | Somerset | 1996–2000 | Ceased 2000 |
 | [The Hart Fund](publications/122-the-hart-fund.md) | Newark | 1972–1978 | Ceased 1978 |
 | [The Hiram Star-News](publications/079-the-hiram-star-news.md) | Vauxhall | 1947–1955 | Ceased 1955 |
 | [The Ironsides Echo](publications/057-the-ironsides-echo.md) | Bordentown | 1917–1955 | Ceased 1955 |
-| [The Jersey Express](publications/002-the-jersey-express.md) | Montclair | 1932–1940 | Ceased 1940 |
+| [The Jersey Express](publications/002-the-jersey-express.md) | Montclair | ?–? | Ceased (date unknown) |
 | [The Jersey Heritage](publications/116-the-jersey-heritage.md) | Jersey City | 1992–1996 | Ceased 1996 |
 | [The Landscape](publications/034-the-landscape.md) | Saddle River | 1881–1901 | Ceased 1901 |
 | [The Liberator](publications/018-the-liberator.md) | Paterson | 1950–1955 | Ceased 1955 |
@@ -133,7 +133,7 @@ All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [The Newark Herald](publications/009-the-newark-herald.md) ⭐ | Newark | 1928–1939 | Ceased 1939 |
 | [The Newark Times](publications/023-the-newark-times.md) | Newark | 2014–present | Active |
 | [The Northern New Jersey Informer](publications/011-the-northern-new-jersey-informer.md) | Paterson | 1950–1955 | Ceased 1955 |
-| [The Nubian News](publications/040-the-nubian-news.md) ⭐ | Trenton | 1989–present | Active |
+| [The Nubian News](publications/040-the-nubian-news.md) ⭐ | Trenton | 1989–? | Activity unverified |
 | [The Sentinel](publications/010-the-sentinel.md) ⭐ | Trenton | 1880–1883 | Ceased 1883 |
 | [The Union Messenger](publications/056-the-union-messenger.md) | Camden | 1979–1985 | Ceased 1985 |
 | [The Voice](publications/041-the-voice.md) | Plainfield | 1968–1974 | Ceased 1974 |
@@ -143,10 +143,10 @@ All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [Trenton365 Stream with Jacque Howard](publications/032-trenton365-stream-with-jacque-howard.md) | Trenton | 2016–2024 | Ceased 2024 |
 | [Try It Yourself Hair!](publications/093-try-it-yourself-hair.md) | Paramus | 1993–1996 | Ceased 1996 |
 | [Ujamaa: Journal of the Black Students Union](publications/103-ujamaa-journal-of-the-black-students-union.md) | Wayne | 1971–1975 | Ceased 1975 |
-| [Unity and Struggle](publications/084-unity-and-struggle.md) ⭐ | Newark | 1972–1978 | Ceased 1978 |
+| [Unity and Struggle](publications/084-unity-and-struggle.md) ⭐ | Newark | 1974–? | Ceased (date unknown) |
 | [Update](publications/104-update.md) | Newark | 1983–1988 | Ceased 1988 |
-| [Utimme Umana/La Voz Oculta](publications/073-utimme-umana-la-voz-oculta.md) | Trenton | 1968–1990 | Ceased 1990 |
+| [Utimme Umana/La Voz Oculta](publications/073-utimme-umana-la-voz-oculta.md) | Trenton | 1972–? | Ceased (date unknown) |
 | [Wait](publications/113-wait.md) | Trenton | 1961–1965 | Ceased 1965 |
-| [Word Up!](publications/114-word-up.md) | Paramus | 1990–2012 | Ceased 2012 |
+| [Word Up!](publications/114-word-up.md) | Paramus | 1987–? | Ceased (date unknown) |
 | [Write On Newsletter](publications/120-write-on-newsletter.md) | Saddle Brook | 1985–1990 | Ceased 1990 |
 | [Yes: Youth Excited About Success](publications/058-yes-youth-excited-about-success.md) | Plainfield | 1994–1998 | Ceased 1998 |

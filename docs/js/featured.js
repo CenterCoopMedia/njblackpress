@@ -79,7 +79,7 @@
 
   function createHistoricalCard(pub) {
     const extended = getExtendedData(pub.id, 'historic');
-    const years = pub.yearFounded ? `${pub.yearFounded}–${pub.yearCeased ? pub.yearCeased : 'present'}` : 'dates unknown';
+    const years = pub.yearFounded ? `${pub.yearFounded}–${pub.yearCeased ?? (pub.isActive === true ? 'present' : 'end year unknown')}` : 'dates unknown';
     const cardId = `historic-${pub.id}`;
     const isExpanded = expandedCards.has(cardId);
 
@@ -215,7 +215,7 @@
     return `
       <article class="featured-card group surface-cloth p-6 border border-walnut-600 hover:border-oak-500 transition-colors">
         <div class="flex items-start justify-between mb-3">
-          <span class="font-mono text-xs text-linen-300 tracking-widest">${pub.yearFounded ? `${pub.yearFounded}–present` : 'still publishing'}</span>
+          <span class="font-mono text-xs text-linen-300 tracking-widest">${pub.isActive === null ? 'Current activity unverified' : pub.yearFounded ? `${pub.yearFounded}–present` : 'still publishing'}</span>
           <span class="text-thread-400 text-sm">${escapeHtml(pub.city || 'NJ')}</span>
         </div>
 

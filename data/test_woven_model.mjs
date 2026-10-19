@@ -33,7 +33,7 @@ for (const t of model.threads) {
   const p = source.find((item) => item.id === t.id);
   assert.equal(t.yearFounded, p.yearFounded);
   assert.equal(t.yearCeased, p.yearCeased);
-  assert.equal(t.endState === 'still', p.isActive);
+  assert.equal(t.endState === 'still', p.isActive === true);
   assert.deepEqual(t.evidence, p.evidence);
 }
 const geometry = buildWeft(model);

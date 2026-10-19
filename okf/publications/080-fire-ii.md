@@ -51,23 +51,23 @@ OCLC no. 29551936.
 
 - [The Sentinel](010-the-sentinel.md) — 1880–1883
 - [Wait](113-wait.md) — 1961–1965
-- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
+- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1972–?
 - [Black Racers Yearbook](064-black-racers-yearbook.md) — 1974–1974
-- [The Nubian News](040-the-nubian-news.md) — 1989–present
+- [The Nubian News](040-the-nubian-news.md) — 1989–?
 - [Trenton365 Stream with Jacque Howard](032-trenton365-stream-with-jacque-howard.md) — 2016–2024
 - [Black In Jersey](004-black-in-jersey.md) — 2021–present
 - [Trenton Journal](017-trenton-journal.md) — 2021–present
 
 ### Also from the 1970s
 
-- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–2015
+- [Black Voice/Carta Boricua](098-black-voice-carta-boricua.md) — 1970–?
 - [CFUN News](051-cfun-news.md) — 1970–1971
-- [The Black Voice](107-the-black-voice.md) — 1970–1975
-- [The Forum](039-the-forum.md) — 1970–1980
+- [The Black Voice](107-the-black-voice.md) — 1970–?
 - [The Liberator](109-the-liberator.md) — 1970–1971
 - [MEDIC News](068-medic-news.md) — 1971–1975
 - [Ngoma](111-ngoma.md) — 1971–1976
 - [Right On!](095-right-on.md) — 1971–2014
+- [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
 - …and 20 more
 
 ## Navigate

@@ -49,7 +49,7 @@ OCLC no. 36218068.
 
 ### Also in East Orange
 
-- [Essex Forum](042-essex-forum.md) — 1972–1985
+- [Essex Forum](042-essex-forum.md) — 1972–?
 - [Primer](105-primer.md) — 1973–1978
 - [Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women](130-communique-quarterly-newsletter-of-the-new-jersey-coalition-of-100-black-women.md) — 1983–1988
 - [Perspectus News Magazine](110-perspectus-news-magazine.md) — 1989–1992

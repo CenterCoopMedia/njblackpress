@@ -25,8 +25,8 @@ The archive documents Black-owned and Black-focused publications connected to Ne
 Records carry a free-text `format`; these collapse into broad categories:
 
 - Periodicals & other print: 49
-- Newspapers: 44
-- Magazines: 15
+- Newspapers: 43
+- Magazines: 16
 - Digital & multimedia: 11
 - Newsletters: 9
 - Other: 4
@@ -48,7 +48,7 @@ Records carry a free-text `format`; these collapse into broad categories:
 - Grassroots local nonprofit newsroom: 1
 - Journal, Magazine: 1
 - Literary Magazine/Periodicals: 1
-- Magazine: 6
+- Magazine: 7
 - Magazine / literary anthology: 1
 - Magazine/Periodical: 2
 - Magazine/Periodicals: 3
@@ -60,8 +60,9 @@ Records carry a free-text `format`; these collapse into broad categories:
 - Newsletter/Periodicals: 2
 - Newsletter/periodicals: 1
 - Newsletters: 1
-- Newspaper: 33
+- Newspaper: 31
 - Newspaper/Periodicals: 9
+- Newspaper; later magazine: 1
 - Periodicals: 36
 - Periodicals, Newsletters: 1
 - Periodicals, Slavery Caribbean Area Periodicals: 1

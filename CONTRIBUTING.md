@@ -22,6 +22,7 @@ Install Node.js, npm, and Python 3. Then run:
 
 ```bash
 npm ci
+python3 -m pip install -r data/requirements-images.txt
 npm run build:css
 cd docs
 python3 -m http.server 8000

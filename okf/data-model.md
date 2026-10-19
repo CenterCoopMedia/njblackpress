@@ -35,7 +35,7 @@ Publication pages are generated from `data/publications.json`. Source values are
 | `missionStatement` | source | Editorial philosophy or stated mission. |
 | `keyStaff` | source | Notable editors, publishers, or contributors. |
 | `historicalNotes` | source | Context, significance, and research findings. |
-| `isActive` | computed | True when the publication is still operating (yearCeased is blank). |
+| `isActive` | source | True for active titles, false for historical titles, null when activity is unverified or the record is a collection. Independent of yearCeased. |
 | `decade` | computed | Decade of founding, derived from yearFounded. |
 | `isFeaturedHistoric` | source | Highlighted as a featured historic publication on the site. |
 | `isFeaturedContemporary` | source | Highlighted as a featured contemporary publication on the site. |

@@ -7,8 +7,8 @@ tags:
   - "nj-black-press"
   - "publication"
   - "paramus"
-  - "1990s"
-  - "newspaper"
+  - "1980s"
+  - "magazine"
 timestamp: "2026-06-29"
 archive_id: 114
 status: "inactive-or-historical"
@@ -23,10 +23,10 @@ featured: false
 | Alternate name | Unknown |
 | City | [Paramus](../cities/paramus.md) |
 | Publishers or owners | Scott Mitchell Figman |
-| Active years | 1990–2012 |
-| Status | Ceased 2012 |
-| Decade | [1990s](../decades/1990s.md) |
-| Format | [Newspaper](../formats/newspaper.md) |
+| Active years | 1987–? |
+| Status | Ceased (date unknown) |
+| Decade | [1980s](../decades/1980s.md) |
+| Format | [Magazine](../formats/magazine.md) |
 | Medium | [Print](../mediums/print.md) |
 | Frequency | Monthly |
 | Languages | English |
@@ -35,11 +35,11 @@ featured: false
 
 ## Key staff
 
-Editor: Kate Ferguson.
+Founding editor: Gerrie Summers; later editor: Kate Ferguson.
 
 ## Historical notes
 
-Word Up! debuted in August 1987 as a spin-off of Right On! magazine, headquartered in Paramus, NJ under Enoble Media and publisher John Blassingame. Gerrie Summers served as founding editor-in-chief, shortly after replaced by Kate Ferguson. The magazine was a glossy, visually engaging teen publication featuring hip-hop and R&B artist interviews, pin-ups, fashion tips, a pen pals section called 'Pass the Word,' crossword puzzles, and song lyrics. Principal photographer was Ernie Paniccioli. Word Up! was famously immortalized by The Notorious B.I.G. in 'Juicy' (1994): 'It was all a dream; I used to read Word Up! magazine.' Rap Masters was its sister publication, both produced by Faces Magazines in Paramus. The magazine circulated from 1987-2012, proving indispensable in launching careers of countless hip-hop and R&B legends. In the 2020s, Cynthia Horner (former Right On! editor-in-chief) purchased both titles, forming Right On! Media Holdings, LLC. In 2023, the Notorious B.I.G. Estate partnered with Budweiser to release limited-edition tribute issues (5,000 copies each) during Hip-Hop 50 celebrations. A March 2026 search dated the last print issue to April 2012.
+Word Up! was a monthly hip-hop and R&B magazine associated with Paramus, New Jersey. Founding editor Gerrie Summers reports an August 1987 debut. Sotheby’s 2022 lot 116 describes issues from her own collection dated 1987–1997 and also gives an August 1987 founding. These participant and collection accounts support 1987 rather than the former 1990 field, with the exact first-issue masthead still to be checked. The title was a magazine, not a newspaper. Kate Ferguson was a later editor, and Ernie Paniccioli was a principal photographer. The retained history’s April 2012 final-print claim is not confirmed by an inspected final issue, so no exact cessation year is entered. Later tribute or revival issues must be distinguished from the original run. Word Up! was a sister publication of Rap Masters within the Faces Magazines publishing operation. Its features included artist interviews, pin-ups, fashion, letters, puzzles, and music writing. Earlier archive research also recorded later tribute and revival issues; these require a separate continuity check.
 
 ## Archive reference
 
@@ -59,22 +59,22 @@ OCLC no. 21278914/LC card no. sn91-1930.
 - [Today’s Black Woman](138-today-s-black-woman.md) — 1995–2012
 - …and 1 more
 
-### Also from the 1990s
+### Also from the 1980s
 
-- [Harambee](026-harambee.md) — 1990–1995
-- [Hype](001-hype.md) — 1990–1993
-- [Rap Masters: Reader’s Choice](135-rap-masters-reader-s-choice.md) — 1990–2001
-- [Artz](047-artz.md) — 1991–1993
-- [Inner City Products](117-inner-city-products.md) — 1991–1995
-- [MC Squared](053-mc-squared.md) — 1991–1995
-- [The Network: The Newsletter of the African-American Institute of Islamic Research](075-the-network-the-newsletter-of-the-african-american-institute-of-islamic-research.md) — 1991–1995
-- [Black Book Connection, Inc. Newsletter](085-black-book-connection-inc-newsletter.md) — 1992–1995
-- …and 16 more
+- [Bootstrap](074-bootstrap.md) — 1981–1983
+- [Right On! Focus](083-right-on-focus.md) — 1982–1985
+- [City News](013-city-news.md) — 1983–2003
+- [Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women](130-communique-quarterly-newsletter-of-the-new-jersey-coalition-of-100-black-women.md) — 1983–1988
+- [Right On! Presents Class](096-right-on-presents-class.md) — 1983–1985
+- [Update](104-update.md) — 1983–1988
+- [Corporate Headquarters](132-corporate-headquarters.md) — 1985–1991
+- [Write On Newsletter](120-write-on-newsletter.md) — 1985–1990
+- …and 10 more
 
 ## Navigate
 
 - [Wiki home](../index.md)
 - [All Paramus publications](../cities/paramus.md)
-- [All 1990s publications](../decades/1990s.md)
+- [All 1980s publications](../decades/1980s.md)
 - [Archive overview](../archive-overview.md)
 - [Data model](../data-model.md)

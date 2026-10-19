@@ -55,8 +55,8 @@ Front Runner New Jersey is a property of AC JosepH Media, LLC, founded by award-
 
 - [Apex News](045-apex-news.md) — 1929–1940
 - [Black Atlantic City Magazine](119-black-atlantic-city-magazine.md) — 1978–1986
-- [Black New Jersey Magazine](077-black-new-jersey-magazine.md) — 1988–1990
 - [Atlantic City Focus](025-atlantic-city-focus.md) — 2022–present
+- [Black New Jersey Magazine](077-black-new-jersey-magazine.md) — ?–?
 
 ### Also from the 2010s
 

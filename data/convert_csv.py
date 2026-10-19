@@ -25,6 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import add_evidence  # noqa: E402  (local import, must follow sys.path insert)
+from activity import csv_activity  # noqa: E402
 
 def parse_year(year_str):
     """Extract year as integer from various formats."""
@@ -93,6 +94,11 @@ def is_featured_contemporary(name):
     return False
 
 publications = []
+existing_path = Path('publications.json')
+previous_activity = {
+    p['id']: p.get('isActive')
+    for p in json.loads(existing_path.read_text(encoding='utf-8'))['publications']
+} if existing_path.is_file() else {}
 cities = set()
 decades = set()
 formats = set()
@@ -126,9 +132,10 @@ with open('publications.csv', 'r', encoding='utf-8-sig') as f:
         key_staff = row.get('Key staff members', '').strip() or None
         historical_notes = row.get('Historical notes + impact', '').strip() or None
 
-        # Determine if active
-        year_ceased_raw = row.get('Year ceased', '').strip()
-        is_active = year_ceased_raw in ['', '?', None] or year_ceased is None
+        # Missing final years cannot establish current activity.
+        is_active = csv_activity(row, previous_activity.get(int(pub_id)))
+        if is_active is not False and year_ceased is not None:
+            raise ValueError(f"Record {pub_id}: Set activity status to historical or ceased for a title with a final year")
 
         decade = get_decade(year_founded)
 
@@ -171,7 +178,8 @@ publications.sort(key=lambda x: x['id'])
 
 # Calculate counts
 active_count = sum(1 for p in publications if p['isActive'])
-ceased_count = len(publications) - active_count
+ceased_count = sum(1 for p in publications if p['isActive'] is False)
+unknown_count = sum(1 for p in publications if p['isActive'] is None)
 
 # Sort metadata arrays
 cities_list = sorted(list(cities))
@@ -185,7 +193,8 @@ output = {
         "decades": decades_list,
         "formats": formats_list,
         "activeCount": active_count,
-        "ceasedCount": ceased_count
+        "ceasedCount": ceased_count,
+        "unknownStatusCount": unknown_count
     },
     "publications": publications
 }

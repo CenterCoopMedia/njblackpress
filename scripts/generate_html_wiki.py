@@ -166,6 +166,10 @@ def section_title(text: str) -> str:
 
 def status_text(pub: dict[str, Any]) -> str:
     """Status as plain text, never a badge. The lifespan line already carries it."""
+    if pub.get("format") == "Digital archive collection":
+        return '<span class="font-mono text-xs text-thread-400">digital collection</span>'
+    if pub.get("isActive") is None:
+        return '<span class="font-mono text-xs text-thread-400">activity unverified</span>'
     if pub.get("isActive"):
         return '<span class="font-mono text-xs text-stain">still publishing</span>'
     ceased = clean(pub.get("yearCeased"))
@@ -410,7 +414,7 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
     b = crumbs([("Wiki", "index.html"), ("Statistics", None)])
     b += page_title("Archive statistics")
 
-    stats = [("Records", str(total)), ("Active", str(active)), ("Ceased", str(total - active)),
+    stats = [("Records", str(total)), ("Active", str(active)), ("Ceased", str(sum(1 for p in pubs if p.get("isActive") is False))),
              ("Cities", str(len(by_city))), ("Formats", str(len(by_format))), ("Span", year_range(pubs))]
     cells = "".join(
         f'<div class="border border-walnut-600 bg-walnut-950 p-4"><div class="font-display text-2xl font-bold text-stain">{esc(v)}</div>'
@@ -418,6 +422,8 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
         for k, v in stats
     )
     b += f'<div class="grid grid-cols-3 lg:grid-cols-6 gap-3 mb-4">{cells}</div>'
+    unknown = sum(1 for p in pubs if p.get("isActive") is None)
+    b += f'<p class="text-linen-300">{unknown} records have unverified activity or describe an archive collection. They are included in the total.</p>'
 
     # decade bar chart
     b += section_title("Publications by founding decade")
@@ -475,7 +481,7 @@ def statistics_body(pubs, by_city, by_decade, by_format, by_medium, slugs, times
     # longest running
     def span_years(p):
         f, c = p.get("yearFounded"), p.get("yearCeased")
-        if not f:
+        if not f or (c is None and not p.get("isActive")):
             return None
         end = c if c else date.fromisoformat(timestamp).year
         return end - f

@@ -18,7 +18,7 @@ count: 3
 
 | Publication | Years | Status |
 |---|---|---|
-| [Black Voice/Carta Boricua](../publications/098-black-voice-carta-boricua.md) | 1970–2015 | Ceased 2015 |
+| [Black Voice/Carta Boricua](../publications/098-black-voice-carta-boricua.md) | 1970–? | Ceased (date unknown) |
 | [Inner City Products](../publications/117-inner-city-products.md) | 1991–1995 | Ceased 1995 |
 | [MC Squared](../publications/053-mc-squared.md) | 1991–1995 | Ceased 1995 |
 

@@ -13,9 +13,9 @@ count: 45
 
 45 cities group the 136 publication records.
 
-- [Newark](cities/newark.md) — 38 · 7 active
+- [Newark](cities/newark.md) — 38 · 5 active
 - [Paramus](cities/paramus.md) — 10 · 1 active
-- [Trenton](cities/trenton.md) — 9 · 3 active
+- [Trenton](cities/trenton.md) — 9 · 2 active
 - [Atlantic City](cities/atlantic-city.md) — 5 · 2 active
 - [East Orange](cities/east-orange.md) — 5
 - [New Brunswick](cities/new-brunswick.md) — 5
@@ -37,7 +37,7 @@ count: 45
 - [Berlin](cities/berlin.md) — 1
 - [Bordentown](cities/bordentown.md) — 1
 - [Cherry Hill](cities/cherry-hill.md) — 1
-- [Chicago/National](cities/chicago-national.md) — 1 · 1 active
+- [Chicago/National](cities/chicago-national.md) — 1
 - [Dover](cities/dover.md) — 1
 - [Edison](cities/edison.md) — 1
 - [Fort Dix](cities/fort-dix.md) — 1

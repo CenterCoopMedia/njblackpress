@@ -32,7 +32,7 @@ This open knowledge format wiki gives humans and agents a file-based map of the 
 ## Snapshot
 
 - Publication records: 136
-- Active records: 17
+- Active records: 13
 - Cities: 45
 - Founding span: 1880–2022
 - Date generated: 2026-06-29

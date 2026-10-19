@@ -29,7 +29,7 @@ count: 12
 | [Trenton Journal](../publications/017-trenton-journal.md) | 2021–present | Active |
 | [Atlantic City Focus](../publications/025-atlantic-city-focus.md) | 2022–present | Active |
 | [More Jersey](../publications/036-more-jersey.md) | 2022–present | Active |
-| [Newark Black Newspapers Collection | Digital Collections](../publications/128-newark-black-newspapers-collection-digital-collections.md) | ?–1979 | Ceased 1979 |
+| [Newark Black Newspapers Collection | Digital Collections](../publications/128-newark-black-newspapers-collection-digital-collections.md) | Collection coverage; see notes | Digital collection |
 
 ## Navigate
 

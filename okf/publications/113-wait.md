@@ -50,25 +50,23 @@ OCLC no. 36179394.
 ### Also in Trenton
 
 - [The Sentinel](010-the-sentinel.md) — 1880–1883
-- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
+- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1972–?
 - [Black Racers Yearbook](064-black-racers-yearbook.md) — 1974–1974
 - [Fire II](080-fire-ii.md) — 1975–1978
-- [The Nubian News](040-the-nubian-news.md) — 1989–present
+- [The Nubian News](040-the-nubian-news.md) — 1989–?
 - [Trenton365 Stream with Jacque Howard](032-trenton365-stream-with-jacque-howard.md) — 2016–2024
 - [Black In Jersey](004-black-in-jersey.md) — 2021–present
 - [Trenton Journal](017-trenton-journal.md) — 2021–present
 
 ### Also from the 1960s
 
-- [Newark Community Union Project News](076-newark-community-union-project-news.md) — 1963–1965
 - [Afro-American Festival of the Arts Magazine](062-afro-american-festival-of-the-arts-magazine.md) — 1966–1966
 - [Freedom Reports](133-freedom-reports.md) — 1966–1970
 - [Deliverance Voice](070-deliverance-voice.md) — 1967–2014
-- [Black Newark](028-black-newark.md) — 1968–1974
+- [Black Newark](028-black-newark.md) — 1968–1968
 - [The Black Observer](033-the-black-observer.md) — 1968–1970
+- [The Cricket: Black Music in Evolution](069-the-cricket-black-music-in-evolution.md) — 1968–1969
 - [The Voice](041-the-voice.md) — 1968–1974
-- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
-- …and 1 more
 
 ## Navigate
 

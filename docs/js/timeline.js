@@ -123,7 +123,7 @@
       const ceasedSegPct = total > 0 ? (decade.ceasedCount / total) * 100 : 0;
 
       const ariaLabel = `${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ` +
-        `${decade.activeCount} publishing in the ${decade.label}, ${decade.eventCount} recorded event${decade.eventCount === 1 ? '' : 's'}. ` +
+        `${decade.activeCount} records may overlap the ${decade.label}, ${decade.eventCount} recorded event${decade.eventCount === 1 ? '' : 's'}. ` +
         `Press enter to filter the archive by this decade.`;
 
       return `
@@ -148,7 +148,7 @@
             <div class="text-xs font-mono text-linen-300 space-y-1 border-t border-walnut-600 pt-2">
               <p><span class="text-linen-50">${decade.foundedCount}</span> founded</p>
               <p><span class="text-linen-50">${decade.ceasedCount}</span> ceased</p>
-              <p><span class="text-linen-50">${decade.activeCount}</span> publishing in the ${decade.label}</p>
+              <p><span class="text-linen-50">${decade.activeCount}</span> records may overlap the ${decade.label}; unknown ends do not confirm continued publication</p>
               <p><span class="text-linen-50">${decade.eventCount}</span> recorded event${decade.eventCount === 1 ? '' : 's'}</p>
             </div>
           </div>
@@ -243,14 +243,14 @@
       btn.addEventListener('focus', () => {
         const decade = decadeData.find(d => d.label === btn.dataset.decade);
         if (decade) {
-          announce(`${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ${decade.activeCount} publishing in the ${decade.label}, ${decade.eventCount} recorded events.`);
+          announce(`${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ${decade.activeCount} records may overlap this decade, ${decade.eventCount} recorded events.`);
         }
       });
 
       btn.addEventListener('mouseenter', () => {
         const decade = decadeData.find(d => d.label === btn.dataset.decade);
         if (decade) {
-          announce(`${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ${decade.activeCount} publishing in the ${decade.label}, ${decade.eventCount} recorded events.`);
+          announce(`${decade.label}: ${decade.foundedCount} founded, ${decade.ceasedCount} ceased, ${decade.activeCount} records may overlap this decade, ${decade.eventCount} recorded events.`);
         }
       });
 
@@ -329,7 +329,7 @@
                 <h4 class="font-display text-3xl text-linen-50 font-bold mb-1">${resolved.label}</h4>
             </div>
             <div class="text-right font-mono text-xs text-linen-300">
-                <p><span class="text-linen-50 text-lg">${resolved.activeCount}</span> active</p>
+                <p><span class="text-linen-50 text-lg">${resolved.activeCount}</span> records may overlap this decade; unknown ends do not confirm continued publication</p>
                 <p><span class="text-linen-50 text-lg">${resolved.foundedCount}</span> founded</p>
             </div>
         </header>

@@ -45,7 +45,7 @@ Kenneth Miles, Publisher.
 
 ## Historical notes
 
-The Trenton Journal is an independently owned and operated multimedia platform founded around 2020 by Kenneth M., who serves as Founder and Publisher. It was welcomed into the URL Media network, which recognized its commitment to bridging information gaps and providing community news for Trenton's nearly 90,000 residents. The publication focuses on solutions-based journalism to address information inequities in New Jersey's capital city.
+The Trenton Journal is an independently owned and operated multimedia platform launched in 2021 by Kenneth Miles, who serves as Founder and Publisher. It was welcomed into the URL Media network, which recognized its commitment to bridging information gaps and providing community news for Trenton's nearly 90,000 residents. The publication focuses on solutions-based journalism to address information inequities in New Jersey's capital city. In his October 31, 2021 publisher note, Miles said the first newsletter had appeared almost a year earlier and described weekly newsletter delivery. A 2025 Center for Cooperative Media interview dates the formal Journal launch to 2021 and describes its newsletter origin. A late-2020 precursor is inferred from the 2021 account; its first issue has not been located. The earlier newsletter schedule does not establish the current site’s publishing frequency.
 
 ## External links
 
@@ -57,10 +57,10 @@ The Trenton Journal is an independently owned and operated multimedia platform f
 
 - [The Sentinel](010-the-sentinel.md) — 1880–1883
 - [Wait](113-wait.md) — 1961–1965
-- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1968–1990
+- [Utimme Umana/La Voz Oculta](073-utimme-umana-la-voz-oculta.md) — 1972–?
 - [Black Racers Yearbook](064-black-racers-yearbook.md) — 1974–1974
 - [Fire II](080-fire-ii.md) — 1975–1978
-- [The Nubian News](040-the-nubian-news.md) — 1989–present
+- [The Nubian News](040-the-nubian-news.md) — 1989–?
 - [Trenton365 Stream with Jacque Howard](032-trenton365-stream-with-jacque-howard.md) — 2016–2024
 - [Black In Jersey](004-black-in-jersey.md) — 2021–present
 

@@ -50,7 +50,6 @@ OCLC no. 29403842.
 
 ### Also from the 1930s
 
-- [The Jersey Express](002-the-jersey-express.md) — 1932–1940
 - [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
 - [Ash Can](048-ash-can.md) — 1935–1935
 - [Camp Cooper Chats](087-camp-cooper-chats.md) — 1935–1937
@@ -58,7 +57,8 @@ OCLC no. 29403842.
 - [Pine Needle](137-pine-needle.md) — 1936–1940
 - [Sixty Niner](089-sixty-niner.md) — 1936–1941
 - [Dias Creek Echo](094-dias-creek-echo.md) — 1938–1938
-- …and 4 more
+- [New Jersey Herald News](016-new-jersey-herald-news.md) — 1938–1966
+- …and 3 more
 
 ## Navigate
 
