@@ -65,7 +65,7 @@ export default {
     }
     try {
       const response = await fetch(INTAKE, {
-        method: 'POST', redirect: 'error', signal: AbortSignal.timeout(15000),
+        method: 'POST', redirect: 'manual', signal: AbortSignal.timeout(15000),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + env.BLACKPRESS_REPORT_INTAKE_SECRET,
@@ -75,6 +75,9 @@ export default {
       });
       if (!response.ok && response.status !== 400 && response.status !== 409) {
         console.error('Black Press intake failed', { category: 'upstream_status', status: response.status });
+      }
+      if (response.status >= 300 && response.status < 400) {
+        return reply(502, { error: 'We could not confirm receipt. Your text is saved in this form. Please retry.' });
       }
       const receipt = await response.json();
       if (response.ok && receipt.success === true && receipt.id === 'bp_' + body.request_id) {

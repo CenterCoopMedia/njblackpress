@@ -38,14 +38,20 @@
   const drafts = new Map();
 
   function pageContext(button) {
-    const path = location.pathname.split('/njblackpress/')[1] || location.pathname.replace(/^\//, '');
+    let path = location.pathname.split('/njblackpress/')[1] ?? location.pathname.replace(/^\//, '');
+    if (!path || path.endsWith('/')) path += 'index.html';
     const url = new URL(path || 'index.html', publicRoot);
     const params = new URLSearchParams(location.search);
-    for (const key of ['id', 'pub', 'story', 'decade', 'stop', 'nogl', 'twin']) {
+    const pageKeys = {
+      'publication.html': ['id'], 'story.html': ['id'], 'era.html': ['decade'],
+      'historical-notes.html': ['pub', 'story', 'decade', 'stop', 'nogl', 'twin'],
+      'woven.html': ['pub', 'story', 'decade', 'stop', 'nogl', 'twin'],
+    };
+    for (const key of pageKeys[path] || []) {
       if (params.has(key)) url.searchParams.set(key, params.get(key));
     }
     const recordId = button?.dataset.correctionRecordId;
-    if (/^[1-9][0-9]{0,3}$/.test(recordId || '')) {
+    if (['publication.html', 'historical-notes.html', 'woven.html'].includes(path) && /^[1-9][0-9]{0,3}$/.test(recordId || '')) {
       url.searchParams.set(url.pathname.endsWith('/publication.html') ? 'id' : 'pub', recordId);
     }
     url.hash = location.hash;

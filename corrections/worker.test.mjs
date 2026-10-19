@@ -17,7 +17,7 @@ test('the relay confirms only the exact durable receipt and keeps secrets server
     received.push(JSON.parse(options.body));
     assert.equal(url, 'https://pi.amditis.tech/api/njpbs/blackpress/report');
     assert.equal(options.headers.Authorization, 'Bearer test-intake');
-    assert.equal(options.redirect, 'error');
+    assert.equal(options.redirect, 'manual');
     return Response.json({ success: true, id: 'bp_' + body.request_id });
   };
   try {
