@@ -9,8 +9,8 @@ from 1880 to the present.
 
 The [Center for Cooperative Media](https://centerforcooperativemedia.org/) at
 Montclair State University maintains the archive. The current dataset contains
-more than 130 newspapers, magazines, newsletters, journals, and digital
-publications.
+more than 130 newspapers, magazines, newsletters, journals, digital
+publications, and digital archive collections.
 
 ## Explore the archive
 
