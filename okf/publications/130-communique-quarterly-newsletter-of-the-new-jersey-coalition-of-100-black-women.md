@@ -17,6 +17,8 @@ featured: false
 
 # Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=130#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 130 |

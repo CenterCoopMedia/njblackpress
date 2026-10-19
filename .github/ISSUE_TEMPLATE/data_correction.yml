@@ -4,6 +4,9 @@ title: "Data: "
 labels:
   - data
 body:
+  - type: markdown
+    attributes:
+      value: You can also use **Submit a correction** on an archive page or record. Include public sources only; reports require editorial review before changes are published.
   - type: input
     id: publication
     attributes:

@@ -17,6 +17,8 @@ featured: false
 
 # Rifle Ranger
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=97#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 97 |

@@ -43,6 +43,7 @@ export function createStartDialog({ dialog, trigger, media, beforeOpen, afterClo
 
   function containFocus(event) {
     if (!dialog || dialog.hidden) return;
+    if (event.target instanceof Element && event.target.closest('dialog[open]')) return;
     if (event.key === 'Escape') {
       event.preventDefault();
       event.stopImmediatePropagation();

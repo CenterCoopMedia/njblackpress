@@ -17,6 +17,8 @@ featured: false
 
 # Spirit: The Guide to the Soul
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=65#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 65 |

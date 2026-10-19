@@ -10,6 +10,10 @@ pipeline. GitHub Pages serves `docs/` from `master`.
 
 The project has no backend, database server, authentication, or write API.
 
+Reader corrections use the separate relay under `corrections/` and the existing
+private dashboard/Telegram workflow. See `corrections/README.md` for coordinated
+activation and the manual merge boundary.
+
 ## Important paths
 
 - `docs/`: Published site and browser data.

@@ -17,6 +17,8 @@ featured: false
 
 # Write On Newsletter
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=120#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 120 |

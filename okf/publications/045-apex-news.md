@@ -17,6 +17,8 @@ featured: false
 
 # Apex News
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=45#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 45 |

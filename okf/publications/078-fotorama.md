@@ -17,6 +17,8 @@ featured: false
 
 # Fotorama
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=78#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 78 |

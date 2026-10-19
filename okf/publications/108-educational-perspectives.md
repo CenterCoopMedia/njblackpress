@@ -17,6 +17,8 @@ featured: false
 
 # Educational Perspectives
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=108#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 108 |

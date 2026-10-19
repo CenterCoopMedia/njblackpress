@@ -17,6 +17,8 @@ featured: false
 
 # The Connection / North Jersey Connection
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=5#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 5 |

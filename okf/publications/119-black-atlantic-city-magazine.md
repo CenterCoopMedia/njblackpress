@@ -17,6 +17,8 @@ featured: false
 
 # Black Atlantic City Magazine
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=119#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 119 |

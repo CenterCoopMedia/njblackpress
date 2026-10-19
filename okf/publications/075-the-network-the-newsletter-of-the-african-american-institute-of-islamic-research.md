@@ -17,6 +17,8 @@ featured: false
 
 # The Network: The Newsletter of the African-American Institute of Islamic Research
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=75#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 75 |

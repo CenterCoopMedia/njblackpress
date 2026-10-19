@@ -17,6 +17,8 @@ featured: false
 
 # Black Book Connection, Inc. Newsletter
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=85#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 85 |

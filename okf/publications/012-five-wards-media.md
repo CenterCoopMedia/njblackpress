@@ -17,6 +17,8 @@ featured: false
 
 # Five Wards Media
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=12#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 12 |

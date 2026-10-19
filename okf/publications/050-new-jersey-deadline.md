@@ -17,6 +17,8 @@ featured: false
 
 # New Jersey Deadline
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=50#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 50 |

@@ -17,6 +17,8 @@ featured: false
 
 # Utimme Umana/La Voz Oculta
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=73#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 73 |

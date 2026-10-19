@@ -17,6 +17,8 @@ featured: false
 
 # Nite Lite
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=21#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 21 |

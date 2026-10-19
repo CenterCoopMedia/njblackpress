@@ -17,6 +17,8 @@ featured: false
 
 # Corporate Headquarters
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=132#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 132 |

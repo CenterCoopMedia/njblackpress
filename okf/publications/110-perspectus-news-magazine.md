@@ -17,6 +17,8 @@ featured: false
 
 # Perspectus News Magazine
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=110#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 110 |

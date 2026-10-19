@@ -17,6 +17,8 @@ featured: false
 
 # Monthly Black Periodicals Selection Review
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=115#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 115 |

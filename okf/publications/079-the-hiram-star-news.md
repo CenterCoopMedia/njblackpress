@@ -17,6 +17,8 @@ featured: false
 
 # The Hiram Star-News
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=79#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 79 |

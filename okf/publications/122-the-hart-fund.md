@@ -17,6 +17,8 @@ featured: false
 
 # The Hart Fund
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=122#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 122 |

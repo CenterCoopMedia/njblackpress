@@ -17,6 +17,8 @@ featured: false
 
 # Just for Black Men
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=88#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 88 |

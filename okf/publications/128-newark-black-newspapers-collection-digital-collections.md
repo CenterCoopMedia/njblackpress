@@ -17,6 +17,8 @@ featured: false
 
 # Newark Black Newspapers Collection | Digital Collections
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=128#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 128 |

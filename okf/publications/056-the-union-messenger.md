@@ -17,6 +17,8 @@ featured: false
 
 # The Union Messenger
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=56#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 56 |

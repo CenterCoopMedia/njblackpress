@@ -11,6 +11,10 @@ GitHub Pages publishes the `docs/` directory from `master`. The live site is
 
 The project has no backend, database server, or JavaScript framework.
 
+Reader corrections use a separate public relay under `corrections/` and the
+existing private dashboard/Telegram workflow. See `corrections/README.md` for
+the contract, coordinated activation, and manual merge boundary.
+
 ## Development
 
 The site uses static HTML, CSS, and JavaScript. Tailwind CSS is compiled, not

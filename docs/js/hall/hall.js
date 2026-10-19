@@ -742,6 +742,7 @@ export async function mountHall(app, params) {
 
   listen(document, 'keydown', (event) => {
     if (!active || event.key !== 'Escape') return;
+    if (event.target instanceof Element && event.target.closest('dialog[open]')) return;
     if (reader.inspectorOpen || reader.isOpen || panel.isOpen() || state.getState().mode !== 'browse') {
       event.stopPropagation();
       closeTop();

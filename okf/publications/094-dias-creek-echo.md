@@ -17,6 +17,8 @@ featured: false
 
 # Dias Creek Echo
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=94#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 94 |

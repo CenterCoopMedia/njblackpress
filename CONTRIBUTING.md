@@ -4,8 +4,12 @@ Thank you for helping improve the NJ Black Press Archive.
 
 ## Report a correction
 
-Use the repository's data correction issue form for a missing or incorrect
-publication fact. Include:
+Use **Submit a correction** on a page or publication record. Describe the issue,
+suggest a correction, and add a source link. The page and record context are
+included automatically. Reports go to private review; filing can publish the
+report text and links on GitHub. Do not include private information.
+
+The repository's data correction issue form is also available. Include:
 
 - The publication name and record URL.
 - The exact field that needs a change.

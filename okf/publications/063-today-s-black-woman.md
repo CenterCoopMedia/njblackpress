@@ -17,6 +17,8 @@ featured: false
 
 # Today's Black Woman
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=63#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 63 |

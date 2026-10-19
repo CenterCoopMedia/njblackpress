@@ -17,6 +17,8 @@ featured: false
 
 # Testimony: A Journal of African-American Poetry
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=121#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 121 |

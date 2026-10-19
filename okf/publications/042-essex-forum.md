@@ -17,6 +17,8 @@ featured: false
 
 # Essex Forum
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=42#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 42 |

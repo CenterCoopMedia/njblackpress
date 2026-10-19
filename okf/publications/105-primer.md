@@ -17,6 +17,8 @@ featured: false
 
 # Primer
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=105#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 105 |

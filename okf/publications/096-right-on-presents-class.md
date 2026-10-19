@@ -17,6 +17,8 @@ featured: false
 
 # Right On! Presents Class
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=96#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 96 |

@@ -17,6 +17,8 @@ featured: false
 
 # Penn Crusader
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=136#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 136 |

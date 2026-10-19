@@ -17,6 +17,8 @@ featured: false
 
 # Camp Cooper Chats
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=87#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 87 |

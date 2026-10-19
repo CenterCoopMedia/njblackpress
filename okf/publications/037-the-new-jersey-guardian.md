@@ -17,6 +17,8 @@ featured: true
 
 # The New Jersey Guardian
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=37#submit-correction)
+
 > ⭐ Featured historic publication. See [Featured publications](../featured.md).
 
 | Field | Value |

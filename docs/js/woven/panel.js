@@ -67,6 +67,7 @@ export function openPublication(t, model, hooks) {
   el.innerHTML = `
     <button type="button" class="woven-btn p-close">Close</button>
     <h2 id="woven-panel-title" tabindex="-1">${esc(t.name)}</h2>
+    <button type="button" class="correction-trigger" data-submit-correction data-correction-record-id="${Number(t.id)}" data-correction-title="${esc(t.name)}">Submit a correction</button>
     ${t.alternateName ? `<p class="p-meta">Also known as ${esc(t.alternateName)}</p>` : ''}
     <p class="p-meta">${esc(t.city || 'city unrecorded')} · ${esc(years)}</p>
     <p class="p-meta">${esc(endLine(t))}</p>

@@ -285,6 +285,8 @@ def publication_page(
         featured=bool(feat),
     )
     body += f"# {name}\n\n"
+    body += f"[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id={pub['id']}#submit-correction)\n\n"
+
     if feat:
         body += f"> ⭐ Featured {feat} publication. See [Featured publications](../featured.md).\n\n"
     body += table([

@@ -90,6 +90,7 @@ function threadHTML(t) {
       ${eventsHTML(t)}
       ${storiesHTML(t)}
       <a class="link-thread" href="publication.html?id=${t.id}">Open the full record</a>
+      <button type="button" class="correction-trigger" data-submit-correction data-correction-record-id="${Number(t.id)}" data-correction-title="${esc(t.name)}">Submit a correction</button>
     </div>
   </li>`;
 }

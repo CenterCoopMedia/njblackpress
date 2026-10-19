@@ -17,6 +17,8 @@ featured: false
 
 # Right On!
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=95#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 95 |

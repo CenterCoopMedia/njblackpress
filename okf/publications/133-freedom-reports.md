@@ -17,6 +17,8 @@ featured: false
 
 # Freedom Reports
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=133#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 133 |

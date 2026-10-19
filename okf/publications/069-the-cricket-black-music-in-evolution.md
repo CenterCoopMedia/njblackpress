@@ -17,6 +17,8 @@ featured: false
 
 # The Cricket: Black Music in Evolution
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=69#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 69 |

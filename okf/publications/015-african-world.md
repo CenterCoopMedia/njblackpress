@@ -17,6 +17,8 @@ featured: false
 
 # African World
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=15#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 15 |

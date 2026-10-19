@@ -17,6 +17,8 @@ featured: false
 
 # Black Racers Yearbook
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=64#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 64 |

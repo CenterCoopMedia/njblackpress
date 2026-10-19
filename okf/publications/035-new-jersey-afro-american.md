@@ -17,6 +17,8 @@ featured: true
 
 # New Jersey Afro-American
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=35#submit-correction)
+
 > ⭐ Featured historic publication. See [Featured publications](../featured.md).
 
 | Field | Value |

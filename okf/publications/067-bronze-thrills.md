@@ -17,6 +17,8 @@ featured: false
 
 # Bronze Thrills
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=67#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 67 |

@@ -17,6 +17,8 @@ featured: false
 
 # The Citizen
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=7#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 7 |

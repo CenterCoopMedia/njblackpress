@@ -17,6 +17,8 @@ featured: false
 
 # New Jersey After Hours
 
+[Submit a correction](https://centercoopmedia.github.io/njblackpress/publication.html?id=101#submit-correction)
+
 | Field | Value |
 |---|---|
 | Archive id | 101 |

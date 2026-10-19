@@ -264,6 +264,7 @@ def detail_body(pub, depth, wiki_root, city_slugs, decade_slugs, format_slugs, m
 
     b = crumbs([("Wiki", f"{wiki_root}index.html"), ("Publications", f"{wiki_root}publications.html"), (name, None)])
     b += f'<h1 class="type-impression font-display text-4xl md:text-6xl font-extrabold tracking-normal mb-4 leading-[0.95]">{esc(name)}</h1>'
+    b += f'<button type="button" class="correction-trigger" data-submit-correction data-correction-record-id="{pub["id"]}" data-correction-title="{esc(name)}">Submit a correction</button>'
     meta = f"{esc(city)} &middot; {esc(decade)} &middot; {esc(life_span(pub))}"
     if feat:
         meta += f" &middot; featured {esc(feat)}"
@@ -560,7 +561,8 @@ def build(generated_at: str | None = None) -> None:
     def emit(rel: str, title: str, desc: str, depth: int, body: str) -> None:
         path = OUT_DIR / rel
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(shell(title=title, description=desc, depth=depth, body=body, canonical_rel=rel), encoding="utf-8")
+        rendered = shell(title=title, description=desc, depth=depth, body=body, canonical_rel=rel)
+        path.write_text("\n".join(line.rstrip() for line in rendered.split("\n")), encoding="utf-8")
         emitted.append(rel)
 
     # Landing + top-level pages (depth 0).
