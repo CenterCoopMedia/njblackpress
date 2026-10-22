@@ -7,6 +7,7 @@ edited in the output but not in the rights manifest, and metadata lists
 both from their sources and needs no evidence image corpus.
 """
 
+import hashlib
 import json
 import re
 import sys
@@ -19,6 +20,14 @@ sys.path.insert(0, str(ROOT / "data"))
 import add_evidence  # noqa: E402
 
 
+EDITORIAL_NOTES_SHA256 = {
+    # Issues 97 and 98: Cassandra's approved Black in Jersey replacement.
+    4: "f57e7f154f0c947cc396a3ed7b343a48e432e88a6feedc5f8bb67edb1faec235",
+    # Issue 99: Keep the published Black Caucus of ALA Newsletter record unchanged.
+    99: "501e9c2879f5fe303b4c1a11771a6cb6b65f21fb6d984eff22083619ca4427ec",
+}
+
+
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -28,6 +37,22 @@ def main() -> None:
     errors = []
     if record != load(ROOT / "docs" / "data" / "publications.json"):
         errors.append("docs/data/publications.json differs from data/publications.json")
+
+    publications_by_id = {pub["id"]: pub for pub in record["publications"]}
+    for publication_id, expected_hash in EDITORIAL_NOTES_SHA256.items():
+        notes = publications_by_id[publication_id]["historicalNotes"]
+        actual_hash = hashlib.sha256(notes.encode("utf-8")).hexdigest()
+        if actual_hash != expected_hash:
+            errors.append(f"publication {publication_id}: historical notes differ from the approved editorial decision")
+
+    featured = load(ROOT / "data" / "featured-publications.json")
+    featured_by_id = {
+        pub["id"]: pub
+        for section in ("featuredHistoric", "featuredContemporary")
+        for pub in featured[section]
+    }
+    if featured_by_id[4]["historicalNotes"] != publications_by_id[4]["historicalNotes"]:
+        errors.append("publication 4: featured historical notes differ from the canonical record")
 
     evidence_total = sum(len(pub["evidence"]) for pub in record["publications"])
     expected = add_evidence.derive_metadata(record["publications"], evidence_total)
