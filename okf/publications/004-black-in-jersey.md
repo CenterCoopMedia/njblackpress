@@ -47,7 +47,11 @@ Founder: Tennyson Coleman.
 
 ## Historical notes
 
-Black In Jersey is a digital storytelling and media production company founded in 2021 and based in Trenton, New Jersey. Founded by a local news veteran, the publication centers the African diaspora experience, spotlighting culture and the unique tapestry of Black experiences across the state. They coach citizen journalists to amplify voices that shape New Jersey, building connections through news content and documentary-style storytelling.
+Black in Jersey is a multimedia storytelling and local media organization founded by Tennyson Donyea and based in Trenton, New Jersey. The digital-first platform focuses on amplifying the voices, experiences, history, and achievements of Black communities across the state. Its coverage highlights issues and perspectives often overlooked by mainstream news outlets, with reporting and storytelling on culture, politics, education, business, public policy, and community development.
+
+In addition to publishing news and multimedia stories, Black in Jersey trains citizen journalists to “amplify the voices that shape New Jersey.” The organization positions itself as both a media outlet and a cultural institution, documenting Black life in New Jersey through reporting, documentary storytelling, interviews, community features, and digital media production.
+
+Black in Jersey has also expanded its role as a training and newsroom-development organization. The New Jersey Civic Information Consortium has provided funding to support its first statehouse and local government reporting cohort, as well as an incubator program featuring Millennial- and Generation Z-led news services.
 
 ## External links
 
