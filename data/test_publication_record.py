@@ -23,8 +23,6 @@ import add_evidence  # noqa: E402
 EDITORIAL_NOTES_SHA256 = {
     # Issues 97 and 98: Cassandra's approved Black in Jersey replacement.
     4: "f57e7f154f0c947cc396a3ed7b343a48e432e88a6feedc5f8bb67edb1faec235",
-    # Issue 99: Keep the published Black Caucus of ALA Newsletter record unchanged.
-    99: "501e9c2879f5fe303b4c1a11771a6cb6b65f21fb6d984eff22083619ca4427ec",
 }
 
 
