@@ -21,7 +21,8 @@ import add_evidence  # noqa: E402
 
 
 EDITORIAL_NOTES_SHA256 = {
-    # Issues 97 and 98: Cassandra's approved Black in Jersey replacement.
+    # Issues 97 and 98 approve historicalNotes only. The older structured
+    # founder fields require a separate editorial reconciliation.
     4: "f57e7f154f0c947cc396a3ed7b343a48e432e88a6feedc5f8bb67edb1faec235",
 }
 
