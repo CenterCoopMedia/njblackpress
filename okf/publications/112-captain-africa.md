@@ -9,7 +9,7 @@ tags:
   - "glen-ridge"
   - "1990s"
   - "comic-books-strips"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 112
 status: "inactive-or-historical"
 featured: false

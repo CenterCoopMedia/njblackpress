@@ -91,6 +91,7 @@
 
     function findPublication(id) {
         const base = allPublications.find(p => p.id === id) || null;
+        if (!base) return null;
 
         // Featured records carry richer curated fields but are missing the
         // evidence array, websiteUrl and computed fields. Merge them onto the
@@ -663,7 +664,7 @@
     function buildArchiveSection(pub) {
         const archiveRaw = pub.archiveUrl ? String(pub.archiveUrl).trim() : '';
         const hasArchiveLink = isUrl(archiveRaw);
-        // 85 of 136 records hold a catalog string here, not a URL. Print those
+        // Some records hold a catalog string here, not a URL. Print those
         // as a labelled identifier rather than a broken link.
         const catalogRef = archiveRaw && !hasArchiveLink ? archiveRaw : '';
         const hasWebsite = isUrl(pub.websiteUrl);

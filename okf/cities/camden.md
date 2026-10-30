@@ -6,7 +6,7 @@ tags:
   - "nj-black-press"
   - "city"
   - "camden"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 count: 4
 ---
 
@@ -18,7 +18,7 @@ count: 4
 
 | Publication | Years | Status |
 |---|---|---|
-| [The Camden News](../publications/003-the-camden-news.md) | 1915–1918 | Ceased 1918 |
+| [The Camden News](../publications/003-the-camden-news.md) | 1915–? | Ceased (date unknown) |
 | [The Black Observer](../publications/033-the-black-observer.md) | 1968–1970 | Ceased 1970 |
 | [The African Voice](../publications/046-the-african-voice.md) | 1972–1975 | Ceased 1975 |
 | [The Union Messenger](../publications/056-the-union-messenger.md) | 1979–1985 | Ceased 1985 |

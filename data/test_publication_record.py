@@ -34,8 +34,8 @@ def load(path: Path):
 def main() -> None:
     record = load(ROOT / "data" / "publications.json")
     errors = []
-    if record != load(ROOT / "docs" / "data" / "publications.json"):
-        errors.append("docs/data/publications.json differs from data/publications.json")
+    if add_evidence.public_payload(record) != load(ROOT / "docs" / "data" / "publications.json"):
+        errors.append("docs/data/publications.json differs from the editorial record's public subset")
 
     publications_by_id = {pub["id"]: pub for pub in record["publications"]}
     for publication_id, expected_hash in EDITORIAL_NOTES_SHA256.items():

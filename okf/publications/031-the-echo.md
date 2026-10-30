@@ -9,7 +9,7 @@ tags:
   - "long-branch-red-bank"
   - "1900s"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 31
 status: "inactive-or-historical"
 featured: true

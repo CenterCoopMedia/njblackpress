@@ -2,14 +2,14 @@
 type: "publication"
 title: "Hype"
 description: "Archive wiki record for Hype."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "river-edge"
   - "1990s"
   - "magazine-periodical"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 1
 status: "inactive-or-historical"
 featured: false

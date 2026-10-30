@@ -63,7 +63,7 @@ credit next to the image, not only on a brass plate. A sheet with no cleared
 clipping shows the publication's name, city, and dates plus the first
 sentence of its historical notes where one exists, or the line "No copies
 cleared for display here. Copies may survive elsewhere." when it does not.
-This is the majority case: 39 of 136 publications have anything cleared to
+This is the majority case: 39 of 134 public records have anything cleared to
 show. A record count is how much research is attached to an entry, never a
 measure of a publication's importance; the hall reports it the same way the
 site already does on a publication's own page — "1 record" or "N records"
@@ -167,8 +167,8 @@ MiB), the 16 decade markers (about 11 MiB), the far wall panel and the runner
 (about 3 MiB together), the 13 book covers (about 6 MiB),
 and the open volume's pages and clipping (about 11 MiB), the hall's own
 resident textures come to roughly 80 MiB standard and roughly 50 MiB
-simplified, inside the 128 MiB and 64 MiB budgets. Painting all 136 faces at
-that size would take about 249 MiB, which is why the pool exists. Sheets
+simplified, inside the 128 MiB and 64 MiB budgets. Painting all 134 faces at
+that size would take about 245 MiB, which is why the pool exists. Sheets
 outside the pool share one low-detail paper material with an era accent and
 no type.
 

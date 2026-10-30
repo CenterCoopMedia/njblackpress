@@ -2,14 +2,14 @@
 type: "publication"
 title: "Right On! Presents Class"
 description: "Archive wiki record for Right On! Presents Class."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "cresskill"
   - "1980s"
   - "magazine"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 96
 status: "inactive-or-historical"
 featured: false

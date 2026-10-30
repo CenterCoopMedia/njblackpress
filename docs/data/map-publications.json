@@ -5,8 +5,8 @@
     "coordinateSource": "Nominatim / OpenStreetMap search results, checked 2026-08-24",
     "firstDecade": 1880,
     "lastDecade": 2020,
-    "publicationCount": 136,
-    "mappedPublicationCount": 134,
+    "publicationCount": 134,
+    "mappedPublicationCount": 132,
     "unmappedPublicationCount": 2
   },
   "locations": [
@@ -105,7 +105,7 @@
           "name": "The Camden News",
           "city": "Camden",
           "yearFounded": 1915,
-          "yearCeased": 1918,
+          "yearCeased": null,
           "isActive": false
         },
         {
@@ -198,23 +198,6 @@
           "yearFounded": 1978,
           "yearCeased": 1985,
           "isActive": false
-        }
-      ]
-    },
-    {
-      "id": "chicago-il",
-      "label": "Chicago / National",
-      "latitude": 41.8755616,
-      "longitude": -87.6244212,
-      "precision": "city_center",
-      "publications": [
-        {
-          "id": 99,
-          "name": "Black Caucus of ALA Newsletter",
-          "city": "Chicago/National",
-          "yearFounded": 1974,
-          "yearCeased": null,
-          "isActive": null
         }
       ]
     },
@@ -460,14 +443,6 @@
       "precision": "municipality_center",
       "publications": [
         {
-          "id": 52,
-          "name": "Black Journal",
-          "city": "Jersey City",
-          "yearFounded": 1979,
-          "yearCeased": 1985,
-          "isActive": false
-        },
-        {
           "id": 106,
           "name": "NJ-AAHGS Newsletter",
           "city": "Jersey City",
@@ -646,7 +621,7 @@
           "name": "The New Jersey Guardian",
           "city": "Newark",
           "yearFounded": 1934,
-          "yearCeased": 1942,
+          "yearCeased": null,
           "isActive": false
         },
         {

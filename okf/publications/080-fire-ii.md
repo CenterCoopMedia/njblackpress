@@ -9,7 +9,7 @@ tags:
   - "trenton"
   - "1970s"
   - "literary-magazine-periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 80
 status: "inactive-or-historical"
 featured: false
@@ -70,7 +70,7 @@ OCLC no. 29551936.
 - [Ngoma](111-ngoma.md) — 1971–1976
 - [Right On!](095-right-on.md) — 1971–2014
 - [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
-- …and 20 more
+- …and 18 more
 
 ## Navigate
 

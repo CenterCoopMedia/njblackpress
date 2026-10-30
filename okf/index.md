@@ -6,12 +6,12 @@ tags:
   - "nj-black-press"
   - "okf"
   - "wiki"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 ---
 
 # NJ Black Press archive wiki
 
-This open knowledge format wiki gives humans and agents a file-based map of the NJ Black Press archive. Each page is markdown with YAML frontmatter and standard markdown links, generated from `data/publications.json`.
+This open knowledge format wiki gives humans and agents a file-based map of the NJ Black Press archive. Each page is markdown with YAML frontmatter and standard markdown links, generated from `docs/data/publications.json`.
 
 ## Start here
 
@@ -31,8 +31,8 @@ This open knowledge format wiki gives humans and agents a file-based map of the 
 
 ## Snapshot
 
-- Publication records: 136
+- Publication records: 134
 - Active records: 13
-- Cities: 45
+- Cities: 44
 - Founding span: 1880–2022
-- Date generated: 2026-06-29
+- Date generated: 2026-10-30

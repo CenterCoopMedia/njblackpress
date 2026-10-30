@@ -30,7 +30,7 @@ class Paragraphs(HTMLParser):
 
 
 def check_editorial_copy():
-    for pub in json.loads((ROOT / "data/publications.json").read_text())["publications"]:
+    for pub in json.loads((ROOT / "docs/data/publications.json").read_text())["publications"]:
         notes = pub.get("historicalNotes") or ""
         if not notes:
             continue
@@ -50,7 +50,8 @@ def main() -> None:
         assert f'data-sort-key="{key}"' in html, f"missing {key} sort control"
     assert 'aria-sort="ascending"' in html, "missing the initial sort state"
     assert html.count('aria-sort=') == 1, "only the active header can have aria-sort"
-    assert html.count('data-sort-value=') == 136 * 4, "publication rows lack sort values"
+    publications = json.loads((ROOT / "docs/data/publications.json").read_text())["publications"]
+    assert html.count('data-sort-value=') == len(publications) * 4, "publication rows lack sort values"
     assert "pl-5" in html and "pr-5" in html, "table edges lack the required cell padding"
     assert 'id="publication-index"' in html, "publication table lacks a script scope"
     styles = (ROOT / "docs" / "css" / "styles.css").read_text(encoding="utf-8")

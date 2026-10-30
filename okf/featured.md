@@ -5,7 +5,7 @@ description: "Publications highlighted on the NJ Black Press archive site."
 tags:
   - "nj-black-press"
   - "featured"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 count: 16
 ---
 
@@ -21,7 +21,7 @@ Publications curated as featured records on the archive site.
 | [New Jersey Trumpet](publications/038-new-jersey-trumpet.md) | Newark | 1887–1897 |
 | [The Echo](publications/031-the-echo.md) | Long Branch/Red Bank | 1904–1943 |
 | [The Newark Herald](publications/009-the-newark-herald.md) | Newark | 1928–1939 |
-| [The New Jersey Guardian](publications/037-the-new-jersey-guardian.md) | Newark | 1934–1942 |
+| [The New Jersey Guardian](publications/037-the-new-jersey-guardian.md) | Newark | 1934–? |
 | [New Jersey Afro-American](publications/035-new-jersey-afro-american.md) | Newark | 1941–1991 |
 | [Deliverance Voice](publications/070-deliverance-voice.md) | Newark | 1967–2014 |
 | [Black Newark](publications/028-black-newark.md) | Newark | 1968–1968 |

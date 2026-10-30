@@ -101,8 +101,8 @@ for (const o of layout.ornaments) {
   assert.ok(o.bounds.minZ > 0 && o.bounds.maxZ < layout.length, `${o.id} stands inside the hall`);
 }
 
-// October 2026 source corrections move six unverified starts to the undated section.
-const decadeCounts = { '1880s': 3, '1890s': 0, '1900s': 2, '1910s': 2, '1920s': 2, '1930s': 12, '1940s': 3, '1950s': 9, '1960s': 8, '1970s': 29, '1980s': 19, '1990s': 24, '2000s': 0, '2010s': 8, '2020s': 6 };
+// Source date corrections and Cassandra's October 30 hold on two 1970s titles.
+const decadeCounts = { '1880s': 3, '1890s': 0, '1900s': 2, '1910s': 2, '1920s': 2, '1930s': 12, '1940s': 3, '1950s': 9, '1960s': 8, '1970s': 27, '1980s': 19, '1990s': 24, '2000s': 0, '2010s': 8, '2020s': 6 };
 for (const [id, count] of Object.entries(decadeCounts)) {
   assert.equal(layout.sectionById.get(id).count, count, `${id} holds ${count} titles`);
 }

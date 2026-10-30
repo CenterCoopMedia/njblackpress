@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "totalCount": 136,
+    "totalCount": 134,
     "cities": [
       "Atlantic City",
       "Berlin",
@@ -9,7 +9,6 @@
       "Cape May",
       "Chatsworth",
       "Cherry Hill",
-      "Chicago/National",
       "Cresskill",
       "Dover",
       "East Orange",
@@ -107,9 +106,9 @@
       "Volumes"
     ],
     "activeCount": 13,
-    "ceasedCount": 117,
-    "evidenceCount": 202,
-    "unknownStatusCount": 6
+    "ceasedCount": 116,
+    "evidenceCount": 201,
+    "unknownStatusCount": 5
   },
   "publications": [
     {
@@ -211,7 +210,7 @@
       "city": "Camden",
       "publishers": "Camden News Publishing Co",
       "yearFounded": 1915,
-      "yearCeased": 1918,
+      "yearCeased": null,
       "frequency": "Weekly",
       "format": "Periodicals",
       "languages": "English",
@@ -222,7 +221,7 @@
       "medium": "Print",
       "missionStatement": null,
       "keyStaff": "Previous editor(s): C. N. Green.",
-      "historicalNotes": null,
+      "historicalNotes": "Published weekly in Camden by Camden News Publishing Co. Charles S. Boyer’s History of the press in Camden County, New Jersey (1921), pages 62–63, reports a first issue on May 8, 1915. The Directory of New Jersey newspapers, 1765–1970 (1977), page 37, gives the same start and leaves the end unknown. It lists Camden County Historical Society holdings dated May 22, June 26 and December 11, 1915, and March 9, 1918. The listed 1918 holding does not establish the final publication year. Boyer’s present-tense description in 1921 suggests possible later activity but does not establish a 1921 issue. The final publication year remains unknown; the title remains inactive. Current custody and the latest surviving issue need confirmation.",
       "isActive": false,
       "decade": "1910s",
       "isFeaturedHistoric": false,
@@ -237,6 +236,16 @@
           "rightsStatus": "metadata_only",
           "citation": "The Camden News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 131 (entry 1354).",
           "url": "https://archive.org/details/africanamericanne00dank/page/131/mode/1up"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-30",
+          "caption": "Published weekly in Camden by Camden News Publishing Co. Charles S. Boyer’s History of the press in Camden County, New Jersey (1921), pages 62–63, reports a first issue on May 8, 1915. The Directory of New Jersey newspapers, 1765–1970 (1977), page 37, gives the same start and leaves the end unknown. It lists Camden County Historical Society holdings dated May 22, June 26 and December 11, 1915, and March 9, 1918. The listed 1918 holding does not establish the final publication year. Boyer’s present-tense description in 1921 suggests possible later activity but does not establish a 1921 issue. The final publication year remains unknown; the title remains inactive. Current custody and the latest surviving issue need confirmation.",
+          "file": "data/research/corrections/2026-10-30.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication final-year review, October 30, 2026. See record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+          "url": "https://archive.org/details/cu31924009629993/page/n83/mode/2up"
         }
       ]
     },
@@ -1738,7 +1747,7 @@
       "city": "Newark",
       "publishers": "N.J. Guardian Pub. Co.",
       "yearFounded": 1934,
-      "yearCeased": 1942,
+      "yearCeased": null,
       "frequency": "Weekly",
       "format": "Newspaper",
       "languages": "English",
@@ -1749,7 +1758,7 @@
       "medium": "Print",
       "missionStatement": "“Voice of the Colored People.”",
       "keyStaff": "Previous editor (s): F. R. Clark",
-      "historicalNotes": "Published weekly in Newark, Essex County, NJ by the N.J. Guardian Pub. Co. Began with the September 29, 1934 issue; ceased in 1942 (exact end date uncertain). Carried the motto 'Voice of the Colored People.' Bibliographic description based on Vol. 6, no. 27 (Oct. 28, 1939). Cataloged by the Library of Congress under African Americans -- New Jersey -- Newspapers. The Library of Congress may not hold copies; holdings may exist at other libraries.",
+      "historicalNotes": "Published weekly in Newark, Essex County, NJ by the N.J. Guardian Pub. Co. The Library of Congress catalog and the Directory of New Jersey newspapers, 1765–1970 (1977), page 156, give a September 29, 1934 start and an uncertain end, cataloged as ceasing in 1942? The exact final publication year remains unknown; the title remains inactive. The directory says the title became New Jersey Record. The Schomburg Center finding aid Black newspapers—sample issues and additions, collection Sc Micro RS-722, reel 2, lists a December 6, 1941 issue, volume 9, number 14; this is a cataloged holding, not a verified final issue. The 1967 New Jersey Library Association bibliography, page 105, gives conflicting dates: Entry 926 lists 1934–1942, while entry 932 describes a Guardian predecessor in 1933–1943 and a 1943 name change. That conflict does not establish a 1943 Guardian issue, and the founding-year field remains 1934 pending masthead review. Carried the motto 'Voice of the Colored People.' The Library of Congress description is based on Vol. 6, no. 27 (Oct. 28, 1939), not a last issue. The Library of Congress may not hold copies; holdings may exist at other libraries. The latest Guardian and earliest New Jersey Record mastheads are needed to resolve the transition.",
       "isActive": false,
       "decade": "1930s",
       "isFeaturedHistoric": true,
@@ -1773,6 +1782,16 @@
           "file": "data/research/loc/sn89069097.json",
           "rightsStatus": "metadata_only",
           "citation": "The New Jersey Guardian (Newark, N.J.) 1934-1942, Library of Congress, Directory of U.S. Newspapers in American Libraries, LCCN sn89069097, https://www.loc.gov/item/sn89069097/",
+          "url": "https://www.loc.gov/item/sn89069097/"
+        },
+        {
+          "type": "research_summary",
+          "source": "other",
+          "date": "2026-10-30",
+          "caption": "Published weekly in Newark, Essex County, NJ by the N.J. Guardian Pub. Co. The Library of Congress catalog and the Directory of New Jersey newspapers, 1765–1970 (1977), page 156, give a September 29, 1934 start and an uncertain end, cataloged as ceasing in 1942? The exact final publication year remains unknown; the title remains inactive. The directory says the title became New Jersey Record. The Schomburg Center finding aid Black newspapers—sample issues and additions, collection Sc Micro RS-722, reel 2, lists a December 6, 1941 issue, volume 9, number 14; this is a cataloged holding, not a verified final issue. The 1967 New Jersey Library Association bibliography, page 105, gives conflicting dates: Entry 926 lists 1934–1942, while entry 932 describes a Guardian predecessor in 1933–1943 and a 1943 name change. That conflict does not establish a 1943 Guardian issue, and the founding-year field remains 1934 pending masthead review. Carried the motto 'Voice of the Colored People.' The Library of Congress description is based on Vol. 6, no. 27 (Oct. 28, 1939), not a last issue. The Library of Congress may not hold copies; holdings may exist at other libraries. The latest Guardian and earliest New Jersey Record mastheads are needed to resolve the transition.",
+          "file": "data/research/corrections/2026-10-30.json",
+          "rightsStatus": "metadata_only",
+          "citation": "Publication final-year review, October 30, 2026. See record-specific public source URLs, findings, and unresolved questions in the review metadata.",
           "url": "https://www.loc.gov/item/sn89069097/"
         }
       ]
@@ -2358,42 +2377,6 @@
           "rightsStatus": "metadata_only",
           "citation": "CFUN News, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 142 (entry 1477).",
           "url": "https://archive.org/details/africanamericanne00dank/page/142/mode/1up"
-        }
-      ]
-    },
-    {
-      "id": 52,
-      "name": "Black Journal",
-      "alternateName": null,
-      "city": "Jersey City",
-      "publishers": "Jersey City State College, Affican/AfroAmerican Studies Center",
-      "yearFounded": 1979,
-      "yearCeased": 1985,
-      "frequency": "Monthly",
-      "format": "Uncataloged serials",
-      "languages": "English",
-      "archiveUrl": null,
-      "websiteUrl": null,
-      "targetAudience": "College students",
-      "primaryFocus": "African-American studies, Colleges and Universities — Students",
-      "medium": "Print",
-      "missionStatement": null,
-      "keyStaff": "Previous editor(s): Bruce Mansa",
-      "historicalNotes": "No digitized archive or detailed historical record was found for the Black Journal of Jersey City, NJ (1979). The publication does not appear in the Library of Congress newspaper directory, the Wikipedia list of African American newspapers in New Jersey, the Newark Public Library microfilm inventory, or the New Jersey State Library's digitized newspaper index. It should not be confused with the nationally known PBS television program 'Black Journal' (1968-1977) hosted by Tony Brown, which later became 'Tony Brown's Journal.' The Jersey City Free Public Library's local history collections and the New Jersey Historical Society in Newark may hold physical records. The publication was likely a small-circulation community newspaper serving Jersey City's Black population during the late 1970s. A March 2026 search found no records of a Jersey City print publication by this name.",
-      "isActive": false,
-      "decade": "1970s",
-      "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false,
-      "evidence": [
-        {
-          "type": "catalog_record",
-          "source": "danky",
-          "date": "1998",
-          "caption": "Danky entry 890: Black Journal, monthly, Jersey City State College African/Afro-American Studies Center, editor Bruce Mansa Terry. NN-Sc Mar 1980.",
-          "file": "data/research/danky/danky-1998-p87-black-journal.jpg",
-          "rightsStatus": "metadata_only",
-          "citation": "Black Journal, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 87 (entry 890).",
-          "url": "https://archive.org/details/africanamericanne00dank/page/87/mode/1up"
         }
       ]
     },
@@ -4134,52 +4117,6 @@
           "rightsStatus": "metadata_only",
           "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
           "url": "https://catalogs.rutgers.edu/generated/nb-ug_0305/pg4274.html"
-        }
-      ]
-    },
-    {
-      "id": 99,
-      "name": "Black Caucus of ALA Newsletter",
-      "alternateName": null,
-      "city": "Chicago/National",
-      "publishers": "Black Caucus of the American Library Association (BCALA)",
-      "yearFounded": 1974,
-      "yearCeased": null,
-      "frequency": "Varied; see historical notes",
-      "format": "Newsletter",
-      "languages": "English",
-      "archiveUrl": null,
-      "websiteUrl": null,
-      "targetAudience": null,
-      "primaryFocus": null,
-      "medium": "Print",
-      "missionStatement": "Print",
-      "keyStaff": null,
-      "historicalNotes": "The ALA Archives describes the Black Caucus Newsletter as serving readers since 1974. Danky and Hady, entry 795, page 77, instead describes a bimonthly serial beginning in 1971 and records Pomona, New Jersey, as its place of publication from September 1983 to April 1986. The earliest issue and the relationship between the two start dates remain unresolved. ALA Archives illustrates volume 13, number 6, from 1985–1986; this does not support a single semiannual schedule for the full run. BCALA’s newsletter page links issues through fall 2021. That page alone does not verify current activity; a recent issue is needed. The 1974 field retains the ALA Archives date pending that title-history review.",
-      "isActive": null,
-      "decade": "1970s",
-      "isFeaturedHistoric": false,
-      "isFeaturedContemporary": false,
-      "evidence": [
-        {
-          "type": "catalog_record",
-          "source": "danky",
-          "date": "1998",
-          "caption": "Danky entry 795: Black Caucus of ALA Newsletter, bimonthly 1971-. Place of publication Pomona, NJ, Sept 1983-Apr 1986. WHi Sept 1983-.",
-          "file": "data/research/danky/danky-1998-p77-bcala.jpg",
-          "rightsStatus": "metadata_only",
-          "citation": "Black Caucus of ALA Newsletter, in Danky, James P. \"African-American Newspapers and Periodicals: A National Bibliography\", 1998, p. 77 (entry 795).",
-          "url": "https://archive.org/details/africanamericanne00dank/page/77/mode/1up"
-        },
-        {
-          "type": "research_summary",
-          "source": "other",
-          "date": "2026-10-19",
-          "caption": "The ALA Archives describes the Black Caucus Newsletter as serving readers since 1974. Danky and Hady, entry 795, page 77, instead describes a bimonthly serial beginning in 1971 and records Pomona, New Jersey, as its place of publication from September 1983 to April 1986. Source limits and unresolved dates are recorded in the October 2026 publication history review.",
-          "file": "data/research/corrections/2026-10-19.json",
-          "rightsStatus": "metadata_only",
-          "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
-          "url": "https://www.library.illinois.edu/ala/2017/02/01/publications-black-caucus-newsletter/"
         }
       ]
     },

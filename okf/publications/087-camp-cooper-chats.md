@@ -9,7 +9,7 @@ tags:
   - "glen-ridge"
   - "1930s"
   - "publications"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 87
 status: "inactive-or-historical"
 featured: false
@@ -56,7 +56,7 @@ OCLC no. 29465047, 29403521.
 ### Also from the 1930s
 
 - [Camp Berlin Broadcast](102-camp-berlin-broadcast.md) — 1934–1935
-- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
+- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–?
 - [Ash Can](048-ash-can.md) — 1935–1935
 - [Penn Crusader](136-penn-crusader.md) — 1936–1940
 - [Pine Needle](137-pine-needle.md) — 1936–1940

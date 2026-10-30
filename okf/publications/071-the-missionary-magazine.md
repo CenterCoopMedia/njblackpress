@@ -9,7 +9,7 @@ tags:
   - "pleasantville"
   - "1950s"
   - "magazine-periodical"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 71
 status: "inactive-or-historical"
 featured: false

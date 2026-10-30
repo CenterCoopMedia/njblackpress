@@ -5,7 +5,7 @@ description: "Summary of the NJ Black Press archive scope and wiki structure."
 tags:
   - "nj-black-press"
   - "archive"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 ---
 
 # Archive overview
@@ -24,11 +24,11 @@ The archive documents Black-owned and Black-focused publications connected to Ne
 
 Records carry a free-text `format`; these collapse into broad categories:
 
-- Periodicals & other print: 49
+- Periodicals & other print: 48
 - Newspapers: 43
 - Magazines: 16
 - Digital & multimedia: 11
-- Newsletters: 9
+- Newsletters: 8
 - Other: 4
 - Comics: 3
 - Journals: 1
@@ -56,7 +56,7 @@ Records carry a free-text `format`; these collapse into broad categories:
 - Multimedia news platform: 6
 - News Magazine: 1
 - News and media website: 1
-- Newsletter: 4
+- Newsletter: 3
 - Newsletter/Periodicals: 2
 - Newsletter/periodicals: 1
 - Newsletters: 1
@@ -73,6 +73,6 @@ Records carry a free-text `format`; these collapse into broad categories:
 - Publications: 2
 - Radio stream: 1
 - Uncataloged periodicals: 1
-- Uncataloged serials: 3
+- Uncataloged serials: 2
 - Unknown: 2
 - Volumes: 1

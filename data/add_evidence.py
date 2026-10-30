@@ -8,13 +8,12 @@ Deterministic build from three inputs:
 Run:
   python data/add_evidence.py
 
-Writes data/publications.json and copies it to docs/data/publications.json.
+Writes data/publications.json and its public subset to docs/data/publications.json.
 Also rewrites the derived metadata (counts, cities, decades, formats).
 No hand-editing of publications.json — this script is the only writer.
 """
 
 import json
-import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -113,6 +112,20 @@ def derive_metadata(publications, evidence_count):
     }
 
 
+def public_payload(payload):
+    """Withhold editorially excluded records and derive public-only summaries."""
+    for publication in payload["publications"]:
+        if type(publication.get("isPublic", True)) is not bool:
+            raise ValueError(f"publication {publication['id']}: isPublic must be a boolean")
+    publications = [p for p in payload["publications"] if p.get("isPublic", True)]
+    evidence_count = sum(len(p.get("evidence", [])) for p in publications)
+    return {
+        **payload,
+        "publications": publications,
+        "metadata": {**payload["metadata"], **derive_metadata(publications, evidence_count)},
+    }
+
+
 def main():
     publications_data = json.loads(PUBLICATIONS_PATH.read_text(encoding="utf-8"))
     catalog_data = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
@@ -141,10 +154,13 @@ def main():
 
     publications_data["metadata"].update(derive_metadata(publications_data["publications"], total_evidence))
 
+    published = public_payload(publications_data)
     PUBLICATIONS_PATH.write_text(
         json.dumps(publications_data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
-    shutil.copyfile(PUBLICATIONS_PATH, DOCS_PUBLICATIONS_PATH)
+    DOCS_PUBLICATIONS_PATH.write_text(
+        json.dumps(published, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
 
     print(
         f"evidence added: {total_evidence} entries across {pubs_with_evidence} pubs "

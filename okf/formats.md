@@ -5,13 +5,13 @@ description: "Index of formats in the NJ Black Press archive wiki."
 tags:
   - "nj-black-press"
   - "formats"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 count: 41
 ---
 
 # Formats index
 
-41 formats group the 136 publication records.
+41 formats group the 134 publication records.
 
 ## Newspapers (43)
 
@@ -31,11 +31,11 @@ count: 41
 - [Magazine / literary anthology](formats/magazine-literary-anthology.md) — 1
 - [News Magazine](formats/news-magazine.md) — 1
 
-## Periodicals & other print (49)
+## Periodicals & other print (48)
 
 - [Periodicals](formats/periodicals.md) — 36
-- [Uncataloged serials](formats/uncataloged-serials.md) — 3
 - [Publications](formats/publications.md) — 2
+- [Uncataloged serials](formats/uncataloged-serials.md) — 2
 - [Bibliographies/Periodicals](formats/bibliographies-periodicals.md) — 1
 - [Biographies/periodicals](formats/biographies-periodicals.md) — 1
 - [Periodicals, Slavery Caribbean Area Periodicals](formats/periodicals-slavery-caribbean-area-periodicals.md) — 1
@@ -49,9 +49,9 @@ count: 41
 
 - [Academic/Scholarly Journal](formats/academic-scholarly-journal.md) — 1
 
-## Newsletters (9)
+## Newsletters (8)
 
-- [Newsletter](formats/newsletter.md) — 4
+- [Newsletter](formats/newsletter.md) — 3
 - [Newsletter/Periodicals](formats/newsletter-periodicals.md) — 2
 - [Newsletter/periodicals](formats/newsletter-periodicals-2.md) — 1
 - [Newsletters](formats/newsletters.md) — 1

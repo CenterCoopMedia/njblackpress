@@ -2,7 +2,7 @@
 """Generate and validate the open knowledge format wiki.
 
 The wiki is a portable directory of markdown files (with YAML frontmatter and
-ordinary markdown links) generated from ``data/publications.json``. It gives
+ordinary markdown links) generated from ``docs/data/publications.json``. It gives
 people and agents a browsable, file-based map of the NJ Black Press archive
 without running the website JavaScript.
 """
@@ -18,7 +18,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_PATH = ROOT / "data" / "publications.json"
+DATA_PATH = ROOT / "docs" / "data" / "publications.json"
 OUT_DIR = ROOT / "okf"
 
 # Group kinds and their grammatical singular (the source data pluralizes the
@@ -277,7 +277,7 @@ def publication_page(
         type="publication",
         title=name,
         description=f"Archive wiki record for {name}.",
-        resource=pub.get("websiteUrl") or pub.get("archiveUrl") or "data/publications.json",
+        resource=pub.get("websiteUrl") or pub.get("archiveUrl") or "docs/data/publications.json",
         tags=["nj-black-press", "publication", slugify(city), slugify(decade), slugify(fmt)],
         timestamp=timestamp,
         archive_id=pub["id"],
@@ -580,7 +580,7 @@ def build(generated_at: str | None = None) -> None:
     # Home / index.
     index = frontmatter(type="index", title="NJ Black Press archive wiki", description="Open knowledge format entry point for the archive wiki.", tags=["nj-black-press", "okf", "wiki"], timestamp=timestamp)
     index += "# NJ Black Press archive wiki\n\n"
-    index += "This open knowledge format wiki gives humans and agents a file-based map of the NJ Black Press archive. Each page is markdown with YAML frontmatter and standard markdown links, generated from `data/publications.json`.\n\n"
+    index += "This open knowledge format wiki gives humans and agents a file-based map of the NJ Black Press archive. Each page is markdown with YAML frontmatter and standard markdown links, generated from `docs/data/publications.json`.\n\n"
     index += "## Start here\n\n"
     index += "- [Archive overview](archive-overview.md) — scope and how the wiki is built\n"
     index += "- [Archive statistics](statistics.md) — counts, decade timeline, top cities\n"
@@ -621,7 +621,7 @@ def build(generated_at: str | None = None) -> None:
 
     # Data model.
     data_model = frontmatter(type="schema", title="Data model", description="Field guide for the publication records used by the wiki.", tags=["nj-black-press", "schema", "data"], timestamp=timestamp)
-    data_model += "# Data model\n\nPublication pages are generated from `data/publications.json`. Source values are preserved as written; empty values render as `Unknown` in tables.\n\n"
+    data_model += "# Data model\n\nPublication pages are generated from `docs/data/publications.json`. Source values are preserved as written; empty values render as `Unknown` in tables.\n\n"
     data_model += "## Fields\n\n| Field | Origin | Description |\n|---|---|---|\n"
     for field, desc, origin in FIELD_DOCS:
         data_model += f"| `{field}` | {origin} | {markdown_cell(desc)} |\n"
@@ -648,7 +648,7 @@ def build(generated_at: str | None = None) -> None:
     total_files = len(list(OUT_DIR.rglob('*.md'))) + 1
     log = frontmatter(type="log", title="Wiki change log", description="Generation log for the open knowledge format wiki.", tags=["nj-black-press", "okf", "log"], timestamp=timestamp)
     log += "# Wiki change log\n\n"
-    log += f"- {timestamp}: Generated the open knowledge format wiki bundle from `data/publications.json` with {len(pubs)} publication pages and {total_files} markdown files in total.\n"
+    log += f"- {timestamp}: Generated the open knowledge format wiki bundle from `docs/data/publications.json` with {len(pubs)} publication pages and {total_files} markdown files in total.\n"
     write(OUT_DIR / "log.md", log)
 
 

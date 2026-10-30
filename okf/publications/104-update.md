@@ -2,14 +2,14 @@
 type: "publication"
 title: "Update"
 description: "Archive wiki record for Update."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "newark"
   - "1980s"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 104
 status: "inactive-or-historical"
 featured: false
@@ -49,7 +49,7 @@ A March 2026 search found no records. The generic title 'Update' makes identific
 
 - [New Jersey Trumpet](038-new-jersey-trumpet.md) — 1887–1897
 - [The Newark Herald](009-the-newark-herald.md) — 1928–1939
-- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
+- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–?
 - [New Jersey Herald News](016-new-jersey-herald-news.md) — 1938–1966
 - [New Jersey Afro-American](035-new-jersey-afro-american.md) — 1941–1991
 - [New Jersey After Hours](101-new-jersey-after-hours.md) — 1949–1980

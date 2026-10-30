@@ -14,7 +14,7 @@ from build_map_data import ROOT, visible_in_decade
 
 
 CENTERS = ROOT / "data" / "municipality-centers.json"
-SOURCE = ROOT / "data" / "publications.json"
+SOURCE = ROOT / "docs" / "data" / "publications.json"
 MAP_DATA = ROOT / "data" / "map-publications.json"
 DOCS_MAP_DATA = ROOT / "docs" / "data" / "map-publications.json"
 MAP_HTML = ROOT / "docs" / "map.html"
@@ -39,7 +39,7 @@ def test_generated_data_is_current() -> None:
 
 def test_every_city_value_has_one_rule() -> None:
     centers = load(CENTERS)
-    source = load(SOURCE)
+    source = load(ROOT / "data" / "publications.json")
     mapped = {
         city
         for location in centers["locations"]
@@ -71,7 +71,7 @@ def test_coordinate_and_grouping_contract() -> None:
     assert {publication["city"] for publication in payload["unmapped"]} == {None, "Unknown"}
     assert any(location["id"] == "new-jersey-statewide" for location in payload["locations"])
     assert any(location["id"] == "fort-wayne-in" for location in payload["locations"])
-    assert any(location["id"] == "chicago-il" for location in payload["locations"])
+    assert not any(location["id"] == "chicago-il" for location in payload["locations"]), "Withheld BCALA record must not create a public marker"
     print("PASS: marker groups and unmapped records are complete")
 
 

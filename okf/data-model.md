@@ -6,12 +6,12 @@ tags:
   - "nj-black-press"
   - "schema"
   - "data"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 ---
 
 # Data model
 
-Publication pages are generated from `data/publications.json`. Source values are preserved as written; empty values render as `Unknown` in tables.
+Publication pages are generated from `docs/data/publications.json`. Source values are preserved as written; empty values render as `Unknown` in tables.
 
 ## Fields
 

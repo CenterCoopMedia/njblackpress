@@ -6,7 +6,7 @@ tags:
   - "nj-black-press"
   - "format"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 count: 31
 ---
 
@@ -23,7 +23,7 @@ count: 31
 | [New Jersey Trumpet](../publications/038-new-jersey-trumpet.md) | 1887–1897 | Ceased 1897 |
 | [The Echo](../publications/031-the-echo.md) | 1904–1943 | Ceased 1943 |
 | [The Newark Herald](../publications/009-the-newark-herald.md) | 1928–1939 | Ceased 1939 |
-| [The New Jersey Guardian](../publications/037-the-new-jersey-guardian.md) | 1934–1942 | Ceased 1942 |
+| [The New Jersey Guardian](../publications/037-the-new-jersey-guardian.md) | 1934–? | Ceased (date unknown) |
 | [Penn Crusader](../publications/136-penn-crusader.md) | 1936–1940 | Ceased 1940 |
 | [Pine Needle](../publications/137-pine-needle.md) | 1936–1940 | Ceased 1940 |
 | [Sixty Niner](../publications/089-sixty-niner.md) | 1936–1941 | Ceased 1941 |

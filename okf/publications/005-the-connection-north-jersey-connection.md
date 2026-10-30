@@ -9,7 +9,7 @@ tags:
   - "teaneck"
   - "unknown"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 5
 status: "inactive-or-historical"
 featured: false

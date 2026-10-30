@@ -5,13 +5,13 @@ description: "Index of cities in the NJ Black Press archive wiki."
 tags:
   - "nj-black-press"
   - "cities"
-timestamp: "2026-06-29"
-count: 45
+timestamp: "2026-10-30"
+count: 44
 ---
 
 # Cities index
 
-45 cities group the 136 publication records.
+44 cities group the 134 publication records.
 
 - [Newark](cities/newark.md) — 38 · 5 active
 - [Paramus](cities/paramus.md) — 10 · 1 active
@@ -22,7 +22,6 @@ count: 45
 - [Plainfield](cities/plainfield.md) — 5
 - [Camden](cities/camden.md) — 4
 - [Cresskill](cities/cresskill.md) — 3
-- [Jersey City](cities/jersey-city.md) — 3
 - [Paterson](cities/paterson.md) — 3
 - [Piscataway](cities/piscataway.md) — 3
 - [River Edge](cities/river-edge.md) — 3
@@ -30,6 +29,7 @@ count: 45
 - [Chatsworth](cities/chatsworth.md) — 2
 - [Glen Ridge](cities/glen-ridge.md) — 2
 - [Hillside](cities/hillside.md) — 2 · 1 active
+- [Jersey City](cities/jersey-city.md) — 2
 - [Montclair](cities/montclair.md) — 2
 - [New Lisbon](cities/new-lisbon.md) — 2
 - [Teaneck](cities/teaneck.md) — 2
@@ -37,7 +37,6 @@ count: 45
 - [Berlin](cities/berlin.md) — 1
 - [Bordentown](cities/bordentown.md) — 1
 - [Cherry Hill](cities/cherry-hill.md) — 1
-- [Chicago/National](cities/chicago-national.md) — 1
 - [Dover](cities/dover.md) — 1
 - [Edison](cities/edison.md) — 1
 - [Fort Dix](cities/fort-dix.md) — 1
