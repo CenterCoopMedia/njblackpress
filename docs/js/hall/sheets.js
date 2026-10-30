@@ -1,6 +1,6 @@
 // History hall — the framed sheets.
 //
-// Every publication has one frame at its own layout slot, all 136 of them, all
+// Every public publication has one frame at its own layout slot, all
 // the time. What changes is how much of a sheet is painted: the sheets near the
 // visitor and the selected sheet carry a full painted face and a brass plate;
 // the rest share one low detail paper material with an era accent and no type.
@@ -20,8 +20,8 @@ import { SPACE_CONFIG } from './space.js';
 // mip chain, so 24 faces hold about 44 MiB and 12 hold about 22 MiB. With the
 // matching plates, the 16 decade markers, the 13 book covers, and the open
 // volume's pages, the standard tier comes to roughly 80 MiB and the simplified
-// tier to roughly 50 MiB, inside the 128 MiB and 64 MiB budgets. Painting all
-// 136 faces would take about 249 MiB, which is why the pool exists.
+// tier to roughly 50 MiB, inside the 128 MiB and 64 MiB budgets.
+// The full collection would exceed the pool budget if every face stayed loaded.
 export const FACE_POOL_SIZES = { standard: 24, simplified: 12 };
 
 // A label plate, not a second slab: about the size of a gallery card under a

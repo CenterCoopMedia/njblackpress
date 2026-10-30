@@ -9,7 +9,7 @@ tags:
   - "camden"
   - "1970s"
   - "periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 46
 status: "inactive-or-historical"
 featured: false
@@ -47,7 +47,7 @@ OCLC no. 29338865.
 
 ### Also in Camden
 
-- [The Camden News](003-the-camden-news.md) — 1915–1918
+- [The Camden News](003-the-camden-news.md) — 1915–?
 - [The Black Observer](033-the-black-observer.md) — 1968–1970
 - [The Union Messenger](056-the-union-messenger.md) — 1979–1985
 
@@ -61,7 +61,7 @@ OCLC no. 29338865.
 - [Ngoma](111-ngoma.md) — 1971–1976
 - [Right On!](095-right-on.md) — 1971–2014
 - [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
-- …and 20 more
+- …and 18 more
 
 ## Navigate
 

@@ -163,7 +163,14 @@ publication IDs, cessation years, and active status.
 
 For a routine publication correction, update `data/publications.json`, run
 `data/add_evidence.py`, and review both publication JSON files. The builder
-also rewrites the derived metadata. To add a Library of Congress directory
+retains editorial records with `isPublic: false` in `data/` and excludes them
+from `docs/data/`. The public dataset owns frontend, map and wiki visibility;
+both datasets have their own derived metadata. A listing hold is not access
+control for the public repository or prior downloads. After a visibility
+change, rebuild the map, both wikis and sitemap; update counts in page metadata,
+home/archive fallback text and `docs/llms.txt`, then recapture the social card.
+Check featured records, stories/events and clipping assets for references to
+the withheld records before release. To add a Library of Congress directory
 record as evidence, run `python3 data/attach_loc_records.py <id>:<lccn>`, then
 `data/add_evidence.py`. Use
 `data/merge_research.py` only for a reviewed research-enrichment batch.
@@ -216,7 +223,8 @@ python3 scripts/generate_okf_wiki.py --check
 corpus. Git ignores most large research files, so those checks fail in a normal
 clone without the corpus.
 
-Data changes must keep source and browser copies equal. Generated wiki changes
+Data changes must keep the browser data equal to the editorial source's public
+subset (`add_evidence.public_payload`). Generated wiki changes
 must include their generated outputs. Visible changes need desktop and mobile
 browser checks.
 

@@ -6,20 +6,19 @@ tags:
   - "nj-black-press"
   - "format"
   - "newsletter"
-timestamp: "2026-06-29"
-count: 4
+timestamp: "2026-10-30"
+count: 3
 ---
 
 # Newsletter
 
-**4** publications in this format grouping · **0** active · founding years **1966–1988**.
+**3** publications in this format grouping · **0** active · founding years **1966–1988**.
 
 ## Publications
 
 | Publication | Years | Status |
 |---|---|---|
 | [Freedom Reports](../publications/133-freedom-reports.md) | 1966–1970 | Ceased 1970 |
-| [Black Caucus of ALA Newsletter](../publications/099-black-caucus-of-ala-newsletter.md) | 1974–? | Activity unverified |
 | [Write On Newsletter](../publications/120-write-on-newsletter.md) | 1985–1990 | Ceased 1990 |
 | [ONI](../publications/081-oni.md) | 1988–1992 | Ceased 1992 |
 

@@ -9,7 +9,7 @@ tags:
   - "newark"
   - "1930s"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 16
 status: "inactive-or-historical"
 featured: false
@@ -61,7 +61,7 @@ LCCN no: sn84025698/OCLC no. 10284983.
 
 - [New Jersey Trumpet](038-new-jersey-trumpet.md) — 1887–1897
 - [The Newark Herald](009-the-newark-herald.md) — 1928–1939
-- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
+- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–?
 - [New Jersey Afro-American](035-new-jersey-afro-american.md) — 1941–1991
 - [New Jersey After Hours](101-new-jersey-after-hours.md) — 1949–1980
 - [Hours After](072-hours-after.md) — 1951–1955
@@ -72,7 +72,7 @@ LCCN no: sn84025698/OCLC no. 10284983.
 ### Also from the 1930s
 
 - [Camp Berlin Broadcast](102-camp-berlin-broadcast.md) — 1934–1935
-- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
+- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–?
 - [Ash Can](048-ash-can.md) — 1935–1935
 - [Camp Cooper Chats](087-camp-cooper-chats.md) — 1935–1937
 - [Penn Crusader](136-penn-crusader.md) — 1936–1940

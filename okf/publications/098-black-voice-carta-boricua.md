@@ -9,7 +9,7 @@ tags:
   - "piscataway"
   - "1970s"
   - "periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 98
 status: "inactive-or-historical"
 featured: false
@@ -68,7 +68,7 @@ n/a.
 - [Right On!](095-right-on.md) — 1971–2014
 - [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
 - [En Avant](059-en-avant.md) — 1972–1975
-- …and 20 more
+- …and 18 more
 
 ## Navigate
 

@@ -6,13 +6,13 @@ tags:
   - "nj-black-press"
   - "medium"
   - "print"
-timestamp: "2026-06-29"
-count: 123
+timestamp: "2026-10-30"
+count: 121
 ---
 
 # Print
 
-**123** publications in this medium grouping · **1** active · founding years **1880–2016**.
+**121** publications in this medium grouping · **1** active · founding years **1880–2016**.
 
 ## Publications
 
@@ -23,12 +23,12 @@ count: 123
 | [New Jersey Trumpet](../publications/038-new-jersey-trumpet.md) | 1887–1897 | Ceased 1897 |
 | [The Echo](../publications/031-the-echo.md) | 1904–1943 | Ceased 1943 |
 | [The Citizen](../publications/007-the-citizen.md) | 1909–1915 | Ceased 1915 |
-| [The Camden News](../publications/003-the-camden-news.md) | 1915–1918 | Ceased 1918 |
+| [The Camden News](../publications/003-the-camden-news.md) | 1915–? | Ceased (date unknown) |
 | [The Ironsides Echo](../publications/057-the-ironsides-echo.md) | 1917–1955 | Ceased 1955 |
 | [The Newark Herald](../publications/009-the-newark-herald.md) | 1928–1939 | Ceased 1939 |
 | [Apex News](../publications/045-apex-news.md) | 1929–1940 | Ceased 1940 |
 | [Camp Berlin Broadcast](../publications/102-camp-berlin-broadcast.md) | 1934–1935 | Ceased 1935 |
-| [The New Jersey Guardian](../publications/037-the-new-jersey-guardian.md) | 1934–1942 | Ceased 1942 |
+| [The New Jersey Guardian](../publications/037-the-new-jersey-guardian.md) | 1934–? | Ceased (date unknown) |
 | [Ash Can](../publications/048-ash-can.md) | 1935–1935 | Ceased 1935 |
 | [Camp Cooper Chats](../publications/087-camp-cooper-chats.md) | 1935–1937 | Ceased 1937 |
 | [Penn Crusader](../publications/136-penn-crusader.md) | 1936–1940 | Ceased 1940 |
@@ -76,7 +76,6 @@ count: 123
 | [Utimme Umana/La Voz Oculta](../publications/073-utimme-umana-la-voz-oculta.md) | 1972–? | Ceased (date unknown) |
 | [Monthly Black Periodicals Selection Review](../publications/115-monthly-black-periodicals-selection-review.md) | 1973–1980 | Ceased 1980 |
 | [Primer](../publications/105-primer.md) | 1973–1978 | Ceased 1978 |
-| [Black Caucus of ALA Newsletter](../publications/099-black-caucus-of-ala-newsletter.md) | 1974–? | Activity unverified |
 | [Black Racers Yearbook](../publications/064-black-racers-yearbook.md) | 1974–1974 | Ceased 1974 |
 | [Kuumba: The Black Voice Magazine](../publications/100-kuumba-the-black-voice-magazine.md) | 1974–1975 | Ceased 1975 |
 | [Unity and Struggle](../publications/084-unity-and-struggle.md) | 1974–? | Ceased (date unknown) |
@@ -85,7 +84,6 @@ count: 123
 | [Black Atlantic City Magazine](../publications/119-black-atlantic-city-magazine.md) | 1978–1986 | Ceased 1986 |
 | [Black Truth Bulletin](../publications/127-black-truth-bulletin.md) | 1978–1982 | Ceased 1982 |
 | [Educational Perspectives](../publications/108-educational-perspectives.md) | 1978–1985 | Ceased 1985 |
-| [Black Journal](../publications/052-black-journal.md) | 1979–1985 | Ceased 1985 |
 | [Greater News](../publications/027-greater-news.md) | 1979–1985 | Ceased 1985 |
 | [The Union Messenger](../publications/056-the-union-messenger.md) | 1979–1985 | Ceased 1985 |
 | [Bootstrap](../publications/074-bootstrap.md) | 1981–1983 | Ceased 1983 |

@@ -9,7 +9,7 @@ tags:
   - "camden"
   - "1960s"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 33
 status: "inactive-or-historical"
 featured: false
@@ -55,7 +55,7 @@ The Black Observer was a community-oriented newspaper produced by Rutgers-Camden
 
 ### Also in Camden
 
-- [The Camden News](003-the-camden-news.md) — 1915–1918
+- [The Camden News](003-the-camden-news.md) — 1915–?
 - [The African Voice](046-the-african-voice.md) — 1972–1975
 - [The Union Messenger](056-the-union-messenger.md) — 1979–1985
 

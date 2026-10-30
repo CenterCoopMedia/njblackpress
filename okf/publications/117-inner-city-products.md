@@ -9,7 +9,7 @@ tags:
   - "piscataway"
   - "1990s"
   - "comic-book-strips"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 117
 status: "inactive-or-historical"
 featured: false

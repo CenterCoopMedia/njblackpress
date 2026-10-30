@@ -4,7 +4,7 @@
 
 ## About
 
-The NJ Black Press Archive catalogs 136 Black-owned publications across more than 140 years of New Jersey journalism history. It covers newspapers, magazines, newsletters, and digital outlets across 40+ New Jersey cities from the post-Reconstruction era through today.
+The NJ Black Press Archive catalogs 134 Black-owned publications across more than 140 years of New Jersey journalism history. It covers newspapers, magazines, newsletters, and digital outlets across 40+ New Jersey cities from the post-Reconstruction era through today.
 
 Data was curated by Amanda Alicea and led by Cassandra Etienne at the Center for Cooperative Media.
 
@@ -12,7 +12,7 @@ Data was curated by Amanda Alicea and led by Cassandra Etienne at the Center for
 
 - Home: https://centercoopmedia.github.io/njblackpress/
 - Full archive: https://centercoopmedia.github.io/njblackpress/archive.html
-- Publication detail: https://centercoopmedia.github.io/njblackpress/publication.html?id=1 (one page per record, by ID)
+- Publication detail: https://centercoopmedia.github.io/njblackpress/publication.html?id=1 (one page per public record, by ID)
 - Stories (sourced narratives): https://centercoopmedia.github.io/njblackpress/story.html
 - Eras (one page per decade): https://centercoopmedia.github.io/njblackpress/era.html
 - Publication map: https://centercoopmedia.github.io/njblackpress/map.html
@@ -25,7 +25,7 @@ A portable, agent-readable markdown version of the wiki (open knowledge format â
 
 ## Data
 
-The complete dataset is available as JSON at:
+The public dataset is available as JSON at:
 - https://centercoopmedia.github.io/njblackpress/data/publications.json
 - https://centercoopmedia.github.io/njblackpress/data/featured-publications.json
 

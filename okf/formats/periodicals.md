@@ -6,7 +6,7 @@ tags:
   - "nj-black-press"
   - "format"
   - "periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 count: 36
 ---
 
@@ -19,7 +19,7 @@ count: 36
 | Publication | Years | Status |
 |---|---|---|
 | [The Citizen](../publications/007-the-citizen.md) | 1909–1915 | Ceased 1915 |
-| [The Camden News](../publications/003-the-camden-news.md) | 1915–1918 | Ceased 1918 |
+| [The Camden News](../publications/003-the-camden-news.md) | 1915–? | Ceased (date unknown) |
 | [Apex News](../publications/045-apex-news.md) | 1929–1940 | Ceased 1940 |
 | [New Jersey After Hours](../publications/101-new-jersey-after-hours.md) | 1949–1980 | Ceased 1980 |
 | [North Jersey Independent](../publications/030-north-jersey-independent.md) | 1950–1955 | Ceased 1955 |

@@ -6,10 +6,11 @@ This documents the full schema for the NJ Black Press Archive. It covers `public
 
 ## publications.json
 
-Location: `data/publications.json` (pipeline source of truth), copied to
-`docs/data/publications.json` for the frontend. Correct a record by editing
+Location: `data/publications.json` (editorial source of truth). The public
+subset is generated at `docs/data/publications.json` for the frontend, map,
+and both wikis. Correct a record by editing
 `data/publications.json`, then run `data/add_evidence.py`, which rebuilds the
-evidence array and the derived `metadata` and copies the file to `docs/data/`.
+evidence array and the derived `metadata` for each dataset.
 `data/test_publication_record.py` fails when either drifts from its sources.
 `data/convert_csv.py` is only for a controlled full refresh from a fresh Notion
 export (see `CLAUDE.md`).
@@ -30,6 +31,7 @@ Top-level shape: `{ "metadata": {...}, "publications": [...] }`.
 **publication object**
 
 - `id` — integer, matches the Notion export row ID and the `source-catalog.json` id
+- `isPublic` — optional boolean, defaults to true. Set false to withhold a listing from the public dataset and generated views without deleting its editorial record or evidence. Public counts describe only included records; editorial counts include withheld records. This is a publication decision, not access control: repository history and prior downloads remain available. To restore a listing after editorial approval, remove the false flag or set true, then rebuild the public data, map, wikis, sitemap, and displayed counts.
 - `name` — publication name
 - `alternateName` — alternate/former name, or null
 - `city` — location, or null

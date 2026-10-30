@@ -9,7 +9,7 @@ tags:
   - "jersey-city"
   - "1990s"
   - "periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 116
 status: "inactive-or-historical"
 featured: false
@@ -51,7 +51,6 @@ OCLC no. 25846047.
 
 ### Also in Jersey City
 
-- [Black Journal](052-black-journal.md) — 1979–1985
 - [NJ-AAHGS Newsletter](106-nj-aahgs-newsletter.md) — 1989–2000
 
 ### Also from the 1990s

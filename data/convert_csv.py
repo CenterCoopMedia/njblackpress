@@ -95,8 +95,8 @@ def is_featured_contemporary(name):
 
 publications = []
 existing_path = Path('publications.json')
-previous_activity = {
-    p['id']: p.get('isActive')
+previous_records = {
+    p['id']: p
     for p in json.loads(existing_path.read_text(encoding='utf-8'))['publications']
 } if existing_path.is_file() else {}
 cities = set()
@@ -133,7 +133,8 @@ with open('publications.csv', 'r', encoding='utf-8-sig') as f:
         historical_notes = row.get('Historical notes + impact', '').strip() or None
 
         # Missing final years cannot establish current activity.
-        is_active = csv_activity(row, previous_activity.get(int(pub_id)))
+        previous = previous_records.get(int(pub_id), {})
+        is_active = csv_activity(row, previous.get('isActive'))
         if is_active is not False and year_ceased is not None:
             raise ValueError(f"Record {pub_id}: Set activity status to historical or ceased for a title with a final year")
 
@@ -164,6 +165,9 @@ with open('publications.csv', 'r', encoding='utf-8-sig') as f:
             "isFeaturedContemporary": is_featured_contemporary(name)
         }
 
+        # A fresh export cannot release an editorial publication hold.
+        if 'isPublic' in previous:
+            pub['isPublic'] = previous['isPublic']
         publications.append(pub)
 
         if city:

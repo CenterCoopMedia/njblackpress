@@ -5,16 +5,16 @@ description: "Counts and breakdowns across the NJ Black Press archive."
 tags:
   - "nj-black-press"
   - "statistics"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 ---
 
 # Archive statistics
 
-- Publication records: **136**
+- Publication records: **134**
 - Active: **13**
-- Ceased or historical: **117**
-- Activity unverified or collection: **6**
-- Cities: **45**
+- Ceased or historical: **116**
+- Activity unverified or collection: **5**
+- Cities: **44**
 - Distinct formats: **41**
 - Founding span: **1880–2022**
 
@@ -22,20 +22,20 @@ timestamp: "2026-06-29"
 
 | Decade | Count | Active | |
 |---|---|---|---|
-| [1880s](decades/1880s.md) | 3 | 0 | ██ |
+| [1880s](decades/1880s.md) | 3 | 0 | ███ |
 | [1900s](decades/1900s.md) | 2 | 0 | ██ |
 | [1910s](decades/1910s.md) | 2 | 0 | ██ |
 | [1920s](decades/1920s.md) | 2 | 0 | ██ |
-| [1930s](decades/1930s.md) | 12 | 0 | ██████████ |
-| [1940s](decades/1940s.md) | 3 | 0 | ██ |
-| [1950s](decades/1950s.md) | 9 | 0 | ███████ |
+| [1930s](decades/1930s.md) | 12 | 0 | ███████████ |
+| [1940s](decades/1940s.md) | 3 | 0 | ███ |
+| [1950s](decades/1950s.md) | 9 | 0 | ████████ |
 | [1960s](decades/1960s.md) | 8 | 0 | ███████ |
-| [1970s](decades/1970s.md) | 29 | 0 | ████████████████████████ |
-| [1980s](decades/1980s.md) | 19 | 0 | ████████████████ |
-| [1990s](decades/1990s.md) | 24 | 1 | ████████████████████ |
+| [1970s](decades/1970s.md) | 27 | 0 | ████████████████████████ |
+| [1980s](decades/1980s.md) | 19 | 0 | █████████████████ |
+| [1990s](decades/1990s.md) | 24 | 1 | █████████████████████ |
 | [2010s](decades/2010s.md) | 8 | 6 | ███████ |
 | [2020s](decades/2020s.md) | 6 | 6 | █████ |
-| [Unknown](decades/unknown.md) | 9 | 0 | ███████ |
+| [Unknown](decades/unknown.md) | 9 | 0 | ████████ |
 
 ## Cities by publication count
 
@@ -50,20 +50,20 @@ timestamp: "2026-06-29"
 | [Plainfield](cities/plainfield.md) | 5 | 0 |
 | [Camden](cities/camden.md) | 4 | 0 |
 | [Cresskill](cities/cresskill.md) | 3 | 0 |
-| [Jersey City](cities/jersey-city.md) | 3 | 0 |
 | [Paterson](cities/paterson.md) | 3 | 0 |
 | [Piscataway](cities/piscataway.md) | 3 | 0 |
 | [River Edge](cities/river-edge.md) | 3 | 0 |
 | [Cape May](cities/cape-may.md) | 2 | 0 |
 | [Chatsworth](cities/chatsworth.md) | 2 | 0 |
+| [Glen Ridge](cities/glen-ridge.md) | 2 | 0 |
 
-_24 cities have a single recorded publication. See the [full city index](cities.md)._
+_23 cities have a single recorded publication. See the [full city index](cities.md)._
 
 ## Medium
 
 | Medium | Count |
 |---|---|
-| Print | 123 |
+| Print | 121 |
 | Digital | 12 |
 | Print/Digital | 1 |
 
@@ -71,11 +71,11 @@ _24 cities have a single recorded publication. See the [full city index](cities.
 
 | Category | Count |
 |---|---|
-| Periodicals & other print | 49 |
+| Periodicals & other print | 48 |
 | Newspapers | 43 |
 | Magazines | 16 |
 | Digital & multimedia | 11 |
-| Newsletters | 9 |
+| Newsletters | 8 |
 | Other | 4 |
 | Comics | 3 |
 | Journals | 1 |

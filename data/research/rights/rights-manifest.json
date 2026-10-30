@@ -3463,14 +3463,26 @@
       "citation": "Publication history review, October 19, 2026. See the record-specific public source URLs, findings, and unresolved questions in the review metadata.",
       "cropPlan": "",
       "notes": "Authored factual summaries and bibliographic metadata. No source images or private messages. This entry does not authorize publication of any linked source scan."
+    },
+    {
+      "path": "data/research/corrections/2026-10-30.json",
+      "source": "Publication history review",
+      "publicationIds": [
+        3,
+        37
+      ],
+      "status": "metadata_only",
+      "citation": "Publication final-year review, October 30, 2026. See record-specific public source URLs, findings, and unresolved questions in the review metadata.",
+      "cropPlan": null,
+      "notes": "Authored factual summaries and source metadata. No source scans or private correspondence."
     }
   ],
   "metadata": {
-    "totalCount": 338,
+    "totalCount": 339,
     "byStatus": {
       "crop_first": 50,
       "publishable": 34,
-      "metadata_only": 247,
+      "metadata_only": 248,
       "publishable_with_credit": 7
     },
     "generated": "2026-08-19"

@@ -2,14 +2,14 @@
 type: "publication"
 title: "The Northern New Jersey Informer"
 description: "Archive wiki record for The Northern New Jersey Informer."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "paterson"
   - "1950s"
   - "periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 11
 status: "inactive-or-historical"
 featured: false

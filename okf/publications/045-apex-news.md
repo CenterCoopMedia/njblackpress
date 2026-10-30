@@ -9,7 +9,7 @@ tags:
   - "atlantic-city"
   - "1920s"
   - "periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 45
 status: "inactive-or-historical"
 featured: false

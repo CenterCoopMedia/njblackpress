@@ -9,7 +9,7 @@ tags:
   - "east-orange"
   - "1980s"
   - "news-magazine"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 110
 status: "inactive-or-historical"
 featured: false

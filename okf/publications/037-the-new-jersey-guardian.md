@@ -9,7 +9,7 @@ tags:
   - "newark"
   - "1930s"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 37
 status: "inactive-or-historical"
 featured: true
@@ -27,8 +27,8 @@ featured: true
 | Alternate name | Unknown |
 | City | [Newark](../cities/newark.md) |
 | Publishers or owners | N.J. Guardian Pub. Co. |
-| Active years | 1934–1942 |
-| Status | Ceased 1942 |
+| Active years | 1934–? |
+| Status | Ceased (date unknown) |
 | Decade | [1930s](../decades/1930s.md) |
 | Format | [Newspaper](../formats/newspaper.md) |
 | Medium | [Print](../mediums/print.md) |
@@ -47,7 +47,7 @@ Previous editor (s): F. R. Clark.
 
 ## Historical notes
 
-Published weekly in Newark, Essex County, NJ by the N.J. Guardian Pub. Co. Began with the September 29, 1934 issue; ceased in 1942 (exact end date uncertain). Carried the motto 'Voice of the Colored People.' Bibliographic description based on Vol. 6, no. 27 (Oct. 28, 1939). Cataloged by the Library of Congress under African Americans -- New Jersey -- Newspapers. The Library of Congress may not hold copies; holdings may exist at other libraries.
+Published weekly in Newark, Essex County, NJ by the N.J. Guardian Pub. Co. The Library of Congress catalog and the Directory of New Jersey newspapers, 1765–1970 (1977), page 156, give a September 29, 1934 start and an uncertain end, cataloged as ceasing in 1942? The exact final publication year remains unknown; the title remains inactive. The directory says the title became New Jersey Record. The Schomburg Center finding aid Black newspapers—sample issues and additions, collection Sc Micro RS-722, reel 2, lists a December 6, 1941 issue, volume 9, number 14; this is a cataloged holding, not a verified final issue. The 1967 New Jersey Library Association bibliography, page 105, gives conflicting dates: Entry 926 lists 1934–1942, while entry 932 describes a Guardian predecessor in 1933–1943 and a 1943 name change. That conflict does not establish a 1943 Guardian issue, and the founding-year field remains 1934 pending masthead review. Carried the motto 'Voice of the Colored People.' The Library of Congress description is based on Vol. 6, no. 27 (Oct. 28, 1939), not a last issue. The Library of Congress may not hold copies; holdings may exist at other libraries. The latest Guardian and earliest New Jersey Record mastheads are needed to resolve the transition.
 
 ## External links
 

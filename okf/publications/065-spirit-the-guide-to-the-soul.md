@@ -2,14 +2,14 @@
 type: "publication"
 title: "Spirit: The Guide to the Soul"
 description: "Archive wiki record for Spirit: The Guide to the Soul."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "plainfield"
   - "1990s"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 65
 status: "inactive-or-historical"
 featured: false

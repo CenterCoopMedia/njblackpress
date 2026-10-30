@@ -2,14 +2,14 @@
 type: "publication"
 title: "Fotorama"
 description: "Archive wiki record for Fotorama."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "river-edge"
   - "1990s"
   - "magazine"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 78
 status: "inactive-or-historical"
 featured: false

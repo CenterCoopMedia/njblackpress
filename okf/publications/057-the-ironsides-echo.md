@@ -9,7 +9,7 @@ tags:
   - "bordentown"
   - "1910s"
   - "magazine-periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 57
 status: "inactive-or-historical"
 featured: false
@@ -47,7 +47,7 @@ OCLC no. 13805747.
 
 ### Also from the 1910s
 
-- [The Camden News](003-the-camden-news.md) — 1915–1918
+- [The Camden News](003-the-camden-news.md) — 1915–?
 
 ## Navigate
 

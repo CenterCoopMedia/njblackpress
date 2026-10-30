@@ -3,7 +3,7 @@
 
 Pre-renders one styled HTML page per publication, city, decade, format, and
 medium (plus index, statistics, and featured pages) from
-``data/publications.json``. Pages match the main site's look — ink/paper/accent
+``docs/data/publications.json``. Pages match the main site's look — ink/paper/accent
 palette, the display face + DM Sans, shared nav and footer — and use real relative URLs
 so every record is a crawlable permalink at ``/njblackpress/wiki/``.
 
@@ -250,7 +250,7 @@ def landing_body(pubs, by_city, by_decade, by_format, by_medium, slugs, timestam
         b += pub_grid(sorted(featured, key=lambda p: p.get("yearFounded") or 9999)[:6], 0, "")
         b += '<p class="mt-4 font-mono text-xs uppercase tracking-widest"><a href="featured.html" class="inline-block py-[15px] text-stain hover:text-linen-50 transition-colors">See all featured &rarr;</a></p>'
 
-    b += f'<p class="mt-16 font-mono text-[11px] uppercase tracking-widest text-linen-300/60">Generated {esc(timestamp)} from data/publications.json</p>'
+    b += f'<p class="mt-16 font-mono text-[11px] uppercase tracking-widest text-linen-300/60">Generated {esc(timestamp)} from docs/data/publications.json</p>'
     return b
 
 
@@ -517,7 +517,7 @@ def featured_body(pubs, depth) -> str:
 def data_model_body() -> str:
     b = crumbs([("Wiki", "index.html"), ("Data model", None)])
     b += page_title("Data model")
-    b += '<p class="text-lg text-linen-300 font-light max-w-2xl mb-8">Every publication page is generated from <code class="font-mono text-linen-100">data/publications.json</code>. Source values are preserved as written; empty values render as a dash.</p>'
+    b += '<p class="text-lg text-linen-300 font-light max-w-2xl mb-8">Every publication page is generated from <code class="font-mono text-linen-100">docs/data/publications.json</code>. Source values are preserved as written; empty values render as a dash.</p>'
     rows = ""
     for field, desc, origin in FIELD_DOCS:
         origin_text = ('<span class="font-mono text-xs text-stain">computed</span>'

@@ -9,7 +9,7 @@ tags:
   - "jersey-city"
   - "1980s"
   - "newsletter-periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 106
 status: "inactive-or-historical"
 featured: false
@@ -51,7 +51,6 @@ OCLC no. 28388925.
 
 ### Also in Jersey City
 
-- [Black Journal](052-black-journal.md) — 1979–1985
 - [The Jersey Heritage](116-the-jersey-heritage.md) — 1992–1996
 
 ### Also from the 1980s

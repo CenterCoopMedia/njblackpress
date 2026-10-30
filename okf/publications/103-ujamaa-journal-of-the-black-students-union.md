@@ -2,14 +2,14 @@
 type: "publication"
 title: "Ujamaa: Journal of the Black Students Union"
 description: "Archive wiki record for Ujamaa: Journal of the Black Students Union."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "wayne"
   - "1970s"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 103
 status: "inactive-or-historical"
 featured: false
@@ -55,7 +55,7 @@ No digitized archive was found for Ujamaa: Journal of the BSU from William Pater
 - [Ngoma](111-ngoma.md) — 1971–1976
 - [Right On!](095-right-on.md) — 1971–2014
 - [En Avant](059-en-avant.md) — 1972–1975
-- …and 20 more
+- …and 18 more
 
 ## Navigate
 

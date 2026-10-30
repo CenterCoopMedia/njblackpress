@@ -9,7 +9,7 @@ tags:
   - "cresskill"
   - "1970s"
   - "magazine"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 95
 status: "inactive-or-historical"
 featured: false
@@ -64,7 +64,7 @@ Right On! was the first original fan magazine catering to an African American te
 - [Ngoma](111-ngoma.md) — 1971–1976
 - [Ujamaa: Journal of the Black Students Union](103-ujamaa-journal-of-the-black-students-union.md) — 1971–1975
 - [En Avant](059-en-avant.md) — 1972–1975
-- …and 20 more
+- …and 18 more
 
 ## Navigate
 

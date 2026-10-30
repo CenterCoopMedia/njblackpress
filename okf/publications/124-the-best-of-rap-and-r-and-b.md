@@ -2,14 +2,14 @@
 type: "publication"
 title: "The Best of Rap & R&B"
 description: "Archive wiki record for The Best of Rap & R&B."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "paramus"
   - "1980s"
   - "uncataloged-serials"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 124
 status: "inactive-or-historical"
 featured: false

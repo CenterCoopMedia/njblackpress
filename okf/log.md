@@ -6,9 +6,9 @@ tags:
   - "nj-black-press"
   - "okf"
   - "log"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 ---
 
 # Wiki change log
 
-- 2026-06-29: Generated the open knowledge format wiki bundle from `data/publications.json` with 136 publication pages and 250 markdown files in total.
+- 2026-10-30: Generated the open knowledge format wiki bundle from `docs/data/publications.json` with 134 publication pages and 247 markdown files in total.

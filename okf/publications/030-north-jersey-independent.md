@@ -2,14 +2,14 @@
 type: "publication"
 title: "North Jersey Independent"
 description: "Archive wiki record for North Jersey Independent."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "paterson"
   - "1950s"
   - "periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 30
 status: "inactive-or-historical"
 featured: false

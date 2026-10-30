@@ -2,14 +2,14 @@
 type: "publication"
 title: "Today's Black Woman"
 description: "Archive wiki record for Today's Black Woman."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "paramus"
   - "1990s"
   - "magazine"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 63
 status: "inactive-or-historical"
 featured: false

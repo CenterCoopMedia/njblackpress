@@ -14,7 +14,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parent.parent
-PUBLICATIONS_PATH = ROOT / "data" / "publications.json"
+PUBLICATIONS_PATH = ROOT / "docs" / "data" / "publications.json"
 CENTERS_PATH = ROOT / "data" / "municipality-centers.json"
 OUTPUT_PATHS = (
     ROOT / "data" / "map-publications.json",

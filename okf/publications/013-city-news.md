@@ -2,14 +2,14 @@
 type: "publication"
 title: "City News"
 description: "Archive wiki record for City News."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "plainfield"
   - "1980s"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 13
 status: "inactive-or-historical"
 featured: false

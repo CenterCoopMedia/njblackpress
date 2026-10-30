@@ -2,6 +2,10 @@
 
 Date: September 9, 2026. Work package 1, issue 74.
 
+This is the September 9 design audit snapshot. For current public record
+counts, use `docs/data/publications.json`; editorial listing holds are applied
+before the hall loads that dataset.
+
 Everything below was counted from the files the page actually loads:
 `docs/data/publications.json`, `docs/data/stories.json`, `docs/data/events.json`,
 and `docs/data/clippings.json`. Nothing here is an estimate, and nothing here

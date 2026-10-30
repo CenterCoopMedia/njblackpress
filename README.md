@@ -84,6 +84,12 @@ Open `http://localhost:8000/`.
 The repository keeps pipeline data under `data/` and browser copies under
 `docs/data/`. Do not edit a browser copy without updating its source.
 
+Publication records with `isPublic: false` remain in the editorial dataset
+and are omitted from `docs/data/publications.json`. Public counts, the map,
+and both wikis use this public subset. A listing hold does not remove public
+repository history or prior downloads. See `data/DATA_DICTIONARY.md` for the
+visibility contract and restoration steps.
+
 Important generated files include:
 
 - `docs/css/tailwind.css`
@@ -133,6 +139,7 @@ Run the checks that match the changed area. Common checks include:
 npm run build:css
 python3 data/test_site_data.py
 python3 data/test_publication_record.py
+python3 data/test_publication_visibility.py
 python3 data/test_site_metadata.py
 python3 data/test_design_system.py
 python3 data/test_source_catalog.py

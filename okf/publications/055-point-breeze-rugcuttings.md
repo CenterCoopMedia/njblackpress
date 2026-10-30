@@ -9,7 +9,7 @@ tags:
   - "cape-may"
   - "1930s"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 55
 status: "inactive-or-historical"
 featured: false
@@ -52,7 +52,7 @@ OCLC no. 277249509.
 ### Also from the 1930s
 
 - [Camp Berlin Broadcast](102-camp-berlin-broadcast.md) — 1934–1935
-- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–1942
+- [The New Jersey Guardian](037-the-new-jersey-guardian.md) — 1934–?
 - [Ash Can](048-ash-can.md) — 1935–1935
 - [Camp Cooper Chats](087-camp-cooper-chats.md) — 1935–1937
 - [Penn Crusader](136-penn-crusader.md) — 1936–1940

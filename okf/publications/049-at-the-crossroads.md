@@ -2,14 +2,14 @@
 type: "publication"
 title: "At the Crossroads"
 description: "Archive wiki record for At the Crossroads."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "new-brunswick"
   - "1990s"
   - "periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 49
 status: "inactive-or-historical"
 featured: false

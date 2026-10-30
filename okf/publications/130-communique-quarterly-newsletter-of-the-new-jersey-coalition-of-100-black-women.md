@@ -2,14 +2,14 @@
 type: "publication"
 title: "Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women"
 description: "Archive wiki record for Communique: Quarterly Newsletter of the New Jersey Coalition of 100 Black Women."
-resource: "data/publications.json"
+resource: "docs/data/publications.json"
 tags:
   - "nj-black-press"
   - "publication"
   - "east-orange"
   - "1980s"
   - "newsletter-periodicals"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 130
 status: "inactive-or-historical"
 featured: false

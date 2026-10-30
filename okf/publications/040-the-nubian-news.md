@@ -9,7 +9,7 @@ tags:
   - "trenton"
   - "1980s"
   - "newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 40
 status: "unverified"
 featured: true

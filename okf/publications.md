@@ -5,12 +5,12 @@ description: "Index of every publication wiki record with city, years, and statu
 tags:
   - "nj-black-press"
   - "publications"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 ---
 
 # Publication index
 
-All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
+All 134 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 
 | Publication | City | Years | Status |
 |---|---|---|---|
@@ -24,10 +24,8 @@ All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [Atlantic City Focus](publications/025-atlantic-city-focus.md) | Atlantic City | 2022–present | Active |
 | [Black Atlantic City Magazine](publications/119-black-atlantic-city-magazine.md) | Atlantic City | 1978–1986 | Ceased 1986 |
 | [Black Book Connection, Inc. Newsletter](publications/085-black-book-connection-inc-newsletter.md) | West Orange | 1992–1995 | Ceased 1995 |
-| [Black Caucus of ALA Newsletter](publications/099-black-caucus-of-ala-newsletter.md) | Chicago/National | 1974–? | Activity unverified |
 | [Black Hair Digest](publications/125-black-hair-digest.md) | River Edge | 1993–? | Activity unverified |
 | [Black In Jersey](publications/004-black-in-jersey.md) ⭐ | Trenton | 2021–present | Active |
-| [Black Journal](publications/052-black-journal.md) | Jersey City | 1979–1985 | Ceased 1985 |
 | [Black New Jersey Magazine](publications/077-black-new-jersey-magazine.md) | Atlantic City | ?–? | Ceased (date unknown) |
 | [Black Newark](publications/028-black-newark.md) ⭐ | Newark | 1968–1968 | Ceased 1968 |
 | [Black Racers Yearbook](publications/064-black-racers-yearbook.md) | Trenton | 1974–1974 | Ceased 1974 |
@@ -108,7 +106,7 @@ All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [The Black Observer](publications/033-the-black-observer.md) | Camden | 1968–1970 | Ceased 1970 |
 | [The Black Sociologist](publications/123-the-black-sociologist.md) | New Brunswick | 1972–1982 | Ceased 1982 |
 | [The Black Voice](publications/107-the-black-voice.md) ⭐ | Newark | 1970–? | Ceased (date unknown) |
-| [The Camden News](publications/003-the-camden-news.md) | Camden | 1915–1918 | Ceased 1918 |
+| [The Camden News](publications/003-the-camden-news.md) | Camden | 1915–? | Ceased (date unknown) |
 | [The Citizen](publications/007-the-citizen.md) | Princeton | 1909–1915 | Ceased 1915 |
 | [The Connection / North Jersey Connection](publications/005-the-connection-north-jersey-connection.md) | Teaneck | ?–? | Ceased (date unknown) |
 | [The Connection Newspaper](publications/131-the-connection-newspaper.md) | Teaneck | ?–? | Ceased (date unknown) |
@@ -129,7 +127,7 @@ All 136 records, alphabetical. See [statistics](statistics.md) for breakdowns.
 | [The Missionary Magazine](publications/071-the-missionary-magazine.md) | Pleasantville | 1952–1960 | Ceased 1960 |
 | [The National Political Science Review](publications/061-the-national-political-science-review.md) | New Brunswick | 1989–2019 | Ceased 2019 |
 | [The Network: The Newsletter of the African-American Institute of Islamic Research](publications/075-the-network-the-newsletter-of-the-african-american-institute-of-islamic-research.md) | Newark | 1991–1995 | Ceased 1995 |
-| [The New Jersey Guardian](publications/037-the-new-jersey-guardian.md) ⭐ | Newark | 1934–1942 | Ceased 1942 |
+| [The New Jersey Guardian](publications/037-the-new-jersey-guardian.md) ⭐ | Newark | 1934–? | Ceased (date unknown) |
 | [The Newark Herald](publications/009-the-newark-herald.md) ⭐ | Newark | 1928–1939 | Ceased 1939 |
 | [The Newark Times](publications/023-the-newark-times.md) | Newark | 2014–present | Active |
 | [The Northern New Jersey Informer](publications/011-the-northern-new-jersey-informer.md) | Paterson | 1950–1955 | Ceased 1955 |

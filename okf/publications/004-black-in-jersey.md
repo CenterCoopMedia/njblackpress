@@ -9,7 +9,7 @@ tags:
   - "trenton"
   - "2020s"
   - "digital-newspaper"
-timestamp: "2026-06-29"
+timestamp: "2026-10-30"
 archive_id: 4
 status: "active"
 featured: true
