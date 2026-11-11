@@ -26,7 +26,7 @@ featured: true
 | Archive id | 4 |
 | Alternate name | Unknown |
 | City | [Trenton](../cities/trenton.md) |
-| Publishers or owners | Founder: Tennyson Coleman |
+| Publishers or owners | Founder: Tennyson Donyea |
 | Active years | 2021–present |
 | Status | Active |
 | Decade | [2020s](../decades/2020s.md) |
@@ -43,7 +43,7 @@ Our Voices, Our Perspectives.
 
 ## Key staff
 
-Founder: Tennyson Coleman.
+Founder: Tennyson Donyea.
 
 ## Historical notes
 
